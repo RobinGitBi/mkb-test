@@ -1,0 +1,51 @@
+table PNLStructure
+	lineageTag: 3063b51f-8fd8-4c26-a85a-37015e408825
+
+	column RowIndex
+		dataType: int64
+		formatString: 0
+		lineageTag: fb18054e-4477-4936-aa25-ce9f3cb60639
+		summarizeBy: none
+		sourceColumn: RowIndex
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PNLDescr
+		dataType: string
+		lineageTag: 5a1d18c7-4a57-4a12-a70b-d570d3a05d51
+		summarizeBy: none
+		sourceColumn: PNLDescr
+		sortByColumn: RowIndex
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsSubtotal
+		dataType: int64
+		formatString: 0
+		lineageTag: 4648870b-d1e2-4289-bcd1-69c05ef5bb10
+		summarizeBy: none
+		sourceColumn: IsSubtotal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PNLStructure-eb0f7f91-3db1-44d1-ab64-629c215cf069 = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    lookup_PNLStructure = MKBBIDW{[Schema="lookup",Item="PNLStructure"]}[Data]
+				in
+				    lookup_PNLStructure
+
+	annotation PBI_ResultType = Table
+

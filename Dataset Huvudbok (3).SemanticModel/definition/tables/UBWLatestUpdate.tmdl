@@ -1,0 +1,34 @@
+table UBWLatestUpdate
+	isHidden
+	lineageTag: bbc69ecd-e14d-4594-8bd2-b7bb01c57780
+
+	column LatestUBWImport
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-mm-dd hh:nn:ss
+		lineageTag: f41f27b0-4610-4d58-a3db-827032f82667
+		summarizeBy: none
+		sourceColumn: LatestUBWImport
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition UBWLatestUpdate-cc2e1882-e5f4-48ba-8144-9e33236408a3 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewUBWLatestImport = MKBBIDW{[Schema="dbo",Item="ViewUBWLatestImport"]}[Data]
+				in
+				    dbo_ViewUBWLatestImport
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

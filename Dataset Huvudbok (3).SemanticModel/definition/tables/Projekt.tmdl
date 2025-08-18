@@ -1,0 +1,834 @@
+table Projekt
+	lineageTag: f6d66cfb-eba3-4731-8003-ab24d80203a5
+
+	measure 'Countrows Projekt' = COUNTROWS('Projekt')
+		lineageTag: d1295523-1d9d-4b03-917e-2d26ec79d938
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProjektSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b565fee-c4a7-4469-af74-abcb6600dfd5
+		summarizeBy: none
+		sourceColumn: ProjektSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektNr
+		dataType: string
+		lineageTag: e9140ce6-40d0-4897-871c-7741e37fddfe
+		summarizeBy: none
+		sourceColumn: ProjektNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektNamn
+		dataType: string
+		lineageTag: 007ee227-1309-4c7b-af73-fa7b9bd855d0
+		summarizeBy: none
+		sourceColumn: ProjektNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektEnhetId
+		dataType: string
+		lineageTag: dd4886b8-66a4-48e5-9312-4b44aabba6d2
+		summarizeBy: none
+		sourceColumn: ProjektEnhetId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektEnhetNamn
+		dataType: string
+		lineageTag: dccacef5-58c9-4447-a97c-d987868d78c5
+		summarizeBy: none
+		sourceColumn: ProjektEnhetNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Projekt
+		dataType: string
+		lineageTag: 6ff9bc1a-383a-446f-887e-446c658228d5
+		summarizeBy: none
+		sourceColumn: Projekt
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektEnhet
+		dataType: string
+		lineageTag: 54129d2f-c3fe-4069-85c3-580d099e5f1c
+		summarizeBy: none
+		sourceColumn: ProjektEnhet
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektSegmentId
+		dataType: string
+		lineageTag: 6c42ade0-95ef-4dec-adfd-4a73a786f319
+		summarizeBy: none
+		sourceColumn: ProjektSegmentId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektSegmentNamn
+		dataType: string
+		lineageTag: f0f5ce3b-2dca-4a5a-8c2b-6c0b658f631d
+		summarizeBy: none
+		sourceColumn: ProjektSegmentNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektSegment
+		dataType: string
+		lineageTag: dfb1b780-7980-409c-92f0-30cce1d69a4b
+		summarizeBy: none
+		sourceColumn: ProjektSegment
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasNorr
+		dataType: int64
+		formatString: 0
+		lineageTag: ff5f4594-ce52-4b28-89a0-c80b22275794
+		summarizeBy: none
+		sourceColumn: BasNorr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasVäst
+		dataType: int64
+		formatString: 0
+		lineageTag: a86ab9d6-e1f9-4fa0-87a8-29f5f1aef74d
+		summarizeBy: none
+		sourceColumn: BasVäst
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasÖst
+		dataType: int64
+		formatString: 0
+		lineageTag: 47280e99-f734-4f07-b669-6e2c37fc5412
+		summarizeBy: none
+		sourceColumn: BasÖst
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasLokal
+		dataType: int64
+		formatString: 0
+		lineageTag: 13cca7b9-4ad3-4ffa-ac98-c51d84bb8674
+		summarizeBy: none
+		sourceColumn: BasLokal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasStudent
+		dataType: int64
+		formatString: 0
+		lineageTag: 44960de9-32ff-43ba-93cf-f8db0dfd2fe3
+		summarizeBy: none
+		sourceColumn: BasStudent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bas2998
+		dataType: int64
+		formatString: 0
+		lineageTag: 1be023c9-9820-4941-92ff-a298dcc20438
+		summarizeBy: none
+		sourceColumn: Bas2998
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasFörvaltn
+		dataType: int64
+		formatString: 0
+		lineageTag: e445e584-bbe7-49db-b5cb-b35a09ab27ef
+		summarizeBy: none
+		sourceColumn: BasFörvaltn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasFörvaltnExt
+		dataType: int64
+		formatString: 0
+		lineageTag: 639b0823-0551-4695-9483-ffa582fbce52
+		summarizeBy: none
+		sourceColumn: BasFörvaltnExt
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasAUNy
+		dataType: int64
+		formatString: 0
+		lineageTag: 979b026a-5480-4450-b4bb-66c70e6dfb0b
+		summarizeBy: none
+		sourceColumn: BasAUNy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasDrift
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c0268e2-df23-4574-9f44-14ab25040f08
+		summarizeBy: none
+		sourceColumn: BasDrift
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasLth
+		dataType: int64
+		formatString: 0
+		lineageTag: d9de90b0-7c7f-47db-a515-a7bcbb72ee3f
+		summarizeBy: none
+		sourceColumn: BasLth
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasAdm
+		dataType: int64
+		formatString: 0
+		lineageTag: 8631cd2c-922d-44d7-9312-0c885a2126e3
+		summarizeBy: none
+		sourceColumn: BasAdm
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatusId
+		dataType: string
+		lineageTag: a2fec2a2-b265-4e01-9762-9af0c80ebba5
+		summarizeBy: none
+		sourceColumn: StatusId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: a63cc9c5-bde6-4639-a745-79844a2086cf
+		summarizeBy: none
+		sourceColumn: Status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartPeriod
+		dataType: int64
+		formatString: 0
+		lineageTag: 9c3cff99-183c-4917-9a6c-ca76c99a1da5
+		summarizeBy: none
+		sourceColumn: StartPeriod
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SlutPeriod
+		dataType: int64
+		formatString: 0
+		lineageTag: 28a93c5f-07ad-45ca-8300-8e2f549ab76b
+		summarizeBy: none
+		sourceColumn: SlutPeriod
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektLedareId
+		dataType: string
+		lineageTag: bf7bd4c8-f19d-476e-91c6-7cb864d638d1
+		summarizeBy: none
+		sourceColumn: ProjektLedareId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektLedare
+		dataType: string
+		lineageTag: af8436e9-142c-4265-980a-d25719d0c6fa
+		summarizeBy: none
+		sourceColumn: ProjektLedare
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektFasstatusId
+		dataType: string
+		lineageTag: fbe842fb-3226-4860-9ffb-7e9563946327
+		summarizeBy: none
+		sourceColumn: ProjektFasstatusId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektFasstatus
+		dataType: string
+		lineageTag: 14b06ae8-8ef8-470a-853c-ce52f02ccf50
+		summarizeBy: none
+		sourceColumn: ProjektFasstatus
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FackId
+		dataType: string
+		lineageTag: 5539d5cd-e872-4972-a8f4-39c7389dab56
+		summarizeBy: none
+		sourceColumn: FackId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fack
+		dataType: string
+		lineageTag: 83b6e13b-1a35-49d2-a4eb-608b10a01553
+		summarizeBy: none
+		sourceColumn: Fack
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektTypId
+		dataType: string
+		lineageTag: 3aac11ed-3b13-4e5c-802d-2c09a67d53ed
+		summarizeBy: none
+		sourceColumn: ProjektTypId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektTyp
+		dataType: string
+		lineageTag: f746f08a-d425-4d78-9062-2f120c3382d1
+		summarizeBy: none
+		sourceColumn: ProjektTyp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostProcId
+		dataType: string
+		lineageTag: d061f100-2259-410e-848c-3b6043b4cdd0
+		summarizeBy: none
+		sourceColumn: KostProcId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostProc
+		dataType: string
+		lineageTag: 6031cde0-959a-4d1d-a50e-4e5e4a95fd2a
+		summarizeBy: none
+		sourceColumn: KostProc
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeId
+		dataType: string
+		lineageTag: f77013b7-687e-4159-b144-e14ab309b1d0
+		summarizeBy: none
+		sourceColumn: KostnadsställeId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: string
+		lineageTag: d5d7e575-d5f5-4764-9586-22119278e367
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KundId
+		dataType: string
+		lineageTag: 54854ae0-5e66-42b9-8c9a-bec89ef418df
+		summarizeBy: none
+		sourceColumn: KundId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kund
+		dataType: string
+		lineageTag: bfc6a1e6-8ce9-418b-98f4-1a17c8f37e29
+		summarizeBy: none
+		sourceColumn: Kund
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MomssystemId
+		dataType: string
+		lineageTag: 4941a7bb-41d8-4e64-b07f-43a5ed05be90
+		summarizeBy: none
+		sourceColumn: MomssystemId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Momssystem
+		dataType: string
+		lineageTag: 105994e4-9874-43f2-8c02-0f2895a045a7
+		summarizeBy: none
+		sourceColumn: Momssystem
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProTypId
+		dataType: string
+		lineageTag: 13955c11-b47c-41a9-9191-3b82365bf172
+		summarizeBy: none
+		sourceColumn: ProTypId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProTyp
+		dataType: string
+		lineageTag: ee7d5c96-9b59-4e96-9a6e-5e59e4c790b5
+		summarizeBy: none
+		sourceColumn: ProTyp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Upphandlat
+		dataType: string
+		lineageTag: 2c0d54de-98a7-4a1d-ac54-c0d10ee81881
+		summarizeBy: none
+		sourceColumn: Upphandlat
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column UpphandladLeverantör
+		dataType: string
+		lineageTag: 66010bd7-591b-48c7-a01c-a87947eed2a9
+		summarizeBy: none
+		sourceColumn: UpphandladLeverantör
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bygglov
+		dataType: string
+		lineageTag: f8732703-b729-4670-a7ad-1c2cafa3e8f1
+		summarizeBy: none
+		sourceColumn: Bygglov
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BygglovDatum
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 924fa4f1-4ab7-4e5c-a5e2-5735d27cacb6
+		summarizeBy: none
+		sourceColumn: BygglovDatum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Investeringsstöd
+		dataType: string
+		lineageTag: b7fc3239-02e7-449f-af5c-c241015e08d2
+		summarizeBy: none
+		sourceColumn: Investeringsstöd
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PKöp
+		dataType: string
+		lineageTag: 7ce60aa9-1056-48be-83b8-db706c84248a
+		summarizeBy: none
+		sourceColumn: PKöp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Markköp
+		dataType: string
+		lineageTag: a4689616-aa22-405a-8b74-69aa544f55a0
+		summarizeBy: none
+		sourceColumn: Markköp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Inflyttning
+		dataType: string
+		lineageTag: fb63f5c7-2fb6-4daa-82cc-d7b1126e2b39
+		summarizeBy: none
+		sourceColumn: Inflyttning
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektBeslut
+		dataType: string
+		lineageTag: af00be4a-0c0a-40c1-907a-60576117bc39
+		summarizeBy: none
+		sourceColumn: ProjektBeslut
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BeslutatBelopp
+		dataType: double
+		lineageTag: c29ddd66-c469-44ca-af91-b634c9a82972
+		summarizeBy: none
+		sourceColumn: BeslutatBelopp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BeraknadEntreprenadstart
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 74793093-4d2e-4a0b-a1bf-546e11fcb038
+		summarizeBy: none
+		sourceColumn: BeraknadEntreprenadstart
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BeraknadEntreprenadslut
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4fd63251-3a29-499f-bf87-7de538b6868f
+		summarizeBy: none
+		sourceColumn: BeraknadEntreprenadslut
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GodkandSlutbesiktning
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 779e1559-103e-4e71-987e-63a9d96044e0
+		summarizeBy: none
+		sourceColumn: GodkandSlutbesiktning
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Garanti2Ar
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 408e85ed-2724-49ac-9ea8-91cc8c043ecc
+		summarizeBy: none
+		sourceColumn: Garanti2Ar
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Garanti5Ar
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dda704ee-77e6-47fa-a97c-b687f99120a6
+		summarizeBy: none
+		sourceColumn: Garanti5Ar
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MKBKontaktGaranti
+		dataType: string
+		lineageTag: a98fb311-6f70-4457-ad8c-062bfd8e724a
+		summarizeBy: none
+		sourceColumn: MKBKontaktGaranti
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExternProjektledare
+		dataType: string
+		lineageTag: c8751c8a-9f07-4244-95b0-6e83520ff036
+		summarizeBy: none
+		sourceColumn: ExternProjektledare
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EntrpenadStartÅr
+		dataType: int64
+		formatString: 0
+		lineageTag: f42e5a0d-8d33-4932-8e1f-f4a5838450d2
+		summarizeBy: none
+		sourceColumn: EntrpenadStartÅr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektFastStatusSortId
+		dataType: int64
+		formatString: 0
+		lineageTag: 5eb1d251-fe04-420b-bcbf-9626f330e9f0
+		summarizeBy: none
+		sourceColumn: ProjektFastStatusSortId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HuvudprojektId
+		dataType: string
+		lineageTag: 358c8bf3-b45c-464a-bdd7-b979cf5f7a01
+		summarizeBy: none
+		sourceColumn: HuvudprojektId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HuvudprojektNamn
+		dataType: string
+		lineageTag: dd98f4fa-f369-4a4b-80b6-3344d64f42dd
+		summarizeBy: none
+		sourceColumn: HuvudprojektNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Huvudprojekt
+		dataType: string
+		lineageTag: ae72ebd5-acb2-4a92-bebd-b70b0f4706c2
+		summarizeBy: none
+		sourceColumn: Huvudprojekt
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HuvudprojektTyp
+		dataType: string
+		lineageTag: 88df81e0-c10a-48ee-91cc-3462bebd08d6
+		summarizeBy: none
+		sourceColumn: HuvudprojektTyp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GarantiÅr
+		dataType: int64
+		formatString: 0
+		lineageTag: 867551ba-aa9d-41df-9458-508a5370f285
+		summarizeBy: none
+		sourceColumn: GarantiÅr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GarantiMånad
+		dataType: string
+		lineageTag: a445d564-fb9b-4cb7-bbbf-50cfdf131c74
+		summarizeBy: none
+		sourceColumn: GarantiMånad
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GarantiMånadNr
+		dataType: int64
+		formatString: 0
+		lineageTag: d7f5c77c-03a9-4071-85bc-df19280eba5d
+		summarizeBy: none
+		sourceColumn: GarantiMånadNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisaGaranti
+		dataType: int64
+		formatString: 0
+		lineageTag: a03fafb0-17cc-4f2a-9b64-1697448894ce
+		summarizeBy: none
+		sourceColumn: VisaGaranti
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GiltigaGarantier
+		dataType: int64
+		formatString: 0
+		lineageTag: c2153972-93a0-4142-8af6-1c6d1cd5456b
+		summarizeBy: none
+		sourceColumn: GiltigaGarantier
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetNummer
+		dataType: string
+		lineageTag: 3542a138-6590-4a43-9cab-127fbaaf4122
+		summarizeBy: none
+		sourceColumn: FastighetNummer
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fastighet
+		dataType: string
+		lineageTag: 74e76e37-1bc1-4a2c-8a6f-3d8cf60f2bb4
+		summarizeBy: none
+		sourceColumn: Fastighet
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 5årsGarantier
+		dataType: int64
+		formatString: 0
+		lineageTag: 76862e23-bc1c-42db-bf6a-23bf9dad532b
+		summarizeBy: none
+		sourceColumn: 5årsGarantier
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 5årsGarantiPeriod
+		dataType: string
+		lineageTag: f6aba149-f3eb-4e77-9315-0323408e4b98
+		summarizeBy: none
+		sourceColumn: 5årsGarantiPeriod
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 2årsGarantier
+		dataType: int64
+		formatString: 0
+		lineageTag: f7164107-a1f5-463a-8787-73696c041f66
+		summarizeBy: none
+		sourceColumn: 2årsGarantier
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 2årsGarantiPeriod
+		dataType: string
+		lineageTag: 2cbd3d7a-c77a-42fd-9112-476c97100248
+		summarizeBy: none
+		sourceColumn: 2årsGarantiPeriod
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Projekt-a418f071-8ccd-44f2-ae18-14a4e3839179 = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimProjekt = MKBBIDW{[Schema="dbo",Item="ViewDimProjekt"]}[Data]
+				in
+				    dbo_ViewDimProjekt
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,89 @@
+table 'Calculation Group underhåll fastighetsutveckling'
+	lineageTag: 1a0db1f4-42b7-4b23-a464-4fc920d6a727
+
+	calculationGroup
+		precedence: 8
+
+		calculationItem UH =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Projekt'[ProjektEnhet] = "UH - Underhåll"
+				  )
+
+		calculationItem Drift =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Uppföljning'[Uppföljning2] = "401 - Drift"
+				  )
+
+		calculationItem Miljö =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Uppföljning'[Uppföljning2] = "601 - Miljö"
+				  )
+
+		calculationItem Övrigt = ```
+				// för att visa diffen mellan två flikar
+				
+				VAR Other = // från flik Fastighetsutveckling
+				
+				CALCULATE( SELECTEDMEASURE(),
+				    'Projekt'[ProjektEnhet] = "UH - Underhåll"
+				  ) +
+				  
+				  CALCULATE( SELECTEDMEASURE(),
+				    'Uppföljning'[Uppföljning2] = "401 - Drift"
+				  ) +
+				  
+				  CALCULATE( SELECTEDMEASURE(),
+				    'Uppföljning'[Uppföljning2] = "601 - Miljö"
+				  )
+				  
+				VAR Total = // från flik Funktion
+				CALCULATE( SELECTEDMEASURE(), 'Funktion'[FunktionNamn] = "Fastighetsutveckling")
+				
+				RETURN Total - Other
+				
+				```
+
+		calculationItem Total = ```
+				VAR Other = // från flik Fastighetsutveckling
+				
+				CALCULATE( SELECTEDMEASURE(),
+				    'Projekt'[ProjektEnhet] = "UH - Underhåll"
+				  ) +
+				  
+				  CALCULATE( SELECTEDMEASURE(),
+				    'Uppföljning'[Uppföljning2] = "401 - Drift"
+				  ) +
+				  
+				  CALCULATE( SELECTEDMEASURE(),
+				    'Uppföljning'[Uppföljning2] = "601 - Miljö"
+				  )
+				  
+				VAR Total = // från flik Funktion
+				CALCULATE( SELECTEDMEASURE(), 'Funktion'[FunktionNamn] = "Fastighetsutveckling")
+				
+				
+				VAR Diff = Total - Other
+				
+				RETURN Other + Diff
+				
+				
+				```
+
+	column Name
+		dataType: string
+		lineageTag: a27a0443-a1d5-4796-af7f-63788b3ea3e3
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: 291877f0-41fd-4319-8f3f-64333e8bbb21
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

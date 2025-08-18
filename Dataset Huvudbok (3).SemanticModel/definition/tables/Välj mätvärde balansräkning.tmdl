@@ -1,0 +1,59 @@
+table 'Välj mätvärde balansräkning'
+	lineageTag: f7261bb3-2e02-4262-8dbe-07a98eeeab6e
+
+	column 'Mätvärde balans'
+		lineageTag: 5b02b761-a4dd-43fa-9350-dd545d57ca32
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Mätvärde balans Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Mätvärde balans Fields'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mätvärde balans Fields'
+		lineageTag: 4de04cda-60be-4edb-babf-ea740df0a6c6
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Mätvärde balans Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mätvärde balans Order'
+		formatString: 0
+		lineageTag: c41dcb25-74fc-4a27-b4be-dd3044ef0fd7
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj mätvärde balansräkning-884e8c27-b5e5-4cca-af59-609f91eb2caa' = calculated
+		mode: import
+		source =
+				{
+				    ("IB", NAMEOF('Mätvärde'[IB]), 0),
+				    ("IB helår", NAMEOF('Mätvärde'[IB helår]), 1),
+				    ("IB fg år-1", NAMEOF('Mätvärde'[IB fg år-1]), 2),
+				    ("IB Period", NAMEOF('Mätvärde'[IB Period]), 3),
+				    ("UB", NAMEOF('Mätvärde'[UB]), 4),
+				    ("UB fg år-1", NAMEOF('Mätvärde'[UB fg år-1]), 5),
+				    ("Utfall", NAMEOF('Mätvärde'[Utfall]), 6),
+				    ("Utfall Ack.", NAMEOF('Mätvärde'[Utfall ÅTD]), 7),
+				    ("Utfall fg år-1 Ack.", NAMEOF('Mätvärde'[Utfall fg år-1 ÅTD]), 8)
+				}
+
+	annotation PBI_Id = 98a4353ea0b0465d8306057c86a0348f
+

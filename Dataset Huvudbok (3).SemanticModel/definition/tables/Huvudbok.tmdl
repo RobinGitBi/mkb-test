@@ -1,0 +1,443 @@
+table Huvudbok
+	lineageTag: 89dcce35-e8f9-428a-b4a5-4f61497dc5b9
+
+	measure 'Countrows Huvudbok' = COUNTROWS( Huvudbok)
+		formatString: #,0.00
+		lineageTag: beb650a6-93a5-40e3-9fd4-6e5aeb3cbc59
+
+	column SlagSK
+		dataType: int64
+		formatString: 0
+		lineageTag: a10090d7-d5dd-4331-94f8-79df667394e0
+		summarizeBy: none
+		sourceColumn: SlagSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MotpartSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 17c9c642-085f-45a3-a5eb-61fa67bbff3c
+		summarizeBy: none
+		sourceColumn: MotpartSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SegmentSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ab097f1-f2f5-4435-825c-c8fe288568ff
+		summarizeBy: none
+		sourceColumn: SegmentSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 7a7a27dd-985e-418a-b86d-71956675c6c4
+		summarizeBy: none
+		sourceColumn: ProjektSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Utfall
+		dataType: double
+		formatString: #,0
+		lineageTag: 7f4019e2-6fa6-4519-b498-b0a1134b9728
+		summarizeBy: sum
+		sourceColumn: Utfall
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MomsKodSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 5132e2c7-bb62-4fa2-8594-76ddb499508d
+		summarizeBy: none
+		sourceColumn: MomsKodSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MomssystemSK
+		dataType: int64
+		formatString: 0
+		lineageTag: e9032847-5b27-4b08-914c-869e50bc26d8
+		summarizeBy: none
+		sourceColumn: MomssystemSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VertypSK
+		dataType: int64
+		formatString: 0
+		lineageTag: f8844d25-2d1d-4151-907c-97729956e81f
+		summarizeBy: none
+		sourceColumn: VertypSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column WebUrl
+		dataType: string
+		lineageTag: 0e41194e-9be3-435d-acb7-1d53123fc6e3
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: WebUrl
+
+		changedProperty = DataCategory
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeverantörSK
+		dataType: int64
+		formatString: 0
+		lineageTag: acee85c9-9206-43f6-b86b-eb1f63236bcf
+		summarizeBy: none
+		sourceColumn: LeverantörSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bokföringsdatum
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 03145c11-8c0c-4318-a70c-998b3c311421
+		summarizeBy: none
+		sourceColumn: Bokföringsdatum
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column BeloppT0
+		dataType: double
+		lineageTag: 5c8f4522-eff7-43bc-90c4-e7a4d4b8ab1d
+		summarizeBy: sum
+		sourceColumn: BeloppT0
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BeloppT1
+		dataType: double
+		lineageTag: 7ce0dcfa-b37d-4ada-9430-cac8dc603062
+		summarizeBy: sum
+		sourceColumn: BeloppT1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BeloppT2
+		dataType: double
+		lineageTag: 54fa50b1-e74a-4b1a-a348-9ee01be13c62
+		summarizeBy: sum
+		sourceColumn: BeloppT2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BeloppProjOrig
+		dataType: double
+		lineageTag: 3544c16d-3eb4-45a3-afd9-377baa8f1e37
+		summarizeBy: sum
+		sourceColumn: BeloppProjOrig
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BeloppProjLop
+		dataType: double
+		lineageTag: 49d0523c-9ab8-428e-95ba-86fd473c677a
+		summarizeBy: sum
+		sourceColumn: BeloppProjLop
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VerText
+		dataType: string
+		lineageTag: f20777c0-e6a6-4a68-8df7-b73ea1fbf89b
+		summarizeBy: none
+		sourceColumn: VerText
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column UppföljningSK
+		dataType: double
+		formatString: 0
+		lineageTag: faa48acf-2d3a-4b21-8dbe-0fbb043222c2
+		summarizeBy: none
+		sourceColumn: UppföljningSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AktivitetSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b232a0f-5de2-46e7-9ae7-5e542d841c5f
+		summarizeBy: none
+		sourceColumn: AktivitetSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FunktionSK
+		dataType: double
+		formatString: 0
+		lineageTag: e12e960c-c9df-4a24-b66d-31fcc3df2871
+		summarizeBy: none
+		sourceColumn: FunktionSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KoddelLG
+		dataType: string
+		lineageTag: 70679d64-3998-4341-8631-a72cb2f15926
+		summarizeBy: none
+		sourceColumn: KoddelLG
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Typ
+		dataType: string
+		lineageTag: 5eb2eeba-c1d9-4268-abc0-154786e2ecf3
+		summarizeBy: none
+		sourceColumn: Typ
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BudgetT0
+		dataType: double
+		lineageTag: 997fee53-8e9f-44e9-8386-e2833f2f8851
+		summarizeBy: sum
+		sourceColumn: BudgetT0
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BudgetT1
+		dataType: double
+		lineageTag: 86c8c96b-bce8-48ee-a603-d21510f4c583
+		summarizeBy: sum
+		sourceColumn: BudgetT1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BudgetT2
+		dataType: double
+		lineageTag: 8fa5bf73-39ef-4033-969a-0a3b71100128
+		summarizeBy: sum
+		sourceColumn: BudgetT2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IngBalans
+		dataType: double
+		lineageTag: ccfe5bd4-9aa9-47d0-b960-a78673e985cb
+		summarizeBy: sum
+		sourceColumn: IngBalans
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Vernr
+		dataType: int64
+		formatString: 0
+		lineageTag: 73bbf86f-8028-48dd-8b5f-77ea317342bf
+		summarizeBy: sum
+		sourceColumn: Vernr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeSK
+		dataType: string
+		lineageTag: 2d1c5883-ab6c-4b3d-97cb-3f5e03e26b70
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KontoSK
+		dataType: int64
+		formatString: 0
+		lineageTag: ac168fc9-778b-4b8e-ab42-df8240d51684
+		summarizeBy: none
+		sourceColumn: KontoSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 6faf635a-7149-4fb9-b565-1a07241673de
+		summarizeBy: none
+		sourceColumn: KostnadsställeSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FöretagSK
+		dataType: double
+		formatString: 0
+		lineageTag: 7b779897-b288-4ccc-af4d-d54eaea12693
+		summarizeBy: none
+		sourceColumn: FöretagSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KundSK
+		dataType: int64
+		formatString: 0
+		lineageTag: abd89f71-b76e-4a93-81f1-fede1f507389
+		summarizeBy: none
+		sourceColumn: KundSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppf
+		dataType: string
+		lineageTag: 76b6d619-c529-40fb-8d2c-e6c788ae56d1
+		summarizeBy: none
+		sourceColumn: Uppf
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bokföringsperiod
+		dataType: int64
+		formatString: 0
+		lineageTag: 07e6202a-bd09-4ee7-a53b-d874e08690bf
+		summarizeBy: sum
+		sourceColumn: Bokföringsperiod
+
+		annotation SummarizationSetBy = Automatic
+
+	column utfall_match_dw
+		dataType: double
+		lineageTag: 4b9c53b8-37fb-4a78-8ddd-070522b5cd96
+		summarizeBy: sum
+		sourceColumn: utfall_match_dw
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column utfall_match_dw_ubw
+		dataType: double
+		lineageTag: 4e9241a4-3f23-496c-8c73-14b49f0a4add
+		summarizeBy: sum
+		sourceColumn: utfall_match_dw_ubw
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Belopp_orig
+		dataType: double
+		lineageTag: ce243ce0-9b25-4c7f-be54-f1b20d0263a3
+		summarizeBy: sum
+		sourceColumn: Belopp_orig
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Huvudbok-619ac643-aa85-4174-b7ad-23b4db144204 = m
+		mode: import
+		queryGroup: Faktatabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactHuvudbok = MKBBIDW{[Schema="dbo",Item="ViewFactHuvudbok"]}[Data],
+				    #"Added Custom" = Table.AddColumn(dbo_ViewFactHuvudbok, "Typ", each "Utfall"),
+				    #"Appended Query" = Table.Combine({#"Added Custom", #"Budget - for append", #"Ingående balans - for append"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Appended Query",{"Created", "Version", "SekvensNr", "Transaktionsdatum"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Removed Columns",{{"Bokföringsdatum", type date}}),
+				    #"Appended Beställarlistan" = Table.Combine({#"Changed Type", #"Beställarlistan for append"})
+				in
+				    #"Appended Beställarlistan"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

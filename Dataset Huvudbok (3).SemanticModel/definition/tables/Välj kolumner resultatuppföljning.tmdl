@@ -1,0 +1,52 @@
+table 'Välj kolumner resultatuppföljning'
+	lineageTag: a31e19c1-119f-400d-8e0b-c1dd076863ee
+
+	column 'Välj kolumner resultatuppföljning'
+		lineageTag: 11f9ab8b-f897-4145-acdf-707b1db32e46
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Välj kolumner resultatuppföljning Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Välj kolumner resultatuppföljning Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj kolumner resultatuppföljning Fields'
+		isHidden
+		lineageTag: a8cc4af0-7134-4f3e-86b0-619c06f0bf2d
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Välj kolumner resultatuppföljning Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj kolumner resultatuppföljning Order'
+		isHidden
+		formatString: 0
+		lineageTag: d2e2262c-a025-44da-8175-68143a746252
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj kolumner resultatuppföljning-ee18993c-9e0d-44e7-881c-b925830463ab' = calculated
+		mode: import
+		source =
+				{
+				    ("Leverantör", NAMEOF('Leverantör'[Leverantör]), 0),
+				    ("Leverantör namn", NAMEOF('Leverantör'[LeverantörNamn]), 0),
+				    ("Slag", NAMEOF('Slag'[Slag]), 1),
+				    ("Uppföljning", NAMEOF('Uppföljning'[Uppföljning]), 2),
+				    ("Uppföljning nr", NAMEOF('Uppföljning'[UppföljningNr]), 11),
+				    ("Uppföljning 2", NAMEOF('Uppföljning'[Uppföljning2]), 12)
+				}
+
+	annotation PBI_Id = 87d667a1a1fa41b0a3b658e997640d3c
+

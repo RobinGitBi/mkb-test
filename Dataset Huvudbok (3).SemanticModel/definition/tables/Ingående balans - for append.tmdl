@@ -1,0 +1,281 @@
+table 'Ingående balans - for append'
+	isHidden
+	lineageTag: 06a54581-81f1-4753-8115-9db83802c57b
+
+	column TimeSK
+		dataType: string
+		isHidden
+		lineageTag: b2928de0-d139-47ef-8cbc-4156c0ceed70
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KontoSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5ccde15b-fa52-4230-8a88-12fd592feab1
+		summarizeBy: sum
+		sourceColumn: KontoSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 478f96e0-0c72-43a7-a6cb-96cf8865a451
+		summarizeBy: sum
+		sourceColumn: KostnadsställeSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FöretagSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6b238a34-a4fc-4ce4-bb69-dc134df67dbb
+		summarizeBy: sum
+		sourceColumn: FöretagSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SlagSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1035e8da-d1f6-4815-b355-51da415933f6
+		summarizeBy: sum
+		sourceColumn: SlagSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MotpartSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 659e45bf-5550-46b1-a9ab-341b5beaa3d7
+		summarizeBy: sum
+		sourceColumn: MotpartSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SegmentSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: caa6b4cb-466a-4ea9-a1b6-740e517fad2b
+		summarizeBy: sum
+		sourceColumn: SegmentSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fc0df9cf-ff94-4497-8969-311c7f38209d
+		summarizeBy: sum
+		sourceColumn: ProjektSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MomsKodSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ceb21fe4-3d47-43d1-be73-4af9c5d64940
+		summarizeBy: sum
+		sourceColumn: MomsKodSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MomssystemSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b18112de-d268-4d2c-a0e5-d8e961f9512a
+		summarizeBy: sum
+		sourceColumn: MomssystemSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VertypSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6f80e154-3917-4f99-8a7c-1bc29b69338d
+		summarizeBy: sum
+		sourceColumn: VertypSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeverantörSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4fc26025-9c20-48ea-8f3a-3a809615e00d
+		summarizeBy: sum
+		sourceColumn: LeverantörSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column UppföljningSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4a2cc989-163b-4e6c-a955-ed8b3b6d8cf3
+		summarizeBy: sum
+		sourceColumn: UppföljningSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AktivitetSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 256433e7-7c3e-47d1-bc44-6559bc1c753e
+		summarizeBy: sum
+		sourceColumn: AktivitetSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FunktionSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6c7a8485-142d-4fc2-a25c-ea8c86878390
+		summarizeBy: sum
+		sourceColumn: FunktionSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KundSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c974538c-4fd3-46ca-bcca-78afbaaeaa18
+		summarizeBy: sum
+		sourceColumn: KundSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bokföringsdatum
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 2439744e-8934-4655-815e-24b682d21d8a
+		summarizeBy: none
+		sourceColumn: Bokföringsdatum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column IngBalans
+		dataType: double
+		isHidden
+		lineageTag: d08a27f4-34c6-47d3-b7e3-d6aee1383848
+		summarizeBy: sum
+		sourceColumn: IngBalans
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Version
+		dataType: string
+		isHidden
+		lineageTag: 76cec498-720c-40b5-9078-4c08050eccd9
+		summarizeBy: none
+		sourceColumn: Version
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VerText
+		dataType: string
+		isHidden
+		lineageTag: e79bd16f-926a-4bc1-8507-a00aef287282
+		summarizeBy: none
+		sourceColumn: VerText
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column WebUrl
+		dataType: string
+		isHidden
+		lineageTag: fb9b8ff3-5352-4e8a-8626-ad5344b11c95
+		summarizeBy: none
+		sourceColumn: WebUrl
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Typ
+		dataType: string
+		isHidden
+		lineageTag: a24a2173-de96-4799-a60d-a6fe6c29d740
+		summarizeBy: none
+		sourceColumn: Typ
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Ingående balans - for append-a273a51b-db2c-4e36-9b20-1c6442c23fb4' = m
+		mode: import
+		queryGroup: Faktatabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactIngBalans = MKBBIDW{[Schema="dbo",Item="ViewFactIngBalans"]}[Data],
+				    #"Added Custom" = Table.AddColumn(dbo_ViewFactIngBalans, "Typ", each "Ingående balans"),
+				    #"Removed Columns" = Table.RemoveColumns(#"Added Custom",{"Vernr", "SekvensNr", "Transaktionsdatum", "Created"})
+				in
+				    #"Removed Columns"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

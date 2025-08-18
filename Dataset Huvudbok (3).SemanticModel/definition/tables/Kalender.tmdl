@@ -1,0 +1,464 @@
+table Kalender
+	lineageTag: d0c6c246-4859-4e8f-a893-9cacf3032394
+	dataCategory: Time
+
+	column Datum
+		dataType: dateTime
+		isKey
+		formatString: yyyy-mm-dd
+		lineageTag: 12e4a335-a71a-43c8-a6d6-73f314eac6aa
+		summarizeBy: none
+		sourceColumn: Datum
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column RelativDatum
+		dataType: int64
+		formatString: 0
+		lineageTag: d7daa119-1213-48c7-88cb-8e231ab805b1
+		summarizeBy: none
+		sourceColumn: RelativDatum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column RelativVecka
+		dataType: int64
+		formatString: 0
+		lineageTag: f8018c49-5bbd-4103-8281-57f3de1b6248
+		summarizeBy: none
+		sourceColumn: RelativVecka
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column RelativMånad
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b53e770-5c47-483d-921d-9534cf0fe355
+		summarizeBy: none
+		sourceColumn: RelativMånad
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column RelativtKvartal
+		dataType: int64
+		formatString: 0
+		lineageTag: 20403d9e-d71c-4786-b505-7ad334e8a1b6
+		summarizeBy: none
+		sourceColumn: RelativtKvartal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column RelativtÅr
+		dataType: int64
+		formatString: 0
+		lineageTag: dfc8d588-2fc0-42c9-b25a-281efc9f5900
+		summarizeBy: none
+		sourceColumn: RelativtÅr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column FramtidaDatum
+		dataType: string
+		lineageTag: c986f910-6ce2-44e8-b13a-c501a9c3dc4d
+		summarizeBy: none
+		sourceColumn: FramtidaDatum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dag
+		dataType: int64
+		formatString: 0
+		lineageTag: 379f19fa-1e4c-49d8-a67f-9e816895a599
+		summarizeBy: none
+		sourceColumn: Dag
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column MånadNr
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d6d8fb3-a1ab-4d8b-9cf7-d69754cc237f
+		summarizeBy: none
+		sourceColumn: MånadNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Månad
+		dataType: string
+		lineageTag: 296cf109-e798-4124-8848-04533dfa0db8
+		summarizeBy: none
+		sourceColumn: Månad
+		sortByColumn: MånadNr
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kvartal
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f9ad4c9-a6ac-40da-b382-99de00b5a9f2
+		summarizeBy: none
+		sourceColumn: Kvartal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column År
+		dataType: int64
+		formatString: 0
+		lineageTag: 867b573d-94bd-42b7-85f5-5ee17ae119f9
+		summarizeBy: none
+		sourceColumn: År
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Period
+		dataType: string
+		lineageTag: 23413339-cd7c-4782-8458-d5f85e3cfab6
+		summarizeBy: none
+		sourceColumn: Period
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VeckodagNr
+		dataType: int64
+		formatString: 0
+		lineageTag: 56999aa8-bda7-4dba-b324-79d0c54721db
+		summarizeBy: none
+		sourceColumn: VeckodagNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Veckodag
+		dataType: string
+		lineageTag: bdcfc879-b5f7-443a-a472-d3f8dbbe8398
+		summarizeBy: none
+		sourceColumn: Veckodag
+		sortByColumn: VeckodagNr
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FörstaDagiMånad
+		dataType: int64
+		formatString: 0
+		lineageTag: 61a3c17c-f363-44fc-8741-737603264e5f
+		summarizeBy: none
+		sourceColumn: FörstaDagiMånad
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column SistaDagiMånad
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e8ca6b2-9c9b-4168-84c6-232a0cd59922
+		summarizeBy: none
+		sourceColumn: SistaDagiMånad
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column Week
+		dataType: int64
+		formatString: 0
+		lineageTag: ea75a7b7-2b4d-4407-8060-49da5a45276c
+		summarizeBy: none
+		sourceColumn: Week
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column YearWeek
+		dataType: string
+		lineageTag: 0d003e17-72b8-4faf-a7ec-b3fa8731b7de
+		summarizeBy: none
+		sourceColumn: YearWeek
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MånadKort
+		dataType: string
+		lineageTag: 3372875b-b002-4ae4-a5e3-6ae47afdfa7e
+		summarizeBy: none
+		sourceColumn: MånadKort
+		sortByColumn: MånadNr
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NuvarandeMånad
+		dataType: string
+		lineageTag: d4d0568b-a945-40b0-a77f-88fc0f7f24e8
+		summarizeBy: none
+		sourceColumn: NuvarandeMånad
+		sortByColumn: MånadNr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column NuvarandeÅr
+		dataType: string
+		lineageTag: 26cd0e2c-34ce-4aa5-99b5-41dcadbd6270
+		summarizeBy: none
+		sourceColumn: NuvarandeÅr
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultMonth
+		dataType: string
+		displayFolder: Perioder med standard
+		lineageTag: 9c272359-e015-4e93-932a-81acdd8bd91f
+		summarizeBy: none
+		sourceColumn: DefaultMonth
+		sortByColumn: MånadNr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultYear
+		dataType: string
+		displayFolder: Perioder med standard
+		lineageTag: e9ba30c2-2789-4d81-be2c-da85f5d4392c
+		summarizeBy: none
+		sourceColumn: DefaultYear
+		sortByColumn: År
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultMonthBoSocial
+		dataType: string
+		displayFolder: Perioder med standard
+		lineageTag: 3170d291-bc82-47e9-8109-a2f2943cfe5e
+		summarizeBy: none
+		sourceColumn: DefaultMonthBoSocial
+		sortByColumn: MånadNr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultYearBoSocial
+		dataType: string
+		displayFolder: Perioder med standard
+		lineageTag: 744c0771-c361-427f-ad3d-a4594db27be9
+		summarizeBy: none
+		sourceColumn: DefaultYearBoSocial
+		sortByColumn: År
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultMonthEnergi
+		dataType: string
+		displayFolder: Perioder med standard
+		lineageTag: 88362fb5-f72c-4ef0-8a40-0a26d3fae99c
+		summarizeBy: none
+		sourceColumn: DefaultMonthEnergi
+		sortByColumn: MånadNr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultYearEnergi
+		dataType: string
+		displayFolder: Perioder med standard
+		lineageTag: 83d2d032-7183-4c64-b1f2-5f6ae857a8b6
+		summarizeBy: none
+		sourceColumn: DefaultYearEnergi
+		sortByColumn: År
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tertial
+		dataType: string
+		lineageTag: 670317bf-5c3d-40f6-b0cc-9e6958c185e4
+		summarizeBy: none
+		sourceColumn: Tertial
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearTertial
+		dataType: string
+		lineageTag: 5e012798-bc53-42d5-8482-09de81944647
+		summarizeBy: none
+		sourceColumn: YearTertial
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeSK
+		dataType: string
+		lineageTag: 068c47ae-c954-4cdd-a240-97e882f9d725
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Första datum i tertialet'
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: eb68ebf9-7e90-47bd-926a-14675b2144ae
+		summarizeBy: none
+		sourceColumn: Första datum i tertialet
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'Första datum i månaden'
+		dataType: dateTime
+		formatString: yyyy-mm
+		lineageTag: 63cd5d0c-fa47-483c-877a-b0d904f1edb4
+		summarizeBy: none
+		sourceColumn: Första datum i månaden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'År med senast stängda månad 11:e'
+		dataType: string
+		displayFolder: Perioder med standard
+		lineageTag: 82a94a40-26b5-491c-b35c-4165d7dcd1c2
+		summarizeBy: none
+		sourceColumn: År med senast stängda månad 11:e
+		sortByColumn: År
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Månad med senast stängda månad 11:e'
+		dataType: string
+		displayFolder: Perioder med standard
+		lineageTag: bd4f3fcd-4e5b-4ff2-94e5-105c77b70729
+		summarizeBy: none
+		sourceColumn: Månad med senast stängda månad 11:e
+		sortByColumn: MånadNr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Stängd månad' = ```
+			
+			VAR FirstThisMonth = DATE( YEAR(TODAY()), MONTH(TODAY()), 1)
+			
+			VAR LastClosedDate = 
+			IF( DAY(TODAY()) >= 11, 
+			    EDATE(FirstThisMonth, -0)-1, // föregående månad är senatse stängda
+			    EDATE(FirstThisMonth, -1)-1 // månaden innan föregående månad är senaste stängda
+			)
+			
+			VAR Result = IF( Kalender[Datum] <= LastClosedDate, "Stängd månad", "Framtida månad")
+			
+			RETURN Result
+			```
+		lineageTag: fd348ad8-6e1c-447b-925a-9995689d3471
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultMonthMiljö
+		dataType: string
+		lineageTag: 04223ec0-1f7c-4bee-9845-851e8fee23af
+		summarizeBy: none
+		sourceColumn: DefaultMonthMiljö
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultYearMiljö
+		dataType: string
+		lineageTag: f8ec363c-268c-4caa-a847-e3b2e6549e4f
+		summarizeBy: none
+		sourceColumn: DefaultYearMiljö
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultMonthUthyrning
+		dataType: string
+		lineageTag: b4fd5bbe-d008-4031-8ecb-77ddc8296054
+		summarizeBy: none
+		sourceColumn: DefaultMonthUthyrning
+
+		annotation SummarizationSetBy = Automatic
+
+	column DefaultYearUthyrning
+		dataType: string
+		lineageTag: 624cffde-eca1-463f-b546-c3fb09ba4b36
+		summarizeBy: none
+		sourceColumn: DefaultYearUthyrning
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Kalender-c855bc39-99b9-4ff8-aeeb-b04fb8ef1e62 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimTime = MKBBIDW{[Schema="dbo",Item="ViewDimTime"]}[Data]
+				in
+				    dbo_ViewDimTime
+
+	annotation PBI_ResultType = Table
+

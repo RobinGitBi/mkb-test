@@ -1,0 +1,680 @@
+table Beställarlistan
+	lineageTag: f8b2dba9-a4ad-43d3-bb50-36cb48008f61
+
+	column ÄrendeNummer
+		dataType: string
+		lineageTag: 5aa8bc1a-dbbc-4f4b-bd7c-80e6c3558dec
+		summarizeBy: none
+		sourceColumn: ÄrendeNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column ÄrendeStatus
+		dataType: string
+		lineageTag: 15e71429-26e7-4f05-9fa5-402c1c2191d5
+		summarizeBy: none
+		sourceColumn: ÄrendeStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Klar Senast'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 149d0e80-4f0c-498c-aa6e-f5621c0d301f
+		summarizeBy: none
+		sourceColumn: Klar Senast
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Klar Senast Period'
+		dataType: string
+		lineageTag: e0743f76-8963-4c48-b1a6-37ffa76a87f4
+		summarizeBy: none
+		sourceColumn: Klar Senast Period
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avslutad
+		dataType: string
+		lineageTag: 42d75b58-1009-4c30-8542-65652f7ff7c6
+		summarizeBy: none
+		sourceColumn: Avslutad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Leverantör
+		dataType: string
+		lineageTag: f579026f-1e14-407e-937d-5b87e7e2c710
+		summarizeBy: none
+		sourceColumn: Leverantör
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeverantörID
+		dataType: string
+		lineageTag: 4138b402-b26c-4c29-a478-e7994e505114
+		summarizeBy: none
+		sourceColumn: LeverantörID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Beställare
+		dataType: string
+		lineageTag: bc4d67b7-ed2e-4340-ae86-d774661757c5
+		summarizeBy: none
+		sourceColumn: Beställare
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetNummer
+		dataType: string
+		lineageTag: f78e9f4c-09e1-4d30-ba91-30b9b1ee8ec7
+		summarizeBy: none
+		sourceColumn: FastighetNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 706c3aed-d156-423f-96fa-c3b4c5abee4d
+		summarizeBy: sum
+		sourceColumn: FastighetSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjektNummer
+		dataType: string
+		lineageTag: 5b1409ef-9c6f-40a9-aa0b-189b58e55ac2
+		summarizeBy: none
+		sourceColumn: ObjektNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjektNamn
+		dataType: string
+		lineageTag: 31d0ef59-1679-4127-86a7-73496c689772
+		summarizeBy: none
+		sourceColumn: ObjektNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bolag
+		dataType: string
+		lineageTag: 6c67652f-7eb2-48c6-bb94-8e619b2a3667
+		summarizeBy: none
+		sourceColumn: Bolag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: string
+		lineageTag: 62013b57-5764-4d0c-ac6d-60f47f4ebbe7
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kst
+		dataType: string
+		lineageTag: 9eb06f30-4657-4bea-9509-5ad55f88b1c1
+		summarizeBy: none
+		sourceColumn: Kst
+
+		annotation SummarizationSetBy = Automatic
+
+	column Projekt
+		dataType: string
+		lineageTag: e51caf87-e109-4f46-a971-c52ed8be88d5
+		summarizeBy: none
+		sourceColumn: Projekt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppf
+		dataType: string
+		lineageTag: 5c34abf8-40f3-4afe-bf8b-128a558ecaa9
+		summarizeBy: none
+		sourceColumn: Uppf
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppf2
+		dataType: string
+		lineageTag: 38bafaa2-079a-4d03-a38c-062c477e8bb1
+		summarizeBy: none
+		sourceColumn: Uppf2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Slag
+		dataType: string
+		lineageTag: 5d2c77ea-0f2b-4580-be3b-2072afafdb10
+		summarizeBy: none
+		sourceColumn: Slag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aktiv
+		dataType: string
+		lineageTag: 26b84269-20d1-4a03-8852-5d39670f26f2
+		summarizeBy: none
+		sourceColumn: Aktiv
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segm
+		dataType: string
+		lineageTag: 083097db-c754-47ce-8313-622bc458170d
+		summarizeBy: none
+		sourceColumn: Segm
+
+		annotation SummarizationSetBy = Automatic
+
+	column MP
+		dataType: string
+		lineageTag: 230c6db1-55ed-4b41-ad6d-a0adc03350f6
+		summarizeBy: none
+		sourceColumn: MP
+
+		annotation SummarizationSetBy = Automatic
+
+	column MK
+		dataType: string
+		lineageTag: 4e95f438-2381-4dbc-af66-2fbffe5db4eb
+		summarizeBy: none
+		sourceColumn: MK
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Belopp PM5'
+		dataType: double
+		lineageTag: 20672817-814b-4b4c-bd0b-d0a5eb47ccca
+		summarizeBy: sum
+		sourceColumn: Belopp PM5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Beställning skickad'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 66ec8248-df70-45b8-9dc3-3740124fce2d
+		summarizeBy: none
+		sourceColumn: Beställning skickad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Lev_gjord_Tid
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 13477f4a-6522-4a61-9647-5846098e784c
+		summarizeBy: none
+		sourceColumn: Lev_gjord_Tid
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Lev_godkänd_Tid
+		dataType: string
+		lineageTag: 30e6ca62-f944-4bd5-b014-44cf91a853d1
+		summarizeBy: none
+		sourceColumn: Lev_godkänd_Tid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fakt_mottagen_avsl_Tid
+		dataType: string
+		lineageTag: 5130ecf0-0958-4d80-9839-f51710f22f89
+		summarizeBy: none
+		sourceColumn: Fakt_mottagen_avsl_Tid
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoginName
+		dataType: string
+		lineageTag: 9d186a85-9303-46a8-983b-e77beb16ef65
+		summarizeBy: none
+		sourceColumn: LoginName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoginDisplayName
+		dataType: string
+		lineageTag: 3b55d5cb-8653-454c-932c-81d24c35908b
+		summarizeBy: none
+		sourceColumn: LoginDisplayName
+
+		annotation SummarizationSetBy = Automatic
+
+	column TidPunkt
+		dataType: string
+		lineageTag: 97d886f9-200c-4569-8e7c-b8ae65ffefef
+		summarizeBy: none
+		sourceColumn: TidPunkt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Leverantörsnummer UBW'
+		dataType: string
+		lineageTag: 64488a5d-18e8-4bdc-83c0-3849e3ef393c
+		summarizeBy: none
+		sourceColumn: Leverantörsnummer UBW
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Leverantörsnamn UBW'
+		dataType: string
+		lineageTag: 05f50d58-0ece-405e-b4ec-a1efb075ee42
+		summarizeBy: none
+		sourceColumn: Leverantörsnamn UBW
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fakturanr UBW'
+		dataType: string
+		lineageTag: c70b8243-cbdb-4993-8e23-65a25c05497c
+		summarizeBy: none
+		sourceColumn: Fakturanr UBW
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vernr UBW'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a107231-1d04-4003-b43c-6ca71d816dab
+		summarizeBy: sum
+		sourceColumn: Vernr UBW
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'VT UBW'
+		dataType: string
+		lineageTag: 38bfc5d9-e214-4817-9453-420c2a04671e
+		summarizeBy: none
+		sourceColumn: VT UBW
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Faktstatus UBW'
+		dataType: string
+		lineageTag: eb28c355-b4a0-4756-9ef9-03f87bdf9acf
+		summarizeBy: none
+		sourceColumn: Faktstatus UBW
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Utfall UBW'
+		dataType: double
+		lineageTag: a28e7a3e-3c9f-433c-b72c-18e2d46b58d4
+		summarizeBy: sum
+		sourceColumn: Utfall UBW
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column utfall_UBW_Uppbokning
+		dataType: double
+		lineageTag: 85e465f8-2842-473b-9a90-7f2fa2673357
+		summarizeBy: sum
+		sourceColumn: utfall_UBW_Uppbokning
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Utfall UBW fakturerad och avslutad'
+		dataType: double
+		lineageTag: 495a5e72-5c23-4bf8-a78f-fb8d4fc1d785
+		summarizeBy: sum
+		sourceColumn: Utfall UBW fakturerad och avslutad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Öppen, fakturerat belopp'
+		dataType: double
+		lineageTag: 5aaf82ed-5e3b-49b4-9b18-2874193441cc
+		summarizeBy: sum
+		sourceColumn: Öppen, fakturerat belopp
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Belopp PM5 öppen ej fakturerad'
+		dataType: double
+		lineageTag: 8c2ecaef-2f13-49a6-bc83-88885a5538bc
+		summarizeBy: sum
+		sourceColumn: Belopp PM5 öppen ej fakturerad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Beställningstyp
+		dataType: string
+		lineageTag: 04ba9bb0-d63c-4a5f-bef4-08615002c6f7
+		summarizeBy: none
+		sourceColumn: Beställningstyp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Öppen/Stängd
+		dataType: string
+		lineageTag: bb88940f-a425-4c02-bc67-49e9e441840c
+		summarizeBy: none
+		sourceColumn: Öppen/Stängd
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Faktura har kommit'
+		dataType: string
+		lineageTag: a8542f5c-0104-42d2-a70a-6acca891a6ea
+		summarizeBy: none
+		sourceColumn: Faktura har kommit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bokfdatum
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 38aa86a0-68f5-4645-838e-47f908aa538d
+		summarizeBy: none
+		sourceColumn: Bokfdatum
+
+		annotation SummarizationSetBy = Automatic
+
+	column BokfPeriod
+		dataType: string
+		lineageTag: 7045b5e0-926b-4871-bedc-0dc8719699a8
+		summarizeBy: none
+		sourceColumn: BokfPeriod
+
+		annotation SummarizationSetBy = Automatic
+
+	column KontoSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 094b085a-5901-43a5-95dd-0301d4b329ed
+		summarizeBy: sum
+		sourceColumn: KontoSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 152b9980-d160-4988-afab-8bf981407509
+		summarizeBy: sum
+		sourceColumn: KostnadsställeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b22e2c5-92fb-4c54-9fc9-31db7c26a6e9
+		summarizeBy: sum
+		sourceColumn: ProjektSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column SlagSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 7de31eaa-786c-488e-bdfc-d49471383dfd
+		summarizeBy: sum
+		sourceColumn: SlagSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column MotpartSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 3861e703-fc28-4f25-8704-950bb983047b
+		summarizeBy: sum
+		sourceColumn: MotpartSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column SegmentSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 6078d4ff-73f7-47ac-9c8d-4cd3f0869ad8
+		summarizeBy: sum
+		sourceColumn: SegmentSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppbokningsstatus
+		dataType: string
+		lineageTag: 45ce513b-6069-43f4-9007-4dd383671d9f
+		summarizeBy: none
+		sourceColumn: Uppbokningsstatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column FelProjekt
+		dataType: int64
+		formatString: 0
+		lineageTag: e8dbc5c9-82ee-4687-940b-306c82f220fd
+		summarizeBy: sum
+		sourceColumn: FelProjekt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Konto.2'
+		dataType: string
+		lineageTag: eaca5381-6777-448c-85b0-b80c336df7ea
+		summarizeBy: none
+		sourceColumn: Konto.2
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev1Namn
+		dataType: string
+		lineageTag: 4bf00a92-890b-46ef-9192-82523224cc7c
+		summarizeBy: none
+		sourceColumn: RRLev1Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column OmrådeSK
+		dataType: int64
+		formatString: 0
+		lineageTag: a1b5f5a0-6add-42f2-bef5-120241a5698a
+		summarizeBy: sum
+		sourceColumn: OmrådeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column FöretagSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a86ec18-3a32-4b1a-8c08-05b2b3b1153f
+		summarizeBy: sum
+		sourceColumn: FöretagSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Diff_uppbokning
+		dataType: double
+		lineageTag: 2205530e-2d8c-4c52-ac4a-6463120d4172
+		summarizeBy: sum
+		sourceColumn: Diff_uppbokning
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UppföljningSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 73168915-7eae-4058-9759-b26570f36d86
+		summarizeBy: sum
+		sourceColumn: UppföljningSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppbokning_DW
+		dataType: double
+		lineageTag: 78bd8ff1-5dac-425c-b0ef-709f946fdc4b
+		summarizeBy: sum
+		sourceColumn: Uppbokning_DW
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Handläggare
+		dataType: string
+		lineageTag: a0eec1f5-36e3-4ebf-b89b-cebd6f4103e1
+		summarizeBy: none
+		sourceColumn: Handläggare
+
+		annotation SummarizationSetBy = Automatic
+
+	column utfall_match_dw
+		dataType: double
+		lineageTag: 9ca48f66-05f3-48fa-bd4e-12eb8dcc13a5
+		summarizeBy: sum
+		sourceColumn: utfall_match_dw
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UBWMatchLeverantörNr
+		dataType: string
+		lineageTag: 11c376f1-6a37-4ef7-8fdb-fe7f25074b2f
+		summarizeBy: none
+		sourceColumn: UBWMatchLeverantörNr
+
+		annotation SummarizationSetBy = Automatic
+
+	column HasUBWMatchLeverantörNr
+		dataType: int64
+		formatString: 0
+		lineageTag: f3e8b92f-0548-4ebd-aaa9-6df0af634031
+		summarizeBy: sum
+		sourceColumn: HasUBWMatchLeverantörNr
+
+		annotation SummarizationSetBy = Automatic
+
+	column ÄrendeTyp
+		dataType: string
+		lineageTag: 7e98e680-b8c1-4348-b3d9-4ecc039824a1
+		summarizeBy: none
+		sourceColumn: ÄrendeTyp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Migrerat/Registrerat
+		dataType: string
+		lineageTag: 5d8bf385-5aa2-42f0-8ddc-501a74f03b3d
+		summarizeBy: none
+		sourceColumn: Migrerat/Registrerat
+
+		annotation SummarizationSetBy = Automatic
+
+	column ÄrendeUnderTyp
+		dataType: string
+		lineageTag: 508b098c-3d63-40e4-9323-c34070516f20
+		summarizeBy: none
+		sourceColumn: ÄrendeUnderTyp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Specifikation1
+		dataType: string
+		lineageTag: d106ce0c-995b-4ad6-bf50-1ff0d04e756b
+		summarizeBy: none
+		sourceColumn: Specifikation1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Specifikation2
+		dataType: string
+		lineageTag: 2b66478c-d999-4d98-aaf2-62c19be43e74
+		summarizeBy: none
+		sourceColumn: Specifikation2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Datasource
+		dataType: string
+		lineageTag: 60281ae0-cf83-4ea9-908a-26b76bb5ce50
+		summarizeBy: none
+		sourceColumn: Datasource
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppbokning_DW_total_match
+		dataType: double
+		lineageTag: 51ba231f-5b3c-4740-8745-c99b3450a1c4
+		summarizeBy: sum
+		sourceColumn: Uppbokning_DW_total_match
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Uppbokning_DW_total_match_avrundat
+		dataType: double
+		lineageTag: c811508d-b986-47a5-a7e0-354a24ff91b2
+		summarizeBy: sum
+		sourceColumn: Uppbokning_DW_total_match_avrundat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Ny_match_dw
+		dataType: double
+		lineageTag: 31e22994-bdbf-494d-b6a6-005562c75061
+		summarizeBy: sum
+		sourceColumn: Ny_match_dw
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column utfall_match_dw_ubw
+		dataType: double
+		lineageTag: 25e0e62d-7f43-401d-981f-32e85d29303c
+		summarizeBy: sum
+		sourceColumn: utfall_match_dw_ubw
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Beställarlistan-9b693521-9d20-4795-8db0-54b20ede505f = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="Gold"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(MKBBIDW, each ([Name] = "ViewFactBeställarlistan")),
+				    dbo_ViewFactBeställarlistan = #"Filtered Rows"{[Schema="dbo",Item="ViewFactBeställarlistan"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(dbo_ViewFactBeställarlistan,{"line_no", "KlientNr", "ÄrendeRadId", "Skapad", "ÄrendeInkommit", "RadInkommen", "RadPlaneradStart", "Prio", "Klar Senast Blank", "FakturaGodkänd", "BetaldGodkänd", "ProcessAvslutadTid", "ObjektMoms", "Kodsträng", "WebUrl", "FelKonto", "FelSlag", "FelSeg", "FelUppf", "FelFtgKst", "Felflagga", "Match mot UBW", "konto_UBW", "slag_UBW", "UppbokningsFlagga", "UBW match flag", "TimeSK", "Resurs_Anläggning", "ObjektNrCompiled", "RadPlaneradKlar"}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Removed Columns", each ([#"Öppen/Stängd"] = "Öppen") and ([Uppbokningsstatus] <> "Lista 1A - Bör stängas" and [Uppbokningsstatus] <> "Saknar Uppbokningsflagga")),
+				    #"Merged Queries" = Table.NestedJoin(#"Filtered Rows1", {"KontoSK"}, Konto, {"KontoSK"}, "Konto.1", JoinKind.LeftOuter),
+				    #"Expanded Konto.1" = Table.ExpandTableColumn(#"Merged Queries", "Konto.1", {"Konto", "RRLev1Namn"}, {"Konto.2", "RRLev1Namn"})
+				in
+				    #"Expanded Konto.1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

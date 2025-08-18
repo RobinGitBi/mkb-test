@@ -1,0 +1,107 @@
+table 'Välj mätvärde Utfall'
+	lineageTag: 17f8eb77-bdb1-4d5d-a55a-9c0ec933efd5
+
+	column 'Välj mätvärde Utfall'
+		lineageTag: 9e5f7228-ee79-4866-8613-53f2d2aaf328
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Välj mätvärde Utfall Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Välj mätvärde Utfall Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj mätvärde Utfall Fields'
+		isHidden
+		lineageTag: 9c0c6fda-fd2e-4235-a0b0-431aa6de4f49
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Välj mätvärde Utfall Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj mätvärde Utfall Order'
+		isHidden
+		formatString: 0
+		lineageTag: 50d78b32-776d-41cc-aedd-6ac47e9bdf72
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj mätvärde Utfall group' = ```
+			
+			IF( 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] >= 0 && 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] < 10, 
+			    "Utfall",
+			    IF( 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] >= 10 && 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] < 20, 
+			        "Utfall mot fg år",
+			        IF( 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] >= 20 && 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] < 30, 
+			            "ÅTD",
+			            IF( 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] >= 30 && 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] < 40, 
+			                "ÅTD mot fg år",
+			                BLANK()
+			                ))))
+			
+			```
+		lineageTag: 796fb602-ddbd-4166-9e0c-214f8a0d5afe
+		summarizeBy: none
+		sortByColumn: 'Välj mätvärde Utfall group order'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj mätvärde Utfall group order' = ```
+			
+			IF( 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] >= 0 && 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] < 10, 
+			    1,
+			    IF( 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] >= 10 && 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] < 20, 
+			        2,
+			        IF( 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] >= 20 && 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] < 30, 
+			            3,
+			            IF( 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] >= 30 && 'Välj mätvärde Utfall'[Välj mätvärde Utfall Order] < 40, 
+			                4,
+			                BLANK()
+			                ))))
+			
+			```
+		formatString: 0
+		lineageTag: 1894ddb9-2797-4031-b52c-8ccf918c2a68
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj mätvärde Utfall-f667eb21-6fd7-4e74-bc93-43ab7af21fb0' = calculated
+		mode: import
+		source = ```
+				{
+				
+				    // Utfall
+				    ("Utfall", NAMEOF('Mätvärde'[Utfall]), 0),
+				
+				    // PY
+				    ("Utfall", NAMEOF('Mätvärde'[Utfall]), 10),
+				    ("Utfall fg år", NAMEOF('Mätvärde'[Utfall fg år-1]), 11),
+				    ("Diff fg år %", NAMEOF('Mätvärde'[Utfall / Utfall fg år-1]), 12),
+				    ("Diff fg år", NAMEOF('Mätvärde'[Utfall - Utfall fg år-1]), 13),
+				
+				    // YTD
+				    ("Utfall Ack.", NAMEOF('Mätvärde'[Utfall ÅTD]), 23),
+				
+				    // PY YTD
+				    ("Utfall Ack.", NAMEOF('Mätvärde'[Utfall ÅTD]), 31),
+				    ("Utfall fg år Ack.", NAMEOF('Mätvärde'[Utfall fg år-1 ÅTD]), 32),
+				    ("Diff fg år Ack. %", NAMEOF('Mätvärde'[Utfall / Utfall fg år-1 ÅTD]), 33),
+				    ("Diff fg år Ack.", NAMEOF('Mätvärde'[Utfall - Utfall fg år-1 ÅTD]), 34)
+				}
+				
+				
+				```
+
+	annotation PBI_Id = 9c08720b770d4f1e990c5138f669d309
+

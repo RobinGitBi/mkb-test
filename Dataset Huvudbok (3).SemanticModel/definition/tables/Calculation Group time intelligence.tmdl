@@ -1,0 +1,202 @@
+table 'Calculation Group time intelligence'
+	lineageTag: 9f1226ef-b57e-44bb-9fc1-9e96882fd5de
+
+	calculationGroup
+		precedence: 4
+
+		calculationItem Värde =
+				// Selected date/dates
+				
+				SELECTEDMEASURE()
+
+		calculationItem MTD = ```
+				// Month To Date
+				
+				VAR MonthToDate = CALCULATE( SELECTEDMEASURE(), DATESMTD('Kalender'[Datum]) )
+				
+				VAR Result =
+				IF ( MAX('Kalender'[Datum]) <= TODAY(), 
+				        MonthToDate, 
+				        BLANK()
+				)
+				
+				RETURN 
+				IF ( MAX('Kalender'[Datum]) > TODAY(), BLANK(), Result)
+				```
+
+		calculationItem ÅTD = ```
+				// Year To Date
+				
+				VAR Result =
+				CALCULATE( SELECTEDMEASURE(), DATESYTD('Kalender'[Datum]))
+				
+				RETURN 
+				Result
+				```
+
+		calculationItem 'Fg månad-1' = ```
+				// Previous Month
+				
+				CALCULATE(SELECTEDMEASURE(), DATEADD('Kalender'[Datum], -1, MONTH))
+				
+				```
+
+		calculationItem 'Fg år-1' =
+				// Previous Year
+				
+				CALCULATE(  SELECTEDMEASURE(), SAMEPERIODLASTYEAR('Kalender'[Datum]))
+
+		calculationItem 'Diff mot fg år-1 ' = ```
+				// Year Over Year
+				
+				VAR CurrentPeriod = SELECTEDMEASURE()
+				VAR PreviousPeriod = CALCULATE(  SELECTEDMEASURE(), SAMEPERIODLASTYEAR('Kalender'[Datum]))
+				
+				VAR Difference = CurrentPeriod - PreviousPeriod
+				
+				VAR Result =
+				IF (CurrentPeriod > 0 && PreviousPeriod > 0,
+				    Difference,
+				    BLANK()
+				)
+				
+				RETURN Result
+				
+				```
+
+		calculationItem 'Diff mot fg år-1 %' = ```
+				// Year Over Year %
+				
+				VAR CurrentPeriod = SELECTEDMEASURE()
+				VAR PreviousPeriod = CALCULATE(  SELECTEDMEASURE(), SAMEPERIODLASTYEAR('Kalender'[Datum]))
+				
+				VAR Percentage = 
+				DIVIDE( 
+				    CurrentPeriod - PreviousPeriod,
+				    PreviousPeriod
+				    , BLANK()
+				)
+				
+				VAR Result =
+				IF ( CurrentPeriod > 0 && PreviousPeriod > 0,
+				        Percentage,
+				        BLANK()
+				)
+				
+				RETURN Result
+				```
+
+			formatStringDefinition = "0.0 %"
+
+		calculationItem 'Fg år-1 ÅTD' = ```
+				// Previous Year Year To Date
+				
+				CALCULATE( 
+				    CALCULATE( SELECTEDMEASURE(), SAMEPERIODLASTYEAR('Kalender'[Datum])), 
+				    DATESYTD( 'Kalender'[Datum]))
+				
+				
+				```
+
+		calculationItem 'Diff mot fg år-1 ÅTD %' = ```
+				VAR YearToDate = CALCULATE( SELECTEDMEASURE(), DATESYTD('Kalender'[Datum]))
+				
+				VAR PreviousYearToDate = 
+				CALCULATE( 
+				    CALCULATE( SELECTEDMEASURE(), SAMEPERIODLASTYEAR('Kalender'[Datum])), 
+				    DATESYTD( 'Kalender'[Datum]))
+				
+				
+				VAR Result = DIVIDE(YearToDate - PreviousYearToDate, YearToDate, BLANK())
+				
+				RETURN Result
+				```
+
+			formatStringDefinition = "0.0 %"
+
+		calculationItem R12 = ```
+				VAR NumOfMonths = 12
+				VAR LastCurrentDate = MAX ( Kalender[Datum] )
+				VAR Period =
+				    DATESINPERIOD ( Kalender[Datum], LastCurrentDate, - NumOfMonths, MONTH )
+				VAR Result =
+				    CALCULATE (
+				        AVERAGEX (
+				            VALUES ( Kalender[Datum] ),
+				            SELECTEDMEASURE()
+				        ),
+				        Period
+				    )
+				VAR FirstDateInPeriod = MINX ( Period, Kalender[Datum] )
+				VAR LastDateWithSales = DATE( YEAR(TODAY()), MONTH(TODAY()), 1) - 1 //MAX ( Sales[Order Date] )
+				RETURN
+				    IF ( FirstDateInPeriod <= LastDateWithSales, Result )
+				
+				```
+
+		calculationItem LTM = ```
+				// Moving Average Total
+				
+				VAR PeriodToAverageBack = 12 // months
+				VAR MaxDateInCurrentContext = MAX ( Kalender[Datum] )
+				VAR Period =
+				    DATESINPERIOD (
+				        Kalender[Datum],
+				        MaxDateInCurrentContext,
+				        - PeriodToAverageBack,
+				        MONTH
+				    )
+				VAR RTM =
+				    CALCULATE (
+				        SUMX ( VALUES ( Kalender[RelativMånad] ), SELECTEDMEASURE () ),
+				        Period
+				    )
+				VAR FirstDateInPeriod =
+				    MINX ( Period, Kalender[Datum] )
+				VAR LastDateWithAmount =
+				    DATE( YEAR(TODAY()), MONTH(TODAY()), 1) - 1
+				
+				VAR Result = 
+				IF ( FirstDateInPeriod <= LastDateWithAmount
+				    , RTM ) 
+				    
+				RETURN Result
+				```
+
+		calculationItem 'LTM average' =
+				
+				VAR NumOfMonths = 12
+				VAR LastCurrentDate = MAX ( Kalender[Datum] )
+				VAR Period =
+				    DATESINPERIOD ( Kalender[Datum], LastCurrentDate, - NumOfMonths, MONTH )
+				VAR Result =
+				    CALCULATE (
+				        AVERAGEX (
+				            VALUES ( Kalender[RelativMånad] ),
+				            SELECTEDMEASURE ()
+				        ),
+				        Period
+				    )
+				VAR FirstDateInPeriod = MINX ( Period, Kalender[Datum] )
+				VAR LastDateWithSales = DATE( YEAR(TODAY()), MONTH(TODAY()), 1) - 1 //MAX ( Sales[Order Date] )
+				RETURN
+				    IF ( FirstDateInPeriod <= LastDateWithSales, Result )
+
+	column Name
+		dataType: string
+		lineageTag: d7886993-68da-4b05-92c3-fa27d56079ed
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: c2025487-8539-45d9-8777-83bbd6d2485d
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

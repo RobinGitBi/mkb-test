@@ -1,0 +1,93 @@
+table 'Välj mätvärde Jämförelsemätvärde1'
+	lineageTag: 4f0b5ea9-bc8a-4195-8760-56f0fabc907b
+
+	column Jämförelsemätvärde1
+		lineageTag: ee5c3979-7172-4b3d-a43e-704edd50e832
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Jämförelsemätvärde1 Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Jämförelsemätvärde1 Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jämförelsemätvärde1 Fields'
+		isHidden
+		lineageTag: a0ea0276-eb81-4fe7-9549-eb34fe6ff23e
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Jämförelsemätvärde1 Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jämförelsemätvärde1 Order'
+		isHidden
+		formatString: 0
+		lineageTag: fe339246-f1d2-4e29-a96e-7e0a30a7284a
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Standard = ```
+			
+			VAR MonthToday = MONTH(TODAY())
+			
+			VAR ChooseMeasures = 
+			IF( (MonthToday >= 1 || MonthToday <= 4) && 'Välj mätvärde Jämförelsemätvärde1'[Jämförelsemätvärde1] = "T0",
+			    "Standard",
+			    IF( MonthToday >= 5 && MonthToday <= 8 &&  'Välj mätvärde Jämförelsemätvärde1'[Jämförelsemätvärde1] = "T1",
+			        "Standard",
+			        IF( MonthToday >= 9 && MonthToday <= 12 &&  'Välj mätvärde Jämförelsemätvärde1'[Jämförelsemätvärde1] =  "T2",
+			            "Standard")))
+			    
+			    -- Från 2024-05 är beslutat att följa kalendermånad för tertial
+			
+			/*
+			IF( (MonthToday >= 11 || MonthToday <= 1) && 'Välj mätvärde Jämförelsemätvärde2'[Jämförelsemätvärde2] = "T2",
+			    "Standard",
+			    IF( MonthToday >= 2 && MonthToday <= 3 &&  'Välj mätvärde Jämförelsemätvärde2'[Jämförelsemätvärde2] = "T0",
+			        "Standard",
+			        IF( MonthToday >= 4 && MonthToday <= 7 &&  'Välj mätvärde Jämförelsemätvärde2'[Jämförelsemätvärde2] =  "T1",
+			            "Standard",
+			            IF( MonthToday >= 8 && MonthToday <= 9 &&  'Välj mätvärde Jämförelsemätvärde2'[Jämförelsemätvärde2] =  "T2",
+			                "Standard",
+			                IF( MonthToday = 10 &&  'Välj mätvärde Jämförelsemätvärde2'[Jämförelsemätvärde2] = "T2",
+			                    "Standard")))))
+			    */
+			RETURN ChooseMeasures
+			```
+		lineageTag: c37bbe59-9f82-4ccb-8832-bc4f42bfb656
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Jämförelsemätvärde1 med standard' = IF('Välj mätvärde Jämförelsemätvärde1'[Standard] = "Standard", "Standard", 'Välj mätvärde Jämförelsemätvärde1'[Jämförelsemätvärde1])
+		lineageTag: 8e2cec62-af62-469d-8cac-79014719d836
+		summarizeBy: none
+		sortByColumn: 'Jämförelsemätvärde1 Order'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj mätvärde Jämförelsemätvärde1' = calculated
+		mode: import
+		source = ```
+				{ 
+				    ("Utfall", NAMEOF( [Utfall ÅTD]), 0),
+				    ("Utfall plus beställningar", NAMEOF('Mätvärde'[Utfall plus beställarlistan ÅTD]), 1),
+				    ("T0", NAMEOF('Mätvärde'[T0 ÅTD]), 2),
+				    ("T1", NAMEOF('Mätvärde'[T1 ÅTD]), 3),
+				    ("T2", NAMEOF('Mätvärde'[T2 ÅTD]), 4),
+				    ("T0 nästa år", NAMEOF('Mätvärde'[T0 nästa år ÅTD]), 5)
+				}
+				```
+
+	annotation PBI_Id = e1c24ee1261f4c5c84110cedc5683301
+

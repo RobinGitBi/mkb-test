@@ -1,0 +1,91 @@
+table 'Välj mätvärde rapport Underhåll'
+	lineageTag: 4a1e04a3-eaf1-4f30-8a67-c55e81edc0fb
+
+	column 'Välj mätvärde rapport Underhåll'
+		lineageTag: b910c085-c8d6-4a25-aa62-26e21ad1cab0
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Välj mätvärde rapport Underhåll Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Välj mätvärde rapport Underhåll Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj mätvärde rapport Underhåll Fields'
+		isHidden
+		lineageTag: fc69ef40-851c-4f41-aa2b-18edc345c92d
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Välj mätvärde rapport Underhåll Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj mätvärde rapport Underhåll Order'
+		isHidden
+		formatString: 0
+		lineageTag: ebfe86a4-b0bc-4cac-8be0-73d7b0f81a7d
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Grupp = ```
+			
+			
+			IF( 'Välj mätvärde rapport Underhåll'[Välj mätvärde rapport Underhåll Order] >= 0 && 'Välj mätvärde rapport Underhåll'[Välj mätvärde rapport Underhåll Order] < 10,
+			    "Alla mätvärden",
+			    IF( 'Välj mätvärde rapport Underhåll'[Välj mätvärde rapport Underhåll Order] >= 10 && 'Välj mätvärde rapport Underhåll'[Välj mätvärde rapport Underhåll Order] < 20,
+			        "T0",
+			        IF( 'Välj mätvärde rapport Underhåll'[Välj mätvärde rapport Underhåll Order] >= 20 && 'Välj mätvärde rapport Underhåll'[Välj mätvärde rapport Underhåll Order] < 30,
+			            "T1",
+			            IF( 'Välj mätvärde rapport Underhåll'[Välj mätvärde rapport Underhåll Order] >= 30 && 'Välj mätvärde rapport Underhåll'[Välj mätvärde rapport Underhåll Order] < 40,
+			                "T2"))))
+			
+			```
+		lineageTag: db3ef1e9-5056-4554-b8ac-59badfae294d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj mätvärde rapport Underhåll-1111a94f-324a-445f-bf81-a5d7ae9f43b2' = calculated
+		mode: import
+		source =
+				{
+				
+				    // Alla mätvärden
+				    ("Utfall", NAMEOF('Mätvärde'[Utfall]), 0),
+				    ("T0 helår", NAMEOF('Mätvärde'[T0 helår]), 1),
+				    ("T1 helår", NAMEOF('Mätvärde'[T1 helår]), 2),
+				    ("T2 helår", NAMEOF('Mätvärde'[T2 helår]), 3),
+				    ("Upparbetningsgrad T0 helår", NAMEOF('Mätvärde'[Upparbetningsgrad T0 helår]), 4),
+				    ("Upparbetningsgrad T1 helår", NAMEOF('Mätvärde'[Upparbetningsgrad T1 helår]), 5),
+				    ("Upparbetningsgrad T2 helår", NAMEOF('Mätvärde'[Upparbetningsgrad T2 helår]), 6),
+				
+				    // T0
+				    ("Utfall", NAMEOF('Mätvärde'[Utfall]), 10),
+				    ("T0 helår", NAMEOF('Mätvärde'[T0 helår]), 11),
+				    ("Upparbetningsgrad T0 helår", NAMEOF('Mätvärde'[Upparbetningsgrad T0 helår]), 12),
+				
+				    // T1
+				    ("Utfall", NAMEOF('Mätvärde'[Utfall]), 20),
+				    ("T1 helår", NAMEOF('Mätvärde'[T1 helår]), 21),
+				    ("Upparbetningsgrad T1 helår", NAMEOF('Mätvärde'[Upparbetningsgrad T1 helår]), 22),
+				
+				    // T2
+				    ("Utfall", NAMEOF('Mätvärde'[Utfall]), 30),
+				    ("T2 helår", NAMEOF('Mätvärde'[T2 helår]), 31),
+				    ("Upparbetningsgrad T2 helår", NAMEOF('Mätvärde'[Upparbetningsgrad T2 helår]), 32)
+				
+				
+				
+				}
+
+	annotation PBI_Id = b9e1faa6fd0d442d86b5aaf0a6a7564b
+

@@ -1,0 +1,47 @@
+table Funktion
+	lineageTag: 9d10071c-b3ef-4fc0-b68b-014322ca1346
+
+	column FunktionSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 32f14ba7-84c3-40b6-81ec-81f050eb15f9
+		summarizeBy: none
+		sourceColumn: FunktionSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FunktionId
+		dataType: string
+		lineageTag: 100226f1-21c7-4504-8872-fc7aba503194
+		summarizeBy: none
+		sourceColumn: FunktionId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FunktionNamn
+		dataType: string
+		lineageTag: b05b7e72-605b-4c8b-8cbb-3da62d0b901d
+		summarizeBy: none
+		sourceColumn: FunktionNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Funktion-19d40c69-fee4-4a20-8bf1-9d8530f6b2ab = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimFunktion = MKBBIDW{[Schema="dbo",Item="ViewDimFunktion"]}[Data]
+				in
+				    dbo_ViewDimFunktion
+
+	annotation PBI_ResultType = Table
+

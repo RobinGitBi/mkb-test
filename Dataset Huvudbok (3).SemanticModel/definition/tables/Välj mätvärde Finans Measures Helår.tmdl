@@ -1,0 +1,309 @@
+table 'Välj mätvärde Finans Measures Helår'
+	lineageTag: b24896ca-0d7c-48af-b924-75c2ef53e496
+
+	column 'Välj mätvärde Finans'
+		dataType: string
+		lineageTag: 52279f34-114f-44c4-b934-adf808bf9c3a
+		summarizeBy: none
+		sourceColumn: [Value1]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj mätvärde Finans Fields'
+		isHidden
+		lineageTag: ae2dce4d-e260-41a5-ba7f-209b222b8268
+		summarizeBy: none
+		sourceColumn: [Value2]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj mätvärde Finans Order'
+		isHidden
+		formatString: 0
+		lineageTag: e9d7146e-c666-4818-88a4-f05d8db2f722
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = User
+
+	column Grupp =
+			
+			
+			IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 50 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 99,
+			    "Utfall mot T0",
+			    IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 100 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 199,
+			        "Utfall mot T1",
+			        IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 200 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 299,
+			            "Utfall mot T2",
+			            IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 300 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 399,
+			                "T0 nästa år mot T2",
+			                IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 400 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 499,
+			                    "T0 nästa år mot T0",
+			                    IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 500 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 599,
+			                        "T1 mot T0",
+			                        IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 600 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 699,
+			                            "T2 mot T1",
+			                            IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 700 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 799,
+			                                "Utfall mot fg år",
+			                                IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 800 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 899,
+			                                    "Utfall plus best. lista",
+			                                    IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 1000 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 1099,
+			                                        "Utf. plus best. lista mot T0",
+			                                        IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 1100 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 1199,
+			                                            "Utf. plus best. lista mot T1",
+			                                            IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 1200 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 1299,
+			                                                "Utf. plus best. lista mot T2",
+			
+			                                                "Periodens värde"))))))))    )))
+			                )
+		lineageTag: 388ad7ff-3f35-45a5-9659-d0f811239d8f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Jämförelsemätvärde = ```
+			// EJ KLAR!!!
+			
+			IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 50 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 99,
+			    "T0",
+			    IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 100 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 199,
+			        "T1",
+			        IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 200 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 299,
+			            "T2",
+			            IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 300 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 399,
+			                "T0 nästa år mot T2",
+			                IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 400 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 499,
+			                    "T1 mot T0",
+			                    IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 500 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 599,
+			                        "T2 mot T1",
+			                        IF( 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] >= 600 && 'Välj mätvärde Finans Measures Helår'[Välj mätvärde Finans Order] <= 699,
+			                            "Fg år",
+			                            "Periodens värde")))))))
+			            
+			```
+		lineageTag: 3c93034b-2d96-49c4-8c3b-07a7b9f05a1a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Standard =
+			
+			VAR MonthToday = MONTH(TODAY())
+			
+			VAR ChooseMeasures =
+			IF( (MonthToday >= 11 || MonthToday <= 1) && 'Välj mätvärde Finans Measures Helår'[Grupp] = "Utfall mot T2",
+			    "Standard",
+			    IF( MonthToday >= 2 && MonthToday <= 3 && 'Välj mätvärde Finans Measures Helår'[Grupp] = "Utfall mot T0",
+			        "Standard",
+			        IF( MonthToday >= 4 && MonthToday <= 7 && 'Välj mätvärde Finans Measures Helår'[Grupp] =  "Utfall mot T1",
+			            "Standard",
+			            IF( MonthToday >= 8 && MonthToday <= 9 &&'Välj mätvärde Finans Measures Helår'[Grupp] =  "Utfall mot T2",
+			                "Standard",
+			                IF( MonthToday = 10 && 'Välj mätvärde Finans Measures Helår'[Grupp] = "T0 nästa år mot T2",
+			                    "Standard")))))
+			
+			RETURN ChooseMeasures
+		lineageTag: 7814374e-871b-43f5-8458-45664c742bba
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj mätvärde med standard' =
+			
+			IF( 'Välj mätvärde Finans Measures Helår'[Standard] = "Standard",
+			    "Standard",
+			    'Välj mätvärde Finans Measures Helår'[Grupp]
+			)
+		lineageTag: 827bbe9e-6339-40f8-bc02-ab72eca0d9ee
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj mätvärde Finans Measures Helår' = calculated
+		mode: import
+		source = ```
+				{
+				    
+				    // Basvärden
+				    ("Utfall", NAMEOF('Mätvärde'[Utfall]), 0),
+				    ("Beställarlistan", NAMEOF([Beställarlistan Helår visa endast framtida datum]), 2),
+				    ("Utfall plus beställarlistan", NAMEOF([Utfall plus beställarlistan Helår visa endast framtida datum]), 3),
+				    ("Utfall fg år-1", NAMEOF('Mätvärde'[Utfall fg år-1]), 4),
+				    ("Utfall fg år-2", NAMEOF('Mätvärde'[Utfall fg år-2]), 5),
+				    ("Utfall fg år-3", NAMEOF('Mätvärde'[Utfall fg år-3]), 6),
+				    ("T0", NAMEOF('Mätvärde'[T0]), 8),
+				    ("T1", NAMEOF('Mätvärde'[T1]), 9),
+				    ("T2", NAMEOF('Mätvärde'[T2]), 10),
+				    ("T0 nästa år", NAMEOF([T0 nästa år]), 11),
+				    //("Diff utf. plus best.lista mot fg år", NAMEOF( [Diff utfall plus beställarlistan mot fg år Helår] ), 12),
+				    
+				    // Utfall mot T0
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 50),
+				    ("Best.lista Helår", NAMEOF([Beställarlistan Helår visa endast framtida datum]), 51),
+				    ("Utf. plus best.lista", NAMEOF([Utfall plus beställarlistan Helår]), 52),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 54),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 55),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 56),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 57),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 58),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 59),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 60),
+				    ("Diff utfall mot T0", NAMEOF( [Utfall - T0 Helår] ), 65),
+				    //("Diff utfall mot T0 %", NAMEOF( [Utfall Helår / T0 helår] ), 66),
+				    ("Diff utfall mot T0 %", NAMEOF( [Index Utfall Helår mot T0 Helår] ), 67),
+				    //("Diff utf. plus best.lista mot T0", NAMEOF( [Diff utfall plus beställarlistan mot T0 Helår] ), 62),
+				
+				    // Utfall mot T1
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 100),
+				    ("Best.lista Helår", NAMEOF([Beställarlistan Helår visa endast framtida datum]), 101),
+				    ("Utf. plus best.lista", NAMEOF([Utfall plus beställarlistan Helår]), 102),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 103),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 104),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 105),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 107),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 108),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 109),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 110),
+				    ("Diff utfall mot T1", NAMEOF( [Utfall - T1 Helår] ), 111),
+				    //("Diff utfall mot T1 %", NAMEOF( [Utfall Helår / T1 helår] ), 112),
+				    ("Diff utfall mot T1 %", NAMEOF( [Index Utfall Helår mot T1 Helår] ), 113),
+				    //("Diff utf. plus best.lista mot T21", NAMEOF( [Diff utfall plus beställarlistan mot T1 Helår] ), 115),
+				
+				    // Utfall mot T2
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 200),
+				    ("Best.lista Helår", NAMEOF([Beställarlistan Helår visa endast framtida datum]), 201),
+				    ("Utf. plus best.lista", NAMEOF([Utfall plus beställarlistan Helår]), 202),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 203),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 204),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 205),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 206),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 207),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 208),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 209),
+				    ("Diff utfall mot T2", NAMEOF( [Utfall - T2 Helår] ), 210),
+				    ("Diff utfall mot T2 %", NAMEOF( [Index Utfall Helår mot T2 Helår] ), 211),
+				    
+				
+				    // T0 nästa år mot T2
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 300),
+				    ("Best.lista Helår", NAMEOF([Beställarlistan Helår visa endast framtida datum]), 301),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 302),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 304),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 305),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 306),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 307),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 308),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 309),
+				    ("Diff T0 nästa år mot T2", NAMEOF([T0 nästa år - T2 Helår]), 310),
+				    ("Diff T0 nästa år mot T2 %", NAMEOF( [Index T0 nästa år Helår mot T2 Helår] ), 312),
+				
+				
+				    // T0 nästa år mot T0
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 400),
+				    ("Best.lista Helår", NAMEOF([Beställarlistan Helår visa endast framtida datum]), 401),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 402),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 404),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 405),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 406),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 407),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 408),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 409),
+				    ("Diff T0 nästa år mot T0", NAMEOF([T0 nästa år - T0 Helår]), 410),
+				    ("Diff T0 nästa år mot T0 %", NAMEOF( [Index T0 nästa år Helår mot T0 Helår] ), 412),
+				
+				
+				
+				    // Extra val som inte ligger som standard:
+				
+				    // T1 mot T0
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 500),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 501),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 504),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 505),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 506),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 507),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 508),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 509),
+				    ("Diff T1 mot T0", NAMEOF( [T1 - T0 Helår]), 510),
+				    ("Diff T1 mot T0 %", NAMEOF([Index T1 Helår mot T0 Helår]), 511),
+				
+				    // T2 mot T1
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 600),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 601),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 604),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 605),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 606),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 607),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 608),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 655),
+				    ("Diff T2 mot T1", NAMEOF( [T2 - T1 Helår]), 660),
+				    ("Diff T2 mot T1 %", NAMEOF([Index T2 Helår mot T1 Helår]), 661),
+				
+				    // Utfall mot fg år
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 700),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 701),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 704),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 705),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 712),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 713),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 714),
+				    ("T0 nästa år helår", NAMEOF([T0 nästa år Helår]), 715),
+				    ("Diff utfall mot fg år Helår", NAMEOF([Utfall - Utfall fg år-1 Helår]), 720),
+				    ("Diff utfall mot fg år % Helår", NAMEOF([Index Utfall Helår mot Utfall fg år-1 Helår]), 721),
+				
+				    // Utfall plus best listan
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 800),
+				    ("Beställarlistan Helår", NAMEOF([Beställarlistan Helår visa endast framtida datum]), 801),
+				    ("Utfall plus best. lista", NAMEOF([Utfall plus beställarlistan Helår]), 802),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 803),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 804),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 805),
+				    //("Diff T0 nästa år mot T2", NAMEOF([T0 nästa år - T2 Helår]), 810),
+				    //("Diff T0 nästa år mot T2 %", NAMEOF( [Index T0 nästa år Helår mot T2 Helår] ), 812)
+				
+				    // Utfall plus beställarlistan mot T0
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 1050),
+				    ("Beställarlistan Helår", NAMEOF([Beställarlistan Helår visa endast framtida datum]), 1051),
+				    ("Utf. plus best.lista", NAMEOF([Utfall plus beställarlistan Helår]), 1052),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 1053),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 1055),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 1056),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 1064),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 1065),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 1066),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 1067),
+				    ("Diff utf. plus best.lista mot T0", NAMEOF( [Utfall plus best.lista Helår - T0 Helår] ), 1068),
+				    ("Diff utf. plus best.lista mot T0 %", NAMEOF( [Index Utfall plus best.lista Helår mot T0 Helår] ), 1069),
+				
+				    // Utfall plus beställarlistan mot T1
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 1150),
+				    ("Beställarlistan Helår", NAMEOF([Beställarlistan Helår visa endast framtida datum]), 1151),
+				    ("Utf. plus best.lista", NAMEOF([Utfall plus beställarlistan Helår]), 1152),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 1153),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 1154),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 1155),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 1164),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 1165),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 1166),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 1167),
+				    ("Diff utf. plus best.lista mot T1", NAMEOF( [Utfall plus best.lista Helår - T1 Helår] ), 1168),
+				    ("Diff utf. plus best.lista mot T1 %", NAMEOF( [Index Utfall plus best.lista Helår mot T1 Helår] ), 1169),
+				
+				    // Utfall plus beställarlistan mot T2
+				    ("Utfall Helår", NAMEOF('Mätvärde'[Utfall Helår]), 1250),
+				    ("Beställarlistan Helår", NAMEOF([Beställarlistan Helår visa endast framtida datum]), 1251),
+				    ("Utf. plus best.lista", NAMEOF([Utfall plus beställarlistan Helår]), 1252),
+				    ("Utfall fg år-1 Helår", NAMEOF('Mätvärde'[Utfall fg år-1 Helår]), 1253),
+				    ("Utfall fg år-2 Helår", NAMEOF('Mätvärde'[Utfall fg år-2 Helår]), 1254),
+				    ("Utfall fg år-3 Helår", NAMEOF('Mätvärde'[Utfall fg år-3 Helår]), 1255),
+				    ("T0 Helår", NAMEOF('Mätvärde'[T0 Helår]), 1264),
+				    ("T1 Helår", NAMEOF('Mätvärde'[T1 Helår]), 1265),
+				    ("T2 Helår", NAMEOF('Mätvärde'[T2 Helår]), 1266),
+				    ("T0 nästa år Helår", NAMEOF([T0 nästa år Helår]), 1267),
+				    ("Diff utf. plus best.lista mot T2", NAMEOF( [Utfall plus best.lista Helår - T2 Helår] ), 1268),
+				    ("Diff utf. plus best.lista mot T2 %", NAMEOF( [Index Utfall plus best.lista Helår mot T2 Helår] ), 1269)
+				}
+				```
+
+	annotation PBI_Id = 248a723b2abf4cfb8509b173172c971f
+

@@ -1,0 +1,90 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: sv-SE
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup Dimensionstabeller
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup Faktatabeller
+
+	annotation PBI_QueryGroupOrder = 1
+
+/// Fel i frågor som lästes in på 2024-06-03 08:38:33.
+queryGroup 'Frågefel – 2024-06-03 08:38:33'
+
+	annotation PBI_QueryGroupOrder = 2
+
+annotation PBIDesktopVersion = 2.146.705.0 (25.08)+b71502aff0a01340c88f384884ef42771068f115
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Mätvärde","Kalender","Huvudbok","Budget - for append","Ingående balans - for append","Yta per segment och kostnadsställe","Företag","Aktivitet","Konto","Kostnadsställe","Motpart","Funktion","Leverantör","Momskod","Momssystem","Projekt","Segment","Slag","Vertyp","Kund","PNLStructure","Uppföljning","KoddelLG","UBWLatestUpdate","Välj jämförelsemätvärde Finans","Beställarlistan","Beställarlistan for append","Välj mätvärde Jämförelsemätvärde standardknapp","Beställarlistan max frysdatum","Fastighet"]
+
+annotation __TEdtr = 1
+
+annotation PBI_ProTooling = ["CalcGroup","DevMode"]
+
+ref table Huvudbok
+ref table Företag
+ref table Konto
+ref table Kostnadsställe
+ref table Segment
+ref table Slag
+ref table Motpart
+ref table Projekt
+ref table Kalender
+ref table PNLStructure
+ref table Mätvärde
+ref table Momskod
+ref table Momssystem
+ref table Vertyp
+ref table Leverantör
+ref table Kund
+ref table 'Budget - for append'
+ref table Uppföljning
+ref table Funktion
+ref table Aktivitet
+ref table 'Ingående balans - for append'
+ref table UBWLatestUpdate
+ref table KoddelLG
+ref table 'Välj mätvärde balansräkning'
+ref table 'Yta per segment och kostnadsställe'
+ref table 'Välj Finansmätvärde'
+ref table 'Välj kolumner'
+ref table 'Calculation Group genomsnitt per område'
+ref table 'Calculation Group resultaträkning'
+ref table 'Calculation Group beloppsvisning'
+ref table 'Calculation Group time intelligence'
+ref table 'Välj rader rapport till revisorer'
+ref table 'Välj kolumner rapport till revisorer'
+ref table 'Calculation Group investeringar upparbetat'
+ref table 'Calculation Group underhåll segment'
+ref table 'Calculation Group investeringar resultatposter'
+ref table 'Välj mätvärde Utfall'
+ref table 'Välj mätvärde Finans Measures'
+ref table 'Calculation Group underhåll fastighetsutveckling'
+ref table 'Välj kolumner resultatuppföljning'
+ref table 'Välj mätvärde rapport Underhåll'
+ref table 'Calculation Group segment'
+ref table 'Calculation Group positivt tecken'
+ref table 'Välj jämförelsemätvärde Finans'
+ref table Beställarlistan
+ref table 'Beställarlistan for append'
+ref table 'Välj mätvärde Jämförelsemätvärde1'
+ref table 'Välj mätvärde Jämförelsemätvärde2'
+ref table 'Välj mätvärde Jämförelsemätvärde standardknapp'
+ref table 'Beställarlistan max frysdatum'
+ref table Fastighet
+ref table 'Välj mätvärde Finans Measures Helår'
+
+ref perspective AdHoc
+
+ref cultureInfo en-US
+

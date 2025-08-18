@@ -1,0 +1,87 @@
+table Kund
+	lineageTag: 30551a88-4acb-44b4-9b12-50f226bd65f8
+
+	measure 'Countrows Kund' = COUNTROWS('Kund')
+		lineageTag: a8ffe165-79ac-43f6-9bb8-f8c1c7c056eb
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column KundSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 8618224a-4ac3-4dcc-91de-6c644dc241b2
+		summarizeBy: none
+		sourceColumn: KundSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KundNr
+		dataType: string
+		lineageTag: 9d26abd4-ec27-428a-a04e-02522c2208e8
+		summarizeBy: none
+		sourceColumn: KundNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KundNamn
+		dataType: string
+		lineageTag: 2ec6ed83-f129-4a50-9a38-b28d1de00068
+		summarizeBy: none
+		sourceColumn: KundNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ea99ea06-63db-4d24-b3b1-49bf090f0f8f
+		summarizeBy: none
+		sourceColumn: Created
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 785d9672-9936-458f-af7b-c262f625733a
+		summarizeBy: none
+		sourceColumn: Modified
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kund
+		dataType: string
+		lineageTag: e9309c67-15d9-4fc2-b963-cc6c5654c48e
+		summarizeBy: none
+		sourceColumn: Kund
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Kund-ffc2fc90-a235-4cb7-adce-160f3bb1a64e = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimKundUbw = MKBBIDW{[Schema="dbo",Item="ViewDimKundUbw"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_ViewDimKundUbw, each ([KundNr] <> ""))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+

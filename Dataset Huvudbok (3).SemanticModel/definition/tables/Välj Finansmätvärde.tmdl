@@ -1,0 +1,194 @@
+table 'Välj Finansmätvärde'
+	lineageTag: 886439f3-2337-4f35-b1d2-8d044b760471
+
+	column 'Välj Finansmätvärde'
+		lineageTag: 53e4b310-fd89-48a7-8e20-0ca40354a2b1
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Välj Finansmätvärde Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Välj Finansmätvärde Fields'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj Finansmätvärde Fields'
+		lineageTag: 2e9c236f-0829-4502-8caf-1a31c51d27d7
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Välj Finansmätvärde Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj Finansmätvärde Order'
+		formatString: 0
+		lineageTag: ee10ca11-2f4e-4eec-afad-b5ed925ac949
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Grupp =
+			
+			
+			SWITCH('Välj Finansmätvärde'[Välj Finansmätvärde],
+			
+			    // Belopp
+			    "Utfall-2", "Belopp",
+			    "Utfall-1", "Belopp",
+			    "Utfall", "Belopp",
+			    "T0", "Belopp",
+			    "T1", "Belopp",
+			    "T2", "Belopp",
+			    "T0 nästa år", "Belopp",
+			
+			    // Belopp helår
+			    "Utfall-2 helår", "Belopp helår",
+			    "Utfall-1 helår", "Belopp helår",
+			    "Utfall helår", "Belopp helår", // measure Utfall!!! inte helår egentligen
+			    "T0 helår", "Belopp helår",
+			    "T1 helår", "Belopp helår",
+			    "T2 helår", "Belopp helår",
+			    "T0 nästa år helår", "Belopp helår",
+			
+			    // Belopp helår kr/kvm
+			    "Utfall-2 år kr/kvm", "Belopp kr/kvm",
+			    "Utfall-1 år kr/kvm", "Belopp kr/kvm",
+			    "Utfall kr/kvm", "Belopp kr/kvm",
+			    "T0 kr/kvm", "Belopp kr/kvm",
+			    "T1 kr/kvm", "Belopp kr/kvm",
+			    "T2 kr/kvm", "Belopp kr/kvm",
+			    //"T0 nästa år kr/kvm", "Belopp kr/kvm",
+			
+			    // Belopp helår kr/kvm
+			    "Utfall-2 helår kr/kvm", "Belopp helår kr/kvm",
+			    "Utfall-1 helår kr/kvm", "Belopp helår kr/kvm",
+			    "Utfall helår kr/kvm", "Belopp helår kr/kvm", // OBS! Measure Utfall kr/kvm, inte helår egentligen
+			    "T0 helår kr/kvm", "Belopp helår kr/kvm",
+			    "T1 helår kr/kvm", "Belopp helår kr/kvm",
+			    "T2 helår kr/kvm", "Belopp helår kr/kvm",
+			    "T0 nästa år helår kr/kvm", "Belopp helår kr/kvm"
+			)
+		lineageTag: 703f09d9-331f-4a16-a79a-1617171d3a11
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Standard = ```
+			
+			VAR MonthToday = MONTH(TODAY())
+			VAR ChooseMeasures =
+			IF( MonthToday >= 11 || MonthToday <= 1,
+			    "Utfall mot T2",
+			    IF( MonthToday >= 2 || MonthToday <= 3,
+			        "Utfall mot T0",
+			        IF( MonthToday >= 4 || MonthToday <= 7,
+			            "Utfall mot T1",
+			            IF( MonthToday >= 8 || MonthToday <= 9,
+			                "Utfall mot T2",
+			                IF( MonthToday = 10,
+			                    "T0 mot T2")))))
+			
+			VAR Result = // ta ett measure i taget och kolla för vilka measurepaket ovan de ska vara med
+			SWITCH( 'Välj Finansmätvärde'[Välj Finansmätvärde],
+			    "Utfall", IF( ChooseMeasures IN {"Utfall mot T2", "Utfall mot T0", "Utfall mot T1"}, "Standard"),
+			    "T0", IF( ChooseMeasures IN {"Utfall mot T0", "T0 mot T2"}, "Standard"),
+			    "T1", IF( ChooseMeasures IN {"Utfall mot T1"}, "Standard"),
+			    "T2", IF( ChooseMeasures IN {"Utfall mot T2", "T0 mot T2"}, "Standard"),
+			    "Diff utfall mot T0", IF( ChooseMeasures IN {"Utfall mot T0"}, "Standard"),
+			    "Diff utfall mot T0 %", IF( ChooseMeasures IN {"Utfall mot T0"}, "Standard"),
+			    "Diff utfall mot T1", IF( ChooseMeasures IN {"Utfall mot T1"}, "Standard"),
+			    "Diff utfall mot T1 %", IF( ChooseMeasures IN {"Utfall mot T1"}, "Standard"),
+			    "Diff utfall mot T2", IF( ChooseMeasures IN {"Utfall mot T2"}, "Standard"),
+			    "Diff utfall mot T2 %", IF( ChooseMeasures IN {"Utfall mot T2"}, "Standard"),
+			    "Diff T0 mot T2", IF( ChooseMeasures IN {"T0 mot T2"}, "Standard"),
+			    "Diff T0 mot T2 %", IF( ChooseMeasures IN {"T0 mot T2"}, "Standard")
+			)
+			
+			RETURN Result
+			
+			```
+		lineageTag: c54d0000-361b-4f3d-97b8-c64f303c3a6c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj Finansmätvärde-44626fe5-a649-4858-84fb-684be8021123' = calculated
+		mode: import
+		source = ```
+				{
+				    
+				    // Belopp
+				    ("Utfall", NAMEOF('Mätvärde'[Utfall]), 3),
+				    ("Utfall fg år-1", NAMEOF('Mätvärde'[Utfall fg år-1]), 8),
+				    //("Utfall-1 helår", NAMEOF('Mätvärde'[Utfall fg helår-1]), 2),
+				    ("Utfall fg år-2", NAMEOF('Mätvärde'[Utfall fg år-2]), 9),
+				    //("Utfall-2 helår", NAMEOF('Mätvärde'[Utfall fg helår-2]), 1),
+				    ("T0", NAMEOF('Mätvärde'[T0]), 4),
+				    ("T1", NAMEOF('Mätvärde'[T1]), 5),
+				    ("T2", NAMEOF('Mätvärde'[T2]), 6),
+				    ("T0 nästa år", NAMEOF('Mätvärde'[T0 nästa år]), 7),
+				
+				    // Belopp helår
+				    ("Utfall helår", NAMEOF('Mätvärde'[Utfall helår]), 103),
+				    //("Utfall-1 år", NAMEOF('Mätvärde'[Utfall fg år-1]), 108),
+				    ("Utfall fg helår-1", NAMEOF('Mätvärde'[Utfall fg helår-1]), 102),
+				    //("Utfall-2 år", NAMEOF('Mätvärde'[Utfall fg år-2]), 109),
+				    ("Utfall fg helår-2", NAMEOF('Mätvärde'[Utfall fg helår-2]), 101),
+				    ("T0 helår", NAMEOF('Mätvärde'[T0 helår]), 104),
+				    ("T1 helår", NAMEOF('Mätvärde'[T1 helår]), 105),
+				    ("T2 helår", NAMEOF('Mätvärde'[T2 helår]), 106),
+				    ("T0 nästa år helår", NAMEOF('Mätvärde'[T0 nästa år helår]), 107),
+				    
+				    // Diffar
+				    ("Diff utfall mot fg år-1", NAMEOF('Mätvärde'[Utfall - Utfall fg år-1]), 2020),
+				    ("Diff utfall mot fg år-1 %", NAMEOF('Mätvärde'[Utfall / Utfall fg år-1]), 2021),
+				    ("Diff utfall mot T0", NAMEOF('Mätvärde'[Utfall - T0]), 2022),
+				    ("Diff utfall mot T0 %", NAMEOF('Mätvärde'[Utfall / T0]), 2023),
+				    ("Diff utfall mot T1", NAMEOF('Mätvärde'[Utfall - T1]), 2024),
+				    ("Diff utfall mot T1 %", NAMEOF('Mätvärde'[Utfall / T1]), 2025),
+				    ("Diff utfall mot T2", NAMEOF('Mätvärde'[Utfall - T2]), 2026),
+				    ("Diff utfall mot T2 %", NAMEOF('Mätvärde'[Utfall / T2]), 2027),
+				    ("Diff T0 mot T2", NAMEOF( [T0 - T2]), 2050),
+				    ("Diff T0 mot T2 %", NAMEOF( [T0 / T2]), 2051),
+				    
+				    
+				    // Kr/kvm
+				    ("Utfall kr/kvm", NAMEOF('Mätvärde'[Utfall kr/kvm]), 3033),
+				    ("Utfall fg år-1 kr/kvm", NAMEOF('Mätvärde'[Utfall fg år-1 kr/kvm]), 3040),
+				    //("Utfall-1 helår kr/kvm", NAMEOF('Mätvärde'[Utfall fg helår-1 kr/kvm]), 3032),
+				    //("Utfall-2 helår kr/kvm", NAMEOF('Mätvärde'[Utfall fg helår-2 kr/kvm]), 3031),
+				    ("T0 kr/kvm", NAMEOF('Mätvärde'[T0 kr/kvm]), 3034),
+				    ("T0 nästa år kr/kvm", NAMEOF('Mätvärde'[T0 nästa år kr/kvm]), 3037),
+				    ("T1 kr/kvm", NAMEOF('Mätvärde'[T1 kr/kvm]), 3035),
+				    ("T2 kr/kvm", NAMEOF('Mätvärde'[T2 kr/kvm]), 3036),
+				
+				    // Kr/kvm helår
+				    ("Utfall helår kr/kvm", NAMEOF('Mätvärde'[Utfall helår kr/kvm]), 4033),
+				    //("Utfall-1 år kr/kvm", NAMEOF('Mätvärde'[Utfall fg år-1 kr/kvm]), 4040),
+				    ("Utfall fg helår-1 kr/kvm", NAMEOF('Mätvärde'[Utfall fg helår-1 kr/kvm]), 4032),
+				    ("Utfall fg helår-2 kr/kvm", NAMEOF('Mätvärde'[Utfall fg helår-2 kr/kvm]), 4031),
+				    ("T0 helår kr/kvm", NAMEOF('Mätvärde'[T0 helår kr/kvm]), 4034),
+				    ("T0 nästa år helår kr/kvm", NAMEOF('Mätvärde'[T0 nästa år helår kr/kvm]), 4039),
+				    ("T1 helår kr/kvm", NAMEOF('Mätvärde'[T1 helår kr/kvm]), 4035),
+				    ("T2 helår kr/kvm", NAMEOF('Mätvärde'[T2 helår kr/kvm]), 4036),
+				
+				    // Balans
+				    ("IB", NAMEOF([IB]), 5000)
+				}
+				```
+
+	annotation PBI_Id = 43edd86e436346b5abfaaec39cd4b192
+

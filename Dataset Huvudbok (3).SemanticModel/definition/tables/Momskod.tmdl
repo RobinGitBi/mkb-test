@@ -1,0 +1,91 @@
+table Momskod
+	lineageTag: 28a47afa-84a7-4001-a649-d168aafdf3af
+
+	column MomskodSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 887c2c6d-78e5-423a-8ef9-cc62c864f849
+		summarizeBy: none
+		sourceColumn: MomskodSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MomskodNr
+		dataType: string
+		lineageTag: f5171648-5535-4814-8a22-565736cc765b
+		summarizeBy: none
+		sourceColumn: MomskodNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MomskodNamn
+		dataType: string
+		lineageTag: 565f1f76-cb99-4fc2-badb-e45c72fe06c6
+		summarizeBy: none
+		sourceColumn: MomskodNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1474fa31-7b3f-4bf6-ae7e-172205bdde86
+		summarizeBy: none
+		sourceColumn: Created
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 27bba4f0-e7d5-44da-b33f-ed3b90f98609
+		summarizeBy: none
+		sourceColumn: Modified
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MomsSats
+		dataType: string
+		lineageTag: 67a1272a-c362-4163-8ba8-95a8d75c099e
+		summarizeBy: none
+		sourceColumn: MomsSats
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Moms
+		dataType: double
+		lineageTag: ff9274fd-b28f-432d-93d4-60fc283d4ccd
+		summarizeBy: none
+		sourceColumn: Moms
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Momskod-2cad188c-9aef-4b81-a1b6-6ceecca72399 = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimMomskod = MKBBIDW{[Schema="dbo",Item="ViewDimMomskod"]}[Data]
+				in
+				    dbo_ViewDimMomskod
+
+	annotation PBI_ResultType = Table
+
