@@ -21,27 +21,34 @@ WITH calendar AS (
                 CASE WHEN A.ARBETSTIDFRANTID > E.ANSTALLNINGSDATUM THEN A.ARBETSTIDFRANTID ELSE E.ANSTALLNINGSDATUM END AS StartDate,
                 CASE WHEN COALESCE(A.ARBETSTIDTOMTID, '9999-12-31') < ISNULL(E.AVGANGSDATUM, '9999-12-31')
                      THEN COALESCE(A.ARBETSTIDTOMTID, '9999-12-31') ELSE ISNULL(E.AVGANGSDATUM, '9999-12-31') END AS EndDate
-        ) AS MAXDATES
-		)
+        ) AS MAXDATES),
 
+FA as(
+select *
+from trimmed_arbetstider
+WHERE PeriodStart < PeriodEnd
+)
+		
+--SELECT *
+--FROM FA
 
 
 SELECT  [AnställdSK]
       ,[AnställningsNummer]
       ,[Datum]
       ,[FTE]
-      ,[TillTrädesDatum]
-      ,[FrånTrädesDatum]
+      ,[TillTrädesDatum] as FrånGällandeKontraktsDatum
+      ,[FrånTrädesDatum] as TillGällandeKontraktsDatum
       ,[KostnadsStälle]
       ,[AnställningsForm]
       ,[Källa],
-	  T.PeriodStart MonthlyContractualStartDate,
-	  T.PeriodEnd MonthlyContractualEndDate,
+	  T.PeriodStart FrånKontraktsDatumMånad,
+	  T.PeriodEnd TillKontraktsDatumMånad,
 	  t.SYSSELSATTNINGSGRAD
   FROM [MKBBIDW].[dbo].[ViewFactFte] F
-  LEFT JOIN trimmed_arbetstider T ON F.AnställningsNummer = T.ANST_NR AND F.Datum = T.PeriodStart
-  WHERE DATEDIFF(DAY, t.PeriodStart, t.PeriodEnd) >= 0
-  AND YEAR(DATUM) = 2024
+  LEFT JOIN FA T ON F.AnställningsNummer = T.ANST_NR AND F.Datum = T.PeriodStart
+  WHERE 
+   YEAR(DATUM) = 2024
 
 
  -- SELECT *
