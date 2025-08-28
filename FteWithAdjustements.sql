@@ -27,7 +27,18 @@ FA as(
 select *
 from trimmed_arbetstider
 WHERE PeriodStart < PeriodEnd
-)
+),
+
+Final as(
+SELECT 
+FA.ANST_NR,
+MIN(FA.PeriodStart) as PeriodStart,
+MAX(FA.PERIODEND) as PeriodEnd,
+MAX(FA.SYSSELSATTNINGSGRAD) SysselSattningsGrad
+FROM FA
+GROUP BY FA.ANST_NR,
+YEAR(FA.MONTHSTARTDATE),
+MONTH(FA.MonthStartDate))
 		
 --SELECT *
 --FROM FA
@@ -35,21 +46,23 @@ WHERE PeriodStart < PeriodEnd
 
 SELECT  [AnställdSK]
       ,[AnställningsNummer]
-      ,[Datum]
+      ,[Datum],
+	  	  T.PeriodStart FrånKontraktsDatumMånad,
+	  T.PeriodEnd TillKontraktsDatumMånad
       ,[FTE]
       ,[TillTrädesDatum] as FrånGällandeKontraktsDatum
       ,[FrånTrädesDatum] as TillGällandeKontraktsDatum
       ,[KostnadsStälle]
       ,[AnställningsForm]
       ,[Källa],
-	  T.PeriodStart FrånKontraktsDatumMånad,
-	  T.PeriodEnd TillKontraktsDatumMånad,
+
 	  t.SYSSELSATTNINGSGRAD
   FROM [MKBBIDW].[dbo].[ViewFactFte] F
-  LEFT JOIN FA T ON F.AnställningsNummer = T.ANST_NR AND F.Datum = T.PeriodStart
+  LEFT JOIN Final T ON F.AnställningsNummer = T.ANST_NR AND year(F.Datum) = year(t.PeriodEnd) and MONTH(f.datum) = month(t.PeriodEnd)
+  
   WHERE 
    YEAR(DATUM) = 2024
-
+--AND ANST_NR = 12182
 
  -- SELECT *
  -- FROM trimmed_arbetstider T 
