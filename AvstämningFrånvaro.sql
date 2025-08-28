@@ -20,5 +20,5 @@
    WHERE YEAR(F.Fomdatum ) in (2024, 2025)
    --and month(f.Fomdatum) in (2,3)
    AND Anstnr = 1290
-   and Fomdatum between '2024-12-01' and '2025-01-31'
+   and Fomdatum between '2024-11-01' and '2025-01-31'
    order by 3 asc
