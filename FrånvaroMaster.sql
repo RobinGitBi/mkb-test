@@ -268,7 +268,8 @@ PerManad_TJ AS (
 -- ===========================
 -- 7) Slutresultat – en rad per MÅNAD och KEDJA (GruppID)
 -- ===========================
-SELECT *
+SELECT x.EjBetaldaDagarDennaManad / X.KalenderdagarDennaManad,
+*
 FROM (
 
 SELECT 
@@ -309,5 +310,6 @@ FROM PerManad_TJ
 WHERE (@YearMin IS NULL OR År >= @YearMin)
 
 ) X
-WHERE X.Anstnr = 1208
+where X.År = 2025
+--x.År >= year(getdate())- 5
 ORDER BY 6 asc
