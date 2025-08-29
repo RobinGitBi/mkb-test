@@ -1,14 +1,15 @@
 /* ===========================
    Parametrar
    =========================== */
-DECLARE @MaxCalendarGapSJ int = 5;     -- Bryt SJ-kedja om glapp > 5 kalenderdagar (mellan observerade SJ/SE-dagar)
-DECLARE @MaxCalendarGapFL int = 1;     -- Bryt FL-kedja om glapp > 1 dag
-DECLARE @MaxCalendarGapTJ int = 1;     -- Bryt TJ-kedja om glapp > 1 dag
-DECLARE @SickThresholdDays int = 14;   -- 14-dagarsregeln (kalenderdagar i kedjan)
+DECLARE @MaxCalendarGapSJ int = 5;     -- Bryt SJ-kedja om glapp > 5 kalenderdagar (observerade SJ/SE-dagar)
+DECLARE @MaxCalendarGapFL int = 1;     -- Bryt FL-kedja om glapp > 1 dag (endast FL/FLB; SE bryggar ej)
+DECLARE @MaxCalendarGapTJ int = 1;     -- Bryt TJ-kedja om glapp > 1 dag (endast TJ; SE bryggar ej)
+DECLARE @SickThresholdDays int = 14;   -- 14-dagarsregeln (kalenderdagar i SJ-kedjan)
 DECLARE @YearMin int = NULL;           -- t.ex. 2024 (NULL = ingen filtrering)
 
 /* ===========================
-   1) Expandera frånvaro till datum (inkl. SE som brygga)
+   1) Expandera frånvaro till datum
+   - SE behövs i datat för att kunna brygga SJ, men ska inte förlänga slutet.
    =========================== */
 WITH UtbrutenFrånvaro AS (
     SELECT 
@@ -25,11 +26,11 @@ WITH UtbrutenFrånvaro AS (
     JOIN master.dbo.spt_values n
       ON n.type = 'P'
      AND n.number BETWEEN 0 AND DATEDIFF(DAY, F.Fomdatum, F.Tomdatum)  -- inklusiv expansion
-    WHERE F.Kortkod IN ('SJ','FL','TJ','SE') -- SE används endast för bryggning/avslut
+    WHERE F.Kortkod IN ('SJ','FL','FLB','TJ','SE')
 ),
 
 /* ===========================
-   2) Senaste avläsning per dag & typ
+   2) Senaste avläsning per dag & typ (dedup)
    =========================== */
 SenastePerDatum AS (
     SELECT *
@@ -45,13 +46,15 @@ SenastePerDatum AS (
 ),
 
 /* ===========================
-   3) SJ-kedja (SE bryggar + kan avsluta)
+   3) SJ-kedja
+   - Använd SJ + SE för att identifiera kedjor (SE bryggar).
+   - MEN: PeriodEnd för SJ = sista SJ-dagen (SE förlänger inte slutet).
    =========================== */
 SJKedja AS (
     SELECT *,
            LAG(FrånvaroDatum) OVER (PARTITION BY Anstnr ORDER BY FrånvaroDatum) AS PrevDatum
     FROM SenastePerDatum
-    WHERE Kortkod IN ('SJ','SE')
+    WHERE Kortkod IN ('SJ','SE')  -- SE bryggar mellan SJ
 ),
 SJKedjaFlaggad AS (
     SELECT *,
@@ -63,20 +66,23 @@ SJKedjaFlaggad AS (
                END) OVER (PARTITION BY Anstnr ORDER BY FrånvaroDatum ROWS UNBOUNDED PRECEDING) AS GruppID
     FROM SJKedja
 ),
--- Kedjegränser per GruppID och slopa kedjor som saknar SJ helt
+-- Bounds per kedja: start = första SJ, slut = sista SJ (SE får INTE förlänga)
 SJBounds AS (
     SELECT
         Anstnr,
         GruppID,
         MIN(CASE WHEN Kortkod='SJ' THEN FrånvaroDatum END) AS PeriodStart_SJ,
-        MAX(FrånvaroDatum)                                   AS KedjeSlut
+        MAX(CASE WHEN Kortkod='SJ' THEN FrånvaroDatum END) AS PeriodEnd_SJ      -- <-- ändrat: endast SJ
     FROM SJKedjaFlaggad
     GROUP BY Anstnr, GruppID
 ),
+-- Slopa kedjor som saknar någon SJ
 SJKedjaValida AS (
-    SELECT * FROM SJBounds WHERE PeriodStart_SJ IS NOT NULL
+    SELECT * 
+    FROM SJBounds 
+    WHERE PeriodStart_SJ IS NOT NULL AND PeriodEnd_SJ IS NOT NULL
 ),
--- Full kalender per kedja (alla datum från första SJ till kedjeslut, inkl. SE/helger)
+-- Full kalender från första SJ till sista SJ (SE i slutet tas alltså inte med)
 SJKalender AS (
     SELECT
         b.Anstnr,
@@ -89,9 +95,9 @@ SJKalender AS (
     FROM SJKedjaValida b
     JOIN master.dbo.spt_values n
       ON n.type = 'P'
-     AND n.number BETWEEN 0 AND DATEDIFF(DAY, b.PeriodStart_SJ, b.KedjeSlut)
+     AND n.number BETWEEN 0 AND DATEDIFF(DAY, b.PeriodStart_SJ, b.PeriodEnd_SJ)  -- <-- till sista SJ
 ),
--- Endast observerade SJ-dagar (för procentsats/diagnostik)
+-- Observerade SJ-dagar (för procentsats/diagnostik)
 SJ_ObserveradeDagar AS (
     SELECT 
         s.Anstnr,
@@ -107,13 +113,13 @@ SJ_ObserveradeDagar AS (
 ),
 
 /* ===========================
-   4) FL-kedja (SE bryggar)
+   4) FL-kedja (SE bryggar INTE) — FL + FLB
    =========================== */
 FLKedja AS (
     SELECT *,
            LAG(FrånvaroDatum) OVER (PARTITION BY Anstnr ORDER BY FrånvaroDatum) AS PrevDatum
     FROM SenastePerDatum
-    WHERE Kortkod IN ('FL','SE')
+    WHERE Kortkod IN ('FL','FLB')
 ),
 FLKedjaFlaggad AS (
     SELECT *,
@@ -129,20 +135,20 @@ FLBounds AS (
     SELECT
         Anstnr,
         GruppID,
-        MIN(CASE WHEN Kortkod='FL' THEN FrånvaroDatum END) AS PeriodStart_FL,
-        MAX(FrånvaroDatum)                                   AS KedjeSlut
+        MIN(FrånvaroDatum) AS PeriodStart_FL,
+        MAX(FrånvaroDatum) AS PeriodEnd_FL
     FROM FLKedjaFlaggad
     GROUP BY Anstnr, GruppID
 ),
 
 /* ===========================
-   5) TJ-kedja (SE bryggar)
+   5) TJ-kedja (SE bryggar INTE)
    =========================== */
 TJKedja AS (
     SELECT *,
            LAG(FrånvaroDatum) OVER (PARTITION BY Anstnr ORDER BY FrånvaroDatum) AS PrevDatum
     FROM SenastePerDatum
-    WHERE Kortkod IN ('TJ','SE')
+    WHERE Kortkod = 'TJ'
 ),
 TJKedjaFlaggad AS (
     SELECT *,
@@ -158,28 +164,27 @@ TJBounds AS (
     SELECT
         Anstnr,
         GruppID,
-        MIN(CASE WHEN Kortkod='TJ' THEN FrånvaroDatum END) AS PeriodStart_TJ,
-        MAX(FrånvaroDatum)                                   AS KedjeSlut
+        MIN(FrånvaroDatum) AS PeriodStart_TJ,
+        MAX(FrånvaroDatum) AS PeriodEnd_TJ
     FROM TJKedjaFlaggad
     GROUP BY Anstnr, GruppID
 ),
 
 /* ===========================
    6) Månadsaggregering per kedja (GruppID)
-      - SJ: räkna på kedjans KALENDER (inkl. helger/SE)
-      - FL/TJ: räkna kalenderdagar i kedjan (ingen 14-dagarsregel)
+      - SJ: räkna på kedjans kalender från första till sista SJ (SE i slutet räknas ej).
+      - FL/TJ: som tidigare, enbart egna dagar.
    =========================== */
 PerManad_SJ AS (
     SELECT
         k.Anstnr,
-        k.GruppID,                -- behåll kedje-ID
+        k.GruppID,
         'SJ' AS Kortkod,
         YEAR(k.KalDag)  AS År,
         MONTH(k.KalDag) AS Månad,
         MIN(b.PeriodStart_SJ) AS PeriodStart,
-        MAX(b.KedjeSlut)      AS PeriodEnd,
-        COUNT(DISTINCT k.KalDag) AS KalenderdagarDennaManad,  -- antal kalenderdatum i månaden inom kedjan
-        -- Genomsnittlig syssels.grad från observerade SJ-dagar i månaden (kan bli NULL om inga SJ-dagar samma månad)
+        MAX(b.PeriodEnd_SJ)   AS PeriodEnd,     -- <-- sista SJ, ej SE
+        COUNT(DISTINCT k.KalDag) AS KalenderdagarDennaManad,
         AVG(CASE WHEN YEAR(s.FrånvaroDatum)=YEAR(k.KalDag) AND MONTH(s.FrånvaroDatum)=MONTH(k.KalDag)
                  THEN s.Procent END) AS GenomsnittligSysselsattningsgrad,
         COUNT(DISTINCT CASE WHEN k.CalendarDayNr > @SickThresholdDays THEN k.KalDag END) AS EjBetaldaDagarUtanProcent,
@@ -192,7 +197,8 @@ PerManad_SJ AS (
       ON s.Anstnr = k.Anstnr AND s.GruppID = k.GruppID
     GROUP BY k.Anstnr, k.GruppID, YEAR(k.KalDag), MONTH(k.KalDag)
 ),
--- FL: bygg en enkel kalender per kedja (helger ingår)
+
+-- FL: enkel kalender per FL/FLB-kedja (SE påverkar ej)
 FLKalender AS (
     SELECT
         b.Anstnr,
@@ -202,17 +208,17 @@ FLKalender AS (
     JOIN master.dbo.spt_values n
       ON n.type = 'P'
      AND b.PeriodStart_FL IS NOT NULL
-     AND n.number BETWEEN 0 AND DATEDIFF(DAY, b.PeriodStart_FL, b.KedjeSlut)
+     AND n.number BETWEEN 0 AND DATEDIFF(DAY, b.PeriodStart_FL, b.PeriodEnd_FL)
 ),
 PerManad_FL AS (
     SELECT
         k.Anstnr,
         k.GruppID,
-        'FL' AS Kortkod,
+        'FL' AS Kortkod,  -- rapportera samlat som FL
         YEAR(k.KalDag)  AS År,
         MONTH(k.KalDag) AS Månad,
         MIN(b.PeriodStart_FL) AS PeriodStart,
-        MAX(b.KedjeSlut)      AS PeriodEnd,
+        MAX(b.PeriodEnd_FL)   AS PeriodEnd,
         COUNT(DISTINCT k.KalDag) AS KalenderdagarDennaManad,
         AVG(ABS(f.Procent)) AS GenomsnittligSysselsattningsgrad,
         COUNT(DISTINCT k.KalDag) AS EjBetaldaDagarUtanProcent,
@@ -220,10 +226,14 @@ PerManad_FL AS (
         DAY(EOMONTH(MIN(k.KalDag))) AS DagarIMånaden
     FROM FLKalender k
     JOIN FLBounds b ON b.Anstnr = k.Anstnr AND b.GruppID = k.GruppID
-    LEFT JOIN SenastePerDatum f ON f.Anstnr = k.Anstnr AND f.FrånvaroDatum = k.KalDag AND f.Kortkod = 'FL'
+    LEFT JOIN SenastePerDatum f 
+      ON f.Anstnr = k.Anstnr 
+     AND f.FrånvaroDatum = k.KalDag 
+     AND f.Kortkod IN ('FL','FLB')
     GROUP BY k.Anstnr, k.GruppID, YEAR(k.KalDag), MONTH(k.KalDag)
 ),
--- TJ: kalender per kedja
+
+-- TJ: kalender per TJ-kedja (SE påverkar ej)
 TJKalender AS (
     SELECT
         b.Anstnr,
@@ -233,7 +243,7 @@ TJKalender AS (
     JOIN master.dbo.spt_values n
       ON n.type = 'P'
      AND b.PeriodStart_TJ IS NOT NULL
-     AND n.number BETWEEN 0 AND DATEDIFF(DAY, b.PeriodStart_TJ, b.KedjeSlut)
+     AND n.number BETWEEN 0 AND DATEDIFF(DAY, b.PeriodStart_TJ, b.PeriodEnd_TJ)
 ),
 PerManad_TJ AS (
     SELECT
@@ -243,7 +253,7 @@ PerManad_TJ AS (
         YEAR(k.KalDag)  AS År,
         MONTH(k.KalDag) AS Månad,
         MIN(b.PeriodStart_TJ) AS PeriodStart,
-        MAX(b.KedjeSlut)      AS PeriodEnd,
+        MAX(b.PeriodEnd_TJ)   AS PeriodEnd,
         COUNT(DISTINCT k.KalDag) AS KalenderdagarDennaManad,
         AVG(ABS(t.Procent)) AS GenomsnittligSysselsattningsgrad,
         COUNT(DISTINCT k.KalDag) AS EjBetaldaDagarUtanProcent,
@@ -254,19 +264,16 @@ PerManad_TJ AS (
     LEFT JOIN SenastePerDatum t ON t.Anstnr = k.Anstnr AND t.FrånvaroDatum = k.KalDag AND t.Kortkod = 'TJ'
     GROUP BY k.Anstnr, k.GruppID, YEAR(k.KalDag), MONTH(k.KalDag)
 )
+
+-- ===========================
+-- 7) Slutresultat – en rad per MÅNAD och KEDJA (GruppID)
+-- ===========================
 SELECT *
-FROM(
-/* ===========================
-   7) Slutresultat – en rad per MÅNAD och KEDJA (GruppID)
-   =========================== */
+FROM (
+
 SELECT 
-    Anstnr,
-    GruppID,                              -- kedje-ID för tydlighet/diagnostik
-    Kortkod,
-    År,
-    Månad,
-    PeriodStart,
-    PeriodEnd,
+    Anstnr, GruppID, Kortkod, År, Månad,
+    PeriodStart, PeriodEnd,
     KalenderdagarDennaManad,
     GenomsnittligSysselsattningsgrad,
     EjBetaldaDagarUtanProcent,
@@ -278,13 +285,8 @@ WHERE (@YearMin IS NULL OR År >= @YearMin)
 UNION ALL
 
 SELECT 
-    Anstnr,
-    GruppID,
-    Kortkod,
-    År,
-    Månad,
-    PeriodStart,
-    PeriodEnd,
+    Anstnr, GruppID, Kortkod, År, Månad,
+    PeriodStart, PeriodEnd,
     KalenderdagarDennaManad,
     GenomsnittligSysselsattningsgrad,
     EjBetaldaDagarUtanProcent,
@@ -296,13 +298,8 @@ WHERE (@YearMin IS NULL OR År >= @YearMin)
 UNION ALL
 
 SELECT 
-    Anstnr,
-    GruppID,
-    Kortkod,
-    År,
-    Månad,
-    PeriodStart,
-    PeriodEnd,
+    Anstnr, GruppID, Kortkod, År, Månad,
+    PeriodStart, PeriodEnd,
     KalenderdagarDennaManad,
     GenomsnittligSysselsattningsgrad,
     EjBetaldaDagarUtanProcent,
@@ -311,8 +308,6 @@ SELECT
 FROM PerManad_TJ
 WHERE (@YearMin IS NULL OR År >= @YearMin)
 
---ORDER BY Anstnr, PeriodStart, År, Månad, Kortkod
 ) X
-WHERE X.Anstnr = 1290
-AND X.PeriodStart = '2024-11-27'
-ORDER BY 6 ASC
+WHERE X.Anstnr = 1208
+ORDER BY 6 asc
