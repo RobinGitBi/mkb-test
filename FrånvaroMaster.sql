@@ -268,8 +268,15 @@ PerManad_TJ AS (
 -- ===========================
 -- 7) Slutresultat – en rad per MÅNAD och KEDJA (GruppID)
 -- ===========================
-SELECT x.EjBetaldaDagarDennaManad / X.KalenderdagarDennaManad,
-*
+SELECT
+x.Anstnr,
+cast(concat(x.år,'-',x.Månad,'-','01') as date) as Datum,
+x.Kortkod as SjukKod,
+x.PeriodStart as FrånVaroStart,
+x.PeriodEnd AS FrånVaroSlut,
+x.KalenderdagarDennaManad as FrånvaroAntalDagar,
+x.EjBetaldaDagarUtanProcent as FrånVaroAntalObetaldaDagar,
+x.DagarIMånaden as AntalDagarIMånad
 FROM (
 
 SELECT 
@@ -310,6 +317,5 @@ FROM PerManad_TJ
 WHERE (@YearMin IS NULL OR År >= @YearMin)
 
 ) X
-where X.År = 2025
---x.År >= year(getdate())- 5
-ORDER BY 6 asc
+where X.År  >= 2024 -- Startår 2024 för relevant data för uppföljning av justerad FTE --
+ORDER BY 1 asc
