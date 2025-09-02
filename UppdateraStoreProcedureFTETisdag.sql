@@ -136,7 +136,7 @@ final_fte AS (
         ANST_NR, 
         MonthStartDate, 
         FTE, 
-        'HoursReported' AS Source,
+        'TimRapportering' AS Source,
         CAST(NULL AS date) AS PeriodStart,    -- kan bytas till MonthStartDate
         CAST(NULL AS date) AS PeriodEnd,      -- kan bytas till EOMONTH(MonthStartDate)
         CAST(NULL AS DECIMAL(6,2)) AS Sysselsattningsgrad
@@ -148,7 +148,7 @@ final_fte AS (
         fte.ANST_NR, 
         fte.MonthStartDate, 
         fte.FTE, 
-        'FactTable',
+        'KontraktsBaseradFte',
         fte.PeriodStart,
         fte.PeriodEnd,
         fte.Sysselsattningsgrad
@@ -189,17 +189,17 @@ best_match AS (
 )
 SELECT 
     bm.AnställdSK,
-    H.ANST_NR,
-    H.MonthStartDate,
+    H.ANST_NR as AnställningsNr,
+	 bm.KostnadsStälle,
+    H.MonthStartDate as Datum,
     CAST(H.FTE AS DECIMAL(10,4)) AS FTE,
-    H.Source,
-    H.PeriodStart,
-    H.PeriodEnd,
+    H.Source as Källa,
+    H.PeriodStart as KontraktStartMånad,
+    H.PeriodEnd as KontraktsSlutMånad,
     H.Sysselsattningsgrad,          -- Hämtad från Arbetstider (ej beräknad)
-    bm.TILLTRADE,
-    bm.TILLTRADETOM,
-    bm.ANSTALLNINGSFORM,
-    bm.KostnadsStälle
+    bm.TILLTRADE as KontraktStart,
+    bm.TILLTRADETOM as KontraktSlut,
+    bm.ANSTALLNINGSFORM as AnställningsForm
 FROM final_fte H
 LEFT JOIN best_match bm 
   ON H.ANST_NR = bm.ANST_NR 
