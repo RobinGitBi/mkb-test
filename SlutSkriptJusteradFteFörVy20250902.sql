@@ -38,3 +38,4 @@ CAST(ROUND(JF.FTE,2) AS DECIMAL(10,2))  + COALESCE(JF.JusteringFte,0) AS Justera
 FROM JusteradFte JF
 
 
+---- Något verkar vara fel med joinen för den genererar fler rader än ursprung !!!! ---
