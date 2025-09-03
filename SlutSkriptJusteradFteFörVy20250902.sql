@@ -2,17 +2,17 @@
 WITH JusteradFrånvaro AS(
 select F.AnstNr,
 F.Datum,
-F.FrånvaroStart,
-F.FrånvaroSlut,
+--F.FrånvaroStart,
+--F.FrånvaroSlut,
 SUM(F.FrånvaroAntalObetaldaDagar) AS AntalObetaldaDagar
 from fact.FteFrånvaroJustering F
 group by 
 F.AnstNr,
 YEAR(F.DATUM),
 MONTH(F.DATUM),
-F.Datum,
-F.FrånvaroStart,
-F.FrånvaroSlut
+F.Datum
+--F.FrånvaroStart,
+--F.FrånvaroSlut
 HAVING coalesce(SUM(F.FrånvaroAntalObetaldaDagar),0) <> 0
 ),
 
@@ -31,9 +31,17 @@ SELECT *,
 from KolumnerInScoope)
 
 SELECT 
+JF.AnställdsSk,
+JF.ANSTNR AS AnställningsNr,
+JF.KOSTNADSSTÄLLE AS KostnadsStälle,
+JF.ANSTÄLLNINGSFORM AS AnställningsForm,
+JF.DATUM AS Datum,
+JF.KontraktStartMånad,
+JF.KontraktsSlutMånad,
+JF.SYSSELSÄTTNINGSGRAD AS SysselSättningsGrad,
 CAST(ROUND(JF.FTE,2) AS DECIMAL(10,2)) AS Fte,
-JF.JusteringFte AS FrånvaroJustering,
-CAST(ROUND(JF.FTE,2) AS DECIMAL(10,2))  + COALESCE(JF.JusteringFte,0) AS JusteradFte,
+round(cast(JF.JusteringFte as decimal(10,2)), 2) AS FrånvaroJustering,
+CAST(ROUND(JF.FTE,2) AS DECIMAL(10,2))  + COALESCE(cast(JF.JusteringFte as decimal(10,2)),0) AS JusteradFte,
 *
 FROM JusteradFte JF
 
