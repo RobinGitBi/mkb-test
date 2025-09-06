@@ -4,11 +4,12 @@ select
 f.AnstNr,
 CAST(CONCAT(YEAR(f.Datum), '-', MONTH(F.DATUM),'-', '01') AS DATE) AS Datum,
 sum(f.ObetaldDagJusterad) AS JusteringFrånvaroDagar
-from fact.FteFrånvaroJustering F
+from [MKBBIDW].fact.FteFrånvaroJustering F
 GROUP BY 
 f.AnstNr,
 YEAR(f.Datum),
 MONTH(F.DATUM)
+HAVING sum(f.ObetaldDagJusterad) <> 0
 ),
 
 KolumnerInScoope as(
@@ -16,7 +17,7 @@ SELECT
 ff.*,
 jf.JusteringFrånvaroDagar,
 DATEDIFF(DAY, FF.Datum, EOMONTH(FF.DATUM))+1 AS AntalDagarMånad
-FROM FACT.FactFTE FF
+FROM [MKBBIDW].FACT.FactFTE FF
 LEFT JOIN JusteradFrånvaro JF ON FF.AnstNr = JF.AnstNr AND FF.Datum = JF.Datum
 ),
 
@@ -45,7 +46,8 @@ CASE WHEN CAST(ROUND(JF.FTE,2) AS DECIMAL(10,2))  + COALESCE(cast(JF.JusteringFt
 JF.ANTALDAGARMÅNAD AS AntalDagarMånad,
 JF.JusteringFrånvaroDagar,
 JF.TillTrädesDatum,
-JF.TillTrädeTomDatum
+JF.TillTrädeTomDatum,
+jf.Källa
 FROM JusteradFte JF
 ) x
 --where x.JusteradFte <0
