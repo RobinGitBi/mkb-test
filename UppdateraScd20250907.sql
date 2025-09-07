@@ -23,7 +23,7 @@ Positions_Base AS (
     SELECT
         CAST(B.ANST_NR AS int)                                AS ANST_NR,
         CAST(B.BEFATTNING AS nvarchar(200))                   AS Befattning,
-        CAST(B.BEFATTNINGSYSSELSATTNINGSGRAD AS decimal(9,2)) AS BefattningsGrad,
+        CAST(B.BEFATTNINGSYSSELSATTNINGSGRAD AS decimal(9,2)) AS BefattningsGrad,  -- <– kvar tidigt, används ej senare
         -- Start = FOM om finns, annars TOM (endagsperiod om bara TOM finns)
         CAST(COALESCE(B.BEFATTNINGFOMDATUM, B.BEFATTNINGFOMDATUM, B.BEFATTNINGTOMDATUM) AS date) AS StartDt,
         -- Slut = TOM om finns, annars öppet slut
@@ -69,7 +69,7 @@ Islands AS (
         ) AS IslandId
     FROM OverlapGroups g
 ),
-/* ---- ändringen är här: winner = MAX(StartDt) ---- */
+/* winner = MAX(StartDt) */
 Winners AS (
     SELECT *
     FROM (
@@ -87,7 +87,7 @@ Deoverlapped AS (
     SELECT
         i.ANST_NR,
         i.Befattning,
-        i.BefattningsGrad,
+        i.BefattningsGrad,  -- <– kvar, men påverkar ej SCD2
         i.StartDt,
         CASE 
             WHEN i.StartDt = w.StartDt AND i.EndDt = w.EndDt AND i.Befattning = w.Befattning
@@ -168,7 +168,7 @@ ValidSlices AS (
     WHERE rp.NextDate IS NOT NULL
 ),
 
-/* 6) Attribut (befattning frivillig → LEFT JOIN) */
+/* 6) Attribut (befattning frivillig → LEFT JOIN) – Grad tas EJ med */
 AddAttributes AS (
     SELECT 
         s.ANST_NR,
@@ -176,8 +176,8 @@ AddAttributes AS (
         CASE WHEN s.TILLTRADETOM > e.TILLTRADETOM THEN e.TILLTRADETOM ELSE s.TILLTRADETOM END AS TILLTRADETOM,
         e.ANSTALLNINGSFORM,
         k.KostnadsStälle,
-        p.Befattning,
-        p.BefattningsGrad
+        p.Befattning
+        -- (ingen BefattningsGrad här)
     FROM ValidSlices s
     INNER JOIN EmploymentPeriods e
         ON s.ANST_NR = e.ANST_NR
@@ -190,15 +190,15 @@ AddAttributes AS (
        AND s.TILLTRADE BETWEEN p.StartDt AND p.EndDt_Final
 ),
 
-/* 7) Komprimera SCD2 (NULL-säkert) */
+/* 7) Komprimera SCD2 – UTAN grad i jämförelsen */
 WithLags AS (
     SELECT 
         a.*,
         LAG(a.ANSTALLNINGSFORM) OVER (PARTITION BY a.ANST_NR ORDER BY a.TILLTRADE) AS PrevForm,
         LAG(a.KostnadsStälle)   OVER (PARTITION BY a.ANST_NR ORDER BY a.TILLTRADE) AS PrevKst,
         LAG(a.TILLTRADETOM)     OVER (PARTITION BY a.ANST_NR ORDER BY a.TILLTRADE) AS PrevEnd,
-        LAG(a.Befattning)       OVER (PARTITION BY a.ANST_NR ORDER BY a.TILLTRADE) AS PrevBef,
-        LAG(a.BefattningsGrad)  OVER (PARTITION BY a.ANST_NR ORDER BY a.TILLTRADE) AS PrevGrad
+        LAG(a.Befattning)       OVER (PARTITION BY a.ANST_NR ORDER BY a.TILLTRADE) AS PrevBef
+        -- (ingen PrevGrad)
     FROM AddAttributes a
 ),
 CollapseGroups AS (
@@ -208,7 +208,6 @@ CollapseGroups AS (
                 WHEN ISNULL(w.PrevForm, N'§') <> ISNULL(w.ANSTALLNINGSFORM, N'§')
                   OR ISNULL(w.PrevKst,  N'§') <> ISNULL(w.KostnadsStälle,  N'§')
                   OR ISNULL(w.PrevBef,  N'§') <> ISNULL(w.Befattning,      N'§')
-                  OR ISNULL(w.PrevGrad, CAST(-99999.99 AS decimal(9,2))) <> ISNULL(w.BefattningsGrad, CAST(-99999.99 AS decimal(9,2)))
                   OR w.PrevEnd IS NULL OR DATEDIFF(DAY, w.PrevEnd, w.TILLTRADE) > 1
                 THEN 1 ELSE 0 
             END
@@ -222,8 +221,8 @@ CollapsedSCD2 AS (
         MAX(CAST(TILLTRADETOM AS date))   AS TILLTRADETOM,
         MAX(ANSTALLNINGSFORM)             AS ANSTALLNINGSFORM,
         MAX(KostnadsStälle)               AS KostnadsStälle,
-        MAX(Befattning)                   AS Befattning,
-        MAX(BefattningsGrad)              AS BefattningsGrad
+        MAX(Befattning)                   AS Befattning
+        -- (ingen BefattningsGrad i resultatet)
     FROM CollapseGroups
     GROUP BY ANST_NR, GroupId
 ),
@@ -239,9 +238,8 @@ SELECT
     TRY_CAST([KostnadsStälle] AS int)       AS [Kostnadsställe],
     CAST([ANSTALLNINGSFORM] AS varchar(50)) AS [Anställningsform],
     CAST([Befattning] AS nvarchar(200))     AS [Befattning],
-    CAST([BefattningsGrad] AS decimal(9,2)) AS [BefattningensSysselsättningsgrad],
     CAST([TILLTRADE] AS date)               AS [Tilltrade],
     CAST([TILLTRADETOM] AS date)            AS [TilltradeTom]
 FROM FinalSCD2
-where ANST_NR = 1104
+where ANST_NR = 8177
 ORDER BY [AnstNr], [Tilltrade];
