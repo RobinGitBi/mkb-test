@@ -1,0 +1,14 @@
+role Controller
+
+	tablePermission 'Fryst FTE'
+		metadataPermission: read
+
+		columnPermission Månadslön = none
+
+	tablePermission FTE
+		metadataPermission: read
+
+		columnPermission Månadslön = none
+
+	annotation PBI_Id = 3e085ddaae4a49188e424142e0c7ab09
+

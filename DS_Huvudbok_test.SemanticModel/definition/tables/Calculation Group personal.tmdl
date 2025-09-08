@@ -1,0 +1,29 @@
+table 'Calculation Group personal'
+	isHidden
+	lineageTag: 99bdaf22-5395-4c76-a21e-0607ddf3496c
+
+	calculationGroup
+		precedence: 11
+
+		calculationItem 'Uppföljning Personal' = SELECTEDMEASURE()
+
+	column 'Kolumn för beräkningsgrupp'
+		dataType: string
+		isHidden
+		lineageTag: 4d1c942c-244d-4c88-bffb-3673414cecc7
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordningstal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordningstal
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 79b3e190-b207-4533-a78f-ddda69731c4d
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

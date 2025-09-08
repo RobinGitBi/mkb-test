@@ -1,0 +1,100 @@
+table 'Mätvärden Personal'
+	isHidden
+	lineageTag: a025b3dc-a967-44e0-89fe-ba7a54b0e2f2
+
+	column 'Mätvärden Personal'
+		isHidden
+		lineageTag: ed33e430-192a-47e1-af85-9ef3318aef8d
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Mätvärden Personal order'
+
+		relatedColumnDetails
+			groupByColumn: 'Mätvärden Personal fält'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mätvärden Personal fält'
+		isHidden
+		lineageTag: b50092c0-2986-4469-adbf-a03f288c7416
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Mätvärden Personal order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mätvärden Personal order'
+		isHidden
+		formatString: 0
+		lineageTag: 9b75140b-0a85-4ba7-b6c2-02aa1e02b280
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Mätvärden Personal' = calculated
+		mode: import
+		source = ```
+				{
+				    ("Diff Utf - T0", NAMEOF('Mätvärde'[Diff Utfall - T0 Personal]), 0),
+				    ("Diff Utf - T0%", NAMEOF('Mätvärde'[Diff Utfall - T0 Personal %]), 1),
+				    ("Diff Utf - T1", NAMEOF('Mätvärde'[Diff Utfall - T1 Personal]), 2),
+				    ("Diff Utf - T1%", NAMEOF('Mätvärde'[Diff Utfall - T1 Personal %]), 3),
+				    ("Diff Utf - T2", NAMEOF('Mätvärde'[Diff Utfall - T2 Personal]), 4),
+				    ("Diff Utf - T2%", NAMEOF('Mätvärde'[Diff Utfall - T2 Personal %]), 5),
+				    ("Diff Utf - Utf fg år", NAMEOF('Mätvärde'[Diff Utfall - Utfall fg år]), 6),
+				    ("Diff Utf - Utf fg år%", NAMEOF('Mätvärde'[Diff Utfall - Utfall fg år %]), 7),
+				    ("Diff T1 - T0", NAMEOF('Mätvärde'[Diff T1 - T0 Personal]), 8),
+				    ("Diff T1 - T0%", NAMEOF('Mätvärde'[Diff T1 - T0 Personal %]), 9),
+				    ("Diff T2 - T1", NAMEOF('Mätvärde'[Diff T2 - T1 Personal]), 10),
+				    ("Diff T2 - T1%", NAMEOF('Mätvärde'[Diff T2 - T1 Personal %]), 11),
+				    ("Diff T0 nästa år - T0", NAMEOF('Mätvärde'[Diff T0 nästa år - T0]), 12),
+				    ("Diff T0 nästa år - T0%", NAMEOF('Mätvärde'[Diff T0 nästa år - T0 Personal %]), 13),
+				    ("Diff T0 nästa år - T2", NAMEOF('Mätvärde'[Diff T0 nästa år - T2 Personal]), 14),
+				    ("Diff T0 nästa år - T2%", NAMEOF('Mätvärde'[Diff T0 nästa år - T2 Personal %]), 14)
+				}
+				
+				
+				
+				
+				    /*
+				
+				    ,
+				
+				    ("T0 helår Personal", NAMEOF('Mätvärde'[T0 helår Personal]), 7),
+				    ("T0 nästa år helår Personal", NAMEOF('Mätvärde'[T0 nästa år helår Personal]), 8),
+				    ("T1 helår Personal", NAMEOF('Mätvärde'[T1 helår Personal]), 9),
+				    ("T2 helår Personal", NAMEOF('Mätvärde'[T2 helår Personal]), 10),
+				    ("Upparbetning Helår", NAMEOF('Mätvärde'[Upparbetning Helår]), 11),
+				    ("Upparbetning Helår -1", NAMEOF('Mätvärde'[Upparbetning Helår -1]), 12),
+				    ("Upparbetning Helår -1 %", NAMEOF('Mätvärde'[Upparbetning Helår -1 %]), 13),
+				    ("Upparbetning Helår -2", NAMEOF('Mätvärde'[Upparbetning Helår -2]), 14),
+				    ("Upparbetning Helår -2 %", NAMEOF('Mätvärde'[Upparbetning Helår -2 %]), 15),
+				    ("Upparbetning Helår -3", NAMEOF('Mätvärde'[Upparbetning Helår -3]), 16),
+				    ("Upparbetning Helår -3 %", NAMEOF('Mätvärde'[Upparbetning Helår -3 %]), 17),
+				    ("Upparbetning Helår %", NAMEOF('Mätvärde'[Upparbetning Helår %]), 18),
+				    ("Utfall fg år-1 Helår Personal", NAMEOF('Mätvärde'[Utfall fg år-1 Helår Personal]), 19),
+				    ("Utfall fg år-1 ÅTD (Ack) Personal", NAMEOF('Mätvärde'[Utfall fg år-1 ÅTD (Ack) Personal]), 20),
+				    ("Utfall fg år-2 Helår Personal", NAMEOF('Mätvärde'[Utfall fg år-2 Helår Personal]), 21),
+				    ("Utfall fg år-2 ÅTD (Ack) Personal", NAMEOF('Mätvärde'[Utfall fg år-2 ÅTD (Ack) Personal]), 22),
+				    ("Utfall fg år-3 Helår Personal", NAMEOF('Mätvärde'[Utfall fg år-3 Helår Personal]), 23),
+				    ("Utfall fg år-3 ÅTD (Ack) Personal", NAMEOF('Mätvärde'[Utfall fg år-3 ÅTD (Ack) Personal]), 24),
+				    ("Utfall ÅTD (Ack) Personal", NAMEOF('Mätvärde'[Utfall ÅTD (Ack) Personal]), 25),
+				    ("Utfall helår personal", NAMEOF('Mätvärde'[Utfall helår personal]), 26),
+				    ("FTE Prognos T0", NAMEOF('Mätvärde'[FTE Prognos T0]), 27),
+				    ("FTE Prognos T1", NAMEOF('Mätvärde'[FTE Prognos T1]), 28),
+				    ("FTE Prognos T2", NAMEOF('Mätvärde'[FTE Prognos T2]), 29),
+				    ("FTE Prognos Diff", NAMEOF('Mätvärde'[FTE Prognos Diff]), 30),
+				    ("FTE Utfall", NAMEOF('Mätvärde'[Antal FTE Netto Fryst]), 31)    
+				*/
+				
+				```
+
+	annotation PBI_Id = ccbb18d1028e4d7184bb2df6b1a3ea37
+

@@ -1,0 +1,19 @@
+role Limited
+	modelPermission: read
+
+	tablePermission 'Fryst FTE'
+		metadataPermission: read
+
+		columnPermission Månadslön = none
+
+		columnPermission 'Tidigare lön' = none
+
+	tablePermission FTE
+		metadataPermission: read
+
+		columnPermission Månadslön = none
+
+		columnPermission 'Tidigare lön' = none
+
+	annotation PBI_Id = 8e8c0c8186034e35a4d5c9657abcf5e0
+

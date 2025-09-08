@@ -1,0 +1,250 @@
+table 'Fryst FTE'
+	lineageTag: 2c416322-de87-4ec9-bab4-f23069b44144
+
+	column Personalkategori
+		dataType: string
+		lineageTag: e0620bb8-20c3-401a-8922-01bf8486ab51
+		summarizeBy: none
+		sourceColumn: Personalkategori
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin/Skötsel
+		dataType: string
+		lineageTag: 0fb7e634-8c5d-43a2-bdbc-12b31caeb628
+		summarizeBy: none
+		sourceColumn: Admin/Skötsel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bemanning
+		dataType: string
+		lineageTag: f39ef362-b4b9-4b6c-bcb5-7b3a9f5411ba
+		summarizeBy: none
+		sourceColumn: Bemanning
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANST_NR
+		dataType: string
+		lineageTag: 5058399e-2826-4712-8ff3-c96c834ac9d2
+		summarizeBy: none
+		sourceColumn: ANST_NR
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Namn
+		dataType: string
+		lineageTag: 46554252-48cc-4641-a00f-7de41ab72c28
+		summarizeBy: none
+		sourceColumn: Namn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ålder
+		dataType: int64
+		formatString: 0
+		lineageTag: 9c40f29e-8ccc-45e8-9afd-66c82be2c0b2
+		summarizeBy: sum
+		sourceColumn: Ålder
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Månadslön
+		dataType: double
+		lineageTag: 69f6b6bb-77dc-4bbc-bf1f-4e539a434fd5
+		summarizeBy: sum
+		sourceColumn: Månadslön
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tillägg 230'
+		dataType: double
+		lineageTag: d5e7f005-bd29-4529-82e5-3253428ac738
+		summarizeBy: sum
+		sourceColumn: Tillägg 230
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tillägg 230 antal månader'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7869769f-4f26-488b-8717-206057a933e6
+		summarizeBy: sum
+		sourceColumn: Tillägg 230 antal månader
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Titel
+		dataType: string
+		lineageTag: 6f6abd44-e94e-4588-9f8c-340b834cca43
+		summarizeBy: none
+		sourceColumn: Titel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tjänstgöringsgrad
+		dataType: double
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: e378b174-bced-46b5-a1e1-2a8cbdcd372d
+		summarizeBy: sum
+		sourceColumn: Tjänstgöringsgrad
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: string
+		lineageTag: 6c6f110b-ebf7-42aa-8e65-1eae0f213fc0
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Antal månader'
+		dataType: int64
+		formatString: 0
+		lineageTag: f71effb6-5d1b-4658-b529-06eff4e762fd
+		summarizeBy: sum
+		sourceColumn: Antal månader
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Antal FTE'
+		dataType: double
+		lineageTag: b8a2a820-384a-4191-8b2f-fa58de3e25da
+		summarizeBy: sum
+		sourceColumn: Antal FTE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tidigare lön'
+		dataType: int64
+		formatString: 0
+		lineageTag: f8dda72c-1049-4136-bb99-79d2aaaacbd0
+		summarizeBy: sum
+		sourceColumn: Tidigare lön
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Födelsedatum
+		dataType: string
+		lineageTag: 9e54311a-3b13-4ddd-8507-3d1a8f24d816
+		summarizeBy: none
+		sourceColumn: Födelsedatum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsdatum
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 76a17728-0c10-43ab-9cf9-8bc586a20f5b
+		summarizeBy: none
+		sourceColumn: Anställningsdatum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Avgångsdatum
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 3b0b24b2-c290-4d10-9490-b93b29cd5139
+		summarizeBy: none
+		sourceColumn: Avgångsdatum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Frysdatum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1b2cd559-dfa9-4b14-bce2-b6ba49719f3c
+		summarizeBy: none
+		sourceColumn: Frysdatum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Antal FTE månad'
+		dataType: double
+		lineageTag: f5104bc2-e209-4090-bb87-b9b514009dbc
+		summarizeBy: sum
+		sourceColumn: Antal FTE månad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Timlön
+		dataType: double
+		lineageTag: 816d1b74-46f0-49bc-ba58-5db8e1f274fa
+		summarizeBy: sum
+		sourceColumn: Timlön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Fryst FTE' = m
+		mode: import
+		source =
+				let
+				    Källa = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Källa{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactFrystFte = MKBBIDW{[Schema="dbo",Item="ViewFactFrystFte"]}[Data],
+				    #"Omdöpta kolumner" = Table.RenameColumns(dbo_ViewFactFrystFte,{{"Tillägg 230 antal månader nästa år", "Tillägg 230 antal månader"}, {"Antal månader nästa år", "Antal månader"}, {"Ålder nästa år", "Ålder"}, {"AVGANGSDATUM", "Avgångsdatum"}, {"ANSTALLNINGSDATUM", "Anställningsdatum"}, {"FODELSEDATUM", "Födelsedatum"}})
+				in
+				    #"Omdöpta kolumner"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigering
+
+	annotation PBI_ResultType = Table
+

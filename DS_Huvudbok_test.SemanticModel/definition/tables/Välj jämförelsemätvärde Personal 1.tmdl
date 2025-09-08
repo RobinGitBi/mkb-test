@@ -1,0 +1,63 @@
+table 'Välj jämförelsemätvärde Personal 1'
+	lineageTag: 1e61e631-da00-4ac0-b1e0-e9cbb750b392
+
+	column 'Välj jämförelsemätvärde Personal 1'
+		lineageTag: 1de07d72-f48f-487f-982e-c057aa27211f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Välj jämförelsemätvärde Personal 1 order'
+
+		relatedColumnDetails
+			groupByColumn: 'Välj jämförelsemätvärde Personal 1 fält'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj jämförelsemätvärde Personal 1 fält'
+		isHidden
+		lineageTag: a881f5ed-868b-4a4d-9d5f-b92d6c916654
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Välj jämförelsemätvärde Personal 1 order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj jämförelsemätvärde Personal 1 order'
+		isHidden
+		formatString: 0
+		lineageTag: 495e11fc-4c6c-42e5-9ffd-4c683953a9a0
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj jämförelsemätvärde Personal 1' = calculated
+		mode: import
+		source = ```
+				{ -- Används in Personalkostnader för prognosticering
+				    ("Utf fg år jfr T2 fg år", NAMEOF('Mätvärde'[Diff Utfall fg år - T2 fg år Personal]), 0),
+				    ("T0 jfr Utf fg år", NAMEOF('Mätvärde'[Diff T0 - Utfall fg år] ), 1),
+				    ("T0 jfr T2 fg år", NAMEOF('Mätvärde'[Diff T0 - T2 fg år]), 2),
+				    ("T1 jfr T0", NAMEOF('Mätvärde'[Diff T1 - T0 Personal]), 3),
+				    ("T2 jfr T1", NAMEOF('Mätvärde'[Diff T2 - T1 Personal]), 4),
+				    ("T0 nästa år jfr T2", NAMEOF('Mätvärde'[Diff T0 nästa år - T2 Personal]), 5)  
+				  }  
+				    
+				    
+				/*
+				
+				  ("T0", NAMEOF('Mätvärde'[T0 helår Personal]), 0),
+				    ("T1", NAMEOF('Mätvärde'[T1 helår Personal]), 1),
+				    ("T2", NAMEOF('Mätvärde'[T2 helår Personal]), 2),
+				    ("T0 nästa år", NAMEOF('Mätvärde'[T0 nästa år helår Personal]), 3),
+				    ("Utfall fg år", NAMEOF('Mätvärde'[Utfall fg år-1 Helår Personal]), 4)
+				*/
+				```
+
+	annotation PBI_Id = 4b523e2646584265b5558929c0cfea9e
+
