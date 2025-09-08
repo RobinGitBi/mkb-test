@@ -1,0 +1,82 @@
+table ViewDimAnställdSCD2
+	lineageTag: 2d196271-cf75-4c65-8c63-81570bb03174
+
+	column 'Anställd SK'
+		dataType: int64
+		formatString: 0
+		lineageTag: aa1cbb40-ce5e-4155-8bf5-1afe9bf123f1
+		summarizeBy: none
+		sourceColumn: Anställd SK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsnummer
+		dataType: int64
+		formatString: 0
+		lineageTag: 12345b25-e595-403e-a949-d2920519bc43
+		summarizeBy: none
+		sourceColumn: Anställningsnummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: int64
+		formatString: 0
+		lineageTag: acfe514e-7541-485b-a044-a986919e09cc
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsform
+		dataType: string
+		lineageTag: 47f0efa2-f0d1-48ae-a1f3-2cd7725e20b5
+		summarizeBy: none
+		sourceColumn: Anställningsform
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tillträde datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8d372486-8068-4b1a-9abf-c0ecf5ecd25e
+		summarizeBy: none
+		sourceColumn: Tillträde datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ' Tillträde tom datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 09b68aa4-b797-4f22-acfd-23f07953c964
+		summarizeBy: none
+		sourceColumn: " Tillträde tom datum"
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Befattning
+		dataType: string
+		lineageTag: 75138818-20be-4ca4-8039-caf6cd8c7315
+		summarizeBy: none
+		sourceColumn: Befattning
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ViewDimAnställdSCD2 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimAnställdSCD2 = MKBBIDW{[Schema="dbo",Item="ViewDimAnställdSCD2"]}[Data]
+				in
+				    dbo_ViewDimAnställdSCD2
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
