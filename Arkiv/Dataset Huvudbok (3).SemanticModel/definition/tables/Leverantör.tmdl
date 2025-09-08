@@ -1,0 +1,79 @@
+table Leverantör
+	lineageTag: 29d5c3e1-bc5c-44d6-8962-49b7cc7bb96e
+
+	column LeverantörSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 838d8c72-5d74-4e6c-9910-d98cf1193cf7
+		summarizeBy: none
+		sourceColumn: LeverantörSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeverantörNr
+		dataType: string
+		lineageTag: 78a988b8-4631-44a7-9ce5-7d8541f9303d
+		summarizeBy: none
+		sourceColumn: LeverantörNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeverantörNamn
+		dataType: string
+		lineageTag: 1ef69610-a23b-401e-b6ee-a16e04f9adda
+		summarizeBy: none
+		sourceColumn: LeverantörNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a32eec45-2405-40de-8036-b97e3d7e4776
+		summarizeBy: none
+		sourceColumn: Created
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8942274f-0932-43a7-97e7-26139b22f538
+		summarizeBy: none
+		sourceColumn: Modified
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Leverantör
+		dataType: string
+		lineageTag: e63d6860-c24d-4f00-a775-1555ba30d43b
+		summarizeBy: none
+		sourceColumn: Leverantör
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Leverantör-7918fd0e-daa5-4e35-88a8-c3e75a48b5a5 = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimLeverantör = MKBBIDW{[Schema="dbo",Item="ViewDimLeverantör"]}[Data]
+				in
+				    dbo_ViewDimLeverantör
+
+	annotation PBI_ResultType = Table
+

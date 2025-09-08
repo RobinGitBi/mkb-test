@@ -1,0 +1,67 @@
+table 'Calculation Group resultaträkning'
+	lineageTag: a1949842-557d-4119-87ee-47badd84477e
+
+	calculationGroup
+		precedence: 1
+
+		calculationItem 'Belopp till resultaträkning' = ```
+				// Hämta indexordningen av aktuell rad i level 1
+				VAR CurrentRow = MAX( 'PNLStructure'[RowIndex] )
+				
+				// Tre alternativ som ska returneras, antingen:
+				// Amount = Summan på nuvarande rad
+				// Cumulative = Summan av ovanstående rader 
+				// GrossMargin = Marginal
+				VAR Amount = SELECTEDMEASURE()
+				VAR Cumulative = CALCULATE ( SELECTEDMEASURE(),
+				                    FILTER ( ALL ( 'PNLStructure' ), 'PNLStructure'[RowIndex]  < CurrentRow  && 'PNLStructure'[RowIndex]  >=1 ))
+				VAR GrossMargin = 
+				    DIVIDE( CALCULATE( SELECTEDMEASURE(), FILTER( ALL ( 'PNLStructure' ), 'PNLStructure'[RowIndex] < CurrentRow && 'PNLStructure'[RowIndex]  >=1 )),
+				            CALCULATE( SELECTEDMEASURE(), FILTER( ALL ( 'PNLStructure' ), 'PNLStructure'[RowIndex] = 1)),
+				            BLANK())
+				       
+				//Returna rätt variabel ovan beroende på typ av aktuell rad (beroende på typ av summa i Sum type)
+				VAR ValueForThisRow =
+				    SWITCH ( MAX('PNLStructure'[IsSubtotal]),
+				        0, Amount,
+				        1, Cumulative
+				        //"Margin", GrossMargin
+				        , Amount // Nödvändigt för att få med siffror som inte mappar mot någon av summatypen ovan, exempelvis om kontot saknas i kontoplanen
+				    )
+				
+				// Bearbeta resultatet med om det ska gå att expandera kolumnen eller inte
+				VAR Result =    
+				    IF (
+				        AND (
+				            MAX ( 'PNLStructure'[IsSubtotal]) = 1,
+				            ISFILTERED ( 'Konto'[RRLev1Namn] )
+				        ),
+				        BLANK (),
+				        ValueForThisRow
+				        )
+				
+				RETURN
+				    Result
+				```
+
+	column Name
+		dataType: string
+		lineageTag: 7c87ab02-6597-4aff-aaf0-dd09ff534968
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		lineageTag: cda38789-1c81-4b07-a1b4-2877706a67d7
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+

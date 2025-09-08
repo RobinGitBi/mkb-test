@@ -1,0 +1,82 @@
+table 'Calculation Group investeringar resultatposter'
+	lineageTag: e2fce887-ccce-449c-8fe6-86e63b271f4f
+
+	calculationGroup
+		precedence: 7
+
+		calculationItem 'Total personalkostnad' = ```
+				VAR Result =
+				
+				CALCULATE( SELECTEDMEASURE(), 
+				    Konto[RRLev1Namn] = "Utgifter/kostnader för personal", 
+				    Funktion[FunktionId] = "NYP"
+				)
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", BLANK(), Result)
+				```
+
+		calculationItem 'Avgår PL-aktivering' =
+				VAR Result = CALCULATE( [Utfall], Konto[KontoNr] = 3871)
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", BLANK(), Result)
+
+		calculationItem 'Övriga administrativa kostnader inkl juridiska kostnader/tvist samt projekt och fastighet + övr int' =
+				VAR Result = CALCULATE( SELECTEDMEASURE(), Konto[RRLev1Namn] = "Övriga externa rörelseutgifter/kostnader")
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", BLANK(), Result)
+
+		calculationItem Förgävesprojektering = ```
+				VAR Result = 
+				CALCULATE( [Utfall],
+				   Konto[KontoNr] = 4921 || Konto[KontoNr] = 6399 || Konto[KontoNr] = 7998,
+				   //Aktivitet[AktivitetId] IN {"8105", "8106"},
+				   //Projekt[ProjektEnhetId] = "NY",
+				   'Uppföljning'[UppföljningNr] = "907"
+				)
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", BLANK(), Result)
+				```
+
+		calculationItem 'Total resultatposter' = ```
+				VAR Result = 
+				CALCULATE( SELECTEDMEASURE(), 
+				    Konto[RRLev1Namn] = "Utgifter/kostnader för personal", 
+				    Funktion[FunktionId] = "NYP"
+				) +
+				
+				
+				CALCULATE( [Utfall], Konto[KontoNr] = 3871) +
+				
+				
+				CALCULATE( SELECTEDMEASURE(), Konto[RRLev1Namn] = "Övriga externa rörelseutgifter/kostnader") +
+				
+				CALCULATE( [Utfall],
+				   Konto[KontoNr] = 4921 || Konto[KontoNr] = 6399 || Konto[KontoNr] = 7998,
+				   //Aktivitet[AktivitetId] IN {"8105", "8106"},
+				   //Projekt[ProjektEnhetId] = "NY",
+				   'Uppföljning'[UppföljningNr] = "907"
+				) + 
+				
+				0
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", 1, Result)
+				```
+
+	column Name
+		dataType: string
+		lineageTag: 1080e1e1-d9d6-4605-8725-9d61ff18d030
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: 6b6b7959-8c8d-4b7e-a4d5-b3a036b0b689
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

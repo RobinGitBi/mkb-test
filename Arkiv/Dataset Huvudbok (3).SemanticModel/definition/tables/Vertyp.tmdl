@@ -1,0 +1,69 @@
+table Vertyp
+	lineageTag: ea451ffc-3f27-4c1b-9b51-0b7c9adda027
+
+	column VertypSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 4894921c-1709-4bf6-8b67-45a72e7c1c9c
+		summarizeBy: none
+		sourceColumn: VertypSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VerTypNr
+		dataType: string
+		lineageTag: 7f0aa5eb-9167-4a9c-8f56-f0fffe82ca82
+		summarizeBy: none
+		sourceColumn: VerTypNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VerTypNamn
+		dataType: string
+		lineageTag: b068e485-f7cd-4864-891e-654da95d1cb4
+		summarizeBy: none
+		sourceColumn: VerTypNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d0e35653-fb37-4835-81d0-210a133f5446
+		summarizeBy: none
+		sourceColumn: Created
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3d1899ce-90ce-4b88-a7c1-266f32d11021
+		summarizeBy: none
+		sourceColumn: Modified
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Vertyp-7a121843-07f9-4f58-83af-44f064230dfa = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimVertyp = MKBBIDW{[Schema="dbo",Item="ViewDimVertyp"]}[Data]
+				in
+				    dbo_ViewDimVertyp
+
+	annotation PBI_ResultType = Table
+

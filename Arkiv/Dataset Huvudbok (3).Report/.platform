@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Dataset Huvudbok (3)"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "786586ce-657d-4b22-a54d-1a34c2061a3d"
+  }
+}

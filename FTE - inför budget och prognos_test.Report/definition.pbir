@@ -1,0 +1,9 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definitionProperties/2.0.0/schema.json",
+  "version": "4.0",
+  "datasetReference": {
+    "byConnection": {
+      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/myorg/Dataset;initial catalog=DS_Huvudbok;access mode=readonly;integrated security=ClaimsToken;semanticmodelid=b05bdb04-e43e-4c23-a659-8000bb851e0a"
+    }
+  }
+}

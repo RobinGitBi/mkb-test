@@ -1,0 +1,175 @@
+table 'Beställarlistan for append'
+	lineageTag: 3330c539-d565-4256-9352-a69e0af97d8b
+
+	measure 'Value as a measure' = SUM('Beställarlistan for append'[Utfall])
+		lineageTag: 36a26c0a-9d77-41a8-8ba4-abd43a3f0e1b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TimeSK
+		dataType: string
+		lineageTag: b80cfc8d-2d8e-425a-97db-8d9f94844302
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Typ
+		dataType: string
+		lineageTag: 8289f5ec-08f0-486c-9e79-8959d26b6430
+		summarizeBy: none
+		sourceColumn: Typ
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b352fe0-1a07-47a6-b3b3-76a24c3dfe05
+		summarizeBy: sum
+		sourceColumn: KostnadsställeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektSK
+		dataType: int64
+		formatString: 0
+		lineageTag: b8f487f1-c4d7-406a-bbda-f20cd029947c
+		summarizeBy: sum
+		sourceColumn: ProjektSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column MotpartSK
+		dataType: int64
+		formatString: 0
+		lineageTag: cf99950c-243c-44c1-a6fc-a53d179ae04e
+		summarizeBy: sum
+		sourceColumn: MotpartSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column SegmentSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 853b2f34-2ac0-4ad5-ac1a-430a407b66fa
+		summarizeBy: sum
+		sourceColumn: SegmentSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column KontoSK
+		dataType: int64
+		formatString: 0
+		lineageTag: da51500b-7cab-460c-ba3f-24731354833b
+		summarizeBy: sum
+		sourceColumn: KontoSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column SlagSK
+		dataType: int64
+		formatString: 0
+		lineageTag: a76b26ca-3c9c-4b3c-ac21-d94b7c2509fa
+		summarizeBy: sum
+		sourceColumn: SlagSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column UppföljningSK
+		dataType: double
+		formatString: 0
+		lineageTag: aa9eec5d-6c68-4161-afeb-44c53a6094b3
+		summarizeBy: sum
+		sourceColumn: UppföljningSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Utfall
+		dataType: double
+		lineageTag: 20827653-b77d-40dd-83c9-a8d929f7fc8d
+		summarizeBy: sum
+		sourceColumn: Utfall
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FöretagSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 08a07e8a-d10d-4b0d-b51c-819cf3b1b718
+		summarizeBy: sum
+		sourceColumn: FöretagSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppf
+		dataType: string
+		lineageTag: 4a9b776e-1d56-49b9-a1b9-d37773a9af9c
+		summarizeBy: none
+		sourceColumn: Uppf
+
+		annotation SummarizationSetBy = Automatic
+
+	column VerText
+		dataType: string
+		lineageTag: 5a93068d-83de-4afa-a518-da395520783a
+		summarizeBy: none
+		sourceColumn: VerText
+
+		annotation SummarizationSetBy = Automatic
+
+	column utfall_match_dw
+		dataType: double
+		lineageTag: e740cfae-29fb-4c06-809c-2bf6df985354
+		summarizeBy: sum
+		sourceColumn: utfall_match_dw
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column utfall_match_dw_ubw
+		dataType: double
+		lineageTag: 37a2255c-b1b4-4cb2-9b59-47230be89a9c
+		summarizeBy: sum
+		sourceColumn: utfall_match_dw_ubw
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Belopp_orig
+		dataType: double
+		lineageTag: 93eada49-7f34-4d87-b411-ee906d96373e
+		summarizeBy: sum
+		sourceColumn: Belopp_orig
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Beställarlistan for append-ef3623de-6f5a-47fb-920a-eda9e888de71' = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactBeställarlistan = MKBBIDW{[Schema="dbo",Item="ViewFactBeställarlistan_Resultatuppföljning"]}[Data],
+				    #"Removed Columns1" = Table.RemoveColumns(dbo_ViewFactBeställarlistan,{"Uppf2", "Belopp PM5", "Utfall UBW", "Faktstatus UBW", "Kst"}),
+				    #"Lägg till Typ" = Table.AddColumn(#"Removed Columns1", "Typ", each "Beställarlistan"),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Lägg till Typ",{{"Klar Senast", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","-","",Replacer.ReplaceText,{"Klar Senast"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Replaced Value",{{"Klar Senast", "TimeSK"}, {"ÄrendeNummer", "VerText"}, {"Belopp", "Utfall"}}),
+				    #"Removed Columns FastighetSK verkar inte finnas i huvudboken" = Table.RemoveColumns(#"Renamed Columns",{"FastighetSK"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns FastighetSK verkar inte finnas i huvudboken",{"VerText", "TimeSK", "FöretagSK", "KontoSK", "KostnadsställeSK", "ProjektSK", "UppföljningSK", "Uppf", "SlagSK", "SegmentSK", "MotpartSK", "Utfall", "Typ"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Reordered Columns",null,-1,Replacer.ReplaceValue,{"UppföljningSK"})
+				in
+				    #"Replaced Value1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

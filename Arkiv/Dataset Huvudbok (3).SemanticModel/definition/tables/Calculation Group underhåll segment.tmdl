@@ -1,0 +1,322 @@
+table 'Calculation Group underhåll segment'
+	lineageTag: 16aefa6b-f69c-4cda-92ac-b8185e039a73
+
+	calculationGroup
+		precedence: 6
+
+		calculationItem 'Kst 2998' =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Konto'[Bas2998] <> 2,
+				    'Uppföljning'[Bas2998] = 1,
+				    'Motpart'[Bas2998] <> 2,
+				    'Kostnadsställe'[KostnadsställeNr] = "2998"
+				  )
+
+		calculationItem Bostadsförvaltning = ```
+				CALCULATE( SELECTEDMEASURE(),
+				    'Kostnadsställe'[FC] IN {"Bostadsförvaltning (totalt) [1907]"},
+				    NOT LEFT('Kostnadsställe'[OmrådeNamn], 9) = "Operativt",
+				    
+				    'Konto'[BasFörvaltn] <> 2,
+				    'Kostnadsställe'[BasFörvaltn] = 1,
+				    'Motpart'[BasFörvaltn] = 1,
+				    'Projekt'[BasFörvaltn] = 1,
+				    'Uppföljning'[BasFörvaltn] = 1,
+				    'Segment'[SegmentNr] = "110"
+				   
+				    )
+				```
+
+		calculationItem Lokal =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Konto'[BasLokal] <> 2,
+				    'Kostnadsställe'[BasLokal] = 1,
+				    'Motpart'[BasLokal] <> 2,
+				    'Projekt'[BasLokal] = 1,
+				    'Segment'[BasLokal] = 1,
+				    'Uppföljning'[BasLokal] = 1
+				    )
+
+		calculationItem Student = ```
+				CALCULATE( SELECTEDMEASURE(),
+				    'Konto'[BasStudent] <> 2,
+				    'Kostnadsställe'[BasStudent] = 1,
+				    'Motpart'[BasStudent] <> 2,
+				    'Projekt'[BasStudent] = 1,
+				    'Segment'[BasStudent] = 1,
+				    'Uppföljning'[BasStudent] = 1,
+				    'Kostnadsställe'[BasStudent] <> 2
+				    )
+				
+				
+				```
+
+		calculationItem Total = ```
+				// Säkert jättedålig lösning men blev så för att räkna ut "upparbetsgrad" när det ska divideras med totalar. Summorna i sig fungerar bra. Huvudproblemet är egentligen att dessa "underhåll segment" inte finns tabell att slica med i datalagret...
+				
+				VAR Kst2998 =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Konto'[Bas2998] <> 2,
+				    'Uppföljning'[Bas2998] = 1,
+				    'Motpart'[Bas2998] <> 2,
+				    'Kostnadsställe'[KostnadsställeNr] = "2998"
+				  )
+				
+				
+				VAR Bostads =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Kostnadsställe'[FC] IN {"Bostadsförvaltning (totalt) [1907]"},
+				    NOT LEFT('Kostnadsställe'[OmrådeNamn], 9) = "Operativt",
+				    
+				    'Konto'[BasFörvaltn] <> 2,
+				    'Kostnadsställe'[BasFörvaltn] = 1,
+				    'Motpart'[BasFörvaltn] = 1,
+				    'Projekt'[BasFörvaltn] = 1,
+				    'Uppföljning'[BasFörvaltn] = 1,
+				    'Segment'[SegmentNr] = "110"
+				    )
+				   
+				
+				VAR Lokal =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Konto'[BasLokal] <> 2,
+				    'Kostnadsställe'[BasLokal] = 1,
+				    'Motpart'[BasLokal] <> 2,
+				    'Projekt'[BasLokal] = 1,
+				    'Segment'[BasLokal] = 1,
+				    'Uppföljning'[BasLokal] = 1
+				    )
+				
+				VAR Student =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Konto'[BasStudent] <> 2,
+				    'Kostnadsställe'[BasStudent] = 1,
+				    'Motpart'[BasStudent] <> 2,
+				    'Projekt'[BasStudent] = 1,
+				    'Segment'[BasStudent] = 1,
+				    'Uppföljning'[BasStudent] = 1,
+				    'Kostnadsställe'[BasStudent] <> 2
+				    )
+				
+				    
+				VAR TotaltUtfall =
+				
+				    CALCULATE( [Utfall],
+				        'Konto'[Bas2998] <> 2,
+				        'Uppföljning'[Bas2998] = 1,
+				        'Motpart'[Bas2998] <> 2,
+				        'Kostnadsställe'[KostnadsställeNr] = "2998"
+				      )
+				
+				
+				+
+				    CALCULATE( [Utfall],
+				        'Kostnadsställe'[FC] IN {"Bostadsförvaltning (totalt) [1907]"},
+				        NOT LEFT('Kostnadsställe'[OmrådeNamn], 9) = "Operativt",
+				        
+				        'Konto'[BasFörvaltn] <> 2,
+				        'Kostnadsställe'[BasFörvaltn] = 1,
+				        'Motpart'[BasFörvaltn] = 1,
+				        'Projekt'[BasFörvaltn] = 1,
+				        'Uppföljning'[BasFörvaltn] = 1,
+				        'Segment'[SegmentNr] = "110"
+				        )
+				       
+				
+				+
+				    CALCULATE( [Utfall],
+				        'Konto'[BasLokal] <> 2,
+				        'Kostnadsställe'[BasLokal] = 1,
+				        'Motpart'[BasLokal] <> 2,
+				        'Projekt'[BasLokal] = 1,
+				        'Segment'[BasLokal] = 1,
+				        'Uppföljning'[BasLokal] = 1
+				        )
+				
+				+
+				    CALCULATE( [Utfall],
+				        'Konto'[BasStudent] <> 2,
+				        'Kostnadsställe'[BasStudent] = 1,
+				        'Motpart'[BasStudent] <> 2,
+				        'Projekt'[BasStudent] = 1,
+				        'Segment'[BasStudent] = 1,
+				        'Uppföljning'[BasStudent] = 1,
+				        'Kostnadsställe'[BasStudent] <> 2
+				        )
+				
+				
+				VAR TotaltT0 =
+				CALCULATE( [T0 helår],
+				        'Konto'[Bas2998] <> 2,
+				        'Uppföljning'[Bas2998] = 1,
+				        'Motpart'[Bas2998] <> 2,
+				        'Kostnadsställe'[KostnadsställeNr] = "2998"
+				      )
+				
+				
+				+
+				    CALCULATE( [T0 helår],
+				        'Kostnadsställe'[FC] IN {"Bostadsförvaltning (totalt) [1907]"},
+				        NOT LEFT('Kostnadsställe'[OmrådeNamn], 9) = "Operativt",
+				        
+				        'Konto'[BasFörvaltn] <> 2,
+				        'Kostnadsställe'[BasFörvaltn] = 1,
+				        'Motpart'[BasFörvaltn] = 1,
+				        'Projekt'[BasFörvaltn] = 1,
+				        'Uppföljning'[BasFörvaltn] = 1,
+				        'Segment'[SegmentNr] = "110"
+				        )
+				       
+				
+				+
+				CALCULATE( [T0 helår],
+				        'Konto'[BasLokal] <> 2,
+				        'Kostnadsställe'[BasLokal] = 1,
+				        'Motpart'[BasLokal] <> 2,
+				        'Projekt'[BasLokal] = 1,
+				        'Segment'[BasLokal] = 1,
+				        'Uppföljning'[BasLokal] = 1
+				        )
+				
+				+
+				CALCULATE( [T0 helår],
+				        'Konto'[BasStudent] <> 2,
+				        'Kostnadsställe'[BasStudent] = 1,
+				        'Motpart'[BasStudent] <> 2,
+				        'Projekt'[BasStudent] = 1,
+				        'Segment'[BasStudent] = 1,
+				        'Uppföljning'[BasStudent] = 1,
+				        'Kostnadsställe'[BasStudent] <> 2
+				        )
+				    
+				
+				        
+				VAR TotaltT1 =
+				CALCULATE( [T1 helår],
+				        'Konto'[Bas2998] <> 2,
+				        'Uppföljning'[Bas2998] = 1,
+				        'Motpart'[Bas2998] <> 2,
+				        'Kostnadsställe'[KostnadsställeNr] = "2998"
+				      )
+				
+				
+				+
+				    CALCULATE( [T1 helår],
+				        'Kostnadsställe'[FC] IN {"Bostadsförvaltning (totalt) [1907]"},
+				        NOT LEFT('Kostnadsställe'[OmrådeNamn], 9) = "Operativt",
+				        
+				        'Konto'[BasFörvaltn] <> 2,
+				        'Kostnadsställe'[BasFörvaltn] = 1,
+				        'Motpart'[BasFörvaltn] = 1,
+				        'Projekt'[BasFörvaltn] = 1,
+				        'Uppföljning'[BasFörvaltn] = 1,
+				        'Segment'[SegmentNr] = "110"
+				        )
+				       
+				
+				+
+				CALCULATE( [T1 helår],
+				        'Konto'[BasLokal] <> 2,
+				        'Kostnadsställe'[BasLokal] = 1,
+				        'Motpart'[BasLokal] <> 2,
+				        'Projekt'[BasLokal] = 1,
+				        'Segment'[BasLokal] = 1,
+				        'Uppföljning'[BasLokal] = 1
+				        )
+				
+				+
+				CALCULATE( [T1 helår],
+				        'Konto'[BasStudent] <> 2,
+				        'Kostnadsställe'[BasStudent] = 1,
+				        'Motpart'[BasStudent] <> 2,
+				        'Projekt'[BasStudent] = 1,
+				        'Segment'[BasStudent] = 1,
+				        'Uppföljning'[BasStudent] = 1,
+				        'Kostnadsställe'[BasStudent] <> 2
+				        )
+				    
+				
+				VAR TotaltT2 =
+				CALCULATE( [T2 helår],
+				        'Konto'[Bas2998] <> 2,
+				        'Uppföljning'[Bas2998] = 1,
+				        'Motpart'[Bas2998] <> 2,
+				        'Kostnadsställe'[KostnadsställeNr] = "2998"
+				      )
+				
+				
+				+
+				    CALCULATE( [T2 helår],
+				        'Kostnadsställe'[FC] IN {"Bostadsförvaltning (totalt) [1907]"},
+				        NOT LEFT('Kostnadsställe'[OmrådeNamn], 9) = "Operativt",
+				        
+				        'Konto'[BasFörvaltn] <> 2,
+				        'Kostnadsställe'[BasFörvaltn] = 1,
+				        'Motpart'[BasFörvaltn] = 1,
+				        'Projekt'[BasFörvaltn] = 1,
+				        'Uppföljning'[BasFörvaltn] = 1,
+				        'Segment'[SegmentNr] = "110"
+				        )
+				       
+				
+				+
+				CALCULATE( [T2 helår],
+				        'Konto'[BasLokal] <> 2,
+				        'Kostnadsställe'[BasLokal] = 1,
+				        'Motpart'[BasLokal] <> 2,
+				        'Projekt'[BasLokal] = 1,
+				        'Segment'[BasLokal] = 1,
+				        'Uppföljning'[BasLokal] = 1
+				        )
+				
+				+
+				CALCULATE( [T2 helår],
+				        'Konto'[BasStudent] <> 2,
+				        'Kostnadsställe'[BasStudent] = 1,
+				        'Motpart'[BasStudent] <> 2,
+				        'Projekt'[BasStudent] = 1,
+				        'Segment'[BasStudent] = 1,
+				        'Uppföljning'[BasStudent] = 1,
+				        'Kostnadsställe'[BasStudent] <> 2
+				        )
+				    
+				        
+				
+				VAR SummaAlla = Kst2998 + Bostads + Lokal + Student
+				
+				
+				VAR Result = 
+				IF( CONTAINSSTRING( SELECTEDMEASURENAME(), "grad T0"),
+				        DIVIDE(TotaltUtfall, TotaltT0, BLANK()),
+				        IF( CONTAINSSTRING( SELECTEDMEASURENAME(), "grad T1"),
+				            DIVIDE(TotaltUtfall, TotaltT1, BLANK()),
+				            IF( CONTAINSSTRING( SELECTEDMEASURENAME(), "grad T2"),
+				                DIVIDE(TotaltUtfall, TotaltT2, BLANK()),
+				                SummaAlla
+				               )
+				           )
+				    )
+				
+				        
+				RETURN Result
+				    
+				```
+
+	column Name
+		dataType: string
+		lineageTag: 7d9a85e7-3e49-42eb-af87-699b2898ac62
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: c943e3fa-b11c-4e7a-8c99-a5fb37792374
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

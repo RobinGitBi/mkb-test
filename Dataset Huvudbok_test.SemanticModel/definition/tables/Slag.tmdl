@@ -1,0 +1,84 @@
+table Slag
+	lineageTag: 23304b83-5d05-4c6c-8507-b8e471166734
+
+	column SlagSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 0fac5f06-530f-4eb3-8b74-223c9f339ab0
+		summarizeBy: none
+		sourceColumn: SlagSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SlagNr
+		dataType: string
+		lineageTag: 63e32890-bbbf-46d0-a9ea-d9156123d197
+		summarizeBy: none
+		sourceColumn: SlagNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SlagNamn
+		dataType: string
+		lineageTag: 849712d0-4a37-4c44-aaf2-ec3b7df1cc38
+		summarizeBy: none
+		sourceColumn: SlagNamn
+		sortByColumn: SlagNr
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b26c5bf7-fcaf-49e2-b91a-72d146a740c0
+		summarizeBy: none
+		sourceColumn: Created
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5f4f49c1-89cd-45ec-aee2-8ac7a80e257f
+		summarizeBy: none
+		sourceColumn: Modified
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Slag
+		dataType: string
+		lineageTag: 985d6e91-436d-4b8c-a1dd-63ce6b5e955e
+		summarizeBy: none
+		sourceColumn: Slag
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Slag-0c8746cb-c791-4159-925c-cff88f1f1044 = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimSlag = MKBBIDW{[Schema="dbo",Item="ViewDimSlag"]}[Data]
+				in
+				    dbo_ViewDimSlag
+
+	annotation PBI_ResultType = Table
+

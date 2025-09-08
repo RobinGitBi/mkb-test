@@ -1,0 +1,103 @@
+table 'Calculation Group segment'
+	lineageTag: 6654a3de-f0aa-4810-bc5b-8399fb4bfc5a
+
+	calculationGroup
+		precedence: 9
+
+		calculationItem Resultaträkning =
+				CALCULATE(
+				    SELECTEDMEASURE(),
+				    'PNLStructure'[RowIndex] < 7 -- Endast ner till TB2 Rörelseresultat
+				)
+
+		calculationItem 'Total förvaltning' =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Konto'[BasFörvaltn] <> 2,
+				    'Kostnadsställe'[BasFörvaltn] = 1,
+				    'Uppföljning'[Uppföljning2Nr] <> "917",
+				    'Projekt'[BasFörvaltn] = 1,
+				    'Uppföljning'[BasFörvaltn] = 1,
+				    'Konto'[KontoNr] <> 3541,
+				    'Konto'[KontoNr] <> 4798,
+				    'Motpart'[MotpartNr] <> 6009,
+				    'Motpart'[MotpartNr] <> 6010,
+				    'Motpart'[MotpartNr] <> 999,
+				    'Motpart'[MotpartNr] <> 9999,
+				    'PNLStructure'[RowIndex] < 7,
+				    'PNLStructure'[RowIndex] <> 5 -- Endast ner till TB2 Rörelseresultat
+				    )
+
+		calculationItem 'Kst 2998' =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Konto'[Bas2998] <> 2,
+				    'Uppföljning'[Bas2998] = 1,
+				    'Uppföljning'[Uppföljning2Nr] <> "917",
+				    'Motpart'[Bas2998] <> 2,
+				    'Kostnadsställe'[KostnadsställeNr] = "2998",
+				    'PNLStructure'[RowIndex] < 5
+				  )
+
+		calculationItem 'Total förvaltning ext' = ```
+				CALCULATE( SELECTEDMEASURE(),
+				    'Konto'[BasFörvaltnExt] <> 2,
+				    'Kostnadsställe'[BasFörvaltnExt] = 1,
+				    'Uppföljning'[BasFörvaltnExt] = 1,
+				    'Projekt'[BasFörvaltnExt] = 1,
+				    'Motpart'[BasFörvaltnExt] = 1
+				    
+				  )
+				```
+
+		calculationItem AU =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Konto'[BasAUNy] <> 2,
+				    'Uppföljning'[BasAUNy] = 1,
+				    'Uppföljning'[Uppföljning2Nr] <> "917",
+				    'Kostnadsställe'[KostnadsställeNr] IN {"2990"},
+				    'Konto'[KontoNr] < 7700,
+				    'PNLStructure'[RowIndex] < 7 -- Endast till TB2, inte TB3
+				   )
+
+		calculationItem Drift =
+				CALCULATE( SELECTEDMEASURE(),
+				    'Uppföljning'[BasDrift] = 1,
+				    'Uppföljning'[Uppföljning2Nr] <> "917",
+				    LEFT( 'Kostnadsställe'[KostnadsställeNr], 1 ) = "2"
+				   )
+
+		calculationItem LTH =
+				CALCULATE( SELECTEDMEASURE(),
+				
+				    'Konto'[Konto2Nr] = 4513
+				
+				
+				  )
+
+		calculationItem 'Adm Kst' = ```
+				CALCULATE( SELECTEDMEASURE(),
+				   
+				    'Kostnadsställe'[AdmOpId] = "10",
+				    'Uppföljning'[Uppföljning2Nr] <> "917",
+				    LEFT( 'Kostnadsställe'[Kostnadsställe], 1) = "1"
+				    -- , 'Kostnadsställe'[OmrådeNamn] = "City Fastighetsområde"
+				  )
+				```
+
+	column Name
+		dataType: string
+		lineageTag: 4875081d-5342-443c-8bc1-04e714f31b61
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: 19cd5b2b-8cc3-48cd-88d8-96c7caf9d08b
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

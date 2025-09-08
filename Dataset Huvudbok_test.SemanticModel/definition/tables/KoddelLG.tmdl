@@ -1,0 +1,28 @@
+table KoddelLG
+	lineageTag: 7f913346-3ee3-481c-9415-6adb154cf687
+
+	column KoddelLG
+		dataType: string
+		lineageTag: 50ac8dff-7e21-45b7-a895-015cd1734bf8
+		summarizeBy: none
+		sourceColumn: KoddelLG
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition KoddelLG-c21321fb-8e34-4604-ab82-1e617d14c1bb = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimKoddelLG = MKBBIDW{[Schema="dbo",Item="ViewDimKoddelLG"]}[Data]
+				in
+				    dbo_ViewDimKoddelLG
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

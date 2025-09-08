@@ -1,0 +1,450 @@
+table Fastighet
+	lineageTag: fb36a4eb-d8bc-43d8-be30-5a7c16c80a95
+
+	column FastighetSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ddc0d3c-cf3b-4a6a-aa28-0ac4640a6ecc
+		summarizeBy: none
+		sourceColumn: FastighetSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetNummer
+		dataType: string
+		lineageTag: 34c965f3-a67c-42d1-8365-1f5b7c402615
+		summarizeBy: none
+		sourceColumn: FastighetNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fastighet
+		dataType: string
+		lineageTag: 2d9ddc7a-09dd-4dfd-bde1-e776d3189ae6
+		summarizeBy: none
+		sourceColumn: Fastighet
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fastighet2
+		dataType: string
+		lineageTag: a19f46d8-6d98-42c5-aebd-3f6ed0cf00a1
+		summarizeBy: none
+		sourceColumn: Fastighet2
+
+		annotation SummarizationSetBy = Automatic
+
+	column OfficelltNr
+		dataType: string
+		lineageTag: a7f50768-4a54-4631-acc4-03bf50d8e6b5
+		summarizeBy: none
+		sourceColumn: OfficelltNr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fa_Adress
+		dataType: string
+		lineageTag: 775b2433-397a-4e2d-ac2e-34714305dac3
+		summarizeBy: none
+		sourceColumn: Fa_Adress
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fa_Postnummer
+		dataType: string
+		lineageTag: dee27a1a-8827-4af7-af0c-e955556e1ce9
+		summarizeBy: none
+		sourceColumn: Fa_Postnummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fa_PostOrt
+		dataType: string
+		lineageTag: 5acc61df-a332-4c81-bcbb-ce6041140240
+		summarizeBy: none
+		sourceColumn: Fa_PostOrt
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		lineageTag: b150aefa-1cb8-42bb-9a6a-d2afa3a8eb94
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: c4118536-6f11-4ddb-b999-2a6dbc7707b4
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GodkändaKoordinater
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 098f27af-6b2b-422b-880d-2b20ddaed06b
+		summarizeBy: none
+		sourceColumn: GodkändaKoordinater
+
+		annotation SummarizationSetBy = Automatic
+
+	column Koordinatregel
+		dataType: string
+		lineageTag: 32176012-1d0a-486f-a169-690727531b70
+		summarizeBy: none
+		sourceColumn: Koordinatregel
+
+		annotation SummarizationSetBy = Automatic
+
+	column BoSocialtHandläggningsOmråde
+		dataType: string
+		lineageTag: c1838930-a2d2-4e63-8225-bcbe73bd86ec
+		summarizeBy: none
+		sourceColumn: BoSocialtHandläggningsOmråde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bosocialtutvecklingsområde
+		dataType: string
+		lineageTag: e97d163f-d4bd-4c26-b454-9e661dea14fc
+		summarizeBy: none
+		sourceColumn: Bosocialtutvecklingsområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column BostadsområdeNummer
+		dataType: string
+		lineageTag: 601f8fd2-2cc8-431d-a7e8-901eb1e2c7a0
+		summarizeBy: none
+		sourceColumn: BostadsområdeNummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bostadsområde
+		dataType: string
+		lineageTag: 8c47b358-929f-4343-8e98-df70d2d18b10
+		summarizeBy: none
+		sourceColumn: Bostadsområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Delområde
+		dataType: string
+		lineageTag: d6443eee-6407-4e4a-b88c-5588b5eecba0
+		summarizeBy: none
+		sourceColumn: Delområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column FCområde
+		dataType: string
+		lineageTag: d9f93518-3d4e-463e-8a44-077016952a93
+		summarizeBy: none
+		sourceColumn: FCområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Förvaltningsområde
+		dataType: string
+		lineageTag: 06fb5822-92b5-491d-8157-44945d84beb7
+		summarizeBy: none
+		sourceColumn: Förvaltningsområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Husvärdsområde
+		dataType: string
+		lineageTag: 03a9f665-b62b-4efe-b0fb-b0d618589c30
+		summarizeBy: none
+		sourceColumn: Husvärdsområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Hyresrådgivare
+		dataType: string
+		lineageTag: ac021633-8061-46ae-9e6d-b855608dabee
+		summarizeBy: none
+		sourceColumn: Hyresrådgivare
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lägenhetsutvecklingsområde
+		dataType: string
+		lineageTag: e960d18a-32b4-4f47-b249-b608a8703e0d
+		summarizeBy: none
+		sourceColumn: Lägenhetsutvecklingsområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lokalförvalningsområde
+		dataType: string
+		lineageTag: 0c59de55-e75f-40e4-a59b-0c049b2c1d81
+		summarizeBy: none
+		sourceColumn: Lokalförvalningsområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column MKBNetOmråde
+		dataType: string
+		lineageTag: b040fbbe-7af1-4d2d-8ed1-f5cdc4b46af7
+		summarizeBy: none
+		sourceColumn: MKBNetOmråde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ocområde
+		dataType: string
+		lineageTag: c1798c81-32ce-416d-b0cc-75bdad3956c1
+		summarizeBy: none
+		sourceColumn: Ocområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dotterbolag
+		dataType: string
+		lineageTag: 80b91e15-76e1-4da7-9655-250084a493ad
+		summarizeBy: none
+		sourceColumn: Dotterbolag
+
+		annotation SummarizationSetBy = Automatic
+
+	column DotterbolagNr
+		dataType: string
+		lineageTag: e8afac75-91c7-4438-af4a-c472c39c4d4f
+		summarizeBy: none
+		sourceColumn: DotterbolagNr
+
+		annotation SummarizationSetBy = Automatic
+
+	column DotterbolagOrgNr
+		dataType: string
+		lineageTag: 26658770-b9d2-4ba0-b26e-1b886e4e079c
+		summarizeBy: none
+		sourceColumn: DotterbolagOrgNr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bolag
+		dataType: string
+		lineageTag: 902f628b-b413-4303-a4aa-48ace7d6ae3c
+		summarizeBy: none
+		sourceColumn: Bolag
+
+		annotation SummarizationSetBy = Automatic
+
+	column VärdeOmråde
+		dataType: string
+		lineageTag: a26c33f3-e56a-4bf3-97fb-68ba4031b4dd
+		summarizeBy: none
+		sourceColumn: VärdeOmråde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kommun
+		dataType: string
+		lineageTag: 46a7fbb4-6e0b-4a0f-ab57-6e99d48d731c
+		summarizeBy: none
+		sourceColumn: Kommun
+
+		annotation SummarizationSetBy = Automatic
+
+	column VisaExternWeb
+		dataType: string
+		lineageTag: efcae5af-af54-44dc-bd39-41f694dd16e6
+		summarizeBy: none
+		sourceColumn: VisaExternWeb
+
+		annotation SummarizationSetBy = Automatic
+
+	column InternetMedIPTV
+		dataType: string
+		lineageTag: 6de6490d-49dd-4d35-9e91-47dceacb3d76
+		summarizeBy: none
+		sourceColumn: InternetMedIPTV
+
+		annotation SummarizationSetBy = Automatic
+
+	column HyresHöjningInfo
+		dataType: string
+		lineageTag: 626d9032-6f52-4468-9c7c-66306c8d669b
+		summarizeBy: none
+		sourceColumn: HyresHöjningInfo
+
+		annotation SummarizationSetBy = Automatic
+
+	column KabelTVConnect
+		dataType: string
+		lineageTag: 9cdb86a1-9ef6-4e25-afea-cef97fe88177
+		summarizeBy: none
+		sourceColumn: KabelTVConnect
+
+		annotation SummarizationSetBy = Automatic
+
+	column KabelTVTelenor
+		dataType: string
+		lineageTag: ed71bf9c-1b9d-4750-bf20-959289d5cfe1
+		summarizeBy: none
+		sourceColumn: KabelTVTelenor
+
+		annotation SummarizationSetBy = Automatic
+
+	column KabelTVComHem
+		dataType: string
+		lineageTag: 3ff05131-32de-4c00-9636-a1799d54efcd
+		summarizeBy: none
+		sourceColumn: KabelTVComHem
+
+		annotation SummarizationSetBy = Automatic
+
+	column PCBStatus
+		dataType: string
+		lineageTag: e8c2c3f4-7f90-43ba-8a6e-7ff4290f3d2c
+		summarizeBy: none
+		sourceColumn: PCBStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column KabelTVTeliaSonera
+		dataType: string
+		lineageTag: 2ee7bb35-c262-4589-96d5-859fa78716a4
+		summarizeBy: none
+		sourceColumn: KabelTVTeliaSonera
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fastighetskategori
+		dataType: string
+		lineageTag: d7d154d1-74e7-4612-866a-0231d1774c00
+		summarizeBy: none
+		sourceColumn: Fastighetskategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: string
+		lineageTag: 1c4af409-d10e-4914-85ba-8d801159ae5d
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cykelpool
+		dataType: string
+		lineageTag: c7b07af6-482a-4b14-851a-1e0669c4e02e
+		summarizeBy: none
+		sourceColumn: Cykelpool
+
+		annotation SummarizationSetBy = Automatic
+
+	column KundApp
+		dataType: string
+		lineageTag: 75052386-5f39-4ffd-a914-0bcc3026f839
+		summarizeBy: none
+		sourceColumn: KundApp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Samtaxering
+		dataType: string
+		lineageTag: 1942d59a-a0be-49f8-a526-4c9e021eb3f8
+		summarizeBy: none
+		sourceColumn: Samtaxering
+
+		annotation SummarizationSetBy = Automatic
+
+	column Taxeringsvärde
+		dataType: int64
+		formatString: 0
+		lineageTag: 19934816-13b3-491b-983a-c1119bbd4b86
+		summarizeBy: none
+		sourceColumn: Taxeringsvärde
+
+		annotation SummarizationSetBy = Automatic
+
+	column FlaggaÄgare
+		dataType: string
+		lineageTag: cec6ba65-abf6-4fee-b626-3d29d220a63c
+		summarizeBy: none
+		sourceColumn: FlaggaÄgare
+
+		annotation SummarizationSetBy = Automatic
+
+	column UBWFöretagsNr
+		dataType: int64
+		formatString: 0
+		lineageTag: e2c897cb-a31c-4cac-8a1f-53e9a410b13c
+		summarizeBy: none
+		sourceColumn: UBWFöretagsNr
+
+		annotation SummarizationSetBy = Automatic
+
+	column AktuellHusvärd
+		dataType: string
+		lineageTag: e3e910cd-86dd-4b92-b3a6-4ffa4f152922
+		summarizeBy: none
+		sourceColumn: AktuellHusvärd
+
+		annotation SummarizationSetBy = Automatic
+
+	column Driftanalytikerområde
+		dataType: string
+		lineageTag: 06c0e179-67c2-4cbf-9853-608eb5bf24f5
+		summarizeBy: none
+		sourceColumn: Driftanalytikerområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fastighetsförvaltarområde
+		dataType: string
+		lineageTag: b2b9763a-1718-4cf0-920b-f74d9790ae93
+		summarizeBy: none
+		sourceColumn: Fastighetsförvaltarområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Inomhusmiljöteknikerområde
+		dataType: string
+		lineageTag: 4a65c139-cb3b-46d2-ba67-24cfdf4fbba2
+		summarizeBy: none
+		sourceColumn: Inomhusmiljöteknikerområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kundförvaltarområde
+		dataType: string
+		lineageTag: 45c5e453-22d4-46ca-b9f0-664788d023a1
+		summarizeBy: none
+		sourceColumn: Kundförvaltarområde
+
+		annotation SummarizationSetBy = Automatic
+
+	column AktuellRad
+		dataType: int64
+		formatString: 0
+		lineageTag: 46a13929-a339-4007-b4a2-bdc1874ee975
+		summarizeBy: none
+		sourceColumn: AktuellRad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fastighet = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimFunktion = MKBBIDW{[Schema="dbo",Item="ViewDimFastighet"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dbo_ViewDimFunktion, each ([AktuellRad] = 1))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+

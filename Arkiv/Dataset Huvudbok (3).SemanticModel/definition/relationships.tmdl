@@ -1,0 +1,102 @@
+relationship 038f1867-b0cb-4b76-9f2d-e8717a5bfbe3
+	fromColumn: Huvudbok.SlagSK
+	toColumn: Slag.SlagSK
+
+relationship a89bf4d5-5be6-494f-adf7-4bb146a617cd
+	fromColumn: Huvudbok.MomsKodSK
+	toColumn: Momskod.MomskodSK
+
+relationship 4ee07445-bdcd-4590-a8e1-e5853a4b26b9
+	fromColumn: Huvudbok.MomssystemSK
+	toColumn: Momssystem.MomssystemSK
+
+relationship d9dedd19-2b0b-4a7f-b81a-7164d59a7072
+	fromColumn: Huvudbok.FunktionSK
+	toColumn: Funktion.FunktionSK
+
+relationship 0651dce3-89d0-42b8-ad7b-9260af734fee
+	fromColumn: Huvudbok.VertypSK
+	toColumn: Vertyp.VertypSK
+
+relationship 03be4f96-2d4a-45f4-abb4-16b329c5eb52
+	fromColumn: Huvudbok.AktivitetSK
+	toColumn: Aktivitet.AktivitetSK
+
+relationship 04da29c3-db23-44aa-9abe-a9fb8ac371b0
+	fromColumn: Huvudbok.LeverantörSK
+	toColumn: Leverantör.LeverantörSK
+
+relationship 478870cd-5de4-475a-b4d3-79fbb0eff0d0
+	fromColumn: Huvudbok.SegmentSK
+	toColumn: Segment.SegmentSK
+
+relationship 49e6874a-8ed4-45d4-a6e8-7f3aff8ed4d1
+	fromColumn: Huvudbok.MotpartSK
+	toColumn: Motpart.MotpartSK
+
+relationship 6d844161-a0f9-42dc-8381-a699373a029d
+	fromColumn: Huvudbok.UppföljningSK
+	toColumn: Uppföljning.UppföljningSK
+
+relationship cec1d5d7-931d-4177-aa9d-cf148c4ee613
+	fromColumn: Huvudbok.ProjektSK
+	toColumn: Projekt.ProjektSK
+
+relationship f1266bc7-f586-4b90-afdb-7593d6e136ab
+	fromColumn: Konto.PNLGroup
+	toColumn: PNLStructure.PNLDescr
+
+relationship 48b64e22-8cbb-4cff-91fb-c8165ffdd845
+	fromColumn: 'Yta per segment och kostnadsställe'.SegmentSK
+	toColumn: Segment.SegmentSK
+
+relationship 06c84a5c-6b19-4591-a662-c82ab96438c4
+	fromColumn: 'Yta per segment och kostnadsställe'.KostnadsställeSK
+	toColumn: Kostnadsställe.KostnadsställeSK
+
+relationship a20b5cde-97fa-49c9-9f8d-621278638665
+	fromColumn: Huvudbok.KundSK
+	toColumn: Kund.KundSK
+
+relationship 127c6efe-538c-4396-8a35-bcb7f02081ef
+	fromColumn: Huvudbok.KostnadsställeSK
+	toColumn: Kostnadsställe.KostnadsställeSK
+
+relationship 3e1a18c1-6c16-4c6d-8778-5ae1b58d99e7
+	fromColumn: Huvudbok.FöretagSK
+	toColumn: Företag.FöretagSK
+
+relationship ca348adf-5e77-41ba-9d70-0242eeca74a0
+	fromColumn: Huvudbok.KontoSK
+	toColumn: Konto.KontoSK
+
+relationship 9c4ff238-f81b-4f19-989a-44305c89c902
+	fromColumn: Huvudbok.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship 90d94bb5-673c-469a-b1b0-cbc1f63cd89c
+	fromColumn: 'Yta per segment och kostnadsställe'.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship 69494896-4e2c-49a2-9865-3fe5731987d8
+	fromColumn: 'Välj mätvärde Finans Measures'.Jämförelsemätvärde
+	toColumn: 'Välj jämförelsemätvärde Finans'.'Välj jämförelsemätvärde'
+
+relationship 157e9fb3-a02b-4a56-90de-da74fcc565c7
+	fromColumn: 'Välj mätvärde Jämförelsemätvärde1'.Standard
+	toColumn: 'Välj mätvärde Jämförelsemätvärde standardknapp'.Standard
+
+relationship f3873f51-d44b-4b31-b24e-a4fa5311dab2
+	fromColumn: 'Välj mätvärde Jämförelsemätvärde2'.Standard
+	toColumn: 'Välj mätvärde Jämförelsemätvärde standardknapp'.Standard
+
+relationship f0c74c5b-d048-4a50-9fd7-18d58d93bbc0
+	fromColumn: Kostnadsställe.Fastighetsnummer
+	toColumn: Fastighet.FastighetNummer
+
+relationship 3527a4b0-0eee-c184-fcad-b6f82877defb
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: Huvudbok.VerText
+	toColumn: Beställarlistan.ÄrendeNummer
+

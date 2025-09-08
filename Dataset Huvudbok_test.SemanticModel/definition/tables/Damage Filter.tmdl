@@ -1,0 +1,30 @@
+table 'Damage Filter'
+	lineageTag: 185a097a-0dce-409e-8ec6-4167fd2a4969
+
+	column Filter
+		lineageTag: 2eee5990-4db8-47e7-809d-48eb9d6d1d47
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Filter]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Damage Filter' = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Filter", STRING,
+				    {
+				        { "Alla" },
+				        { "Vattenskador" },
+				        { "Mkb-Metod" },
+				        { "Exkl. Vattenskador" },
+				        { "Exkl. Mkb-Metod" }
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = ad4886e98fd244578eb84d5c5df6efe9
+

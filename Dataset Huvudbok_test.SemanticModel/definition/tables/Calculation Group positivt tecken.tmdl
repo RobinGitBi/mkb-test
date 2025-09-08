@@ -1,0 +1,37 @@
+table 'Calculation Group positivt tecken'
+	lineageTag: d06b9ab0-5651-4b19-a28f-404c87b5c7cd
+
+	calculationGroup
+		precedence: 10
+
+		calculationItem 'Positivt tecken' = ```
+				
+				VAR ChangedSign = 
+				IF( SELECTEDMEASURE() < 0,
+				    -SELECTEDMEASURE(),
+				    SELECTEDMEASURE())
+				    
+				RETURN 
+				IF( CONTAINSSTRING(SELECTEDMEASURENAME(), "/") ||CONTAINSSTRING(SELECTEDMEASURENAME(), "Diff") || ( CONTAINSSTRING(SELECTEDMEASURENAME(), "-") && NOT CONTAINSSTRING(SELECTEDMEASURENAME(), "år-") ), // sista en specialre eftersom diffarna dumt nog heter med minustecken istället för ordet diff samtidigt som fg år heter fg år-1
+				    SELECTEDMEASURE(),
+				    ChangedSign)
+				```
+
+	column Name
+		dataType: string
+		lineageTag: 070e7ed5-2aa5-4af5-a850-88fb227956ed
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: f684d506-5f65-48e6-bcc6-b7ab9fb900c7
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

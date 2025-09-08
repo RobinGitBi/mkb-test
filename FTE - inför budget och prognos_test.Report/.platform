@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "FTE - inför budget och prognos_test"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "22759858-ea9e-49c6-9613-81a0dc825ce6"
+  }
+}

@@ -1,0 +1,72 @@
+table 'Calculation Group genomsnitt per område'
+	lineageTag: 1288214b-e011-4929-b267-5995fa2f1b7e
+
+	calculationGroup
+
+		calculationItem Valt =
+				SELECTEDMEASURE()
+				//AVERAGEX( VALUES('Kostnadsställe'[OmrådeNamn]), SELECTEDMEASURE())
+
+		calculationItem 'Hela området' =
+				CALCULATE(SELECTEDMEASURE(), ALL('Kostnadsställe'[KostnadsställeNamn]), 'Kostnadsställe'[Aktuell yta] > 0)
+				//VAR AveragePerArea = AVERAGEX( ALL('Kostnadsställe'[OmrådeNamn]), SELECTEDMEASURE())
+				//VAR Result = CALCULATE(AveragePerArea, ALL('Kostnadsställe'[OmrådeNamn]))
+				//RETURN Result
+
+		calculationItem 'Hela MKB' =
+				CALCULATE(SELECTEDMEASURE(), FILTER(ALL('Kostnadsställe'), 'Kostnadsställe'[Aktuell yta] > 0))
+				//VAR AveragePerArea = AVERAGEX( ALL('Kostnadsställe'[OmrådeNamn]), SELECTEDMEASURE())
+				//VAR Result = CALCULATE(AveragePerArea, ALL('Kostnadsställe'[OmrådeNamn]))
+				//RETURN Result
+
+		calculationItem 'Diff valt mot hela MKB' = ```
+				// Valda områden
+				VAR SelectedAreas = SELECTEDMEASURE()
+				
+				// Alla områden
+				VAR AllAreas = CALCULATE(SELECTEDMEASURE(), FILTER(ALL('Kostnadsställe'), 'Kostnadsställe'[Aktuell yta] > 0))
+				
+				RETURN SelectedAreas - AllAreas
+				
+				
+				```
+
+		calculationItem 'Diff valt mot hela MKB %' = ```
+				// Valda områden
+				VAR SelectedAreas = SELECTEDMEASURE()
+				
+				// Alla områden
+				VAR AllAreas = CALCULATE(SELECTEDMEASURE(), FILTER(ALL('Kostnadsställe'), 'Kostnadsställe'[Aktuell yta] > 0))
+				
+				VAR Result = - DIVIDE( SelectedAreas - AllAreas, AllAreas, BLANK())
+				
+				RETURN 
+				IF(ISBLANK(SelectedAreas) || ISBLANK(AllAreas),
+				   BLANK(),
+				   Result
+				  )
+				```
+
+			formatStringDefinition = "0.0 %"
+
+	column Name
+		dataType: string
+		lineageTag: c05ee359-a5c6-474c-a14a-7969fe533302
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		lineageTag: 0fecc204-ec1a-4226-af6e-4c29b9325186
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+

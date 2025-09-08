@@ -1,0 +1,30 @@
+table 'Beställarlistan max frysdatum'
+	lineageTag: 80d707cd-170c-4bd9-959b-e2272c00d7f3
+
+	column 'Max frysdatum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e2cf0b8a-0919-4273-bcb6-13579bbd1163
+		summarizeBy: none
+		sourceColumn: Max frysdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'Beställarlistan max frysdatum' = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(MKBBIDW, each ([Name] = "ViewFactBeställarlistan_Resultatuppföljning_max frysdatum")),
+				    #"dbo_ViewFactBeställarlistan_Resultatuppföljning_max frysdatum" = #"Filtered Rows"{[Schema="dbo",Item="ViewFactBeställarlistan_Resultatuppföljning_max frysdatum"]}[Data]
+				in
+				    #"dbo_ViewFactBeställarlistan_Resultatuppföljning_max frysdatum"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

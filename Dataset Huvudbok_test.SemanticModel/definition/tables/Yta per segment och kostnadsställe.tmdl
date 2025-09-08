@@ -1,0 +1,206 @@
+table 'Yta per segment och kostnadsställe'
+	isHidden
+	lineageTag: 0f99d7ce-c965-40df-a59c-a9221a4944bb
+
+	column BOA
+		dataType: double
+		isHidden
+		lineageTag: ffe61b7a-69ba-44fe-8307-039544c82449
+		summarizeBy: sum
+		sourceColumn: BOA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LOA
+		dataType: double
+		isHidden
+		lineageTag: 7ee55057-9b2c-4e60-b426-d8d26395872f
+		summarizeBy: sum
+		sourceColumn: LOA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalYta
+		dataType: double
+		isHidden
+		lineageTag: 77ba0525-8a40-4e45-a733-72daa893de6f
+		summarizeBy: sum
+		sourceColumn: TotalYta
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TimeSK
+		dataType: string
+		isHidden
+		lineageTag: e516af4f-e1fc-4fa0-ad79-bbcf04a7a615
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 32b427b9-007a-4f20-bffe-8a66daa3313c
+		summarizeBy: none
+		sourceColumn: KostnadsställeSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SegmentSK
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 20d6c5bf-b324-4a83-9041-42242ca79bf9
+		summarizeBy: none
+		sourceColumn: SegmentSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrognosBOA
+		dataType: double
+		isHidden
+		lineageTag: f8f05dfc-7666-4945-9520-27d7d06ff331
+		summarizeBy: sum
+		sourceColumn: PrognosBOA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrognosLOA
+		dataType: double
+		isHidden
+		lineageTag: 3e6daf4c-3587-4bbe-b98d-0d55b7f4cbff
+		summarizeBy: sum
+		sourceColumn: PrognosLOA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrognosTotalYta
+		dataType: double
+		isHidden
+		lineageTag: 9c82ae98-9ffd-4d57-81e1-12b7d937c37f
+		summarizeBy: sum
+		sourceColumn: PrognosTotalYta
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column JusteradBOA
+		dataType: double
+		isHidden
+		lineageTag: fff826cb-1876-42cb-aaba-2fa5a671c165
+		summarizeBy: sum
+		sourceColumn: JusteradBOA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column JusteradLOA
+		dataType: double
+		isHidden
+		lineageTag: 35dcbd39-840a-4fd3-8a0f-f458b31bdcd5
+		summarizeBy: sum
+		sourceColumn: JusteradLOA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column JusteradTotalYta
+		dataType: double
+		isHidden
+		lineageTag: 051c2937-9b3a-413d-bdaa-c384b8d68d98
+		summarizeBy: sum
+		sourceColumn: JusteradTotalYta
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FastighetsKategoriId
+		dataType: string
+		isHidden
+		lineageTag: d436a866-8a36-4de4-b91e-a5812c5d1239
+		summarizeBy: none
+		sourceColumn: FastighetsKategoriId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetsKategoriNamn
+		dataType: string
+		isHidden
+		lineageTag: f97d077a-67f0-4307-a1a8-63b00fc1667b
+		summarizeBy: none
+		sourceColumn: FastighetsKategoriNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Faktor
+		dataType: double
+		isHidden
+		lineageTag: d2ab90f4-b9da-4729-b8d9-a25d96fa00ec
+		summarizeBy: sum
+		sourceColumn: Faktor
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Yta per segment och kostnadsställe-4667367a-89b1-4f36-b370-570bf6954c3e' = m
+		mode: import
+		queryGroup: Faktatabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewYtaPerSegmentKst = MKBBIDW{[Schema="dbo",Item="ViewYtaPerSegmentKst"]}[Data]
+				in
+				    dbo_ViewYtaPerSegmentKst
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,710 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 2690,
+        "y": 1041.3333740234375
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 3547.233928786583,
+            "y": 1072.5769262980366
+          },
+          "nodeIndex": "Mätvärde",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1355.0468825915461,
+            "y": 1541.5400423090737
+          },
+          "nodeIndex": "Aktivitet",
+          "nodeLineageTag": "4a5212ed-fb9a-417c-b1ae-8e3b21a54089",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1775.06542191761,
+            "y": 48.761993076239207
+          },
+          "nodeIndex": "Beställarlistan",
+          "nodeLineageTag": "f8b2dba9-a4ad-43d3-bb50-36cb48008f61",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3940.6365021411375,
+            "y": 1072.5769262980366
+          },
+          "nodeIndex": "Beställarlistan for append",
+          "nodeLineageTag": "3330c539-d565-4256-9352-a69e0af97d8b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4334.0390754956916,
+            "y": 1072.5769262980366
+          },
+          "nodeIndex": "Budget - for append",
+          "nodeLineageTag": "03bea4c3-777a-45ff-a46e-7e50f9fbf21f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 9090.2252948096684,
+            "y": 1158.5769262980366
+          },
+          "nodeIndex": "Calculation Group beloppsvisning",
+          "nodeLineageTag": "03fe7049-c64b-4461-9549-0b4c6edab72b",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 9483.6278681642216,
+            "y": 1158.5769262980366
+          },
+          "nodeIndex": "Calculation Group genomsnitt per område",
+          "nodeLineageTag": "1288214b-e011-4929-b267-5995fa2f1b7e",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 9877.0304415187748,
+            "y": 1158.5769262980366
+          },
+          "nodeIndex": "Calculation Group investeringar resultatposter",
+          "nodeLineageTag": "e2fce887-ccce-449c-8fe6-86e63b271f4f",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 10270.433014873332,
+            "y": 1158.5769262980366
+          },
+          "nodeIndex": "Calculation Group investeringar upparbetat",
+          "nodeLineageTag": "3a6b7f63-5c01-42a5-a4e0-d5dbf7f2436d",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 10663.835588227887,
+            "y": 1158.5769262980366
+          },
+          "nodeIndex": "Calculation Group positivt tecken",
+          "nodeLineageTag": "d06b9ab0-5651-4b19-a28f-404c87b5c7cd",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 11057.238161582442,
+            "y": 1158.5769262980366
+          },
+          "nodeIndex": "Calculation Group resultaträkning",
+          "nodeLineageTag": "a1949842-557d-4119-87ee-47badd84477e",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 11450.640734936997,
+            "y": 1158.5769262980366
+          },
+          "nodeIndex": "Calculation Group segment",
+          "nodeLineageTag": "6654a3de-f0aa-4810-bc5b-8399fb4bfc5a",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 11844.043308291552,
+            "y": 1158.5769262980366
+          },
+          "nodeIndex": "Calculation Group time intelligence",
+          "nodeLineageTag": "9f1226ef-b57e-44bb-9fc1-9e96882fd5de",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 12237.445881646106,
+            "y": 1158.5769262980366
+          },
+          "nodeIndex": "Calculation Group underhåll fastighetsutveckling",
+          "nodeLineageTag": "1a0db1f4-42b7-4b23-a464-4fc920d6a727",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 12630.848455000661,
+            "y": 1158.5769262980366
+          },
+          "nodeIndex": "Calculation Group underhåll segment",
+          "nodeLineageTag": "16aefa6b-f69c-4cda-92ac-b8185e039a73",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1047.9883464046268,
+            "y": 1766.2109517555327
+          },
+          "nodeIndex": "Funktion",
+          "nodeLineageTag": "9d10071c-b3ef-4fc0-b68b-014322ca1346",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1893.3172839345377,
+            "y": 647.32998925457082
+          },
+          "nodeIndex": "Företag",
+          "nodeLineageTag": "91b5c38e-ee10-4ef1-aea7-ede61b0713bf",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1355.913104406709,
+            "y": 813.64894287709353
+          },
+          "nodeIndex": "Huvudbok",
+          "nodeLineageTag": "89dcce35-e8f9-428a-b4a5-4f61497dc5b9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4727.4416488502466,
+            "y": 1072.5769262980366
+          },
+          "nodeIndex": "Ingående balans - for append",
+          "nodeLineageTag": "06a54581-81f1-4753-8115-9db83802c57b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 797.314506160114,
+            "y": 1289.3552111898239
+          },
+          "nodeIndex": "Kalender",
+          "nodeLineageTag": "d0c6c246-4859-4e8f-a893-9cacf3032394",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 13024.251028355216,
+            "y": 1170.5769262980366
+          },
+          "nodeIndex": "KoddelLG",
+          "nodeLineageTag": "7f913346-3ee3-481c-9415-6adb154cf687",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 386.45876559440535,
+            "y": 1424.5734679483685
+          },
+          "nodeIndex": "Konto",
+          "nodeLineageTag": "a5c62670-6d13-4001-b581-0e83fd5a9971",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 484.20620742754772,
+            "y": 783.51139361768662
+          },
+          "nodeIndex": "Kostnadsställe",
+          "nodeLineageTag": "1d6a4c41-4bc4-4ba1-a114-944ff373fbf7",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1765.9026231572548,
+            "y": 1126.6943735317959
+          },
+          "nodeIndex": "Kund",
+          "nodeLineageTag": "30551a88-4acb-44b4-9b12-50f226bd65f8",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1411.0805775121469,
+            "y": 1186.2903851400883
+          },
+          "nodeIndex": "Leverantör",
+          "nodeLineageTag": "29d5c3e1-bc5c-44d6-8962-49b7cc7bb96e",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1093.7300251512074,
+            "y": 1133.7412558341052
+          },
+          "nodeIndex": "Momskod",
+          "nodeLineageTag": "28a47afa-84a7-4001-a649-d168aafdf3af",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1262.2651486955926,
+            "y": 100
+          },
+          "nodeIndex": "Momssystem",
+          "nodeLineageTag": "5e1a6d65-7875-4195-95f1-eb71d9fb7d1e",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 988.44633784523944,
+            "y": 0
+          },
+          "nodeIndex": "Motpart",
+          "nodeLineageTag": "91feb5d1-afdf-4dca-8e36-db68316917af",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2185.9211624833188,
+            "y": 11.186090093954078
+          },
+          "nodeIndex": "PNLStructure",
+          "nodeLineageTag": "3063b51f-8fd8-4c26-a85a-37015e408825",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 73.3504668618391,
+            "y": 1220.4765362348685
+          },
+          "nodeIndex": "Projekt",
+          "nodeLineageTag": "f6d66cfb-eba3-4731-8003-ab24d80203a5",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 895.06194799325647,
+            "y": 812.49947062411525
+          },
+          "nodeIndex": "Segment",
+          "nodeLineageTag": "81c9f039-7271-4fb8-a10d-64bcb062da8e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 674.48994520955125,
+            "y": 1766.2109517555327
+          },
+          "nodeIndex": "Slag",
+          "nodeLineageTag": "23304b83-5d05-4c6c-8507-b8e471166734",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 13417.653601709771,
+            "y": 1170.5769262980366
+          },
+          "nodeIndex": "UBWLatestUpdate",
+          "nodeLineageTag": "bbc69ecd-e14d-4594-8bd2-b7bb01c57780",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1626.205017850325,
+            "y": 525.61773364194789
+          },
+          "nodeIndex": "Uppföljning",
+          "nodeLineageTag": "2229c9c4-3504-45c3-aa24-a9729fd0007d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1213.2846679156023,
+            "y": 476.85574056570863
+          },
+          "nodeIndex": "Vertyp",
+          "nodeLineageTag": "ea451ffc-3f27-4c1b-9b51-0b7c9adda027",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5943.0047079732367,
+            "y": 1122.5769262980366
+          },
+          "nodeIndex": "Välj Finansmätvärde",
+          "nodeLineageTag": "886439f3-2337-4f35-b1d2-8d044b760471",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4763.7571912529511,
+            "y": 1059.0012487491645
+          },
+          "nodeIndex": "Välj jämförelsemätvärde Finans",
+          "nodeLineageTag": "7c14bc18-fbab-4c97-bff7-b90441117b80",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 7910.0175747460071,
+            "y": 1146.5769262980366
+          },
+          "nodeIndex": "Välj kolumner",
+          "nodeLineageTag": "6f193cf0-0329-4fcb-a4f7-c27cf41213d1",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 7123.2124280368989,
+            "y": 1134.5769262980366
+          },
+          "nodeIndex": "Välj kolumner rapport till revisorer",
+          "nodeLineageTag": "27b6d655-5b0f-4903-bd52-166cbaf240ba",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 8303.4201481005621,
+            "y": 1146.5769262980366
+          },
+          "nodeIndex": "Välj kolumner resultatuppföljning",
+          "nodeLineageTag": "a31e19c1-119f-400d-8e0b-c1dd076863ee",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 8696.8227214551152,
+            "y": 1146.5769262980366
+          },
+          "nodeIndex": "Välj mätvärde balansräkning",
+          "nodeLineageTag": "f7261bb3-2e02-4262-8dbe-07a98eeeab6e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5156.1995612641285,
+            "y": 1098.5769262980366
+          },
+          "nodeIndex": "Välj mätvärde Finans Measures",
+          "nodeLineageTag": "e10b63aa-19c8-461d-b338-7a44ce117814",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2574.9985187713087,
+            "y": 943.2225912014959
+          },
+          "nodeIndex": "Välj mätvärde Jämförelsemätvärde standardknapp",
+          "nodeLineageTag": "67884cd8-8ce1-4253-8556-09ff71277c5a",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3153.8313554320284,
+            "y": 1264.2642438645498
+          },
+          "nodeIndex": "Välj mätvärde Jämförelsemätvärde1",
+          "nodeLineageTag": "4f0b5ea9-bc8a-4195-8760-56f0fabc907b",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2774.5447631590141,
+            "y": 1192.5091834745108
+          },
+          "nodeIndex": "Välj mätvärde Jämförelsemätvärde2",
+          "nodeLineageTag": "04f18acd-2218-49e1-b77e-5b987872f8be",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 7516.615001391453,
+            "y": 1134.5769262980366
+          },
+          "nodeIndex": "Välj mätvärde rapport Underhåll",
+          "nodeLineageTag": "4a1e04a3-eaf1-4f30-8a67-c55e81edc0fb",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 6336.4072813277908,
+            "y": 1122.5769262980366
+          },
+          "nodeIndex": "Välj mätvärde Utfall",
+          "nodeLineageTag": "17f8eb77-bdb1-4d5d-a55a-9c0ec933efd5",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 6729.8098546823448,
+            "y": 1122.5769262980366
+          },
+          "nodeIndex": "Välj rader rapport till revisorer",
+          "nodeLineageTag": "99c0adb9-883d-4464-8289-5278172bb5bd",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 265.1431542602877,
+            "y": 306.655653051978
+          },
+          "nodeIndex": "Yta per segment och kostnadsställe",
+          "nodeLineageTag": "0f99d7ce-c965-40df-a59c-a9221a4944bb",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 13811.056175064326,
+            "y": 1170.5769262980366
+          },
+          "nodeIndex": "Beställarlistan max frysdatum",
+          "nodeLineageTag": "80d707cd-170c-4bd9-959b-e2272c00d7f3",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 743.62079566915986
+          },
+          "nodeIndex": "Fastighet",
+          "nodeLineageTag": "fb36a4eb-d8bc-43d8-be30-5a7c16c80a95",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5549.6021346186826,
+            "y": 1098.5769262980366
+          },
+          "nodeIndex": "Välj mätvärde Finans Measures Helår",
+          "nodeLineageTag": "b24896ca-0d7c-48af-b924-75c2ef53e496",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 14095.056175064326,
+            "y": 0
+          },
+          "nodeIndex": "Damage Filter",
+          "nodeLineageTag": "185a097a-0dce-409e-8ec6-4167fd2a4969",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

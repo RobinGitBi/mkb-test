@@ -1,0 +1,62 @@
+table 'Välj kolumner rapport till revisorer'
+	lineageTag: 27b6d655-5b0f-4903-bd52-166cbaf240ba
+
+	column 'Välj kolumner rapport till revisorer'
+		lineageTag: e8a9cc89-1830-4740-bae0-2d9cb963e9a2
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Välj kolumner rapport till revisorer Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Välj kolumner rapport till revisorer Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj kolumner rapport till revisorer Fields'
+		isHidden
+		lineageTag: c5cdc7a6-89df-4eb3-b33d-a527bd2c2aa1
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Välj kolumner rapport till revisorer Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj kolumner rapport till revisorer Order'
+		isHidden
+		formatString: 0
+		lineageTag: 2835a071-8009-449a-b3e5-51ee35434ae6
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kategori =
+			
+			SWITCH(
+			    'Välj kolumner rapport till revisorer'[Välj kolumner rapport till revisorer],
+			    "År", "Period",
+			    "Månad", "Period",
+			    "Segment", "Segment"
+			)
+		lineageTag: 419af8e5-877b-4c64-a982-21c1c64b6e5f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj kolumner rapport till revisorer-22c80a85-da35-4164-acbc-b6c208791718' = calculated
+		mode: import
+		source =
+				{
+				    ("År", NAMEOF('Kalender'[År]), 0),
+				    ("Månad", NAMEOF('Kalender'[Månad]), 1),
+				    ("Segment", NAMEOF('Segment'[Segment]), 2)
+				}
+
+	annotation PBI_Id = db572d748d294772b029540b44b6613e
+

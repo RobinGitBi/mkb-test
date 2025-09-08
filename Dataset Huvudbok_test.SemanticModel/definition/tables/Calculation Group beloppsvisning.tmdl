@@ -1,0 +1,44 @@
+table 'Calculation Group beloppsvisning'
+	lineageTag: 03fe7049-c64b-4461-9549-0b4c6edab72b
+
+	calculationGroup
+		precedence: 2
+
+		calculationItem 'Visa i ental' = SELECTEDMEASURE()
+
+		calculationItem 'Visa i tusental' =
+				IF(
+				    RIGHT(SELECTEDMEASURENAME(), 1) = "%" || CONTAINSSTRING(SELECTEDMEASURENAME(), "/") || CONTAINSSTRING(SELECTEDMEASURENAME(), "grad"), // om valt measure slutar med procent vill vi inte ändra formatet (någon diff i % exempelvis)
+				    SELECTEDMEASURE(),
+				    SELECTEDMEASURE() / 1000
+				    )
+
+		calculationItem 'Visa i miljontal' = ```
+				IF(
+				    RIGHT(SELECTEDMEASURENAME(), 1) = "%" || CONTAINSSTRING(SELECTEDMEASURENAME(), "/") || CONTAINSSTRING(SELECTEDMEASURENAME(), "grad"), // om valt measure slutar med procent vill vi inte ändra formatet (någon diff i % exempelvis)
+				    SELECTEDMEASURE(),
+				    SELECTEDMEASURE() / 1000000
+				    )
+				
+				
+				
+				```
+
+	column Name
+		dataType: string
+		lineageTag: 02c4d10a-6508-465c-b91b-18df6947bf19
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: 88c307f9-face-4156-a308-fca3794ffd33
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
