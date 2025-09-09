@@ -1,0 +1,103 @@
+﻿name,employeeid,name,category,name,Hours,Revenue,cost,Margin
+,,,,,,16630,16631,-1
+,00316996,Andreas Lindahl,SU,Systemutvecklare,1,867,867,0
+,40116472,Rut Nilsson,TEST,Testare,152,124488,123617,871
+,40116479,Lena Lindström ,KA,Krav-hanterare/analytiker,116,100340,99638,702
+,40117805,Karl-Magnus Skaffman,SU,Systemutvecklare,159,144690,143677,1013
+,40117855,Michael Åman,UX,Användbarhets-/UX-designer,58,53754,53378,376
+,40117929,Ulrika Nilsson,PL,Projektledare,51,62424,61987,437
+,40118953,Jens Enocsson,PL,Projektledare,14,12339,12253,86
+,40119395,Camilla Larsson,WEB,Webdesigner,29,25143,24967,176
+,40120079,Andrea Svanberg,TS,Teknisk Skribent/Dok/tekn info,3,2601,2583,18
+,40120853,Sebastian Strandberg,SU,Systemutvecklare,119,97461,96779,682
+,40121532,Dennis Planting,SU,Systemutvecklare,80,73120,72608,512
+,40122779,Anosh Ullenius,SU,Systemutvecklare,168,126000,125118,882
+,40124652,Jesper Kågefors,SU,Systemutvecklare,154,115577,114768,809
+,40124680,Roberto Cabas,AA,Användbarhetsarkitekt,112,89488,89488,0
+,40724568,Joel Svanbäck,KA,Krav-hanterare/analytiker,160,139200,138226,974
+,EME11025,Elin Mellbrand,TS,Teknisk Skribent/Dok/tekn info,20,17340,17219,121
+,HAJA0222,Hans Jansson,KA,Krav-hanterare/analytiker,118,82482,81905,577
+,JOMA7678,Jonas Malm,SU,Systemutvecklare,80,64000,63552,448
+,LLE11348,Lotta Leissner,SU,Systemutvecklare,139,172987,171776,1210
+,MICE4314,Mikael Cederlöf,VA,Verksamhetsarkitekt,162,189540,188213,1327
+,MINY3017,Mikael Nyström,TS,Teknisk Skribent/Dok/tekn info,36,31212,30993,219
+,MKE10751,Mika Kelja,SU,Systemutvecklare,48,56160,55767,393
+,MOI11343,Magnus Öien,TEST,Testare,160,144800,143787,1013
+,MPO12270,Monica Poromaa,PL,Projektledare,126,156750,155653,1097
+,SEBI4527,Senad Bijedic,PL,Projektledare,168,153216,152144,1072
+,X2307009,Thomas Björk,SU,Systemutvecklare,110,109450,109450,0
+,X2308021,Thomas Börjesson,PL,Projektledare,160,206400,206400,0
+,X2308033,Erik Flygare,PL,Projektledare,168,90432,90432,0
+,X2309004,Soleil,SU,Systemutvecklare,43,37281,37281,0
+,X2309008,Jonatan Skogsfors,SU,Systemutvecklare,161,66815,66815,0
+,X2310009,Andreas Karlsson,SU,Systemutvecklare,120,119400,119400,0
+,X2311010,Måns Axell,FL,Förvaltningsledare,122,105774,105774,0
+,X2311012,Johan Brantehag,TPL,Teknisk projektledare,210,201348,201348,0
+,X2312002,Claes Wahlgren,PL,Projektledare,142,184600,184600,0
+,X2312008,Fredrik Svensson,SU,Systemutvecklare,94,121824,121824,0
+,X2312009,Kristina Sjöholm,SU,Systemutvecklare,128,153088,153088,0
+,X2312020,Armando Tafreshi,KA,Krav-hanterare/analytiker,168,112211,112211,0
+,X2401003,Peter Dottax,SU,Systemutvecklare,64,58880,58880,0
+,X2401006,Sebastian Nyberg,PL,Projektledare,166,122924,122924,0
+,X2401008,Per Westberg,LA,Lösningsarkitekt,27,40473,40473,0
+,X2401018,Mattias Odén,SU,Systemutvecklare,98,136220,136220,0
+,X2402012,Krister Jansson,KA,Krav-hanterare/analytiker,163,141321,141321,0
+,X2402019,Kjell Larsson,KA,Krav-hanterare/analytiker,132,154440,154440,0
+,X2403023,Erik Svensson,SU,Systemutvecklare,162,140778,140778,0
+,X2405004,Martin Salin Gustavsson,PL,Projektledare,112,95760,95760,0
+,X2406005,Per De Flon,SU,Systemutvecklare,96,115200,115200,0
+,X2406006,Patrik Meijer,LA,Lösningsarkitekt,169,200304,200304,0
+,X2406007,Jonas Roos,SU,Systemutvecklare,96,167125,167125,0
+,X2407001,Petter Wygler,VA,Verksamhetsarkitekt,168,220584,220584,0
+,X2407005,Sirak Tesfai,KA,Krav-hanterare/analytiker,108,86292,86292,0
+,X2407009,Jonas Andersson,KA,Krav-hanterare/analytiker,96,114528,114528,0
+,X2407020,Mikael Grönberg,SU,Systemutvecklare,120,101520,101520,0
+,X2409003,Bilal Seid,SU,Systemutvecklare,168,145656,145656,0
+,X2409004,Andreas Rossel,SU,Systemutvecklare,144,124848,124848,0
+,X2409008,Oliver Noller,SU,Systemutvecklare,64,53056,53056,0
+,X2409027,Anders Håål,LA,Lösningsarkitekt,44,69960,69960,0
+,X2410016,Peter Persson,SU,Systemutvecklare,136,117912,117912,0
+,X2410017,Marcos Alvarez,SU,Systemutvecklare,204,149124,149124,0
+,X2410019,Jesper Kågefors,SU,Systemutvecklare,23,19987,19987,0
+,X2410029,Tobias Rosenlind,SU,Systemutvecklare,168,145992,145992,0
+,X2411001,Carl Ryttarson,SU,Systemutvecklare,160,138240,138240,0
+,X2411005,Adriene Habet,SU,Systemutvecklare,161,97067,97067,0
+,X2411006,Peter Fredriksson,KA,Krav-hanterare/analytiker,162,140292,140292,0
+,X2411011,Roger Lundberg,LA,Lösningsarkitekt,168,145824,145824,0
+,X2412015,Eric Karlsson,SU,Systemutvecklare,109,119784,119784,0
+,X2501005,Henrik Wedefelt,SU,Systemutvecklare,120,104280,104280,0
+,X2501007,Taimoor Choudhary,SU,Systemutvecklare,168,159600,159600,0
+,X2501014,Emil Nordin,SU,Systemutvecklare,112,27488,27488,0
+,X2501015,Vladimir Semenov,SU,Systemutvecklare,136,116824,116824,0
+,X2501018,Andreas Carlson,PL,Projektledare,184,163576,163576,0
+,X2501019,Åsa Lundin,VA,Verksamhetsarkitekt,168,175680,175680,0
+,X2501021,Jimmy Enander,TEST,Testare,152,131784,131784,0
+,X2502006,Rogier van der Wel,ML,Modelleringsledare,168,81085,81085,0
+,X2502009,Arvid Wahlberg,PL,Projektledare,120,109440,109440,0
+,X2503003,Andreas Loo,SU,Systemutvecklare,168,100800,100800,0
+,X2503004,Daniel Ankarcrona,PL,Projektledare,120,109440,109440,0
+,X2503005,Elli Eisenhauer,VA,Verksamhetsarkitekt,168,86208,86208,0
+,X2503011,Olof Olsson,SU,Systemutvecklare,152,124640,124640,0
+,X2504003,Mikael Norling,SU,Systemutvecklare,160,140480,140480,0
+,X2504004,Marcus Nyberg,SU,Systemutvecklare,264,90792,90792,0
+,X2504020,Klas Dahlén,SU,Systemutvecklare,126,103068,103068,0
+,X2505003,Erik Wadström,SU,Systemutvecklare,168,142208,142208,0
+,X2505004,Felicia Östlin,SU,Systemutvecklare,168,136640,136640,0
+,X2505005,Simon Aranda,IT2,IT Tekniker nivå 2,170,140930,140930,0
+,X2505007,Andreas Nyberg,SU,Systemutvecklare,240,218880,218880,0
+,X2505008,Isabel Fredriksson,KA,Krav-hanterare/analytiker,80,61120,61120,0
+,X2506001,Kalle Allvar Gaus,SU,Systemutvecklare,166,150894,150894,0
+,X2506006,Jonas Strandberg,PL,Projektledare,322,159850,159850,0
+,X2506008,Gonzalo Calderon,TL,Testledare,152,133000,133000,0
+,X2506015,Leif Berglund,VAVU,Verksamhets-analytiker/utveckl,159,144531,144531,0
+,X2507006,Ann-Cathrin Dykström,SU,Systemutvecklare,107,92123,92123,0
+,XKK10014,Camilla Wisell,KA,Krav-hanterare/analytiker,166,120890,120890,0
+,XKK10023,Per-Erik Erlandsson,KA,Krav-hanterare/analytiker,148,105000,105000,0
+,XKK10037,Dennis Enroth,SU,Systemutvecklare,126,113400,113400,0
+,XKK10046,Björn Holmgren,SU,Systemutvecklare,120,121800,121800,0
+,XKK10048,Patrik Gustafsson,KA,Krav-hanterare/analytiker,160,150560,150560,0
+,XKK10053,Konstantin Chow,FL,Förvaltningsledare,152,190000,190000,0
+,XKK10058,Anders Hedberg,VAVU,Verksamhets-analytiker/utveckl,168,185040,172800,12240
+,XKK10078,Kent Juhlin,SU,Systemutvecklare,160,138606,145783,-7178
+,XKK10081,Emma Carlsson,KA,Krav-hanterare/analytiker,168,100680,100680,0
+,XSR90807,Sara Rosendahl,VAVU,Verksamhets-analytiker/utveckl,100,150000,150000,0
