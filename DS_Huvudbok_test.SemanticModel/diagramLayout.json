@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1831.3052644132426,
-        "y": 75.29085306383503
+        "x": 1907.9866911624872,
+        "y": 1622.1771370806341
       },
       "nodes": [
         {
@@ -19,7 +19,7 @@
             "height": 601.24053835073335,
             "width": 237.51642651771317
           },
-          "zIndex": 55
+          "zIndex": 61
         },
         {
           "location": {
@@ -86,7 +86,7 @@
             "height": 145,
             "width": 234
           },
-          "zIndex": 60
+          "zIndex": 58
         },
         {
           "location": {
@@ -138,7 +138,7 @@
             "height": 424.24707029252033,
             "width": 234
           },
-          "zIndex": 54
+          "zIndex": 53
         },
         {
           "location": {
@@ -151,7 +151,7 @@
             "height": 1000,
             "width": 234
           },
-          "zIndex": 52
+          "zIndex": 63
         },
         {
           "location": {
@@ -217,7 +217,7 @@
             "height": 235.98420041184795,
             "width": 234
           },
-          "zIndex": 53
+          "zIndex": 52
         },
         {
           "location": {
@@ -508,7 +508,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 59
+          "zIndex": 57
         },
         {
           "location": {
@@ -573,7 +573,7 @@
             "height": 145,
             "width": 234
           },
-          "zIndex": 57
+          "zIndex": 55
         },
         {
           "location": {
@@ -691,7 +691,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 56
+          "zIndex": 54
         },
         {
           "location": {
@@ -743,7 +743,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 58
+          "zIndex": 56
         },
         {
           "location": {
@@ -808,7 +808,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 61
+          "zIndex": 59
         },
         {
           "location": {
@@ -821,11 +821,24 @@
             "height": 248,
             "width": 234
           },
+          "zIndex": 60
+        },
+        {
+          "location": {
+            "x": 2673.631331841671,
+            "y": 344.02129255580837
+          },
+          "nodeIndex": "ViewFactFteFrånvaroJustering",
+          "nodeLineageTag": "7beeda44-95ee-405b-b31c-2a7fe353ea14",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
           "zIndex": 62
         }
       ],
       "name": "All tables",
-      "zoomValue": 57.554577081265904,
+      "zoomValue": 54.960164088455265,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

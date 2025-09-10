@@ -4,14 +4,14 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 395.33334350585938,
-        "y": 1067.3333740234375
+        "x": 3942.4656698148542,
+        "y": 1655.479493859696
       },
       "nodes": [
         {
           "location": {
-            "x": 3815.6741683672108,
-            "y": 1562.6621545380203
+            "x": 4389.5811292831586,
+            "y": 1804.9585988413
           },
           "nodeIndex": "Mätvärde",
           "size": {
@@ -22,8 +22,8 @@
         },
         {
           "location": {
-            "x": 1814.3650908247746,
-            "y": 0
+            "x": 2429.8578142129127,
+            "y": 233.9527031579255
           },
           "nodeIndex": "Aktivitet",
           "nodeLineageTag": "4a5212ed-fb9a-417c-b1ae-8e3b21a54089",
@@ -35,8 +35,8 @@
         },
         {
           "location": {
-            "x": 1927.2721021502803,
-            "y": 2051.4553888488672
+            "x": 1058.980823857072,
+            "y": 1026.056493572109
           },
           "nodeIndex": "Beställarlistan",
           "nodeLineageTag": "f8b2dba9-a4ad-43d3-bb50-36cb48008f61",
@@ -48,8 +48,8 @@
         },
         {
           "location": {
-            "x": 4208.8565043281833,
-            "y": 1562.6621545380203
+            "x": 4783.5448652242067,
+            "y": 1804.9585988413
           },
           "nodeIndex": "Beställarlistan for append",
           "nodeLineageTag": "3330c539-d565-4256-9352-a69e0af97d8b",
@@ -61,8 +61,8 @@
         },
         {
           "location": {
-            "x": 4602.0388402891549,
-            "y": 1562.6621545380203
+            "x": 5177.5086011652547,
+            "y": 1804.9585988413
           },
           "nodeIndex": "Budget - for append",
           "nodeLineageTag": "03bea4c3-777a-45ff-a46e-7e50f9fbf21f",
@@ -74,8 +74,8 @@
         },
         {
           "location": {
-            "x": 10874.73525491018,
-            "y": 1648.6621545380203
+            "x": 10693.000904339928,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group beloppsvisning",
           "nodeLineageTag": "03fe7049-c64b-4461-9549-0b4c6edab72b",
@@ -87,8 +87,8 @@
         },
         {
           "location": {
-            "x": 11267.917590871151,
-            "y": 1648.6621545380203
+            "x": 11086.964640280976,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group genomsnitt per område",
           "nodeLineageTag": "1288214b-e011-4929-b267-5995fa2f1b7e",
@@ -100,8 +100,8 @@
         },
         {
           "location": {
-            "x": 11661.099926832123,
-            "y": 1648.6621545380203
+            "x": 11480.928376222024,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group investeringar resultatposter",
           "nodeLineageTag": "e2fce887-ccce-449c-8fe6-86e63b271f4f",
@@ -113,8 +113,8 @@
         },
         {
           "location": {
-            "x": 12054.282262793095,
-            "y": 1648.6621545380203
+            "x": 11874.892112163072,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group investeringar upparbetat",
           "nodeLineageTag": "3a6b7f63-5c01-42a5-a4e0-d5dbf7f2436d",
@@ -126,8 +126,8 @@
         },
         {
           "location": {
-            "x": 12447.464598754066,
-            "y": 1648.6621545380203
+            "x": 12268.85584810412,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group positivt tecken",
           "nodeLineageTag": "d06b9ab0-5651-4b19-a28f-404c87b5c7cd",
@@ -139,8 +139,8 @@
         },
         {
           "location": {
-            "x": 12840.646934715038,
-            "y": 1648.6621545380203
+            "x": 12662.819584045168,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group resultaträkning",
           "nodeLineageTag": "a1949842-557d-4119-87ee-47badd84477e",
@@ -152,8 +152,8 @@
         },
         {
           "location": {
-            "x": 13233.829270676009,
-            "y": 1648.6621545380203
+            "x": 13056.783319986216,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group segment",
           "nodeLineageTag": "6654a3de-f0aa-4810-bc5b-8399fb4bfc5a",
@@ -165,8 +165,8 @@
         },
         {
           "location": {
-            "x": 13627.011606636981,
-            "y": 1648.6621545380203
+            "x": 13450.747055927264,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group time intelligence",
           "nodeLineageTag": "9f1226ef-b57e-44bb-9fc1-9e96882fd5de",
@@ -178,8 +178,8 @@
         },
         {
           "location": {
-            "x": 14020.193942597953,
-            "y": 1648.6621545380203
+            "x": 13844.710791868312,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group underhåll fastighetsutveckling",
           "nodeLineageTag": "1a0db1f4-42b7-4b23-a464-4fc920d6a727",
@@ -191,8 +191,8 @@
         },
         {
           "location": {
-            "x": 14413.376278558924,
-            "y": 1648.6621545380203
+            "x": 14238.67452780936,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group underhåll segment",
           "nodeLineageTag": "16aefa6b-f69c-4cda-92ac-b8185e039a73",
@@ -204,8 +204,8 @@
         },
         {
           "location": {
-            "x": 1856.7504413043694,
-            "y": 1413.92599260029
+            "x": 2497.3250438118616,
+            "y": 934.92346083693667
           },
           "nodeIndex": "Funktion",
           "nodeLineageTag": "9d10071c-b3ef-4fc0-b68b-014322ca1346",
@@ -217,8 +217,8 @@
         },
         {
           "location": {
-            "x": 2190.2398771040826,
-            "y": 1258.9467642241996
+            "x": 541.93694272592415,
+            "y": 956.850385314327
           },
           "nodeIndex": "Företag",
           "nodeLineageTag": "91b5c38e-ee10-4ef1-aea7-ede61b0713bf",
@@ -230,8 +230,8 @@
         },
         {
           "location": {
-            "x": 1516.0001918796002,
-            "y": 1781.0876410827204
+            "x": 1645.0545198009058,
+            "y": 1057.9777665777242
           },
           "nodeIndex": "Huvudbok",
           "nodeLineageTag": "89dcce35-e8f9-428a-b4a5-4f61497dc5b9",
@@ -243,8 +243,8 @@
         },
         {
           "location": {
-            "x": 4995.2211762501265,
-            "y": 1562.6621545380203
+            "x": 5571.4723371063028,
+            "y": 1804.9585988413
           },
           "nodeIndex": "Ingående balans - for append",
           "nodeLineageTag": "06a54581-81f1-4753-8115-9db83802c57b",
@@ -256,8 +256,8 @@
         },
         {
           "location": {
-            "x": 806.52877700759814,
-            "y": 1410.2714379569961
+            "x": 824.850385314327,
+            "y": 478.42519265716351
           },
           "nodeIndex": "Kalender",
           "nodeLineageTag": "d0c6c246-4859-4e8f-a893-9cacf3032394",
@@ -269,8 +269,8 @@
         },
         {
           "location": {
-            "x": 15592.923286441839,
-            "y": 1660.6621545380203
+            "x": 15420.565735632505,
+            "y": 1902.9585988413
           },
           "nodeIndex": "KoddelLG",
           "nodeLineageTag": "7f913346-3ee3-481c-9415-6adb154cf687",
@@ -282,8 +282,8 @@
         },
         {
           "location": {
-            "x": 2601.5117873747627,
-            "y": 844.85204782301048
+            "x": 2057.4797124580696,
+            "y": 1369.8680410641173
           },
           "nodeIndex": "Konto",
           "nodeLineageTag": "a5c62670-6d13-4001-b581-0e83fd5a9971",
@@ -295,8 +295,8 @@
         },
         {
           "location": {
-            "x": 395.256866736918,
-            "y": 1730.2925130078813
+            "x": 1471.4060165142355,
+            "y": 1404.5684836022288
           },
           "nodeIndex": "Kostnadsställe",
           "nodeLineageTag": "1d6a4c41-4bc4-4ba1-a114-944ff373fbf7",
@@ -308,8 +308,8 @@
         },
         {
           "location": {
-            "x": 1373.741730715004,
-            "y": 854.54382054136022
+            "x": 1281.0983320871187,
+            "y": 1882.9936762593923
           },
           "nodeIndex": "Kund",
           "nodeLineageTag": "30551a88-4acb-44b4-9b12-50f226bd65f8",
@@ -321,8 +321,8 @@
         },
         {
           "location": {
-            "x": 2268.0223515750495,
-            "y": 1693.0057115142738
+            "x": 2084.8998511546979,
+            "y": 712.377895815089
           },
           "nodeIndex": "Leverantör",
           "nodeLineageTag": "29d5c3e1-bc5c-44d6-8962-49b7cc7bb96e",
@@ -334,8 +334,8 @@
         },
         {
           "location": {
-            "x": 2226.0281757532962,
-            "y": 907.81558151214881
+            "x": 2054.7464798162468,
+            "y": 1114.8030884722525
           },
           "nodeIndex": "Momskod",
           "nodeLineageTag": "28a47afa-84a7-4001-a649-d168aafdf3af",
@@ -347,8 +347,8 @@
         },
         {
           "location": {
-            "x": 1403.484355211936,
-            "y": 477.27191027068011
+            "x": 2139.5588261286302,
+            "y": 1682.3559108529121
           },
           "nodeIndex": "Momssystem",
           "nodeLineageTag": "5e1a6d65-7875-4195-95f1-eb71d9fb7d1e",
@@ -360,8 +360,8 @@
         },
         {
           "location": {
-            "x": 1492.6106155713696,
-            "y": 2258.3595513534005
+            "x": 824.850385314327,
+            "y": 858.263789007197
           },
           "nodeIndex": "Motpart",
           "nodeLineageTag": "91feb5d1-afdf-4dca-8e36-db68316917af",
@@ -373,8 +373,8 @@
         },
         {
           "location": {
-            "x": 2111.39872830955,
-            "y": 477.27191027068011
+            "x": 2366.5214543779089,
+            "y": 1375.9716508585493
           },
           "nodeIndex": "PNLStructure",
           "nodeLineageTag": "3063b51f-8fd8-4c26-a85a-37015e408825",
@@ -386,8 +386,8 @@
         },
         {
           "location": {
-            "x": 2601.5117873747627,
-            "y": 1375.5616309493353
+            "x": 1734.0691618274814,
+            "y": 725.719284500603
           },
           "nodeIndex": "Projekt",
           "nodeLineageTag": "f6d66cfb-eba3-4731-8003-ab24d80203a5",
@@ -399,8 +399,8 @@
         },
         {
           "location": {
-            "x": 1150.9211336847368,
-            "y": 1461.4986614172581
+            "x": 1319.4897252381636,
+            "y": 1026.056493572109
           },
           "nodeIndex": "Segment",
           "nodeLineageTag": "81c9f039-7271-4fb8-a10d-64bcb062da8e",
@@ -412,8 +412,8 @@
         },
         {
           "location": {
-            "x": 1778.9679668334024,
-            "y": 902.54382054136022
+            "x": 1781.68340726666,
+            "y": 1882.9936762593923
           },
           "nodeIndex": "Slag",
           "nodeLineageTag": "23304b83-5d05-4c6c-8507-b8e471166734",
@@ -425,8 +425,8 @@
         },
         {
           "location": {
-            "x": 15986.105622402811,
-            "y": 1660.6621545380203
+            "x": 15814.529471573553,
+            "y": 1902.9585988413
           },
           "nodeIndex": "UBWLatestUpdate",
           "nodeLineageTag": "bbc69ecd-e14d-4594-8bd2-b7bb01c57780",
@@ -438,8 +438,8 @@
         },
         {
           "location": {
-            "x": 1814.7562654826161,
-            "y": 464.15352584175571
+            "x": 271.43115837874893,
+            "y": 776.8490356418813
           },
           "nodeIndex": "Uppföljning",
           "nodeLineageTag": "2229c9c4-3504-45c3-aa24-a9729fd0007d",
@@ -451,8 +451,8 @@
         },
         {
           "location": {
-            "x": 1947.9525632686073,
-            "y": 1794.1025053057765
+            "x": 1727.1336334714665,
+            "y": 1632.0104006239362
           },
           "nodeIndex": "Vertyp",
           "nodeLineageTag": "ea451ffc-3f27-4c1b-9b51-0b7c9adda027",
@@ -464,8 +464,8 @@
         },
         {
           "location": {
-            "x": 6549.729559339492,
-            "y": 1612.6621545380203
+            "x": 6359.3998089883989,
+            "y": 1854.9585988413
           },
           "nodeIndex": "Välj Finansmätvärde",
           "nodeLineageTag": "886439f3-2337-4f35-b1d2-8d044b760471",
@@ -477,8 +477,8 @@
         },
         {
           "location": {
-            "x": 3422.4918324062387,
-            "y": 1275.4526975703916
+            "x": 3995.61739334211,
+            "y": 1720.8642885297911
           },
           "nodeIndex": "Välj jämförelsemätvärde Finans",
           "nodeLineageTag": "7c14bc18-fbab-4c97-bff7-b90441117b80",
@@ -490,8 +490,8 @@
         },
         {
           "location": {
-            "x": 8515.64123914435,
-            "y": 1636.6621545380203
+            "x": 8329.21848869364,
+            "y": 1878.9585988413
           },
           "nodeIndex": "Välj kolumner",
           "nodeLineageTag": "6f193cf0-0329-4fcb-a4f7-c27cf41213d1",
@@ -503,8 +503,8 @@
         },
         {
           "location": {
-            "x": 7729.2765672224068,
-            "y": 1624.6621545380203
+            "x": 7541.2910168115432,
+            "y": 1866.9585988413
           },
           "nodeIndex": "Välj kolumner rapport till revisorer",
           "nodeLineageTag": "27b6d655-5b0f-4903-bd52-166cbaf240ba",
@@ -516,8 +516,8 @@
         },
         {
           "location": {
-            "x": 8908.8235751053217,
-            "y": 1636.6621545380203
+            "x": 8723.1822246346874,
+            "y": 1878.9585988413
           },
           "nodeIndex": "Välj kolumner resultatuppföljning",
           "nodeLineageTag": "a31e19c1-119f-400d-8e0b-c1dd076863ee",
@@ -529,8 +529,8 @@
         },
         {
           "location": {
-            "x": 9302.0059110662933,
-            "y": 1636.6621545380203
+            "x": 9117.1459605757354,
+            "y": 1878.9585988413
           },
           "nodeIndex": "Välj mätvärde balansräkning",
           "nodeLineageTag": "f7261bb3-2e02-4262-8dbe-07a98eeeab6e",
@@ -542,8 +542,8 @@
         },
         {
           "location": {
-            "x": 3030.0494623950617,
-            "y": 1588.6621545380203
+            "x": 3603.1750233309331,
+            "y": 1830.9585988413
           },
           "nodeIndex": "Välj mätvärde Finans Measures",
           "nodeLineageTag": "e10b63aa-19c8-461d-b338-7a44ce117814",
@@ -555,8 +555,8 @@
         },
         {
           "location": {
-            "x": 5384.0782951445344,
-            "y": 1641.8286457730064
+            "x": 2895.6139968194739,
+            "y": 1709.5568906219785
           },
           "nodeIndex": "Välj mätvärde Jämförelsemätvärde standardknapp",
           "nodeLineageTag": "67884cd8-8ce1-4253-8556-09ff71277c5a",
@@ -568,8 +568,8 @@
         },
         {
           "location": {
-            "x": 5763.3648874175487,
-            "y": 1540.390996065745
+            "x": 2989.5357431352877,
+            "y": 1364.2702983489635
           },
           "nodeIndex": "Välj mätvärde Jämförelsemätvärde1",
           "nodeLineageTag": "4f0b5ea9-bc8a-4195-8760-56f0fabc907b",
@@ -581,8 +581,8 @@
         },
         {
           "location": {
-            "x": 5004.79170287152,
-            "y": 1474.1235073382779
+            "x": 3173.855948330558,
+            "y": 1958.843482894993
           },
           "nodeIndex": "Välj mätvärde Jämförelsemätvärde2",
           "nodeLineageTag": "04f18acd-2218-49e1-b77e-5b987872f8be",
@@ -594,8 +594,8 @@
         },
         {
           "location": {
-            "x": 8122.4589031833784,
-            "y": 1624.6621545380203
+            "x": 7935.2547527525912,
+            "y": 1866.9585988413
           },
           "nodeIndex": "Välj mätvärde rapport Underhåll",
           "nodeLineageTag": "4a1e04a3-eaf1-4f30-8a67-c55e81edc0fb",
@@ -607,8 +607,8 @@
         },
         {
           "location": {
-            "x": 6942.9118953004636,
-            "y": 1612.6621545380203
+            "x": 6753.363544929447,
+            "y": 1854.9585988413
           },
           "nodeIndex": "Välj mätvärde Utfall",
           "nodeLineageTag": "17f8eb77-bdb1-4d5d-a55a-9c0ec933efd5",
@@ -620,8 +620,8 @@
         },
         {
           "location": {
-            "x": 7336.0942312614352,
-            "y": 1612.6621545380203
+            "x": 7147.3272808704951,
+            "y": 1854.9585988413
           },
           "nodeIndex": "Välj rader rapport till revisorer",
           "nodeLineageTag": "99c0adb9-883d-4464-8289-5278172bb5bd",
@@ -633,8 +633,8 @@
         },
         {
           "location": {
-            "x": 1562.1930439554169,
-            "y": 1303.8157308120403
+            "x": 1237.2755779714905,
+            "y": 547.63130091494554
           },
           "nodeIndex": "Yta per segment och kostnadsställe",
           "nodeLineageTag": "0f99d7ce-c965-40df-a59c-a9221a4944bb",
@@ -646,8 +646,8 @@
         },
         {
           "location": {
-            "x": 16379.287958363782,
-            "y": 1660.6621545380203
+            "x": 16208.4932075146,
+            "y": 1902.9585988413
           },
           "nodeIndex": "Beställarlistan max frysdatum",
           "nodeLineageTag": "80d707cd-170c-4bd9-959b-e2272c00d7f3",
@@ -659,8 +659,8 @@
         },
         {
           "location": {
-            "x": 721.62805335227745,
-            "y": 1897.5185872984971
+            "x": 1188.4889499510991,
+            "y": 1546.7125713072144
           },
           "nodeIndex": "Fastighet",
           "nodeLineageTag": "fb36a4eb-d8bc-43d8-be30-5a7c16c80a95",
@@ -672,8 +672,8 @@
         },
         {
           "location": {
-            "x": 6156.54722337852,
-            "y": 1588.6621545380203
+            "x": 5965.4360730473509,
+            "y": 1830.9585988413
           },
           "nodeIndex": "Välj mätvärde Finans Measures Helår",
           "nodeLineageTag": "b24896ca-0d7c-48af-b924-75c2ef53e496",
@@ -685,8 +685,8 @@
         },
         {
           "location": {
-            "x": 14806.558614519896,
-            "y": 1648.6621545380203
+            "x": 14632.638263750408,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Calculation Group personal",
           "nodeLineageTag": "99bdaf22-5395-4c76-a21e-0607ddf3496c",
@@ -698,8 +698,8 @@
         },
         {
           "location": {
-            "x": 256.00069511672223,
-            "y": 2207.5644232785617
+            "x": 1004.8049747247094,
+            "y": 0
           },
           "nodeIndex": "Fryst FTE",
           "nodeLineageTag": "2c416322-de87-4ec9-bab4-f23069b44144",
@@ -711,8 +711,8 @@
         },
         {
           "location": {
-            "x": 395.256866736918,
-            "y": 1067.2443131846078
+            "x": 412.42519265716351,
+            "y": 298.42384298471779
           },
           "nodeIndex": "FTE",
           "nodeLineageTag": "bc9e5b7c-ecc9-4431-9e2d-970e877c58d4",
@@ -724,8 +724,8 @@
         },
         {
           "location": {
-            "x": 135.69977710118633,
-            "y": 1353.0206027372012
+            "x": 776.06375729393562,
+            "y": 1390.4250836442795
           },
           "nodeIndex": "FTE Prognos",
           "nodeLineageTag": "3519b3a3-34d6-4b8c-95fa-028f16321ee7",
@@ -737,8 +737,8 @@
         },
         {
           "location": {
-            "x": 9695.1882470272649,
-            "y": 1636.6621545380203
+            "x": 9511.1096965167835,
+            "y": 1878.9585988413
           },
           "nodeIndex": "Mätvärden Personal",
           "nodeLineageTag": "a025b3dc-a967-44e0-89fe-ba7a54b0e2f2",
@@ -750,8 +750,8 @@
         },
         {
           "location": {
-            "x": 15199.740950480867,
-            "y": 1648.6621545380203
+            "x": 15026.601999691457,
+            "y": 1890.9585988413
           },
           "nodeIndex": "Utf/Prognos Jmf",
           "nodeLineageTag": "8d8c2bab-9f8b-4668-88d5-0cd2c0f8cc64",
@@ -763,8 +763,8 @@
         },
         {
           "location": {
-            "x": 10088.370582988236,
-            "y": 1636.6621545380203
+            "x": 9905.0734324578316,
+            "y": 1878.9585988413
           },
           "nodeIndex": "Välj jämförelsemätvärde Personal 1",
           "nodeLineageTag": "1e61e631-da00-4ac0-b1e0-e9cbb750b392",
@@ -776,8 +776,8 @@
         },
         {
           "location": {
-            "x": 10481.552918949208,
-            "y": 1636.6621545380203
+            "x": 10299.03716839888,
+            "y": 1878.9585988413
           },
           "nodeIndex": "Välj jämförelsemätvärde Personal 2",
           "nodeLineageTag": "8243b7f7-0cfc-4167-9e9b-619ba9508538",
@@ -789,21 +789,21 @@
         },
         {
           "location": {
-            "x": 0,
-            "y": 1730.2925130078813
+            "x": 129.51175006876065,
+            "y": 1178.1494594558831
           },
           "nodeIndex": "ViewDimAnställdSCD2",
           "nodeLineageTag": "2d196271-cf75-4c65-8c63-81570bb03174",
           "size": {
-            "height": 248,
+            "height": 300,
             "width": 234
           },
           "zIndex": 0
         },
         {
           "location": {
-            "x": 395.256866736918,
-            "y": 1385.7659600316406
+            "x": 0,
+            "y": 232.17478425256036
           },
           "nodeIndex": "ViewFactFte",
           "nodeLineageTag": "fd6709f1-19fc-4e1c-aed4-922bb80576ad",
@@ -812,10 +812,23 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 363.63856463677212,
+            "y": 1664.3052725130863
+          },
+          "nodeIndex": "ViewFactFteFrånvaroJustering",
+          "nodeLineageTag": "7beeda44-95ee-405b-b31c-2a7fe353ea14",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 97.333333333333343,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

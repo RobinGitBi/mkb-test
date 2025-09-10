@@ -30,7 +30,7 @@ annotation PBIDesktopVersion = 2.146.1454.0 (25.08)+901d6c338d1dea81ac3e53073ffb
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Mätvärde","Kalender","Huvudbok","Budget - for append","Ingående balans - for append","Yta per segment och kostnadsställe","Företag","Aktivitet","Konto","Kostnadsställe","Motpart","Funktion","Leverantör","Momskod","Momssystem","Projekt","Segment","Slag","Vertyp","Kund","PNLStructure","Uppföljning","KoddelLG","UBWLatestUpdate","Välj jämförelsemätvärde Finans","Beställarlistan","Beställarlistan for append","Välj mätvärde Jämförelsemätvärde standardknapp","Beställarlistan max frysdatum","Fastighet","FTE","Fryst FTE","FTE Prognos","Utf/Prognos Jmf","ViewFactFte","ViewDimAnställdSCD2"]
+annotation PBI_QueryOrder = ["Mätvärde","Kalender","Huvudbok","Budget - for append","Ingående balans - for append","Yta per segment och kostnadsställe","Företag","Aktivitet","Konto","Kostnadsställe","Motpart","Funktion","Leverantör","Momskod","Momssystem","Projekt","Segment","Slag","Vertyp","Kund","PNLStructure","Uppföljning","KoddelLG","UBWLatestUpdate","Välj jämförelsemätvärde Finans","Beställarlistan","Beställarlistan for append","Välj mätvärde Jämförelsemätvärde standardknapp","Beställarlistan max frysdatum","Fastighet","FTE","Fryst FTE","FTE Prognos","Utf/Prognos Jmf","ViewFactFte","ViewDimAnställdSCD2","ViewFactFteFrånvaroJustering"]
 
 annotation __TEdtr = 1
 
@@ -98,6 +98,7 @@ ref table 'Välj jämförelsemätvärde Personal 1'
 ref table 'Välj jämförelsemätvärde Personal 2'
 ref table ViewFactFte
 ref table ViewDimAnställdSCD2
+ref table ViewFactFteFrånvaroJustering
 
 ref role Full
 ref role Limited

@@ -146,3 +146,15 @@ relationship 1565e3aa-fda4-a96a-f241-1815c5ebb3e2
 	fromColumn: ViewFactFte.'Anställd SK'
 	toColumn: ViewDimAnställdSCD2.'Anställd SK'
 
+relationship acec03f0-2a5c-311c-f6c2-b779513d8d0c
+	fromColumn: ViewFactFteFrånvaroJustering.Datum
+	toColumn: Kalender.Datum
+
+relationship 41da6dcb-ce28-3be3-ce7f-29d99b24b0a5
+	fromColumn: ViewFactFteFrånvaroJustering.'Anställd SK'
+	toColumn: ViewDimAnställdSCD2.'Anställd SK'
+
+relationship d79cb88a-cfd0-43b2-2986-feac97f7da59
+	fromColumn: ViewFactFteFrånvaroJustering.Kostnadsställe
+	toColumn: Kostnadsställe.KostnadsställeNr
+

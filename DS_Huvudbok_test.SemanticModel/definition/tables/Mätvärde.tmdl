@@ -4495,6 +4495,34 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure New_FrånvaroDagar = SUM('ViewFactFteFrånvaroJustering'[Antal Obetalda Dagar])
+		formatString: 0.0
+		displayFolder: FTE
+		lineageTag: 23ec1d71-4442-4e59-b2d7-2a80988a7ddd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure New_FTE = SUM(ViewFactFte[FTE])
+		formatString: 0.0
+		displayFolder: FTE
+		lineageTag: 88cf9678-e9b2-4415-8c87-b0d8816a77e7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure New_FteJustering = SUM(ViewFactFte[Frånvaro justering])
+		formatString: 0.0
+		displayFolder: FTE
+		lineageTag: 6168f197-d65b-4815-a2be-464e837972eb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure New_FTEFöreJustering = SUM(ViewFactFte[FTE före justering])
+		formatString: 0.0
+		displayFolder: FTE
+		lineageTag: 332414b7-d875-4f07-a965-f0b0369dfb1f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mätvärde-dafc6aed-5a2f-4494-9ed3-cf1871eb8c79 = m
 		mode: import
 		source =

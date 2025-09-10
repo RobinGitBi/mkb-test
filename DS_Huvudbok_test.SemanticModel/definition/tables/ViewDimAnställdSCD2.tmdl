@@ -14,7 +14,7 @@ table ViewDimAnställdSCD2
 		dataType: int64
 		formatString: 0
 		lineageTag: 12345b25-e595-403e-a949-d2920519bc43
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Anställningsnummer
 
 		annotation SummarizationSetBy = Automatic
@@ -23,7 +23,7 @@ table ViewDimAnställdSCD2
 		dataType: int64
 		formatString: 0
 		lineageTag: acfe514e-7541-485b-a044-a986919e09cc
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Kostnadsställe
 
 		annotation SummarizationSetBy = Automatic
