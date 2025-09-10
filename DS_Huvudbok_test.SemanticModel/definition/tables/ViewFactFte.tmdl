@@ -177,6 +177,67 @@ table ViewFactFte
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column Månadslön
+		dataType: double
+		lineageTag: 228a0899-6f5d-496c-a3d5-1180ba83df30
+		summarizeBy: sum
+		sourceColumn: Månadslön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Lönetillägg
+		dataType: double
+		lineageTag: 5b382bd3-d9c2-4388-888a-2cd137fccff3
+		summarizeBy: sum
+		sourceColumn: Lönetillägg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MånadsLönPlusTillägg
+		dataType: double
+		lineageTag: 9e4c6802-329e-4b65-b0fc-b2e8b5940b9c
+		summarizeBy: sum
+		sourceColumn: MånadsLönPlusTillägg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Lönetillägg Slutdatum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cdd67e83-f96a-47f8-8398-7f16668bbe3a
+		summarizeBy: none
+		sourceColumn: Lönetillägg Slutdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Timlön
+		dataType: double
+		lineageTag: 10572a28-b2ec-4338-80d6-5c1c30fd0622
+		summarizeBy: sum
+		sourceColumn: Timlön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Timmar*Timlön
+		dataType: double
+		lineageTag: 84cc5443-b1f7-4249-bd63-9fb1125a8dd6
+		summarizeBy: sum
+		sourceColumn: Timmar*Timlön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition ViewFactFte = m
 		mode: import
 		source =

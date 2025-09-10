@@ -36,33 +36,81 @@ table ViewDimAnställdSCD2
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Tillträde datum'
-		dataType: dateTime
-		formatString: Long Date
-		lineageTag: 8d372486-8068-4b1a-9abf-c0ecf5ecd25e
-		summarizeBy: none
-		sourceColumn: Tillträde datum
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
-	column ' Tillträde tom datum'
-		dataType: dateTime
-		formatString: Long Date
-		lineageTag: 09b68aa4-b797-4f22-acfd-23f07953c964
-		summarizeBy: none
-		sourceColumn: " Tillträde tom datum"
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column Befattning
 		dataType: string
 		lineageTag: 75138818-20be-4ca4-8039-caf6cd8c7315
 		summarizeBy: none
 		sourceColumn: Befattning
+
+		annotation SummarizationSetBy = Automatic
+
+	column Namn
+		dataType: string
+		lineageTag: 3d75b6fe-10b0-45de-8fca-686974ffe7e5
+		summarizeBy: none
+		sourceColumn: Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tillträde SCD2 datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 764cbc4d-62da-442d-92aa-955c3144a437
+		summarizeBy: none
+		sourceColumn: Tillträde SCD2 datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ' Tillträde SCD2 tom datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 9f306c6c-659b-405a-9bfa-29998e995fb1
+		summarizeBy: none
+		sourceColumn: " Tillträde SCD2 tom datum"
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Kön
+		dataType: string
+		lineageTag: 043e4647-34a2-4166-b643-84cae3a35520
+		summarizeBy: none
+		sourceColumn: Kön
+
+		annotation SummarizationSetBy = Automatic
+
+	column Födelsedatum
+		dataType: string
+		lineageTag: 8011d251-5060-4872-b8b3-8f028fdacb96
+		summarizeBy: none
+		sourceColumn: Födelsedatum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsdatum
+		dataType: string
+		lineageTag: 87edc5de-f498-4c61-b63a-060e6ba4bd48
+		summarizeBy: none
+		sourceColumn: Anställningsdatum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avgångsdatum
+		dataType: string
+		lineageTag: 84f46dd6-c7b5-41b7-ac1a-e4edb2881c99
+		summarizeBy: none
+		sourceColumn: Avgångsdatum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avgångsorsak
+		dataType: string
+		lineageTag: bba3e0f1-31b3-46d4-a670-7903130440fd
+		summarizeBy: none
+		sourceColumn: Avgångsorsak
 
 		annotation SummarizationSetBy = Automatic
 

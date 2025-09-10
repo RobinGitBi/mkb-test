@@ -26,7 +26,7 @@ queryGroup 'Frågefel – 2025-04-25 15:03:10'
 
 	annotation PBI_QueryGroupOrder = 3
 
-annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
+annotation PBIDesktopVersion = 2.146.1454.0 (25.08)+901d6c338d1dea81ac3e53073ffb10469f0f37b8
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
