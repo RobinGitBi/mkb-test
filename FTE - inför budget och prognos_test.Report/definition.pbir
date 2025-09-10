@@ -3,7 +3,7 @@
   "version": "4.0",
   "datasetReference": {
     "byConnection": {
-      "connectionString": "Data Source=pbiazure://api.powerbi.com;initial catalog=1168b19e-0022-4d83-bce1-d835b48675ee;identity provider=\"https://login.microsoftonline.com/common, https://analysis.windows.net/powerbi/api, 7f67af8a-fedc-4b08-8b4e-37c4d127b6cf\";integrated security=ClaimsToken;semanticmodelid=1168b19e-0022-4d83-bce1-d835b48675ee;modelid=1434049"
+      "connectionString": "Data Source=pbiazure://api.powerbi.com;initial catalog=c566ad5b-08ec-48c4-b0bf-85f935254af4;identity provider=\"https://login.microsoftonline.com/common, https://analysis.windows.net/powerbi/api, 7f67af8a-fedc-4b08-8b4e-37c4d127b6cf\";integrated security=ClaimsToken;semanticmodelid=c566ad5b-08ec-48c4-b0bf-85f935254af4;modelid=1514997"
     }
   }
 }
