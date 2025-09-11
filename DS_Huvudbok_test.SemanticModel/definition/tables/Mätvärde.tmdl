@@ -4495,47 +4495,86 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_FrånvaroDagar = SUM('ViewFactFteFrånvaroJustering'[Antal Obetalda Dagar])
-		formatString: 0.0
+	measure New_FrånvaroDagar =
+			
+			
+			VAR Result = SUM('ViewFactFteFrånvaroJustering'[Antal Obetalda Dagar])
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0.00
 		displayFolder: FTE
 		lineageTag: 23ec1d71-4442-4e59-b2d7-2a80988a7ddd
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_FTE = SUM(ViewFactFte[FTE])
-		formatString: 0.0
+	measure New_FTE =
+			
+			
+			VAR Result = SUM(ViewFactFte[FTE])
+			
+			RETURN IF( Result <> 0, Result)
+		formatString: 0.00
 		displayFolder: FTE
 		lineageTag: 88cf9678-e9b2-4415-8c87-b0d8816a77e7
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_FteJustering = SUM(ViewFactFte[Frånvaro justering])
-		formatString: 0.0
+	measure New_FteJustering =
+			
+			
+			VAR Result = SUM(ViewFactFte[Frånvaro justering])
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0.00
 		displayFolder: FTE
 		lineageTag: 6168f197-d65b-4815-a2be-464e837972eb
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_FTEFöreJustering = SUM(ViewFactFte[FTE före justering])
-		formatString: 0.0
+	measure New_FTEFöreJustering =
+			
+			
+			VAR Result = SUM(ViewFactFte[FTE före justering])
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0.00
 		displayFolder: FTE
 		lineageTag: 332414b7-d875-4f07-a965-f0b0369dfb1f
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_KalenderDagarTotalt = SUM(ViewFactFte[Dagar totalt])
+	measure New_KalenderDagarTotalt =
+			
+			
+			VAR Result = SUM(ViewFactFte[Dagar totalt])
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0.00
 		displayFolder: FTE
 		lineageTag: f76c9593-9376-4395-93ed-fd496b0b7cca
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_RapporteradeTimmar = SUM(ViewFactFte[Rapporterade Timmar])
+	measure New_RapporteradeTimmar =
+			
+			
+			
+			VAR Result = SUM(ViewFactFte[Rapporterade Timmar])
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0.00
 		displayFolder: FTE
 		lineageTag: 65dc50b5-6d0a-4a26-86a4-88cbd7625065
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_NormalArbetsTid = SUM(ViewFactFte[Normal arbetstid])
+	measure New_NormalArbetsTid =
+			
+			
+			VAR Result = SUM(ViewFactFte[Normal arbetstid])
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0.00
 		displayFolder: FTE
 		lineageTag: b52983f9-83f2-4c8b-a82c-5b965f2f1e8a
 
