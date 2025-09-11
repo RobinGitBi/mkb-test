@@ -238,6 +238,14 @@ table ViewFactFte
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column Lönekategori
+		dataType: string
+		lineageTag: 0e85a63a-8bba-488a-9f45-093558eaa2b5
+		summarizeBy: none
+		sourceColumn: Lönekategori
+
+		annotation SummarizationSetBy = Automatic
+
 	partition ViewFactFte = m
 		mode: import
 		source =

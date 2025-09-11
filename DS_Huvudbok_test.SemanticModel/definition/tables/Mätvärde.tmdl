@@ -4500,7 +4500,7 @@ table Mätvärde
 			
 			VAR Result = SUM('ViewFactFteFrånvaroJustering'[Antal Obetalda Dagar])
 			
-			RETURN IF(Result <> 0, Result)
+			RETURN IF(AND(Result <> 0, [New_FTEFöreJustering] <> 0), Result)
 		formatString: 0.00
 		displayFolder: FTE
 		lineageTag: 23ec1d71-4442-4e59-b2d7-2a80988a7ddd
@@ -4524,8 +4524,7 @@ table Mätvärde
 			
 			VAR Result = SUM(ViewFactFte[Frånvaro justering])
 			
-			RETURN IF(Result <> 0, Result)
-		formatString: 0.00
+			RETURN IF(AND(Result <> 0, [New_FTEFöreJustering] <> 0), Result)
 		displayFolder: FTE
 		lineageTag: 6168f197-d65b-4815-a2be-464e837972eb
 
@@ -4546,9 +4545,11 @@ table Mätvärde
 	measure New_KalenderDagarTotalt =
 			
 			
-			VAR Result = SUM(ViewFactFte[Dagar totalt])
 			
-			RETURN IF(Result <> 0, Result)
+			
+			VAR Result = max(ViewFactFte[Dagar totalt])
+			
+			RETURN IF([New_RapporteradeTimmar] <> 0, Result)
 		formatString: 0.00
 		displayFolder: FTE
 		lineageTag: f76c9593-9376-4395-93ed-fd496b0b7cca
@@ -4591,6 +4592,69 @@ table Mätvärde
 		formatString: 0.00
 		displayFolder: FTE
 		lineageTag: 9b82b577-20c4-4bfd-b1db-26f0302dea45
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Frånvaro'
+		displayFolder: FTE
+		lineageTag: 46e9c775-b13a-424c-83fc-33d99c2329b3
+
+	measure 'New_Kontakt Start' =
+			
+			
+			VAR Result = SELECTEDVALUE(ViewFactFte[Kontrakt Start Månad])
+			
+			RETURN IF([New_FTEFöreJustering] <> 0, Result)
+		displayFolder: FTE
+		lineageTag: b82204ea-3698-4d6a-80ac-2d22188a38f3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'New_Kontrakt Slut' =
+			
+			
+			VAR Result = SELECTEDVALUE(ViewFactFte[Kontrakt Slut Månad])
+			
+			RETURN IF([New_FTEFöreJustering] <> 0, Result)
+		displayFolder: FTE
+		lineageTag: d184ab2d-b656-4ad3-adec-58b9a1884d9f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure New_Sysselsättningsgrad =
+			
+			
+			VAR Result = MAX(ViewFactFte[Sysselsättningsgrad])/100
+			
+			RETURN IF([New_FTEFöreJustering] <> 0, Result)
+		formatString: 0%
+		displayFolder: FTE
+		lineageTag: 89de35e7-e635-41a0-a620-771d2b65d276
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure New_Avlöning =
+			
+			
+			VAR Result = SELECTEDVALUE(ViewFactFte[Lönekategori])
+			
+			RETURN IF([New_FTEFöreJustering] <> 0, Result)
+		displayFolder: FTE
+		lineageTag: 9aeb4f83-df2d-4ac3-811d-2ace0a2feedb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure New_FrånvaroProcent = ```
+			
+			 
+			 
+			 VAR Result = max('ViewFactFteFrånvaroJustering'[Frånvaro Procent]) /100
+			
+			 RETURN IF(AND(Result <> 0, [New_FrånvaroDagar] <> 0), Result)
+			```
+		formatString: 0%
+		displayFolder: FTE
+		lineageTag: bf15417c-099c-4713-9e5a-1dd62619f30c
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
