@@ -4523,6 +4523,24 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure New_KalenderDagarTotalt = SUM(ViewFactFte[Dagar totalt])
+		displayFolder: FTE
+		lineageTag: f76c9593-9376-4395-93ed-fd496b0b7cca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure New_RapporteradeTimmar = SUM(ViewFactFte[Rapporterade Timmar])
+		displayFolder: FTE
+		lineageTag: 65dc50b5-6d0a-4a26-86a4-88cbd7625065
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure New_NormalArbetsTid = SUM(ViewFactFte[Normal arbetstid])
+		displayFolder: FTE
+		lineageTag: b52983f9-83f2-4c8b-a82c-5b965f2f1e8a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mätvärde-dafc6aed-5a2f-4494-9ed3-cf1871eb8c79 = m
 		mode: import
 		source =
