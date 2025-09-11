@@ -453,6 +453,12 @@ table Kalender
 
 		annotation SummarizationSetBy = Automatic
 
+	column ÅrMånad = format(Kalender[Datum], "YYYYMM")
+		lineageTag: 7729f56f-bf27-482d-a687-15d519c9b1e0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Kalender-c855bc39-99b9-4ff8-aeeb-b04fb8ef1e62 = m
 		mode: import
 		source =
