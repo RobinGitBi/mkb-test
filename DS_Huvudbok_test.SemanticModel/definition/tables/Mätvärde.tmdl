@@ -4658,6 +4658,85 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure New_Ålder = ```
+			
+			
+			VAR AsOf =
+			    COALESCE ( MAX ( 'Kalender'[Datum] ), TODAY() )
+			VAR Birth =
+			    SELECTEDVALUE ( 'ViewDimAnställdSCD2'[Födelsedatum] )
+			-- Gate: visa bara ålder där det finns fakta i nuvarande filterkontekst
+			VAR HasFact =
+			    NOT ISBLANK ( [New_FTEFöreJustering] )    -- ex: [New_FTE]
+			RETURN
+			IF (
+			    NOT HasFact || ISBLANK ( Birth ),
+			    BLANK(),
+			    VAR Years  = YEAR ( AsOf ) - YEAR ( Birth )
+			    VAR AsMD   = 100 * MONTH ( AsOf )  + DAY ( AsOf )
+			    VAR BrMD   = 100 * MONTH ( Birth ) + DAY ( Birth )
+			    RETURN Years - INT ( AsMD < BrMD )
+			)
+			
+			```
+		displayFolder: FTE
+		lineageTag: 4173eece-37b4-4129-8573-0dcf69e4af72
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure New_AntalMånader = ```
+			
+			
+			VAR HasFact = NOT ISBLANK ( [New_FTE] )              -- din faktamätare
+			VAR Y         = SELECTEDVALUE ( 'Kalender'[År], YEAR ( TODAY() ) )
+			VAR YearStart = DATE ( Y, 1, 1 )
+			VAR YearEnd   = DATE ( Y, 12, 31 )
+			
+			VAR EmpStart =
+			    MINX ( VALUES ( 'ViewDimAnställdSCD2'[Anställningsdatum] ),
+			           DATEVALUE ( 'ViewDimAnställdSCD2'[Anställningsdatum] ) )
+			VAR EmpEndRaw =
+			    MAXX ( VALUES ( 'ViewDimAnställdSCD2'[Avgångsdatum] ),
+			           DATEVALUE ( 'ViewDimAnställdSCD2'[Avgångsdatum] ) )
+			VAR EmpEnd = COALESCE ( EmpEndRaw, DATE ( 9999, 12, 31 ) )
+			
+			VAR S = MAX ( EmpStart, YearStart )
+			VAR E = MIN ( EmpEnd,   YearEnd )
+			VAR SameMonth = NOT ( YEAR (S) <> YEAR (E) || MONTH (S) <> MONTH (E) )
+			
+			VAR DaysS = DAY ( EOMONTH ( S, 0 ) )
+			VAR DaysE = DAY ( EOMONTH ( E, 0 ) )
+			
+			VAR StartPart =
+			    IF ( SameMonth, BLANK(), DIVIDE ( DaysS - DAY ( S ) + 1, DaysS ) )
+			VAR EndPart   =
+			    IF ( SameMonth, BLANK(), DIVIDE ( DAY ( E ), DaysE ) )
+			VAR MiddleFullMonths =
+			    MAX ( 0, DATEDIFF ( EOMONTH ( S, 0 ) + 1, EOMONTH ( E, -1 ), MONTH ) + 1 )
+			VAR SameMonthFrac =
+			    IF ( SameMonth, DIVIDE ( DAY ( E ) - DAY ( S ) + 1, DaysS ), 0 )
+			
+			VAR TotalMonths =
+			    IF ( SameMonth, SameMonthFrac, StartPart + MiddleFullMonths + EndPart )
+			
+			VAR Result = 
+			IF (
+			    NOT HasFact
+			        || ISBLANK ( EmpStart )
+			        || S > E
+			        || TotalMonths <= 0,
+			    BLANK(),                                      -- <- viktig: inga nollor
+			    MIN ( 12, TotalMonths )
+			)
+			
+			RETURN IF( Result <> 0, Result)
+			
+			```
+		displayFolder: FTE
+		lineageTag: 7211a0a5-3fa2-4587-9951-d50d1b6ab553
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mätvärde-dafc6aed-5a2f-4494-9ed3-cf1871eb8c79 = m
 		mode: import
 		source =

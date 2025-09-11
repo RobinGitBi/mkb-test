@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1296.4807517351055,
-        "y": 1185.4972181238172
+        "x": 1229.9817717283674,
+        "y": 75.205983728949434
       },
       "nodes": [
         {
@@ -151,7 +151,7 @@
             "height": 1000,
             "width": 234
           },
-          "zIndex": 63
+          "zIndex": 62
         },
         {
           "location": {
@@ -834,7 +834,7 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 62
+          "zIndex": 63
         }
       ],
       "name": "All tables",
