@@ -114,6 +114,14 @@ table ViewDimAnställdSCD2
 
 		annotation SummarizationSetBy = Automatic
 
+	column Slag
+		dataType: string
+		lineageTag: 45806c28-5694-43b7-b933-6a2bdd0bfd0f
+		summarizeBy: none
+		sourceColumn: Slag
+
+		annotation SummarizationSetBy = Automatic
+
 	partition ViewDimAnställdSCD2 = m
 		mode: import
 		source =
