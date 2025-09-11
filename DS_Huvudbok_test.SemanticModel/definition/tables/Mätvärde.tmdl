@@ -4580,6 +4580,20 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure New_SnittFTE = ```
+			
+			AVERAGEX (
+			    VALUES ( 'Kalender'[ÅrMånad] ),
+			    [New_FTE]
+			)
+			
+			```
+		formatString: 0.00
+		displayFolder: FTE
+		lineageTag: 9b82b577-20c4-4bfd-b1db-26f0302dea45
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mätvärde-dafc6aed-5a2f-4494-9ed3-cf1871eb8c79 = m
 		mode: import
 		source =
