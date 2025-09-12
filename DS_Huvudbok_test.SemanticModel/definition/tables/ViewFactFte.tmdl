@@ -246,6 +246,17 @@ table ViewFactFte
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Lönetillägg Startdatum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dd35b8b5-34e4-44a3-bcb0-a21e31a5ddcc
+		summarizeBy: none
+		sourceColumn: Lönetillägg Startdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	partition ViewFactFte = m
 		mode: import
 		source =
