@@ -4510,7 +4510,7 @@ table Mätvärde
 	measure New_FTE =
 			
 			
-			VAR Result = SUM(ViewFactFte[FTE])
+			VAR Result = sum(ViewFactFte[FTE])
 			
 			RETURN IF( Result <> 0, Result)
 		formatString: 0.00
@@ -4533,7 +4533,7 @@ table Mätvärde
 	measure New_FTEFöreJustering =
 			
 			
-			VAR Result = SUM(ViewFactFte[FTE före justering])
+			VAR Result = max(ViewFactFte[FTE före justering])
 			
 			RETURN IF(Result <> 0, Result)
 		formatString: 0.00
