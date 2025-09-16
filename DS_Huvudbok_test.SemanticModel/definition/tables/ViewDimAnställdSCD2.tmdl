@@ -55,7 +55,7 @@ table ViewDimAnställdSCD2
 
 	column 'Tillträde SCD2 datum'
 		dataType: dateTime
-		formatString: Long Date
+		formatString: yyyy-mm-dd
 		lineageTag: 764cbc4d-62da-442d-92aa-955c3144a437
 		summarizeBy: none
 		sourceColumn: Tillträde SCD2 datum
@@ -64,9 +64,11 @@ table ViewDimAnställdSCD2
 
 		annotation UnderlyingDateTimeDataType = Date
 
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
 	column ' Tillträde SCD2 tom datum'
 		dataType: dateTime
-		formatString: Long Date
+		formatString: yyyy-mm-dd
 		lineageTag: 9f306c6c-659b-405a-9bfa-29998e995fb1
 		summarizeBy: none
 		sourceColumn: " Tillträde SCD2 tom datum"
@@ -74,6 +76,8 @@ table ViewDimAnställdSCD2
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column Kön
 		dataType: string

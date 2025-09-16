@@ -257,6 +257,16 @@ table ViewFactFte
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column 'Snittlön Timanställd'
+		dataType: double
+		lineageTag: 13094b72-6f7b-4eb2-b754-b07fc7123079
+		summarizeBy: sum
+		sourceColumn: Snittlön Timanställd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition ViewFactFte = m
 		mode: import
 		source =
