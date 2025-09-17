@@ -1,0 +1,3880 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
+  "displayName": "Kostnader Media",
+  "name": "Bookmark33d79c6e0601ed79d423",
+  "options": {
+    "applyOnlyToTargetVisuals": true,
+    "targetVisualNames": [
+      "77d9c85f24404aa13fd9",
+      "080a707224b73bc103ad",
+      "cf92b926f3316168e7e1",
+      "aa94ee8a0f7bb0606912",
+      "f425b3e87bf6e7020507",
+      "323757fc0c6057bb7802",
+      "0e814f8d338cb622a24a",
+      "6f8b77cd4206885539c2",
+      "228c9358720322084566",
+      "fe387646c2e801008936"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSection742a7e8f3d50daf15e34",
+    "filters": {
+      "byExpr": [
+        {
+          "name": "Filter8c9bd0d4ab6d683087d0",
+          "type": "Advanced",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Kostnadsställe"
+                }
+              },
+              "Property": "Aktuell yta"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter56c729633c07afaa5377",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Slag"
+                }
+              },
+              "Property": "Slag"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filterfa7130a1d26e5827e07e",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Motpart"
+                }
+              },
+              "Property": "Motpart"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter8f29119f1e2d7ce15e3e",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Välj Finansmätvärde"
+                }
+              },
+              "Property": "Välj Finansmätvärde"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter20046fccaf64786d7ec6",
+          "type": "Categorical",
+          "filter": {
+            "Version": 2,
+            "From": [
+              {
+                "Name": "c",
+                "Entity": "Calculation Group resultaträkning",
+                "Type": 0
+              }
+            ],
+            "Where": [
+              {
+                "Condition": {
+                  "In": {
+                    "Expressions": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "c"
+                            }
+                          },
+                          "Property": "Name"
+                        }
+                      }
+                    ],
+                    "Values": [
+                      [
+                        {
+                          "Literal": {
+                            "Value": "'Belopp till resultaträkning'"
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Calculation Group resultaträkning"
+                }
+              },
+              "Property": "Name"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter6b1b5ce27ee909d9e403",
+          "type": "Categorical",
+          "filter": {
+            "Version": 2,
+            "From": [
+              {
+                "Name": "k",
+                "Entity": "Konto",
+                "Type": 0
+              }
+            ],
+            "Where": [
+              {
+                "Condition": {
+                  "In": {
+                    "Expressions": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "k"
+                            }
+                          },
+                          "Property": "Kontotyp"
+                        }
+                      }
+                    ],
+                    "Values": [
+                      [
+                        {
+                          "Literal": {
+                            "Value": "'RR'"
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Konto"
+                }
+              },
+              "Property": "Kontotyp"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter2ce07386631d3690b190",
+          "type": "Advanced",
+          "filter": {
+            "Version": 2,
+            "From": [
+              {
+                "Name": "k",
+                "Entity": "Konto",
+                "Type": 0
+              }
+            ],
+            "Where": [
+              {
+                "Condition": {
+                  "Not": {
+                    "Expression": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "k"
+                              }
+                            },
+                            "Property": "KontoNr"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "8999L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Konto"
+                }
+              },
+              "Property": "KontoNr"
+            }
+          },
+          "howCreated": 1
+        }
+      ]
+    },
+    "sections": {
+      "ReportSection742a7e8f3d50daf15e34": {
+        "filters": {
+          "byExpr": [
+            {
+              "name": "Filter27505532d7d07aaeb666",
+              "type": "Advanced",
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "k",
+                    "Entity": "Kalender",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 1,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "k"
+                              }
+                            },
+                            "Property": "RelativtÅr"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "-4L"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kalender"
+                    }
+                  },
+                  "Property": "RelativtÅr"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter9c8466a51c898b96c7b8",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "Konto"
+                }
+              },
+              "howCreated": 1
+            }
+          ]
+        },
+        "visualContainers": {
+          "b73b6f85529deec5fcbc": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "a91c32fa8ae0892f54eb": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "1db9ad6b0fdbd9ea71d5": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "961dfa70312fe7f49d86": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "def7da8b64cfcfe2cbaa",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Valda jämförelsevärden"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "multiRowCard",
+              "objects": {}
+            }
+          },
+          "3baa0234c2acb4601a8d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0e38da19e48e33950ac5",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Kalender",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "k"
+                                      }
+                                    },
+                                    "Property": "År med senast stängda månad 11:e"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "År med senast stängda månad 11:e"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "k",
+                                "Entity": "Kalender",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "k"
+                                            }
+                                          },
+                                          "Property": "År med senast stängda månad 11:e"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Senast stängda månad'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "År med senast stängda månad 11:e"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "7831d2ffcda8ebf91aa5": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "267d91634a3ff33650ee",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Kostnadsställe",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "StartsWith": {
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "k"
+                                      }
+                                    },
+                                    "Property": "FC"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "'FC'"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kostnadsställe"
+                        }
+                      },
+                      "Property": "FC"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a4b5bb3ff3def0bfdd02",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kostnadsställe"
+                        }
+                      },
+                      "Property": "Område"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kostnadsställe"
+                        }
+                      },
+                      "Property": "FC"
+                    }
+                  }
+                ]
+              },
+              "expansionStates": [
+                {
+                  "roles": [
+                    "Values"
+                  ],
+                  "levels": [
+                    {
+                      "queryRefs": [
+                        "Kostnadsställe.FC"
+                      ],
+                      "isCollapsed": true,
+                      "identityKeys": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Kostnadsställe"
+                              }
+                            },
+                            "Property": "FC"
+                          }
+                        }
+                      ],
+                      "isPinned": true
+                    },
+                    {
+                      "queryRefs": [
+                        "Kostnadsställe.Område"
+                      ],
+                      "isCollapsed": true,
+                      "isPinned": true
+                    }
+                  ],
+                  "root": {
+                    "identityValues": null
+                  }
+                }
+              ]
+            }
+          },
+          "f969a1a2e58e7c221fe2": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "3511f223a02c0b8bd72c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kostnadsställe"
+                        }
+                      },
+                      "Property": "Kostnadsställe"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kostnadsställe"
+                        }
+                      },
+                      "Property": "Kostnadsställe"
+                    }
+                  }
+                ]
+              },
+              "expansionStates": [
+                {
+                  "roles": [
+                    "Values"
+                  ],
+                  "levels": [
+                    {
+                      "queryRefs": [
+                        "Kostnadsställe.Kostnadsställe"
+                      ],
+                      "isCollapsed": true,
+                      "isPinned": true
+                    }
+                  ],
+                  "root": {
+                    "identityValues": null
+                  }
+                }
+              ]
+            }
+          },
+          "90c4a5ebc965d35eb732": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ba0b24401726880caa4d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Uppföljning"
+                        }
+                      },
+                      "Property": "Uppföljning2"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Uppföljning"
+                        }
+                      },
+                      "Property": "Uppföljning2"
+                    }
+                  }
+                ]
+              },
+              "expansionStates": [
+                {
+                  "roles": [
+                    "Values"
+                  ],
+                  "levels": [
+                    {
+                      "queryRefs": [
+                        "Uppföljning.Uppföljning2"
+                      ],
+                      "isCollapsed": true,
+                      "isPinned": true
+                    }
+                  ],
+                  "root": {
+                    "identityValues": null
+                  }
+                }
+              ]
+            }
+          },
+          "09468754c24c1d496cbd": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "707fc0905fc7cc6909f3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Segment"
+                        }
+                      },
+                      "Property": "Segment"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Segment"
+                        }
+                      },
+                      "Property": "Segment"
+                    }
+                  }
+                ]
+              },
+              "expansionStates": [
+                {
+                  "roles": [
+                    "Values"
+                  ],
+                  "levels": [
+                    {
+                      "queryRefs": [
+                        "Segment.Segment"
+                      ],
+                      "isCollapsed": true,
+                      "isPinned": true
+                    }
+                  ],
+                  "root": {
+                    "identityValues": null
+                  }
+                }
+              ]
+            }
+          },
+          "54c9f960d12b7ab224f2": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "24312f230e3bc56c586e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group segment"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group segment"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  }
+                ]
+              },
+              "expansionStates": [
+                {
+                  "roles": [
+                    "Values"
+                  ],
+                  "levels": [
+                    {
+                      "queryRefs": [
+                        "Calculation Group segment.Name"
+                      ],
+                      "isCollapsed": true,
+                      "isPinned": true
+                    }
+                  ],
+                  "root": {
+                    "identityValues": null
+                  }
+                }
+              ]
+            }
+          },
+          "c497984c94ab6700861c": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "Filterc4ec1caf89eded4cc1d8",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Konto",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "k"
+                                    }
+                                  },
+                                  "Property": "RRLev1Namn"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Kostnader Fastighetsskötsel'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev1Namn"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter9c78b2a88622ebd03cd2",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Calculation Group positivt tecken",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "Name"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Positivt tecken'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group positivt tecken"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter682d933a0ca2ab16dd72",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "Månad med senast stängda månad 11:e"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterbd1910280e86d521e9c8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterd293fc2a6c573f18c5df",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg helår-1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter300a5fab8111d82a88d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter7cd053d0bb304fb73845",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter1dbc7d3751ba8b81ecc8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1 ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "d9a2d731844ca481f15a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cf659c7fc9754567d7a7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fc24eeefc92cf8396677",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2 helår"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "gauge",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "7d82e0c695abceca398d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "Filterc4ec1caf89eded4cc1d8",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Konto",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "k"
+                                    }
+                                  },
+                                  "Property": "RRLev1Namn"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Kostnader Reparationer'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev1Namn"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter9c78b2a88622ebd03cd2",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Calculation Group positivt tecken",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "Name"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Positivt tecken'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group positivt tecken"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter682d933a0ca2ab16dd72",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "Månad med senast stängda månad 11:e"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterbd1910280e86d521e9c8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterd293fc2a6c573f18c5df",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg helår-1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter300a5fab8111d82a88d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter7cd053d0bb304fb73845",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter1dbc7d3751ba8b81ecc8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1 ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "02b9b69133fd239eb302",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f1568feb5f9032fc2de9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "456010eac22bbd12cd36",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2 helår"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "gauge",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "6759c919e32e582a97f8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "Filterc4ec1caf89eded4cc1d8",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Konto",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "k"
+                                    }
+                                  },
+                                  "Property": "RRLev1Namn"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Kostnader Media'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev1Namn"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter9c78b2a88622ebd03cd2",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Calculation Group positivt tecken",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "Name"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Positivt tecken'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group positivt tecken"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter682d933a0ca2ab16dd72",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "Månad med senast stängda månad 11:e"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterbd1910280e86d521e9c8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterd293fc2a6c573f18c5df",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg helår-1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter300a5fab8111d82a88d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter7cd053d0bb304fb73845",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter1dbc7d3751ba8b81ecc8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1 ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "ba0ee2abf7273ca6de2a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "12088b75e48538724e3e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "376995943857c9fdcb36",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2 helår"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "gauge",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "d7785615840810bfa85e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "Filter9c78b2a88622ebd03cd2",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Calculation Group positivt tecken",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "Name"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Positivt tecken'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group positivt tecken"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter682d933a0ca2ab16dd72",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "Månad med senast stängda månad 11:e"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter448b7fdf6744e92936a9",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PNLStructure",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "PNLDescr"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'TB1 Driftnetto'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'TB2 Omkostnader'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PNLStructure"
+                        }
+                      },
+                      "Property": "PNLDescr"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterbd1910280e86d521e9c8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter1fc3ec184c82604d7af4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PNLStructure"
+                        }
+                      },
+                      "Property": "PNLDescr"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterd293fc2a6c573f18c5df",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg helår-1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter300a5fab8111d82a88d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter7cd053d0bb304fb73845",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter1dbc7d3751ba8b81ecc8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1 ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "3d4968fea38036282c8d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8db7a54a4b6e719a2b24",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ba4c57c8c6de86d97978",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2 helår"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "gauge",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "432ce9a096b3703a1eaf": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "Filterc4ec1caf89eded4cc1d8",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Konto",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "k"
+                                    }
+                                  },
+                                  "Property": "RRLev1Namn"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Kostnader Underhåll'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev1Namn"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter9c78b2a88622ebd03cd2",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Calculation Group positivt tecken",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "Name"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Positivt tecken'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group positivt tecken"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter682d933a0ca2ab16dd72",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "Månad med senast stängda månad 11:e"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterbd1910280e86d521e9c8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterd293fc2a6c573f18c5df",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg helår-1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter300a5fab8111d82a88d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter7cd053d0bb304fb73845",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter1dbc7d3751ba8b81ecc8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1 ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "d1237d80e766826adfac",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fb20163f182856a57432",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "063fb2267da40554c11d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2 helår"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "gauge",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "0f843523aaa8da176050": {
+            "singleVisual": {
+              "visualType": "bookmarkNavigator",
+              "objects": {}
+            }
+          },
+          "bee4660b398be69001e0": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b02435c33760db312578",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "v",
+                        "Entity": "Välj jämförelsemätvärde Finans",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "v"
+                                      }
+                                    },
+                                    "Property": "Mätvärde med standard"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Välj jämförelsemätvärde Finans"
+                        }
+                      },
+                      "Property": "Mätvärde med standard"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "1c222e6fb912f594114f",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Välj mätvärde Jämförelsemätvärde2"
+                        }
+                      },
+                      "Property": "Jämförelsemätvärde2"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Välj mätvärde Jämförelsemätvärde2"
+                        }
+                      },
+                      "Property": "Jämförelsemätvärde2"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "fc0eff402d1aa93b2d57": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a0462b77f8dabcb2c16c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Valt datumintervall ÅTD"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "59d732bd284747e6851e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "e53d5bedc3bbbe687682",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Kalender",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "k"
+                                      }
+                                    },
+                                    "Property": "Månad med senast stängda månad 11:e"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "Månad med senast stängda månad 11:e"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "Filter0b6230f8535d41c3120c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group positivt tecken"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 1
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "k",
+                                "Entity": "Kalender",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "k"
+                                            }
+                                          },
+                                          "Property": "Månad med senast stängda månad 11:e"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Senast stängda månad'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "Månad med senast stängda månad 11:e"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "77d9c85f24404aa13fd9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "Filter8d412a2da4c395cc94a3",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Konto",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "k"
+                                    }
+                                  },
+                                  "Property": "RRLev1Namn"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Kostnader Media'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev1Namn"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "7f6ce43b2837c4035918",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Inforuta 2"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "080a707224b73bc103ad": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "Filter3a35cc109b6347764a63",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Konto",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "k"
+                                    }
+                                  },
+                                  "Property": "RRLev1Namn"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Kostnader Media'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev1Namn"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "c087bbd90af859553d66",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Inforuta 1"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {}
+            }
+          },
+          "cf92b926f3316168e7e1": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "Filter52396edcf39ebcd5459e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PNLStructure"
+                        }
+                      },
+                      "Property": "PNLDescr"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterd8ec0d18c97985909ac1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group positivt tecken"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterce41c243d22652744caf",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Konto",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "k"
+                                    }
+                                  },
+                                  "Property": "RRLev1Namn"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Kostnader Media'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev1Namn"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "Filter6789e1a250a3bbb7e305",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter8e2f0d4160e5b18a21b4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "KontoNr"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter080ceb25ca0ae92aa3e2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Valt konto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "Filterd42e9f839f919d8944e9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "Konto2"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterc018e0c90a6086aad00d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev3Namn"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "Filterad54f2a682a07aa2b300",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "Konto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "Filterb10d4ac2175439d83896",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall ÅTD"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "waterfallChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev3Namn"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "aa94ee8a0f7bb0606912": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "Filter52396edcf39ebcd5459e",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PNLStructure",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "PNLDescr"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Intäkter'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Intäkter totalt'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Kostnader för varor, material och vissa köpta tjänster'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'TB1 Driftnetto'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PNLStructure"
+                        }
+                      },
+                      "Property": "PNLDescr"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterd8ec0d18c97985909ac1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group positivt tecken"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterce41c243d22652744caf",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev1Namn"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "Filter6789e1a250a3bbb7e305",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter8e2f0d4160e5b18a21b4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "KontoNr"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter080ceb25ca0ae92aa3e2",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Valt konto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "Filterd42e9f839f919d8944e9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "Konto2"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterc018e0c90a6086aad00d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev3Namn"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "Filterad54f2a682a07aa2b300",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "Konto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "Filterb10d4ac2175439d83896",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall ÅTD"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "waterfallChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev1Namn"
+                    }
+                  }
+                ]
+              },
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "f425b3e87bf6e7020507": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "Filtera50f6bede69ce7bdaf4f",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Kalender",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "And": {
+                            "Left": {
+                              "Comparison": {
+                                "ComparisonKind": 2,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "k"
+                                      }
+                                    },
+                                    "Property": "RelativMånad"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "-12L"
+                                  }
+                                }
+                              }
+                            },
+                            "Right": {
+                              "Comparison": {
+                                "ComparisonKind": 4,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "k"
+                                      }
+                                    },
+                                    "Property": "RelativMånad"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "10L"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "RelativMånad"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterd8ec0d18c97985909ac1",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "c",
+                        "Entity": "Calculation Group positivt tecken",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "c"
+                                    }
+                                  },
+                                  "Property": "Name"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Positivt tecken'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Calculation Group positivt tecken"
+                        }
+                      },
+                      "Property": "Name"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterce41c243d22652744caf",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "k",
+                        "Entity": "Konto",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "k"
+                                    }
+                                  },
+                                  "Property": "RRLev1Namn"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Kostnader Media'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "RRLev1Namn"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter752de33bdd7ab8189461",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Konto"
+                        }
+                      },
+                      "Property": "Konto2"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter492023502d73bd829ab1",
+                  "type": "Categorical",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "p",
+                        "Entity": "PNLStructure",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "In": {
+                            "Expressions": [
+                              {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Source": "p"
+                                    }
+                                  },
+                                  "Property": "PNLDescr"
+                                }
+                              }
+                            ],
+                            "Values": [
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Intäkter totalt'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Kostnader för varor, material och vissa köpta tjänster'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'TB1 Driftnetto'"
+                                  }
+                                }
+                              ],
+                              [
+                                {
+                                  "Literal": {
+                                    "Value": "'Intäkter'"
+                                  }
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "PNLStructure"
+                        }
+                      },
+                      "Property": "PNLDescr"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterd5a97d359299ad21ed08",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "T0"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filterb19da1b22dc99e0c4454",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "T1"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filter290c172608c53b330989",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "T2"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filtere38947b893e1dbd01b6f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1 ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "Filteradd865101de5870317e9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Uppskattade bokningar från beställarlistan ÅTD"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "e6e157fa402e22bfc9e4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "År"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4bd5360144107d727ef3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "Månad"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "66c932c532236a5d1460",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde1"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "81a145f98221d417553f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Beställarlistan ÅTD"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "00d2badb36fc1a4226e8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Jämförelsevärde2"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredColumnChart",
+              "objects": {},
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "År"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "Månad"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "323757fc0c6057bb7802": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "0e814f8d338cb622a24a": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "6f8b77cd4206885539c2": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "228c9358720322084566": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "fe387646c2e801008936": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "faeea09ae36d99581868": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "3dcff7c112d0095a17c4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "3831a8a5ccaff5f10632",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "v",
+                        "Entity": "Välj jämförelsemätvärde Finans",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Not": {
+                            "Expression": {
+                              "Comparison": {
+                                "ComparisonKind": 0,
+                                "Left": {
+                                  "Column": {
+                                    "Expression": {
+                                      "SourceRef": {
+                                        "Source": "v"
+                                      }
+                                    },
+                                    "Property": "Mätvärde med standard"
+                                  }
+                                },
+                                "Right": {
+                                  "Literal": {
+                                    "Value": "null"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Välj jämförelsemätvärde Finans"
+                        }
+                      },
+                      "Property": "Mätvärde med standard"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "70f020e9a9bb74ee7a2c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Välj mätvärde Jämförelsemätvärde1"
+                        }
+                      },
+                      "Property": "Jämförelsemätvärde1"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Välj mätvärde Jämförelsemätvärde1"
+                        }
+                      },
+                      "Property": "Jämförelsemätvärde1"
+                    }
+                  }
+                ]
+              },
+              "expansionStates": [
+                {
+                  "roles": [
+                    "Values"
+                  ],
+                  "levels": [
+                    {
+                      "queryRefs": [
+                        "Välj mätvärde Jämförelsemätvärde1.Jämförelsemätvärde1"
+                      ],
+                      "isCollapsed": true,
+                      "isPinned": true
+                    }
+                  ],
+                  "root": {
+                    "identityValues": null
+                  }
+                }
+              ]
+            }
+          },
+          "e24a4ce2d8baafa11ff5": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "78c8b65ac8e558231ed0": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

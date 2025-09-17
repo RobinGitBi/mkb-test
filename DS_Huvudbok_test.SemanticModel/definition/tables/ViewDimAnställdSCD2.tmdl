@@ -66,19 +66,6 @@ table ViewDimAnställdSCD2
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
-	column ' Tillträde SCD2 tom datum'
-		dataType: dateTime
-		formatString: yyyy-mm-dd
-		lineageTag: 9f306c6c-659b-405a-9bfa-29998e995fb1
-		summarizeBy: none
-		sourceColumn: " Tillträde SCD2 tom datum"
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
-		annotation PBI_FormatHint = {"isDateTimeCustom":true}
-
 	column Kön
 		dataType: string
 		lineageTag: 043e4647-34a2-4166-b643-84cae3a35520
@@ -126,6 +113,39 @@ table ViewDimAnställdSCD2
 		sourceColumn: Slag
 
 		annotation SummarizationSetBy = Automatic
+
+	column 'Tillträde SCD2 tom datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3232e7cb-9ea1-4211-b1cf-4ed6f44632a8
+		summarizeBy: none
+		sourceColumn: Tillträde SCD2 tom datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Tillträde SCD2 Justerad Datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3d895ed4-004e-4664-8b1d-3fc5640913c9
+		summarizeBy: none
+		sourceColumn: Tillträde SCD2 Justerad Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Tillträde SCD2 Justerad t.o.m. Datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 91868788-ca7d-4754-916d-d38d60094f3d
+		summarizeBy: none
+		sourceColumn: Tillträde SCD2 Justerad t.o.m. Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	partition ViewDimAnställdSCD2 = m
 		mode: import

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "fa8a0e605b4009feddf3",
+  "position": {
+    "x": 59.46714031971581,
+    "y": 134.92007104795738,
+    "z": 0,
+    "height": 349.12966252220247,
+    "width": 1012.8596802841919
+  },
+  "visual": {
+    "visualType": "lineClusteredColumnComboChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kalender"
+                    }
+                  },
+                  "Property": "MånadKort"
+                }
+              },
+              "queryRef": "Kalender.MånadKort",
+              "nativeQueryRef": "MånadKort",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Antal FTE Netto Fryst"
+                }
+              },
+              "queryRef": "Mätvärde.Antal FTE Netto Fryst",
+              "nativeQueryRef": "Antal FTE Netto Fryst"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Total lönekostnad Fryst"
+                }
+              },
+              "queryRef": "Mätvärde.Total lönekostnad Fryst",
+              "nativeQueryRef": "Total lönekostnad Fryst"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

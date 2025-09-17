@@ -1,0 +1,249 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "ReportSection742a7e8f3d50daf15e34",
+  "displayName": "Översikt",
+  "displayOption": "FitToPage",
+  "height": 900,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter27505532d7d07aaeb666",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "RelativtÅr"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "k",
+              "Entity": "Kalender",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "k"
+                        }
+                      },
+                      "Property": "RelativtÅr"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "-4L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "isHiddenInViewMode": true
+      },
+      {
+        "name": "Filter9c8466a51c898b96c7b8",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Konto"
+              }
+            },
+            "Property": "Konto"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      }
+    ],
+    "filterSortOrder": "Custom"
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#E6E6E6'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "1D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "184L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "3baa0234c2acb4601a8d",
+      "target": "f425b3e87bf6e7020507",
+      "type": "DataFilter"
+    },
+    {
+      "source": "59d732bd284747e6851e",
+      "target": "f425b3e87bf6e7020507",
+      "type": "NoFilter"
+    },
+    {
+      "source": "59d732bd284747e6851e",
+      "target": "77d9c85f24404aa13fd9",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f425b3e87bf6e7020507",
+      "target": "77d9c85f24404aa13fd9",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f425b3e87bf6e7020507",
+      "target": "faeea09ae36d99581868",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f425b3e87bf6e7020507",
+      "target": "c497984c94ab6700861c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f425b3e87bf6e7020507",
+      "target": "7d82e0c695abceca398d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f425b3e87bf6e7020507",
+      "target": "432ce9a096b3703a1eaf",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f425b3e87bf6e7020507",
+      "target": "6759c919e32e582a97f8",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f425b3e87bf6e7020507",
+      "target": "d7785615840810bfa85e",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f425b3e87bf6e7020507",
+      "target": "cf92b926f3316168e7e1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "f425b3e87bf6e7020507",
+      "target": "080a707224b73bc103ad",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cf92b926f3316168e7e1",
+      "target": "f425b3e87bf6e7020507",
+      "type": "DataFilter"
+    },
+    {
+      "source": "aa94ee8a0f7bb0606912",
+      "target": "d7785615840810bfa85e",
+      "type": "NoFilter"
+    },
+    {
+      "source": "aa94ee8a0f7bb0606912",
+      "target": "6759c919e32e582a97f8",
+      "type": "NoFilter"
+    },
+    {
+      "source": "aa94ee8a0f7bb0606912",
+      "target": "432ce9a096b3703a1eaf",
+      "type": "NoFilter"
+    },
+    {
+      "source": "aa94ee8a0f7bb0606912",
+      "target": "7d82e0c695abceca398d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "aa94ee8a0f7bb0606912",
+      "target": "c497984c94ab6700861c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cf92b926f3316168e7e1",
+      "target": "d7785615840810bfa85e",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cf92b926f3316168e7e1",
+      "target": "6759c919e32e582a97f8",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cf92b926f3316168e7e1",
+      "target": "432ce9a096b3703a1eaf",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cf92b926f3316168e7e1",
+      "target": "7d82e0c695abceca398d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cf92b926f3316168e7e1",
+      "target": "c497984c94ab6700861c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "aa94ee8a0f7bb0606912",
+      "target": "f425b3e87bf6e7020507",
+      "type": "DataFilter"
+    }
+  ]
+}

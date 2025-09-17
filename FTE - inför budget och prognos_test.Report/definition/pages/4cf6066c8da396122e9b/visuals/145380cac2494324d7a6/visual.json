@@ -1,0 +1,685 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "145380cac2494324d7a6",
+  "position": {
+    "x": 0,
+    "y": 304.04692082111438,
+    "z": 4000,
+    "height": 596.39972930295517,
+    "width": 1259.0660951951274,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Slag"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Slag",
+              "nativeQueryRef": "Admin/Skötsel",
+              "displayName": "Admin/Skötsel"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_Avlöning"
+                }
+              },
+              "queryRef": "Mätvärde.New_Avlöning",
+              "nativeQueryRef": "Bemanning",
+              "displayName": "Bemanning"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Anställningsnummer"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Anställningsnummer",
+              "nativeQueryRef": "Anställningsnummer"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Namn"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Namn",
+              "nativeQueryRef": "Namn1"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_Ålder"
+                }
+              },
+              "queryRef": "Mätvärde.New_Ålder",
+              "nativeQueryRef": "Ålder",
+              "displayName": "Ålder"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_Månadslön"
+                }
+              },
+              "queryRef": "Mätvärde.New_Månadslön",
+              "nativeQueryRef": "New_Månadslön"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_Tillägg230"
+                }
+              },
+              "queryRef": "Mätvärde.New_Tillägg230",
+              "nativeQueryRef": "New_Tillägg230"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_LönetilläggAntalMånader"
+                }
+              },
+              "queryRef": "Mätvärde.New_LönetilläggAntalMånader",
+              "nativeQueryRef": "New_LönetilläggAntalMånader"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_Timlön"
+                }
+              },
+              "queryRef": "Mätvärde.New_Timlön",
+              "nativeQueryRef": "New_Timlön"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_RapporteradeTimmar"
+                }
+              },
+              "queryRef": "Mätvärde.New_RapporteradeTimmar",
+              "nativeQueryRef": "New_RapporteradeTimmar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_AntalMånader2"
+                }
+              },
+              "queryRef": "Mätvärde.New_AntalMånader2",
+              "nativeQueryRef": "New_AntalMånader2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Befattning"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Befattning",
+              "nativeQueryRef": "Befattning"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_Sysselsättningsgrad"
+                }
+              },
+              "queryRef": "Mätvärde.New_Sysselsättningsgrad",
+              "nativeQueryRef": "New_Sysselsättningsgrad"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Kostnadsställe"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Kostnadsställe",
+              "nativeQueryRef": "Kostnadsställe"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_FTE"
+                }
+              },
+              "queryRef": "Mätvärde.New_FTE",
+              "nativeQueryRef": "New_FTE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Anställningsdatum"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Anställningsdatum",
+              "nativeQueryRef": "Anställningsdatum"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Avgångsdatum"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Avgångsdatum",
+              "nativeQueryRef": "Avgångsdatum"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_AntalMånader"
+                }
+              },
+              "queryRef": "Mätvärde.New_AntalMånader",
+              "nativeQueryRef": "New_AntalMånader"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_SnittFTE"
+                }
+              },
+              "queryRef": "Mätvärde.New_SnittFTE",
+              "nativeQueryRef": "New_SnittFTE"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_TotalPrognosBruttolön exc. Soc, pension övr personkostn"
+                }
+              },
+              "queryRef": "Mätvärde.New_TotalPrognosBruttolön exc. Soc, pension övr personkostn",
+              "nativeQueryRef": "New_TotalPrognosBruttolön exc. Soc, pension övr personkostn"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ViewDimAnställdSCD2"
+                  }
+                },
+                "Property": "Anställningsnummer"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "229.5879086090098D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Konto.Konto2"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "117.12159753517706D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ViewDimAnställdSCD2.Namn"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "133.9869086764898D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ViewDimAnställdSCD2.Anställningsnummer"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.New_SnittFTE"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Översikt FTE'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Canvas'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ReportSection42fec21b3c573030583e'"
+                }
+              }
+            },
+            "titleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
+                }
+              }
+            },
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "foreground": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0067A5'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "982a2ae2014219350f06",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "New_FTE"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      }
+    ]
+  }
+}
