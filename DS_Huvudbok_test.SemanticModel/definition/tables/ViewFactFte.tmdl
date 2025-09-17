@@ -267,6 +267,28 @@ table ViewFactFte
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'SCD2 Justerad Ändring Datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 01f4a559-5fd9-4cb9-bb40-b79f043cab0a
+		summarizeBy: none
+		sourceColumn: SCD2 Justerad Ändring Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'SCD2 Justerad Ändring t.o.m. Datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4e5d0714-a995-4700-9f81-c8f891ec344e
+		summarizeBy: none
+		sourceColumn: SCD2 Justerad Ändring t.o.m. Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
 	partition ViewFactFte = m
 		mode: import
 		source =
