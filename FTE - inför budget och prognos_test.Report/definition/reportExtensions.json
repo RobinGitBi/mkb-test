@@ -71,7 +71,6 @@
           "name": "New_Ålder",
           "dataType": "Double",
           "expression": "\n\nVAR AsOf =\n    COALESCE ( MAX ( 'Kalender'[Datum] ), TODAY() )\nVAR Birth =\n    SELECTEDVALUE ( 'ViewDimAnställdSCD2'[Födelsedatum] )\n-- Gate: visa bara ålder där det finns fakta i nuvarande filterkontekst\nVAR HasFact =\n    NOT ISBLANK ( [New_FTEFöreJustering] )    -- ex: [New_FTE]\nRETURN\nIF (\n    NOT HasFact || ISBLANK ( Birth ),\n    BLANK(),\n    VAR Years  = YEAR ( AsOf ) - YEAR ( Birth )\n    VAR AsMD   = 100 * MONTH ( AsOf )  + DAY ( AsOf )\n    VAR BrMD   = 100 * MONTH ( Birth ) + DAY ( Birth )\n    RETURN Years - INT ( AsMD < BrMD )\n)\n",
-          "formatString": "General Number",
           "displayFolder": "FTE",
           "references": {
             "measures": [
@@ -86,28 +85,24 @@
           "name": "New_Månadslön",
           "dataType": "Double",
           "expression": "max(ViewFactFte[Månadslön])",
-          "formatString": "General Number",
           "displayFolder": "FTE"
         },
         {
           "name": "New_Tillägg230",
           "dataType": "Double",
           "expression": "\n\nVAR Result = max(ViewFactFte[Lönetillägg])\n\nRETURN IF(Result <> 0 , Result)",
-          "formatString": "General Number",
           "displayFolder": "FTE"
         },
         {
           "name": "New_Timlön",
           "dataType": "Double",
           "expression": "max(ViewFactFte[Timlön])",
-          "formatString": "General Number",
           "displayFolder": "FTE"
         },
         {
           "name": "New_LönetilläggAntalMånader",
           "dataType": "Double",
           "expression": "\n\nVAR HasFact = NOT ISBLANK ( [New_FTE] )              -- din faktamätare\nVAR Y         = SELECTEDVALUE ( 'Kalender'[År], YEAR ( TODAY() ) )\nVAR YearStart = DATE ( Y, 1, 1 )\nVAR YearEnd   = DATE ( Y, 12, 31 )\n\nVAR EmpStart =\n    MINX ( VALUES ( 'ViewFactFte'[Lönetillägg Startdatum] ),\n           DATEVALUE ( 'ViewFactFte'[Lönetillägg Startdatum] ) )\nVAR EmpEndRaw =\n    MAXX ( VALUES ( 'ViewFactFte'[Lönetillägg Slutdatum] ),\n           DATEVALUE ( 'ViewFactFte'[Lönetillägg Slutdatum]  ) )\nVAR EmpEnd = COALESCE ( EmpEndRaw, DATE ( 9999, 12, 31 ) )\n\nVAR S = MAX ( EmpStart, YearStart )\nVAR E = MIN ( EmpEnd,   YearEnd )\nVAR SameMonth = NOT ( YEAR (S) <> YEAR (E) || MONTH (S) <> MONTH (E) )\n\nVAR DaysS = DAY ( EOMONTH ( S, 0 ) )\nVAR DaysE = DAY ( EOMONTH ( E, 0 ) )\n\nVAR StartPart =\n    IF ( SameMonth, BLANK(), DIVIDE ( DaysS - DAY ( S ) + 1, DaysS ) )\nVAR EndPart   =\n    IF ( SameMonth, BLANK(), DIVIDE ( DAY ( E ), DaysE ) )\nVAR MiddleFullMonths =\n    MAX ( 0, DATEDIFF ( EOMONTH ( S, 0 ) + 1, EOMONTH ( E, -1 ), MONTH ) + 1 )\nVAR SameMonthFrac =\n    IF ( SameMonth, DIVIDE ( DAY ( E ) - DAY ( S ) + 1, DaysS ), 0 )\n\nVAR TotalMonths =\n    IF ( SameMonth, SameMonthFrac, StartPart + MiddleFullMonths + EndPart )\n\nVAR Result = \nIF (\n    NOT HasFact\n        || ISBLANK ( EmpStart )\n        || S > E\n        || TotalMonths <= 0,\n    BLANK(),                                      -- <- viktig: inga nollor\n    MIN ( 12, TotalMonths )\n)\n\nRETURN IF( Result <> 0, Result)\n",
-          "formatString": "General Number",
           "displayFolder": "FTE",
           "references": {
             "measures": [
@@ -122,7 +117,6 @@
           "name": "New_TotalPrognosBruttolön exc. Soc, pension övr personkostn",
           "dataType": "Double",
           "expression": "[New_Månadslön] * [New_AntalMånader]",
-          "formatString": "General Number",
           "displayFolder": "FTE",
           "references": {
             "measures": [
@@ -142,7 +136,6 @@
           "name": "Total",
           "dataType": "Double",
           "expression": "SUM(ViewFactFte[MånadsLönPlusTillägg])",
-          "formatString": "General Number",
           "displayFolder": "FTE"
         },
         {
@@ -164,7 +157,6 @@
           "name": "New_Avlöning1233",
           "dataType": "Double",
           "expression": "\n\nVAR Result = SELECTEDVALUE(ViewFactFte[Lönekategori])\n\nRETURN IF([New_FTEFöreJustering] <> 0, COALESCE(Result, \"Timavlönad & Månadsavlönad\"))",
-          "formatString": "General Number",
           "displayFolder": "FTE",
           "references": {
             "measures": [
@@ -179,7 +171,6 @@
           "name": "Measure",
           "dataType": "Double",
           "expression": "",
-          "formatString": "General Number",
           "displayFolder": "FTE",
           "references": {
             "unrecognizedReferences": true
@@ -224,7 +215,6 @@
           "name": "New_AntalFrånvarodagar",
           "dataType": "Double",
           "expression": "\r\n\r\nVAR Result = SUM(ViewFactFte[Dagar frånvaro justering])\r\n\r\nRETURN IF([New_FTEFöreJustering] <> 0 , Result)",
-          "formatString": "General Number",
           "displayFolder": "FTE",
           "references": {
             "measures": [
@@ -306,8 +296,27 @@
           "name": "New_Lön+LöneTillägg",
           "dataType": "Double",
           "expression": "max(ViewFactFte[MånadsLönPlusTillägg])",
-          "formatString": "General Number",
           "displayFolder": "FTE"
+        },
+        {
+          "name": "New_Check",
+          "dataType": "Double",
+          "expression": "IF([New_PrognosFte] <> [New_SnittFTE], \"Error\")",
+          "formatString": "General Number",
+          "displayFolder": "FTE",
+          "references": {
+            "measures": [
+              {
+                "schema": "extension",
+                "entity": "Mätvärde",
+                "name": "New_PrognosFte"
+              },
+              {
+                "entity": "Mätvärde",
+                "name": "New_SnittFTE"
+              }
+            ]
+          }
         }
       ]
     },

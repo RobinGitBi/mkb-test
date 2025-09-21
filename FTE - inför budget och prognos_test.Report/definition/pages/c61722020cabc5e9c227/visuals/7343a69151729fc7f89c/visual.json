@@ -322,6 +322,63 @@
             },
             {
               "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_FTEFöreJustering"
+                }
+              },
+              "queryRef": "Mätvärde.New_FTEFöreJustering",
+              "nativeQueryRef": "New_FTEFöreJustering"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_FTE"
+                }
+              },
+              "queryRef": "Mätvärde.New_FTE",
+              "nativeQueryRef": "New_FTE"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_SnittFTE"
+                }
+              },
+              "queryRef": "Mätvärde.New_SnittFTE",
+              "nativeQueryRef": "New_SnittFTE"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_Check"
+                }
+              },
+              "queryRef": "Mätvärde.New_Check",
+              "nativeQueryRef": "New_Check"
+            },
+            {
+              "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
@@ -400,14 +457,13 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Schema": "extension",
-                    "Entity": "Mätvärde"
+                    "Entity": "ViewDimAnställdSCD2"
                   }
                 },
-                "Property": "New_AntalMånader2"
+                "Property": "Anställningsnummer"
               }
             },
             "direction": "Ascending"

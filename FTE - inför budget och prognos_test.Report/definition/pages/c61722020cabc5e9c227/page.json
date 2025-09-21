@@ -5,9 +5,6 @@
   "displayOption": "FitToPage",
   "height": 900,
   "width": 1280,
-  "filterConfig": {
-    "filterSortOrder": "Custom"
-  },
   "objects": {
     "background": [
       {
