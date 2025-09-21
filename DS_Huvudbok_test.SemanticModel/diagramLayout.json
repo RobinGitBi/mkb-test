@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 1667.8167355264691,
-        "y": 75.205983728949434
+        "x": 1952.929711592506,
+        "y": 0
       },
       "nodes": [
         {
@@ -848,6 +848,19 @@
             "width": 234
           },
           "zIndex": 64
+        },
+        {
+          "location": {
+            "x": 3552.8908671176655,
+            "y": 0
+          },
+          "nodeIndex": "ViewDimLöneKategori",
+          "nodeLineageTag": "f9ec2f58-9ccb-40d1-b01b-b9da167fb6d7",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 65
         }
       ],
       "name": "All tables",

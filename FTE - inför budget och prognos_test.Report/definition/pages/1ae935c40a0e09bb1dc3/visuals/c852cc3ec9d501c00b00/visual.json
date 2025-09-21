@@ -6,8 +6,7 @@
     "y": 263.95348837209303,
     "z": 4000,
     "height": 596.51162790697674,
-    "width": 1259.3023255813953,
-    "tabOrder": 1000
+    "width": 1259.3023255813953
   },
   "visual": {
     "visualType": "tableEx",
@@ -311,10 +310,10 @@
                     "Entity": "Fryst FTE"
                   }
                 },
-                "Property": "Namn"
+                "Property": "Kostnadsställe"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }

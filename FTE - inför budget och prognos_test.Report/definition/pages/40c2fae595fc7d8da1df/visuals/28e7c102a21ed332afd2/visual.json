@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "2ca596cddb08b3b66fba",
+  "name": "28e7c102a21ed332afd2",
   "position": {
-    "x": 1153.1746031746031,
+    "x": 776.19047619047615,
     "y": 0,
-    "z": 15000,
-    "height": 58.730158730158728,
-    "width": 126.98412698412699,
-    "tabOrder": 15000
+    "z": 12000,
+    "height": 54.761904761904759,
+    "width": 242.85714285714286,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Kalender"
+                      "Entity": "Kostnadsställe"
                     }
                   },
-                  "Property": "Månad med senast stängda månad 11:e"
+                  "Property": "FunktionsId"
                 }
               },
-              "queryRef": "Kalender.Månad med senast stängda månad 11:e",
-              "nativeQueryRef": "Månad med senast stängda månad 11:e",
+              "queryRef": "Kostnadsställe.FunktionsId",
+              "nativeQueryRef": "FunktionsId",
               "active": true
             }
           ]
@@ -50,98 +50,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "k",
-                    "Entity": "Kalender",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "k"
-                                }
-                              },
-                              "Property": "Månad med senast stängda månad 11:e"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Januari'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Februari'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Mars'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'April'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Maj'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Juni'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Juli'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Senast stängda månad'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "selection": [
@@ -150,14 +59,14 @@
             "singleSelect": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "selectAllCheckboxEnabled": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -242,7 +151,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Månad'"
+                  "Value": "'Funktion'"
                 }
               }
             }
@@ -291,7 +200,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "NuvarandeMånad",
+      "groupName": "LGrpNamn",
       "fieldChanges": true,
       "filterChanges": true
     },
@@ -300,7 +209,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "21d800e2da3557d22c35",
+        "name": "4ba2eed43addaba576c9",
         "field": {
           "Column": {
             "Expression": {
@@ -349,7 +258,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       },
       {
         "name": "Filter0b6230f8535d41c3120c",

@@ -224,6 +224,60 @@ table ViewFactFteJusteradPrognos
 
 		annotation SummarizationSetBy = Automatic
 
+	column MånadslönEffektiv
+		dataType: double
+		lineageTag: 4567b8a7-d48b-4251-8ff7-3a71d391391d
+		summarizeBy: sum
+		sourceColumn: MånadslönEffektiv
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TimlönEffektiv
+		dataType: double
+		lineageTag: 0e42f435-84b0-46fc-bb02-371f8ff568d3
+		summarizeBy: sum
+		sourceColumn: TimlönEffektiv
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LönetilläggEffektiv
+		dataType: double
+		lineageTag: 4703b498-86a1-4d9b-a036-6f93c4bde435
+		summarizeBy: sum
+		sourceColumn: LönetilläggEffektiv
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MånadslönKälla
+		dataType: string
+		lineageTag: a19df206-454d-4eb1-b8b5-d95fa9de48fd
+		summarizeBy: none
+		sourceColumn: MånadslönKälla
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimlönKälla
+		dataType: string
+		lineageTag: d62c0494-a630-44b2-ab4c-19321563ad16
+		summarizeBy: none
+		sourceColumn: TimlönKälla
+
+		annotation SummarizationSetBy = Automatic
+
+	column LönetilläggKälla
+		dataType: string
+		lineageTag: 99e4bc9f-defd-484b-a911-2de8f26e80cf
+		summarizeBy: none
+		sourceColumn: LönetilläggKälla
+
+		annotation SummarizationSetBy = Automatic
+
 	partition ViewFactFteJusteradPrognos = m
 		mode: import
 		source =

@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "7343a69151729fc7f89c",
   "position": {
-    "x": 15.592149785698174,
+    "x": 0,
     "y": 270.26392961876832,
     "z": 4000,
     "height": 598.99842093390487,
-    "width": 1249.9706744868035,
-    "tabOrder": 1000
+    "width": 1249.9706744868035
   },
   "visual": {
     "visualType": "tableEx",
@@ -32,17 +31,18 @@
             },
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewDimAnställdSCD2"
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Tillträde SCD2 Justerad Datum"
+                  "Property": "New_LöneTillägg"
                 }
               },
-              "queryRef": "ViewDimAnställdSCD2.Tillträde SCD2 Justerad Datum",
-              "nativeQueryRef": "Tillträde SCD2 Justerad Datum"
+              "queryRef": "Mätvärde.New_LöneTillägg",
+              "nativeQueryRef": "New_LöneTillägg"
             },
             {
               "field": {
@@ -52,11 +52,11 @@
                       "Entity": "ViewDimAnställdSCD2"
                     }
                   },
-                  "Property": "Tillträde SCD2 Justerad t.o.m. Datum"
+                  "Property": "Kostnadsställe"
                 }
               },
-              "queryRef": "ViewDimAnställdSCD2.Tillträde SCD2 Justerad t.o.m. Datum",
-              "nativeQueryRef": "Tillträde SCD2 Justerad t.o.m. Datum"
+              "queryRef": "ViewDimAnställdSCD2.Kostnadsställe",
+              "nativeQueryRef": "Kostnadsställe"
             },
             {
               "field": {
@@ -67,26 +67,11 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_Avlöning1233"
+                  "Property": "New_PrognBruttolön"
                 }
               },
-              "queryRef": "Mätvärde.New_Avlöning1233",
-              "nativeQueryRef": "Lönekategori",
-              "displayName": "Lönekategori"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "ViewDimAnställdSCD2"
-                    }
-                  },
-                  "Property": "Anställningsform"
-                }
-              },
-              "queryRef": "ViewDimAnställdSCD2.Anställningsform",
-              "nativeQueryRef": "Anställningsform"
+              "queryRef": "Mätvärde.New_PrognBruttolön",
+              "nativeQueryRef": "New_PrognBruttolön"
             },
             {
               "field": {
@@ -110,20 +95,6 @@
                       "Entity": "ViewDimAnställdSCD2"
                     }
                   },
-                  "Property": "Kostnadsställe"
-                }
-              },
-              "queryRef": "ViewDimAnställdSCD2.Kostnadsställe",
-              "nativeQueryRef": "Kostnadsställe"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "ViewDimAnställdSCD2"
-                    }
-                  },
                   "Property": "Namn"
                 }
               },
@@ -135,15 +106,15 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
+                      "Schema": "extension",
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_Ålder"
+                  "Property": "New_PrognosMånadsLön"
                 }
               },
-              "queryRef": "Mätvärde.New_Ålder",
-              "nativeQueryRef": "Ålder",
-              "displayName": "Ålder"
+              "queryRef": "Mätvärde.New_PrognosMånadsLön",
+              "nativeQueryRef": "New_PrognosMånadsLön"
             },
             {
               "field": {
@@ -154,12 +125,11 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_Månadslön"
+                  "Property": "New_Ssysselsättningsgrad"
                 }
               },
-              "queryRef": "Mätvärde.New_Månadslön",
-              "nativeQueryRef": "Månadslön",
-              "displayName": "Månadslön"
+              "queryRef": "Mätvärde.New_Ssysselsättningsgrad",
+              "nativeQueryRef": "New_Ssysselsättningsgrad"
             },
             {
               "field": {
@@ -170,12 +140,11 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_Tillägg230"
+                  "Property": "New_LöneTilläggMånad"
                 }
               },
-              "queryRef": "Mätvärde.New_Tillägg230",
-              "nativeQueryRef": "Tillägg 230",
-              "displayName": "Tillägg 230"
+              "queryRef": "Mätvärde.New_LöneTilläggMånad",
+              "nativeQueryRef": "New_LöneTilläggMånad"
             },
             {
               "field": {
@@ -186,196 +155,25 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_LönetilläggAntalMånader"
+                  "Property": "New_Timmlön"
                 }
               },
-              "queryRef": "Mätvärde.New_LönetilläggAntalMånader",
-              "nativeQueryRef": "Tillägg 230 Antal Månader",
-              "displayName": "Tillägg 230 Antal Månader"
+              "queryRef": "Mätvärde.New_Timmlön",
+              "nativeQueryRef": "New_Timmlön"
             },
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mätvärde"
+                      "Entity": "Kostnadsställe"
                     }
                   },
-                  "Property": "New_RapporteradeTimmar"
+                  "Property": "LGrpNamn"
                 }
               },
-              "queryRef": "Mätvärde.New_RapporteradeTimmar",
-              "nativeQueryRef": "Rapportera Tid",
-              "displayName": "Rapportera Tid"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Schema": "extension",
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_Timlön"
-                }
-              },
-              "queryRef": "Mätvärde.New_Timlön",
-              "nativeQueryRef": "Timlön",
-              "displayName": "Timlön"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Schema": "extension",
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_SnittLönTimAnställd"
-                }
-              },
-              "queryRef": "Mätvärde.New_SnittLönTimAnställd",
-              "nativeQueryRef": "Snittlön Timanställd",
-              "displayName": "Snittlön Timanställd"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Schema": "extension",
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_PrognosFöreJusteringar FTE"
-                }
-              },
-              "queryRef": "Mätvärde.New_Prognos FTE",
-              "nativeQueryRef": "Prognos FTE före Justeringar",
-              "displayName": "Prognos FTE före Justeringar"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Schema": "extension",
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_AntalFrånvarodagar"
-                }
-              },
-              "queryRef": "Mätvärde.New_AntalFrånvarodagar",
-              "nativeQueryRef": "Antal Dagar Justerad Frånvaro Utfall",
-              "displayName": "Antal Dagar Justerad Frånvaro Utfall"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Schema": "extension",
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_AntalMånader2"
-                }
-              },
-              "queryRef": "Mätvärde.New_AntalMånader2",
-              "nativeQueryRef": "Antal Månader Enl. Kontrakt",
-              "displayName": "Antal Månader Enl. Kontrakt"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Schema": "extension",
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_FrånvaroJustering"
-                }
-              },
-              "queryRef": "Mätvärde.New_FrånvaroJustering",
-              "nativeQueryRef": "Justering Frånvaro",
-              "displayName": "Justering Frånvaro"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Schema": "extension",
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_PrognosFte"
-                }
-              },
-              "queryRef": "Mätvärde.New_PrognosFte",
-              "nativeQueryRef": "Prognos FTE",
-              "displayName": "Prognos FTE"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_FTEFöreJustering"
-                }
-              },
-              "queryRef": "Mätvärde.New_FTEFöreJustering",
-              "nativeQueryRef": "New_FTEFöreJustering"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_FTE"
-                }
-              },
-              "queryRef": "Mätvärde.New_FTE",
-              "nativeQueryRef": "New_FTE"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_SnittFTE"
-                }
-              },
-              "queryRef": "Mätvärde.New_SnittFTE",
-              "nativeQueryRef": "New_SnittFTE"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Schema": "extension",
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_Check"
-                }
-              },
-              "queryRef": "Mätvärde.New_Check",
-              "nativeQueryRef": "New_Check"
+              "queryRef": "Kostnadsställe.LGrpNamn",
+              "nativeQueryRef": "LGrpNamn"
             },
             {
               "field": {
@@ -408,36 +206,6 @@
             },
             {
               "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_Sysselsättningsgrad"
-                }
-              },
-              "queryRef": "Mätvärde.New_Sysselsättningsgrad",
-              "nativeQueryRef": "Sysselsättningsgrad",
-              "displayName": "Sysselsättningsgrad"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Schema": "extension",
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "Prognos Bruttolön exkl. soc."
-                }
-              },
-              "queryRef": "Mätvärde.Prognos Bruttolön exkl. soc.",
-              "nativeQueryRef": "Prognos Bruttolön exkl. soc."
-            },
-            {
-              "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
@@ -449,6 +217,51 @@
               },
               "queryRef": "ViewDimAnställdSCD2.Födelsedatum",
               "nativeQueryRef": "Födelsedatum"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_MedelFteFöreJustering"
+                }
+              },
+              "queryRef": "Mätvärde.New_PrognosFteFöreJustering",
+              "nativeQueryRef": "New_PrognosFteFöreJustering"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_MedelJusteradFrånvaro"
+                }
+              },
+              "queryRef": "Mätvärde.New_PrognosJusteradFrånvaro",
+              "nativeQueryRef": "New_PrognosJusteradFrånvaro"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_MedelFtePrognos"
+                }
+              },
+              "queryRef": "Mätvärde.New_MedelFtePrognos",
+              "nativeQueryRef": "New_MedelFtePrognos"
             }
           ]
         }
@@ -554,20 +367,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "116.80915190446646D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_LönetilläggAntalMånader"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "123.76704606635168D"
                 }
               }
@@ -582,13 +381,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "113.27487641572537D"
+                  "Value": "100.93071602931451D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mätvärde.New_Prognos FTE"
+            "metadata": "Mätvärde.New_PrognosJusteradFrånvaro"
           }
         },
         {
@@ -596,55 +395,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "98.5645133748292D"
+                  "Value": "100.52945628800457D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mätvärde.New_AntalFrånvarodagar"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "121.91112813186288D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.Prognos Bruttolön exkl. soc."
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "109.42746270179606D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_Avlöning1233"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "89.79606921696606D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_RapporteradeTimmar"
+            "metadata": "Mätvärde.New_PrognosFteFöreJustering"
           }
         }
       ],
@@ -671,140 +428,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "columnFormatting": [
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_Avlöning1233"
-          }
-        },
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_Timlön"
-          }
-        },
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_SnittLönTimAnställd"
-          }
-        },
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_Ålder"
           }
         }
       ]

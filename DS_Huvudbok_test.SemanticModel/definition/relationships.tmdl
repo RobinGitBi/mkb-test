@@ -170,3 +170,7 @@ relationship 2baf85d3-c51e-a63e-0915-0c330604077b
 	fromColumn: ViewFactFteJusteradPrognos.Kostnadsställe
 	toColumn: Kostnadsställe.KostnadsställeNr
 
+relationship 773cd86d-de8c-cd35-0dd5-49482fcb9832
+	fromColumn: ViewFactFteJusteradPrognos.LöneKategori
+	toColumn: ViewDimLöneKategori.Lönekategori
+
