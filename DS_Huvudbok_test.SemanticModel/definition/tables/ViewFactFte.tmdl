@@ -289,6 +289,23 @@ table ViewFactFte
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column AktualitetId
+		dataType: int64
+		formatString: 0
+		lineageTag: a8c31728-4593-436a-918b-6dd9078e2ea8
+		summarizeBy: count
+		sourceColumn: AktualitetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aktualitet
+		dataType: string
+		lineageTag: e9253ba0-d6b6-4ec5-b05e-8cfb637b3dcc
+		summarizeBy: none
+		sourceColumn: Aktualitet
+
+		annotation SummarizationSetBy = Automatic
+
 	partition ViewFactFte = m
 		mode: import
 		source =

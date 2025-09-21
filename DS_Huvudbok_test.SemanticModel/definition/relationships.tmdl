@@ -158,3 +158,15 @@ relationship d79cb88a-cfd0-43b2-2986-feac97f7da59
 	fromColumn: ViewFactFteFrånvaroJustering.Kostnadsställe
 	toColumn: Kostnadsställe.KostnadsställeNr
 
+relationship 5bb8d11e-0bef-71cd-3183-85bf1389c8b2
+	fromColumn: ViewFactFteJusteradPrognos.Datum
+	toColumn: Kalender.Datum
+
+relationship bb1f7676-9676-7c82-aac9-9430dc2c66d7
+	fromColumn: ViewFactFteJusteradPrognos.AnställdSk
+	toColumn: ViewDimAnställdSCD2.'Anställd SK'
+
+relationship 2baf85d3-c51e-a63e-0915-0c330604077b
+	fromColumn: ViewFactFteJusteradPrognos.Kostnadsställe
+	toColumn: Kostnadsställe.KostnadsställeNr
+
