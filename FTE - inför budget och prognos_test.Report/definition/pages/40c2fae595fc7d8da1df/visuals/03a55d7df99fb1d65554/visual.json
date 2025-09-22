@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "03a55d7df99fb1d65554",
   "position": {
-    "x": 208.13953488372093,
-    "y": 125.58139534883721,
+    "x": 12,
+    "y": 134,
     "z": 10000,
-    "height": 122.09302325581396,
-    "width": 193.02325581395348,
+    "height": 122,
+    "width": 193,
     "tabOrder": 8000
   },
   "visual": {
@@ -20,14 +20,15 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
+                      "Schema": "extension",
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Antal FTE Netto Fryst"
+                  "Property": "New_MedelFtePrognos"
                 }
               },
-              "queryRef": "Mätvärde.Antal FTE Netto Fryst",
-              "nativeQueryRef": "Antal FTE Netto Fryst"
+              "queryRef": "Mätvärde.New_MedelFtePrognos",
+              "nativeQueryRef": "New_MedelFtePrognos"
             }
           ]
         }
@@ -39,10 +40,11 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
+                    "Schema": "extension",
                     "Entity": "Mätvärde"
                   }
                 },
-                "Property": "Antal FTE Netto Fryst"
+                "Property": "New_MedelFtePrognos"
               }
             },
             "direction": "Descending"
@@ -92,13 +94,8 @@
             },
             "text": {
               "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "Format antal FTE nästa år"
+                "Literal": {
+                  "Value": "'Antal FTE Prognos'"
                 }
               }
             },

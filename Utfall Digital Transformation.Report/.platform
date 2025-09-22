@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Utfall Digital Transformation"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "6c1c6af8-a95d-4597-8eec-9aeb76cba2fb"
+  }
+}
