@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/reportExtension/1.0.0/schema.json",
+  "name": "extension",
+  "entities": [
+    {
+      "name": "Mätvärde",
+      "measures": [
+        {
+          "name": "T22025",
+          "dataType": "Double",
+          "expression": "CALCULATE([T2], KEEPFILTERS(Kalender[år] = 2025))",
+          "formatString": "#,0",
+          "displayFolder": "T2",
+          "references": {
+            "measures": [
+              {
+                "entity": "Mätvärde",
+                "name": "T2"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Utfall 2024",
+          "dataType": "Double",
+          "expression": "CALCULATE([utfall], KEEPFILTERS(Kalender[År] = 2024))",
+          "formatString": "#,0",
+          "displayFolder": "Beställarlistan",
+          "references": {
+            "measures": [
+              {
+                "entity": "Mätvärde",
+                "name": "Utfall"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Utfall 2025",
+          "dataType": "Double",
+          "expression": "CALCULATE([utfall], KEEPFILTERS(Kalender[År] = 2025))",
+          "formatString": "#,0",
+          "displayFolder": "Beställarlistan",
+          "references": {
+            "measures": [
+              {
+                "entity": "Mätvärde",
+                "name": "Utfall"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
