@@ -1,132 +1,106 @@
 ﻿USE [MKBBIDW]
 GO
-
-/****** Object:  View [dbo].[ViewFactFte]    Script Date: 2025-09-23 10:37:56 ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
 
-
-
-
-
-
-
-
-
-
-CREATE VIEW  [dbo].[ViewFactFte]
+CREATE VIEW [dbo].[ViewFactFte]
 AS
-WITH JusteradFrånvaro AS(
-select 
-f.AnstNr,
-CAST(CONCAT(YEAR(f.Datum), '-', MONTH(F.DATUM),'-', '01') AS DATE) AS Datum,
-sum(f.ObetaldDagJusterad) AS JusteringFrånvaroDagar
-from [MKBBIDW].fact.FteFrånvaroJustering F
-GROUP BY 
-f.AnstNr,
-YEAR(f.Datum),
-MONTH(F.DATUM)
-HAVING sum(f.ObetaldDagJusterad) <> 0
+WITH JusteradFrånvaro AS (
+    SELECT 
+        f.AnstNr,
+        CAST(CONCAT(YEAR(f.Datum), '-', MONTH(f.Datum), '-', '01') AS DATE) AS Datum,
+        SUM(f.ObetaldDagJusterad) AS JusteringFrånvaroDagar
+    FROM [MKBBIDW].fact.FteFrånvaroJustering f
+    GROUP BY f.AnstNr, YEAR(f.Datum), MONTH(f.Datum)
+    HAVING SUM(f.ObetaldDagJusterad) <> 0
 ),
 
-KolumnerInScoope as(
-SELECT 
-ff.*,
-jf.JusteringFrånvaroDagar,
-DATEDIFF(DAY, FF.Datum, EOMONTH(FF.DATUM))+1 AS AntalDagarMånad
-FROM [MKBBIDW].FACT.FTE FF
-LEFT JOIN JusteradFrånvaro JF ON FF.AnstNr = JF.AnstNr AND FF.Datum = JF.Datum
+KolumnerInScoope AS (
+    SELECT 
+        ff.*,
+        jf.JusteringFrånvaroDagar,
+        DATEDIFF(DAY, ff.Datum, EOMONTH(ff.Datum)) + 1 AS AntalDagarMånad
+    FROM [MKBBIDW].fact.FTE ff
+    LEFT JOIN JusteradFrånvaro jf 
+        ON ff.AnstNr = jf.AnstNr 
+       AND ff.Datum = jf.Datum
 ),
 
-JusteradFte as(
-SELECT *,
--(cast(round(cast(JusteringFrånvaroDagar as decimal(10,4)) / cast(AntalDagarMånad as decimal(10,4)),2) as decimal(10,2))) as JusteringFte
-from KolumnerInScoope)
+JusteradFte AS (
+    SELECT
+        kis.*,
+        -- Frånvaro -> FTE-justering (negativ kvot av månad)
+        - CAST(ROUND(
+              CAST(kis.JusteringFrånvaroDagar AS DECIMAL(10,4)) 
+            / CAST(kis.AntalDagarMånad       AS DECIMAL(10,4)), 2) AS DECIMAL(10,2)
+          ) AS JusteringFte,
 
-
-
-
-
+        -- ★ NYTT: Effektiv FTE i prognos (ScenarioSk=2) för Intermittent/Särskild visstid
+        CASE 
+            WHEN kis.ScenarioSk = 2 
+             AND kis.[Källa] = N'KontraktuellFte'
+             AND (kis.[Anställningsform] LIKE N'Intermittent%' 
+               OR kis.[Anställningsform] LIKE N'Särskild visstidsanställning%')
+            THEN 0.0 
+            ELSE kis.FTE 
+        END AS FTE_Eff
+    FROM KolumnerInScoope kis
+)
 
 SELECT 
-JF.AnställdsSk as 'Anställd SK',
-JF.ANSTNR AS Anställningsnummer,
-JF.KOSTNADSSTÄLLE AS Kostnadsställe,
-JF.ANSTÄLLNINGSFORM AS Anställningsform,
-CASE WHEN  JF.RapporteradeTimmar <> 0 THEN 'Timavlönad' ELSE 'Månadsavlönad' END AS Lönekategori,
-JF.DATUM AS Datum,
-JF.Källa AS 'FTE Beräkning',
-JF.KontraktStartMånad as 'Kontrakt Start Månad',
-JF.KontraktsSlutMånad as 'Kontrakt Slut Månad',
-JF.SYSSELSÄTTNINGSGRAD AS Sysselsättningsgrad,
-JF.RapporteradeTimmar as 'Rapporterade Timmar',
-CASE WHEN JF.KÄLLA = 'TimRapportering' THEN JF.NormalArbetsTid END AS 'Normal arbetstid',
-CAST(ROUND(JF.FTE,2) AS DECIMAL(10,2)) AS 'FTE före justering',
-COALESCE(round(cast(JF.JusteringFte as decimal(10,2)), 2),0) AS 'Frånvaro justering',
-CASE WHEN CAST(ROUND(JF.FTE,2) AS DECIMAL(10,2))  + COALESCE(cast(JF.JusteringFte as decimal(10,2)),0) < 0 THEN 0 ELSE CAST(ROUND(JF.FTE,2) AS DECIMAL(10,2))  + COALESCE(cast(JF.JusteringFte as decimal(10,2)),0) END AS FTE,
-COALESCE(JF.JusteringFrånvaroDagar,0) AS 'Dagar frånvaro justering',
-CASE WHEN JF.RapporteradeTimmar <> 0 THEN JF.ANTALDAGARMÅNAD END AS 'Dagar totalt',
-JF.TillTrädesDatum as 'SCD2 ändring datum',
-JF.TillTrädeTomDatum as 'SCD2 ändring tom datum',
-jf.TillträdesDatumJusteradScd2 'SCD2 Justerad Ändring Datum',
-JF.TillträdesTomDatumJusteradScd2 'SCD2 Justerad Ändring t.o.m. Datum',
-JF.Månadslön,
-JF.Lönetillägg,
-JF.MånadsLönPlusTillägg,
-JF.[Lönetillägg Startdatum],
-JF.[Lönetillägg Slutdatum],
-JF.Timlön,
-JF.[Timmar*Timlön],
-CASE 
-  WHEN COUNT(CASE WHEN JF.RapporteradeTimmar > 0 THEN 1 END)
-         OVER (PARTITION BY  JF.ANSTNR, YEAR(Datum)) = 0
-    THEN NULL
-  ELSE
-    AVG(CASE WHEN JF.RapporteradeTimmar > 0 THEN [Timmar*Timlön] END)
-      OVER (PARTITION BY JF.ANSTNR, YEAR(Datum))
-END AS 'Snittlön Timanställd',
-JF.ScenarioSk AS AktualitetId,
-JF.Scenario as Aktualitet
-FROM JusteradFte JF
+    jf.[AnställdsSk]                          AS 'Anställd SK',
+    jf.AnstNr                                  AS Anställningsnummer,
+    jf.[KostnadsStälle]                        AS Kostnadsställe,
+    jf.[AnställningsForm]                      AS Anställningsform,
+    CASE WHEN jf.[RapporteradeTimmar] <> 0 THEN N'Timavlönad' ELSE N'Månadsavlönad' END AS Lönekategori,
+    jf.Datum                                   AS Datum,
+    jf.[Källa]                                 AS 'FTE Beräkning',
+    jf.KontraktStartMånad                      AS 'Kontrakt Start Månad',
+    jf.KontraktsSlutMånad                      AS 'Kontrakt Slut Månad',
+    jf.[Sysselsättningsgrad]                   AS Sysselsättningsgrad,
+    jf.[RapporteradeTimmar]                    AS 'Rapporterade Timmar',
+    CASE WHEN jf.[Källa] = N'TimRapportering' THEN jf.NormalArbetsTid END AS 'Normal arbetstid',
 
---where year(JF2.datum) > 2024
---UNION ALL
---SELECT VB.AnställdSK,
---VB.AnställningsNummer AS AnställningsNr,
---VB.KostnadsStälle,
---VB.AnställningsForm,
---NULL,
---VB.Datum,
---VB.Source   AS FTEBeräkning,
---NULL,
---NULL, 
---NULL AS SysselSättningsGrad,
---NULL AS RapporteradeTimmar,
---NULL AS NormalArbetsTid,
---VB.Fte AS FTEFöreJustering,
---NULL AS FrånvaroJustering,
---VB.Fte AS FTE,
---NULL AS DagarFrånvaroJustering,
---NULL AS DagarTotalt,
---VB.TillTrädesDatum AS SCD2ÄndringDatum,
---VB.FrånTrädesDatum AS SCD2ÄndringTomDatum,
---NULL,
---NULL,
---NULL,
---NULL,
---NULL,
---NULL,
---NULL,
---NULL,
---NULL,
---NULL
---FROM [MKBBIDW].[dbo].[ViewFactFteBef2025] VB
---) F
---WHERE NOT (F.Anställningsform = 'Intermittent-/behovsanst' AND YEAR(F.DATUM) > 2024 AND F.[Rapporterade Timmar] = 0)
---GO
+    -- ▼ Använd FTE_Eff
+    CAST(ROUND(jf.FTE_Eff, 2) AS DECIMAL(10,2)) AS 'FTE före justering',
+    COALESCE(ROUND(CAST(jf.JusteringFte AS DECIMAL(10,2)), 2), 0) AS 'Frånvaro justering',
+    CASE 
+        WHEN CAST(ROUND(jf.FTE_Eff, 2) AS DECIMAL(10,2)) 
+           + COALESCE(CAST(jf.JusteringFte AS DECIMAL(10,2)), 0) < 0 
+        THEN 0 
+        ELSE CAST(ROUND(jf.FTE_Eff, 2) AS DECIMAL(10,2)) 
+           + COALESCE(CAST(jf.JusteringFte AS DECIMAL(10,2)), 0) 
+    END AS FTE,
+
+    COALESCE(jf.JusteringFrånvaroDagar, 0)     AS 'Dagar frånvaro justering',
+    CASE WHEN jf.[RapporteradeTimmar] <> 0 THEN jf.AntalDagarMånad END AS 'Dagar totalt',
+
+    jf.TillTrädesDatum                         AS 'SCD2 ändring datum',
+    jf.TillTrädeTomDatum                       AS 'SCD2 ändring tom datum',
+    jf.TillträdesDatumJusteradScd2             AS 'SCD2 Justerad Ändring Datum',
+    jf.TillträdesTomDatumJusteradScd2          AS 'SCD2 Justerad Ändring t.o.m. Datum',
+
+    jf.Månadslön,
+    jf.Lönetillägg,
+    jf.MånadsLönPlusTillägg,
+    jf.[Lönetillägg Startdatum],
+    jf.[Lönetillägg Slutdatum],
+    jf.Timlön,
+    jf.[Timmar*Timlön],
+
+    -- Snittlön Timanställd (oförändrat)
+    CASE 
+      WHEN COUNT(CASE WHEN jf.[RapporteradeTimmar] > 0 THEN 1 END)
+             OVER (PARTITION BY jf.AnstNr, YEAR(jf.Datum)) = 0
+        THEN NULL
+      ELSE
+        AVG(CASE WHEN jf.[RapporteradeTimmar] > 0 THEN jf.[Timmar*Timlön] END)
+          OVER (PARTITION BY jf.AnstNr, YEAR(jf.Datum))
+    END AS 'Snittlön Timanställd',
+
+    jf.ScenarioSk AS AktualitetId,
+    jf.Scenario   AS Aktualitet
+FROM JusteradFte jf
 GO
-
-
