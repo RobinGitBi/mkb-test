@@ -157,7 +157,7 @@ table ViewFactFte
 
 	column 'SCD2 ändring datum'
 		dataType: dateTime
-		formatString: Long Date
+		formatString: yyyy-mm-dd
 		lineageTag: 50b21abd-d10c-4c37-9913-b96e14517653
 		summarizeBy: none
 		sourceColumn: SCD2 ändring datum
@@ -166,9 +166,11 @@ table ViewFactFte
 
 		annotation UnderlyingDateTimeDataType = Date
 
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
 	column 'SCD2 ändring tom datum'
 		dataType: dateTime
-		formatString: Long Date
+		formatString: yyyy-mm-dd
 		lineageTag: 392a8178-97d0-4bc6-8713-1451dbaa87c2
 		summarizeBy: none
 		sourceColumn: SCD2 ändring tom datum
@@ -176,6 +178,8 @@ table ViewFactFte
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column Månadslön
 		dataType: double

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "2b1e342dbff3ac231fed",
+  "name": "97d66246f7dab55ce429",
   "position": {
-    "x": 292.57950530035333,
-    "y": 0,
-    "z": 16000,
-    "height": 54.858657243816246,
-    "width": 239.31095406360421,
-    "tabOrder": 11000
+    "x": 776.19047619047615,
+    "y": 55.555555555555557,
+    "z": 5000,
+    "height": 55.555555555555557,
+    "width": 242.85714285714286,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,21 +20,36 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewDimAnställdSCD2"
+                      "Entity": "Kostnadsställe"
                     }
                   },
-                  "Property": "Anställningsnummer Sökbar"
+                  "Property": "Kostnadsställe"
                 }
               },
-              "queryRef": "ViewDimAnställdSCD2.Anställningsnummer Sökbar",
-              "nativeQueryRef": "Anställningsnummer",
-              "active": true,
-              "displayName": "Anställningsnummer"
+              "queryRef": "Kostnadsställe.Kostnadsställe",
+              "active": true
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Kostnadsställe.Kostnadsställe"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "data": [
         {
@@ -45,26 +60,14 @@
                   "Value": "'Dropdown'"
                 }
               }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           }
         }
       ],
       "general": [
         {
-          "properties": {}
-        }
-      ],
-      "selection": [
-        {
           "properties": {
-            "selectAllCheckboxEnabled": {
+            "selfFilterEnabled": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -72,6 +75,11 @@
               }
             }
           }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {}
         }
       ],
       "items": [
@@ -193,29 +201,10 @@
       ]
     },
     "syncGroup": {
-      "groupName": "ANST_NR",
+      "groupName": "Kostnadsställe",
       "fieldChanges": true,
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "Filterb566ac109a7947be7ecd",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Filter Slicers"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      }
-    ]
   }
 }

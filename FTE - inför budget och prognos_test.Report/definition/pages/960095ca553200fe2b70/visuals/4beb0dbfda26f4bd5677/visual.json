@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "2b1e342dbff3ac231fed",
+  "name": "4beb0dbfda26f4bd5677",
   "position": {
-    "x": 292.57950530035333,
-    "y": 0,
-    "z": 16000,
-    "height": 54.858657243816246,
-    "width": 239.31095406360421,
-    "tabOrder": 11000
+    "x": 531.74603174603169,
+    "y": 55.555555555555557,
+    "z": 6000,
+    "height": 58.730158730158728,
+    "width": 239.68253968253967,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewDimAnställdSCD2"
+                      "Entity": "Kostnadsställe"
                     }
                   },
-                  "Property": "Anställningsnummer Sökbar"
+                  "Property": "Controllernamn"
                 }
               },
-              "queryRef": "ViewDimAnställdSCD2.Anställningsnummer Sökbar",
-              "nativeQueryRef": "Anställningsnummer",
-              "active": true,
-              "displayName": "Anställningsnummer"
+              "queryRef": "Kostnadsställe.Controllernamn",
+              "nativeQueryRef": "Controllernamn",
+              "active": true
             }
           ]
         }
@@ -45,13 +44,6 @@
                   "Value": "'Dropdown'"
                 }
               }
-            },
-            "isInvertedSelectionMode": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           }
         }
@@ -64,10 +56,24 @@
       "selection": [
         {
           "properties": {
+            "singleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "selectAllCheckboxEnabled": {
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -134,6 +140,20 @@
                   }
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Controller'"
+                }
+              }
             }
           }
         }
@@ -165,19 +185,6 @@
           }
         }
       ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "visualHeader": [
         {
           "properties": {
@@ -193,7 +200,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "ANST_NR",
+      "groupName": "Controllernamn",
       "fieldChanges": true,
       "filterChanges": true
     },
@@ -202,18 +209,71 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filterb566ac109a7947be7ecd",
+        "name": "c3b327a0cb81fc3a0b3e",
         "field": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Mätvärde"
+                "Entity": "Kalender"
               }
             },
-            "Property": "Filter Slicers"
+            "Property": "Månad med senast stängda månad 11:e"
           }
         },
         "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "k",
+              "Entity": "Kalender",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "k"
+                            }
+                          },
+                          "Property": "Månad med senast stängda månad 11:e"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "Filter0b6230f8535d41c3120c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculation Group positivt tecken"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical",
         "howCreated": "User"
       }
     ]

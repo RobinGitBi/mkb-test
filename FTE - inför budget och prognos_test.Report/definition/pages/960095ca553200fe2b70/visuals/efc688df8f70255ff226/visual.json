@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "03a55d7df99fb1d65554",
+  "name": "efc688df8f70255ff226",
   "position": {
-    "x": 12,
-    "y": 134,
-    "z": 10000,
-    "height": 122,
-    "width": 193,
-    "tabOrder": 6000
+    "x": 227.38551770809838,
+    "y": 133.83261899390934,
+    "z": 14000,
+    "height": 122.13850665463569,
+    "width": 255.971125648545,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,13 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Prognos FTE"
+                  "Property": "Prognos Bruttolönekostnad"
                 }
               },
-              "queryRef": "Mätvärde.Prognos FTE",
-              "nativeQueryRef": "Prognos FTE"
+              "queryRef": "Mätvärde.Prognos Bruttolönekostnad",
+              "nativeQueryRef": "Prognos Bruttolönekostnad exk. soc, pension",
+              "displayName": "Prognos Bruttolönekostnad exk. soc, pension",
+              "format": "#,0"
             }
           ]
         }
@@ -42,7 +44,7 @@
                     "Entity": "Mätvärde"
                   }
                 },
-                "Property": "Prognos FTE"
+                "Property": "Prognos Bruttolönekostnad"
               }
             },
             "direction": "Descending"
@@ -71,7 +73,14 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "0L"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -93,7 +102,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Prognos FTE '"
+                  "Value": "'Prognos Bruttolönekostnad'"
                 }
               }
             },
@@ -133,23 +142,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b9c5c4c1c791342d0563",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos FTE"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

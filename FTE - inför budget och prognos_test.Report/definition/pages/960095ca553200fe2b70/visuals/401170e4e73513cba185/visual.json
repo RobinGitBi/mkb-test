@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "2b1e342dbff3ac231fed",
+  "name": "401170e4e73513cba185",
   "position": {
-    "x": 292.57950530035333,
+    "x": 531.39931740614338,
     "y": 0,
-    "z": 16000,
-    "height": 54.858657243816246,
-    "width": 239.31095406360421,
-    "tabOrder": 11000
+    "z": 7000,
+    "height": 55.2901023890785,
+    "width": 239.59044368600684,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewDimAnställdSCD2"
+                      "Entity": "ViewFactFte"
                     }
                   },
-                  "Property": "Anställningsnummer Sökbar"
+                  "Property": "Lönekategori"
                 }
               },
-              "queryRef": "ViewDimAnställdSCD2.Anställningsnummer Sökbar",
-              "nativeQueryRef": "Anställningsnummer",
-              "active": true,
-              "displayName": "Anställningsnummer"
+              "queryRef": "ViewFactFte.Lönekategori",
+              "nativeQueryRef": "Lönekategori",
+              "active": true
             }
           ]
         }
@@ -58,7 +57,15 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
         }
       ],
       "selection": [
@@ -193,7 +200,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "ANST_NR",
+      "groupName": "Bemanning",
       "fieldChanges": true,
       "filterChanges": true
     },
@@ -214,6 +221,44 @@
           }
         },
         "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Mätvärde",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "m"
+                            }
+                          },
+                          "Property": "Filter Slicers"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "0L"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "User"
       }
     ]

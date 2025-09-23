@@ -3,7 +3,7 @@
   "name": "b9bf1ec5701b93bed84f",
   "position": {
     "x": 11.69411233927363,
-    "y": 257.27047146401986,
+    "y": 259.86916309496957,
     "z": 4000,
     "height": 611.99187908865326,
     "width": 1251.2700203022785,
@@ -101,18 +101,17 @@
             },
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mätvärde"
+                      "Entity": "ViewDimLöneKategori"
                     }
                   },
-                  "Property": "New_Avlöning"
+                  "Property": "Lönekategori"
                 }
               },
-              "queryRef": "Mätvärde.New_Avlöning",
-              "nativeQueryRef": "Lönekategori",
-              "displayName": "Lönekategori"
+              "queryRef": "ViewDimLöneKategori.Lönekategori",
+              "nativeQueryRef": "Lönekategori1"
             },
             {
               "field": {
@@ -151,70 +150,42 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_FrånvaroDagar"
+                  "Property": "Utfall FTE FrånvaroDagar"
                 }
               },
-              "queryRef": "Mätvärde.New_FrånvaroDagar",
-              "nativeQueryRef": "Dagar Justerad Frånvaro",
-              "displayName": "Dagar Justerad Frånvaro"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_Kontakt Start"
-                }
-              },
-              "queryRef": "Mätvärde.New_Kontakt Start",
-              "nativeQueryRef": "Kontakt Start Månad ",
-              "displayName": "Kontakt Start Månad "
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_Kontrakt Slut"
-                }
-              },
-              "queryRef": "Mätvärde.New_Kontrakt Slut",
-              "nativeQueryRef": "Kontrakt Slut Månad",
-              "displayName": "Kontrakt Slut Månad"
+              "queryRef": "Mätvärde.Utfall FTE FrånvaroDagar",
+              "nativeQueryRef": "Justerad Frånvaro Antal Dagar",
+              "displayName": "Justerad Frånvaro Antal Dagar"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewDimAnställdSCD2"
+                      "Entity": "ViewFactFte"
                     }
                   },
-                  "Property": "Anställningsdatum"
+                  "Property": "SCD2 ändring datum"
                 }
               },
-              "queryRef": "ViewDimAnställdSCD2.Anställningsdatum",
-              "nativeQueryRef": "Anställningsdatum"
+              "queryRef": "ViewFactFte.SCD2 ändring datum",
+              "nativeQueryRef": "Tillträde",
+              "displayName": "Tillträde"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewDimAnställdSCD2"
+                      "Entity": "ViewFactFte"
                     }
                   },
-                  "Property": "Avgångsdatum"
+                  "Property": "SCD2 ändring tom datum"
                 }
               },
-              "queryRef": "ViewDimAnställdSCD2.Avgångsdatum",
-              "nativeQueryRef": "Avgångsdatum"
+              "queryRef": "ViewFactFte.SCD2 ändring tom datum",
+              "nativeQueryRef": "Tillträde t.o.m.",
+              "displayName": "Tillträde t.o.m."
             },
             {
               "field": {
@@ -224,10 +195,10 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_RapporteradeTimmar"
+                  "Property": "Utfall Rapporterade Timmar"
                 }
               },
-              "queryRef": "Mätvärde.New_RapporteradeTimmar",
+              "queryRef": "Mätvärde.Utfall Rapporterade Timmar",
               "nativeQueryRef": "Rapporterade Timmar",
               "displayName": "Rapporterade Timmar"
             },
@@ -239,10 +210,10 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_NormalArbetsTid"
+                  "Property": "Utfall Normal Arbetstid"
                 }
               },
-              "queryRef": "Mätvärde.New_NormalArbetsTid",
+              "queryRef": "Mätvärde.Utfall Normal Arbetstid",
               "nativeQueryRef": "Normal Arbetstid",
               "displayName": "Normal Arbetstid"
             },
@@ -254,10 +225,10 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_Sysselsättningsgrad"
+                  "Property": "Utfall Sysselsättningsgrad"
                 }
               },
-              "queryRef": "Mätvärde.New_Sysselsättningsgrad",
+              "queryRef": "Mätvärde.Utfall Sysselsättningsgrad",
               "nativeQueryRef": "Sysselsättningsgrad",
               "displayName": "Sysselsättningsgrad"
             },
@@ -269,12 +240,12 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_FTEFöreJustering"
+                  "Property": "Utfall FTE Före Justering"
                 }
               },
-              "queryRef": "Mätvärde.New_FTEFöreJustering",
-              "nativeQueryRef": "Antal FTE Före Justering",
-              "displayName": "Antal FTE Före Justering"
+              "queryRef": "Mätvärde.Utfall FTE Före Justering",
+              "nativeQueryRef": "FTE Före Justering",
+              "displayName": "FTE Före Justering"
             },
             {
               "field": {
@@ -284,12 +255,12 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_FteJustering"
+                  "Property": "Utfall FTE Justering"
                 }
               },
-              "queryRef": "Mätvärde.New_FteJustering",
-              "nativeQueryRef": "Justering Frånvaro",
-              "displayName": "Justering Frånvaro"
+              "queryRef": "Mätvärde.Utfall FTE Justering",
+              "nativeQueryRef": "FTE Justering",
+              "displayName": "FTE Justering"
             },
             {
               "field": {
@@ -299,10 +270,10 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_FTE"
+                  "Property": "UTfall FTE"
                 }
               },
-              "queryRef": "Mätvärde.New_FTE",
+              "queryRef": "Mätvärde.UTfall FTE",
               "nativeQueryRef": "FTE",
               "displayName": "FTE"
             }
@@ -368,90 +339,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "84.42092867074064D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_FrånvaroDagar"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "84.52290994458282D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_FTEFöreJustering"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "77.91113038240634D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_FteJustering"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "79.91710484111192D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_RapporteradeTimmar"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "72.9176668463897D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_Kontakt Start"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "71.61832785291426D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_Kontrakt Slut"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "107.83282962915496D"
                 }
               }
@@ -502,6 +389,20 @@
           "selector": {
             "metadata": "ViewDimAnställdSCD2.Namn"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "102.72680824996323D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall FTE FrånvaroDagar"
+          }
         }
       ],
       "values": [
@@ -531,237 +432,6 @@
         }
       ],
       "columnFormatting": [
-        {
-          "properties": {
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_FrånvaroDagar"
-          }
-        },
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_FTEFöreJustering"
-          }
-        },
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_FteJustering"
-          }
-        },
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_FTE"
-          }
-        },
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_RapporteradeTimmar"
-          }
-        },
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_NormalArbetsTid"
-          }
-        },
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_Sysselsättningsgrad"
-          }
-        },
         {
           "properties": {
             "styleValues": {
@@ -797,6 +467,20 @@
         },
         {
           "properties": {
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Kalender.År"
+          }
+        },
+        {
+          "properties": {
             "styleTotal": {
               "expr": {
                 "Literal": {
@@ -825,7 +509,139 @@
             }
           },
           "selector": {
-            "metadata": "Mätvärde.New_Avlöning"
+            "metadata": "Mätvärde.Utfall Normal Arbetstid"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall Sysselsättningsgrad"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall FTE Före Justering"
+          }
+        },
+        {
+          "properties": {
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall FTE Justering"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.UTfall FTE"
           }
         }
       ]

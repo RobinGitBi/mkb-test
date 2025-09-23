@@ -4495,102 +4495,99 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_FrånvaroDagar =
+	measure 'Utfall FTE FrånvaroDagar' =
 			
 			
 			VAR Result = SUM('ViewFactFteFrånvaroJustering'[Antal Obetalda Dagar])
 			
-			RETURN IF(AND(Result <> 0, [New_FTEFöreJustering] <> 0), Result)
-		formatString: 0.00
-		displayFolder: FTE
+			RETURN IF(AND(Result <> 0, [Utfall FTE Före Justering] <> 0), Result)
+		formatString: #,##0.0
+		displayFolder: Utfall FTE
 		lineageTag: 23ec1d71-4442-4e59-b2d7-2a80988a7ddd
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_FTE =
+	measure 'UTfall FTE' =
 			
 			
-			VAR Result = sum(ViewFactFte[FTE])
+			VAR Result = CALCULATE(sum(ViewFactFte[FTE]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
 			
 			RETURN IF( Result <> 0, Result)
 		formatString: 0.00
-		displayFolder: FTE
+		displayFolder: Utfall FTE
 		lineageTag: 88cf9678-e9b2-4415-8c87-b0d8816a77e7
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_FteJustering =
+	measure 'Utfall FTE Justering' =
 			
 			
-			VAR Result = SUM(ViewFactFte[Frånvaro justering])
+			VAR Result = CALCULATE(SUM(ViewFactFte[Frånvaro justering]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
 			
-			RETURN IF(AND(Result <> 0, [New_FTEFöreJustering] <> 0), Result)
-		displayFolder: FTE
+			RETURN IF(AND(Result <> 0, [Utfall FTE Före Justering] <> 0), Result)
+		displayFolder: Utfall FTE
 		lineageTag: 6168f197-d65b-4815-a2be-464e837972eb
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_FTEFöreJustering =
+	measure 'Utfall FTE Före Justering' =
 			
 			
-			VAR Result = max(ViewFactFte[FTE före justering])
+			VAR Result = CALCULATE(max(ViewFactFte[FTE före justering]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
 			
 			RETURN IF(Result <> 0, Result)
 		formatString: 0.00
-		displayFolder: FTE
+		displayFolder: Utfall FTE
 		lineageTag: 332414b7-d875-4f07-a965-f0b0369dfb1f
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_KalenderDagarTotalt =
+	measure 'Utfall Kalenderdagar Totalt' =
 			
 			
+			VAR Result = CALCULATE(max(ViewFactFte[Dagar totalt]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
 			
-			
-			VAR Result = max(ViewFactFte[Dagar totalt])
-			
-			RETURN IF([New_RapporteradeTimmar] <> 0, Result)
-		formatString: 0.00
-		displayFolder: FTE
+			RETURN IF([Utfall Rapporterade Timmar] <> 0, Result)
+		displayFolder: Utfall FTE
 		lineageTag: f76c9593-9376-4395-93ed-fd496b0b7cca
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_RapporteradeTimmar =
+	measure 'Utfall Rapporterade Timmar' =
 			
 			
 			
-			VAR Result = SUM(ViewFactFte[Rapporterade Timmar])
+			VAR Result = CALCULATE(SUM(ViewFactFte[Rapporterade Timmar]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
 			
 			RETURN IF(Result <> 0, Result)
-		formatString: 0.00
-		displayFolder: FTE
+		formatString: #,##.0
+		displayFolder: Utfall FTE
 		lineageTag: 65dc50b5-6d0a-4a26-86a4-88cbd7625065
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_NormalArbetsTid =
+	measure 'Utfall Normal Arbetstid' =
 			
 			
-			VAR Result = SUM(ViewFactFte[Normal arbetstid])
+			VAR Result = CALCULATE(SUM(ViewFactFte[Normal arbetstid]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1 ))
 			
 			RETURN IF(Result <> 0, Result)
-		formatString: 0.00
-		displayFolder: FTE
+		formatString: #,##0
+		displayFolder: Utfall FTE
 		lineageTag: b52983f9-83f2-4c8b-a82c-5b965f2f1e8a
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_SnittFTE = ```
+	measure 'Utfall Medel FTE' = ```
 			
 			AVERAGEX (
 			    VALUES ( 'Kalender'[ÅrMånad] ),
-			    [New_FTE]
+			    [UTfall FTE]
 			)
 			
 			```
 		formatString: 0.00
-		displayFolder: FTE
+		displayFolder: Utfall FTE
 		lineageTag: 9b82b577-20c4-4bfd-b1db-26f0302dea45
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -4599,141 +4596,29 @@ table Mätvärde
 		displayFolder: FTE
 		lineageTag: 46e9c775-b13a-424c-83fc-33d99c2329b3
 
-	measure 'New_Kontakt Start' =
+	measure 'Utfall Sysselsättningsgrad' =
 			
 			
-			VAR Result = SELECTEDVALUE(ViewFactFte[Kontrakt Start Månad])
+			VAR Result = CALCULATE(MAX(ViewFactFte[Sysselsättningsgrad])/100, KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
 			
-			RETURN IF([New_FTEFöreJustering] <> 0, Result)
-		displayFolder: FTE
-		lineageTag: b82204ea-3698-4d6a-80ac-2d22188a38f3
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'New_Kontrakt Slut' =
-			
-			
-			VAR Result = SELECTEDVALUE(ViewFactFte[Kontrakt Slut Månad])
-			
-			RETURN IF([New_FTEFöreJustering] <> 0, Result)
-		displayFolder: FTE
-		lineageTag: d184ab2d-b656-4ad3-adec-58b9a1884d9f
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure New_Sysselsättningsgrad =
-			
-			
-			VAR Result = MAX(ViewFactFte[Sysselsättningsgrad])/100
-			
-			RETURN IF([New_FTEFöreJustering] <> 0, Result)
+			RETURN IF([Utfall FTE Före Justering] <> 0, Result)
 		formatString: 0%
-		displayFolder: FTE
+		displayFolder: Utfall FTE
 		lineageTag: 89de35e7-e635-41a0-a620-771d2b65d276
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure New_Avlöning =
-			
-			
-			VAR Result = SELECTEDVALUE(ViewFactFte[Lönekategori])
-			
-			RETURN IF([New_FTEFöreJustering] <> 0, Result)
-		displayFolder: FTE
-		lineageTag: 9aeb4f83-df2d-4ac3-811d-2ace0a2feedb
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure New_FrånvaroProcent = ```
+	measure 'Utfall Frånvaro Procent' = ```
 			
 			 
 			 
 			 VAR Result = max('ViewFactFteFrånvaroJustering'[Frånvaro Procent]) /100
 			
-			 RETURN IF(AND(Result <> 0, [New_FrånvaroDagar] <> 0), Result)
+			 RETURN IF(AND(Result <> 0, [Utfall FTE FrånvaroDagar] <> 0), Result)
 			```
 		formatString: 0%
-		displayFolder: FTE
+		displayFolder: Utfall FTE
 		lineageTag: bf15417c-099c-4713-9e5a-1dd62619f30c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure New_Ålder_Old = ```
-			
-			
-			VAR AsOf =
-			    COALESCE ( MAX ( 'Kalender'[Datum] ), TODAY() )
-			VAR Birth =
-			    SELECTEDVALUE ( 'ViewDimAnställdSCD2'[Födelsedatum] )
-			-- Gate: visa bara ålder där det finns fakta i nuvarande filterkontekst
-			VAR HasFact =
-			    NOT ISBLANK ( [New_FTEFöreJustering] )    -- ex: [New_FTE]
-			RETURN
-			IF (
-			    NOT HasFact || ISBLANK ( Birth ),
-			    BLANK(),
-			    VAR Years  = YEAR ( AsOf ) - YEAR ( Birth )
-			    VAR AsMD   = 100 * MONTH ( AsOf )  + DAY ( AsOf )
-			    VAR BrMD   = 100 * MONTH ( Birth ) + DAY ( Birth )
-			    RETURN Years - INT ( AsMD < BrMD )
-			)
-			
-			```
-		displayFolder: FTE
-		lineageTag: 4173eece-37b4-4129-8573-0dcf69e4af72
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure New_AntalMånader = ```
-			
-			
-			VAR HasFact = NOT ISBLANK ( [New_FTE] )              -- din faktamätare
-			VAR Y         = SELECTEDVALUE ( 'Kalender'[År], YEAR ( TODAY() ) )
-			VAR YearStart = DATE ( Y, 1, 1 )
-			VAR YearEnd   = DATE ( Y, 12, 31 )
-			
-			VAR EmpStart =
-			    MINX ( VALUES ( 'ViewDimAnställdSCD2'[Anställningsdatum] ),
-			           DATEVALUE ( 'ViewDimAnställdSCD2'[Anställningsdatum] ) )
-			VAR EmpEndRaw =
-			    MAXX ( VALUES ( 'ViewDimAnställdSCD2'[Avgångsdatum] ),
-			           DATEVALUE ( 'ViewDimAnställdSCD2'[Avgångsdatum] ) )
-			VAR EmpEnd = COALESCE ( EmpEndRaw, DATE ( 9999, 12, 31 ) )
-			
-			VAR S = MAX ( EmpStart, YearStart )
-			VAR E = MIN ( EmpEnd,   YearEnd )
-			VAR SameMonth = NOT ( YEAR (S) <> YEAR (E) || MONTH (S) <> MONTH (E) )
-			
-			VAR DaysS = DAY ( EOMONTH ( S, 0 ) )
-			VAR DaysE = DAY ( EOMONTH ( E, 0 ) )
-			
-			VAR StartPart =
-			    IF ( SameMonth, BLANK(), DIVIDE ( DaysS - DAY ( S ) + 1, DaysS ) )
-			VAR EndPart   =
-			    IF ( SameMonth, BLANK(), DIVIDE ( DAY ( E ), DaysE ) )
-			VAR MiddleFullMonths =
-			    MAX ( 0, DATEDIFF ( EOMONTH ( S, 0 ) + 1, EOMONTH ( E, -1 ), MONTH ) + 1 )
-			VAR SameMonthFrac =
-			    IF ( SameMonth, DIVIDE ( DAY ( E ) - DAY ( S ) + 1, DaysS ), 0 )
-			
-			VAR TotalMonths =
-			    IF ( SameMonth, SameMonthFrac, StartPart + MiddleFullMonths + EndPart )
-			
-			VAR Result = 
-			IF (
-			    NOT HasFact
-			        || ISBLANK ( EmpStart )
-			        || S > E
-			        || TotalMonths <= 0,
-			    BLANK(),                                      -- <- viktig: inga nollor
-			    MIN ( 12, TotalMonths )
-			)
-			
-			RETURN IF( Result <> 0, Result)
-			
-			```
-		displayFolder: FTE
-		lineageTag: 7211a0a5-3fa2-4587-9951-d50d1b6ab553
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -4778,7 +4663,7 @@ table Mätvärde
 			VAR Result = max(ViewFactFteJusteradPrognos[LönetilläggÅrsslut])
 			
 			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
-		formatString: 0
+		formatString: #,##0
 		displayFolder: Prognos FTE
 		lineageTag: 1399877f-ec24-4d71-b7b4-7b5b1c5a1d73
 
@@ -4789,7 +4674,7 @@ table Mätvärde
 			
 			VAR Result = max(ViewFactFteJusteradPrognos[LöneTilläggAntalMånader])
 			
-			RETURN IF(Result <> 0, Result)
+			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
 		formatString: 0.0
 		displayFolder: Prognos FTE
 		lineageTag: a43521ae-d74d-4e98-994d-56de2e3f9525
@@ -4803,7 +4688,7 @@ table Mätvärde
 			VAR Result = SUM(ViewFactFteJusteradPrognos[PrognosBruttolön])
 			
 			RETURN IF(and(Result <> 0,  [Prognos FTE Före Justering] <> 0), Result)
-		formatString: 0
+		formatString: #,##0
 		displayFolder: Prognos FTE
 		lineageTag: 02b03397-6bdb-4e3c-8d65-178433b8f33a
 
@@ -4814,8 +4699,8 @@ table Mätvärde
 			
 			VAR Result = max(ViewFactFteJusteradPrognos[MånadslönEffektiv])
 			
-			RETURN IF(Result <> 0, Result)
-		formatString: 0
+			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
+		formatString: #,##0
 		displayFolder: Prognos FTE
 		lineageTag: 7993c5ad-8e27-4b13-990e-52e4ac1300aa
 
@@ -4839,7 +4724,7 @@ table Mätvärde
 			VAR Result = SUM(ViewFactFteJusteradPrognos[RapporteradeTimmar])
 			
 			RETURN if(Result <> 0,Result)
-		formatString: 0.0
+		formatString: #,##0.0
 		displayFolder: Prognos FTE
 		lineageTag: bd36416e-4163-4436-aeed-1e8b6751ed2c
 
@@ -4906,7 +4791,7 @@ table Mätvärde
 			
 			VAR Result = max(ViewFactFteJusteradPrognos[TimlönEffektiv])
 			
-			RETURN IF(Result <> 0, Result)
+			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
 		displayFolder: Prognos FTE
 		lineageTag: f0610771-12d6-48a0-bcb5-8bc3eb07c61f
 

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "2b1e342dbff3ac231fed",
+  "name": "5079af0269434c6e94b1",
   "position": {
-    "x": 292.57950530035333,
-    "y": 0,
-    "z": 16000,
-    "height": 54.858657243816246,
-    "width": 239.31095406360421,
-    "tabOrder": 11000
+    "x": 300,
+    "y": 61.111111111111107,
+    "z": 10000,
+    "height": 54.761904761904759,
+    "width": 239.68253968253967,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,13 +23,12 @@
                       "Entity": "ViewDimAnställdSCD2"
                     }
                   },
-                  "Property": "Anställningsnummer Sökbar"
+                  "Property": "Namn"
                 }
               },
-              "queryRef": "ViewDimAnställdSCD2.Anställningsnummer Sökbar",
-              "nativeQueryRef": "Anställningsnummer",
-              "active": true,
-              "displayName": "Anställningsnummer"
+              "queryRef": "ViewDimAnställdSCD2.Namn",
+              "nativeQueryRef": "Namn1",
+              "active": true
             }
           ]
         }
@@ -45,8 +44,14 @@
                   "Value": "'Dropdown'"
                 }
               }
-            },
-            "isInvertedSelectionMode": {
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "selfFilterEnabled": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -54,11 +59,6 @@
               }
             }
           }
-        }
-      ],
-      "general": [
-        {
-          "properties": {}
         }
       ],
       "selection": [
@@ -193,7 +193,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "ANST_NR",
+      "groupName": "Namn",
       "fieldChanges": true,
       "filterChanges": true
     },
@@ -214,6 +214,44 @@
           }
         },
         "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Mätvärde",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "m"
+                            }
+                          },
+                          "Property": "Filter Slicers"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "0L"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "User"
       }
     ]

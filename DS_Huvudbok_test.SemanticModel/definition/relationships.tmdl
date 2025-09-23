@@ -174,3 +174,7 @@ relationship 773cd86d-de8c-cd35-0dd5-49482fcb9832
 	fromColumn: ViewFactFteJusteradPrognos.LöneKategori
 	toColumn: ViewDimLöneKategori.Lönekategori
 
+relationship 7e139d63-3571-e9d1-0053-77c5f1cd852a
+	fromColumn: ViewFactFte.Lönekategori
+	toColumn: ViewDimLöneKategori.Lönekategori
+

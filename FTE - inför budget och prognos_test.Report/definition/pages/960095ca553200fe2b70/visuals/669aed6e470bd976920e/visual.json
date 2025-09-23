@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "2b1e342dbff3ac231fed",
+  "name": "669aed6e470bd976920e",
   "position": {
-    "x": 292.57950530035333,
-    "y": 0,
-    "z": 16000,
-    "height": 54.858657243816246,
-    "width": 239.31095406360421,
-    "tabOrder": 11000
+    "x": 1019.047619047619,
+    "y": 55.555555555555557,
+    "z": 8000,
+    "height": 55.555555555555557,
+    "width": 260.3174603174603,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,13 +23,12 @@
                       "Entity": "ViewDimAnställdSCD2"
                     }
                   },
-                  "Property": "Anställningsnummer Sökbar"
+                  "Property": "Befattning"
                 }
               },
-              "queryRef": "ViewDimAnställdSCD2.Anställningsnummer Sökbar",
-              "nativeQueryRef": "Anställningsnummer",
-              "active": true,
-              "displayName": "Anställningsnummer"
+              "queryRef": "ViewDimAnställdSCD2.Befattning",
+              "nativeQueryRef": "Befattning",
+              "active": true
             }
           ]
         }
@@ -45,8 +44,14 @@
                   "Value": "'Dropdown'"
                 }
               }
-            },
-            "isInvertedSelectionMode": {
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "selfFilterEnabled": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -54,11 +59,6 @@
               }
             }
           }
-        }
-      ],
-      "general": [
-        {
-          "properties": {}
         }
       ],
       "selection": [
@@ -134,6 +134,13 @@
                   }
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Befattning'"
+                }
+              }
             }
           }
         }
@@ -193,7 +200,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "ANST_NR",
+      "groupName": "Titel",
       "fieldChanges": true,
       "filterChanges": true
     },
@@ -214,6 +221,44 @@
           }
         },
         "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Mätvärde",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "m"
+                            }
+                          },
+                          "Property": "Filter Slicers"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "0L"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "howCreated": "User"
       }
     ]

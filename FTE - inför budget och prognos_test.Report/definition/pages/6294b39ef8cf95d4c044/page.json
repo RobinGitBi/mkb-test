@@ -8,7 +8,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f6f86f841c9986747260",
+        "name": "cf6e3883425c7c1fec6c",
         "ordinal": 0,
         "field": {
           "Measure": {
@@ -17,7 +17,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "New_FrånvaroDagar"
+            "Property": "Utfall FTE FrånvaroDagar"
           }
         },
         "type": "Categorical",
@@ -419,12 +419,14 @@
     "filterSortOrder": "Custom"
   },
   "pageBinding": {
-    "name": "cf2187ecc4d8d81307fc",
+    "name": "89fdb45afeec259b15fc",
     "type": "Drillthrough",
     "parameters": [
       {
-        "name": "e50538db20ede70b1411",
-        "boundFilter": "f6f86f841c9986747260",
+        "name": "c92d207e421813c212a0",
+        "boundFilter": "cf6e3883425c7c1fec6c",
+        "asAggregation": false,
+        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Measure": {
             "Expression": {
@@ -432,7 +434,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "New_FrånvaroDagar"
+            "Property": "Utfall FTE FrånvaroDagar"
           }
         }
       }

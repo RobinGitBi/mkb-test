@@ -1,10 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "03a55d7df99fb1d65554",
+  "name": "7596a06e8722dfe6a31b",
   "position": {
     "x": 12,
     "y": 134,
-    "z": 10000,
+    "z": 9000,
     "height": 122,
     "width": 193,
     "tabOrder": 6000
@@ -133,23 +133,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b9c5c4c1c791342d0563",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos FTE"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

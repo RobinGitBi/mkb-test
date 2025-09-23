@@ -122,27 +122,11 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_FrånvaroDagar"
+                  "Property": "Utfall FTE FrånvaroDagar"
                 }
               },
-              "queryRef": "Mätvärde.New_FrånvaroDagar",
-              "nativeQueryRef": "Dagar Justerad Frånvaro",
-              "displayName": "Dagar Justerad Frånvaro"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_FrånvaroProcent"
-                }
-              },
-              "queryRef": "Mätvärde.New_FrånvaroProcent",
-              "nativeQueryRef": "Frånvaro %",
-              "displayName": "Frånvaro %"
+              "queryRef": "Mätvärde.Utfall FTE FrånvaroDagar",
+              "nativeQueryRef": "Utfall FTE FrånvaroDagar"
             },
             {
               "field": {
@@ -168,10 +152,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "ViewFactFteFrånvaroJustering"
+                    "Entity": "ViewDimAnställdSCD2"
                   }
                 },
-                "Property": "Sjukskrivningsperiod"
+                "Property": "Anställningsnummer"
               }
             },
             "direction": "Ascending"
@@ -213,20 +197,6 @@
           },
           "selector": {
             "metadata": "Konto.Konto2"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "84.42092867074064D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_FrånvaroDagar"
           }
         },
         {
@@ -329,39 +299,6 @@
       "columnFormatting": [
         {
           "properties": {
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_FrånvaroDagar"
-          }
-        },
-        {
-          "properties": {
             "styleValues": {
               "expr": {
                 "Literal": {
@@ -391,39 +328,6 @@
           },
           "selector": {
             "metadata": "ViewDimAnställdSCD2.Anställningsform"
-          }
-        },
-        {
-          "properties": {
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.New_FrånvaroProcent"
           }
         }
       ]

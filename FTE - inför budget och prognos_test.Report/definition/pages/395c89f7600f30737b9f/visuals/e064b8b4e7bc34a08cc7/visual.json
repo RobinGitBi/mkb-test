@@ -23,11 +23,11 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "New_SnittFTE"
+                  "Property": "Utfall Medel FTE"
                 }
               },
-              "queryRef": "Mätvärde.New_SnittFTE",
-              "nativeQueryRef": "New_SnittFTE"
+              "queryRef": "Mätvärde.Utfall Medel FTE",
+              "nativeQueryRef": "Utfall Medel FTE"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Mätvärde"
                   }
                 },
-                "Property": "New_SnittFTE"
+                "Property": "Utfall Medel FTE"
               }
             },
             "direction": "Descending"
