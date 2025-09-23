@@ -7,7 +7,7 @@
     "z": 16000,
     "height": 54.858657243816246,
     "width": 239.31095406360421,
-    "tabOrder": 12000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,12 +23,13 @@
                       "Entity": "ViewDimAnställdSCD2"
                     }
                   },
-                  "Property": "Anställningsnummer"
+                  "Property": "Anställningsnummer Sökbar"
                 }
               },
-              "queryRef": "ViewDimAnställdSCD2.Anställningsnummer",
-              "nativeQueryRef": "Anställningsnummer1",
-              "active": true
+              "queryRef": "ViewDimAnställdSCD2.Anställningsnummer Sökbar",
+              "nativeQueryRef": "Anställningsnummer",
+              "active": true,
+              "displayName": "Anställningsnummer"
             }
           ]
         }

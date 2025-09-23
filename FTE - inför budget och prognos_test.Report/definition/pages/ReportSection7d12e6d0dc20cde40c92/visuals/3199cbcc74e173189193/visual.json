@@ -6,7 +6,8 @@
     "y": 120,
     "z": 22000,
     "height": 390,
-    "width": 1267.0648464163824
+    "width": 1267.0648464163824,
+    "tabOrder": 25000
   },
   "visual": {
     "visualType": "pivotTable",

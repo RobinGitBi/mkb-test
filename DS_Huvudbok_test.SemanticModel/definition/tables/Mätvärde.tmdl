@@ -4737,6 +4737,190 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Prognos FTE Före Justering' =
+			
+			
+			VAR Result = sum(ViewFactFteJusteradPrognos[MedelFTEFöreJustering])
+			
+			RETURN IF(Result <> 0, Result)
+		displayFolder: Prognos FTE
+		lineageTag: f0c0970b-5636-4b15-8dc7-e9fcde105583
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos FTE Justerad Frånvaro' =
+			
+			
+			VAR Result = SUM(ViewFactFteJusteradPrognos[MedelFTEFrånvaroJustering])
+			
+			RETURN IF(Result <> 0, Result)
+		displayFolder: Prognos FTE
+		lineageTag: cfde1891-8c46-4178-9a17-e7678073b23d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos FTE' =
+			
+			
+			VAR Result = SUM(ViewFactFteJusteradPrognos[MedelFTE])
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0.00
+		displayFolder: Prognos FTE
+		lineageTag: 8bfbba6c-f324-454c-b2c0-de0920c218eb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Lönetillägg' =
+			
+			
+			
+			VAR Result = max(ViewFactFteJusteradPrognos[LönetilläggÅrsslut])
+			
+			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
+		formatString: 0
+		displayFolder: Prognos FTE
+		lineageTag: 1399877f-ec24-4d71-b7b4-7b5b1c5a1d73
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Lönetillägg Antal Månader' =
+			
+			
+			VAR Result = max(ViewFactFteJusteradPrognos[LöneTilläggAntalMånader])
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0.0
+		displayFolder: Prognos FTE
+		lineageTag: a43521ae-d74d-4e98-994d-56de2e3f9525
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Bruttolönekostnad' =
+			
+			
+			
+			VAR Result = SUM(ViewFactFteJusteradPrognos[PrognosBruttolön])
+			
+			RETURN IF(and(Result <> 0,  [Prognos FTE Före Justering] <> 0), Result)
+		formatString: 0
+		displayFolder: Prognos FTE
+		lineageTag: 02b03397-6bdb-4e3c-8d65-178433b8f33a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Månadslön' =
+			
+			
+			VAR Result = max(ViewFactFteJusteradPrognos[MånadslönEffektiv])
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0
+		displayFolder: Prognos FTE
+		lineageTag: 7993c5ad-8e27-4b13-990e-52e4ac1300aa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Sysselsättningsgrad' =
+			
+			
+			VAR Result = max(ViewFactFteJusteradPrognos[SysselSättningsGradEff])
+			
+			RETURN IF(AND(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
+		formatString: 0%
+		displayFolder: Prognos FTE
+		lineageTag: 4ab24709-6976-4fdf-a4a2-7ac5e7c04807
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Rapporterade Timmar' =
+			
+			
+			VAR Result = SUM(ViewFactFteJusteradPrognos[RapporteradeTimmar])
+			
+			RETURN if(Result <> 0,Result)
+		formatString: 0.0
+		displayFolder: Prognos FTE
+		lineageTag: bd36416e-4163-4436-aeed-1e8b6751ed2c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Ålder' = ```
+			
+			
+			VAR AsOf =
+			    COALESCE ( MAX ( 'Kalender'[Datum] ), TODAY() )
+			VAR Birth =
+			    SELECTEDVALUE ( 'ViewDimAnställdSCD2'[Födelsedatum] )
+			-- Gate: visa bara ålder där det finns fakta i nuvarande filterkontekst
+			VAR HasFact =
+			    NOT ISBLANK ( [Prognos FTE Före Justering] )    -- ex: [New_FTE]
+			RETURN
+			IF (
+			    NOT HasFact || ISBLANK ( Birth ),
+			    BLANK(),
+			    VAR Years  = YEAR ( AsOf ) - YEAR ( Birth )
+			    VAR AsMD   = 100 * MONTH ( AsOf )  + DAY ( AsOf )
+			    VAR BrMD   = 100 * MONTH ( Birth ) + DAY ( Birth )
+			    RETURN Years - INT ( AsMD < BrMD )
+			)
+			
+			```
+		formatString: 0
+		displayFolder: Prognos FTE
+		lineageTag: b122c090-b757-43d9-b9d5-8eb058ecbfb7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Antal Månader Enligt Kontrakt' = ```
+			
+			
+			
+			VAR Result = 
+			max(ViewFactFteJusteradPrognos[AntalMånaderEnligtKontrakt])
+			
+			RETURN IF(and(Result <>0 , [Prognos FTE Före Justering] <> 0), Result)
+			```
+		formatString: 0.00
+		displayFolder: Prognos FTE
+		lineageTag: ed9e1400-f313-4b45-a02f-7eafdfdce725
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Antal Månader Efter Frånvaro Justering' =
+			
+			
+			VAR Result =
+			max(ViewFactFteJusteradPrognos[AntalMånaderEfterFrånvaroJustering])
+			
+			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
+		formatString: 0.00
+		displayFolder: Prognos FTE
+		lineageTag: b642ecbe-cb65-45e5-8bba-8906fcd8e0a9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Timlön' =
+			
+			
+			
+			VAR Result = max(ViewFactFteJusteradPrognos[TimlönEffektiv])
+			
+			RETURN IF(Result <> 0, Result)
+		displayFolder: Prognos FTE
+		lineageTag: f0610771-12d6-48a0-bcb5-8bc3eb07c61f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Notering' =
+			
+			
+			IF([Prognos FTE Före Justering] <>0 && ISBLANK([Prognos Månadslön]) && ISBLANK([Prognos Timlön]), "Saknas Löneuppgifter i AGDA")
+		displayFolder: Prognos FTE
+		lineageTag: 7a74e5a2-bc80-4807-b6b8-ed65dd5ead4c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mätvärde-dafc6aed-5a2f-4494-9ed3-cf1871eb8c79 = m
 		mode: import
 		source =

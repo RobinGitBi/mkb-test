@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "188bd33d3236c57dc83f",
   "position": {
-    "x": 1,
-    "y": 293,
+    "x": 11.69411233927363,
+    "y": 285.85607940446653,
     "z": 4000,
-    "height": 599,
-    "width": 1250,
-    "tabOrder": 14000
+    "height": 602.89645838032936,
+    "width": 1252.5693661177534,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "tableEx",
@@ -139,7 +139,8 @@
                 }
               },
               "queryRef": "ViewFactFteJusteradPrognos.SCD2Anställningsdatum",
-              "nativeQueryRef": "SCD2Anställningsdatum"
+              "nativeQueryRef": "Tillträde",
+              "displayName": "Tillträde"
             },
             {
               "field": {
@@ -153,7 +154,8 @@
                 }
               },
               "queryRef": "ViewFactFteJusteradPrognos.SCD2_AnställningsdatumTom",
-              "nativeQueryRef": "SCD2_AnställningsdatumTom"
+              "nativeQueryRef": "Tillträde t.o.m.",
+              "displayName": "Tillträde t.o.m."
             },
             {
               "field": {
@@ -168,22 +170,8 @@
                 }
               },
               "queryRef": "Mätvärde.New_Ålder_New",
-              "nativeQueryRef": "New_Ålder_New"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Schema": "extension",
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "New_LöneTilläggMånad"
-                }
-              },
-              "queryRef": "Mätvärde.New_LöneTilläggMånad",
-              "nativeQueryRef": "New_LöneTilläggMånad"
+              "nativeQueryRef": "Ålder",
+              "displayName": "Ålder"
             },
             {
               "field": {
@@ -198,7 +186,24 @@
                 }
               },
               "queryRef": "Mätvärde.New_PrognosMånadsLön",
-              "nativeQueryRef": "New_PrognosMånadsLön"
+              "nativeQueryRef": "Månadslön",
+              "displayName": "Månadslön"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Schema": "extension",
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "New_LöneTilläggMånad"
+                }
+              },
+              "queryRef": "Mätvärde.New_LöneTilläggMånad",
+              "nativeQueryRef": "Lönetillägg Antal Månader",
+              "displayName": "Lönetillägg Antal Månader"
             },
             {
               "field": {
@@ -213,7 +218,8 @@
                 }
               },
               "queryRef": "Mätvärde.New_LöneTtillägg",
-              "nativeQueryRef": "New_LöneTtillägg"
+              "nativeQueryRef": "Lönetillägg",
+              "displayName": "Lönetillägg"
             },
             {
               "field": {
@@ -228,7 +234,8 @@
                 }
               },
               "queryRef": "Mätvärde.NewTimmar",
-              "nativeQueryRef": "NewTimmar"
+              "nativeQueryRef": "Rapporterade Timmar",
+              "displayName": "Rapporterade Timmar"
             },
             {
               "field": {
@@ -243,7 +250,8 @@
                 }
               },
               "queryRef": "Mätvärde.New_Timmlön",
-              "nativeQueryRef": "New_Timmlön"
+              "nativeQueryRef": "Timlön",
+              "displayName": "Timlön"
             },
             {
               "field": {
@@ -258,7 +266,8 @@
                 }
               },
               "queryRef": "Mätvärde.New_Ssysselsättningsgrad",
-              "nativeQueryRef": "New_Ssysselsättningsgrad"
+              "nativeQueryRef": "Sysselsättningsgrad",
+              "displayName": "Sysselsättningsgrad"
             },
             {
               "field": {
@@ -273,7 +282,8 @@
                 }
               },
               "queryRef": "Mätvärde.New_AntalMånaderEnligtKontrakt",
-              "nativeQueryRef": "New_AntalMånaderEnligtKontrakt"
+              "nativeQueryRef": "Antal Månader Enligt Kontrakt",
+              "displayName": "Antal Månader Enligt Kontrakt"
             },
             {
               "field": {
@@ -288,7 +298,8 @@
                 }
               },
               "queryRef": "Mätvärde.New_AntalMånaderEfterFrånvaroJustering",
-              "nativeQueryRef": "New_AntalMånaderEfterFrånvaroJustering"
+              "nativeQueryRef": "Antal Månader Efter Frånvarojustering",
+              "displayName": "Antal Månader Efter Frånvarojustering"
             },
             {
               "field": {
@@ -303,7 +314,8 @@
                 }
               },
               "queryRef": "Mätvärde.New_PrognosFteFöreJustering",
-              "nativeQueryRef": "New_MedelFteFöreJustering"
+              "nativeQueryRef": "FTE Före Justering",
+              "displayName": "FTE Före Justering"
             },
             {
               "field": {
@@ -318,7 +330,8 @@
                 }
               },
               "queryRef": "Mätvärde.New_PrognosJusteradFrånvaro",
-              "nativeQueryRef": "New_MedelJusteradFrånvaro"
+              "nativeQueryRef": "Justerad Frånvaro",
+              "displayName": "Justerad Frånvaro"
             },
             {
               "field": {
@@ -333,7 +346,8 @@
                 }
               },
               "queryRef": "Mätvärde.New_MedelFtePrognos",
-              "nativeQueryRef": "New_MedelFtePrognos"
+              "nativeQueryRef": "Prognos FTE",
+              "displayName": "Prognos FTE"
             },
             {
               "field": {
@@ -348,7 +362,8 @@
                 }
               },
               "queryRef": "Mätvärde.New_PrognBruttolön",
-              "nativeQueryRef": "New_PrognBruttolön"
+              "nativeQueryRef": "Prognos Bruttolön",
+              "displayName": "Prognos Bruttolön"
             },
             {
               "field": {
@@ -363,7 +378,8 @@
                 }
               },
               "queryRef": "Mätvärde.RemarkMeasure",
-              "nativeQueryRef": "RemarkMeasure"
+              "nativeQueryRef": "Notering",
+              "displayName": "Notering"
             }
           ]
         }
@@ -449,6 +465,62 @@
           },
           "selector": {
             "metadata": "ViewDimLöneKategori.Lönekategori"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "83.32551836157836D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.New_LöneTilläggMånad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "79.91765861394003D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.NewTimmar"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "104.92420856535995D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.New_AntalMånaderEnligtKontrakt"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "102.34515477944221D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.New_AntalMånaderEfterFrånvaroJustering"
           }
         }
       ],

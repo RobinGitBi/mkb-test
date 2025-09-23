@@ -91,7 +91,7 @@ table ViewFactFteJusteradPrognos
 
 	column SCD2Anställningsdatum
 		dataType: dateTime
-		formatString: Long Date
+		formatString: yyyy-mm-dd
 		lineageTag: 75faea36-0a43-436f-b1f1-75541e8b1d28
 		summarizeBy: none
 		sourceColumn: SCD2Anställningsdatum
@@ -100,9 +100,11 @@ table ViewFactFteJusteradPrognos
 
 		annotation UnderlyingDateTimeDataType = Date
 
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
 	column SCD2_AnställningsdatumTom
 		dataType: dateTime
-		formatString: Long Date
+		formatString: yyyy-mm-dd
 		lineageTag: eaeb0242-bc3b-48a2-83cc-566bcc936b05
 		summarizeBy: none
 		sourceColumn: SCD2_AnställningsdatumTom
@@ -110,6 +112,8 @@ table ViewFactFteJusteradPrognos
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column ManådslönÅrsslut
 		dataType: double
