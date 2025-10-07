@@ -3,9 +3,8 @@ table 'Beställarlistan max frysdatum'
 	lineageTag: 80d707cd-170c-4bd9-959b-e2272c00d7f3
 
 	column 'Max frysdatum'
-		dataType: dateTime
+		dataType: string
 		isHidden
-		formatString: Long Date
 		lineageTag: e2cf0b8a-0919-4273-bcb6-13579bbd1163
 		summarizeBy: none
 		sourceColumn: Max frysdatum
@@ -13,8 +12,6 @@ table 'Beställarlistan max frysdatum'
 		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
 
 	partition 'Beställarlistan max frysdatum' = m
 		mode: import

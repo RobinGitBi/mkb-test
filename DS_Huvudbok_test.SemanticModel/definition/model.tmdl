@@ -28,7 +28,7 @@ queryGroup 'Frågefel – 2025-04-25 15:03:10'
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Mätvärde","Kalender","Huvudbok","Budget - for append","Ingående balans - for append","Yta per segment och kostnadsställe","Företag","Aktivitet","Konto","Kostnadsställe","Motpart","Funktion","Leverantör","Momskod","Momssystem","Projekt","Segment","Slag","Vertyp","Kund","PNLStructure","Uppföljning","KoddelLG","UBWLatestUpdate","Välj jämförelsemätvärde Finans","Beställarlistan","Beställarlistan for append","Välj mätvärde Jämförelsemätvärde standardknapp","Beställarlistan max frysdatum","Fastighet","FTE","Fryst FTE","FTE Prognos","Utf/Prognos Jmf","ViewFactFte","ViewDimAnställdSCD2","ViewFactFteFrånvaroJustering","ViewFactFteJusteradPrognos","ViewDimLöneKategori"]
+annotation PBI_QueryOrder = ["Mätvärde","Kalender","Huvudbok","Budget - for append","Ingående balans - for append","Yta per segment och kostnadsställe","Företag","Aktivitet","Konto","Kostnadsställe","Motpart","Funktion","Leverantör","Momskod","Momssystem","Projekt","Segment","Slag","Vertyp","Kund","PNLStructure","Uppföljning","KoddelLG","UBWLatestUpdate","Välj jämförelsemätvärde Finans","Beställarlistan","Beställarlistan for append","Välj mätvärde Jämförelsemätvärde standardknapp","Beställarlistan max frysdatum","Fastighet","FTE","Fryst FTE","FTE Prognos","Utf/Prognos Jmf","ViewFactFte","ViewDimAnställdSCD2","ViewFactFteFrånvaroJustering","ViewFactFteJusteradPrognos","ViewDimLöneKategori","ViewRLSKostnadsställe"]
 
 annotation __TEdtr = 1
 
@@ -99,10 +99,10 @@ ref table ViewDimAnställdSCD2
 ref table ViewFactFteFrånvaroJustering
 ref table ViewFactFteJusteradPrognos
 ref table ViewDimLöneKategori
+ref table ViewRLSKostnadsställe
 
-ref role Full
-ref role Limited
-ref role Controller
+ref role RLS
+ref role FullRLS
 
 ref perspective AdHoc
 

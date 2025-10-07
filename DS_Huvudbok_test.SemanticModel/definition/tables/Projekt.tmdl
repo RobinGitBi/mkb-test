@@ -819,6 +819,24 @@ table Projekt
 
 		annotation SummarizationSetBy = Automatic
 
+	column Försenad
+		dataType: int64
+		formatString: 0
+		lineageTag: d49a9376-772a-418a-91bc-72521280b71d
+		summarizeBy: none
+		sourceColumn: Försenad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sortering Gantt'
+		dataType: int64
+		formatString: 0
+		lineageTag: d8bfdb4a-01fd-4a2f-8dc4-9908e669a48c
+		summarizeBy: none
+		sourceColumn: Sortering Gantt
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Projekt-a418f071-8ccd-44f2-ae18-14a4e3839179 = m
 		mode: import
 		queryGroup: Dimensionstabeller

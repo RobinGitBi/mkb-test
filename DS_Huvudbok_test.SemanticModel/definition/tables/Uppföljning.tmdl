@@ -257,6 +257,54 @@ table Uppföljning
 
 		annotation SummarizationSetBy = Automatic
 
+	column Uppföljningsgrupp
+		dataType: string
+		lineageTag: 506aa543-cb5c-4f0f-a3f7-b0aaffac95da
+		summarizeBy: none
+		sourceColumn: Uppföljningsgrupp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppföljning3Nr
+		dataType: string
+		lineageTag: 1d913c9a-9561-4a6d-ac1b-6589e8744fe0
+		summarizeBy: none
+		sourceColumn: Uppföljning3Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppföljning3Namn
+		dataType: string
+		lineageTag: d82dcce8-b2c7-497e-9a60-0d1cc5490266
+		summarizeBy: none
+		sourceColumn: Uppföljning3Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnvändareId
+		dataType: string
+		lineageTag: 895e4720-d100-42c6-8d98-0906c605057e
+		summarizeBy: none
+		sourceColumn: AnvändareId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnvändareNamn
+		dataType: string
+		lineageTag: 081b0294-e560-4db1-93be-c2676320f01b
+		summarizeBy: none
+		sourceColumn: AnvändareNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppföljning3
+		dataType: string
+		lineageTag: 2b986271-11d7-41e6-8016-a2c3480fb890
+		summarizeBy: none
+		sourceColumn: Uppföljning3
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Uppföljning-cae5658f-13ec-4e4c-bcdb-f8d10f357726 = m
 		mode: import
 		queryGroup: Dimensionstabeller

@@ -178,3 +178,9 @@ relationship 7e139d63-3571-e9d1-0053-77c5f1cd852a
 	fromColumn: ViewFactFte.Lönekategori
 	toColumn: ViewDimLöneKategori.Lönekategori
 
+relationship 23cb9132-688e-1bd1-c26a-5022e366c506
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Kostnadsställe.KostnadsställeSK
+	toColumn: ViewRLSKostnadsställe.'Kostnadsställe SK'
+
