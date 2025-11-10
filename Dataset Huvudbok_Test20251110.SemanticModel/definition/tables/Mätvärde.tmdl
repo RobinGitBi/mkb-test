@@ -4246,6 +4246,71 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Framtida Beställningar Året - Nuläge' =
+			
+			
+			VAR Startx = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
+			
+			VAR Slutx  = EOMONTH(Startx, 0)
+			VAR YearEnd          = DATE ( YEAR ( TODAY() ), 12, 31 )
+			
+			RETURN
+			CALCULATE (
+			    [Beställarlistan],
+			    REMOVEFILTERS(Kalender),
+			    KEEPFILTERS(Kalender[Datum]> Slutx)
+			    // KEEPFILTERS ( Kalender[Datum] > Startx )
+			,    KEEPFILTERS('Beställarlistan'[Klar Senast] <= YearEnd)
+			)
+		formatString: #,##
+		displayFolder: Nya Från Dashboard
+		lineageTag: fc66b975-fa98-4a9e-8d5d-0184c5c1141e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Totalt (Utfall och Beställningar) - Nuläge' = [Utfall ÅTD] + [Beställningar Innevarande Månad - Nuläge]+[Framtida Beställningar Året - Nuläge]
+		formatString: #,##
+		displayFolder: Nya Från Dashboard
+		lineageTag: c007a419-d1f4-4109-8eb2-5ac3c527788b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Beställningar Innevarande Månad - Nuläge' = ```
+			
+			
+			VAR Startx = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
+			
+			VAR Slutx  = EOMONTH(Startx, 0)
+			
+			RETURN
+			CALCULATE (
+			    [Beställarlistan ÅTD visa endast framtida datum],
+			    REMOVEFILTERS(Kalender),
+			    KEEPFILTERS ( Kalender[Datum] >= Startx && Kalender[Datum] <= Slutx ),
+			    KEEPFILTERS('Beställarlistan'[Klar Senast] <= Slutx)
+			)
+			
+			```
+		formatString: #,##
+		displayFolder: Nya Från Dashboard
+		lineageTag: bce1643b-bf72-40ae-a013-bc1c486a40a9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff Helår - Nuläge' = IF(NOT ISBLANK([Totalt (Utfall och Beställningar) - Nuläge]) || not ISBLANK([Aktuell Prognos Helår]), [Totalt (Utfall och Beställningar) - Nuläge] -[Aktuell Prognos Helår])
+		formatString: #,##
+		displayFolder: Nya Från Dashboard
+		lineageTag: 1265e691-ba57-4ce8-aa37-82014fe53d9b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff% Helår - Nuläge' = DIVIDE([Totalt (Utfall och Beställningar)], [Aktuell Prognos Helår])
+		formatString: 0%
+		displayFolder: Nya Från Dashboard
+		lineageTag: baac31b6-1ac6-49f3-a16c-c58a94cfdf23
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mätvärde-dafc6aed-5a2f-4494-9ed3-cf1871eb8c79 = m
 		mode: import
 		source =
