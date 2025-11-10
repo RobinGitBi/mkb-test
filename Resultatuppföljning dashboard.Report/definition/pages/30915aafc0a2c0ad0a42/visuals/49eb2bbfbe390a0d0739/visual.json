@@ -52,7 +52,7 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Framtida Beställningar Året"
+                  "Property": "öl"
                 }
               },
               "queryRef": "Mätvärde.Framtida Beställningar Året",
@@ -72,7 +72,7 @@
                     "Entity": "Mätvärde"
                   }
                 },
-                "Property": "Framtida Beställningar Året"
+                "Property": "öl"
               }
             },
             "direction": "Ascending"
@@ -478,7 +478,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Diff Helår"
+            "Property": "öl3"
           }
         },
         "type": "Advanced",
@@ -495,7 +495,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Diff% Helår"
+            "Property": "öl4"
           }
         },
         "type": "Advanced",

@@ -1043,7 +1043,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Diff Helår"
+            "Property": "öl3"
           }
         },
         "type": "Advanced",
@@ -1060,7 +1060,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Diff% Helår"
+            "Property": "öl4"
           }
         },
         "type": "Advanced",
@@ -1215,7 +1215,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Totalt (Utfall och Beställningar)"
+            "Property": "öl2"
           }
         },
         "type": "Advanced",
@@ -1247,6 +1247,90 @@
               }
             },
             "Property": "Utfall fg år-1 ÅTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d6e6b404fa845a9e1d81",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "T1 helår"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fdde8086ec9fa11b1e5f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Framtida Beställningar Året"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a53540460ceee05e7f2b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Totalt (Utfall och Beställningar)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1d77ecaeaf093779f421",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff Helår"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0d07dd502308c33c0d83",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff% Helår"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "afa50d4f014fe158ca9b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff% T2 - T1 helår"
           }
         },
         "type": "Advanced"

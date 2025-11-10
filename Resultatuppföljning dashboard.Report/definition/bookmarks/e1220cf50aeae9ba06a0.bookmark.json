@@ -1200,7 +1200,7 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Diff Helår"
+                      "Property": "öl3"
                     }
                   },
                   "howCreated": 0
@@ -1216,7 +1216,7 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Diff% Helår"
+                      "Property": "öl4"
                     }
                   },
                   "howCreated": 0
@@ -1353,7 +1353,7 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Totalt (Utfall och Beställningar)"
+                      "Property": "öl2"
                     }
                   },
                   "howCreated": 0
@@ -1399,7 +1399,7 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Framtida Beställningar Året"
+                      "Property": "öl"
                     }
                   },
                   "howCreated": 0
@@ -1445,7 +1445,7 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Diff% T2 - T1 helår"
+                      "Property": "Öl5"
                     }
                   },
                   "howCreated": 0
@@ -3027,7 +3027,7 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Totalt (Utfall och Beställningar)"
+                      "Property": "öl2"
                     }
                   },
                   "howCreated": 0
@@ -3043,7 +3043,7 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Diff Helår"
+                      "Property": "öl3"
                     }
                   },
                   "howCreated": 0
@@ -3059,7 +3059,7 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Diff% Helår"
+                      "Property": "öl4"
                     }
                   },
                   "howCreated": 0
@@ -3075,7 +3075,7 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Framtida Beställningar Året"
+                      "Property": "öl"
                     }
                   },
                   "howCreated": 0

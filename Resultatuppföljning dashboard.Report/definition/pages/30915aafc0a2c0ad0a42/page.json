@@ -18,7 +18,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Framtida Beställningar Året"
+            "Property": "öl"
           }
         },
         "type": "Categorical",
@@ -457,7 +457,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Framtida Beställningar Året"
+            "Property": "öl"
           }
         }
       }

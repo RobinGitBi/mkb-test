@@ -460,7 +460,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Diff Helår"
+            "Property": "öl3"
           }
         },
         "type": "Advanced",
@@ -477,7 +477,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Diff% Helår"
+            "Property": "öl4"
           }
         },
         "type": "Advanced",

@@ -92,66 +92,6 @@
           }
         },
         {
-          "name": "Totalt (Utfall och Beställningar)",
-          "dataType": "Double",
-          "expression": "[Utfall ÅTD] + [Framtida Beställningar Året]",
-          "formatString": "#,0",
-          "displayFolder": "Antal",
-          "references": {
-            "measures": [
-              {
-                "entity": "Mätvärde",
-                "name": "Utfall ÅTD"
-              },
-              {
-                "schema": "extension",
-                "entity": "Mätvärde",
-                "name": "Framtida Beställningar Året"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Diff Helår",
-          "dataType": "Double",
-          "expression": "IF(NOT ISBLANK([Totalt (Utfall och Beställningar)]) || not ISBLANK([Aktuell Prognos Helår]), [Totalt (Utfall och Beställningar)] -[Aktuell Prognos Helår])",
-          "formatString": "#,0",
-          "displayFolder": "Differenser",
-          "references": {
-            "measures": [
-              {
-                "schema": "extension",
-                "entity": "Mätvärde",
-                "name": "Totalt (Utfall och Beställningar)"
-              },
-              {
-                "entity": "Mätvärde",
-                "name": "Aktuell Prognos Helår"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Diff% Helår",
-          "dataType": "Double",
-          "expression": "DIVIDE([Totalt (Utfall och Beställningar)], [Aktuell Prognos Helår])",
-          "formatString": "0\\ %;-0\\ %;0\\ %",
-          "displayFolder": "Differenser",
-          "references": {
-            "measures": [
-              {
-                "schema": "extension",
-                "entity": "Mätvärde",
-                "name": "Totalt (Utfall och Beställningar)"
-              },
-              {
-                "entity": "Mätvärde",
-                "name": "Aktuell Prognos Helår"
-              }
-            ]
-          }
-        },
-        {
           "name": "Diff T2 Innev. År vs T0 Nästa År",
           "dataType": "Double",
           "expression": "\r\n\r\n[T2 helår] -\r\nCALCULATE([T0]\r\n, NEXTYEAR(Kalender[Datum]))",
@@ -186,25 +126,6 @@
               {
                 "entity": "Mätvärde",
                 "name": "T0"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Diff% T2 - T1 helår",
-          "dataType": "Double",
-          "expression": "DIVIDE([T2 helår], [T1 helår])",
-          "formatString": "0\\ %;-0\\ %;0\\ %",
-          "displayFolder": "Differenser",
-          "references": {
-            "measures": [
-              {
-                "entity": "Mätvärde",
-                "name": "T2 helår"
-              },
-              {
-                "entity": "Mätvärde",
-                "name": "T1 helår"
               }
             ]
           }
@@ -281,21 +202,6 @@
               {
                 "entity": "Mätvärde",
                 "name": "T1 helår"
-              }
-            ]
-          }
-        },
-        {
-          "name": "Framtida Beställningar Året",
-          "dataType": "Double",
-          "expression": "\n\nVAR Startx = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)\n\nVAR Slutx  = EOMONTH(Startx, 0)\nVAR YearEnd          = DATE ( YEAR ( TODAY() ), 12, 31 )\n\nRETURN\nCALCULATE (\n    [Beställarlistan],\n    REMOVEFILTERS(Kalender),\n    KEEPFILTERS(Kalender[Datum]>= Startx)\n    // KEEPFILTERS ( Kalender[Datum] > Startx )\n,    KEEPFILTERS('Beställarlistan'[Klar Senast] <= YearEnd)\n)",
-          "formatString": "#,0",
-          "displayFolder": "Antal",
-          "references": {
-            "measures": [
-              {
-                "entity": "Mätvärde",
-                "name": "Beställarlistan"
               }
             ]
           }
