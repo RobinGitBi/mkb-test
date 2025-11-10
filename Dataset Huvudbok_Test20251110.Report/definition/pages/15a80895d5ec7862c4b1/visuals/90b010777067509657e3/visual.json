@@ -1,0 +1,397 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "90b010777067509657e3",
+  "position": {
+    "x": 17.269372693726936,
+    "y": 432.39852398523988,
+    "z": 0,
+    "height": 287.60147601476012,
+    "width": 1119.1881918819188,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PNLStructure"
+                    }
+                  },
+                  "Property": "PNLDescr"
+                }
+              },
+              "queryRef": "PNLStructure.PNLDescr",
+              "nativeQueryRef": "PNLDescr",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "RRLev1Namn"
+                }
+              },
+              "queryRef": "Konto.RRLev1Namn",
+              "nativeQueryRef": "RRLev1Namn",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "RRLev2Namn"
+                }
+              },
+              "queryRef": "Konto.RRLev2Namn",
+              "nativeQueryRef": "RRLev2Namn",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "RRLev3Namn"
+                }
+              },
+              "queryRef": "Konto.RRLev3Namn",
+              "nativeQueryRef": "RRLev3Namn",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "RRLev4Namn"
+                }
+              },
+              "queryRef": "Konto.RRLev4Namn",
+              "nativeQueryRef": "RRLev4Namn",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "RRLev5Namn"
+                }
+              },
+              "queryRef": "Konto.RRLev5Namn",
+              "nativeQueryRef": "RRLev5Namn",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Utfall ÅTD"
+                }
+              },
+              "queryRef": "Mätvärde.Utfall ÅTD",
+              "nativeQueryRef": "Utfall ÅTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "xxx"
+                }
+              },
+              "queryRef": "Mätvärde.xxx",
+              "nativeQueryRef": "xxx"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Aktuell Prognos Calendar"
+                }
+              },
+              "queryRef": "Mätvärde.Aktuell Prognos Calendar",
+              "nativeQueryRef": "Aktuell Prognos Calendar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "T0 ÅTD"
+                }
+              },
+              "queryRef": "Mätvärde.T0 ÅTD",
+              "nativeQueryRef": "T0 ÅTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "T1 ÅTD"
+                }
+              },
+              "queryRef": "Mätvärde.T1 ÅTD",
+              "nativeQueryRef": "T1 ÅTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "T2 ÅTD"
+                }
+              },
+              "queryRef": "Mätvärde.T2 ÅTD",
+              "nativeQueryRef": "T2 ÅTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Utfall plus beställarlistan ÅTD"
+                }
+              },
+              "queryRef": "Mätvärde.Utfall plus beställarlistan ÅTD",
+              "nativeQueryRef": "Utfall plus beställarlistan ÅTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Utfall för Beställarlistan"
+                }
+              },
+              "queryRef": "Mätvärde.Utfall för Beställarlistan",
+              "nativeQueryRef": "Utfall för Beställarlistan"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Beställarlistan Helår visa endast framtida datum"
+                }
+              },
+              "queryRef": "Mätvärde.Beställarlistan Helår visa endast framtida datum",
+              "nativeQueryRef": "Beställarlistan ",
+              "displayName": "Beställarlistan "
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Utfall fg år-1 ÅTD"
+                }
+              },
+              "queryRef": "Mätvärde.Utfall fg år-1 ÅTD",
+              "nativeQueryRef": "Utfall fg år-1 ÅTD"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mätvärde"
+                  }
+                },
+                "Property": "T0 ÅTD"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "PNLStructure.PNLDescr"
+            ],
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "PNLStructure"
+                    }
+                  },
+                  "Property": "PNLDescr"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Konto.RRLev1Namn"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "RRLev1Namn"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Konto.RRLev2Namn"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "RRLev2Namn"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Konto.RRLev3Namn"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Konto.RRLev4Namn"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Konto.RRLev5Namn"
+            ],
+            "isCollapsed": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'TB3 Avskrivningar och övriga rörelsekostnader'"
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'Kostnader för ned-, avskrivningar och övriga rörelsekostnader'"
+                      }
+                    }
+                  ],
+                  "isToggled": true,
+                  "children": [
+                    {
+                      "identityValues": [
+                        {
+                          "Literal": {
+                            "Value": "'Avskrivningar enligt plan'"
+                          }
+                        }
+                      ],
+                      "isToggled": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "drillFilterOtherVisuals": true
+  }
+}

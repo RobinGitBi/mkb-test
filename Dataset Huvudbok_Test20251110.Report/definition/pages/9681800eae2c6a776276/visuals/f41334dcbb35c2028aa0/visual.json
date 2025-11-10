@@ -1,0 +1,223 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "f41334dcbb35c2028aa0",
+  "position": {
+    "x": 10.483210483210483,
+    "y": 0,
+    "z": 0,
+    "height": 720.1965601965602,
+    "width": 1269.5167895167897
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Huvudbok"
+                    }
+                  },
+                  "Property": "Bokföringsdatum"
+                }
+              },
+              "queryRef": "Huvudbok.Bokföringsdatum",
+              "nativeQueryRef": "Bokföringsdatum"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Projekt"
+                    }
+                  },
+                  "Property": "ProjektNamn"
+                }
+              },
+              "queryRef": "Projekt.ProjektNamn",
+              "nativeQueryRef": "ProjektNamn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Projekt"
+                    }
+                  },
+                  "Property": "UpphandladLeverantör"
+                }
+              },
+              "queryRef": "Projekt.UpphandladLeverantör",
+              "nativeQueryRef": "UpphandladLeverantör"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "Kostnadsställe"
+                }
+              },
+              "queryRef": "Kostnadsställe.Kostnadsställe",
+              "nativeQueryRef": "Kostnadsställe"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kund"
+                    }
+                  },
+                  "Property": "Kund"
+                }
+              },
+              "queryRef": "Kund.Kund",
+              "nativeQueryRef": "Kund"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Leverantör"
+                    }
+                  },
+                  "Property": "Leverantör"
+                }
+              },
+              "queryRef": "Leverantör.Leverantör",
+              "nativeQueryRef": "Leverantör"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Huvudbok"
+                    }
+                  },
+                  "Property": "Vernr"
+                }
+              },
+              "queryRef": "Huvudbok.Vernr",
+              "nativeQueryRef": "Vernr"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "Område"
+                }
+              },
+              "queryRef": "Kostnadsställe.Område",
+              "nativeQueryRef": "Område"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Uppföljning"
+                    }
+                  },
+                  "Property": "Uppföljning"
+                }
+              },
+              "queryRef": "Uppföljning.Uppföljning",
+              "nativeQueryRef": "Uppföljning"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Utfall"
+                }
+              },
+              "queryRef": "Mätvärde.Utfall",
+              "nativeQueryRef": "Utfall"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "114.18674662604226D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Leverantör.Leverantör"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "252.3718270274587D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Kostnadsställe.Område"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "149.69283495656754D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Uppföljning.Uppföljning"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "178.06715806715806D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Kostnadsställe.Kostnadsställe"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

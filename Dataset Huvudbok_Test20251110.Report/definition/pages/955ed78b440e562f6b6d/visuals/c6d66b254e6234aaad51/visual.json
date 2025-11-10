@@ -1,0 +1,157 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "c6d66b254e6234aaad51",
+  "position": {
+    "x": 0,
+    "y": 289.55116696588868,
+    "z": 0,
+    "height": 430.87971274685816,
+    "width": 1280
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Prognos balansräkning"
+                    }
+                  },
+                  "Property": "Kostnadsställe"
+                }
+              },
+              "queryRef": "Prognos balansräkning.Kostnadsställe",
+              "nativeQueryRef": "Kostnadsställe"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Prognos balansräkning"
+                    }
+                  },
+                  "Property": "Konto"
+                }
+              },
+              "queryRef": "Prognos balansräkning.Konto",
+              "nativeQueryRef": "Konto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Prognos balansräkning"
+                    }
+                  },
+                  "Property": "Bokföringsdatum"
+                }
+              },
+              "queryRef": "Prognos balansräkning.Bokföringsdatum",
+              "nativeQueryRef": "Bokföringsdatum"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Prognos balansräkning"
+                    }
+                  },
+                  "Property": "Version"
+                }
+              },
+              "queryRef": "Prognos balansräkning.Version",
+              "nativeQueryRef": "Version"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Prognos balansräkning"
+                    }
+                  },
+                  "Property": "Kommentar"
+                }
+              },
+              "queryRef": "Prognos balansräkning.Kommentar",
+              "nativeQueryRef": "Kommentar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "T2 BR"
+                }
+              },
+              "queryRef": "Mätvärde.T2 BR",
+              "nativeQueryRef": "T2 BR"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos RR/BR T2"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos RR/BR T2",
+              "nativeQueryRef": "Prognos RR/BR T2"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Prognos balansräkning"
+                  }
+                },
+                "Property": "Kommentar"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FF0000'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

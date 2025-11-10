@@ -1,0 +1,1208 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "ff317f64212725633165",
+  "position": {
+    "x": 227.39549839228295,
+    "y": 210.93247588424435,
+    "z": 21000,
+    "height": 509.32475884244371,
+    "width": 1052.6045016077169,
+    "tabOrder": 20000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kalender"
+                    }
+                  },
+                  "Property": "Månad"
+                }
+              },
+              "queryRef": "Kalender.Månad",
+              "nativeQueryRef": "Månad",
+              "active": true,
+              "displayName": "Månad"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "KontoTypNamn Investeringar"
+                }
+              },
+              "queryRef": "Konto.KontoTypNamn Investeringar",
+              "nativeQueryRef": "Kontotyp",
+              "active": false,
+              "displayName": "Kontotyp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "Lev3Namn Investeringar"
+                }
+              },
+              "queryRef": "Konto.Lev3Namn Investeringar",
+              "nativeQueryRef": "Konto",
+              "active": false,
+              "displayName": "Konto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Uppföljning"
+                    }
+                  },
+                  "Property": "Uppföljning"
+                }
+              },
+              "queryRef": "Uppföljning.Uppföljning",
+              "nativeQueryRef": "Uppföljning",
+              "active": false,
+              "displayName": "Uppföljning"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Leverantör"
+                    }
+                  },
+                  "Property": "LeverantörNamn"
+                }
+              },
+              "queryRef": "Leverantör.LeverantörNamn",
+              "nativeQueryRef": "Leverantör",
+              "active": false,
+              "displayName": "Leverantör"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "Kostnadsställe"
+                }
+              },
+              "queryRef": "Kostnadsställe.Kostnadsställe",
+              "nativeQueryRef": "Kostnadsställe",
+              "active": false,
+              "displayName": "Kostnadsställe"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Uppföljning"
+                    }
+                  },
+                  "Property": "AnvändareNamn"
+                }
+              },
+              "queryRef": "Uppföljning.AnvändareNamn",
+              "nativeQueryRef": "Projektledare",
+              "active": false,
+              "displayName": "Projektledare"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Välj rader uppföljning per projektledare"
+                    }
+                  },
+                  "Property": "Välj rader uppföljning per projektledare"
+                }
+              },
+              "index": 0,
+              "length": 7,
+              "sortDirection": "Ascending"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Utfall"
+                }
+              },
+              "queryRef": "Mätvärde.Utfall",
+              "nativeQueryRef": "Utfall",
+              "displayName": "Utfall"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Utfall ÅTD"
+                }
+              },
+              "queryRef": "Mätvärde.Utfall ÅTD",
+              "nativeQueryRef": "Utfall ack.",
+              "displayName": "Utfall ack."
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos RR/BR periodiserat per månad ÅTD aktuell"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos RR/BR periodiserat per månad ÅTD aktuell",
+              "nativeQueryRef": "Prognos ack.",
+              "displayName": "Prognos ack."
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Diff periodiserad prognos aktuell"
+                }
+              },
+              "queryRef": "Mätvärde.Diff periodiserad prognos aktuell",
+              "nativeQueryRef": "Diff ack.",
+              "displayName": "Diff ack."
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Diff periodiserad prognos % aktuell"
+                }
+              },
+              "queryRef": "Mätvärde.Diff periodiserad prognos % aktuell",
+              "nativeQueryRef": "Diff ack. %",
+              "displayName": "Diff ack. %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos RR/BR periodiserat per månad helår aktuell"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos RR/BR periodiserat per månad helår aktuell",
+              "nativeQueryRef": "Prognos helår",
+              "displayName": "Prognos helår"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Diff helår prognos aktuell"
+                }
+              },
+              "queryRef": "Mätvärde.Diff helår prognos aktuell",
+              "nativeQueryRef": "Diff helår",
+              "displayName": "Diff helår"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Diff helår prognos % aktuell"
+                }
+              },
+              "queryRef": "Mätvärde.Diff helår prognos % aktuell",
+              "nativeQueryRef": "Diff helår %",
+              "displayName": "Diff helår %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos RR/BR periodiserat per månad aktuell"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos RR/BR periodiserat per månad aktuell",
+              "nativeQueryRef": "Prognos per månad",
+              "displayName": "Prognos per månad"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Utfall snitt per månad"
+                }
+              },
+              "queryRef": "Mätvärde.Utfall snitt per månad",
+              "nativeQueryRef": "Utfall snitt per månad",
+              "displayName": "Utfall snitt per månad"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Kvar per resterande månader prognos aktuell"
+                }
+              },
+              "queryRef": "Mätvärde.Kvar per resterande månader prognos aktuell",
+              "nativeQueryRef": "Kvar per resterande månader prognos aktuell"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Kvar per resterande månader prognos T2"
+                }
+              },
+              "queryRef": "Mätvärde.Kvar per resterande månader prognos T2",
+              "nativeQueryRef": "Kvar per resterande månader prognos T2"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Välj mätvärde uppföljning per projektledare"
+                    }
+                  },
+                  "Property": "Välj mätvärde uppföljning per projektledare"
+                }
+              },
+              "index": 0,
+              "length": 10
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Kalender"
+                  }
+                },
+                "Property": "Månad"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Kalender.Månad"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kalender"
+                    }
+                  },
+                  "Property": "Månad"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Konto.KontoTypNamn Investeringar"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Konto.Lev3Namn Investeringar"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Uppföljning.Uppföljning"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Leverantör.LeverantörNamn"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Kostnadsställe.Kostnadsställe"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Uppföljning.AnvändareNamn"
+            ],
+            "isCollapsed": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "subTotals": [
+        {
+          "properties": {
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "perRowLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotalsPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bottom'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "titleAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Mätvärde.Aktuell prognos RR/BR periodiserat per månad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "170.1384170472394D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall - aktuell prognos RR/BR periodiserat per månad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "172.66053426706287D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall - aktuell prognos RR/BR periodiserat per månad %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "181.80461069415549D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall ÅTD - aktuell prognos nästa år RR/BR periodiserat per månad ÅTD %"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Mätvärde.Aktuell prognos RR/BR periodiserat per månad ÅTD"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Mätvärde.Diff helår aktuell prognos %"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Mätvärde.Diff helår aktuell prognos"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "153.36839460027863D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.T0 nästa år RR/BR periodiserat per månad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "185.42106534656378D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall - T0 nästa år RR/BR periodiserat per månad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "171.8421408342399D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall - T0 nästa år RR/BR periodiserat per månad %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "171.52638997525312D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.T0 nästa år RR/BR periodiserat per månad ÅTD"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "132.6315789473684D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff helår T0 nästa år %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118.36842445508319D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff helår T0 nästa år"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "176.368370154974D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall ÅTD - T0 nästa år RR/BR periodiserat per månad ÅTD %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "143.47366464071902D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.T0 RR/BR periodiserat per månad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "157.15788853010304D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall - T0 RR/BR periodiserat per månad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "163.52630310118687D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall - T0 RR/BR periodiserat per månad %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "143.2631612307973D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.T0 RR/BR periodiserat per månad ÅTD"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "185.42101063353067D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall ÅTD - T0 RR/BR periodiserat per månad ÅTD %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "145.05261228870876D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.T1 RR/BR periodiserat per månad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "157.15793508063328D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall - T1 RR/BR periodiserat per månad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "163.52630310118687D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall - T1 RR/BR periodiserat per månad %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "152.73679825988307D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.T1 RR/BR periodiserat per månad ÅTD"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "199.63159342026574D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall ÅTD - T1 RR/BR periodiserat per månad ÅTD %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "150.84205023672794D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall - T2 RR/BR periodiserat per månad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "166.68424472814797D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall - T2 RR/BR periodiserat per månad %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "148.00000323393616D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.T2 RR/BR periodiserat per månad ÅTD"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "171.21060265364736D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall ÅTD - T2 RR/BR periodiserat per månad ÅTD %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "139.7196226532545D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad prognos %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "146.7568960973515D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad prognos"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad aktuell prognos"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad aktuell prognos %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "128.78278023142593D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad T0 %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "125.67803788143793D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad T0"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "160.9922751112017D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad T0 nästa år %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "144.48175711494287D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad T0 nästa år"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "128.78278023142593D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad T1 %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "125.67803788143793D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad T1"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "134.74088686380728D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad T2 %"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "127.16757941381886D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad T2"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "94.85449895302436D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos RR/BR periodiserat per månad aktuell"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "91.42027258129735D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Utfall snitt per månad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.96462207748561D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Kvar per resterande månader prognos aktuell"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "60.410720942684044D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff helår prognos % aktuell"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "67.8263728467188D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff periodiserad prognos % aktuell"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "92.5144535550856D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Kvar per resterande månader prognos T2"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Mätvärde.Utfall"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Rubrik som beskriver visualiseringen'"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

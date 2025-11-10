@@ -1,0 +1,234 @@
+table 'Calculation Group investeringar upparbetat'
+	lineageTag: 3a6b7f63-5c01-42a5-a4e0-d5dbf7f2436d
+
+	calculationGroup
+		precedence: 5
+
+		calculationItem Investeringar = ```
+				VAR InvesteringarTemp = CALCULATE( [Utfall], NOT Vertyp[VerTypNr] IN {"AM", "AT", "YE", "YEM"})
+				
+				VAR Plosen =
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"4410"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				VAR Forgavesproj =
+				CALCULATE( [Utfall],
+				   Konto[KontoNr] = 4921 || Konto[KontoNr] = 6399 || Konto[KontoNr] = 7998,
+				   //Aktivitet[AktivitetId] IN {"8105", "8106"},
+				   //Projekt[ProjektEnhetId] = "NY",
+				   'Uppföljning'[UppföljningNr] = "907"
+				)
+				
+				VAR MarkAktier = 
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"1110", "1115"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				VAR Result = 
+				    InvesteringarTemp - Plosen - Forgavesproj - MarkAktier 
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", BLANK(), Result)
+				```
+
+		calculationItem Investeringsmoms = ```
+				VAR Result = 
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"7510"} //, "1115"}
+				) 
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", BLANK(), Result)
+				```
+
+		calculationItem Investeringsstöd = ```
+				VAR Result =
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"7120"},
+				   NOT Vertyp[VerTypNr] IN {"AM", "AT", "YE", "YEM"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				) 
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", BLANK(), Result)
+				```
+
+		calculationItem 'Summa investeringar brutto' = ```
+				//Summa investeringar brutto = [Investeringar] + [Investeringsstöd measure] + [Investeringsmoms]
+				
+				VAR InvesteringarTemp = CALCULATE( [Utfall], NOT Vertyp[VerTypNr] IN {"AM", "AT", "YE", "YEM"})
+				
+				VAR Plosen =
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"4410"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				VAR Forgavesproj =
+				CALCULATE( [Utfall],
+				   Konto[KontoNr] = 4921 || Konto[KontoNr] = 6399 || Konto[KontoNr] = 7998,
+				   //Aktivitet[AktivitetId] IN {"8105", "8106"},
+				   //Projekt[ProjektEnhetId] = "NY",
+				   'Uppföljning'[UppföljningNr] = "907"
+				)
+				
+				VAR MarkAktier = 
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"1110", "1115"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				VAR TempResult = InvesteringarTemp - Plosen - Forgavesproj - MarkAktier
+				    
+				
+				VAR Result =
+				 TempResult
+				
+				    +
+				
+				    CALCULATE( SELECTEDMEASURE(),
+				    Aktivitet[AktivitetId] IN {"7120"},
+				   NOT Vertyp[VerTypNr] IN {"AM", "AT", "YE", "YEM"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				+
+				
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"7510"} //, "1115"}
+				)
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", 1, Result)
+				
+				```
+
+		calculationItem 'Mark och aktier' = ```
+				VAR Result = 
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"1110", "1115"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", BLANK(), Result)
+				```
+
+		calculationItem P-lösen =
+				
+				VAR Result =
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"4410"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", BLANK(), Result)
+
+		calculationItem Förgävesprojektering =
+				VAR Result =
+				CALCULATE( [Utfall],
+				   Konto[KontoNr] = 4921 || Konto[KontoNr] = 6399 || Konto[KontoNr] = 7998,
+				   //Aktivitet[AktivitetId] IN {"8105", "8106"},
+				   //Projekt[ProjektEnhetId] = "NY",
+				   'Uppföljning'[UppföljningNr] = "907"
+				)
+				
+				RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", BLANK(), Result)
+
+		calculationItem 'Summa investeringar netto' = ```
+				//Summa investeringar netto = [Summa investeringar brutto] + [Mark och aktier] + [P-lösen] + [Förgävesprojektering]
+				
+				VAR InvesteringarTemp = CALCULATE( [Utfall], NOT Vertyp[VerTypNr] IN {"AM", "AT", "YE", "YEM"})
+				
+				VAR Plosen =
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"4410"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				VAR Forgavesproj =
+				CALCULATE( [Utfall],
+				   Konto[KontoNr] = 4921 || Konto[KontoNr] = 6399 || Konto[KontoNr] = 7998,
+				   //Aktivitet[AktivitetId] IN {"8105", "8106"},
+				   //Projekt[ProjektEnhetId] = "NY",
+				   'Uppföljning'[UppföljningNr] = "907"
+				)
+				
+				VAR MarkAktier = 
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"1110", "1115"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				VAR Result = InvesteringarTemp - Plosen - Forgavesproj - MarkAktier
+				    
+				  RETURN IF(SELECTEDMEASURENAME() = "Conditional formatting investeringar", 1, Result)
+				
+				    +
+				
+				    CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"7120"},
+				   NOT Vertyp[VerTypNr] IN {"AM", "AT", "YE", "YEM"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				+
+				
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"7510"} //, "1115"}
+				)
+				
+				
+				+
+				
+				
+				VAR MarkAktier = 
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"1110", "1115"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				RETURN MarkAktier
+				
+				
+				+
+				
+				
+				
+				VAR Plosen =
+				CALCULATE( SELECTEDMEASURE(),
+				   Aktivitet[AktivitetId] IN {"4410"}
+				   //Projekt[ProjektEnhetId] = "NY"
+				)
+				
+				RETURN Plosen
+				
+				+
+				
+				
+				VAR Forgavesproj =
+				CALCULATE( [Utfall],
+				   Konto[KontoNr] = 4921 || Konto[KontoNr] = 6399 || Konto[KontoNr] = 7998,
+				   //Aktivitet[AktivitetId] IN {"8105", "8106"},
+				   //Projekt[ProjektEnhetId] = "NY",
+				   'Uppföljning'[UppföljningNr] = "907"
+				)
+				
+				RETURN Forgavesproj
+				```
+
+	column Name
+		dataType: string
+		lineageTag: 52b462f8-d338-49a2-85ba-cdbce1f5df74
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: fc5b69e3-cc6f-4d16-812e-2f2d541c42d9
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

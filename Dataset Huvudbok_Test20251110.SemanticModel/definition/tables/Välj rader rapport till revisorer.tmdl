@@ -1,0 +1,107 @@
+table 'Välj rader rapport till revisorer'
+	lineageTag: 99c0adb9-883d-4464-8289-5278172bb5bd
+
+	column 'Välj rader rapport till revisorer'
+		lineageTag: 2f0375d7-e727-465f-870c-5054aaff298c
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Välj rader rapport till revisorer Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Välj rader rapport till revisorer Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj rader rapport till revisorer Fields'
+		isHidden
+		lineageTag: 87bd5fa9-adfe-4ed3-bcf3-f492e41bcba7
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Välj rader rapport till revisorer Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj rader rapport till revisorer Order'
+		isHidden
+		formatString: 0
+		lineageTag: 31f6521c-a754-4b3b-a6e7-622051172951
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kategori = ```
+			
+			SWITCH( 'Välj rader rapport till revisorer'[Välj rader rapport till revisorer],
+			    "RR nivå 1", "Resultaträkning",
+			    "RR nivå 2",  "Resultaträkning",
+			    "RR nivå 3",  "Resultaträkning",
+			    "RR nivå 4",  "Resultaträkning",
+			    "RR nivå 5",  "Resultaträkning",
+			    "RR nivå 6",  "Resultaträkning",
+			    "Segment", "Segment",
+			    //"Konto segment", "Segment",
+			    "Leverantör", "Leverantör",
+			    "Kategori", "Kategori",
+			    //"Konto kategori", "Kategori",
+			    "Kostnadsställe", "Kostnadsställe"
+			    
+			)
+			```
+		lineageTag: 0b6d1325-96cf-49eb-bfc1-636e28a81341
+		summarizeBy: none
+		sortByColumn: 'Kategori sortering'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Kategori sortering' = ```
+			
+			
+			SWITCH( 'Välj rader rapport till revisorer'[Välj rader rapport till revisorer],
+			    "RR nivå 1", 1,
+			    "RR nivå 2",  1,
+			    "RR nivå 3",  1,
+			    "RR nivå 4",  1,
+			    "RR nivå 5",  1,
+			    "RR nivå 6",  1,
+			    "Segment", 2,
+			    "Leverantör", 3,
+			    //"Leverantör", 2,
+			    "Kategori", 4,
+			    "Kostnadsställe", 5
+			    
+			)
+			```
+		formatString: 0
+		lineageTag: 3c88cdd4-ca9c-4e0f-b9c4-0f586f2b6870
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj rader rapport till revisorer-e257a159-be34-499f-8f72-ee8c4e30c98a' = calculated
+		mode: import
+		source =
+				{
+				    ("RR nivå 1", NAMEOF('PNLStructure'[PNLDescr]), 0),
+				    ("RR nivå 2", NAMEOF('Konto'[RRLev1Namn]), 1),
+				    ("RR nivå 3", NAMEOF('Konto'[RRLev2Namn]), 2),
+				    ("RR nivå 4", NAMEOF('Konto'[RRLev3Namn]), 3),
+				    ("RR nivå 5", NAMEOF('Konto'[RRLev4Namn]), 4),
+				    //("RR nivå 6", NAMEOF('Konto'[RRLev5Namn]), 5),
+				    ("Segment", NAMEOF('Segment'[Segment]), 6),
+				    //("Konto segment", NAMEOF('Konto'[Konto]), 7),
+				    ("Leverantör", NAMEOF('Leverantör'[Leverantör]), 8),
+				    ("Kategori", NAMEOF('Kostnadsställe'[FastighetsKategoriNamn]), 9),
+				    //("Konto kategori", NAMEOF('Konto'[Konto]), 10),
+				    //("Leverantör kategori", NAMEOF('Leverantör'[Leverantör]), 118),
+				    ("Kostnadsställe", NAMEOF('Kostnadsställe'[Kostnadsställe]), 200)
+				}
+
+	annotation PBI_Id = 54fb4359f9e84630aadf5089be6b6997
+

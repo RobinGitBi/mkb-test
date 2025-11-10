@@ -1,0 +1,83 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "96b23abccfed06a37ff7",
+  "position": {
+    "x": 441.74198849630238,
+    "y": 207.19802793755136,
+    "z": 0,
+    "height": 513.26211996713232,
+    "width": 838.25801150369762
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Prognos balansräkning"
+                    }
+                  },
+                  "Property": "Kommentar"
+                }
+              },
+              "queryRef": "Prognos balansräkning.Kommentar",
+              "nativeQueryRef": "Kommentar"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Prognos balansräkning"
+                    }
+                  },
+                  "Property": "Kostnadsställe"
+                }
+              },
+              "queryRef": "Prognos balansräkning.Kostnadsställe",
+              "nativeQueryRef": "Kostnadsställe"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Prognos balansräkning"
+                    }
+                  },
+                  "Property": "Bokföringsdatum"
+                }
+              },
+              "queryRef": "Prognos balansräkning.Bokföringsdatum",
+              "nativeQueryRef": "Bokföringsdatum"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "521.4445318728995D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Prognos balansräkning.Kommentar"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

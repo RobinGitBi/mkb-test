@@ -1,0 +1,258 @@
+table Motpart
+	lineageTag: 91feb5d1-afdf-4dca-8e36-db68316917af
+
+	column MotpartSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 2ce949b9-322e-46d5-bae9-12ea9a9d7d4f
+		summarizeBy: none
+		sourceColumn: MotpartSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MotpartNr
+		dataType: int64
+		formatString: 0
+		lineageTag: 805e836e-2ef3-47fd-b255-2af2305adee8
+		summarizeBy: none
+		sourceColumn: MotpartNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MotpartNamn
+		dataType: string
+		lineageTag: b6d7fef4-c642-41b9-b420-739f9b1ef8fb
+		summarizeBy: none
+		sourceColumn: MotpartNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ElimineringsNivåNr
+		dataType: int64
+		formatString: 0
+		lineageTag: 6be0cfdc-8094-4f00-82a6-cfa9175a35ea
+		summarizeBy: none
+		sourceColumn: ElimineringsNivåNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ElimineringsNivåNamn
+		dataType: string
+		lineageTag: 42532adc-3218-4f25-8d7a-f09ddbbbb402
+		summarizeBy: none
+		sourceColumn: ElimineringsNivåNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ElimineringsNivå
+		dataType: string
+		lineageTag: fb76bf6f-a0a4-4919-bc82-a02c079f886d
+		summarizeBy: none
+		sourceColumn: ElimineringsNivå
+		sortByColumn: ElimineringsNivåNr
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Motpart
+		dataType: string
+		lineageTag: d9b8bd22-bbfd-42c6-8326-994675449b83
+		summarizeBy: none
+		sourceColumn: Motpart
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasNorr
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ef5fbfe-b8af-4598-a133-208e7c6153a3
+		summarizeBy: none
+		sourceColumn: BasNorr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasVäst
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a3af2c6-f418-4176-ab34-35f05ca11806
+		summarizeBy: none
+		sourceColumn: BasVäst
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasÖst
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e49d91c-92b3-4b98-87cd-9d883fc3f6a5
+		summarizeBy: none
+		sourceColumn: BasÖst
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasLokal
+		dataType: int64
+		formatString: 0
+		lineageTag: 76adeb7f-d63d-4158-a3f2-edfd405f2a36
+		summarizeBy: none
+		sourceColumn: BasLokal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasStudent
+		dataType: int64
+		formatString: 0
+		lineageTag: 61d6b503-57a9-492e-992f-ba24ad3ef099
+		summarizeBy: none
+		sourceColumn: BasStudent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bas2998
+		dataType: int64
+		formatString: 0
+		lineageTag: eeb9f070-f3f9-4726-861b-73f06687e454
+		summarizeBy: none
+		sourceColumn: Bas2998
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasFörvaltn
+		dataType: int64
+		formatString: 0
+		lineageTag: 8c7f35a3-1c1a-4088-af40-47a6454fa071
+		summarizeBy: none
+		sourceColumn: BasFörvaltn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasFörvaltnExt
+		dataType: int64
+		formatString: 0
+		lineageTag: 26b53f98-2774-4e84-9b83-aef2b155ca93
+		summarizeBy: none
+		sourceColumn: BasFörvaltnExt
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasAUNy
+		dataType: int64
+		formatString: 0
+		lineageTag: ded5191d-1467-4042-acf6-142238623e8e
+		summarizeBy: none
+		sourceColumn: BasAUNy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasDrift
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d37c08f-ccd8-43e2-9ae1-eae41e81f3b7
+		summarizeBy: none
+		sourceColumn: BasDrift
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasLth
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d232187-7f0b-43ca-aacd-9c30d3e6ccec
+		summarizeBy: none
+		sourceColumn: BasLth
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasAdm
+		dataType: int64
+		formatString: 0
+		lineageTag: e08e24e9-57a1-459e-a0d3-2661bcdf59ee
+		summarizeBy: none
+		sourceColumn: BasAdm
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Malmö Stad Motpart'
+		dataType: string
+		lineageTag: ac938f8e-f22f-430d-944c-6ed877eb4ae1
+		summarizeBy: none
+		sourceColumn: Malmö Stad Motpart
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Malmö Stad MotpartNamn'
+		dataType: string
+		lineageTag: a614e2e9-635d-42b8-bde8-0e4e96ba16ab
+		summarizeBy: none
+		sourceColumn: Malmö Stad MotpartNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MPTyp
+		dataType: string
+		lineageTag: 2e5f42e6-97bc-4572-a608-49e36a00a43c
+		summarizeBy: none
+		sourceColumn: MPTyp
+
+		annotation SummarizationSetBy = Automatic
+
+	column MPTypNamn
+		dataType: string
+		lineageTag: 3c33a664-8ae8-429d-869a-8b369101106e
+		summarizeBy: none
+		sourceColumn: MPTypNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Motpart-cc5d711e-e05a-448e-99c4-514aa4b56a4a = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimMotpart = MKBBIDW{[Schema="dbo",Item="ViewDimMotpart"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(dbo_ViewDimMotpart,{{"MalmöStadMotpart", "Malmö Stad Motpart"}, {"MalmöStadMotpartNamn", "Malmö Stad MotpartNamn"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"MotpartNr", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

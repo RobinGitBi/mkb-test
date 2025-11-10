@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "78afadc3a06dea92200b",
+  "position": {
+    "x": 160.83188908145578,
+    "y": 0,
+    "z": 4000,
+    "height": 125.33795493934142,
+    "width": 240.69324090121316,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Välj mätvärde Finans Measures"
+                    }
+                  },
+                  "Property": "Välj mätvärde Finans"
+                }
+              },
+              "queryRef": "Välj mätvärde Finans Measures.Välj mätvärde Finans",
+              "nativeQueryRef": "Välj mätvärde Finans",
+              "active": true
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Välj mätvärde Finans Measures"
+                  }
+                },
+                "Property": "Välj mätvärde Finans"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

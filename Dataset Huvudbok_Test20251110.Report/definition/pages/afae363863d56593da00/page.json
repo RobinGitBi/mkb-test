@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "afae363863d56593da00",
+  "displayName": "Månadsuppföljning",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1864882281043c73c5fb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculation Group beloppsvisning"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "b39a94e959c6d99b9cde",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "c1137eba6a5624df932a",
+        "boundFilter": "1864882281043c73c5fb",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calculation Group beloppsvisning"
+              }
+            },
+            "Property": "Name"
+          }
+        }
+      }
+    ]
+  }
+}

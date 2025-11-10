@@ -1,0 +1,172 @@
+table 'Prognos balansräkning'
+	lineageTag: a8030224-915b-4501-b585-e7fd083d039e
+
+	column Bokföringsdatum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e536e470-96ef-497c-80d4-d70c46ccfe95
+		summarizeBy: none
+		sourceColumn: Bokföringsdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Original Version'
+		dataType: string
+		lineageTag: 639dde3f-6bbf-489f-8413-36fcc806b8e5
+		summarizeBy: none
+		sourceColumn: Original Version
+
+		annotation SummarizationSetBy = Automatic
+
+	column Version
+		dataType: string
+		lineageTag: daabae6d-0130-4f36-acfd-309941528cfb
+		summarizeBy: none
+		sourceColumn: Version
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Rad ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 32de321d-ee6d-48cf-8bc1-8367c21f3395
+		summarizeBy: count
+		sourceColumn: Rad ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: string
+		lineageTag: 2e65d22b-0dee-4d0b-ab70-6b108a13c473
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: string
+		lineageTag: 9c33b1a7-98ea-405c-9d24-d81c6a98284b
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Projekt ID'
+		dataType: string
+		lineageTag: e2d718a9-5ddd-47cd-93fc-93a8256b916f
+		summarizeBy: none
+		sourceColumn: Projekt ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Aktivitets ID'
+		dataType: string
+		lineageTag: a12f63a1-d52c-4dbf-b682-ece3c9e9b8ae
+		summarizeBy: none
+		sourceColumn: Aktivitets ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Uppföljnings ID'
+		dataType: string
+		lineageTag: 0a855115-5ae2-4477-8058-64326476ef2c
+		summarizeBy: none
+		sourceColumn: Uppföljnings ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Åtgärds ID'
+		dataType: string
+		lineageTag: 44c4634c-eee7-4116-9b64-c1f13fe397fb
+		summarizeBy: none
+		sourceColumn: Åtgärds ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Prognos Innevarande år'
+		dataType: double
+		lineageTag: b85ece29-107d-4b1a-9200-28e3c1e5becb
+		summarizeBy: sum
+		sourceColumn: Prognos Innevarande år
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Prognos Nästa år'
+		dataType: double
+		lineageTag: b50b906b-c008-4947-a4ac-3374ac0900c8
+		summarizeBy: sum
+		sourceColumn: Prognos Nästa år
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Prognos Plus två år'
+		dataType: double
+		lineageTag: b24f0543-f377-4de1-bb5d-d6cbe4038008
+		summarizeBy: sum
+		sourceColumn: Prognos Plus två år
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Senast Uppdaterad'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 234ab21b-ad69-4e74-8545-8a3cc1949a95
+		summarizeBy: none
+		sourceColumn: Senast Uppdaterad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Användar ID'
+		dataType: string
+		lineageTag: 0b93da67-41d8-41a6-ac01-f340687f4f25
+		summarizeBy: none
+		sourceColumn: Användar ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Källsystem
+		dataType: string
+		lineageTag: 4e3be884-150c-4e5d-b7f5-8d50831e1030
+		summarizeBy: none
+		sourceColumn: Källsystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column LevNr
+		dataType: string
+		lineageTag: 2e134265-fd95-4540-9531-9e6c8e305b44
+		summarizeBy: none
+		sourceColumn: LevNr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kommentar
+		dataType: string
+		lineageTag: 97a44219-4905-4a4a-9bce-10bb3fd7d8d9
+		summarizeBy: none
+		sourceColumn: Kommentar
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Prognos balansräkning' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("mkbdw1.mkb.se", "MKBBIDW"),
+				    dbo_ViewFactPrognosBalansRäkning = Source{[Schema="dbo",Item="ViewFactPrognosBalansRäkning"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_ViewFactPrognosBalansRäkning,{{"Konto", type text}, {"Kostnadsställe", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

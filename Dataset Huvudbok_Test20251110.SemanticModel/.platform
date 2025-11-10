@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Dataset Huvudbok_Test20251110"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "62756f6f-71f9-4ded-bf5e-adc27548e60b"
+  }
+}

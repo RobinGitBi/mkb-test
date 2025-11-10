@@ -1,0 +1,509 @@
+table Kostnadsställe
+	lineageTag: 1d6a4c41-4bc4-4ba1-a114-944ff373fbf7
+
+	measure 'Aktuell yta measure' = SUM('Kostnadsställe'[Aktuell yta])
+		lineageTag: 9d81f1ed-9e64-4bf0-ae57-bc24e0f5a410
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column KostnadsställeSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 66927b6d-f54c-4265-a338-7bad41b01986
+		summarizeBy: none
+		sourceColumn: KostnadsställeSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeNr
+		dataType: string
+		lineageTag: 7bd99d75-3e24-4d01-b042-b7ef2596df9d
+		summarizeBy: none
+		sourceColumn: KostnadsställeNr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeNamn
+		dataType: string
+		lineageTag: 8938db69-62b0-46d0-96c6-8e229413fb88
+		summarizeBy: none
+		sourceColumn: KostnadsställeNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OmrådeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 324f79b7-3ece-4c88-8c8f-3a5aee145ed5
+		summarizeBy: count
+		sourceColumn: OmrådeId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Område
+		dataType: string
+		lineageTag: 0c8bc209-9e41-4067-8898-60f09912c848
+		summarizeBy: none
+		sourceColumn: Område
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FcoId
+		dataType: string
+		lineageTag: 7716efff-1245-48cd-a2fb-659744d0b2e9
+		summarizeBy: none
+		sourceColumn: FcoId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FcoNamn
+		dataType: string
+		lineageTag: a1e90043-16da-4e98-9d0a-c9a4c6f1d2e3
+		summarizeBy: none
+		sourceColumn: FcoNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LGrpId
+		dataType: string
+		lineageTag: 44c94dd6-b8b0-4e67-8e80-0b5fdaa6e5b7
+		summarizeBy: none
+		sourceColumn: LGrpId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LGrpNamn
+		dataType: string
+		lineageTag: a23a0bc3-a650-4136-bedb-5225be0fe0ac
+		summarizeBy: none
+		sourceColumn: LGrpNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VdId
+		dataType: string
+		lineageTag: 881c9c32-02b5-4e11-beaf-bf24018ee970
+		summarizeBy: none
+		sourceColumn: VdId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VdNamn
+		dataType: string
+		lineageTag: f89d0ee5-73ea-4a45-8f17-43f086c2d603
+		summarizeBy: none
+		sourceColumn: VdNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: string
+		lineageTag: cd84475e-b3d5-4ed8-b32b-b1713f2fc90e
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OmrådeNamn
+		dataType: string
+		lineageTag: 99480113-a7b6-4ac9-aabd-655391062cfc
+		summarizeBy: none
+		sourceColumn: OmrådeNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FC
+		dataType: string
+		lineageTag: 7e917c18-0bd5-4c9f-87fd-2b7e5c700fb6
+		summarizeBy: none
+		sourceColumn: FC
+		sortByColumn: FcoId
+
+		changedProperty = SortByColumn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LGrp
+		dataType: string
+		lineageTag: 7f893d28-43e1-42ba-8001-a32920dd3ebe
+		summarizeBy: none
+		sourceColumn: LGrp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VD
+		dataType: string
+		lineageTag: c33775d8-ffbc-442b-82f1-046575f1911f
+		summarizeBy: none
+		sourceColumn: VD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeTypId
+		dataType: int64
+		formatString: 0
+		lineageTag: f37ebb21-3ccd-43f7-b342-4cd7fa7ccd13
+		summarizeBy: count
+		sourceColumn: KostnadsställeTypId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeTypNamn
+		dataType: string
+		lineageTag: bde90f7a-143a-4478-8a57-8d1152a87c2e
+		summarizeBy: none
+		sourceColumn: KostnadsställeTypNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeTyp
+		dataType: string
+		lineageTag: f6ceef5d-4785-46a0-a51a-779c680f2aa0
+		summarizeBy: none
+		sourceColumn: KostnadsställeTyp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOpId
+		dataType: string
+		lineageTag: 1746dce4-1395-4e04-a95c-860bd1bedc70
+		summarizeBy: none
+		sourceColumn: AdmOpId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOpNamn
+		dataType: string
+		lineageTag: d54137c5-fd7c-4836-a854-5f0117c6071b
+		summarizeBy: none
+		sourceColumn: AdmOpNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOp
+		dataType: string
+		lineageTag: 1c8f9f7d-f3e5-4509-8c90-8f89c02554c0
+		summarizeBy: none
+		sourceColumn: AdmOp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetsKategoriId
+		dataType: string
+		lineageTag: 9776246e-d8ee-44ea-90f9-fc0d78cb2cf6
+		summarizeBy: none
+		sourceColumn: FastighetsKategoriId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetsKategoriNamn
+		dataType: string
+		lineageTag: 9af4c2ed-b1f0-491c-a055-a657c460f8a1
+		summarizeBy: none
+		sourceColumn: FastighetsKategoriNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetsKategori
+		dataType: string
+		lineageTag: aa3ef389-b7e5-4589-8128-2979bab9f97d
+		summarizeBy: none
+		sourceColumn: FastighetsKategori
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasNorr
+		dataType: int64
+		formatString: 0
+		lineageTag: ddf613ba-a189-4198-b26c-ec4d8c57e21b
+		summarizeBy: sum
+		sourceColumn: BasNorr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasVäst
+		dataType: int64
+		formatString: 0
+		lineageTag: 98588953-295b-4435-8350-c1d520f9cd5f
+		summarizeBy: sum
+		sourceColumn: BasVäst
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasÖst
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ce187dc-79aa-4fd4-9dd0-b31fd4d8da35
+		summarizeBy: sum
+		sourceColumn: BasÖst
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasLokal
+		dataType: int64
+		formatString: 0
+		lineageTag: f3acaaf7-a7c1-404f-8cdc-3bc960095acd
+		summarizeBy: sum
+		sourceColumn: BasLokal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasStudent
+		dataType: int64
+		formatString: 0
+		lineageTag: 74fb9c67-7949-4b0b-94c6-3ab474617e54
+		summarizeBy: sum
+		sourceColumn: BasStudent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bas2998
+		dataType: int64
+		formatString: 0
+		lineageTag: e8990b8d-f01f-4537-930e-8f16b6d7eedc
+		summarizeBy: sum
+		sourceColumn: Bas2998
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasFörvaltn
+		dataType: int64
+		formatString: 0
+		lineageTag: d49f5b48-e74b-46ef-871f-42c5d224802e
+		summarizeBy: sum
+		sourceColumn: BasFörvaltn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasFörvaltnExt
+		dataType: int64
+		formatString: 0
+		lineageTag: b25b62b8-afe6-4b03-a9ae-6cf38d712add
+		summarizeBy: sum
+		sourceColumn: BasFörvaltnExt
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasAUNy
+		dataType: int64
+		formatString: 0
+		lineageTag: bbd49914-99c0-4b63-b24b-cc99d231b8d5
+		summarizeBy: sum
+		sourceColumn: BasAUNy
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasDrift
+		dataType: int64
+		formatString: 0
+		lineageTag: aad7b287-297d-4918-bde7-611723acb8b9
+		summarizeBy: sum
+		sourceColumn: BasDrift
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasLth
+		dataType: int64
+		formatString: 0
+		lineageTag: fc00fc14-a9c8-451f-8737-ec92f97966b0
+		summarizeBy: sum
+		sourceColumn: BasLth
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasAdm
+		dataType: int64
+		formatString: 0
+		lineageTag: e92f1ee1-dae1-40e6-9102-5448de01b8da
+		summarizeBy: sum
+		sourceColumn: BasAdm
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOp2Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8ff638a3-0ff8-48ec-a1ca-3734575fb136
+		summarizeBy: count
+		sourceColumn: AdmOp2Id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOp2Namn
+		dataType: string
+		lineageTag: f5345017-7118-4926-b5c1-5a133a68742a
+		summarizeBy: none
+		sourceColumn: AdmOp2Namn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOp2
+		dataType: string
+		lineageTag: 80221e11-f51b-4825-a17a-55b7a3c58d63
+		summarizeBy: none
+		sourceColumn: AdmOp2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Aktuell yta' =
+			
+			
+			VAR Kst = 'Kostnadsställe'[KostnadsställeSK]
+			VAR TodaysDate = TODAY()
+			VAR MaxDateTableYta = CALCULATE( MAX('Yta per segment och kostnadsställe'[TimeSK]), Kalender[Datum] <= TodaysDate, 'Yta per segment och kostnadsställe'[KostnadsställeSK] = Kst)
+			
+			VAR Result = CALCULATE( SUM('Yta per segment och kostnadsställe'[JusteradTotalYta]), 'Yta per segment och kostnadsställe'[KostnadsställeSK] = Kst, 'Yta per segment och kostnadsställe'[TimeSK] = MaxDateTableYta)
+			
+			RETURN Result
+		lineageTag: 2978246a-ac11-4bd2-9d73-ec5eb268651a
+		summarizeBy: sum
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'OmrådeNamn kort' = SUBSTITUTE('Kostnadsställe'[OmrådeNamn], " Fastighetsområde", "")
+		lineageTag: fc8d8338-8e5d-4745-bbf8-5d7dcb050f4b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fastighetsnummer
+		dataType: string
+		lineageTag: d6c2d397-57a8-4018-bfdb-013da1c5c5f1
+		summarizeBy: none
+		sourceColumn: Fastighetsnummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControllerID
+		dataType: string
+		lineageTag: d6cf5896-1df1-4d37-8b16-c5c42394b516
+		summarizeBy: none
+		sourceColumn: ControllerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Controllernamn
+		dataType: string
+		lineageTag: bc475ff0-d766-4322-813e-f2c475bfcc0f
+		summarizeBy: none
+		sourceColumn: Controllernamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FunktionsId
+		dataType: string
+		lineageTag: f39738a3-02c2-4703-a2a1-58257da20071
+		summarizeBy: none
+		sourceColumn: FunktionsId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stöd/Förvaltning
+		dataType: string
+		lineageTag: 1d00c159-e838-4b10-9494-c17f092f3eb9
+		summarizeBy: none
+		sourceColumn: Stöd/Förvaltning
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Kostnadsställe-a15203bb-2990-4c3e-aeb0-3fc0386396b0 = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimKostnadsställe = MKBBIDW{[Schema="dbo",Item="ViewDimKostnadsställe"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_ViewDimKostnadsställe,{{"OmrådeId", Int64.Type}, {"AdmOp2Id", Int64.Type},  {"KostnadsställeTypId", Int64.Type}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "Fastighetsnummer", each if [FastighetsKategoriNamn] = "Saknas" then null else Text.End([KostnadsställeNr], 3))
+				in
+				    #"Added Custom"
+
+	annotation PBI_ResultType = Table
+

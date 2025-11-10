@@ -1,0 +1,53 @@
+table 'Välj kolumner'
+	lineageTag: 6f193cf0-0329-4fcb-a4f7-c27cf41213d1
+
+	column 'Välj kolumner'
+		lineageTag: da70fe79-c313-4fb9-9b99-477287a468d1
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Välj kolumner Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Välj kolumner Fields'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj kolumner Fields'
+		lineageTag: a6533272-5eca-4c66-8068-5c6285fabe49
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Välj kolumner Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj kolumner Order'
+		formatString: 0
+		lineageTag: f208306a-c4d2-448e-961c-698757d1a9f6
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj kolumner-2b86f96c-026c-4a50-a71b-dc9f09545ec6' = calculated
+		mode: import
+		source =
+				{
+				    ("Per år", NAMEOF('Kalender'[År]), 0),
+				    ("Per område", NAMEOF('Kostnadsställe'[OmrådeNamn]), 1),
+				    ("Per kostnadsställe", NAMEOF('Kostnadsställe'[KostnadsställeNamn]), 2)
+				}
+
+	annotation PBI_Id = 59c17d7daac94bf2b9c9d3b815484bfc
+

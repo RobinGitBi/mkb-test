@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "9681800eae2c6a776276",
+  "displayName": "Detalj",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fc69b14e834d8832248b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Utfall"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "9df78b28dcd4507c6edb",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "542af01ce0708b019000",
+        "boundFilter": "fc69b14e834d8832248b",
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Utfall"
+          }
+        }
+      }
+    ]
+  }
+}

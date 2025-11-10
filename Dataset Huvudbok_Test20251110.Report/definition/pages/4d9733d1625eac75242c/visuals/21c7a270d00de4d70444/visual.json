@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "21c7a270d00de4d70444",
+  "position": {
+    "x": 0,
+    "y": 43.011823273179843,
+    "z": 0,
+    "height": 619.68886123210962,
+    "width": 977.324206596142
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kalender"
+                    }
+                  },
+                  "Property": "Månad"
+                }
+              },
+              "queryRef": "Kalender.Månad",
+              "nativeQueryRef": "Månad",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "Kostnadsställe"
+                }
+              },
+              "queryRef": "Kostnadsställe.Kostnadsställe",
+              "nativeQueryRef": "Kostnadsställe",
+              "active": true,
+              "displayName": "Kostnadsställe"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Välj rader uppföljning per projektledare"
+                    }
+                  },
+                  "Property": "Välj rader uppföljning per projektledare"
+                }
+              },
+              "index": 0,
+              "length": 1
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "T0 BR"
+                }
+              },
+              "queryRef": "Mätvärde.T0 BR",
+              "nativeQueryRef": "T0 BR"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "T2 BR"
+                }
+              },
+              "queryRef": "Mätvärde.T2 BR",
+              "nativeQueryRef": "T2 BR"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

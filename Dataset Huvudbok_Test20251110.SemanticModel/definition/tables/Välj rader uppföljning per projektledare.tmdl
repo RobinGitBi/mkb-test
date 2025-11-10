@@ -1,0 +1,60 @@
+table 'Välj rader uppföljning per projektledare'
+	lineageTag: 8a4391ab-0a1c-4e4b-bcc3-592d6c798948
+
+	column 'Välj rader uppföljning per projektledare'
+		lineageTag: 9cdf9a9f-8447-4bec-9b35-640cc2b8f319
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Välj rader uppföljning per projektledare Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Välj rader uppföljning per projektledare Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj rader uppföljning per projektledare Fields'
+		isHidden
+		lineageTag: 72fb6610-7c36-43d5-840d-94fddc27239a
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Välj rader uppföljning per projektledare Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Välj rader uppföljning per projektledare Order'
+		isHidden
+		formatString: 0
+		lineageTag: 73cda399-c110-4203-8fb6-20d169e5a9cb
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj rader uppföljning per projektledare' = calculated
+		mode: import
+		source = ```
+				{
+				    
+				    
+				    ("Kontotyp", NAMEOF(Konto[KontoTypNamn Investeringar]), 1),
+				    ("Konto", NAMEOF(Konto[Lev3Namn Investeringar]), 3),
+				    ("Uppföljning", NAMEOF('Uppföljning'[Uppföljning]), 4),
+				    ("Leverantör", NAMEOF('Leverantör'[LeverantörNamn]), 5),
+				    ("Kostnadsställe", NAMEOF('Kostnadsställe'[Kostnadsställe]), 8),
+				    //("Upphandlad leverantör", NAMEOF(Projekt[UpphandladLeverantör]), 5),
+				    //("Projekt", NAMEOF(Projekt[Projekt]), 6),
+				    ("Projektledare", NAMEOF('Uppföljning'[AnvändareNamn]), 9),
+				    //("Aktivitet", NAMEOF(Aktivitet[Aktivitet]), 8)
+				    ("Månad", NAMEOF(Kalender[Månad]), 10)
+				    
+				}
+				```
+
+	annotation PBI_Id = aabcfc801f314dde9b8e92dabdeb0bd0
+

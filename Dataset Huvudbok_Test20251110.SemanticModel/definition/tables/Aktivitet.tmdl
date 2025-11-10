@@ -1,0 +1,127 @@
+table Aktivitet
+	lineageTag: 4a5212ed-fb9a-417c-b1ae-8e3b21a54089
+
+	column AktivitetSK
+		dataType: int64
+		formatString: 0
+		lineageTag: c974ed06-82f4-495d-88af-5de646812773
+		summarizeBy: none
+		sourceColumn: AktivitetSK
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AktivitetId
+		dataType: string
+		lineageTag: 59e05811-a4ef-40d7-aa1f-ef3ee0b0fbc9
+		summarizeBy: none
+		sourceColumn: AktivitetId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column AktivitetNamn
+		dataType: string
+		lineageTag: d002acc4-4527-4091-83dc-21a67b05a81c
+		summarizeBy: none
+		sourceColumn: AktivitetNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aktivitet
+		dataType: string
+		lineageTag: f74c2857-202b-4489-815c-627209522416
+		summarizeBy: none
+		sourceColumn: Aktivitet
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HuvudaktivitetId
+		dataType: string
+		lineageTag: 761dc300-4067-44fb-aab2-3d26c4af0eb2
+		summarizeBy: none
+		sourceColumn: HuvudaktivitetId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HuvudaktivitetNamn
+		dataType: string
+		lineageTag: 800ecf73-e8c5-48fc-80b0-dd565dffc9fa
+		summarizeBy: none
+		sourceColumn: HuvudaktivitetNamn
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Huvudaktivitet
+		dataType: string
+		lineageTag: 549d9640-5a04-47c7-b7cb-110328df71e4
+		summarizeBy: none
+		sourceColumn: Huvudaktivitet
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FasId
+		dataType: string
+		lineageTag: 1e5f703a-f4d7-4fba-a155-dd2f65508251
+		summarizeBy: none
+		sourceColumn: FasId
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fas
+		dataType: string
+		lineageTag: 112b6785-f5eb-4236-bcc4-0e0c329dfb98
+		summarizeBy: none
+		sourceColumn: Fas
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Eliminering
+		dataType: string
+		lineageTag: f670dec8-5c85-4b0a-8677-762c5a66873c
+		summarizeBy: none
+		sourceColumn: Eliminering
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estimat
+		dataType: string
+		lineageTag: d6bbec26-01ca-436d-a305-844c17cbe0e1
+		summarizeBy: none
+		sourceColumn: Estimat
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Aktivitet-ae6ceadc-b519-4fc4-9801-80c2cb5074d6 = m
+		mode: import
+		queryGroup: Dimensionstabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimAktivitet = MKBBIDW{[Schema="dbo",Item="ViewDimAktivitet"]}[Data]
+				in
+				    dbo_ViewDimAktivitet
+
+	annotation PBI_ResultType = Table
+

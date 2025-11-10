@@ -1,0 +1,72 @@
+table 'Välj jämförelsemätvärde Finans'
+	lineageTag: 7c14bc18-fbab-4c97-bff7-b90441117b80
+
+	column 'Välj jämförelsemätvärde'
+		dataType: string
+		lineageTag: dafbfabf-0f1e-4fdc-b593-1f10311d2355
+		summarizeBy: none
+		sourceColumn: Välj jämförelsemätvärde
+
+		annotation SummarizationSetBy = Automatic
+
+	column Standard = ```
+			
+			VAR MonthToday = MONTH(TODAY())
+			
+			VAR ChooseMeasures = 
+			IF( (MonthToday >= 11 || MonthToday <= 1) && 'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde] = "T2",
+			    "Standard",
+			    IF( MonthToday >= 2 && MonthToday <= 3 &&  'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde] = "T0",
+			        "Standard",
+			        IF( MonthToday >= 4 && MonthToday <= 7 &&  'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde] =  "T1",
+			            "Standard",
+			            IF( MonthToday >= 8 && MonthToday <= 9 &&  'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde] =  "T2",
+			                "Standard",
+			                IF( MonthToday = 10 &&  'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde] = "T2",
+			                    "Standard")))))
+			
+			RETURN ChooseMeasures
+			```
+		lineageTag: cf426b3c-1dd7-45dc-bf4e-ec98c079b82b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mätvärde med standard' =
+			
+			IF( 'Välj jämförelsemätvärde Finans'[Standard] = "Standard",
+			    "Standard",
+			    'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde]
+			)
+		lineageTag: fb4e41e9-c36d-41e9-af01-552e237278fc
+		summarizeBy: none
+		sortByColumn: Order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order =
+			
+			SWITCH( 'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde],
+			    "T0", 1,
+			    "T1", 2,
+			    "T2", 3,
+			    "Fg år", 4)
+		formatString: 0
+		lineageTag: 68a8902b-6be3-416e-b5db-4c10ab165188
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Välj jämförelsemätvärde Finans-3b9fbd4f-e3da-499b-a1e5-b9dde121b632' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WCjFQitUBUoYQyghMuaUrHF5apBQbCwA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Välj jämförelsemätvärde" = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Välj jämförelsemätvärde", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
