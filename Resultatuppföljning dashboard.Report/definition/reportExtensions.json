@@ -232,7 +232,6 @@
           "name": "Diff T1 Innev. År vs T1 Nästa År %",
           "dataType": "Double",
           "expression": "\r\n\r\nDIVIDE([Diff T1 - T0 Helår],\r\nCALCULATE([T1]\r\n, NEXTYEAR(Kalender[Datum])))",
-          "formatString": "General Number",
           "displayFolder": "Differenser",
           "references": {
             "measures": [
@@ -252,7 +251,6 @@
           "name": "Diff T1 Innev. År vs T2 Nästa År",
           "dataType": "Double",
           "expression": "\r\n\r\n[T1 helår] -\r\nCALCULATE([T1]\r\n, NEXTYEAR(Kalender[Datum]))",
-          "formatString": "General Number",
           "displayFolder": "Differenser",
           "references": {
             "measures": [
