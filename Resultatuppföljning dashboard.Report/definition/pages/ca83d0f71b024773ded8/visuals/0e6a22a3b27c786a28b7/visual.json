@@ -1224,6 +1224,76 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "d7023272d88650917857",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Beställningar Innevarande Månad - Nuläge"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "37e9954d6896db51af40",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Framtida Beställningar Året - Nuläge"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "73df5143cf73a18e5e43",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Totalt (Utfall och Beställningar) - Nuläge"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "981c3510980d8ecdda03",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff Helår - Nuläge"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "66c5a272be9c8d6f1922",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff% Helår - Nuläge"
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"
