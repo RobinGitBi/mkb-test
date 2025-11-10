@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Resultatuppföljning dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c3e1ca4a-1c5e-43a6-a288-774c3407e742"
+  }
+}

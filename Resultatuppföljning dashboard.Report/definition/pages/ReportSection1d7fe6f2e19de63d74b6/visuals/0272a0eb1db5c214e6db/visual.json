@@ -1,0 +1,529 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "0272a0eb1db5c214e6db",
+  "position": {
+    "x": 5.283757338551859,
+    "y": 118.00391389432484,
+    "z": 1000,
+    "height": 590.01956947162421,
+    "width": 1268.1017612524461,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "ÄrendeNummer"
+                }
+              },
+              "queryRef": "Beställarlistan.ÄrendeNummer",
+              "nativeQueryRef": "ÄrendeNummer"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Beställare"
+                }
+              },
+              "queryRef": "Beställarlistan.Beställare",
+              "nativeQueryRef": "Beställare"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Beställning skickad"
+                }
+              },
+              "queryRef": "Beställarlistan.Beställning skickad",
+              "nativeQueryRef": "Beställning skickad"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Bokfdatum"
+                }
+              },
+              "queryRef": "Beställarlistan.Bokfdatum",
+              "nativeQueryRef": "Bokfdatum"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Faktstatus UBW"
+                }
+              },
+              "queryRef": "Beställarlistan.Faktstatus UBW",
+              "nativeQueryRef": "Faktstatus UBW"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Fakturanr UBW"
+                }
+              },
+              "queryRef": "Beställarlistan.Fakturanr UBW",
+              "nativeQueryRef": "Fakturanr UBW"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Klar Senast"
+                }
+              },
+              "queryRef": "Beställarlistan.Klar Senast",
+              "nativeQueryRef": "Klar Senast"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Kst"
+                }
+              },
+              "queryRef": "Beställarlistan.Kst",
+              "nativeQueryRef": "Kst"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "MK"
+                }
+              },
+              "queryRef": "Beställarlistan.MK",
+              "nativeQueryRef": "MK"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "MP"
+                }
+              },
+              "queryRef": "Beställarlistan.MP",
+              "nativeQueryRef": "MP"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "ObjektNummer"
+                }
+              },
+              "queryRef": "Beställarlistan.ObjektNummer",
+              "nativeQueryRef": "ObjektNummer"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Beställarlistan Belopp PM5 ÅTD hela tabellen"
+                }
+              },
+              "queryRef": "Mätvärde.Beställarlistan Belopp PM5 ÅTD hela tabellen",
+              "nativeQueryRef": "Belopp PM5 ÅTD",
+              "displayName": "Belopp PM5 ÅTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Beställarlistan Utfall UBW ÅTD hela tabellen"
+                }
+              },
+              "queryRef": "Mätvärde.Beställarlistan Utfall UBW ÅTD hela tabellen",
+              "nativeQueryRef": "Utfall UBW ÅTD",
+              "displayName": "Utfall UBW ÅTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Beställarlistan differens Belopp PM5 - Utfall UBW ÅTD hela tabellen"
+                }
+              },
+              "queryRef": "Mätvärde.Beställarlistan differens Belopp PM5 - Utfall UBW ÅTD hela tabellen",
+              "nativeQueryRef": "Differens",
+              "displayName": "Differens"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Beställarlistan ÅTD"
+                }
+              },
+              "queryRef": "Mätvärde.Beställarlistan ÅTD",
+              "nativeQueryRef": "Best. lista summa per IB",
+              "displayName": "Best. lista summa per IB"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Projekt"
+                }
+              },
+              "queryRef": "Beställarlistan.Projekt",
+              "nativeQueryRef": "Projekt"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Slag"
+                }
+              },
+              "queryRef": "Beställarlistan.Slag",
+              "nativeQueryRef": "Slag"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Uppf"
+                }
+              },
+              "queryRef": "Beställarlistan.Uppf",
+              "nativeQueryRef": "Uppf"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "Vernr UBW"
+                }
+              },
+              "queryRef": "Beställarlistan.Vernr UBW",
+              "nativeQueryRef": "Vernr UBW"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Beställarlistan"
+                    }
+                  },
+                  "Property": "VT UBW"
+                }
+              },
+              "queryRef": "Beställarlistan.VT UBW",
+              "nativeQueryRef": "VT UBW"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "306.2439000297439D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Segment.Segment"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Mätvärde.Utfall - T2 ÅTD"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80.54237806635248D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Beställarlistan differens Belopp PM5 - Utfall UBW ÅTD hela tabellen"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "104.61016906908496D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Beställarlistan.Bokfdatum"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.77062453386807D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Beställarlistan.Faktstatus UBW"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "50.711864496102784D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Beställarlistan.VT UBW"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "87.74576320979025D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Beställarlistan.Beställning skickad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.61017727289753D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Beställarlistan Utfall UBW ÅTD hela tabellen"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.59321837792103D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Beställarlistan ÅTD"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "160.43902629951742D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Beställarlistan.Beställare"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,652 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "ae84c85e0e335dbb40a7",
+  "position": {
+    "x": 4.3902439024390247,
+    "y": 116.34146341463415,
+    "z": 0,
+    "height": 779.26829268292681,
+    "width": 1269.8780487804879
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "OmrådeNamn"
+                }
+              },
+              "queryRef": "Kostnadsställe.OmrådeNamn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Företag"
+                    }
+                  },
+                  "Property": "FöretagNr"
+                }
+              },
+              "queryRef": "Företag.FöretagNr",
+              "displayName": "Ftg"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Vertyp"
+                    }
+                  },
+                  "Property": "VerTypNr"
+                }
+              },
+              "queryRef": "Vertyp.VerTypNr",
+              "displayName": "VerTyp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Huvudbok"
+                    }
+                  },
+                  "Property": "Vernr"
+                }
+              },
+              "queryRef": "Huvudbok.Vernr"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kalender"
+                    }
+                  },
+                  "Property": "Period"
+                }
+              },
+              "queryRef": "Kalender.Period"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Huvudbok"
+                    }
+                  },
+                  "Property": "Bokföringsdatum"
+                }
+              },
+              "queryRef": "Huvudbok.Bokföringsdatum",
+              "displayName": "Bokf.datum"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "KontoNr"
+                }
+              },
+              "queryRef": "Konto.KontoNr",
+              "displayName": "Kto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "KostnadsställeNr"
+                }
+              },
+              "queryRef": "Kostnadsställe.KostnadsställeNr",
+              "displayName": "Kst"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Projekt"
+                    }
+                  },
+                  "Property": "ProjektNr"
+                }
+              },
+              "queryRef": "Projekt.ProjektNr",
+              "displayName": "Proj"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Uppföljning"
+                    }
+                  },
+                  "Property": "UppföljningNr"
+                }
+              },
+              "queryRef": "Uppföljning.UppföljningNr",
+              "displayName": "Uppf"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Segment"
+                    }
+                  },
+                  "Property": "SegmentNr"
+                }
+              },
+              "queryRef": "Segment.SegmentNr",
+              "displayName": "Segm"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Slag"
+                    }
+                  },
+                  "Property": "SlagNr"
+                }
+              },
+              "queryRef": "Slag.SlagNr",
+              "displayName": "Slag"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Motpart"
+                    }
+                  },
+                  "Property": "MotpartNr"
+                }
+              },
+              "queryRef": "Motpart.MotpartNr",
+              "displayName": "MP"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Momskod"
+                    }
+                  },
+                  "Property": "MomskodNr"
+                }
+              },
+              "queryRef": "Momskod.MomskodNr",
+              "displayName": "MK"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Momssystem"
+                    }
+                  },
+                  "Property": "MomssystemNr"
+                }
+              },
+              "queryRef": "Momssystem.MomssystemNr",
+              "displayName": "MS"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Huvudbok"
+                    }
+                  },
+                  "Property": "WebUrl"
+                }
+              },
+              "queryRef": "Huvudbok.WebUrl"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Leverantör"
+                    }
+                  },
+                  "Property": "LeverantörNamn"
+                }
+              },
+              "queryRef": "Leverantör.LeverantörNamn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Leverantör"
+                    }
+                  },
+                  "Property": "LeverantörNr"
+                }
+              },
+              "queryRef": "Leverantör.LeverantörNr",
+              "displayName": "Lev"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Huvudbok"
+                    }
+                  },
+                  "Property": "Utfall"
+                }
+              },
+              "queryRef": "Huvudbok.Utfall",
+              "nativeQueryRef": "Utfall"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Företag"
+                  }
+                },
+                "Property": "FöretagNr"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Calibri'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "urlIcon": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Calibri'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "28.254032795035467D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Företag.FöretagNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "60D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Huvudbok.Vernr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "47D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Konto.KontoNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "33D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Kostnadsställe.KostnadsställeNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "84.99270129640206D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Projekt.ProjektNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "35D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Segment.SegmentNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "29D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Slag.SlagNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "47D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Motpart.MotpartNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "54D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Momskod.MomskodNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Momssystem.MomssystemNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Vertyp.VerTypNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "44D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Huvudbok.WebUrl"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69.01974449347028D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Huvudbok.Bokföringsdatum"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "69D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Leverantör.LeverantörNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "72D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Uppföljning.UppföljningNr"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "60D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Kalender.Period"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "102.13965365213116D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Leverantör.LeverantörNamn"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Kostnadsställe.OmrådeNamn"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "86.61863979848866D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Huvudbok.Utfall"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

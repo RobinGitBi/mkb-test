@@ -1,0 +1,10 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "ReportSectionf930e7027d619afdd46a",
+  "displayName": "Tooltip - förklaring inforutor 1",
+  "displayOption": "ActualSize",
+  "height": 60,
+  "width": 600,
+  "visibility": "HiddenInViewMode",
+  "type": "Tooltip"
+}
