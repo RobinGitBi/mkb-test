@@ -246,7 +246,8 @@
                 }
               },
               "queryRef": "Mätvärde.Diff% T2 - T1 helår1",
-              "nativeQueryRef": "Diff% T2 - T1 helår"
+              "nativeQueryRef": "Diff% T2 - T1",
+              "displayName": "Diff% T2 - T1"
             }
           ]
         }
@@ -545,6 +546,48 @@
           "selector": {
             "metadata": "Mätvärde.T1 helår"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "91.92419499311384D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Framtida Beställningar Året"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "115.72028245054827D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Totalt (Utfall och Beställningar)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "70.11502616447969D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff% T2 - T1 helår1"
+          }
         }
       ],
       "rowHeaders": [
@@ -617,6 +660,102 @@
           },
           "selector": {
             "metadata": "Mätvärde.Aktuell Prognos Helår"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Totalt (Utfall och Beställningar)"
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff Helår"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff% Helår1"
           }
         }
       ]

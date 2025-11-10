@@ -246,7 +246,8 @@
                 }
               },
               "queryRef": "Mätvärde.Diff% T2 - T1 helår1",
-              "nativeQueryRef": "Diff% T2 - T1 helår"
+              "nativeQueryRef": "Diff% T2 - T1",
+              "displayName": "Diff% T2 - T1"
             }
           ]
         }
@@ -255,29 +256,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "PNLStructure"
+                    "Entity": "Mätvärde"
                   }
                 },
-                "Property": "PNLDescr"
+                "Property": "Totalt (Utfall och Beställningar)"
               }
             },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Konto"
-                  }
-                },
-                "Property": "RRLev1Namn"
-              }
-            },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -544,6 +532,48 @@
           "selector": {
             "metadata": "Mätvärde.Utfall ÅTD"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "103.62507190927866D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Framtida Beställningar Året"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "104.02617090393326D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Totalt (Utfall och Beställningar)1"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "66.21698609897705D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff% T2 - T1 helår1"
+          }
         }
       ],
       "rowHeaders": [
@@ -616,6 +646,102 @@
           },
           "selector": {
             "metadata": "Mätvärde.Aktuell Prognos Helår"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Totalt (Utfall och Beställningar)1"
+          }
+        },
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff Helår1"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff% Helår1"
           }
         }
       ]
