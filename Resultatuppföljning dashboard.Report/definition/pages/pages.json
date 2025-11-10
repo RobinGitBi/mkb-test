@@ -2,6 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.0.0/schema.json",
   "pageOrder": [
     "ReportSection742a7e8f3d50daf15e34",
+    "81199e52210b8cd4e520",
+    "ReportSection3a63f3236a1ce5544010",
     "ReportSection1d7fe6f2e19de63d74b6",
     "ReportSectionfab4c8bbe033a2a1ee6a",
     "ReportSection71c12dcd269c45d9cebf",
@@ -20,8 +22,6 @@
     "ReportSectionf930e7027d619afdd46a",
     "ReportSection4f0d539ea8b6d36eb36d",
     "333f0316be6dbca2402b",
-    "81199e52210b8cd4e520",
-    "ReportSection3a63f3236a1ce5544010",
     "30915aafc0a2c0ad0a42",
     "772ba38901150b016220"
   ],
