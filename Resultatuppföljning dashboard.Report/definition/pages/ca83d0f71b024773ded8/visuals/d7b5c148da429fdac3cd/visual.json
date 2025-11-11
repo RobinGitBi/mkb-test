@@ -56,7 +56,7 @@
                 }
               },
               "queryRef": "Konto.RRLev2Namn",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -71,7 +71,7 @@
               },
               "queryRef": "Kostnadsställe.OmrådeNamn kort",
               "nativeQueryRef": "OmrådeNamn kort",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -270,6 +270,7 @@
             "queryRefs": [
               "Konto.RRLev1Namn"
             ],
+            "isCollapsed": true,
             "identityKeys": [
               {
                 "Column": {
@@ -288,6 +289,7 @@
             "queryRefs": [
               "Konto.RRLev2Namn"
             ],
+            "isCollapsed": true,
             "isPinned": true
           },
           {

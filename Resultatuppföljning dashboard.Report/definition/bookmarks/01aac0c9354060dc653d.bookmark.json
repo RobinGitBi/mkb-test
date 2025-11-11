@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
-  "displayName": "MM - Vald",
+  "displayName": "MM - Vald_Månadsbokslut",
   "name": "01aac0c9354060dc653d",
   "options": {
     "targetVisualNames": [

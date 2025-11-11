@@ -42,7 +42,7 @@
                 }
               },
               "queryRef": "Konto.RRLev1Namn",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -56,7 +56,7 @@
                 }
               },
               "queryRef": "Konto.RRLev2Namn",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -270,60 +270,6 @@
         ]
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Rows"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "PNLStructure.PNLDescr"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "Konto.RRLev1Namn"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "Konto.RRLev2Namn"
-            ],
-            "isCollapsed": true
-          },
-          {
-            "queryRefs": [
-              "Kostnadsställe.OmrådeNamn kort"
-            ],
-            "isCollapsed": true
-          },
-          {
-            "queryRefs": [
-              "Konto.RRLev3Namn"
-            ],
-            "isCollapsed": true
-          },
-          {
-            "queryRefs": [
-              "Konto.RRLev4Namn"
-            ],
-            "isCollapsed": true
-          },
-          {
-            "queryRefs": [
-              "Konto.RRLev5Namn"
-            ],
-            "isCollapsed": true
-          }
-        ],
-        "root": {}
-      }
-    ],
     "objects": {
       "columnHeaders": [
         {

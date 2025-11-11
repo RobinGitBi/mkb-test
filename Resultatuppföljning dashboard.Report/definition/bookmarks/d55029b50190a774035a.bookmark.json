@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
-  "displayName": "VS - Exkluderad",
+  "displayName": "VS - Exkluderad_Månadsbokslut",
   "name": "d55029b50190a774035a",
   "options": {
     "targetVisualNames": [

@@ -41,7 +41,7 @@
                 }
               },
               "queryRef": "Konto.RRLev1Namn",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -251,7 +251,6 @@
             "queryRefs": [
               "PNLStructure.PNLDescr"
             ],
-            "isCollapsed": true,
             "identityKeys": [
               {
                 "Column": {
