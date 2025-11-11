@@ -42,7 +42,7 @@
                 }
               },
               "queryRef": "Konto.RRLev1Namn",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -56,21 +56,6 @@
                 }
               },
               "queryRef": "Konto.RRLev2Namn",
-              "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fastighet"
-                    }
-                  },
-                  "Property": "Bostadsområde"
-                }
-              },
-              "queryRef": "Fastighet.Bostadsområde",
-              "nativeQueryRef": "Bostadsområde",
               "active": false
             },
             {
@@ -251,23 +236,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Konto"
-                  }
-                },
-                "Property": "RRLev2Namn"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "expansionStates": [
@@ -280,6 +248,7 @@
             "queryRefs": [
               "PNLStructure.PNLDescr"
             ],
+            "isCollapsed": true,
             "identityKeys": [
               {
                 "Column": {
@@ -298,6 +267,7 @@
             "queryRefs": [
               "Konto.RRLev1Namn"
             ],
+            "isCollapsed": true,
             "identityKeys": [
               {
                 "Column": {
@@ -321,21 +291,17 @@
           },
           {
             "queryRefs": [
-              "Fastighet.Bostadsområde"
-            ],
-            "isCollapsed": true
-          },
-          {
-            "queryRefs": [
               "Konto.RRLev3Namn"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "isPinned": true
           },
           {
             "queryRefs": [
               "Konto.RRLev4Namn"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "isPinned": true
           },
           {
             "queryRefs": [
@@ -344,122 +310,7 @@
             "isCollapsed": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Intäkter'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Övriga rörelseintäkter'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Hyresintäkter'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Kostnader för varor, material och vissa köpta tjänster'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Kostnader Fastighetsskötsel'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Kostnader Reparationer'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Kostnader Media'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Kostnader för kund- och hyresförluster'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Riskkostnader och övriga driftkostnader'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Fastighetsskatt'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Kostnader Underhåll'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -1030,7 +881,8 @@
             "Property": "Bostadsområde"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "howCreated": "User"
       },
       {
         "name": "981f9b65ed80da028a91",
