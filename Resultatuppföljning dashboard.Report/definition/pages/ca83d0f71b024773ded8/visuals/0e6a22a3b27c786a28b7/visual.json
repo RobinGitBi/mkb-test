@@ -62,6 +62,21 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "OmrådeNamn kort"
+                }
+              },
+              "queryRef": "Kostnadsställe.OmrådeNamn kort",
+              "nativeQueryRef": "OmrådeNamn kort",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "Konto"
                     }
                   },
@@ -276,6 +291,12 @@
             ],
             "isCollapsed": true,
             "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Kostnadsställe.OmrådeNamn kort"
+            ],
+            "isCollapsed": true
           },
           {
             "queryRefs": [

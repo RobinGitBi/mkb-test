@@ -63,6 +63,21 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "OmrådeNamn kort"
+                }
+              },
+              "queryRef": "Kostnadsställe.OmrådeNamn kort",
+              "nativeQueryRef": "OmrådeNamn kort",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "Konto"
                     }
                   },
@@ -236,6 +251,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Konto"
+                  }
+                },
+                "Property": "RRLev2Namn"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "expansionStates": [
@@ -249,18 +281,6 @@
               "PNLStructure.PNLDescr"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "PNLStructure"
-                    }
-                  },
-                  "Property": "PNLDescr"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
@@ -268,40 +288,31 @@
               "Konto.RRLev1Namn"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Konto"
-                    }
-                  },
-                  "Property": "RRLev1Namn"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
               "Konto.RRLev2Namn"
             ],
-            "isCollapsed": true,
-            "isPinned": true
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Kostnadsställe.OmrådeNamn kort"
+            ],
+            "isCollapsed": true
           },
           {
             "queryRefs": [
               "Konto.RRLev3Namn"
             ],
-            "isCollapsed": true,
-            "isPinned": true
+            "isCollapsed": true
           },
           {
             "queryRefs": [
               "Konto.RRLev4Namn"
             ],
-            "isCollapsed": true,
-            "isPinned": true
+            "isCollapsed": true
           },
           {
             "queryRefs": [

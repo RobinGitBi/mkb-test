@@ -63,15 +63,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fastighet"
+                      "Entity": "Kostnadsställe"
                     }
                   },
-                  "Property": "Bostadsområde"
+                  "Property": "OmrådeNamn kort"
                 }
               },
-              "queryRef": "Fastighet.Bostadsområde",
-              "nativeQueryRef": "Bostadsområde",
-              "active": false
+              "queryRef": "Kostnadsställe.OmrådeNamn kort",
+              "nativeQueryRef": "OmrådeNamn kort",
+              "active": true
             },
             {
               "field": {
@@ -288,14 +288,14 @@
             "queryRefs": [
               "Konto.RRLev2Namn"
             ],
-            "isCollapsed": true,
             "isPinned": true
           },
           {
             "queryRefs": [
-              "Fastighet.Bostadsområde"
+              "Kostnadsställe.OmrådeNamn kort"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "isPinned": true
           },
           {
             "queryRefs": [
@@ -316,122 +316,7 @@
             "isCollapsed": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Intäkter'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Övriga rörelseintäkter'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Hyresintäkter'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Kostnader för varor, material och vissa köpta tjänster'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Kostnader Fastighetsskötsel'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Kostnader Reparationer'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Kostnader Media'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Kostnader för kund- och hyresförluster'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Riskkostnader och övriga driftkostnader'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Fastighetsskatt'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                },
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'Kostnader Underhåll'"
-                      }
-                    }
-                  ],
-                  "isToggled": true
-                }
-              ]
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -1087,20 +972,6 @@
               }
             },
             "Property": "RRLev2Namn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d06507795656d2ba08a5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fastighet"
-              }
-            },
-            "Property": "Bostadsområde"
           }
         },
         "type": "Categorical"
