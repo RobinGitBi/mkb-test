@@ -4733,22 +4733,51 @@ table Mätvärde
 	measure 'Prognos Ålder' = ```
 			
 			
-			VAR AsOf =
-			    COALESCE ( MAX ( 'Kalender'[Datum] ), TODAY() )
-			VAR Birth =
-			    SELECTEDVALUE ( 'ViewDimAnställdSCD2'[Födelsedatum] )
-			-- Gate: visa bara ålder där det finns fakta i nuvarande filterkontekst
-			VAR HasFact =
-			    NOT ISBLANK ( [Prognos FTE Före Justering] )    -- ex: [New_FTE]
+			// Improved Performance
+			VAR Birth = SELECTEDVALUE ( 'ViewDimAnställdSCD2'[Födelsedatum] )
 			RETURN
 			IF (
-			    NOT HasFact || ISBLANK ( Birth ),
-			    BLANK(),
-			    VAR Years  = YEAR ( AsOf ) - YEAR ( Birth )
-			    VAR AsMD   = 100 * MONTH ( AsOf )  + DAY ( AsOf )
-			    VAR BrMD   = 100 * MONTH ( Birth ) + DAY ( Birth )
-			    RETURN Years - INT ( AsMD < BrMD )
+			    ISBLANK ( Birth ),
+			    BLANK (),
+			    VAR HasFact = NOT ISBLANK ( [Prognos FTE Före Justering] )
+			    RETURN
+			    IF (
+			        NOT HasFact,
+			        BLANK (),
+			        VAR AsOf = COALESCE ( MAX ( 'Kalender'[Datum] ), TODAY() )
+			        VAR BirthdayThisYear =
+			            DATE ( YEAR ( AsOf ), MONTH ( Birth ), DAY ( Birth ) )
+			        VAR Years = YEAR ( AsOf ) - YEAR ( Birth )
+			        RETURN Years - INT ( AsOf < BirthdayThisYear )
+			    )
 			)
+			//
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			// VAR AsOf =
+			//     COALESCE ( MAX ( 'Kalender'[Datum] ), TODAY() )
+			// VAR Birth =
+			//     SELECTEDVALUE ( 'ViewDimAnställdSCD2'[Födelsedatum] )
+			// -- Gate: visa bara ålder där det finns fakta i nuvarande filterkontekst
+			// VAR HasFact =
+			//     NOT ISBLANK ( [Prognos FTE Före Justering] )    -- ex: [New_FTE]
+			// RETURN
+			// IF (
+			//     NOT HasFact || ISBLANK ( Birth ),
+			//     BLANK(),
+			//     VAR Years  = YEAR ( AsOf ) - YEAR ( Birth )
+			//     VAR AsMD   = 100 * MONTH ( AsOf )  + DAY ( AsOf )
+			//     VAR BrMD   = 100 * MONTH ( Birth ) + DAY ( Birth )
+			//     RETURN Years - INT ( AsMD < BrMD )
+			// )
 			
 			```
 		formatString: 0

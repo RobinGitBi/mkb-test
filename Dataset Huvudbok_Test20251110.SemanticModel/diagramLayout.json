@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 9773.4986906508875,
+        "x": 661.18952552283281,
         "y": 0
       },
       "nodes": [
@@ -703,7 +703,10 @@
           "zIndex": 0
         },
         {
-          "location": {},
+          "location": {
+            "x": 13211.6794587193,
+            "y": 0
+          },
           "nodeIndex": "Välj mätvärde uppföljning per projektledare",
           "nodeLineageTag": "97c9f564-d196-4f9f-8a36-ea57e0f59813",
           "size": {
@@ -1103,7 +1106,7 @@
       "ordinal": 4,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 11.333333015441895
       },
       "nodes": [
         {
@@ -1116,7 +1119,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
@@ -1129,24 +1132,25 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 605,
-            "y": 64
+            "x": 619,
+            "y": 97
           },
           "nodeIndex": "Huvudbok",
+          "nodeLineageTag": "89dcce35-e8f9-428a-b4a5-4f61497dc5b9",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 736,
-            "y": 613
+            "x": 632,
+            "y": 539
           },
           "nodeIndex": "Beställarlistan for append",
           "nodeLineageTag": "3330c539-d565-4256-9352-a69e0af97d8b",
@@ -1154,7 +1158,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         }
       ],
       "name": "Beställarlistan",
@@ -1181,8 +1185,8 @@
     {
       "ordinal": 6,
       "scrollPosition": {
-        "x": 0,
-        "y": 58.241959498000291
+        "x": 31.8445262907408,
+        "y": 405.5986803158051
       },
       "nodes": [
         {
@@ -1306,6 +1310,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Prognos balansräkning",
+  "selectedDiagram": "All tables",
   "defaultDiagram": "All tables"
 }
