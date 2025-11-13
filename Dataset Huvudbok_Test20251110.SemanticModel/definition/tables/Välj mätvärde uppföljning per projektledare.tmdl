@@ -38,19 +38,11 @@ table 'Välj mätvärde uppföljning per projektledare'
 
 	column Grupp = ```
 			
-			VAR Order_ = 'Välj mätvärde uppföljning per projektledare'[Välj mätvärde uppföljning per projektledare Order] 
+			VAR Order_ = 'Välj mätvärde uppföljning per projektledare'[Välj mätvärde uppföljning per projektledare Order]
 			VAR Result =
 			IF( Order_ < 10,
-			    "Aktuell prognos",
-			    IF( Order_ >= 10 && Order_ < 20,
-			        "T0",
-			        IF( Order_ >= 20 && Order_ < 30,
-			            "T0 nästa år",
-			            IF( Order_ >= 30 && Order_ < 40,
-			                "T1",
-			                IF( Order_ >= 40 && Order_ < 50,
-			                   "T2",
-			                    
+			    "Prognos RR/BR",
+			                   
 			                    IF( Order_ >= 100 && Order_ < 110,
 			                        "Aktuell prognos",
 			                        IF( Order_ >= 110 && Order_ < 120,
@@ -61,8 +53,8 @@ table 'Välj mätvärde uppföljning per projektledare'
 			                                    "T1",
 			                                    IF( Order_ >= 140 && Order_ < 150,
 			                                        "T2",
-			                                        BLANK()))))))))))
-			
+			                                        BLANK()))))))
+			 
 			RETURN Result
 			```
 		lineageTag: 5dfe20b0-e52c-437b-882a-b634a1cbe636
@@ -74,7 +66,15 @@ table 'Välj mätvärde uppföljning per projektledare'
 		mode: import
 		source = ```
 				{
-				
+				 
+				    // Prognos RR/BR
+				    ("Aktuell prognos", NAMEOF([Prognos RR/BR aktuell]), 1),
+				    ("T0 nästa år", NAMEOF([Prognos RR/BR T0 nästa år]), 3),
+				    ("T0", NAMEOF([Prognos RR/BR T0]), 4),
+				    ("T1", NAMEOF([Prognos RR/BR T1]), 5),
+				    ("T2", NAMEOF([Prognos RR/BR T2]), 6),
+				 
+				 
 				/*
 				    // Aktuell prognos
 				    ("Utfall ack.", NAMEOF([Utfall ÅTD]), 0),
@@ -84,35 +84,35 @@ table 'Välj mätvärde uppföljning per projektledare'
 				    ("Nästa prognos", NAMEOF([Nästa prognos BR]), 5),
 				    ("Diff nästa prognos mot aktuell prognos", NAMEOF([Diff Nästa prognos vs Aktuell prognos]), 7),
 				    ("Diff % ", NAMEOF([Diff Nästa prognos vs Aktuell prognos %]), 8),
-				
+				 
 				    // T0
 				    ("Utfall ack.", NAMEOF([Utfall ÅTD]), 10),
 				    ("T0", NAMEOF('Mätvärde'[Prognos RR/BR T0]), 11),
 				    ("Diff utfall mot T0", NAMEOF([Diff Utfall vs prognos T0]), 12),
 				    ("Procent av T0", NAMEOF([Procent av prognos T0]), 13),
-				
+				 
 				    // T0 nästa år
 				    ("Utfall ack.", NAMEOF([Utfall ÅTD]), 20),
 				    ("T0 nästa år", NAMEOF('Mätvärde'[Prognos RR/BR T0 nästa år]), 21),
 				    ("Diff utfall mot T0 nästa år", NAMEOF([Diff Utfall vs prognos T0 nästa år]), 22),
 				    ("Procent av T0 nästa år", NAMEOF([Procent av prognos T0 nästa år]), 23),
-				
+				 
 				    // T1
 				    ("Utfall ack.", NAMEOF([Utfall ÅTD]), 30),
 				    ("T1", NAMEOF('Mätvärde'[Prognos RR/BR T1]), 31),
 				    ("Diff utfall mot T1", NAMEOF([Diff Utfall vs prognos T1]), 32),
 				    ("Procent av T1", NAMEOF([Procent av prognos T1]), 33),
-				
+				 
 				    // T2
 				    ("Utfall ack.", NAMEOF([Utfall ÅTD]), 40),
 				    ("T2", NAMEOF('Mätvärde'[Prognos RR/BR T2]), 41),
 				    ("Diff utfall mot T2", NAMEOF([Diff Utfall vs prognos T2]), 42),
 				    ("Procent av T2", NAMEOF([Procent av prognos T2]), 43),
 				*/
-				
-				
+				 
+				 
 				    // Periodiserat
-				
+				 
 				    // Aktuell prognos
 				    ("Utfall", NAMEOF([Utfall]), 100),
 				    ("Utfall ack.", NAMEOF([Utfall ÅTD]), 101),
@@ -124,8 +124,8 @@ table 'Välj mätvärde uppföljning per projektledare'
 				    ("Diff helår %", NAMEOF([Diff helår prognos % aktuell]), 107),
 				    ("Prognos per månad", NAMEOF([Prognos RR/BR periodiserat per månad aktuell]), 108),
 				    ("Utfall snitt per månad", NAMEOF([Utfall snitt per månad]), 109),
-				
-				    
+				 
+				   
 				    // T0
 				    ("Utfall", NAMEOF([Utfall]), 110),
 				    ("Utfall ack.", NAMEOF([Utfall ÅTD]), 111),
@@ -137,7 +137,7 @@ table 'Välj mätvärde uppföljning per projektledare'
 				    ("Diff helår %", NAMEOF([Diff helår prognos % T0]), 117),
 				    ("T0 per månad", NAMEOF([Prognos RR/BR periodiserat per månad T0]), 118),
 				    ("Utfall snitt per månad", NAMEOF([Utfall snitt per månad]), 119),
-				    
+				   
 				    // T0 nästa år
 				    ("Utfall", NAMEOF([Utfall]), 120),
 				    ("Utfall ack.", NAMEOF([Utfall ÅTD]), 121),
@@ -149,7 +149,7 @@ table 'Välj mätvärde uppföljning per projektledare'
 				    ("Diff helår %", NAMEOF([Diff helår prognos % T0 nästa år]), 127),
 				    ("T0 nästa år per månad", NAMEOF([Prognos RR/BR periodiserat per månad T0 nästa år]), 128),
 				    ("Utfall snitt per månad", NAMEOF([Utfall snitt per månad]), 129),
-				
+				 
 				    // T1
 				    ("Utfall", NAMEOF([Utfall]), 130),
 				    ("Utfall ack.", NAMEOF([Utfall ÅTD]), 131),
@@ -161,7 +161,7 @@ table 'Välj mätvärde uppföljning per projektledare'
 				    ("Diff helår %", NAMEOF([Diff helår prognos % T1]), 137),
 				    ("T1 per månad", NAMEOF([Prognos RR/BR periodiserat per månad T1]), 138),
 				    ("Utfall snitt per månad", NAMEOF([Utfall snitt per månad]), 139),
-				
+				 
 				   // T2
 				    ("Utfall", NAMEOF([Utfall]), 140),
 				    ("Utfall ack.", NAMEOF([Utfall ÅTD]), 141),
@@ -173,9 +173,9 @@ table 'Välj mätvärde uppföljning per projektledare'
 				    ("Diff helår %", NAMEOF([Diff helår prognos % T2]), 147),
 				    ("T2 per månad", NAMEOF([Prognos RR/BR periodiserat per månad T2]), 148),
 				    ("Utfall snitt per månad", NAMEOF([Utfall snitt per månad]), 149)
-				
-				
-				
+				 
+				 
+				 
 				}
 				```
 

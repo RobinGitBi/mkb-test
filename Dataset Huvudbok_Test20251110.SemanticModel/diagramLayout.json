@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 661.18952552283281,
+        "x": 1736.7865705634974,
         "y": 0
       },
       "nodes": [
@@ -89,8 +89,9 @@
             "y": 0
           },
           "nodeIndex": "Calculation Group beloppsvisning",
+          "nodeLineageTag": "03fe7049-c64b-4461-9549-0b4c6edab72b",
           "size": {
-            "height": 128,
+            "height": 183.87517117094362,
             "width": 234
           },
           "zIndex": 12

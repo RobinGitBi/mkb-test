@@ -6,19 +6,17 @@ table 'Calculation Group beloppsvisning'
 
 		calculationItem 'Visa i ental' = SELECTEDMEASURE()
 
-		calculationItem 'Visa i tusental' = ```
-				
-				
+		calculationItem 'Visa i tusental' =
 				IF(
-				    CONTAINSSTRING(SELECTEDMEASURENAME(), "%") || 
-				        CONTAINSSTRING(SELECTEDMEASURENAME(), "/") && NOT CONTAINSSTRING(SELECTEDMEASURENAME(), "RR/BR") || 
-				        CONTAINSSTRING(SELECTEDMEASURENAME(), "grad") || 
-				        CONTAINSSTRING(SELECTEDMEASURENAME(), "color") || 
+				    CONTAINSSTRING(SELECTEDMEASURENAME(), "%") ||
+				        CONTAINSSTRING(SELECTEDMEASURENAME(), "/") && NOT CONTAINSSTRING(SELECTEDMEASURENAME(), "RR/BR") ||
+				        CONTAINSSTRING(SELECTEDMEASURENAME(), "grad") ||
+				        CONTAINSSTRING(SELECTEDMEASURENAME(), "color") ||
+				        CONTAINSSTRING(SELECTEDMEASURENAME(), "Valt") ||
 				        CONTAINSSTRING(SELECTEDMEASURENAME(), "Diff")  && NOT CONTAINSSTRING(SELECTEDMEASURENAME(), "Diff helår") && NOT CONTAINSSTRING(SELECTEDMEASURENAME(), "Diff periodiserad") && NOT CONTAINSSTRING(SELECTEDMEASURENAME(), "Diff Nästa prognos"), // om valt measure slutar med procent vill vi inte ändra formatet (någon diff i % exempelvis)
 				    SELECTEDMEASURE(),
 				    SELECTEDMEASURE() / 1000
 				    )
-				```
 
 		calculationItem 'Visa i miljontal' = ```
 				IF(
@@ -42,7 +40,6 @@ table 'Calculation Group beloppsvisning'
 
 	column Ordinal
 		dataType: int64
-		isHidden
 		lineageTag: 88c307f9-face-4156-a308-fca3794ffd33
 		summarizeBy: sum
 		sourceColumn: Ordinal
