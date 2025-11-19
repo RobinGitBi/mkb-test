@@ -6,7 +6,8 @@
     "y": 0,
     "z": 0,
     "height": 110.71863580998782,
-    "width": 1279.293544457978
+    "width": 1279.293544457978,
+    "tabOrder": 8000
   },
   "visualGroup": {
     "displayName": "Header",

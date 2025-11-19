@@ -6,7 +6,8 @@
     "y": 0,
     "z": 0,
     "height": 26,
-    "width": 125
+    "width": 125,
+    "tabOrder": 5000
   },
   "visualGroup": {
     "displayName": "Startsida ej vald",
