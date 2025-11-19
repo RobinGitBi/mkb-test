@@ -23,7 +23,7 @@ queryGroup 'Frågefel – 2024-06-03 08:38:33'
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Mätvärde","Kalender","Huvudbok","Budget - for append","Ingående balans - for append","Yta per segment och kostnadsställe","Företag","Aktivitet","Konto","Kostnadsställe","Motpart","Funktion","Leverantör","Momskod","Momssystem","Projekt","Segment","Slag","Vertyp","Kund","PNLStructure","Uppföljning","KoddelLG","UBWLatestUpdate","Välj jämförelsemätvärde Finans","Beställarlistan","Beställarlistan for append","Välj mätvärde Jämförelsemätvärde standardknapp","Beställarlistan max frysdatum","Fastighet","Prognos balansräkning"]
+annotation PBI_QueryOrder = ["Mätvärde","Kalender","Huvudbok","Budget - for append","Beställningar Ankomstregisterade","Ingående balans - for append","Yta per segment och kostnadsställe","Företag","Aktivitet","Konto","Kostnadsställe","Motpart","Funktion","Leverantör","Momskod","Momssystem","Projekt","Segment","Slag","Vertyp","Kund","PNLStructure","Uppföljning","KoddelLG","UBWLatestUpdate","Välj jämförelsemätvärde Finans","Beställarlistan","Beställarlistan for append","Välj mätvärde Jämförelsemätvärde standardknapp","Beställarlistan max frysdatum","Fastighet","Prognos balansräkning"]
 
 annotation __TEdtr = 1
 
@@ -85,6 +85,7 @@ ref table 'Damage Filter'
 ref table 'Prognos balansräkning'
 ref table 'Välj rader uppföljning per projektledare'
 ref table 'Välj mätvärde uppföljning per projektledare'
+ref table 'Beställningar Ankomstregisterade'
 
 ref perspective AdHoc
 

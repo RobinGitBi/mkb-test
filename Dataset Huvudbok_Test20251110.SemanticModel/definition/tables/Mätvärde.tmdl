@@ -4311,6 +4311,12 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Beställningar Ankomstregistrerade Fakturor' = -SUM('Beställningar Ankomstregisterade'[Utfall])
+		displayFolder: Nya Från Dashboard
+		lineageTag: 6ed31175-6123-4d18-85b6-5c75a742b7b5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mätvärde-dafc6aed-5a2f-4494-9ed3-cf1871eb8c79 = m
 		mode: import
 		source =
