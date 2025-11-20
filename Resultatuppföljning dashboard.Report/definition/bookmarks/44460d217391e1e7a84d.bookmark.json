@@ -4,11 +4,11 @@
   "name": "44460d217391e1e7a84d",
   "options": {
     "targetVisualNames": [
-      "02265a822737b210398c"
+      "0d9581eb6a5d5a2643e6"
     ]
   },
   "explorationState": {
-    "version": "1.5",
+    "version": "1.3",
     "activeSection": "81199e52210b8cd4e520",
     "filters": {
       "byName": {
@@ -1079,7 +1079,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "4b003a07f0ffde6d06e6",
+                  "name": "fbb467e2008a916a0d43",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1180,39 +1180,7 @@
                       "Property": "Bostadsområde"
                     }
                   },
-                  "howCreated": 0
-                },
-                {
-                  "name": "981f9b65ed80da028a91",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Schema": "extension",
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "öl3"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "e1d6253e0c371e0bd779",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Schema": "extension",
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "öl4"
-                    }
-                  },
-                  "howCreated": 0
+                  "howCreated": 1
                 },
                 {
                   "name": "56d56bf05b3b0a805d80",
@@ -1349,7 +1317,7 @@
                       "Property": "öl2"
                     }
                   },
-                  "howCreated": 0
+                  "howCreated": 1
                 },
                 {
                   "name": "fbb743ee2ea1a3dee564",
@@ -1382,23 +1350,82 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "452a2729902fd348cf19",
-                  "type": "Advanced",
+                  "name": "15b27a85c24c070d7054",
+                  "type": "Categorical",
                   "expression": {
-                    "Measure": {
+                    "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Schema": "extension",
-                          "Entity": "Mätvärde"
+                          "Entity": "Kostnadsställe"
                         }
                       },
-                      "Property": "öl"
+                      "Property": "OmrådeNamn kort"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "e27c52247980dd94887d",
+                  "name": "e52d583b4bac5295258e",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Framtida Beställningar Året"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "106113eec54d9a5e43c9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Totalt (Utfall och Beställningar)"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fa4c1d1e4040eb7d4318",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Diff Helår"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a3dd45cfc0e70d657a9d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Diff% Helår"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "78c481830800b1224c68",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1413,7 +1440,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1eee756ca41f04de5e10",
+                  "name": "b3d23d10d17931334a41",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1422,23 +1449,7 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Diff T2 - T1 helår"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "48dbf2ea8b70189c3acd",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Schema": "extension",
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "Öl5"
+                      "Property": "Diff% T2 - T1 helår"
                     }
                   },
                   "howCreated": 0
@@ -1484,16 +1495,6 @@
                       },
                       "Property": "RRLev1Namn"
                     }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Konto"
-                        }
-                      },
-                      "Property": "RRLev2Namn"
-                    }
                   }
                 ]
               },
@@ -1507,48 +1508,24 @@
                       "queryRefs": [
                         "PNLStructure.PNLDescr"
                       ],
-                      "identityKeys": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "PNLStructure"
-                              }
-                            },
-                            "Property": "PNLDescr"
-                          }
-                        }
-                      ],
                       "isPinned": true
                     },
                     {
                       "queryRefs": [
                         "Konto.RRLev1Namn"
                       ],
-                      "identityKeys": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "Konto"
-                              }
-                            },
-                            "Property": "RRLev1Namn"
-                          }
-                        }
-                      ],
+                      "isCollapsed": true,
                       "isPinned": true
                     },
                     {
                       "queryRefs": [
                         "Konto.RRLev2Namn"
                       ],
-                      "isCollapsed": true,
-                      "isPinned": true
+                      "isCollapsed": true
                     },
                     {
                       "queryRefs": [
-                        "Fastighet.Bostadsområde"
+                        "Kostnadsställe.OmrådeNamn kort"
                       ],
                       "isCollapsed": true
                     },
@@ -1572,121 +1549,7 @@
                     }
                   ],
                   "root": {
-                    "identityValues": null,
-                    "children": [
-                      {
-                        "identityValues": [
-                          {
-                            "Literal": {
-                              "Value": "'Intäkter'"
-                            }
-                          }
-                        ],
-                        "children": [
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Övriga rörelseintäkter'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Hyresintäkter'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          }
-                        ]
-                      },
-                      {
-                        "identityValues": [
-                          {
-                            "Literal": {
-                              "Value": "'Kostnader för varor, material och vissa köpta tjänster'"
-                            }
-                          }
-                        ],
-                        "children": [
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Kostnader Fastighetsskötsel'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Kostnader Reparationer'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Kostnader Media'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Kostnader för kund- och hyresförluster'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Riskkostnader och övriga driftkostnader'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Fastighetsskatt'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Kostnader Underhåll'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          }
-                        ]
-                      }
-                    ]
+                    "identityValues": null
                   }
                 }
               ]
@@ -1705,7 +1568,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6dafde7222d940354c85",
+                  "name": "0a5fd4cc69cba7acfd3b",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -1898,7 +1761,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "96cea51cce79382dbcfc",
+                  "name": "cc2264698b14a25e35ce",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1913,7 +1776,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a29588f2b17505ee02ec",
+                  "name": "bed64277dcbb513970c0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2295,7 +2158,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "770adc4b576c56d9afd4",
+                  "name": "2761f65e17040093064c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2364,54 +2227,33 @@
                   ]
                 }
               },
-              "filterExpressionMetadata": {
-                "expressions": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Calculation Group beloppsvisning"
-                        }
-                      },
-                      "Property": "Name"
-                    }
-                  }
-                ],
-                "cachedValueItems": [
-                  {
-                    "identities": [
-                      {
-                        "scopeId": {
-                          "Comparison": {
-                            "ComparisonKind": 0,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Entity": "Calculation Group beloppsvisning"
-                                  }
-                                },
-                                "Property": "Name"
+              "cachedFilterDisplayItems": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Calculation Group beloppsvisning"
                               }
                             },
-                            "Right": {
-                              "Literal": {
-                                "Value": "'Visa i ental'"
-                              }
-                            }
+                            "Property": "Name"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'Visa i ental'"
                           }
                         }
                       }
-                    ],
-                    "valueMap": {
-                      "0": "Visa i ental"
                     }
-                  }
-                ],
-                "jsonFilter": {
-                  "filterType": 3
+                  },
+                  "displayName": "Visa i ental"
                 }
-              }
+              ]
             }
           },
           "74a79c8eed001a68840b": {
@@ -2491,7 +2333,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "3379111a65c60cc64a9e",
+                  "name": "6cb6bade617944b64870",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2710,7 +2552,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "57649ed99007c36caa76",
+                  "name": "7749986c557927276092",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2890,7 +2732,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "481d1053eade0aff0aed",
+                  "name": "9e74680461573755463d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2905,7 +2747,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b983c90b61b5d15d0eda",
+                  "name": "4c4aeb3e3c200e865b16",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kostnadsställe"
+                        }
+                      },
+                      "Property": "OmrådeNamn kort"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8dacf08c88a308b4180e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2920,7 +2777,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "95856c6003a7e687eea9",
+                  "name": "636e62632a9a90282c01",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2935,7 +2792,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6b19e23d25c9159fa6de",
+                  "name": "4816d1010095c0e10139",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2950,52 +2807,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "11b199084df9c80e0696",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "Utfall fg år-1 ÅTD"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "8cb9326796379af452be",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "Aktuell Prognos Helår"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "7069c2e4d8361548fbcc",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fastighet"
-                        }
-                      },
-                      "Property": "Bostadsområde"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "58f5bef26b3228a66a09",
+                  "name": "659dba6800168728bbb4",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3010,65 +2822,121 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "45255ab488ef7c19c9ee",
+                  "name": "ab7298025ecb064985ab",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Schema": "extension",
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "öl2"
+                      "Property": "Framtida Beställningar Året"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "82b6c3cdc236fcf0e661",
+                  "name": "b5c42a3fb2d54411ae6e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Schema": "extension",
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "öl3"
+                      "Property": "Totalt (Utfall och Beställningar)"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "a88bc20b1683989f63d4",
+                  "name": "94dd5e48d57a3e5e9854",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Schema": "extension",
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "öl4"
+                      "Property": "Utfall fg år-1 ÅTD"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "8464991a418324a23486",
+                  "name": "9306fbe738310739b660",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Schema": "extension",
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "öl"
+                      "Property": "Aktuell Prognos Helår"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "cae7fa93ea4301ba9731",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Diff Helår"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b7b40f19a8ed6280dad7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Diff% Helår"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "142d76e8b01b9576c414",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "T1 helår"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "285b64556daaed11c23c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Diff% T2 - T1 helår"
                     }
                   },
                   "howCreated": 0
@@ -3139,200 +3007,7 @@
                     }
                   }
                 ]
-              },
-              "expansionStates": [
-                {
-                  "roles": [
-                    "Rows"
-                  ],
-                  "levels": [
-                    {
-                      "queryRefs": [
-                        "PNLStructure.PNLDescr"
-                      ],
-                      "identityKeys": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "PNLStructure"
-                              }
-                            },
-                            "Property": "PNLDescr"
-                          }
-                        }
-                      ],
-                      "isPinned": true
-                    },
-                    {
-                      "queryRefs": [
-                        "Konto.RRLev1Namn"
-                      ],
-                      "identityKeys": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Entity": "Konto"
-                              }
-                            },
-                            "Property": "RRLev1Namn"
-                          }
-                        }
-                      ],
-                      "isPinned": true
-                    },
-                    {
-                      "queryRefs": [
-                        "Konto.RRLev2Namn"
-                      ],
-                      "isCollapsed": true,
-                      "isPinned": true
-                    },
-                    {
-                      "queryRefs": [
-                        "Fastighet.Bostadsområde"
-                      ],
-                      "isCollapsed": true
-                    },
-                    {
-                      "queryRefs": [
-                        "Konto.RRLev3Namn"
-                      ],
-                      "isCollapsed": true
-                    },
-                    {
-                      "queryRefs": [
-                        "Konto.RRLev4Namn"
-                      ],
-                      "isCollapsed": true
-                    },
-                    {
-                      "queryRefs": [
-                        "Konto.RRLev5Namn"
-                      ],
-                      "isCollapsed": true
-                    }
-                  ],
-                  "root": {
-                    "identityValues": null,
-                    "children": [
-                      {
-                        "identityValues": [
-                          {
-                            "Literal": {
-                              "Value": "'Intäkter'"
-                            }
-                          }
-                        ],
-                        "children": [
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Övriga rörelseintäkter'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Hyresintäkter'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          }
-                        ]
-                      },
-                      {
-                        "identityValues": [
-                          {
-                            "Literal": {
-                              "Value": "'Kostnader för varor, material och vissa köpta tjänster'"
-                            }
-                          }
-                        ],
-                        "children": [
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Kostnader Fastighetsskötsel'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Kostnader Reparationer'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Kostnader Media'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Kostnader för kund- och hyresförluster'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Riskkostnader och övriga driftkostnader'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Fastighetsskatt'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          },
-                          {
-                            "identityValues": [
-                              {
-                                "Literal": {
-                                  "Value": "'Kostnader Underhåll'"
-                                }
-                              }
-                            ],
-                            "isToggled": true
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
           },
           "a1b8335398e8971530c2": {
@@ -3392,7 +3067,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "b5d06d4dc64720a918fd",
+                  "name": "068507008552b63709de",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3504,7 +3179,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "8b51d8cd5042b44e695e",
+                  "name": "1ab997f24b7e69c70462",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3588,7 +3263,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "c7319adf0e495ea5f234",
+                  "name": "b245bce99d81c0202474",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3643,7 +3318,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b89a3a9e9902376c9b7e",
+                  "name": "45f3504123b0245713dd",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3727,7 +3402,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "9083aa345a921efc2a73",
+                  "name": "a2cc47876c908253d8bc",
                   "type": "Categorical",
                   "expression": {
                     "Column": {

@@ -1,15 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
-  "displayName": "MM- Exkluderad_Nuläge_Scenario2",
-  "name": "f654731f9c237353965b",
+  "displayName": "VS - Exkluderad_Nuläge_Scenario1",
+  "name": "5945933b60259041b007",
   "options": {
-    "targetVisualNames": [
-      "34d3b8a496948ed0eceb"
-    ]
+    "targetVisualNames": []
   },
   "explorationState": {
     "version": "1.3",
-    "activeSection": "ca83d0f71b024773ded8",
+    "activeSection": "1bce2b74b075ecca0304",
     "filters": {
       "byName": {
         "Filter8f29119f1e2d7ce15e3e": {
@@ -214,7 +212,7 @@
       ]
     },
     "sections": {
-      "ca83d0f71b024773ded8": {
+      "1bce2b74b075ecca0304": {
         "filters": {
           "byName": {
             "Filtera250b812dc04c3795000": {
@@ -622,7 +620,7 @@
                               [
                                 {
                                   "Literal": {
-                                    "Value": "'Mkb-Metod'"
+                                    "Value": "'Vattenskador'"
                                   }
                                 }
                               ]
@@ -679,13 +677,16 @@
           ]
         },
         "visualContainers": {
-          "05644614f551181a79d9": {
+          "483708c116e5491397d5": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
-          "0e6a22a3b27c786a28b7": {
+          "2c7ee4cd094801a9cd82": {
             "filters": {
               "byExpr": [
                 {
@@ -958,7 +959,7 @@
                       "Property": "Totalt (Utfall och Beställningar) - Nuläge"
                     }
                   },
-                  "howCreated": 0
+                  "howCreated": 1
                 },
                 {
                   "name": "1ec7f63f76a9a700853d",
@@ -973,7 +974,7 @@
                       "Property": "Diff Helår - Nuläge"
                     }
                   },
-                  "howCreated": 0
+                  "howCreated": 1
                 },
                 {
                   "name": "ff8b5fb7e6ba06eb280a",
@@ -988,7 +989,7 @@
                       "Property": "Diff% Helår - Nuläge"
                     }
                   },
-                  "howCreated": 0
+                  "howCreated": 1
                 },
                 {
                   "name": "e5c69d2a94b6857448ca",
@@ -1022,7 +1023,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "f5f6041f31de4a939489",
+                  "name": "76ac7a89260bcc565211",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1031,7 +1032,52 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+                      "Property": "Best. Ankomstlista Före Innevarande Månad"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e16a2a23de4a39da50e1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Diff Helår - Nuläge Ankomstlista"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0bbc416154a69ca11c0b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Diff% Helår - Nuläge Ankomstlista"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3838be1f0c38d53096d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
                     }
                   },
                   "howCreated": 0
@@ -1113,13 +1159,26 @@
                         "Konto.RRLev2Namn"
                       ],
                       "isCollapsed": true,
+                      "identityKeys": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "Konto"
+                              }
+                            },
+                            "Property": "RRLev2Namn"
+                          }
+                        }
+                      ],
                       "isPinned": true
                     },
                     {
                       "queryRefs": [
                         "Kostnadsställe.OmrådeNamn kort"
                       ],
-                      "isCollapsed": true
+                      "isCollapsed": true,
+                      "isPinned": true
                     },
                     {
                       "queryRefs": [
@@ -1147,7 +1206,7 @@
               ]
             }
           },
-          "28db49c0d7cb4ce860d8": {
+          "da796c5c7b668ec09b74": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {},
@@ -1156,17 +1215,17 @@
               }
             }
           },
-          "29744450f0974f795ed1": {
+          "7035951b029d430e8840": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
-          "29ad9ee7f1ea7ba400fa": {
+          "2c16a6b82504e1b5690a": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "5576ef80629a6e08c251",
+                  "name": "757c1ddc5e76b4000d55",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1264,35 +1323,35 @@
               ]
             }
           },
-          "34a1e091b4973cdc4b4f": {
+          "c83782c0170262360150": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
-          "34d3b8a496948ed0eceb": {
+          "55b82290683098dd841c": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
-          "363528080c182cbe5fa9": {
+          "e95833994c97903e6161": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}
             }
           },
-          "3722d3fac0edb8c747cf": {
+          "fc8d4e78d37e15e4b0de": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
-          "37f467741259b781b294": {
+          "42a1f87dc52390083058": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "91d54c207ecb39db6382",
+                  "name": "e387656e8404c727c4cb",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1346,7 +1405,7 @@
               }
             }
           },
-          "38ef0e8020ade5b5fd3a": {
+          "8c845025351704b01c1e": {
             "filters": {
               "byExpr": [
                 {
@@ -1403,7 +1462,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "4d04807fd0c753340256",
+                  "name": "3a159ac9339820d00098",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1418,7 +1477,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4a8697bd57b7a39c210d",
+                  "name": "a73ede8000d0c916404b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1495,7 +1554,7 @@
               ]
             }
           },
-          "4084344440ad7fd31d1f": {
+          "2a818b74e1171830b526": {
             "filters": {
               "byExpr": [
                 {
@@ -1842,7 +1901,7 @@
               ]
             }
           },
-          "41159af1f3ed83e0983f": {
+          "5c388016c806db0a6856": {
             "filters": {
               "byExpr": [
                 {
@@ -1899,7 +1958,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "b2907b6d73e1dd4d654e",
+                  "name": "13f7871510a21575de00",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1953,7 +2012,7 @@
               }
             }
           },
-          "594c99beda277a1a4986": {
+          "eda8624fc10719e48842": {
             "filters": {
               "byExpr": [
                 {
@@ -2010,7 +2069,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "2090957b5007b6340046",
+                  "name": "155dd0e2e64329ba2427",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2061,7 +2120,7 @@
               }
             }
           },
-          "5e1424bdae549f44864e": {
+          "7fc416d6b2380e770c04": {
             "filters": {
               "byExpr": [
                 {
@@ -2178,7 +2237,7 @@
               ]
             }
           },
-          "686b70a22546cfd2b46a": {
+          "317821e8be5204588001": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {},
@@ -2187,11 +2246,11 @@
               }
             }
           },
-          "6b3e430c3beb8dbd2c27": {
+          "171c83f0237acceaba2d": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "4e46cac9a7b282cd2069",
+                  "name": "cf9dccf80a106071b272",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2212,7 +2271,7 @@
               "objects": {}
             }
           },
-          "6e5a69e967d95b4f3d06": {
+          "570a2185ce49e05c6a7b": {
             "filters": {
               "byExpr": [
                 {
@@ -2289,7 +2348,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "93c05ae9446b2212e4eb",
+                  "name": "fc297364b7026ab6480e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2359,7 +2418,7 @@
               ]
             }
           },
-          "75342f016bfc01a31d64": {
+          "3af0db1b858e40300446": {
             "filters": {
               "byExpr": [
                 {
@@ -2416,7 +2475,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "94fe2df7040cb248e595",
+                  "name": "1bd6a18085440d1ea1a3",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2467,7 +2526,7 @@
               }
             }
           },
-          "82cfb9054a25d1153011": {
+          "eeabf3e8acbc0ad04621": {
             "filters": {
               "byExpr": [
                 {
@@ -2612,17 +2671,17 @@
               }
             }
           },
-          "a246f86eab2fc17ad723": {
+          "4ba33b5289479c4134a4": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}
             }
           },
-          "a7b46839c54f3e62767e": {
+          "6275971c706ea413284a": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "6efad78d59091079abdc",
+                  "name": "6fdcf6ec7bbc40b4413d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2643,7 +2702,7 @@
               "objects": {}
             }
           },
-          "a8018b957242c98ce4ab": {
+          "93c94bfde9b50c94e864": {
             "filters": {
               "byExpr": [
                 {
@@ -2783,7 +2842,7 @@
               }
             }
           },
-          "c15993c477b7e654427e": {
+          "e52b5357968ab0a187b5": {
             "filters": {
               "byExpr": [
                 {
@@ -2832,7 +2891,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "6d8d3218c50ed3c4c405",
+                  "name": "3b252ac6203078040650",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2852,6 +2911,53 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "k",
+                                "Entity": "Kalender",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "k"
+                                            }
+                                          },
+                                          "Property": "NuvarandeMånad"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Nuvarande'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
                   "data": [
                     {
                       "properties": {
@@ -2896,31 +3002,25 @@
               }
             }
           },
-          "c4177306f57c3a17dadf": {
+          "17ea71912c41675ece9d": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
-          "c8e7b78c8260bf76461a": {
+          "1d88a0b5b5211220c5d0": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
             }
           },
-          "cd176fe7643dc84d681b": {
+          "c2221447584702445592": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
-          "d1d85e2b57cfeb21bd05": {
+          "7150353ed57a55d27bb0": {
             "filters": {
               "byExpr": [
                 {
@@ -2977,7 +3077,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "ffd9e4a729e15068e050",
+                  "name": "26295024b09e7cb6c0c0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3028,7 +3128,7 @@
               }
             }
           },
-          "d7b5c148da429fdac3cd": {
+          "f02c75efb9ac039a986c": {
             "filters": {
               "byExpr": [
                 {
@@ -3154,7 +3254,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "92c012232ca594399247",
+                  "name": "4916d9423170b5350308",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3169,7 +3269,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "36a50fa18b83e30e883d",
+                  "name": "70414aa4426d81541282",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3184,7 +3284,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3a585693548546e0a324",
+                  "name": "dc17152f9008e3c3b492",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3199,7 +3299,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1637fd84696929eb725c",
+                  "name": "f735246431093b95e8bd",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3214,7 +3314,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a805bf12939aa6cd5d09",
+                  "name": "1a2979620a12a230841c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3229,7 +3329,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "87aa7aa60a0814d6aeec",
+                  "name": "c56bdc757d682d22aec7",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3244,7 +3344,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2f3bb5847a000ceb6cea",
+                  "name": "e2fc2a6fb82a0ab47326",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3259,7 +3359,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "249fa23d342ac3dd1860",
+                  "name": "cbf8009cb429ad1a9000",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3274,22 +3374,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "577a2edd6626ce50480e",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "Totalt (Utfall och Beställningar) - Nuläge"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b762256ea661465cc4d0",
+                  "name": "e126d2701d1535393602",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3304,7 +3389,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c2d21c3fc0b2d8ea4007",
+                  "name": "c9574a35e008604eee59",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3319,7 +3404,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "74711c7b5361e7ade059",
+                  "name": "327dd7a40b6ad9d01199",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3328,13 +3413,13 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Diff Helår - Nuläge"
+                      "Property": "Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "2214a280c76854a4aa1e",
+                  "name": "5206f000a3a0568a3c30",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3343,13 +3428,13 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Diff% Helår - Nuläge"
+                      "Property": "Diff Helår - Nuläge Ankomstlista"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "28f862f6803142e8d87b",
+                  "name": "e42ab9beb94b057048ea",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3358,7 +3443,22 @@
                           "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+                      "Property": "Diff% Helår - Nuläge Ankomstlista"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9c82463fc4a5d76dbe92",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Best. Ankomstlista Före Innevarande Månad"
                     }
                   },
                   "howCreated": 0
@@ -3475,19 +3575,13 @@
               ]
             }
           },
-          "dc24b263068ffea759cc": {
+          "40bff6e7cdcaa583006d": {
             "singleVisual": {
               "visualType": "image",
               "objects": {}
             }
           },
-          "e9db4ead175c7a93ad5d": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "f540dbae440174eac3c2": {
+          "c4657d6382370c475930": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {},
@@ -3496,13 +3590,7 @@
               }
             }
           },
-          "f93706dbc001e1bcc96a": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "fcc306e5da0fbf796789": {
+          "9dd9e08e4b9e24e450bd": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {},
@@ -3511,7 +3599,22 @@
               }
             }
           },
-          "fd80967edd24ce102de5": {
+          "7e448a405c200052c5d3": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "1679e7f9c142ed31367c": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
+            }
+          },
+          "e8fd27613782e419d972": {
             "singleVisual": {
               "visualType": "textbox",
               "objects": {}

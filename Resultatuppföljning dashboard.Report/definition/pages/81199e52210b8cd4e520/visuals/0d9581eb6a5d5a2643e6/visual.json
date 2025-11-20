@@ -894,42 +894,8 @@
         "howCreated": "User"
       },
       {
-        "name": "981f9b65ed80da028a91",
-        "ordinal": 3,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Schema": "extension",
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "öl3"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      },
-      {
-        "name": "e1d6253e0c371e0bd779",
-        "ordinal": 4,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Schema": "extension",
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "öl4"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      },
-      {
         "name": "56d56bf05b3b0a805d80",
-        "ordinal": 5,
+        "ordinal": 3,
         "field": {
           "Measure": {
             "Expression": {
@@ -946,7 +912,7 @@
       },
       {
         "name": "4824dcf2606685785db0",
-        "ordinal": 6,
+        "ordinal": 4,
         "field": {
           "Column": {
             "Expression": {
@@ -962,7 +928,7 @@
       },
       {
         "name": "1fb5b0e5347517a80e85",
-        "ordinal": 7,
+        "ordinal": 5,
         "field": {
           "Column": {
             "Expression": {
@@ -992,7 +958,7 @@
       },
       {
         "name": "d0f348d55342bd7619e9",
-        "ordinal": 8,
+        "ordinal": 6,
         "field": {
           "Column": {
             "Expression": {
@@ -1007,7 +973,7 @@
       },
       {
         "name": "727e22139c656cc21deb",
-        "ordinal": 9,
+        "ordinal": 7,
         "field": {
           "Column": {
             "Expression": {
@@ -1022,7 +988,7 @@
       },
       {
         "name": "8ade6cb13062cd8324ec",
-        "ordinal": 10,
+        "ordinal": 8,
         "field": {
           "Column": {
             "Expression": {
@@ -1037,7 +1003,7 @@
       },
       {
         "name": "6c5d0940b42111531eae",
-        "ordinal": 11,
+        "ordinal": 9,
         "field": {
           "Column": {
             "Expression": {
@@ -1052,7 +1018,7 @@
       },
       {
         "name": "aab369f164ca1c378ad9",
-        "ordinal": 12,
+        "ordinal": 10,
         "field": {
           "Column": {
             "Expression": {
@@ -1066,25 +1032,8 @@
         "type": "Categorical"
       },
       {
-        "name": "fa5bb8e5c942b0c0aeb8",
-        "ordinal": 13,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Schema": "extension",
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "öl2"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      },
-      {
         "name": "fbb743ee2ea1a3dee564",
-        "ordinal": 14,
+        "ordinal": 11,
         "field": {
           "Measure": {
             "Expression": {
@@ -1099,7 +1048,7 @@
       },
       {
         "name": "bef8309ebe50e77d45b7",
-        "ordinal": 15,
+        "ordinal": 12,
         "field": {
           "Measure": {
             "Expression": {
@@ -1114,6 +1063,7 @@
       },
       {
         "name": "15b27a85c24c070d7054",
+        "ordinal": 13,
         "field": {
           "Column": {
             "Expression": {
@@ -1128,6 +1078,7 @@
       },
       {
         "name": "e52d583b4bac5295258e",
+        "ordinal": 14,
         "field": {
           "Measure": {
             "Expression": {
@@ -1142,6 +1093,7 @@
       },
       {
         "name": "106113eec54d9a5e43c9",
+        "ordinal": 15,
         "field": {
           "Measure": {
             "Expression": {
@@ -1156,6 +1108,7 @@
       },
       {
         "name": "fa4c1d1e4040eb7d4318",
+        "ordinal": 16,
         "field": {
           "Measure": {
             "Expression": {
@@ -1170,6 +1123,7 @@
       },
       {
         "name": "a3dd45cfc0e70d657a9d",
+        "ordinal": 17,
         "field": {
           "Measure": {
             "Expression": {
@@ -1184,6 +1138,7 @@
       },
       {
         "name": "78c481830800b1224c68",
+        "ordinal": 18,
         "field": {
           "Measure": {
             "Expression": {
@@ -1198,6 +1153,7 @@
       },
       {
         "name": "b3d23d10d17931334a41",
+        "ordinal": 19,
         "field": {
           "Measure": {
             "Expression": {

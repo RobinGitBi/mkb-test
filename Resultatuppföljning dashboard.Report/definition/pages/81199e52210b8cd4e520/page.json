@@ -412,73 +412,7 @@
             "Property": "Uppföljning3Namn"
           }
         },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "u",
-              "Entity": "Uppföljning",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "And": {
-                  "Left": {
-                    "Not": {
-                      "Expression": {
-                        "Comparison": {
-                          "ComparisonKind": 0,
-                          "Left": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "u"
-                                }
-                              },
-                              "Property": "Uppföljning3Namn"
-                            }
-                          },
-                          "Right": {
-                            "Literal": {
-                              "Value": "'Mkb-Metod'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "Right": {
-                    "Not": {
-                      "Expression": {
-                        "Comparison": {
-                          "ComparisonKind": 0,
-                          "Left": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "u"
-                                }
-                              },
-                              "Property": "Uppföljning3Namn"
-                            }
-                          },
-                          "Right": {
-                            "Literal": {
-                              "Value": "'Vattenskador'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
+        "type": "Categorical",
         "howCreated": "User",
         "objects": {
           "general": [

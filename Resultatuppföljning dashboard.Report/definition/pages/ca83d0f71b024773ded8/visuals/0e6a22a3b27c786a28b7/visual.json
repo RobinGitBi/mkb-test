@@ -305,26 +305,13 @@
               "Konto.RRLev2Namn"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Konto"
-                    }
-                  },
-                  "Property": "RRLev2Namn"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
             "queryRefs": [
               "Kostnadsställe.OmrådeNamn kort"
             ],
-            "isCollapsed": true,
-            "isPinned": true
+            "isCollapsed": true
           },
           {
             "queryRefs": [

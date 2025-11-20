@@ -1,9 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.4.0/schema.json",
-  "displayName": "VS - Exkluderad_Nuläge",
+  "displayName": "VS - Exkluderad_Nuläge_Scenario2",
   "name": "6df9d948ce2a386feace",
   "options": {
-    "targetVisualNames": []
+    "targetVisualNames": [
+      "34d3b8a496948ed0eceb"
+    ]
   },
   "explorationState": {
     "version": "1.3",
@@ -705,6 +707,21 @@
                   "howCreated": 0
                 },
                 {
+                  "name": "67602a0e53a2261c0b69",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Huvudbok"
+                        }
+                      },
+                      "Property": "VerText"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
                   "name": "480a6109b8ec4d04eeba",
                   "type": "Advanced",
                   "expression": {
@@ -731,38 +748,6 @@
                         }
                       },
                       "Property": "Bostadsområde"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "981f9b65ed80da028a91",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Schema": "extension",
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "öl3"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "e1d6253e0c371e0bd779",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Schema": "extension",
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "öl4"
                     }
                   },
                   "howCreated": 1
@@ -889,22 +874,6 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "fa5bb8e5c942b0c0aeb8",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Schema": "extension",
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "öl2"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
                   "name": "fbb743ee2ea1a3dee564",
                   "type": "Advanced",
                   "expression": {
@@ -935,7 +904,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d7023272d88650917857",
+                  "name": "8197c6409acd6e2e9047",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kostnadsställe"
+                        }
+                      },
+                      "Property": "OmrådeNamn kort"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "904705c5b45c10dc9e36",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -950,7 +934,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "37e9954d6896db51af40",
+                  "name": "44a58caa451e30ebe60b",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -965,7 +949,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "73df5143cf73a18e5e43",
+                  "name": "a714da878053d318d7bd",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -980,7 +964,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "981c3510980d8ecdda03",
+                  "name": "1ec7f63f76a9a700853d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -995,7 +979,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "66c5a272be9c8d6f1922",
+                  "name": "ff8b5fb7e6ba06eb280a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1010,16 +994,47 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4cba9b739b44a3051962",
-                  "type": "Categorical",
+                  "name": "e5c69d2a94b6857448ca",
+                  "type": "Advanced",
                   "expression": {
-                    "Column": {
+                    "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Kostnadsställe"
+                          "Schema": "extension",
+                          "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "OmrådeNamn kort"
+                      "Property": "Ankomstregistrerade Fakturor"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "5179cb2044796b47a370",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Beställningar Ankomstregistrerade Fakturor"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "f5f6041f31de4a939489",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
                     }
                   },
                   "howCreated": 0
@@ -1138,7 +1153,10 @@
           "28db49c0d7cb4ce860d8": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {}
+              "objects": {},
+              "display": {
+                "mode": "hidden"
+              }
             }
           },
           "29744450f0974f795ed1": {
@@ -1151,7 +1169,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5758f0ab1fc7098ebe62",
+                  "name": "9e686b34c625d4466c6c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1258,10 +1276,7 @@
           "34d3b8a496948ed0eceb": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "363528080c182cbe5fa9": {
@@ -1280,7 +1295,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "420de2820170f92af651",
+                  "name": "e6b3a5169ea07c1a8d02",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1391,7 +1406,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "854430cb293c4f3c7d3a",
+                  "name": "c07d08c637205e9006ce",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1406,7 +1421,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a9a0cfeb1e023eb7106e",
+                  "name": "1fb355091963bc6d0c29",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1887,7 +1902,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "bde75a0a5a137b041474",
+                  "name": "54edbdec1a1054c011ed",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1998,7 +2013,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "b6765937bc20f8340588",
+                  "name": "79775bb4498e0ad84608",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2179,7 +2194,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "67f5556200bc3917a8b5",
+                  "name": "c71512175a9d0ac3e410",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2277,7 +2292,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "2f566900d3d30b0a6ca1",
+                  "name": "b7af44a3d9ad865564ac",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2404,7 +2419,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "94be6d9a198b6320f2dd",
+                  "name": "f2cc58afa906d45c2a0b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -2610,7 +2625,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d9a03a48a665734a36b6",
+                  "name": "3b8ef0f836e124ed0e6e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -2787,7 +2802,7 @@
                       "Property": "Månad med senast stängda månad 11:e"
                     }
                   },
-                  "howCreated": 0
+                  "howCreated": 1
                 },
                 {
                   "name": "Filter0b6230f8535d41c3120c",
@@ -2818,6 +2833,21 @@
                     }
                   },
                   "howCreated": 1
+                },
+                {
+                  "name": "6d8d3218c50ed3c4c405",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kalender"
+                        }
+                      },
+                      "Property": "NuvarandeMånad"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -2825,53 +2855,6 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "k",
-                                "Entity": "Kalender",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "In": {
-                                    "Expressions": [
-                                      {
-                                        "Column": {
-                                          "Expression": {
-                                            "SourceRef": {
-                                              "Source": "k"
-                                            }
-                                          },
-                                          "Property": "Månad med senast stängda månad 11:e"
-                                        }
-                                      }
-                                    ],
-                                    "Values": [
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'Senast stängda månad'"
-                                          }
-                                        }
-                                      ]
-                                    ]
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
                   "data": [
                     {
                       "properties": {
@@ -2909,7 +2892,7 @@
                           "Entity": "Kalender"
                         }
                       },
-                      "Property": "Månad med senast stängda månad 11:e"
+                      "Property": "NuvarandeMånad"
                     }
                   }
                 ]
@@ -2919,10 +2902,7 @@
           "c4177306f57c3a17dadf": {
             "singleVisual": {
               "visualType": "actionButton",
-              "objects": {},
-              "display": {
-                "mode": "hidden"
-              }
+              "objects": {}
             }
           },
           "c8e7b78c8260bf76461a": {
@@ -2994,7 +2974,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "3fa1009fdbd86c90a37d",
+                  "name": "1186aaa1044038b6ad95",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3171,7 +3151,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e365f6e35eb04062a37c",
+                  "name": "92c012232ca594399247",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3186,7 +3166,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "869a8d874bfa3a722712",
+                  "name": "36a50fa18b83e30e883d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Kostnadsställe"
+                        }
+                      },
+                      "Property": "OmrådeNamn kort"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3a585693548546e0a324",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3201,7 +3196,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e41766840cacfb8cb274",
+                  "name": "1637fd84696929eb725c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3216,7 +3211,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "003506f2b154f72ccd82",
+                  "name": "a805bf12939aa6cd5d09",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -3231,7 +3226,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1a25fe45d85d21b0a410",
+                  "name": "87aa7aa60a0814d6aeec",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3246,37 +3241,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "598e2ea29a7f416f8708",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "Utfall fg år-1 ÅTD"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "882907726734e488ddc7",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mätvärde"
-                        }
-                      },
-                      "Property": "Aktuell Prognos Helår"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "1c5faa939eae902e4d22",
+                  "name": "2f3bb5847a000ceb6cea",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3291,7 +3256,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "75a1d1b0867a8769164c",
+                  "name": "249fa23d342ac3dd1860",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3306,7 +3271,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2df80cf84b572ce2ba50",
+                  "name": "577a2edd6626ce50480e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3321,7 +3286,37 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1e5a52e93a2f79bcfb00",
+                  "name": "b762256ea661465cc4d0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Utfall fg år-1 ÅTD"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c2d21c3fc0b2d8ea4007",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mätvärde"
+                        }
+                      },
+                      "Property": "Aktuell Prognos Helår"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "74711c7b5361e7ade059",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3336,7 +3331,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "930bdc43f6e0ff0e30fd",
+                  "name": "2214a280c76854a4aa1e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -3351,16 +3346,16 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "919c8f0f3e0fd47e491d",
-                  "type": "Categorical",
+                  "name": "28f862f6803142e8d87b",
+                  "type": "Advanced",
                   "expression": {
-                    "Column": {
+                    "Measure": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Kostnadsställe"
+                          "Entity": "Mätvärde"
                         }
                       },
-                      "Property": "OmrådeNamn kort"
+                      "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
                     }
                   },
                   "howCreated": 0
