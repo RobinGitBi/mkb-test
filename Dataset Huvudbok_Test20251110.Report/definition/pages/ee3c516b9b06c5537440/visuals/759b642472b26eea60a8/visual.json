@@ -36,11 +36,11 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Best. Ankomstlista Innevarande till årsslut"
+                  "Property": "Best. Ankomstlista Före Innevarande Månad"
                 }
               },
               "queryRef": "Mätvärde.Beställningar Ankomstlista Innevarande till årsslut",
-              "nativeQueryRef": "Best. Ankomstlista Innevarande till årsslut"
+              "nativeQueryRef": "Best. Ankomstlista Före Innevarande Månad"
             }
           ]
         }
@@ -73,7 +73,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Best. Ankomstlista Innevarande till årsslut"
+            "Property": "Best. Ankomstlista Före Innevarande Månad"
           }
         },
         "type": "Advanced"

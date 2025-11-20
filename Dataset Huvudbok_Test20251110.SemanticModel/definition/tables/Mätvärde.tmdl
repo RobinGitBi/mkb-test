@@ -4315,11 +4315,10 @@ table Mätvärde
 			
 			
 			
-			VAR MaxDate = EOMONTH(DATE(YEAR(TODAY()), MONTH(TODAY()), 1), 0)
-			VAR MaxDateMinusTwelveMonths = DATE(YEAR(MaxDate), MONTH(MaxDate) - 11, 1)  //EDATE(MaxDate, -12)
+			VAR MaxDate = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
 			
 			
-			VAR Result = CALCULATE( SUM('ViewFactBeställningar_AllaFakturor'[Utfall]), 'ViewFactBeställningar_AllaFakturor'[Vertyp] = "L1", ALL(Kalender), Kalender[Datum] >= MaxDateMinusTwelveMonths && Kalender[Datum] <= MaxDate)
+			VAR Result = -CALCULATE( SUM('ViewFactBeställningar_AllaFakturor'[Utfall]), 'ViewFactBeställningar_AllaFakturor'[Vertyp] = "L1", ALL(Kalender), Kalender[Datum] < MaxDate)
 			
 			
 			Return Result
@@ -4330,12 +4329,13 @@ table Mätvärde
 			
 			
 			```
+		formatString: #,0
 		displayFolder: Nya Från Dashboard
 		lineageTag: 6ed31175-6123-4d18-85b6-5c75a742b7b5
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Best. Ankomstlista Innevarande till årsslut' = ```
+	measure 'Best. Ankomstlista Före Innevarande Månad' = ```
 			
 			
 			
@@ -4343,7 +4343,7 @@ table Mätvärde
 			VAR MaxDate = EOMONTH(DATE(YEAR(TODAY()), 12, 1), 0)
 			
 			
-			VAR Result = CALCULATE( SUM('ViewFactBeställningar_AllaFakturor'[Utfall]), 'ViewFactBeställningar_AllaFakturor'[Vertyp] = "L1", ALL(Kalender), Kalender[Datum] >= MinDate && Kalender[Datum] <= MaxDate)
+			VAR Result = -CALCULATE( SUM('ViewFactBeställningar_AllaFakturor'[Utfall]), 'ViewFactBeställningar_AllaFakturor'[Vertyp] = "L1", ALL(Kalender), Kalender[Datum] >= MinDate && Kalender[Datum] <= MaxDate)
 			
 			
 			Return Result
@@ -4352,10 +4352,11 @@ table Mätvärde
 			
 			
 			```
+		formatString: #,0
 		displayFolder: Nya Från Dashboard
 		lineageTag: 9065a4c8-e39c-4a71-9ac3-8883f7d4ba6c
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	partition Mätvärde-dafc6aed-5a2f-4494-9ed3-cf1871eb8c79 = m
 		mode: import

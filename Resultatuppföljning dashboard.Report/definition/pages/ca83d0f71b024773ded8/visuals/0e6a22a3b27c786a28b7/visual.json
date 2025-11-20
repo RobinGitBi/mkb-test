@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "0e6a22a3b27c786a28b7",
   "position": {
     "x": 15.592149785698174,
@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "PNLStructure.PNLDescr",
-              "active": true,
+              "active": false,
               "displayName": "Konto Rubrik & Konto Nummer"
             },
             {
@@ -42,7 +42,7 @@
                 }
               },
               "queryRef": "Konto.RRLev1Namn",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -56,7 +56,7 @@
                 }
               },
               "queryRef": "Konto.RRLev2Namn",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -266,6 +266,7 @@
             "queryRefs": [
               "PNLStructure.PNLDescr"
             ],
+            "isCollapsed": true,
             "identityKeys": [
               {
                 "Column": {
@@ -304,13 +305,26 @@
               "Konto.RRLev2Namn"
             ],
             "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Konto"
+                    }
+                  },
+                  "Property": "RRLev2Namn"
+                }
+              }
+            ],
             "isPinned": true
           },
           {
             "queryRefs": [
               "Kostnadsställe.OmrådeNamn kort"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "isPinned": true
           },
           {
             "queryRefs": [
