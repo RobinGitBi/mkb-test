@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "ca83d0f71b024773ded8",
-  "displayName": "RR - Nuläge (Scenario 2)",
+  "name": "1bce2b74b075ecca0304",
+  "displayName": "RR - Nuläge (Scenario 1)",
   "displayOption": "FitToPage",
   "height": 900,
   "width": 1280,
@@ -466,7 +466,7 @@
     "filterSortOrder": "Custom"
   },
   "pageBinding": {
-    "name": "d045ca93620a7305759a",
+    "name": "4cabe0fc1963debc47c0",
     "type": "Drillthrough",
     "parameters": [
       {
@@ -559,13 +559,13 @@
   },
   "visualInteractions": [
     {
-      "source": "29ad9ee7f1ea7ba400fa",
-      "target": "6b3e430c3beb8dbd2c27",
+      "source": "2c16a6b82504e1b5690a",
+      "target": "171c83f0237acceaba2d",
       "type": "NoFilter"
     },
     {
-      "source": "29ad9ee7f1ea7ba400fa",
-      "target": "a7b46839c54f3e62767e",
+      "source": "2c16a6b82504e1b5690a",
+      "target": "6275971c706ea413284a",
       "type": "NoFilter"
     }
   ]

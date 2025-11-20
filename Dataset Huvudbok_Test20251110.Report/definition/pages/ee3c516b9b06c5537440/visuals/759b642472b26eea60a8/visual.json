@@ -5,8 +5,8 @@
     "x": 148.04349893789038,
     "y": 96.098411591262163,
     "z": 0,
-    "height": 392.18540946704292,
-    "width": 441.53324244633967
+    "height": 390.88678228337722,
+    "width": 588.27811420056435
   },
   "visual": {
     "visualType": "tableEx",
@@ -22,11 +22,11 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Best. Ankomstlista Fram till Innevarande Månad"
+                  "Property": "Best. Ankomstlista Före Innevarande Månad"
                 }
               },
               "queryRef": "Mätvärde.Beställningar Ankomstregistrerade Fakturor",
-              "nativeQueryRef": "Best. Ankomstlista Fram till Innevarande Månad"
+              "nativeQueryRef": "Best. Ankomstlista Före Innevarande Månad"
             },
             {
               "field": {
@@ -36,11 +36,11 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Best. Ankomstlista Före Innevarande Månad"
+                  "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
                 }
               },
               "queryRef": "Mätvärde.Beställningar Ankomstlista Innevarande till årsslut",
-              "nativeQueryRef": "Best. Ankomstlista Före Innevarande Månad"
+              "nativeQueryRef": "Best. Ankomstlista Innevarande Månad och Rest. År"
             }
           ]
         }
@@ -59,7 +59,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Best. Ankomstlista Fram till Innevarande Månad"
+            "Property": "Best. Ankomstlista Före Innevarande Månad"
           }
         },
         "type": "Advanced"
@@ -73,7 +73,7 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Best. Ankomstlista Före Innevarande Månad"
+            "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
           }
         },
         "type": "Advanced"

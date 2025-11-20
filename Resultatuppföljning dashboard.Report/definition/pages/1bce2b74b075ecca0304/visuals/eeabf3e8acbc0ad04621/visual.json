@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "c15993c477b7e654427e",
+  "name": "eeabf3e8acbc0ad04621",
   "position": {
-    "x": 1170,
-    "y": 55,
-    "z": 6000,
-    "height": 55,
-    "width": 110,
-    "tabOrder": 4000
+    "x": 764.28571428571433,
+    "y": 2.8571428571428572,
+    "z": 10000,
+    "height": 54.285714285714292,
+    "width": 150,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Kalender"
+                      "Entity": "Calculation Group segment"
                     }
                   },
-                  "Property": "NuvarandeMånad"
+                  "Property": "Name"
                 }
               },
-              "queryRef": "Kalender.NuvarandeMånad",
-              "nativeQueryRef": "NuvarandeMånad",
+              "queryRef": "Calculation Group segment.Name",
+              "nativeQueryRef": "Name",
               "active": true
             }
           ]
@@ -56,8 +56,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "k",
-                    "Entity": "Kalender",
+                    "Name": "c",
+                    "Entity": "Calculation Group segment",
                     "Type": 0
                   }
                 ],
@@ -70,10 +70,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "k"
+                                  "Source": "c"
                                 }
                               },
-                              "Property": "NuvarandeMånad"
+                              "Property": "Name"
                             }
                           }
                         ],
@@ -81,7 +81,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Nuvarande'"
+                                "Value": "'Total förvaltning'"
                               }
                             }
                           ]
@@ -97,29 +97,7 @@
       ],
       "selection": [
         {
-          "properties": {
-            "singleSelect": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "selectAllCheckboxEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "strictSingleSelect": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "items": [
@@ -183,17 +161,10 @@
                 }
               }
             },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Månad'"
+                  "Value": "'Rapporteringsnivå'"
                 }
               }
             }
@@ -227,6 +198,19 @@
           }
         }
       ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "visualHeader": [
         {
           "properties": {
@@ -246,19 +230,61 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a2074c30275191e9db71",
+        "name": "Filter2250fca008808d97b3b2",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Kalender"
+                "Entity": "Calculation Group segment"
               }
             },
-            "Property": "Månad med senast stängda månad 11:e"
+            "Property": "Name"
           }
         },
         "type": "Categorical",
-        "howCreated": "User",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "Calculation Group segment",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "c"
+                              }
+                            },
+                            "Property": "Name"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Total förvaltning ext'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "objects": {
           "general": [
             {
@@ -274,50 +300,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "Filter0b6230f8535d41c3120c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculation Group positivt tecken"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "User"
-      },
-      {
-        "name": "ec2491c042d664851e22",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "RelativMånad"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      },
-      {
-        "name": "6d8d3218c50ed3c4c405",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "NuvarandeMånad"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

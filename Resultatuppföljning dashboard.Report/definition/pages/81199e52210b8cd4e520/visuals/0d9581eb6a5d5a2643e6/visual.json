@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "0d9581eb6a5d5a2643e6",
   "position": {
     "x": 15.592149785698174,
@@ -55,7 +55,7 @@
                 }
               },
               "queryRef": "Konto.RRLev2Namn",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -269,6 +269,59 @@
         ]
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "PNLStructure.PNLDescr"
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Konto.RRLev1Namn"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Konto.RRLev2Namn"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Kostnadsställe.OmrådeNamn kort"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Konto.RRLev3Namn"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Konto.RRLev4Namn"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "Konto.RRLev5Namn"
+            ],
+            "isCollapsed": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "columnHeaders": [
         {
@@ -1055,6 +1108,104 @@
               }
             },
             "Property": "Utfall fg år-1 ÅTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "15b27a85c24c070d7054",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kostnadsställe"
+              }
+            },
+            "Property": "OmrådeNamn kort"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e52d583b4bac5295258e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Framtida Beställningar Året"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "106113eec54d9a5e43c9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Totalt (Utfall och Beställningar)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fa4c1d1e4040eb7d4318",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff Helår"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a3dd45cfc0e70d657a9d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff% Helår"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "78c481830800b1224c68",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "T1 helår"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b3d23d10d17931334a41",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff% T2 - T1 helår"
           }
         },
         "type": "Advanced"

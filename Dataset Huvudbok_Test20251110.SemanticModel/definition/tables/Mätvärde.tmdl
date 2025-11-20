@@ -4311,7 +4311,7 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Best. Ankomstlista Fram till Innevarande Månad' = ```
+	measure 'Best. Ankomstlista Före Innevarande Månad' = ```
 			
 			
 			
@@ -4335,7 +4335,7 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Best. Ankomstlista Före Innevarande Månad' = ```
+	measure 'Best. Ankomstlista Innevarande Månad och Rest. År' = ```
 			
 			
 			
@@ -4357,6 +4357,25 @@ table Mätvärde
 		lineageTag: 9065a4c8-e39c-4a71-9ac3-8883f7d4ba6c
 
 		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade' = [Utfall ÅTD] + [Beställningar Innevarande Månad - Nuläge]+[Framtida Beställningar Året - Nuläge]+[Best. Ankomstlista Före Innevarande Månad]
+		formatString: #,0
+		displayFolder: Nya Från Dashboard
+		lineageTag: b558b535-4649-4347-9661-31937a5d5a09
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff Helår - Nuläge Ankomstlista' = IF(NOT ISBLANK([Totalt (Utfall och Beställningar) - Nuläge]) || not ISBLANK([Aktuell Prognos Helår]), [Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade] -[Aktuell Prognos Helår])
+		formatString: #,0
+		displayFolder: Nya Från Dashboard
+		lineageTag: 368029af-6045-4901-b26a-86299a4183ba
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff% Helår - Nuläge Ankomstlista' = DIVIDE([Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade], [Aktuell Prognos Helår])
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Nya Från Dashboard
+		lineageTag: 62483f9d-7008-4f19-a050-32408f30f9b5
 
 	partition Mätvärde-dafc6aed-5a2f-4494-9ed3-cf1871eb8c79 = m
 		mode: import

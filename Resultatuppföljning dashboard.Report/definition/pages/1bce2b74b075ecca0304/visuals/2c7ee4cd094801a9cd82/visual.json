@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "0e6a22a3b27c786a28b7",
+  "name": "2c7ee4cd094801a9cd82",
   "position": {
     "x": 15.592149785698174,
     "y": 127.33588991653508,
     "z": 14000,
     "height": 449.57365215429735,
     "width": 1248.6713286713286,
-    "tabOrder": 34000
+    "tabOrder": 33000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -142,12 +142,12 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+                  "Property": "Best. Ankomstlista Före Innevarande Månad"
                 }
               },
-              "queryRef": "Mätvärde.Best. Ankomstlista Innevarande Månad och Rest. År",
-              "nativeQueryRef": "Beställningar Ankomstregistrerade (Redan inkluderade i Best Inn. & Best Fram.)",
-              "displayName": "Beställningar Ankomstregistrerade (Redan inkluderade i Best Inn. & Best Fram.)"
+              "queryRef": "Mätvärde.Best. Ankomstlista Före Innevarande Månad",
+              "nativeQueryRef": "Beställningar Ankomstregistrerade (Före Innevarande Månad)",
+              "displayName": "Beställningar Ankomstregistrerade (Före Innevarande Månad)"
             },
             {
               "field": {
@@ -187,10 +187,10 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Totalt (Utfall och Beställningar) - Nuläge"
+                  "Property": "Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
                 }
               },
-              "queryRef": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge",
+              "queryRef": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade",
               "nativeQueryRef": "Totalt (Utfall och Beställningar)",
               "displayName": "Totalt (Utfall och Beställningar)"
             },
@@ -231,10 +231,10 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Diff Helår - Nuläge"
+                  "Property": "Diff Helår - Nuläge Ankomstlista"
                 }
               },
-              "queryRef": "Mätvärde.Diff Helår - Nuläge",
+              "queryRef": "Mätvärde.Diff Helår - Nuläge Ankomstlista",
               "nativeQueryRef": "Diff Helår",
               "displayName": "Diff Helår"
             },
@@ -246,10 +246,10 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Diff% Helår - Nuläge"
+                  "Property": "Diff% Helår - Nuläge Ankomstlista"
                 }
               },
-              "queryRef": "Mätvärde.Diff% Helår - Nuläge",
+              "queryRef": "Mätvärde.Diff% Helår - Nuläge Ankomstlista",
               "nativeQueryRef": "Diff% Helår",
               "displayName": "Diff% Helår"
             }
@@ -452,13 +452,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "98.82878799432658D"
+                  "Value": "110.66943724009059D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge"
+            "metadata": "Mätvärde.Best. Ankomstlista Före Innevarande Månad"
           }
         },
         {
@@ -466,13 +466,27 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "108.57522279967384D"
+                  "Value": "86.95892759801629D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mätvärde.Best. Ankomstlista Innevarande Månad och Rest. År"
+            "metadata": "Mätvärde.Diff Helår - Nuläge Ankomstlista"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "124.81570254235996D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
           }
         }
       ],
@@ -550,6 +564,17 @@
         },
         {
           "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
+            },
             "styleTotal": {
               "expr": {
                 "Literal": {
@@ -563,36 +588,14 @@
                   "Value": "true"
                 }
               }
-            },
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#B7E3F5'"
-                    }
-                  }
-                }
-              }
             }
           },
           "selector": {
-            "metadata": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge"
+            "metadata": "Mätvärde.Diff% Helår - Nuläge Ankomstlista"
           }
         },
         {
           "properties": {
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#B7E3F5'"
-                    }
-                  }
-                }
-              }
-            },
             "styleTotal": {
               "expr": {
                 "Literal": {
@@ -606,25 +609,25 @@
                   "Value": "true"
                 }
               }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
             }
           },
           "selector": {
-            "metadata": "Mätvärde.Diff Helår - Nuläge"
+            "metadata": "Mätvärde.Diff Helår - Nuläge Ankomstlista"
           }
         },
         {
           "properties": {
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#B7E3F5'"
-                    }
-                  }
-                }
-              }
-            },
             "styleTotal": {
               "expr": {
                 "Literal": {
@@ -638,10 +641,21 @@
                   "Value": "true"
                 }
               }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
             }
           },
           "selector": {
-            "metadata": "Mätvärde.Diff% Helår - Nuläge"
+            "metadata": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
           }
         }
       ]
@@ -1161,7 +1175,8 @@
             "Property": "Totalt (Utfall och Beställningar) - Nuläge"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "howCreated": "User"
       },
       {
         "name": "1ec7f63f76a9a700853d",
@@ -1176,7 +1191,8 @@
             "Property": "Diff Helår - Nuläge"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "howCreated": "User"
       },
       {
         "name": "ff8b5fb7e6ba06eb280a",
@@ -1191,7 +1207,8 @@
             "Property": "Diff% Helår - Nuläge"
           }
         },
-        "type": "Advanced"
+        "type": "Advanced",
+        "howCreated": "User"
       },
       {
         "name": "e5c69d2a94b6857448ca",
@@ -1227,7 +1244,7 @@
         "howCreated": "User"
       },
       {
-        "name": "f5f6041f31de4a939489",
+        "name": "76ac7a89260bcc565211",
         "field": {
           "Measure": {
             "Expression": {
@@ -1235,7 +1252,49 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+            "Property": "Best. Ankomstlista Före Innevarande Månad"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e16a2a23de4a39da50e1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff Helår - Nuläge Ankomstlista"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0bbc416154a69ca11c0b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff% Helår - Nuläge Ankomstlista"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3838be1f0c38d53096d0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
           }
         },
         "type": "Advanced"

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "0e6a22a3b27c786a28b7",
+  "name": "f02c75efb9ac039a986c",
   "position": {
-    "x": 15.592149785698174,
-    "y": 127.33588991653508,
-    "z": 14000,
-    "height": 449.57365215429735,
-    "width": 1248.6713286713286,
-    "tabOrder": 34000
+    "x": 15.901060070671377,
+    "y": 600,
+    "z": 20000,
+    "height": 250,
+    "width": 1249.0282685512366,
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -142,12 +142,12 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+                  "Property": "Best. Ankomstlista Före Innevarande Månad"
                 }
               },
-              "queryRef": "Mätvärde.Best. Ankomstlista Innevarande Månad och Rest. År",
-              "nativeQueryRef": "Beställningar Ankomstregistrerade (Redan inkluderade i Best Inn. & Best Fram.)",
-              "displayName": "Beställningar Ankomstregistrerade (Redan inkluderade i Best Inn. & Best Fram.)"
+              "queryRef": "Mätvärde.Best. Ankomstlista Före Innevarande Månad",
+              "nativeQueryRef": "Beställningar Ankomstregistrerade (Före Innevarande Månad)",
+              "displayName": "Beställningar Ankomstregistrerade (Före Innevarande Månad)"
             },
             {
               "field": {
@@ -187,10 +187,10 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Totalt (Utfall och Beställningar) - Nuläge"
+                  "Property": "Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
                 }
               },
-              "queryRef": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge",
+              "queryRef": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade",
               "nativeQueryRef": "Totalt (Utfall och Beställningar)",
               "displayName": "Totalt (Utfall och Beställningar)"
             },
@@ -231,10 +231,10 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Diff Helår - Nuläge"
+                  "Property": "Diff Helår - Nuläge Ankomstlista"
                 }
               },
-              "queryRef": "Mätvärde.Diff Helår - Nuläge",
+              "queryRef": "Mätvärde.Diff Helår - Nuläge Ankomstlista",
               "nativeQueryRef": "Diff Helår",
               "displayName": "Diff Helår"
             },
@@ -246,10 +246,10 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Diff% Helår - Nuläge"
+                  "Property": "Diff% Helår - Nuläge Ankomstlista"
                 }
               },
-              "queryRef": "Mätvärde.Diff% Helår - Nuläge",
+              "queryRef": "Mätvärde.Diff% Helår - Nuläge Ankomstlista",
               "nativeQueryRef": "Diff% Helår",
               "displayName": "Diff% Helår"
             }
@@ -305,18 +305,6 @@
               "Konto.RRLev2Namn"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Konto"
-                    }
-                  },
-                  "Property": "RRLev2Namn"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
@@ -410,7 +398,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "94.58831328881767D"
+                  "Value": "92.32711482560582D"
                 }
               }
             }
@@ -424,7 +412,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "95.63792697443884D"
+                  "Value": "108.63140953473257D"
                 }
               }
             }
@@ -438,7 +426,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "85.42746458677789D"
+                  "Value": "95.82223323691542D"
                 }
               }
             }
@@ -452,13 +440,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "98.82878799432658D"
+                  "Value": "113.04039604219057D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge"
+            "metadata": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
           }
         },
         {
@@ -466,13 +454,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "108.57522279967384D"
+                  "Value": "109.39746420427022D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mätvärde.Best. Ankomstlista Innevarande Månad och Rest. År"
+            "metadata": "Mätvärde.Best. Ankomstlista Före Innevarande Månad"
           }
         }
       ],
@@ -518,6 +506,17 @@
       "columnFormatting": [
         {
           "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
+            },
             "styleTotal": {
               "expr": {
                 "Literal": {
@@ -529,17 +528,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#B7E3F5'"
-                    }
-                  }
                 }
               }
             }
@@ -577,7 +565,39 @@
             }
           },
           "selector": {
-            "metadata": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge"
+            "metadata": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B7E3F5'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Diff Helår - Nuläge Ankomstlista"
           }
         },
         {
@@ -609,39 +629,7 @@
             }
           },
           "selector": {
-            "metadata": "Mätvärde.Diff Helår - Nuläge"
-          }
-        },
-        {
-          "properties": {
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#B7E3F5'"
-                    }
-                  }
-                }
-              }
-            },
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "styleHeader": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.Diff% Helår - Nuläge"
+            "metadata": "Mätvärde.Diff% Helår - Nuläge Ankomstlista"
           }
         }
       ]
@@ -872,105 +860,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a756f4664a877434456b",
-        "ordinal": 0,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Aktuell Prognos Helår"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "67602a0e53a2261c0b69",
-        "ordinal": 1,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Huvudbok"
-              }
-            },
-            "Property": "VerText"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "User"
-      },
-      {
-        "name": "480a6109b8ec4d04eeba",
-        "ordinal": 2,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Schema": "extension",
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Beställningar Innevarande Månad"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      },
-      {
-        "name": "67aae25aa506766b5253",
-        "ordinal": 3,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Fastighet"
-              }
-            },
-            "Property": "Bostadsområde"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "User"
-      },
-      {
-        "name": "56d56bf05b3b0a805d80",
-        "ordinal": 4,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Schema": "extension",
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Old_Framtida Beställningar Året"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      },
-      {
-        "name": "4824dcf2606685785db0",
-        "ordinal": 5,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Uppföljning"
-              }
-            },
-            "Property": "Uppföljning3Namn"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "User"
-      },
-      {
         "name": "1fb5b0e5347517a80e85",
-        "ordinal": 6,
         "field": {
           "Column": {
             "Expression": {
@@ -982,25 +872,55 @@
           }
         },
         "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "PNLStructure",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "p"
+                          }
+                        },
+                        "Property": "PNLDescr"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Kostnader för varor, material och vissa köpta tjänster'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
         "objects": {
           "general": [
             {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
+              "properties": {}
             }
           ]
         }
       },
       {
-        "name": "d0f348d55342bd7619e9",
-        "ordinal": 7,
+        "name": "c445e5cb189384efc249",
         "field": {
           "Column": {
             "Expression": {
@@ -1011,11 +931,70 @@
             "Property": "RRLev1Namn"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "k",
+              "Entity": "Konto",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "k"
+                          }
+                        },
+                        "Property": "RRLev1Namn"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Kostnader Fastighetsskötsel'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Kostnader Reparationer'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Kostnader Underhåll'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
       },
       {
-        "name": "727e22139c656cc21deb",
-        "ordinal": 8,
+        "name": "4916d9423170b5350308",
         "field": {
           "Column": {
             "Expression": {
@@ -1029,83 +1008,7 @@
         "type": "Categorical"
       },
       {
-        "name": "8ade6cb13062cd8324ec",
-        "ordinal": 9,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Konto"
-              }
-            },
-            "Property": "RRLev3Namn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6c5d0940b42111531eae",
-        "ordinal": 10,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Konto"
-              }
-            },
-            "Property": "RRLev4Namn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "aab369f164ca1c378ad9",
-        "ordinal": 11,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Konto"
-              }
-            },
-            "Property": "RRLev5Namn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "fbb743ee2ea1a3dee564",
-        "ordinal": 12,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Utfall ÅTD"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "bef8309ebe50e77d45b7",
-        "ordinal": 13,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Utfall fg år-1 ÅTD"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8197c6409acd6e2e9047",
-        "ordinal": 14,
+        "name": "70414aa4426d81541282",
         "field": {
           "Column": {
             "Expression": {
@@ -1119,8 +1022,63 @@
         "type": "Categorical"
       },
       {
-        "name": "904705c5b45c10dc9e36",
-        "ordinal": 15,
+        "name": "dc17152f9008e3c3b492",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Konto"
+              }
+            },
+            "Property": "RRLev3Namn"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f735246431093b95e8bd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Konto"
+              }
+            },
+            "Property": "RRLev4Namn"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1a2979620a12a230841c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Konto"
+              }
+            },
+            "Property": "RRLev5Namn"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c56bdc757d682d22aec7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Utfall ÅTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e2fc2a6fb82a0ab47326",
         "field": {
           "Measure": {
             "Expression": {
@@ -1134,8 +1092,7 @@
         "type": "Advanced"
       },
       {
-        "name": "44a58caa451e30ebe60b",
-        "ordinal": 16,
+        "name": "cbf8009cb429ad1a9000",
         "field": {
           "Measure": {
             "Expression": {
@@ -1149,8 +1106,7 @@
         "type": "Advanced"
       },
       {
-        "name": "a714da878053d318d7bd",
-        "ordinal": 17,
+        "name": "e126d2701d1535393602",
         "field": {
           "Measure": {
             "Expression": {
@@ -1158,14 +1114,13 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Totalt (Utfall och Beställningar) - Nuläge"
+            "Property": "Utfall fg år-1 ÅTD"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "1ec7f63f76a9a700853d",
-        "ordinal": 18,
+        "name": "c9574a35e008604eee59",
         "field": {
           "Measure": {
             "Expression": {
@@ -1173,14 +1128,13 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Diff Helår - Nuläge"
+            "Property": "Aktuell Prognos Helår"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "ff8b5fb7e6ba06eb280a",
-        "ordinal": 19,
+        "name": "327dd7a40b6ad9d01199",
         "field": {
           "Measure": {
             "Expression": {
@@ -1188,31 +1142,27 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Diff% Helår - Nuläge"
+            "Property": "Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "e5c69d2a94b6857448ca",
-        "ordinal": 20,
+        "name": "5206f000a3a0568a3c30",
         "field": {
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Schema": "extension",
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Ankomstregistrerade Fakturor"
+            "Property": "Diff Helår - Nuläge Ankomstlista"
           }
         },
-        "type": "Advanced",
-        "howCreated": "User"
+        "type": "Advanced"
       },
       {
-        "name": "5179cb2044796b47a370",
-        "ordinal": 21,
+        "name": "e42ab9beb94b057048ea",
         "field": {
           "Measure": {
             "Expression": {
@@ -1220,14 +1170,13 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Beställningar Ankomstregistrerade Fakturor"
+            "Property": "Diff% Helår - Nuläge Ankomstlista"
           }
         },
-        "type": "Advanced",
-        "howCreated": "User"
+        "type": "Advanced"
       },
       {
-        "name": "f5f6041f31de4a939489",
+        "name": "9c82463fc4a5d76dbe92",
         "field": {
           "Measure": {
             "Expression": {
@@ -1235,12 +1184,11 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+            "Property": "Best. Ankomstlista Före Innevarande Månad"
           }
         },
         "type": "Advanced"
       }
-    ],
-    "filterSortOrder": "Custom"
+    ]
   }
 }

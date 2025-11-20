@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "c15993c477b7e654427e",
+  "name": "7fc416d6b2380e770c04",
   "position": {
-    "x": 1170,
-    "y": 55,
-    "z": 6000,
-    "height": 55,
+    "x": 1060,
+    "y": 0,
+    "z": 19000,
+    "height": 57.142857142857146,
     "width": 110,
-    "tabOrder": 4000
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,20 +20,37 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Kalender"
+                      "Entity": "Fastighet"
                     }
                   },
-                  "Property": "NuvarandeMånad"
+                  "Property": "Husvärdsområde"
                 }
               },
-              "queryRef": "Kalender.NuvarandeMånad",
-              "nativeQueryRef": "NuvarandeMånad",
+              "queryRef": "Fastighet.Husvärdsområde",
+              "nativeQueryRef": "Husvärdsområde",
               "active": true
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Fastighet.Husvärdsområde"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "data": [
         {
@@ -51,45 +68,11 @@
       "general": [
         {
           "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "k",
-                    "Entity": "Kalender",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "k"
-                                }
-                              },
-                              "Property": "NuvarandeMånad"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Nuvarande'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
               }
             }
           }
@@ -97,29 +80,7 @@
       ],
       "selection": [
         {
-          "properties": {
-            "singleSelect": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "selectAllCheckboxEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "strictSingleSelect": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "items": [
@@ -183,17 +144,10 @@
                 }
               }
             },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Månad'"
+                  "Value": "'Husvärd'"
                 }
               }
             }
@@ -227,6 +181,19 @@
           }
         }
       ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "visualHeader": [
         {
           "properties": {
@@ -241,24 +208,71 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "Husvärdsområde",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "a2074c30275191e9db71",
+        "name": "271422fa003d43078912",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Kalender"
+                "Entity": "Fastighet"
               }
             },
-            "Property": "Månad med senast stängda månad 11:e"
+            "Property": "Husvärdsområde"
           }
         },
         "type": "Categorical",
-        "howCreated": "User",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "Fastighet",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "f"
+                              }
+                            },
+                            "Property": "Husvärdsområde"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "''"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
         "objects": {
           "general": [
             {
@@ -274,50 +288,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "Filter0b6230f8535d41c3120c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculation Group positivt tecken"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "User"
-      },
-      {
-        "name": "ec2491c042d664851e22",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "RelativMånad"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      },
-      {
-        "name": "6d8d3218c50ed3c4c405",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "NuvarandeMånad"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

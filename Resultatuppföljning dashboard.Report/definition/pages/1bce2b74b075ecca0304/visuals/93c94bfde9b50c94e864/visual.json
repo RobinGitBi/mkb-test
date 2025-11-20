@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "c15993c477b7e654427e",
+  "name": "93c94bfde9b50c94e864",
   "position": {
-    "x": 1170,
+    "x": 1060,
     "y": 55,
-    "z": 6000,
+    "z": 5000,
     "height": 55,
     "width": 110,
-    "tabOrder": 4000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,10 @@
                       "Entity": "Kalender"
                     }
                   },
-                  "Property": "NuvarandeMånad"
+                  "Property": "År med senast stängda månad 11:e"
                 }
               },
-              "queryRef": "Kalender.NuvarandeMånad",
-              "nativeQueryRef": "NuvarandeMånad",
+              "queryRef": "Kalender.År med senast stängda månad 11:e",
               "active": true
             }
           ]
@@ -73,7 +72,7 @@
                                   "Source": "k"
                                 }
                               },
-                              "Property": "NuvarandeMånad"
+                              "Property": "År med senast stängda månad 11:e"
                             }
                           }
                         ],
@@ -81,7 +80,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Nuvarande'"
+                                "Value": "'Senast stängda månad'"
                               }
                             }
                           ]
@@ -97,29 +96,7 @@
       ],
       "selection": [
         {
-          "properties": {
-            "singleSelect": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "selectAllCheckboxEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "strictSingleSelect": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "items": [
@@ -183,17 +160,10 @@
                 }
               }
             },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Månad'"
+                  "Value": "'År'"
                 }
               }
             }
@@ -241,12 +211,17 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "År med senast stängda månad 11:e",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "a2074c30275191e9db71",
+        "name": "0a5fd4cc69cba7acfd3b",
         "field": {
           "Column": {
             "Expression": {
@@ -254,19 +229,41 @@
                 "Entity": "Kalender"
               }
             },
-            "Property": "Månad med senast stängda månad 11:e"
+            "Property": "År med senast stängda månad 11:e"
           }
         },
-        "type": "Categorical",
-        "howCreated": "User",
-        "objects": {
-          "general": [
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
             {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
+              "Name": "k",
+              "Entity": "Kalender",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "k"
+                            }
+                          },
+                          "Property": "År med senast stängda månad 11:e"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
                     }
                   }
                 }
@@ -274,50 +271,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "Filter0b6230f8535d41c3120c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calculation Group positivt tecken"
-              }
-            },
-            "Property": "Name"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "User"
-      },
-      {
-        "name": "ec2491c042d664851e22",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "RelativMånad"
-          }
-        },
-        "type": "Advanced",
-        "howCreated": "User"
-      },
-      {
-        "name": "6d8d3218c50ed3c4c405",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "NuvarandeMånad"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }
