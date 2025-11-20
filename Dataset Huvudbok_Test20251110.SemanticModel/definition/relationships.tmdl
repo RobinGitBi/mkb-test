@@ -140,3 +140,7 @@ relationship cf6ae9b0-3561-29ae-6430-06e2d11e2278
 	fromColumn: ViewFactBeställningar_AllaFakturor.UppföljningSK
 	toColumn: Uppföljning.UppföljningSK
 
+relationship 85f51e12-e865-82ca-7859-a3a00feeff2b
+	fromColumn: ViewFactBeställningar_AllaFakturor.TimeSK
+	toColumn: Kalender.TimeSK
+

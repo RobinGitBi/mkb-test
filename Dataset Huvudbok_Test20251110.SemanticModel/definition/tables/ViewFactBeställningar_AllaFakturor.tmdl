@@ -112,6 +112,25 @@ table ViewFactBeställningar_AllaFakturor
 
 		annotation SummarizationSetBy = Automatic
 
+	column KlarSenast
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 017f9913-9804-431f-b39f-5f523438f254
+		summarizeBy: none
+		sourceColumn: KlarSenast
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column TimeSK
+		dataType: string
+		lineageTag: 8be6b017-b881-4c15-91a5-cad22baa9acd
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
 	partition ViewFactBeställningar_AllaFakturor = m
 		mode: import
 		source =

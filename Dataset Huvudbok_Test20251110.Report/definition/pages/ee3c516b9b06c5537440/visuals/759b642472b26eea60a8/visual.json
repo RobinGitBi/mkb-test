@@ -1,0 +1,83 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "759b642472b26eea60a8",
+  "position": {
+    "x": 148.04349893789038,
+    "y": 96.098411591262163,
+    "z": 0,
+    "height": 392.18540946704292,
+    "width": 441.53324244633967
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Best. Ankomstlista Fram till Innevarande Månad"
+                }
+              },
+              "queryRef": "Mätvärde.Beställningar Ankomstregistrerade Fakturor",
+              "nativeQueryRef": "Best. Ankomstlista Fram till Innevarande Månad"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Best. Ankomstlista Innevarande till årsslut"
+                }
+              },
+              "queryRef": "Mätvärde.Beställningar Ankomstlista Innevarande till årsslut",
+              "nativeQueryRef": "Best. Ankomstlista Innevarande till årsslut"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5fcf5f0084409cd63aa6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Best. Ankomstlista Fram till Innevarande Månad"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ae8aefe93ac12c8a536e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Best. Ankomstlista Innevarande till årsslut"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 198.66728119521238,
-        "y": 74.500228227924822
+        "y": 0
       },
       "nodes": [
         {
@@ -19,7 +19,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 49
+          "zIndex": 58
         },
         {
           "location": {
@@ -31,7 +31,7 @@
             "height": 72,
             "width": 234
           },
-          "zIndex": 48,
+          "zIndex": 47,
           "expandedHeight": 104
         },
         {
@@ -107,7 +107,7 @@
             "height": 1000,
             "width": 234
           },
-          "zIndex": 57
+          "zIndex": 54
         },
         {
           "location": {
@@ -124,8 +124,8 @@
         },
         {
           "location": {
-            "x": 528.45178070313978,
-            "y": 731.92230332416023
+            "x": 519.13925217464919,
+            "y": 708.6409820029337
           },
           "nodeIndex": "Konto",
           "nodeLineageTag": "a5c62670-6d13-4001-b581-0e83fd5a9971",
@@ -133,7 +133,7 @@
             "height": 424.24707029252033,
             "width": 234
           },
-          "zIndex": 54
+          "zIndex": 52
         },
         {
           "location": {
@@ -146,7 +146,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 58
+          "zIndex": 55
         },
         {
           "location": {
@@ -212,7 +212,7 @@
             "height": 235.98420041184795,
             "width": 234
           },
-          "zIndex": 52
+          "zIndex": 50
         },
         {
           "location": {
@@ -303,7 +303,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 29,
+          "zIndex": 56,
           "expandedHeight": 216.8955223880597
         },
         {
@@ -316,7 +316,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 30,
+          "zIndex": 29,
           "expandedHeight": 200
         },
         {
@@ -329,7 +329,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 31,
+          "zIndex": 30,
           "expandedHeight": 248
         },
         {
@@ -343,7 +343,7 @@
             "height": 72,
             "width": 234
           },
-          "zIndex": 32,
+          "zIndex": 31,
           "expandedHeight": 300
         },
         {
@@ -356,7 +356,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 33
+          "zIndex": 32
         },
         {
           "location": {
@@ -368,7 +368,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 34,
+          "zIndex": 33,
           "expandedHeight": 200
         },
         {
@@ -381,7 +381,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 35
+          "zIndex": 34
         },
         {
           "location": {
@@ -393,7 +393,7 @@
             "height": 72,
             "width": 234
           },
-          "zIndex": 36,
+          "zIndex": 35,
           "expandedHeight": 152
         },
         {
@@ -406,7 +406,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 37
+          "zIndex": 36
         },
         {
           "location": {
@@ -418,7 +418,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 38
+          "zIndex": 37
         },
         {
           "location": {
@@ -430,7 +430,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 39
+          "zIndex": 38
         },
         {
           "location": {
@@ -442,7 +442,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 40
+          "zIndex": 39
         },
         {
           "location": {
@@ -454,7 +454,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 41
+          "zIndex": 40
         },
         {
           "location": {
@@ -466,7 +466,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 42
+          "zIndex": 41
         },
         {
           "location": {
@@ -478,7 +478,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 43
+          "zIndex": 42
         },
         {
           "location": {
@@ -490,7 +490,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 44
+          "zIndex": 43
         },
         {
           "location": {
@@ -502,7 +502,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 45
+          "zIndex": 44
         },
         {
           "location": {
@@ -514,7 +514,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 46
+          "zIndex": 45
         },
         {
           "location": {
@@ -527,7 +527,7 @@
             "height": 173.7135447302669,
             "width": 307.84495687196977
           },
-          "zIndex": 51
+          "zIndex": 49
         },
         {
           "location": {
@@ -539,7 +539,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 50
+          "zIndex": 48
         },
         {
           "location": {
@@ -551,7 +551,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 47
+          "zIndex": 46
         },
         {
           "location": {
@@ -564,7 +564,7 @@
             "height": 1000,
             "width": 234
           },
-          "zIndex": 53
+          "zIndex": 51
         },
         {
           "location": {
@@ -577,7 +577,7 @@
             "height": 1000,
             "width": 234
           },
-          "zIndex": 55
+          "zIndex": 53
         },
         {
           "location": {
@@ -732,16 +732,16 @@
         },
         {
           "location": {
-            "x": 1843.1358433038051,
-            "y": 132.70353153099114
+            "x": 1940.9173928529565,
+            "y": 128.04726726674585
           },
           "nodeIndex": "ViewFactBeställningar_AllaFakturor",
           "nodeLineageTag": "d6c3e5d7-3ecf-47b0-a677-a0bfaf44a44a",
           "size": {
-            "height": 300,
-            "width": 234
+            "height": 414.07847447400991,
+            "width": 369.0316636631137
           },
-          "zIndex": 56
+          "zIndex": 57
         }
       ],
       "name": "All tables",
