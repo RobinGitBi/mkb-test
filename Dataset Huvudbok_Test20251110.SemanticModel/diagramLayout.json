@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 987.90409174702961,
-        "y": 0
+        "x": 198.66728119521238,
+        "y": 74.500228227924822
       },
       "nodes": [
         {
@@ -107,7 +107,7 @@
             "height": 1000,
             "width": 234
           },
-          "zIndex": 50
+          "zIndex": 57
         },
         {
           "location": {
@@ -133,12 +133,12 @@
             "height": 424.24707029252033,
             "width": 234
           },
-          "zIndex": 55
+          "zIndex": 54
         },
         {
           "location": {
-            "x": 645.64542693732835,
-            "y": 176.7430084998667
+            "x": 647.973559069451,
+            "y": 186.05553702835732
           },
           "nodeIndex": "Kostnadsställe",
           "nodeLineageTag": "1d6a4c41-4bc4-4ba1-a114-944ff373fbf7",
@@ -146,7 +146,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 56
+          "zIndex": 58
         },
         {
           "location": {
@@ -212,7 +212,7 @@
             "height": 235.98420041184795,
             "width": 234
           },
-          "zIndex": 53
+          "zIndex": 52
         },
         {
           "location": {
@@ -527,7 +527,7 @@
             "height": 173.7135447302669,
             "width": 307.84495687196977
           },
-          "zIndex": 52
+          "zIndex": 51
         },
         {
           "location": {
@@ -539,7 +539,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 51
+          "zIndex": 50
         },
         {
           "location": {
@@ -564,7 +564,7 @@
             "height": 1000,
             "width": 234
           },
-          "zIndex": 54
+          "zIndex": 53
         },
         {
           "location": {
@@ -577,7 +577,7 @@
             "height": 1000,
             "width": 234
           },
-          "zIndex": 58
+          "zIndex": 55
         },
         {
           "location": {
@@ -719,19 +719,6 @@
         },
         {
           "location": {
-            "x": 1789.5882358733509,
-            "y": 39.57824624608493
-          },
-          "nodeIndex": "Beställningar Ankomstregisterade",
-          "nodeLineageTag": "71deb600-4c36-410e-b0d9-9c6f873b6748",
-          "size": {
-            "height": 427.98485285221767,
-            "width": 231.67186786787715
-          },
-          "zIndex": 57
-        },
-        {
-          "location": {
             "x": 13211.6794587193,
             "y": 0
           },
@@ -742,6 +729,19 @@
             "width": 234
           },
           "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1843.1358433038051,
+            "y": 132.70353153099114
+          },
+          "nodeIndex": "ViewFactBeställningar_AllaFakturor",
+          "nodeLineageTag": "d6c3e5d7-3ecf-47b0-a677-a0bfaf44a44a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 56
         }
       ],
       "name": "All tables",

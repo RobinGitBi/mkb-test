@@ -1,0 +1,128 @@
+table ViewFactBeställningar_AllaFakturor
+	lineageTag: d6c3e5d7-3ecf-47b0-a677-a0bfaf44a44a
+
+	column Client
+		dataType: string
+		lineageTag: 3decbe3e-532c-44eb-ba27-78d808b9bf6b
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ärendenummer
+		dataType: string
+		lineageTag: 3f005ff7-4a5c-4a4a-8132-c2a65a84f489
+		summarizeBy: none
+		sourceColumn: Ärendenummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vertyp
+		dataType: string
+		lineageTag: 4f1bc389-0ed0-4b65-b5bc-e91337115d9a
+		summarizeBy: none
+		sourceColumn: Vertyp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vernr
+		dataType: int64
+		formatString: 0
+		lineageTag: 88fc422a-bb87-426d-8722-d17ae4fb3ab6
+		summarizeBy: sum
+		sourceColumn: Vernr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: string
+		lineageTag: f63c56a2-fb4d-4d86-97dc-a62080e7fd64
+		summarizeBy: none
+		sourceColumn: Konto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Slag
+		dataType: string
+		lineageTag: 589eea7b-c5a8-48e4-80dc-fecb0bf9e63e
+		summarizeBy: none
+		sourceColumn: Slag
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: string
+		lineageTag: aa12c30d-21d8-4942-98f3-7d288e6c6ba4
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uppföljning
+		dataType: string
+		lineageTag: a51dc2ab-7004-451b-986d-9511fb27cdc1
+		summarizeBy: none
+		sourceColumn: Uppföljning
+
+		annotation SummarizationSetBy = Automatic
+
+	column Utfall
+		dataType: double
+		lineageTag: 39fc0e5b-cd26-4e39-ae8a-22adbc5ca45d
+		summarizeBy: sum
+		sourceColumn: Utfall
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column KontoSK
+		dataType: int64
+		formatString: 0
+		lineageTag: c275a72c-d54b-4ab4-a2e8-6e54761b48a7
+		summarizeBy: none
+		sourceColumn: KontoSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a5395be-009e-4ae0-94d6-30a8c9567b04
+		summarizeBy: none
+		sourceColumn: KostnadsställeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column SlagSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a9a711a-c387-4674-8da5-7c1dda79ea8b
+		summarizeBy: sum
+		sourceColumn: SlagSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column UppföljningSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 35386be2-3369-4d7a-8a44-671439064cae
+		summarizeBy: none
+		sourceColumn: UppföljningSK
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ViewFactBeställningar_AllaFakturor = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    Gold = Source{[Name="Gold"]}[Data],
+				    dbo_ViewFactBeställningar_AllaFakturor = Gold{[Schema="dbo",Item="ViewFactBeställningar_AllaFakturor"]}[Data]
+				in
+				    dbo_ViewFactBeställningar_AllaFakturor
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

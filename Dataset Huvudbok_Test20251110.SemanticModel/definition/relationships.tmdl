@@ -128,15 +128,15 @@ relationship bed78985-78b6-b886-2e76-8badb80294e6
 	fromColumn: 'Prognos balansräkning'.LevNr
 	toColumn: Leverantör.LeverantörNr
 
-relationship 40b031c6-a95b-d0fb-23fd-d956664edd09
-	fromColumn: 'Beställningar Ankomstregisterade'.KontoSK
+relationship ed4a76b7-bf9c-235b-ede8-4a4fc662a1ba
+	fromColumn: ViewFactBeställningar_AllaFakturor.KontoSK
 	toColumn: Konto.KontoSK
 
-relationship 563217e8-2e29-85c2-8465-056139947a3f
-	fromColumn: 'Beställningar Ankomstregisterade'.KostnadsStälleSK
+relationship e71154b5-2517-e52f-a1ff-bd4d83eb896d
+	fromColumn: ViewFactBeställningar_AllaFakturor.KostnadsställeSK
 	toColumn: Kostnadsställe.KostnadsställeSK
 
-relationship dff46cff-57b3-0d9c-63c6-e70847125edf
-	fromColumn: 'Beställningar Ankomstregisterade'.SlagSK
-	toColumn: Slag.SlagSK
+relationship cf6ae9b0-3561-29ae-6430-06e2d11e2278
+	fromColumn: ViewFactBeställningar_AllaFakturor.UppföljningSK
+	toColumn: Uppföljning.UppföljningSK
 
