@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 3235.5780366165491,
+        "x": 3236,
         "y": 1131.3333740234375
       },
       "nodes": [
@@ -732,19 +732,6 @@
           "nodeLineageTag": "0f99d7ce-c965-40df-a59c-a9221a4944bb",
           "size": {
             "height": 300,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 15055.445139803121,
-            "y": 1470.2726618411061
-          },
-          "nodeIndex": "Beställningar Ankomstregisterade (2)",
-          "nodeLineageTag": "5cf9e163-23bf-4a52-9ded-75d7ecd36aab",
-          "size": {
-            "height": 104,
             "width": 234
           },
           "zIndex": 0

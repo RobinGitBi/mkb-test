@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "906e4db63903631ea7e9",
+  "position": {
+    "x": 347.06612195491,
+    "y": 148.74262369496142,
+    "z": 0,
+    "height": 385.491299742775,
+    "width": 537.95248903011043
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewFactBeställningar_AllaFakturor"
+                    }
+                  },
+                  "Property": "Ärendenummer"
+                }
+              },
+              "queryRef": "ViewFactBeställningar_AllaFakturor.Ärendenummer",
+              "nativeQueryRef": "Ärendenummer"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+                }
+              },
+              "queryRef": "Mätvärde.Best. Ankomstlista Innevarande Månad och Rest. År",
+              "nativeQueryRef": "Beställningar Ankomstregistrerade",
+              "displayName": "Beställningar Ankomstregistrerade"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mätvärde"
+                  }
+                },
+                "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "129.35678469468075D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Best. Ankomstlista Innevarande Månad och Rest. År"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

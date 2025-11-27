@@ -40,19 +40,19 @@ table 'Välj rader uppföljning per projektledare'
 		mode: import
 		source = ```
 				{
-				    
-				    
+				   
 				    ("Kontotyp", NAMEOF(Konto[KontoTypNamn Investeringar]), 1),
 				    ("Konto", NAMEOF(Konto[Lev3Namn Investeringar]), 3),
 				    ("Uppföljning", NAMEOF('Uppföljning'[Uppföljning]), 4),
 				    ("Leverantör", NAMEOF('Leverantör'[LeverantörNamn]), 5),
-				    ("Kostnadsställe", NAMEOF('Kostnadsställe'[Kostnadsställe]), 8),
+				    ("Område", NAMEOF('Kostnadsställe'[Område]), 8),
+				    ("Kostnadsställe", NAMEOF('Kostnadsställe'[Kostnadsställe]), 9),
 				    //("Upphandlad leverantör", NAMEOF(Projekt[UpphandladLeverantör]), 5),
 				    //("Projekt", NAMEOF(Projekt[Projekt]), 6),
-				    ("Projektledare", NAMEOF('Uppföljning'[AnvändareNamn]), 9),
+				    ("Projektledare", NAMEOF('Uppföljning'[AnvändareNamn]), 11),
 				    //("Aktivitet", NAMEOF(Aktivitet[Aktivitet]), 8)
-				    ("Månad", NAMEOF(Kalender[Månad]), 10)
-				    
+				    ("Månad", NAMEOF(Kalender[Månad]), 12)
+				   
 				}
 				```
 

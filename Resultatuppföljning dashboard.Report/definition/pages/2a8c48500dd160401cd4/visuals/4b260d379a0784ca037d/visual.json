@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "4b260d379a0784ca037d",
+  "position": {
+    "x": 347.06612195491,
+    "y": 148.74262369496142,
+    "z": 0,
+    "height": 385.491299742775,
+    "width": 537.95248903011043
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewFactBeställningar_AllaFakturor"
+                    }
+                  },
+                  "Property": "Ärendenummer"
+                }
+              },
+              "queryRef": "ViewFactBeställningar_AllaFakturor.Ärendenummer",
+              "nativeQueryRef": "Ärendenummer"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Best. Ankomstlista Före Innevarande Månad"
+                }
+              },
+              "queryRef": "Mätvärde.Best. Ankomstlista Före Innevarande Månad",
+              "nativeQueryRef": "Beställningar Ankomstlista",
+              "displayName": "Beställningar Ankomstlista"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mätvärde"
+                  }
+                },
+                "Property": "Best. Ankomstlista Före Innevarande Månad"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "120.01195339688303D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Best. Ankomstlista Före Innevarande Månad"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
