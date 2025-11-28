@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 3.848022682920742
+        "y": 0
       },
       "nodes": [
         {
@@ -18,7 +18,7 @@
             "height": 248,
             "width": 234
           },
-          "zIndex": 23
+          "zIndex": 22
         },
         {
           "location": {
@@ -30,7 +30,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 24
+          "zIndex": 23
         },
         {
           "location": {
@@ -43,7 +43,7 @@
             "height": 424.72549668296631,
             "width": 234
           },
-          "zIndex": 28
+          "zIndex": 27
         },
         {
           "location": {
@@ -55,7 +55,7 @@
             "height": 176,
             "width": 234
           },
-          "zIndex": 25
+          "zIndex": 24
         },
         {
           "location": {
@@ -67,7 +67,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 26
+          "zIndex": 25
         },
         {
           "location": {
@@ -80,7 +80,7 @@
             "height": 682.82629862354793,
             "width": 234
           },
-          "zIndex": 27
+          "zIndex": 26
         },
         {
           "location": {
@@ -92,7 +92,7 @@
             "height": 176,
             "width": 314
           },
-          "zIndex": 29
+          "zIndex": 28
         },
         {
           "location": {
@@ -104,7 +104,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 31
+          "zIndex": 30
         },
         {
           "location": {
@@ -272,7 +272,7 @@
             "height": 296,
             "width": 234
           },
-          "zIndex": 30
+          "zIndex": 29
         },
         {
           "location": {
@@ -297,7 +297,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 22
+          "zIndex": 34
         },
         {
           "location": {
@@ -361,7 +361,7 @@
             "height": 145,
             "width": 234
           },
-          "zIndex": 32
+          "zIndex": 31
         },
         {
           "location": {
@@ -404,8 +404,8 @@
         },
         {
           "location": {
-            "x": 129.16576727470596,
-            "y": 1622.7104294950248
+            "x": 523.5880922740821,
+            "y": 1370.6649437637161
           },
           "nodeIndex": "Vab",
           "nodeLineageTag": "9d6f0f25-2115-48f0-bd30-e4e72d704ad9",
@@ -413,12 +413,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 34
+          "zIndex": 33
         },
         {
           "location": {
-            "x": 662.34118001981346,
-            "y": 1609.711442464702
+            "x": 720.06152026362463,
+            "y": 1675.1278280743547
           },
           "nodeIndex": "ViewDimAnställdSCD2",
           "nodeLineageTag": "e075a025-1509-4268-95a4-bcb375620083",
@@ -426,7 +426,7 @@
             "height": 341.32653061224482,
             "width": 234
           },
-          "zIndex": 33
+          "zIndex": 32
         }
       ],
       "name": "All tables",

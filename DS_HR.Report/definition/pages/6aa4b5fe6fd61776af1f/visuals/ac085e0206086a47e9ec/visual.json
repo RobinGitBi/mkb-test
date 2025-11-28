@@ -1,18 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "26d7e5ff52a133020d4b",
+  "name": "ac085e0206086a47e9ec",
   "position": {
-    "x": 461.94999523461576,
-    "y": 209.50408234583983,
-    "z": 3000,
-    "height": 312.30422213044449,
-    "width": 697.47942942465932
+    "x": 100.19760460018426,
+    "y": 32.531689805254629,
+    "z": 3001,
+    "height": 212.10661753026019,
+    "width": 849.727737713251,
+    "tabOrder": 1
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Values": {
+        "Rows": {
           "projections": [
             {
               "field": {
@@ -26,7 +27,26 @@
                 }
               },
               "queryRef": "Personer.Namn",
-              "nativeQueryRef": "Namn"
+              "nativeQueryRef": "Namn",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB Antal Dagar"
+                }
+              },
+              "queryRef": "Mått.VAB Antal Dagar",
+              "nativeQueryRef": "VAB Antal Dagar"
             },
             {
               "field": {
@@ -36,11 +56,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Antal sjukdagar i period"
+                  "Property": "VAB %"
                 }
               },
-              "queryRef": "Mått.Antal sjukdagar i period",
-              "nativeQueryRef": "Antal sjukdagar i period"
+              "queryRef": "Mått.VAB %",
+              "nativeQueryRef": "VAB %"
             },
             {
               "field": {
@@ -58,17 +78,17 @@
             },
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Personer"
+                      "Entity": "Mått"
                     }
                   },
-                  "Property": "Anställningsnummer"
+                  "Property": "VAB Kvinnor"
                 }
               },
-              "queryRef": "Personer.Anställningsnummer",
-              "nativeQueryRef": "Anställningsnummer"
+              "queryRef": "Mått.VAB Kvinnor",
+              "nativeQueryRef": "VAB Kvinnor"
             },
             {
               "field": {
@@ -78,31 +98,14 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Sjukfrånvaro"
+                  "Property": "VAB Män"
                 }
               },
-              "queryRef": "Mått.Sjukfrånvaro",
-              "nativeQueryRef": "Sjukfrånvaro"
+              "queryRef": "Mått.VAB Män",
+              "nativeQueryRef": "VAB Män"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Mått"
-                  }
-                },
-                "Property": "Antal anställningsdagar i vald period"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "drillFilterOtherVisuals": true
@@ -110,21 +113,35 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "1aa034308dd6d20c02d4",
+        "name": "e5ec7b62ac5c6dcc5ed0",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Personer"
+                "Entity": "Mått"
               }
             },
-            "Property": "Namn"
+            "Property": "VAB Antal Dagar"
           }
         },
-        "type": "Categorical"
+        "type": "Advanced"
       },
       {
-        "name": "f82d36e25c99c4d7e40a",
+        "name": "9c7ddd887ede112eb27a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d27557de1b7b471904a8",
         "field": {
           "Measure": {
             "Expression": {
@@ -138,7 +155,7 @@
         "type": "Advanced"
       },
       {
-        "name": "12327b011e487787d165",
+        "name": "6d38d86145b0a1202e79",
         "field": {
           "Column": {
             "Expression": {
@@ -146,13 +163,13 @@
                 "Entity": "Personer"
               }
             },
-            "Property": "Anställningsnummer"
+            "Property": "Namn"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "7f589a09166d68aa8572",
+        "name": "f81ede1e60eb00891320",
         "field": {
           "Measure": {
             "Expression": {
@@ -160,13 +177,13 @@
                 "Entity": "Mått"
               }
             },
-            "Property": "Sjukfrånvaro"
+            "Property": "VAB Kvinnor"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "5967a942e916dbd5ed52",
+        "name": "2b96b4f3eba1d475d0a8",
         "field": {
           "Measure": {
             "Expression": {
@@ -174,7 +191,7 @@
                 "Entity": "Mått"
               }
             },
-            "Property": "Antal sjukdagar i period"
+            "Property": "VAB Män"
           }
         },
         "type": "Advanced"

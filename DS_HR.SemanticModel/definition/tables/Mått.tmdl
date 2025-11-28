@@ -663,6 +663,36 @@ table Mått
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
+	measure 'VAB Antal Dagar' = SUM(Vab[AntalDagarFrånvaro])
+		formatString: #,##.0
+		displayFolder: Frånvaro
+		lineageTag: f9504382-8c52-42b0-921b-848d5aa6d5fc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAB %' = DIVIDE([VAB Antal Dagar], [Antal anställningsdagar i vald period])
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 7241cd57-d8ab-401b-ab25-047c8d300b47
+
+	measure 'VAB Kvinnor' =
+			
+			
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Kön] = "Kvinna")), [Antal anställningsdagar i vald period])
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 8868e400-3dbb-477b-b388-ba60688ead45
+
+	measure 'VAB Män' =
+			
+			
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Kön] = "Man")), [Antal anställningsdagar i vald period])
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 3b154ba1-aef3-48c5-95e8-68fa5a2e7a27
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mått-69fec661-27f9-4d27-9216-b845dab9b72b = m
 		mode: import
 		source =

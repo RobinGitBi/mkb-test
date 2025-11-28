@@ -5,7 +5,7 @@ table Vab
 		dataType: int64
 		formatString: 0
 		lineageTag: 54537247-d058-4742-ab77-3fa2ab6a03ac
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: AnställdsSk
 
 		annotation SummarizationSetBy = Automatic
@@ -14,7 +14,7 @@ table Vab
 		dataType: int64
 		formatString: 0
 		lineageTag: 155166cf-74e4-4668-adc8-7e763256e332
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: AnstNr
 
 		annotation SummarizationSetBy = Automatic

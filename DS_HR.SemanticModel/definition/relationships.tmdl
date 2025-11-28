@@ -116,11 +116,11 @@ relationship 3d2d320d-2585-e5cc-e6ec-a5ec8c2a5f49
 	fromColumn: Feriejobb.KlassificeringsId
 	toColumn: JobbKlassificering.KlassificeringsId
 
-relationship e6e5d2b2-126c-8872-9298-e10eed2bd9ae
-	fromColumn: Vab.AnställdsSk
-	toColumn: ViewDimAnställdSCD2.'Anställd SK'
-
 relationship 6b45b3a9-5451-3370-9b5b-5bd1e6657395
 	fromColumn: Vab.TimeSK
 	toColumn: Kalender.TimeSK
+
+relationship b76ad886-70d7-a113-8738-f8eb819a50bc
+	fromColumn: Vab.AnstNr
+	toColumn: Personer.Anställningsnummer
 
