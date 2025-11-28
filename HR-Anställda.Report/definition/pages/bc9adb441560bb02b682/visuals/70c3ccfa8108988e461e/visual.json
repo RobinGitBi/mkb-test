@@ -1,0 +1,141 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "70c3ccfa8108988e461e",
+  "position": {
+    "x": 216.9907511842996,
+    "y": 605.49515001127907,
+    "z": 12001,
+    "height": 227.38551770809838,
+    "width": 1062.8648770584255,
+    "tabOrder": 12001
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Kön"
+                }
+              },
+              "queryRef": "Personer.Kön",
+              "nativeQueryRef": "Kön",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB 0-24"
+                }
+              },
+              "queryRef": "Mått.VAB 0-24",
+              "nativeQueryRef": "VAB 0-24"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB 25-34"
+                }
+              },
+              "queryRef": "Mått.VAB 25-34",
+              "nativeQueryRef": "VAB 25-34"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB 35-44"
+                }
+              },
+              "queryRef": "Mått.VAB 35-44",
+              "nativeQueryRef": "VAB 35-44"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB 45-54"
+                }
+              },
+              "queryRef": "Mått.VAB 45-54",
+              "nativeQueryRef": "VAB 45-54"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB 55-64"
+                }
+              },
+              "queryRef": "Mått.VAB 55-64",
+              "nativeQueryRef": "VAB 55-64"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB >64"
+                }
+              },
+              "queryRef": "Mått.VAB >64",
+              "nativeQueryRef": "VAB >64"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB %"
+                }
+              },
+              "queryRef": "Mått.VAB %",
+              "nativeQueryRef": "VAB %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
