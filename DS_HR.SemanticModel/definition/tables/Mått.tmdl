@@ -693,6 +693,66 @@ table Mått
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'VAB 0-24' =
+			
+			
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] <=  24)), [Antal anställningsdagar i vald period])
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 6cf156c1-755d-4923-b573-fce5b35905a7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAB 25-34' =
+			
+			
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  25 && Personer[Ålder] <= 34)), [Antal anställningsdagar i vald period])
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 9b36209c-b0c3-4b8e-8d8d-2e8159e5c18c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAB 35-44' =
+			
+			
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  35 && Personer[Ålder] <= 44)), [Antal anställningsdagar i vald period])
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: b4561491-89af-43a9-a3e6-6846e80c4215
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAB 45-54' =
+			
+			
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  45 && Personer[Ålder] <= 54)), [Antal anställningsdagar i vald period])
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: d3aea65e-3fa1-4889-90da-5af9e811c54d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAB 55-64' =
+			
+			
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  55 && Personer[Ålder] <= 64)), [Antal anställningsdagar i vald period])
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 43311144-ec5c-4844-81b6-f25697398e54
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAB >64' =
+			
+			
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >  64)), [Antal anställningsdagar i vald period])
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 06fd26e6-5312-45c5-9e91-a17689b690ab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mått-69fec661-27f9-4d27-9216-b845dab9b72b = m
 		mode: import
 		source =

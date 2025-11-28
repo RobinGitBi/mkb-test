@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "ac085e0206086a47e9ec",
   "position": {
-    "x": 100.19760460018426,
-    "y": 32.531689805254629,
+    "x": 61.15957683387871,
+    "y": 50.749436096197229,
     "z": 3001,
-    "height": 212.10661753026019,
-    "width": 849.727737713251,
+    "height": 213.40788512247039,
+    "width": 939.51520157575374,
     "tabOrder": 1
   },
   "visual": {
@@ -103,6 +103,90 @@
               },
               "queryRef": "Mått.VAB Män",
               "nativeQueryRef": "VAB Män"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB 0-24"
+                }
+              },
+              "queryRef": "Mått.VAB 0-20",
+              "nativeQueryRef": "VAB 0-24"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB 25-34"
+                }
+              },
+              "queryRef": "Mått.VAB 25-34",
+              "nativeQueryRef": "VAB 25-34"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB 35-44"
+                }
+              },
+              "queryRef": "Mått.VAB 35-44",
+              "nativeQueryRef": "VAB 35-44"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB 45-54"
+                }
+              },
+              "queryRef": "Mått.VAB 45-54",
+              "nativeQueryRef": "VAB 45-54"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB 55-64"
+                }
+              },
+              "queryRef": "Mått.VAB 55-64",
+              "nativeQueryRef": "VAB 55-64"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB >64"
+                }
+              },
+              "queryRef": "Mått.VAB >64",
+              "nativeQueryRef": "VAB >64"
             }
           ]
         }
@@ -192,6 +276,90 @@
               }
             },
             "Property": "VAB Män"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ca854dda43a5d0887699",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB 0-24"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c79124628b83d070c078",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB 25-34"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ef3448b8cbd04490a2dc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB 35-44"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a4cc4a6ece0264abe81b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB 45-54"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cd99331304d0de37ea9d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB 55-64"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d857d0568a5981eec540",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB >64"
           }
         },
         "type": "Advanced"
