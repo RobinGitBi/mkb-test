@@ -18,6 +18,7 @@ WITH JusteradFrånvaro AS (
         CAST(CONCAT(YEAR(f.Datum), '-', MONTH(f.Datum), '-', '01') AS DATE) AS Datum,
         SUM(f.ObetaldDagJusterad) AS JusteringFrånvaroDagar
     FROM [MKBBIDW].fact.FteFrånvaroJustering f
+	WHERE F.FrånVaroKod IN ('TJ', 'FL', 'SJ')
     GROUP BY f.AnstNr, YEAR(f.Datum), MONTH(f.Datum)
     HAVING SUM(f.ObetaldDagJusterad) <> 0
 ),
