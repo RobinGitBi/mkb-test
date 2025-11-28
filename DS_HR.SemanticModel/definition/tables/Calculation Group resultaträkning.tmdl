@@ -1,0 +1,68 @@
+table 'Calculation Group resultaträkning'
+	lineageTag: e2774cf1-4a05-4f2e-aa42-b3c7115733b8
+
+	calculationGroup
+
+		calculationItem 'Belopp till resultaträkning' = ```
+				// Hämta indexordningen av aktuell rad i level 1
+				VAR CurrentRow = MAX( 'PNLStructure'[RowIndex] )
+				
+				// Tre alternativ som ska returneras, antingen:
+				// Amount = Summan på nuvarande rad
+				// Cumulative = Summan av ovanstående rader 
+				// GrossMargin = Marginal
+				VAR Amount = SELECTEDMEASURE()
+				VAR Cumulative = CALCULATE ( SELECTEDMEASURE(),
+				                    FILTER ( ALL ( 'PNLStructure' ), 'PNLStructure'[RowIndex]  < CurrentRow  && 'PNLStructure'[RowIndex]  >=1 ))
+				VAR GrossMargin = 
+				    DIVIDE( CALCULATE( SELECTEDMEASURE(), FILTER( ALL ( 'PNLStructure' ), 'PNLStructure'[RowIndex] < CurrentRow && 'PNLStructure'[RowIndex]  >=1 )),
+				            CALCULATE( SELECTEDMEASURE(), FILTER( ALL ( 'PNLStructure' ), 'PNLStructure'[RowIndex] = 1)),
+				            BLANK())
+				       
+				//Returna rätt variabel ovan beroende på typ av aktuell rad (beroende på typ av summa i Sum type)
+				VAR ValueForThisRow =
+				    SWITCH ( MAX('PNLStructure'[IsSubtotal]),
+				        0, Amount,
+				        1, Cumulative
+				        //"Margin", GrossMargin
+				        , Amount // Nödvändigt för att få med siffror som inte mappar mot någon av summatypen ovan, exempelvis om kontot saknas i kontoplanen
+				    )
+				
+				// Bearbeta resultatet med om det ska gå att expandera kolumnen eller inte
+				//    VAR Result =    
+				//    IF (
+				//        AND (
+				//            MAX ('PnL rows level 1'[Expandable] ) = 0,
+				//            ISFILTERED ( 'Fact Transaktioner'[Level 2 override] )
+				//        ),
+				//        BLANK (),
+				//        IF (
+				//            MAX ( 'PnL rows level 1'[Order]  ) <= 2,
+				//            //syftar till att det inte ska gå att plocka längre ner när vi redan ligger på konto nivå
+				//            ValueForThisRow,
+				//            IF ( ISFILTERED ( 'Pnl Chart of accounts'[Namn] ), BLANK (), ValueForThisRow )
+				//        )
+				//    )
+				//
+				RETURN
+				    ValueForThisRow
+				```
+
+	column Name
+		dataType: string
+		lineageTag: d9fb33eb-e527-4f31-9660-84198f36ea6d
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: ccda5fd7-38c1-42e7-bda4-457377902f74
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+

@@ -1,0 +1,142 @@
+table Löner
+	lineageTag: e17a5edb-da5d-433b-bcbf-7351e622f65d
+
+	column ANST_NR
+		dataType: string
+		lineageTag: 9d268b79-ef66-4f0f-9708-f341cfd4c11e
+		summarizeBy: none
+		sourceColumn: ANST_NR
+
+		annotation SummarizationSetBy = Automatic
+
+	column LON_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 496fb796-3910-4ebd-ac81-32edc47bdd75
+		summarizeBy: count
+		sourceColumn: LON_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LONFRANTID
+		dataType: string
+		lineageTag: 1f4ef3e6-fc72-434b-a5b0-faf7dd5a1fb5
+		summarizeBy: none
+		sourceColumn: LONFRANTID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LONTOMTID
+		dataType: string
+		lineageTag: 5e60b1b6-fa80-427b-aa1e-de8adbe55cbd
+		summarizeBy: none
+		sourceColumn: LONTOMTID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ARTDECIMAL
+		dataType: string
+		lineageTag: 6a0fa48c-93b6-410b-92ef-1851340a0492
+		summarizeBy: none
+		sourceColumn: ARTDECIMAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRISGRUPP
+		dataType: string
+		lineageTag: 05b3bb68-eadd-4485-9b48-5f310be87467
+		summarizeBy: none
+		sourceColumn: PRISGRUPP
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERSONALKATEGORI
+		dataType: string
+		lineageTag: 012354b0-1d1e-4d61-a5a1-d501f9526d54
+		summarizeBy: none
+		sourceColumn: PERSONALKATEGORI
+
+		annotation SummarizationSetBy = Automatic
+
+	column Förklaring
+		dataType: string
+		lineageTag: f40e7139-b3c3-4b75-bedd-26e800eedc1e
+		summarizeBy: none
+		sourceColumn: Förklaring
+
+		annotation SummarizationSetBy = Automatic
+
+	column AVTALSOMR
+		dataType: string
+		lineageTag: 667a8e2c-992c-47fd-b2e4-8badaa28ee15
+		summarizeBy: none
+		sourceColumn: AVTALSOMR
+
+		annotation SummarizationSetBy = Automatic
+
+	column KOMPGRUPP
+		dataType: string
+		lineageTag: ed92000e-53fb-4c8c-b795-109b46b51f68
+		summarizeBy: none
+		sourceColumn: KOMPGRUPP
+
+		annotation SummarizationSetBy = Automatic
+
+	column RESEAVTALSKOD
+		dataType: string
+		lineageTag: 5b90b7cf-5ffb-4fa5-9aed-c430b2cae9cd
+		summarizeBy: none
+		sourceColumn: RESEAVTALSKOD
+
+		annotation SummarizationSetBy = Automatic
+
+	column ARBETSTIDSREGEL
+		dataType: string
+		lineageTag: c42e53ad-b0c7-4fc2-8536-0ad5f05e6227
+		summarizeBy: none
+		sourceColumn: ARBETSTIDSREGEL
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ce4c10c7-ed26-4fc2-83b0-47139f723295
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column Modified
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6edd4223-21ab-4d88-b133-0b4a068440fb
+		summarizeBy: none
+		sourceColumn: Modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column OVERTIDSDISPENS
+		dataType: string
+		lineageTag: 0e0eaebf-55b0-432f-8b62-4e2e507038c9
+		summarizeBy: none
+		sourceColumn: OVERTIDSDISPENS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Löner = m
+		mode: import
+		source =
+				let
+				    Källa = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Källa{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimLoner = MKBBIDW{[Schema="dbo",Item="ViewDimLoner"]}[Data],
+				    #"Ersatt värde" = Table.ReplaceValue(dbo_ViewDimLoner,"Arbetsledare","Tjänstemän",Replacer.ReplaceText,{"Förklaring"}),
+				    #"Filtrerade rader" = Table.SelectRows(#"Ersatt värde", each true)
+				in
+				    #"Filtrerade rader"
+
+	annotation PBI_NavigationStepName = Navigering
+
+	annotation PBI_ResultType = Table
+

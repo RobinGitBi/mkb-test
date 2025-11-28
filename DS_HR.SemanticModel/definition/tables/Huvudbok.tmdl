@@ -1,0 +1,301 @@
+table Huvudbok
+	lineageTag: 9d3599ad-f4ad-45af-8048-938af2dfbc7e
+
+	column TimeSK
+		dataType: string
+		lineageTag: 3757fa88-17d6-4cc7-8770-95efe3fb5eb3
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 7fbbc566-6607-4396-b271-0db09b7a985b
+		summarizeBy: sum
+		sourceColumn: KostnadsställeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column FöretagSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 07144ed2-7591-4843-aa7e-a121611f335f
+		summarizeBy: sum
+		sourceColumn: FöretagSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column SlagSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 697b177a-d48e-457d-88c9-901309f9507f
+		summarizeBy: sum
+		sourceColumn: SlagSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column MotpartSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 82f5a23d-d456-4311-9f1f-e38182349a8a
+		summarizeBy: sum
+		sourceColumn: MotpartSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column SegmentSK
+		dataType: int64
+		formatString: 0
+		lineageTag: efda0900-2d9b-4d3b-8fa9-b856f2fde653
+		summarizeBy: sum
+		sourceColumn: SegmentSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 46613a88-3edf-4c19-89bf-7fdf85555db6
+		summarizeBy: sum
+		sourceColumn: ProjektSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column MomsKodSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 314d91fb-cf11-47fe-a6f1-0158d99e0877
+		summarizeBy: sum
+		sourceColumn: MomsKodSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column MomssystemSK
+		dataType: int64
+		formatString: 0
+		lineageTag: c5f615a1-f6a9-4af3-b14e-da56126b1dfc
+		summarizeBy: sum
+		sourceColumn: MomssystemSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column VertypSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 0169b4ad-341b-4782-9d19-31fd10e73eb8
+		summarizeBy: sum
+		sourceColumn: VertypSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column LeverantörSK
+		dataType: int64
+		formatString: 0
+		lineageTag: b58f0217-6888-4a61-af31-0bd742edd595
+		summarizeBy: sum
+		sourceColumn: LeverantörSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column UppföljningSK
+		dataType: int64
+		formatString: 0
+		lineageTag: d505672f-8d69-49fe-b1f5-43ec14e5d4ee
+		summarizeBy: sum
+		sourceColumn: UppföljningSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column AktivitetSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a96b4bb-374b-4bc4-ad78-b9602338cd1d
+		summarizeBy: sum
+		sourceColumn: AktivitetSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column FunktionSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 334bf645-e939-4096-8d2d-e3d42aa8edf0
+		summarizeBy: sum
+		sourceColumn: FunktionSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column KundSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c23318c-859a-49cc-a9b8-46dd8eb92fe9
+		summarizeBy: sum
+		sourceColumn: KundSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vernr
+		dataType: int64
+		formatString: 0
+		lineageTag: 6794602c-6123-49ac-a1c2-3cf22101a9a2
+		summarizeBy: sum
+		sourceColumn: Vernr
+
+		annotation SummarizationSetBy = Automatic
+
+	column SekvensNr
+		dataType: int64
+		formatString: 0
+		lineageTag: daa5c2d9-1a6f-4a20-9be2-77c2b38cdfd7
+		summarizeBy: sum
+		sourceColumn: SekvensNr
+
+		annotation SummarizationSetBy = Automatic
+
+	column KoddelLG
+		dataType: string
+		lineageTag: 5cfb0e34-23a9-426c-b3a5-407d716522a7
+		summarizeBy: none
+		sourceColumn: KoddelLG
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bokföringsdatum
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 89571308-e364-4de8-aaf5-68889ec4ca0e
+		summarizeBy: none
+		sourceColumn: Bokföringsdatum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Transaktionsdatum
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 854c4a6f-7c9e-48ba-950b-c0c7e4622a9f
+		summarizeBy: none
+		sourceColumn: Transaktionsdatum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Utfall
+		dataType: double
+		lineageTag: 38cbf882-9720-4192-af07-d49a090ce385
+		summarizeBy: sum
+		sourceColumn: Utfall
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BeloppT0
+		dataType: double
+		lineageTag: 894cd6fd-be39-4c6b-9667-c8c35152c333
+		summarizeBy: sum
+		sourceColumn: BeloppT0
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BeloppT1
+		dataType: double
+		lineageTag: 5672d671-50c6-460c-a7f0-f8089aad35ea
+		summarizeBy: sum
+		sourceColumn: BeloppT1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BeloppT2
+		dataType: double
+		lineageTag: 8e7f289a-89e7-4f92-8e5c-af878ec0bce2
+		summarizeBy: sum
+		sourceColumn: BeloppT2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BeloppProjOrig
+		dataType: double
+		lineageTag: 3c0493db-b2c0-440b-a8b1-b73387ece293
+		summarizeBy: sum
+		sourceColumn: BeloppProjOrig
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BeloppProjLop
+		dataType: double
+		lineageTag: 0ff402e5-c538-4756-b4f4-d21cd264195d
+		summarizeBy: sum
+		sourceColumn: BeloppProjLop
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Version
+		dataType: string
+		lineageTag: e9757539-b08d-4335-b56b-62b46a8b3ef0
+		summarizeBy: none
+		sourceColumn: Version
+
+		annotation SummarizationSetBy = Automatic
+
+	column VerText
+		dataType: string
+		lineageTag: 3e0f8e79-9d24-433b-a378-8a2c17905478
+		summarizeBy: none
+		sourceColumn: VerText
+
+		annotation SummarizationSetBy = Automatic
+
+	column Created
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a25a4e27-5ec0-4f17-94fe-e04f6c4eddaf
+		summarizeBy: none
+		sourceColumn: Created
+
+		annotation SummarizationSetBy = Automatic
+
+	column WebUrl
+		dataType: string
+		lineageTag: 0e975edb-3637-4043-a2cb-862c38e29d9e
+		summarizeBy: none
+		sourceColumn: WebUrl
+
+		annotation SummarizationSetBy = Automatic
+
+	column KontoSK
+		dataType: int64
+		formatString: 0
+		lineageTag: a9636c5a-694c-4313-bc0d-92d24f15143d
+		summarizeBy: none
+		sourceColumn: KontoSK
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Huvudbok-1cf8859e-e98f-4b75-81ca-98e4e5677563 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_viewDimPersoner = MKBBIDW{[Schema="dbo",Item="ViewFactHuvudbok"]}[Data],
+				    #"Merged Queries" = Table.NestedJoin(dbo_viewDimPersoner, {"KontoSK"}, Konto, {"KontoSK"}, "Konto", JoinKind.LeftOuter),
+				    #"Expanded Konto" = Table.ExpandTableColumn(#"Merged Queries", "Konto", {"Konto"}, {"Konto.1"}),
+				    #"Filtered Rows" = Table.SelectRows(#"Expanded Konto", each Text.StartsWith([Konto.1], "7")),
+				    #"Renamed Columns" = Table.RenameColumns(#"Filtered Rows",{{"Konto.1", "Konto"}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns",{"TimeSK", "KontoSK", "KostnadsställeSK", "FöretagSK", "SlagSK", "MotpartSK", "SegmentSK", "ProjektSK", "MomsKodSK", "MomssystemSK", "VertypSK", "LeverantörSK", "UppföljningSK", "AktivitetSK", "FunktionSK", "KundSK", "Vernr", "SekvensNr", "KoddelLG", "Bokföringsdatum", "Transaktionsdatum", "Utfall", "BeloppT0", "BeloppT1", "BeloppT2", "BeloppProjOrig", "BeloppProjLop", "Version", "VerText", "Created", "WebUrl", "Konto"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Removed Other Columns",{"Konto"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

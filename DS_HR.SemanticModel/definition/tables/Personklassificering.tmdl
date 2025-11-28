@@ -1,0 +1,29 @@
+table Personklassificering
+	lineageTag: 9995eff1-6d5f-4511-be93-5e635cece079
+
+	column Klassificering
+		dataType: string
+		lineageTag: 13416d12-a9e8-4a46-a4b9-e21d59a8beb5
+		summarizeBy: none
+		sourceColumn: Klassificering
+
+		annotation SummarizationSetBy = Automatic
+
+	column PersonKlassificeringsId
+		dataType: int64
+		formatString: 0
+		lineageTag: d21d9202-3f13-4cf2-a1df-dcd195e9404f
+		summarizeBy: none
+		sourceColumn: PersonKlassificeringsId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Personklassificering = m
+		mode: import
+		source =
+				let
+				    Källa = Sql.Database("mkbdw1.mkb.se", "MKBBIDW"),
+				    dim_PersonKlassificeringFeriejobb = Källa{[Schema="dim",Item="PersonKlassificeringFeriejobb"]}[Data]
+				in
+				    dim_PersonKlassificeringFeriejobb
+

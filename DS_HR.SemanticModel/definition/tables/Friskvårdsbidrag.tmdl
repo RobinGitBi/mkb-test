@@ -1,0 +1,46 @@
+table Friskvårdsbidrag
+	lineageTag: 2302d751-8317-4b20-8b5d-8aa107209f5e
+
+	column Datum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f65eafab-48a0-4aa8-ac7e-041fe0df9e40
+		summarizeBy: none
+		sourceColumn: Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Uttaget friskvårdbidrag'
+		dataType: decimal
+		formatString: #,0.###############\ "kr";-#,0.###############\ "kr";#,0.###############\ "kr"
+		lineageTag: 318a6e8d-976f-4880-9bf8-1af4d5dcd5c4
+		summarizeBy: sum
+		sourceColumn: Uttaget friskvårdbidrag
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"sv-SE"}
+
+	column 'Antal aktiva användare'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d5a5327-2ec4-450e-933b-22095bb29666
+		summarizeBy: sum
+		sourceColumn: Antal aktiva användare
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Friskvårdsbidrag-0e84c470-a369-4e64-ab26-e2aacc448480 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactHälsobokslutetFriskvårdsbidrag = MKBBIDW{[Schema="dbo",Item="ViewFactHälsobokslutetFriskvårdsbidrag"]}[Data]
+				in
+				    dbo_ViewFactHälsobokslutetFriskvårdsbidrag
+
+	annotation PBI_ResultType = Table
+

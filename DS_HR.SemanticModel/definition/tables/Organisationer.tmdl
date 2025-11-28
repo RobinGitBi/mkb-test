@@ -1,0 +1,29 @@
+table Organisationer
+	lineageTag: 08c61449-a8a1-4271-9878-a6e06326cf2b
+
+	column Organisationsnamn
+		dataType: string
+		lineageTag: b21c03fe-07cf-4202-8238-907b7093960e
+		summarizeBy: none
+		sourceColumn: Organisationsnamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganisationId
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a1e3a3b-6a15-45b2-94ee-ecc48dac654b
+		summarizeBy: none
+		sourceColumn: OrganisationId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Organisationer = m
+		mode: import
+		source =
+				let
+				    Källa = Sql.Database("mkbdw1.mkb.se", "MKBBIDW"),
+				    dim_OrganisationFeriejobb = Källa{[Schema="dim",Item="OrganisationFeriejobb"]}[Data]
+				in
+				    dim_OrganisationFeriejobb
+

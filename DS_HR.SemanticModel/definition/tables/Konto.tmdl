@@ -1,0 +1,810 @@
+table Konto
+	lineageTag: 31bb211c-060a-4be1-8714-d95f18500702
+
+	column KontoSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 8dc0e45a-d3a7-4da1-a302-cc42a9134ac4
+		summarizeBy: none
+		sourceColumn: KontoSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kontotyp
+		dataType: string
+		lineageTag: b0c96884-eeff-41b3-a16f-b99daae50f92
+		summarizeBy: none
+		sourceColumn: Kontotyp
+
+		annotation SummarizationSetBy = Automatic
+
+	column KontoNr
+		dataType: int64
+		formatString: 0
+		lineageTag: 0fd76528-8f29-4ee0-8dd4-7883f89fc8a7
+		summarizeBy: none
+		sourceColumn: KontoNr
+
+		annotation SummarizationSetBy = Automatic
+
+	column KontoNamn
+		dataType: string
+		lineageTag: 4d75870a-cb2f-4597-a2ae-93c4ab8abbf6
+		summarizeBy: none
+		sourceColumn: KontoNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto
+		dataType: string
+		lineageTag: 9c2ed239-72d2-4042-af53-da0bdd4291ee
+		summarizeBy: none
+		sourceColumn: Konto
+		sortByColumn: KontoNr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto2Nr
+		dataType: string
+		lineageTag: 7dc81f2c-002e-4d9e-acf6-6b6bad659a33
+		summarizeBy: none
+		sourceColumn: Konto2Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto2Namn
+		dataType: string
+		lineageTag: 5e9af706-34e1-448c-8e44-fbec3e84e5eb
+		summarizeBy: none
+		sourceColumn: Konto2Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Konto2
+		dataType: string
+		lineageTag: b7264079-14d3-4c3e-a2c6-add93210b6ae
+		summarizeBy: none
+		sourceColumn: Konto2
+
+		annotation SummarizationSetBy = Automatic
+
+	column AltKonto2Nr
+		dataType: string
+		lineageTag: 88848dde-5a84-44fa-be78-ba1cf35e0557
+		summarizeBy: none
+		sourceColumn: AltKonto2Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column AltKonto2Namn
+		dataType: string
+		lineageTag: b09c018e-49ff-4ae9-86b3-ebcf9f027689
+		summarizeBy: none
+		sourceColumn: AltKonto2Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column AltKonto2
+		dataType: string
+		lineageTag: f073f1dc-e86f-4049-8497-9b52df2fe984
+		summarizeBy: none
+		sourceColumn: AltKonto2
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv1Nr
+		dataType: string
+		lineageTag: 4e470e3d-cefc-4b43-8f24-7e94cbc4f1a6
+		summarizeBy: none
+		sourceColumn: RrNiv1Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv1Namn
+		dataType: string
+		lineageTag: 8c0cc566-dee2-4198-9d8c-b60e8dea2150
+		summarizeBy: none
+		sourceColumn: RrNiv1Namn
+		sortByColumn: RrNiv1Nr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv2Nr
+		dataType: string
+		lineageTag: aec5283e-952a-4eb3-8e6d-8eec2031a380
+		summarizeBy: none
+		sourceColumn: RrNiv2Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv2Namn
+		dataType: string
+		lineageTag: 13541968-8a9e-49a3-a27d-c499acbcba35
+		summarizeBy: none
+		sourceColumn: RrNiv2Namn
+		sortByColumn: RrNiv2Nr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv3Nr
+		dataType: string
+		lineageTag: 59856430-5162-49a8-8870-9044329976b5
+		summarizeBy: none
+		sourceColumn: RrNiv3Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv3Namn
+		dataType: string
+		lineageTag: d823268a-e0cc-44eb-abce-67811a1289da
+		summarizeBy: none
+		sourceColumn: RrNiv3Namn
+		sortByColumn: RrNiv3Nr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv4Nr
+		dataType: string
+		lineageTag: 18d560cb-069f-402c-b5d2-344cd457c71f
+		summarizeBy: none
+		sourceColumn: RrNiv4Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv4Namn
+		dataType: string
+		lineageTag: 24a87acb-e941-4f7a-a052-68664d82e826
+		summarizeBy: none
+		sourceColumn: RrNiv4Namn
+		sortByColumn: RrNiv4Nr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv5Nr
+		dataType: string
+		lineageTag: cec883b5-5f03-40e0-b82a-d043ae4fb662
+		summarizeBy: none
+		sourceColumn: RrNiv5Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv5Namn
+		dataType: string
+		lineageTag: 34bc37b0-196a-48a2-a1b2-1a79d9163aa1
+		summarizeBy: none
+		sourceColumn: RrNiv5Namn
+		sortByColumn: RrNiv5Nr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv6Nr
+		dataType: string
+		lineageTag: a709815c-3fc8-4436-8b8b-7ce6e2c30703
+		summarizeBy: none
+		sourceColumn: RrNiv6Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv6Namn
+		dataType: string
+		lineageTag: d0150fd0-6e75-40a2-bd9f-23473a194011
+		summarizeBy: none
+		sourceColumn: RrNiv6Namn
+		sortByColumn: RrNiv7Nr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv7Nr
+		dataType: string
+		lineageTag: 09fac2ab-bee9-4749-b3c2-414af9959838
+		summarizeBy: none
+		sourceColumn: RrNiv7Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv7Namn
+		dataType: string
+		lineageTag: 9fafad4b-d773-4586-aa22-d92a818b7dbd
+		summarizeBy: none
+		sourceColumn: RrNiv7Namn
+		sortByColumn: RrNiv7Nr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv8Nr
+		dataType: string
+		lineageTag: 4efdf581-58a3-49bc-8967-cde0c7f4d7ff
+		summarizeBy: none
+		sourceColumn: RrNiv8Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrNiv8Namn
+		dataType: string
+		lineageTag: 480ab8e5-8b4b-4b9b-b5cf-76dc59d2d30c
+		summarizeBy: none
+		sourceColumn: RrNiv8Namn
+		sortByColumn: RrNiv8Nr
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column PNLGroup
+		dataType: string
+		lineageTag: 334059bd-754a-4c92-8703-8fcc475389db
+		summarizeBy: none
+		sourceColumn: PNLGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brc1Nr
+		dataType: string
+		lineageTag: 83656cb2-7173-4c5b-a388-73f4e247c005
+		summarizeBy: none
+		sourceColumn: Brc1Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brc1Namn
+		dataType: string
+		lineageTag: 2279f0e4-2ed0-491f-a9ad-44a45738eec9
+		summarizeBy: none
+		sourceColumn: Brc1Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brc2Nr
+		dataType: string
+		lineageTag: 8422b4eb-ec37-4296-aba4-095b20040222
+		summarizeBy: none
+		sourceColumn: Brc2Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brc2Namn
+		dataType: string
+		lineageTag: b6bdcb07-9acb-42c8-8f89-df01c8c1825c
+		summarizeBy: none
+		sourceColumn: Brc2Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brc3Nr
+		dataType: string
+		lineageTag: d8ba60b6-f809-4892-b087-891de5d1e58d
+		summarizeBy: none
+		sourceColumn: Brc3Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brc3Namn
+		dataType: string
+		lineageTag: a5fa5942-5d2e-4a86-ab64-8aa000271a16
+		summarizeBy: none
+		sourceColumn: Brc3Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brc4Nr
+		dataType: string
+		lineageTag: 2c3910e8-50b5-4dc4-80ae-782cfc92a13a
+		summarizeBy: none
+		sourceColumn: Brc4Nr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brc4Namn
+		dataType: string
+		lineageTag: 9762d240-4435-4838-b228-876f4b703f9b
+		summarizeBy: none
+		sourceColumn: Brc4Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasNorr
+		dataType: int64
+		formatString: 0
+		lineageTag: c617d6cf-62e2-4fb3-9490-bd3b9956cbe0
+		summarizeBy: none
+		sourceColumn: BasNorr
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasVäst
+		dataType: int64
+		formatString: 0
+		lineageTag: f406caa9-d72f-4aef-8a20-43c5cf79642e
+		summarizeBy: none
+		sourceColumn: BasVäst
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasÖst
+		dataType: int64
+		formatString: 0
+		lineageTag: e6f75220-01f6-433a-9138-ca075f592ab0
+		summarizeBy: none
+		sourceColumn: BasÖst
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasLokal
+		dataType: int64
+		formatString: 0
+		lineageTag: 51745bae-80a2-4ae7-9ea5-1433f8c3fed8
+		summarizeBy: none
+		sourceColumn: BasLokal
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasStudent
+		dataType: int64
+		formatString: 0
+		lineageTag: 6cd37112-8158-402a-8778-07f28d62c2fa
+		summarizeBy: none
+		sourceColumn: BasStudent
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bas2998
+		dataType: int64
+		formatString: 0
+		lineageTag: 832aebeb-b20b-491e-9995-6712cb08cc70
+		summarizeBy: none
+		sourceColumn: Bas2998
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasFörvaltn
+		dataType: int64
+		formatString: 0
+		lineageTag: e0066ec9-7719-448c-b0c0-97797f9b0a56
+		summarizeBy: none
+		sourceColumn: BasFörvaltn
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasFörvaltnExt
+		dataType: int64
+		formatString: 0
+		lineageTag: a92ba5c6-8a32-4a8d-944a-72b1b9778ed6
+		summarizeBy: none
+		sourceColumn: BasFörvaltnExt
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasAUNy
+		dataType: int64
+		formatString: 0
+		lineageTag: 005b4d5b-7dce-48f0-a8f4-0b30e8354ecd
+		summarizeBy: none
+		sourceColumn: BasAUNy
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasDrift
+		dataType: int64
+		formatString: 0
+		lineageTag: 906d289d-f459-47cb-9ea8-7cd840e4cfb9
+		summarizeBy: none
+		sourceColumn: BasDrift
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasLth
+		dataType: int64
+		formatString: 0
+		lineageTag: 41e32fec-41c6-47c0-b3d4-11a5c80cdc9a
+		summarizeBy: none
+		sourceColumn: BasLth
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasAdm
+		dataType: int64
+		formatString: 0
+		lineageTag: 778fdcf6-2ab2-4ddd-b492-b218613fe1a4
+		summarizeBy: none
+		sourceColumn: BasAdm
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev1Id
+		dataType: int64
+		formatString: 0
+		lineageTag: afb3d408-9721-4e79-8776-f13a1c47b38b
+		summarizeBy: none
+		sourceColumn: RRLev1Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev1Namn
+		dataType: string
+		lineageTag: 91c0c318-74ad-4175-90aa-8c4b38dfdcac
+		summarizeBy: none
+		sourceColumn: RRLev1Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev1Attr
+		dataType: string
+		lineageTag: 6a84ae68-4f11-46c9-abe8-ab19a99e3994
+		summarizeBy: none
+		sourceColumn: RRLev1Attr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev2Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2eeb47ca-01e6-46f1-b5c9-9a103da1784a
+		summarizeBy: none
+		sourceColumn: RRLev2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev2Namn
+		dataType: string
+		lineageTag: 83a9b23d-a512-4b53-b757-a8db68c64b07
+		summarizeBy: none
+		sourceColumn: RRLev2Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev2Attr
+		dataType: string
+		lineageTag: 56b55856-55e0-44d7-a66f-95fd47ffc661
+		summarizeBy: none
+		sourceColumn: RRLev2Attr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev3Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f113cfd-6343-4175-9703-b732c136c1ec
+		summarizeBy: none
+		sourceColumn: RRLev3Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev3Namn
+		dataType: string
+		lineageTag: d3ecfbe5-b477-42ce-955c-a752efee40eb
+		summarizeBy: none
+		sourceColumn: RRLev3Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev3Attr
+		dataType: string
+		lineageTag: 3e4f587d-2ed8-4b4b-ae78-75f345902015
+		summarizeBy: none
+		sourceColumn: RRLev3Attr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev4Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 44dee1fe-93c1-411b-9cf6-45a80fef0cdc
+		summarizeBy: none
+		sourceColumn: RRLev4Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev4Namn
+		dataType: string
+		lineageTag: 2b411023-b110-4720-9a61-6b5c6632d459
+		summarizeBy: none
+		sourceColumn: RRLev4Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev4Attr
+		dataType: string
+		lineageTag: 1864e089-6c5d-4348-855e-1394048aa30f
+		summarizeBy: none
+		sourceColumn: RRLev4Attr
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev5Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6826ea1d-535e-4f54-8cf8-187d423cb86e
+		summarizeBy: none
+		sourceColumn: RRLev5Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev5Namn
+		dataType: string
+		lineageTag: 9fce4709-492f-41b6-95df-c543631cb74e
+		summarizeBy: none
+		sourceColumn: RRLev5Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RRLev5Attr
+		dataType: string
+		lineageTag: d4de0b60-e63a-47c9-97a8-7fcae563417a
+		summarizeBy: none
+		sourceColumn: RRLev5Attr
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rrkonto_301
+		dataType: string
+		lineageTag: d1ff49b9-be9d-4ac8-ae44-fd08c5b25378
+		summarizeBy: none
+		sourceColumn: Rrkonto_301
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rrkonto_301Namn
+		dataType: string
+		lineageTag: 8d303324-43a5-4e81-8c10-c39faebcfae9
+		summarizeBy: none
+		sourceColumn: Rrkonto_301Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rrkonto_302
+		dataType: string
+		lineageTag: 87e0bdbb-6ddc-432c-a652-d0167e4bdc08
+		summarizeBy: none
+		sourceColumn: Rrkonto_302
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rrkonto_302Namn
+		dataType: string
+		lineageTag: 2cafc6d1-9f51-49af-8abc-ff6e0eb3bf64
+		summarizeBy: none
+		sourceColumn: Rrkonto_302Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brkonto_301
+		dataType: string
+		lineageTag: 435e8bea-f525-4792-a722-d7b4e9619925
+		summarizeBy: none
+		sourceColumn: Brkonto_301
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brkonto_301Namn
+		dataType: string
+		lineageTag: 6ed812d3-39bb-45c6-810c-7bc304ac293c
+		summarizeBy: none
+		sourceColumn: Brkonto_301Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brkonto_302
+		dataType: string
+		lineageTag: 2efdc97d-ce76-4ae2-9714-55ae1b6e8115
+		summarizeBy: none
+		sourceColumn: Brkonto_302
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brkonto_302namn
+		dataType: string
+		lineageTag: bb144d5f-8a0c-417d-b0c5-e5b55c346105
+		summarizeBy: none
+		sourceColumn: Brkonto_302namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MalmöStad_Åtgärd301
+		dataType: int64
+		formatString: 0
+		lineageTag: 04d80f3b-4390-44da-b03d-ef91d89a1caa
+		summarizeBy: none
+		sourceColumn: MalmöStad_Åtgärd301
+
+		annotation SummarizationSetBy = Automatic
+
+	column MalmöStadshus_Åtgärd302
+		dataType: int64
+		formatString: 0
+		lineageTag: 38eaf7c7-b03e-43d8-851b-b6b78b533d4d
+		summarizeBy: none
+		sourceColumn: MalmöStadshus_Åtgärd302
+
+		annotation SummarizationSetBy = Automatic
+
+	column MalmöStad_Åtgärd301Namn
+		dataType: string
+		lineageTag: 149b5092-00e1-4f0e-8511-31f9218a7163
+		summarizeBy: none
+		sourceColumn: MalmöStad_Åtgärd301Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MalmöStadshus_Åtgärd302Namn
+		dataType: string
+		lineageTag: c6663887-fe99-48b0-a5ce-f2ee6bde672d
+		summarizeBy: none
+		sourceColumn: MalmöStadshus_Åtgärd302Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrCapego1
+		dataType: int64
+		formatString: 0
+		lineageTag: 9b5b16e1-5e73-4c0b-9996-15656ce83818
+		summarizeBy: none
+		sourceColumn: RrCapego1
+
+		annotation SummarizationSetBy = Automatic
+
+	column RrCapego1Namn
+		dataType: string
+		lineageTag: 7d4d58cb-9f00-47e4-bf00-316d5eacb882
+		summarizeBy: none
+		sourceColumn: RrCapego1Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Br301_Lev1
+		dataType: string
+		lineageTag: e02cd21f-f7cc-437c-9d19-ffb7b3d470b1
+		summarizeBy: none
+		sourceColumn: Br301_Lev1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Br301_Lev1Namn
+		dataType: string
+		lineageTag: 814ef391-adf6-436a-9701-64408986773c
+		summarizeBy: none
+		sourceColumn: Br301_Lev1Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Br301_Lev2
+		dataType: string
+		lineageTag: 679e1555-2773-4ca8-b89b-15e538ac29ea
+		summarizeBy: none
+		sourceColumn: Br301_Lev2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Br301_Lev2Namn
+		dataType: string
+		lineageTag: 903e107b-5975-488e-8c87-6ba4c2470d8a
+		summarizeBy: none
+		sourceColumn: Br301_Lev2Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Br301_Lev3
+		dataType: string
+		lineageTag: 4fc92a24-8cea-4054-b7c0-816ca922a3bf
+		summarizeBy: none
+		sourceColumn: Br301_Lev3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Br301_Lev3Namn
+		dataType: string
+		lineageTag: 7910caf8-3fc6-46db-8eb5-b1abd0a21c47
+		summarizeBy: none
+		sourceColumn: Br301_Lev3Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Br301_Lev4
+		dataType: string
+		lineageTag: e4e087e9-6651-4c17-a9b3-0c5f6b016f75
+		summarizeBy: none
+		sourceColumn: Br301_Lev4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Br301_Lev4Namn
+		dataType: string
+		lineageTag: 581c1557-793f-4b29-931b-6eea467cbb65
+		summarizeBy: none
+		sourceColumn: Br301_Lev4Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rr301_Lev1
+		dataType: string
+		lineageTag: 0b5b98be-2e60-46b2-98ae-92dd8f7306d1
+		summarizeBy: none
+		sourceColumn: Rr301_Lev1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rr301_Lev1Namn
+		dataType: string
+		lineageTag: dccacc8f-6747-401d-baa8-427ab9b4bd0f
+		summarizeBy: none
+		sourceColumn: Rr301_Lev1Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rr301_Lev2
+		dataType: string
+		lineageTag: 8dbf7ff8-88ca-4722-8636-db94d77f1069
+		summarizeBy: none
+		sourceColumn: Rr301_Lev2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rr301_Lev2Namn
+		dataType: string
+		lineageTag: f4f2bfdb-668d-4cc7-92d4-aa900df705b8
+		summarizeBy: none
+		sourceColumn: Rr301_Lev2Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rr301_Lev3
+		dataType: string
+		lineageTag: 029e8a3d-d127-4317-bb53-dc3013ff549f
+		summarizeBy: none
+		sourceColumn: Rr301_Lev3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rr301_Lev3Namn
+		dataType: string
+		lineageTag: 73059863-6475-4076-86f8-11e565c7e8c0
+		summarizeBy: none
+		sourceColumn: Rr301_Lev3Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brc1NamnStyrelserapport
+		dataType: string
+		lineageTag: b9d7d8c6-72e6-449e-8155-fe9514ef12f1
+		summarizeBy: none
+		sourceColumn: Brc1NamnStyrelserapport
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadstyp
+		dataType: string
+		lineageTag: dc8b11e5-ae59-49d1-ad17-c4d4350e40a1
+		summarizeBy: none
+		sourceColumn: Kostnadstyp
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Konto-d4a6b32e-5310-4943-bc8b-3ef7527e39f2 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_viewDimPersoner = MKBBIDW{[Schema="dbo",Item="ViewDimKonto"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_viewDimPersoner,{{"KontoNr", Int64.Type}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each [KontoNr] >= 7000 and [KontoNr] <= 7999)
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+

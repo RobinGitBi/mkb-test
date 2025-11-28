@@ -1,0 +1,57 @@
+table Frågor
+	lineageTag: a7bc116d-5e3c-476f-a69f-7a6abd392926
+
+	column Frågeid
+		dataType: string
+		lineageTag: 0c57ab0a-d259-4ac4-9e86-a777cd3e1522
+		summarizeBy: none
+		sourceColumn: Frågeid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Text
+		dataType: string
+		lineageTag: 464843da-3215-4605-8fa1-444813372225
+		summarizeBy: none
+		sourceColumn: Text
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordning
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f075a19-db31-4a3d-9e38-630738929a0e
+		summarizeBy: none
+		sourceColumn: Ordning
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fråga och ordning'
+		dataType: string
+		lineageTag: 9b0f0452-11cc-476f-a467-dd20ce48b3fe
+		summarizeBy: none
+		sourceColumn: Fråga och ordning
+		sortByColumn: Ordning
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kategoriid
+		dataType: string
+		lineageTag: 1de0e882-0817-4df8-9654-6e9777e0351e
+		summarizeBy: none
+		sourceColumn: Kategoriid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Frågor-9a17347d-d6a0-41c0-a8a5-dc0792d7135f = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimWinningTempFrågor = MKBBIDW{[Schema="dbo",Item="ViewDimWinningTempFrågor"]}[Data]
+				in
+				    dbo_ViewDimWinningTempFrågor
+

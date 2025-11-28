@@ -1,0 +1,36 @@
+table Anställningsform
+	lineageTag: 1ab8db62-4204-42b0-bd9a-a219b942cdd1
+
+	column Id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6549b4e8-4ebe-43bc-a4ff-59e94e0d5058
+		summarizeBy: none
+		sourceColumn: Id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsform
+		dataType: string
+		lineageTag: 849eaa04-b121-49d2-940f-a1d540eb4df6
+		summarizeBy: none
+		sourceColumn: Anställningsform
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Anställningsform-905a1ae4-72b7-4861-b240-0c9a9f69519a = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimAnställningsform = MKBBIDW{[Schema="dbo",Item="ViewDimAnställningsform"]}[Data],
+				    #"Add timanställda" = Table.InsertRows(dbo_ViewDimAnställningsform, 0, {[Id=-99, Anställningsform="Timanställning"]})
+				in
+				     #"Add timanställda"
+
+	annotation PBI_ResultType = Table
+

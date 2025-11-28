@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/reportExtension/1.0.0/schema.json",
+  "name": "extension",
+  "entities": [
+    {
+      "name": "Mått",
+      "measures": [
+        {
+          "name": "Medellön förändring män",
+          "dataType": "Double",
+          "expression": "\nVAR _salary_prev_year = CALCULATE(\n    [Medellön män],\n    SAMEPERIODLASTYEAR( Kalender[Datum] )\n)\n\nRETURN DIVIDE( [Medellön män] - _salary_prev_year, _salary_prev_year, BLANK() )",
+          "formatString": "#,0.00\\ %;-#,0.00\\ %;#,0.00\\ %",
+          "displayFolder": "Personalkostnader",
+          "references": {
+            "measures": [
+              {
+                "entity": "Mått",
+                "name": "Medellön män"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Medellön förändring kvinnor",
+          "dataType": "Double",
+          "expression": "\r\nVAR _salary_prev_year = CALCULATE(\r\n    [Medellön kvinnor],\r\n    SAMEPERIODLASTYEAR( Kalender[Datum] )\r\n)\r\n\r\nRETURN DIVIDE( [Medellön kvinnor] - _salary_prev_year, _salary_prev_year, BLANK() )",
+          "formatString": "0.00\\ %;-0.00\\ %;0.00\\ %",
+          "displayFolder": "Personalkostnader",
+          "references": {
+            "measures": [
+              {
+                "entity": "Mått",
+                "name": "Medellön kvinnor"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Medellön förändring totalt",
+          "dataType": "Double",
+          "expression": "\r\nVAR _salary_prev_year = CALCULATE(\r\n    [Medellön totalt],\r\n    SAMEPERIODLASTYEAR( Kalender[Datum] )\r\n)\r\n\r\nRETURN DIVIDE( [Medellön totalt] - _salary_prev_year, _salary_prev_year, BLANK() )",
+          "formatString": "0.00\\ %;-0.00\\ %;0.00\\ %",
+          "displayFolder": "Personalkostnader",
+          "references": {
+            "measures": [
+              {
+                "entity": "Mått",
+                "name": "Medellön totalt"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+table PNLStructure
+	lineageTag: 5daa1502-9ef1-41a2-8a95-7c0a7de07bf5
+
+	column RowIndex
+		dataType: int64
+		formatString: 0
+		lineageTag: b614c8f0-2833-407e-998f-3e8065231c5d
+		summarizeBy: sum
+		sourceColumn: RowIndex
+
+		annotation SummarizationSetBy = Automatic
+
+	column PNLDescr
+		dataType: string
+		lineageTag: 904a8ba0-f094-4e32-9d1b-e3f960984472
+		summarizeBy: none
+		sourceColumn: PNLDescr
+		sortByColumn: RowIndex
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsSubtotal
+		dataType: int64
+		formatString: 0
+		lineageTag: cf203650-9b85-4b9c-a772-7c543dccac98
+		summarizeBy: sum
+		sourceColumn: IsSubtotal
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PNLStructure-cb0b07e7-656f-446d-99dd-d5a7cdab0776 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_viewDimPersoner = MKBBIDW{[Schema="lookup",Item="PNLStructure"]}[Data]
+				in
+				    dbo_viewDimPersoner
+
+	annotation PBI_ResultType = Table
+

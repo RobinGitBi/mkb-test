@@ -1,0 +1,244 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "6be34a82e58cd7965627",
+  "position": {
+    "x": 207.28196443691786,
+    "y": 512.870448772227,
+    "z": 4000,
+    "height": 387.12955122777311,
+    "width": 1071.4648602878917,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Anställningsnummer"
+                }
+              },
+              "queryRef": "Personer.Anställningsnummer",
+              "nativeQueryRef": "Anställningsnummer"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Namn"
+                }
+              },
+              "queryRef": "Personer.Namn",
+              "nativeQueryRef": "Namn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Kön"
+                }
+              },
+              "queryRef": "Personer.Kön",
+              "nativeQueryRef": "Kön"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Frånvaro"
+                    }
+                  },
+                  "Property": "Fomdatum"
+                }
+              },
+              "queryRef": "Frånvaro.Fomdatum",
+              "nativeQueryRef": "Fomdatum"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Frånvaro"
+                    }
+                  },
+                  "Property": "Tomdatum"
+                }
+              },
+              "queryRef": "Frånvaro.Tomdatum",
+              "nativeQueryRef": "Tomdatum"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Antal sjukdagar i period"
+                }
+              },
+              "queryRef": "Mått.Antal sjukdagar i period",
+              "nativeQueryRef": "Antal sjukdagar i period"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Antal anställningsdagar i vald period"
+                }
+              },
+              "queryRef": "Mått.Antal anställningsdagar i vald period",
+              "nativeQueryRef": "Antal anställningsdagar i vald period"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Frånvaro"
+                    }
+                  },
+                  "Property": "Arbetsdagar"
+                }
+              },
+              "queryRef": "Frånvaro.Arbetsdagar",
+              "nativeQueryRef": "Arbetsdagar sjuktillfälle",
+              "displayName": "Arbetsdagar sjuktillfälle"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Frånvaro"
+                    }
+                  },
+                  "Property": "Kalenderdagar"
+                }
+              },
+              "queryRef": "Frånvaro.Kalenderdagar",
+              "nativeQueryRef": "Kalenderdagar sjuktillfälle",
+              "displayName": "Kalenderdagar sjuktillfälle"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Personer"
+                  }
+                },
+                "Property": "Namn"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Frånvarorader'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter1468ae6b57287016d09d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Antal sjuka i period"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Mått",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "Antal sjuka i period"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
+}

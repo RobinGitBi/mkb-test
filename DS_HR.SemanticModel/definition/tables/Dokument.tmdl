@@ -1,0 +1,31 @@
+table Dokument
+	lineageTag: 32e50535-caa2-42d6-97cd-4d2fa3bc6d99
+
+	column Dokument
+		dataType: string
+		lineageTag: f797c99b-14b2-43a7-8205-6a139414c988
+		summarizeBy: none
+		sourceColumn: Dokument
+
+		annotation SummarizationSetBy = Automatic
+
+	column URL
+		dataType: string
+		lineageTag: f9576580-c7c5-48ab-bc85-6b4d55592a90
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: URL
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dokument-3e328a1c-d706-45f8-8452-23273d42ca54 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("7ZBNTsMwEIWvUkXqrq2dn4a0UoVakIAFBSHEplSVE48TN4lt2ZOmHIiTcDEcFdZcgM3Mp5k3ek+z2wXbp9eQjiwzRlsEy3CEksuSWRh9fdpgElSIxi0JaetcMIeyrABnrvICo6XCWaFbsjwviSVOIjiCwNqpmRrdg80luYWGcRhHlOu6a0EhuQPlfRpCMz9d2xzQtcxbSz/zamP1EWocdicOjZLKhyH3L14fH7Yf7PCTdXwTjzepcjW0A67nDdlqDOmlTvx9pzjYhpUexUVtPT4PwXzfPMzOjTtf81UfR3k+Z1GaholIiizJFpFYiKtFVHBRJDR+7yiN0sKJVXjBHvJfhFV4PP3/6O8f2bfHYL//Bg==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Dokument = _t, URL = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Dokument", type text}, {"URL", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

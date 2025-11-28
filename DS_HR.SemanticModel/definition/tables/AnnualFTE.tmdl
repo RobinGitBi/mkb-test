@@ -1,0 +1,53 @@
+table AnnualFTE
+	lineageTag: 53c153d9-c6c0-491d-8352-25f54658ed76
+
+	column År
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0d74a694-5da7-41cf-87c9-5416db493642
+		summarizeBy: none
+		sourceColumn: År
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ANST_NR
+		dataType: string
+		lineageTag: ce095ff3-a14a-47d6-915d-705e1808bd69
+		summarizeBy: none
+		sourceColumn: ANST_NR
+
+		annotation SummarizationSetBy = Automatic
+
+	column FTE
+		dataType: double
+		lineageTag: 4fbd9965-0499-4a8e-98f9-a67a4d23924c
+		summarizeBy: sum
+		sourceColumn: FTE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AnställningsformId
+		dataType: int64
+		formatString: 0
+		lineageTag: 23fc413c-916b-4a91-92d1-84efd944fcd4
+		summarizeBy: none
+		sourceColumn: AnställningsformId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AnnualFTE-f74dad8c-ede0-4d10-8e2b-cd81d8777030 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    fact_AnnualFTE = MKBBIDW{[Schema="fact",Item="AnnualFTE"]}[Data]
+				in
+				    fact_AnnualFTE
+
+	annotation PBI_ResultType = Table
+

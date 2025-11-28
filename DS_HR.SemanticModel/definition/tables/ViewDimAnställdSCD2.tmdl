@@ -1,0 +1,160 @@
+table ViewDimAnställdSCD2
+	lineageTag: e075a025-1509-4268-95a4-bcb375620083
+
+	column 'Anställd SK'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fb3697d-b3f3-48ad-a240-d50a44f87256
+		summarizeBy: none
+		sourceColumn: Anställd SK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsnummer
+		dataType: int64
+		formatString: 0
+		lineageTag: ec50c12d-d988-4ae0-8335-d09c2819ed58
+		summarizeBy: none
+		sourceColumn: Anställningsnummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: int64
+		formatString: 0
+		lineageTag: 013b7201-7a7f-47d0-9e5d-01cde709b4b9
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsform
+		dataType: string
+		lineageTag: 5fb54519-f0fa-4c02-88da-22648c340b7b
+		summarizeBy: none
+		sourceColumn: Anställningsform
+
+		annotation SummarizationSetBy = Automatic
+
+	column Namn
+		dataType: string
+		lineageTag: 55b98417-7c20-49c2-bda9-8a5b76093c27
+		summarizeBy: none
+		sourceColumn: Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tillträde SCD2 datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 96aa9479-b232-42a5-859e-47e5fea4ce7e
+		summarizeBy: none
+		sourceColumn: Tillträde SCD2 datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Tillträde SCD2 tom datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 19ac3089-67c7-4eed-a53c-3f08df31cac6
+		summarizeBy: none
+		sourceColumn: Tillträde SCD2 tom datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Tillträde SCD2 Justerad Datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6d3d8e73-a198-4ea5-a9f4-332c8c878b6e
+		summarizeBy: none
+		sourceColumn: Tillträde SCD2 Justerad Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Tillträde SCD2 Justerad t.o.m. Datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ef90060d-731d-4653-8dc2-a6e6930170cc
+		summarizeBy: none
+		sourceColumn: Tillträde SCD2 Justerad t.o.m. Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Befattning
+		dataType: string
+		lineageTag: 12f47388-d607-4f34-8886-d60e865d8839
+		summarizeBy: none
+		sourceColumn: Befattning
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kön
+		dataType: string
+		lineageTag: 89f705ab-d40c-43ee-a29d-310cbf54f08b
+		summarizeBy: none
+		sourceColumn: Kön
+
+		annotation SummarizationSetBy = Automatic
+
+	column Födelsedatum
+		dataType: string
+		lineageTag: a9a66fee-a4fb-4933-a60c-d689e6ecea28
+		summarizeBy: none
+		sourceColumn: Födelsedatum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsdatum
+		dataType: string
+		lineageTag: 08f20fcc-d666-4ca6-be79-a4b0566da321
+		summarizeBy: none
+		sourceColumn: Anställningsdatum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avgångsdatum
+		dataType: string
+		lineageTag: f8745a97-3015-4cf5-a4ff-0cba80a836d3
+		summarizeBy: none
+		sourceColumn: Avgångsdatum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Avgångsorsak
+		dataType: string
+		lineageTag: 00950663-af17-444e-aed8-39d6c172e4a9
+		summarizeBy: none
+		sourceColumn: Avgångsorsak
+
+		annotation SummarizationSetBy = Automatic
+
+	column Slag
+		dataType: string
+		lineageTag: 79863a65-1788-41cb-b57b-3fa1da2ad597
+		summarizeBy: none
+		sourceColumn: Slag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ViewDimAnställdSCD2 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimAnställdSCD2 = MKBBIDW{[Schema="dbo",Item="ViewDimAnställdSCD2"]}[Data]
+				in
+				    dbo_ViewDimAnställdSCD2
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

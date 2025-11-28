@@ -1,0 +1,327 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1796.1566708073756,
+            "y": 832.79205255999329
+          },
+          "nodeIndex": "Mått",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1294.4439378289267,
+            "y": 585.41795451965436
+          },
+          "nodeIndex": "Anställningar",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 899.0176494344322,
+            "y": 1217.1599091163
+          },
+          "nodeIndex": "Kalender",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1003.922968326838,
+            "y": 1803.5841051199864
+          },
+          "nodeIndex": "Medellöner",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 801.7633384275166,
+            "y": 726.95700974463284
+          },
+          "nodeIndex": "Personer",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1173.3513943263022,
+            "y": 913.38032455364782
+          },
+          "nodeIndex": "Timanställningar",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 514.84256080169234,
+            "y": 744.01381346813173
+          },
+          "nodeIndex": "AnnualFTE",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 820.36875769085793,
+            "y": 377.07371796158645
+          },
+          "nodeIndex": "Anställningsform",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 518.50466652180512,
+            "y": 347.31469960221307
+          },
+          "nodeIndex": "Huvudbok",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 248.02257041843927,
+            "y": -10
+          },
+          "nodeIndex": "Konto",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2080.1566708073756,
+            "y": 906.79205255999329
+          },
+          "nodeIndex": "PNLStructure",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2364.1566708073756,
+            "y": 918.79205255999329
+          },
+          "nodeIndex": "Calculation Group beloppsvisning",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2648.1566708073756,
+            "y": 918.79205255999329
+          },
+          "nodeIndex": "Calculation Group resultaträkning",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2932.1566708073756,
+            "y": 918.79205255999329
+          },
+          "nodeIndex": "Calculation Group time intelligence",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3216.1566708073756,
+            "y": 918.79205255999329
+          },
+          "nodeIndex": "Dokument",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1522.1566708073756,
+            "y": 913.847194812405
+          },
+          "nodeIndex": "Frågor",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1097.5461357844135,
+            "y": 1572.8074975332293
+          },
+          "nodeIndex": "Friskvårdsbidrag",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 807.87955665398283,
+            "y": 1573.2012382618557
+          },
+          "nodeIndex": "Massage på jobbet",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1187.782709447607,
+            "y": 1168.0526466756482
+          },
+          "nodeIndex": "Tillbud och incidenter",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1461.0266959927258,
+            "y": 1395.875291621255
+          },
+          "nodeIndex": "Totala temperaturer per fråga",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 10,
+            "y": 1031.779973901499
+          },
+          "nodeIndex": "Anställningar_Hashed",
+          "nodeLineageTag": "17a7c98f-8274-4cd3-9d9f-e882c0cce55d",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 260.59316926376869,
+            "y": 1593.5108838197405
+          },
+          "nodeIndex": "FrånvaroHashed",
+          "nodeLineageTag": "a2988257-5396-42fd-b56e-924421d4e60c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 366.71243892412508,
+            "y": 1339.5372720878622
+          },
+          "nodeIndex": "Personer_Hashed",
+          "nodeLineageTag": "0b0519dd-2a9b-45fb-816e-92b48dff948f",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 612.99723421759256,
+            "y": 983.19219749833019
+          },
+          "nodeIndex": "Frånvaro",
+          "nodeLineageTag": "06b0881d-e652-4697-b461-76b33c21e0fc",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 228.67531238491893,
+            "y": 674.45694105204927
+          },
+          "nodeIndex": "ViewDimLoner",
+          "nodeLineageTag": "e17a5edb-da5d-433b-bcbf-7351e622f65d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

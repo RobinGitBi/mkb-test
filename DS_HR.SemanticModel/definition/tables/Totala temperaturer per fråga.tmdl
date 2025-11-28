@@ -1,0 +1,71 @@
+table 'Totala temperaturer per fråga'
+	lineageTag: 096e8a16-8dd1-4af5-97e1-35ef85ae9afa
+
+	column Period
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a0b8bd80-fa31-41ad-b2dd-c72c2e5abe08
+		summarizeBy: none
+		sourceColumn: Period
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Gruppid
+		dataType: string
+		lineageTag: 90aa6877-8b18-4876-a1e2-d81ce3650e79
+		summarizeBy: none
+		sourceColumn: Gruppid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Frågeid
+		dataType: string
+		lineageTag: ba51282a-d24f-4b5d-b7c0-dbbe635aaf59
+		summarizeBy: none
+		sourceColumn: Frågeid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Betyg
+		dataType: double
+		lineageTag: c0dcb93a-c5ee-4134-a0ce-7743702784ae
+		summarizeBy: sum
+		sourceColumn: Betyg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AntalUnikaAnvändare
+		dataType: int64
+		formatString: 0
+		lineageTag: 9f9f4763-0cc6-4bb5-82b1-d411dac8795c
+		summarizeBy: sum
+		sourceColumn: AntalUnikaAnvändare
+
+		annotation SummarizationSetBy = Automatic
+
+	column AntalTemperaturer
+		dataType: int64
+		formatString: 0
+		lineageTag: 28c27252-de74-4a84-9108-3c1b95754920
+		summarizeBy: sum
+		sourceColumn: AntalTemperaturer
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Totala temperaturer per fråga-c85404c4-3fee-4052-8093-938f5c07c492' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactWinningTempAggregeratPerFråga = MKBBIDW{[Schema="dbo",Item="ViewFactWinningTempAggregeratPerFråga"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_ViewFactWinningTempAggregeratPerFråga,{{"Period", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

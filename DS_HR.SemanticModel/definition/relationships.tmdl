@@ -1,0 +1,126 @@
+relationship 55076515-e3a0-4e36-96a6-ac7c744f7e99
+	fromColumn: Timanställningar.Period
+	toColumn: Kalender.Datum
+
+relationship b6c6f9a2-a6f7-4127-a032-abffa653acf8
+	fromColumn: Medellöner.År
+	toColumn: Kalender.Datum
+
+relationship 06d967f8-19e5-4718-8004-73e4f23ea159
+	fromColumn: Anställningar.Anställningsnummer
+	toColumn: Personer.Anställningsnummer
+
+relationship 2bb92bf3-ff0c-4116-9b66-a3cad4007e13
+	fromColumn: Timanställningar.Anställningsnummer
+	toColumn: Personer.Anställningsnummer
+
+relationship c3d8bcde-e370-4488-9129-19d1ad09b557
+	isActive: false
+	fromColumn: Personer.Födelsedatum
+	toColumn: Kalender.Datum
+
+relationship 873841e5-fa41-4fc0-abb8-87d9be2abe15
+	fromColumn: AnnualFTE.År
+	toColumn: Kalender.Datum
+
+relationship 797b4026-a880-4815-9d44-9f0c0bfc2552
+	fromColumn: AnnualFTE.ANST_NR
+	toColumn: Personer.Anställningsnummer
+
+relationship b76d2c11-12e2-4f56-80df-23c54a0f86dd
+	fromColumn: Anställningar.AnställningsformId
+	toColumn: Anställningsform.Id
+
+relationship ec1c824b-5078-4472-95fb-8307b285e322
+	fromColumn: AnnualFTE.AnställningsformId
+	toColumn: Anställningsform.Id
+
+relationship 0b10c67f-699c-4bf1-8c36-08c1b56f4770
+	fromColumn: Huvudbok.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship 36392e5c-8722-4f45-9470-91526e55e741
+	fromColumn: Huvudbok.KontoSK
+	toColumn: Konto.KontoSK
+
+relationship d6b38022-894d-4ce9-bdba-5853b3f993bd
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Kalender.Datum
+	toColumn: Friskvårdsbidrag.Datum
+
+relationship 59a8a487-ad63-45b7-85bf-7cea871ef415
+	fromColumn: 'Massage på jobbet'.Datum
+	toColumn: Kalender.Datum
+
+relationship da9e6b94-cf46-494a-b3b0-08c71c8bbf95
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Kalender.Datum
+	toColumn: 'Tillbud och incidenter'.Datum
+
+relationship 7ac6b443-eaea-4387-90bc-0badabd6fb42
+	fromColumn: 'Totala temperaturer per fråga'.Period
+	toColumn: Kalender.Datum
+
+relationship ca77877f-68f9-483c-acb6-7f817d4a1229
+	fromColumn: 'Totala temperaturer per fråga'.Frågeid
+	toColumn: Frågor.Frågeid
+
+relationship 6f442366-96ab-4f25-b287-e36b608f28ab
+	fromColumn: FrånvaroHashed.AnställningsnummerHashed
+	toColumn: Personer_Hashed.AnställningsnummerHashed
+
+relationship db80f0d0-ff51-457b-b5f0-40bdbef7635b
+	fromColumn: Anställningar_Hashed.AnställningsnummerHashed
+	toColumn: Personer_Hashed.AnställningsnummerHashed
+
+relationship 64518c5b-83c7-4153-b53b-a6491aac3e5a
+	fromColumn: Frånvaro.Anstnr
+	toColumn: Personer.Anställningsnummer
+
+relationship 6aae4782-158a-450c-a7be-e26225e687dc
+	fromColumn: Frånvaro.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship 19a29da1-4ba2-4b54-af3a-a7a8c01687e4
+	fromColumn: Timanställningar.AnställningsformID
+	toColumn: Anställningsform.Id
+
+relationship a4642f23-5fb1-ed48-f5c2-65d46b686e17
+	crossFilteringBehavior: bothDirections
+	fromColumn: Löner.ANST_NR
+	toColumn: Personer.Anställningsnummer
+
+relationship ae044b87-873a-78d9-182d-23b7ce68df3a
+	fromColumn: Feriejobb.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship 43e19af6-a8f1-d518-96a0-2254a9054f75
+	fromColumn: Feriejobb.OrganisationnamnId
+	toColumn: Organisationer.OrganisationId
+
+relationship 94df9233-c0ef-b061-88c8-93cbbeb4e67c
+	fromColumn: Feriejobb.OrganisationTypIdM
+	toColumn: Organisationstyper.OrganisationId
+
+relationship 25334963-f9be-ee89-a18c-168639fc3fd0
+	fromColumn: Feriejobb.JobbkanalId
+	toColumn: Jobbkanaler.JobbkanalId
+
+relationship de418c84-68bd-ce43-d58d-4a462d08d3bd
+	fromColumn: Feriejobb.PersonKlassificeringsId
+	toColumn: Personklassificering.PersonKlassificeringsId
+
+relationship 3d2d320d-2585-e5cc-e6ec-a5ec8c2a5f49
+	fromColumn: Feriejobb.KlassificeringsId
+	toColumn: JobbKlassificering.KlassificeringsId
+
+relationship e6e5d2b2-126c-8872-9298-e10eed2bd9ae
+	fromColumn: Vab.AnställdsSk
+	toColumn: ViewDimAnställdSCD2.'Anställd SK'
+
+relationship 6b45b3a9-5451-3370-9b5b-5bd1e6657395
+	fromColumn: Vab.TimeSK
+	toColumn: Kalender.TimeSK
+

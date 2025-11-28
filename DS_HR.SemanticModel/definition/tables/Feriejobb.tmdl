@@ -1,0 +1,110 @@
+table Feriejobb
+	lineageTag: 3d0a4dbf-0595-4705-8c48-e7f9ffcea7e1
+
+	column TimeSK
+		dataType: string
+		lineageTag: d74bab9f-c37e-43b6-9885-a5e0adeb51ad
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganisationnamnId
+		dataType: int64
+		formatString: 0
+		lineageTag: 20314962-5eb6-4e7b-ae16-ede10627ce11
+		summarizeBy: none
+		sourceColumn: OrganisationnamnId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrganisationTypIdM
+		dataType: int64
+		formatString: 0
+		lineageTag: d2152e18-2dc0-48aa-be0a-f4fb98dc43ba
+		summarizeBy: none
+		sourceColumn: OrganisationTypIdM
+
+		annotation SummarizationSetBy = Automatic
+
+	column JobbkanalId
+		dataType: int64
+		formatString: 0
+		lineageTag: 113f3022-d68b-4653-b0f9-cde52acfe41e
+		summarizeBy: none
+		sourceColumn: JobbkanalId
+
+		annotation SummarizationSetBy = Automatic
+
+	column KlassificeringsId
+		dataType: int64
+		formatString: 0
+		lineageTag: 3fb52602-5901-4a46-8c7f-fb5454171be2
+		summarizeBy: none
+		sourceColumn: KlassificeringsId
+
+		annotation SummarizationSetBy = Automatic
+
+	column PersonKlassificeringsId
+		dataType: int64
+		formatString: 0
+		lineageTag: 13059c33-6441-4d0e-9ede-4d3e476acb57
+		summarizeBy: none
+		sourceColumn: PersonKlassificeringsId
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotaltPåbörjatLäxhjälp
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f3fecb4-ecdb-497d-b9d5-e4fffe3a52d3
+		summarizeBy: sum
+		sourceColumn: TotaltPåbörjatLäxhjälp
+
+		annotation SummarizationSetBy = Automatic
+
+	column AntalFeriejobb
+		dataType: int64
+		formatString: 0
+		lineageTag: e97dec21-a037-4001-ac5f-41bd1dafffcb
+		summarizeBy: sum
+		sourceColumn: AntalFeriejobb
+
+		annotation SummarizationSetBy = Automatic
+
+	column AntalTackatNej
+		dataType: int64
+		formatString: 0
+		lineageTag: 926ef870-8c0d-40d3-9252-4a5647cad3b7
+		summarizeBy: sum
+		sourceColumn: AntalTackatNej
+
+		annotation SummarizationSetBy = Automatic
+
+	column AntalEjKlaratKrav
+		dataType: int64
+		formatString: 0
+		lineageTag: acd6c03b-07df-48f3-9056-3cf93edadbcd
+		summarizeBy: sum
+		sourceColumn: AntalEjKlaratKrav
+
+		annotation SummarizationSetBy = Automatic
+
+	column F11
+		dataType: int64
+		formatString: 0
+		lineageTag: 93dce384-633c-4fa3-aa5f-5410435ae07f
+		summarizeBy: sum
+		sourceColumn: F11
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Feriejobb = m
+		mode: import
+		source =
+				let
+				    Källa = Sql.Database("mkbdw1.mkb.se", "MKBBIDW"),
+				    fact_Feriejobb = Källa{[Schema="fact",Item="Feriejobb"]}[Data]
+				in
+				    fact_Feriejobb
+

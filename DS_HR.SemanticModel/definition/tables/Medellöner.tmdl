@@ -1,0 +1,44 @@
+table Medellöner
+	lineageTag: ee0a0e10-5bcb-4a60-b7a6-d40c668543d2
+
+	column Kön
+		dataType: string
+		lineageTag: fe968232-2bd4-412b-9836-9052dc799063
+		summarizeBy: none
+		sourceColumn: Kön
+
+		annotation SummarizationSetBy = Automatic
+
+	column Medellön
+		dataType: double
+		lineageTag: d039466c-89d5-4c2d-801c-cfc4098e8681
+		summarizeBy: sum
+		sourceColumn: Medellön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column År
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 50a4e299-c3ac-46fd-8099-f53eac7b766f
+		summarizeBy: none
+		sourceColumn: År
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Medellöner-6d034700-5b4f-474f-b62a-7ffee3ca8f2c = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactMedellöner = MKBBIDW{[Schema="dbo",Item="ViewFactMedellöner"]}[Data]
+				in
+				    dbo_ViewFactMedellöner
+
+	annotation PBI_ResultType = Table
+

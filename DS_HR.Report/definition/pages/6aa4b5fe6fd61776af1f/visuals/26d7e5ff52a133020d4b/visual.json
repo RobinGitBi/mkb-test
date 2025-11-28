@@ -1,0 +1,82 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "26d7e5ff52a133020d4b",
+  "position": {
+    "x": 462.06185567010306,
+    "y": 209.69072164948454,
+    "z": 3000,
+    "height": 300.61855670103091,
+    "width": 502.26804123711338
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Namn"
+                }
+              },
+              "queryRef": "Personer.Namn",
+              "nativeQueryRef": "Namn"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Antal anställningsdagar i vald period"
+                }
+              },
+              "queryRef": "Mått.Antal anställningsdagar i vald period",
+              "nativeQueryRef": "Antal anställningsdagar i vald period"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Anställningsnummer"
+                }
+              },
+              "queryRef": "Personer.Anställningsnummer",
+              "nativeQueryRef": "Anställningsnummer"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mått"
+                  }
+                },
+                "Property": "Antal anställningsdagar i vald period"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

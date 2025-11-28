@@ -1,0 +1,91 @@
+table Anställningar
+	lineageTag: 9274dfe0-bda3-439c-a47c-f2104a84e4b2
+
+	column Anställningsnummer
+		dataType: int64
+		formatString: 0
+		lineageTag: cb4e4a24-caa7-4871-88f4-a8e24304d769
+		summarizeBy: none
+		sourceColumn: Anställningsnummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column GiltigFrån
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: da85dd7d-380f-43e9-83c8-8efd77f90dc5
+		summarizeBy: none
+		sourceColumn: GiltigFrån
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column GiltigTill
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c7b4ca63-72f2-4612-9586-5e8459a514a1
+		summarizeBy: none
+		sourceColumn: GiltigTill
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Sysselsättningsgrad
+		dataType: double
+		lineageTag: 9747ed0e-b3ec-43ac-94dd-977a00f26726
+		summarizeBy: sum
+		sourceColumn: Sysselsättningsgrad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Veckoarbetstid
+		dataType: double
+		lineageTag: 2c9d8f7d-ac76-4edf-acfc-7912fcd01122
+		summarizeBy: sum
+		sourceColumn: Veckoarbetstid
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Avgångsorsak
+		dataType: string
+		lineageTag: 94263082-ab33-4543-8ada-a2d107b6a69b
+		summarizeBy: none
+		sourceColumn: Avgångsorsak
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnställningsformId
+		dataType: int64
+		formatString: 0
+		lineageTag: b4a05d3c-ac05-4e23-bfae-32a4ebce1307
+		summarizeBy: none
+		sourceColumn: AnställningsformId
+
+		annotation SummarizationSetBy = Automatic
+
+	column HeltidDeltid
+		dataType: string
+		lineageTag: b69422a5-ec2c-43e3-a679-c7229c5b5345
+		summarizeBy: none
+		sourceColumn: HeltidDeltid
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Anställningar-b1914189-56e2-4863-9264-c4eddb030458 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_viewFactAnställningar = MKBBIDW{[Schema="dbo",Item="viewFactAnställningar"]}[Data]
+				in
+				    dbo_viewFactAnställningar
+
+	annotation PBI_ResultType = Table
+

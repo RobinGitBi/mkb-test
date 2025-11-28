@@ -1,0 +1,677 @@
+table Mått
+	lineageTag: 010b2a2b-e1aa-4b4c-98e0-9201934236ed
+
+	measure 'Antal timavlönade' =
+			
+			distinctcount('Timanställningar'[Anställningsnummer])
+		formatString: 0
+		displayFolder: Anställda
+		lineageTag: b2580ee5-e671-4410-a822-bdb6bd735a8a
+
+	measure 'Antal medarbetare' =
+			
+			DISTINCTCOUNT( 'Anställningar'[Anställningsnummer] )
+		formatString: 0
+		displayFolder: Anställda
+		lineageTag: b3bacf9a-4fe9-4476-bdfa-075009435ffe
+
+	measure 'Antal medarbetare sista dag på året' =
+			
+			--Count of employees from last day of the selected year where GiltigTill is on or after the last day and GiltigFrån is on the same day or earlier.
+			
+			CALCULATE(
+			    [Antal medarbetare],
+			    FILTER( 'Anställningar', 'Anställningar'[GiltigTill] >= ENDOFYEAR( Kalender[Datum] ) && 'Anställningar'[GiltigFrån] <= ENDOFYEAR( Kalender[Datum] ) )
+			)
+		formatString: 0
+		displayFolder: Anställda
+		lineageTag: cb1a0af1-b7dd-463e-bf97-aca295a77419
+
+	measure 'Antal arbetade timmar timanställda' =
+			
+			SUM( 'Timanställningar'[Antal] )
+		displayFolder: Anställda
+		lineageTag: 3673aaad-d068-4cb6-a5e5-434f3e130478
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Medelålder slutet av vald period' =
+			
+			
+			-- Why does datediff not provide decimals? That's the reason we calculate days
+			var dagar = CALCULATE(
+			    AVERAGEX( Personer, DATEDIFF( Personer[Födelsedatum], MAX( Kalender[Datum] ), DAY ) ),
+			    FILTER( 'Anställningar', 'Anställningar'[GiltigTill] >= ENDOFYEAR( Kalender[Datum] ) && 'Anställningar'[GiltigFrån] <= ENDOFYEAR( Kalender[Datum] ) )
+			)
+			
+			return DIVIDE( dagar, 365 )
+		displayFolder: Anställda
+		lineageTag: c4646161-523f-423a-a2cc-29ae70edbb97
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Medelantal timavlönade' =
+			
+			[Antal arbetade timmar timanställda] / (165 * 12)
+		formatString: 0.00
+		displayFolder: Anställda
+		lineageTag: d4513701-0531-4ed7-a883-f652e24d4e67
+
+	measure 'Löner och andra ersättningar' =
+			
+			CALCULATE( [Utfall],
+			    LEFT(Konto[Konto], 4) IN {"7001", "7019", "7081", "7082", "7091", "7211", "7219", "7221", "7281", "7283", "7291", "7241", "7332", "7391"})
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: e346a497-bc67-4549-b20e-a6bf869fe60d
+
+		changedProperty = FormatString
+
+	measure 'Pensionskostnader för övriga anställda' =
+			
+			CALCULATE( [Utfall],
+			    LEFT(Konto[Konto], 4) IN {"7400", "7401", "7402", "7412", "7441"})
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: 4c461311-ead0-4e09-b2b5-6c16df5f757c
+
+		changedProperty = FormatString
+
+	measure 'Övriga sociala kostnader' =
+			
+			
+			CALCULATE( [Utfall],
+			    LEFT(Konto[Konto], 4) IN {"7521", "7522", "7523", "7527", "7531", "7533", "7561"})
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: c020f9c0-2480-4465-9246-2d617e0a8c6e
+
+		changedProperty = FormatString
+
+	measure Utfall = - CALCULATE( SUM('Huvudbok'[Utfall]))
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: d95dfdb8-fec6-4f85-a17f-8e8775351fc4
+
+		changedProperty = FormatString
+
+	measure 'Utfall fg år-1' = CALCULATE([Utfall], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: cbfd2e3f-d5e9-4753-b071-d53afa177ce3
+
+		changedProperty = FormatString
+
+	measure 'Utfall ÅTD' = CALCULATE( [Utfall], DATESYTD(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: e35babe9-77d0-4241-982e-21b8e319d41f
+
+		changedProperty = FormatString
+
+	measure 'Utfall fg år-1 ÅTD' = CALCULATE([Utfall ÅTD], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: 4a47180d-c245-419f-9fe8-c3d24fbb5806
+
+		changedProperty = FormatString
+
+	measure 'Medelantal tillvidare- och visstidsanställda' =
+			
+			var fte_percent =  DIVIDE( [Average FTE], 100 )
+			
+			return fte_percent * COUNT( AnnualFTE[ANST_NR] )
+		displayFolder: Anställda
+		lineageTag: 67d8e3cb-6ca1-486e-b71d-4bad3895018b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average FTE' =
+			
+			AVERAGE( AnnualFTE[FTE] )
+		displayFolder: Anställda
+		lineageTag: 76aa2b7b-5484-4270-b8e4-7aed730e1f45
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Medelantal medarbetare' =
+			
+			[Medelantal tillvidare- och visstidsanställda] + [Medelantal timavlönade]
+		displayFolder: Anställda
+		lineageTag: 41e043eb-e973-4002-bd25-f805e6e1183c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Medelantal anställda män' =
+			
+			CALCULATE( [Medelantal medarbetare], Personer[Kön] = "Man" )
+		displayFolder: Anställda
+		lineageTag: 81979622-c142-4898-9e57-8d70fec56e67
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Medelantal anställda kvinnor' =
+			
+			CALCULATE( [Medelantal medarbetare], Personer[Kön] = "Kvinna" )
+		displayFolder: Anställda
+		lineageTag: 26e0a24e-74b9-4473-aef0-e0af0adf81ee
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valt datumintervall' = FORMAT(MIN(Kalender[Datum]), "YYYY-MM-DD") & " - " & FORMAT(MAX(Kalender[Datum]), "YYYY-MM-DD")
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: d004a72e-32c9-4e50-9abb-cf74589dddf6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal tillsvidareanställda som slutat' =
+			
+			CALCULATE(
+			    [Antal medarbetare],
+			    FILTER( 'Anställningsform', 'Anställningsform'[Anställningsform] in { "Tillsvidareanställning", "Provanställning", "Trainee" }),
+			    FILTER( 'Anställningar', ( STARTOFYEAR( Kalender[Datum] ) <= 'Anställningar'[GiltigTill] && 'Anställningar'[GiltigTill] <= ENDOFYEAR( Kalender[Datum] ) ) && 'Anställningar'[Avgångsorsak] <> BLANK() )
+			)
+		formatString: 0
+		displayFolder: Anställda
+		lineageTag: db5fe874-64fe-4763-93d9-1f7f0b8e5708
+
+	measure 'Personalomsättning tillsvidareanställda' =
+			
+			[Antal tillsvidareanställda som slutat] / [Medelantal tillvidare- och visstidsanställda]
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Anställda
+		lineageTag: 1f80cfd2-20ad-4751-a559-a0d3f6246da4
+
+	measure 'Antal sjuka i period' = ```
+			
+			    CALCULATE(
+			        DISTINCTCOUNT('Frånvaro'[Anstnr]),
+			        FILTER(
+			            'Frånvaro',
+			             'Frånvaro'[Datum] <= MAX(Kalender[Datum])
+			                && 'Frånvaro'[Datum] >= MIN(Kalender[Datum])
+			        )
+			    )
+			```
+		formatString: 0
+		displayFolder: Frånvaro
+		lineageTag: 9b6868c7-3ba7-432a-97d9-72969ce42891
+
+	measure 'Antal anställningsdagar i vald period' = ```
+			
+			
+			VAR Result = 
+			SUMX( Kalender,
+			    VAR RelevantDate = Kalender[Datum]
+			    VAR RowsRelevantDate = 
+			        CALCULATE( COUNTROWS( 'Anställningar'), 
+			                        'Anställningar'[GiltigFrån] <= RelevantDate && 'Anställningar'[GiltigTill] >= RelevantDate)
+			    RETURN RowsRelevantDate
+			    )
+			
+			
+			RETURN Result
+			
+			```
+		formatString: #,0
+		displayFolder: Anställda
+		lineageTag: 0fef9661-d892-4020-808a-68001e6c6de6
+
+	measure 'Antal sjukdagar i period' = ```
+			
+			
+			VAR Result = 
+			SUMX( Kalender,
+			    VAR RelevantDate = Kalender[Datum]
+			    VAR RowsRelevantDate = 
+			        CALCULATE( COUNTROWS( 'Frånvaro') * DIVIDE( MAX( 'Frånvaro'[Procent]  ), 100) , 
+			                        'Frånvaro'[Datum] = RelevantDate)
+			    RETURN RowsRelevantDate
+			    )
+			
+			
+			RETURN Result
+			```
+		formatString: 0
+		displayFolder: Frånvaro
+		lineageTag: 3637bd39-e7e6-40de-b493-3d2973feddfa
+
+	measure Sjukfrånvaro =
+			
+			
+			DIVIDE( [Antal sjukdagar i period], [Antal anställningsdagar i vald period] )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Frånvaro
+		lineageTag: 36f103ac-182e-441e-afbc-9b826ad562fd
+
+	measure 'Sjuklön tjänstemän' = ```
+			
+			    CALCULATE( 
+			        [Utfall],
+			        Konto[KontoNr] = 7283
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: be2b3578-e451-42dc-8009-7743193d66dd
+
+	measure 'Sjuklön kollektivanställda' = ```
+			
+			    CALCULATE( 
+			        [Utfall],
+			        Konto[KontoNr] = 7082
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: b203cc16-bf81-4038-8146-203d6603ef58
+
+	measure 'Sjuklön totalt' = ```
+			
+			    [Sjuklön tjänstemän] + [Sjuklön kollektivanställda]
+			```
+		displayFolder: Frånvaro
+		lineageTag: 485259fc-56ac-4567-b332-6b9fc6cf7e55
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sjuklön tjänstemän running total År' =
+			
+			CALCULATE(
+				[Utfall],
+			    Konto[KontoNr] = 7283,
+				FILTER(
+					ALLSELECTED('Kalender'[År]),
+					ISONORAFTER('Kalender'[År], MAX('Kalender'[År]), DESC)
+				)
+			)
+		displayFolder: Frånvaro
+		lineageTag: 49ee7648-403b-4202-96b9-ea52fcac5dd4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sjuklön kolltektivanställda running total År' =
+			
+			CALCULATE(
+				[Utfall],
+			    Konto[KontoNr] = 7082,
+				FILTER(
+					ALLSELECTED('Kalender'[År]),
+					ISONORAFTER('Kalender'[År], MAX('Kalender'[År]), DESC)
+				)
+			)
+		displayFolder: Frånvaro
+		lineageTag: aff7fbe2-af4d-4c10-b18a-630dc0472167
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Medellön totalt' = ```
+			
+			    CALCULATE(
+			        SUM( 'Medellöner'[Medellön] ),
+			        FILTER('Medellöner', 'Medellöner'[Kön] = "Total")
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: 493c1a0a-18b5-4b47-8796-542f69d10aef
+
+	measure 'Medellön män' = ```
+			
+			    CALCULATE(
+			        SUM( 'Medellöner'[Medellön] ),
+			        FILTER('Medellöner', 'Medellöner'[Kön] = "Man")
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: 2998da01-f316-4f59-bee5-6d9a51e54768
+
+	measure 'Medellön kvinnor' = ```
+			
+			    CALCULATE(
+			        SUM( 'Medellöner'[Medellön] ),
+			        FILTER('Medellöner', 'Medellöner'[Kön] = "Kvinna")
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader
+		lineageTag: 650f193e-694e-47f5-944a-d8fd4485eb64
+
+	measure 'Sjukfrånvaro män' = ```
+			
+			    CALCULATE(
+			        [Sjukfrånvaro],
+			        Personer[Kön] = "Man"
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Frånvaro
+		lineageTag: 8179c55c-624c-48be-b133-e645d4438aac
+
+	measure 'Sjukfrånvaro kvinnor' = ```
+			
+			    CALCULATE(
+			        [Sjukfrånvaro],
+			        Personer[Kön] = "Kvinna"
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Frånvaro
+		lineageTag: 6d33bc24-6f35-4ef1-976d-0b25185821df
+
+	measure 'Total temperatur per fråga' =
+			
+			average ( 'Totala temperaturer per fråga'[Betyg] )
+		displayFolder: Hälsobokslutet
+		lineageTag: 3c4a40b3-6487-4636-abde-4394fab45935
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal färdolycksfall' =
+			
+			SUM( 'Tillbud och incidenter'[Färdolycksfall] )
+		displayFolder: Hälsobokslutet
+		lineageTag: 303aec97-410c-49aa-b977-38b039181361
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal olycksfall' =
+			
+			SUM( 'Tillbud och incidenter'[Olycksfall] )
+		displayFolder: Hälsobokslutet
+		lineageTag: 627d9ef0-bde1-4696-b533-e378ba6a9f60
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal tillbud' =
+			
+			SUM( 'Tillbud och incidenter'[Tillbud] )
+		displayFolder: Hälsobokslutet
+		lineageTag: c43af4f3-4a43-4d97-bb9a-45075825ac42
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal tillfällen massage' =
+			
+			SUM( 'Massage på jobbet'[Antal tillfällen] )
+		displayFolder: Hälsobokslutet
+		lineageTag: 132915ca-da4f-49b3-abd4-f8f98e91a465
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal unika användare per område massage' =
+			
+			
+			SUM( 'Massage på jobbet'[Antal unika användare] )
+		displayFolder: Hälsobokslutet
+		lineageTag: e058b48d-d415-4035-bda1-10f0023a293d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal unika användare totalt massage' = ```
+			
+			CALCULATE(
+			    SUM( 'Massage på jobbet'[Antal unika användare] ),
+			    'Massage på jobbet'[Område] == "Totalt" 
+			)
+			```
+		displayFolder: Hälsobokslutet
+		lineageTag: 1b891174-4309-4cd3-a40b-efe9e9098108
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal aktiva användare friskvårdsbidrag' =
+			
+			SUM( 'Friskvårdsbidrag'[Antal aktiva användare] )
+		displayFolder: Hälsobokslutet
+		lineageTag: f42670f0-8d79-404b-8c20-0595d5226a8a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Snittuttag per aktiv' =
+			
+			DIVIDE( [Uttaget friskvårdsbidrag], [Antal aktiva användare friskvårdsbidrag] )
+		formatString: #,0.00\ "kr";-#,0.00\ "kr";#,0.00\ "kr"
+		displayFolder: Hälsobokslutet
+		lineageTag: ac8eaf3d-da06-4d1e-9a5e-146d93461d62
+
+		annotation PBI_FormatHint = {"currencyCulture":"sv-SE"}
+
+	measure 'Uttaget friskvårdsbidrag' =
+			
+			SUM( 'Friskvårdsbidrag'[Uttaget friskvårdbidrag] )
+		formatString: #,0.00\ "kr";-#,0.00\ "kr";#,0.00\ "kr"
+		displayFolder: Hälsobokslutet
+		lineageTag: 108512ee-a2b0-407b-a148-0743054ddab0
+
+		annotation PBI_FormatHint = {"currencyCulture":"sv-SE"}
+
+	measure 'Antal sjuka i period anonym' = ```
+			
+			    CALCULATE(
+			        DISTINCTCOUNT('FrånvaroHashed'[AnställningsnummerHashed]),
+			        FILTER(
+			            'FrånvaroHashed',
+			             'FrånvaroHashed'[Fomdatum] <= MAX(Kalender[Datum])
+			                && 'FrånvaroHashed'[Tomdatum] >= MIN(Kalender[Datum])
+			        )
+			    )
+			```
+		displayFolder: Hashat
+		lineageTag: 62e031f3-12b9-4146-9fe8-9e818b166e44
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sjukfrånvaro anonym' =
+			
+			
+			DIVIDE( [Antal sjukdagar i period anonym], [Antal anställningsdagar i vald period anonym] )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Hashat
+		lineageTag: 8fea2ea8-b414-465f-ba89-1bb7c71454eb
+
+	measure 'Antal sjukdagar i period anonym' = ```
+			
+			/*
+			VAR Result = 
+			SUMX( Kalender,
+			    VAR RelevantDate = Kalender[Datum]
+			    VAR RowsRelevantDate = 
+			        CALCULATE( COUNTROWS( 'FrånvaroHashed'), 
+			                        'FrånvaroHashed'[Fomdatum] <= RelevantDate && 'FrånvaroHashed'[Tomdatum] >= RelevantDate)
+			    RETURN RowsRelevantDate
+			    )
+			
+			
+			RETURN Result
+			*/
+			VAR Result = 
+			SUMX( Kalender,
+			    VAR RelevantDate = Kalender[Datum]
+			    VAR RowsRelevantDate = 
+			        CALCULATE( COUNTROWS( 'FrånvaroHashed') * DIVIDE( MAX( 'FrånvaroHashed'[Procent]  ), 100) , 
+			                        'FrånvaroHashed'[Datum] = RelevantDate)
+			    RETURN RowsRelevantDate
+			    )
+			
+			
+			RETURN Result
+			```
+		displayFolder: Hashat
+		lineageTag: f84906b7-a148-4e51-97d2-75427301f6de
+
+	measure 'Sjukfrånvaro kvinnor anonym' = ```
+			
+			    CALCULATE(
+			        [Sjukfrånvaro anonym],
+			        Personer_Hashed[Kön] = "Kvinna"
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Hashat
+		lineageTag: 552de3ff-f3ef-418e-bf9b-1915b42c134a
+
+	measure 'Sjukfrånvaro män anonym' = ```
+			
+			    CALCULATE(
+			        [Sjukfrånvaro anonym],
+			        Personer_Hashed[Kön] = "Man"
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Hashat
+		lineageTag: 716ba74c-e775-4734-a964-b78d889744a6
+
+	measure 'Antal anställningsdagar i vald period anonym' = ```
+			
+			
+			VAR Result = 
+			SUMX( Kalender,
+			    VAR RelevantDate = Kalender[Datum]
+			    VAR RowsRelevantDate = 
+			        CALCULATE( COUNTROWS( 'Anställningar_Hashed'), 
+			                        'Anställningar_Hashed'[GiltigFrån] <= RelevantDate && 'Anställningar_Hashed'[GiltigTill] >= RelevantDate)
+			    RETURN RowsRelevantDate
+			    )
+			
+			
+			RETURN Result
+			```
+		displayFolder: Hashat
+		lineageTag: 66daa220-af88-4ee9-9193-86d78d01cbf1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal kvinnor anonym' =
+			
+			CALCULATE( DISTINCTCOUNT( 'FrånvaroHashed'[AnställningsnummerHashed] ), 'FrånvaroHashed'[Kön] = "Kvinna" )
+		displayFolder: Hashat
+		lineageTag: 82225c62-3e7a-421e-9f97-042e5863b573
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Vald år och månad Format' = ```
+			CONCATENATE("Vald period: ", 
+			                                CONCATENATE(SELECTEDVALUE(Kalender[Månad]), 
+			                                    CONCATENATE(" ", SELECTEDVALUE('Kalender'[År]))
+			                                ))
+			```
+		displayFolder: Hälsobokslutet
+		lineageTag: fb748336-f273-446b-baf7-320ba53ad2aa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal feriejobb' = SUM(Feriejobb[AntalFeriejobb])
+		displayFolder: Feriejobb
+		lineageTag: fceb3566-2a71-4848-92a6-fc6b0f1818d9
+
+	measure 'Antal ej klarat krav' = SUM(Feriejobb[AntalEjKlaratKrav])
+		displayFolder: Feriejobb
+		lineageTag: 4da50309-62da-4784-8327-c96b8de91a47
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal läxhjälp till feriejobb' = [Totalt påbörjat läxhjälp] - [Antal tackat nej] - [Antal ej klarat krav]
+		displayFolder: Feriejobb
+		lineageTag: 802d6cda-14d2-4d2a-8c0f-a01bf3277af9
+
+	measure 'Antal saknas unga/vuxna' =
+			
+			CALCULATE(
+			    SUM(Feriejobb[AntalFeriejobb]), NOT Personklassificering[Klassificering] IN { "Ungdom", "Vuxen" }
+			)
+		displayFolder: Feriejobb
+		lineageTag: 8a7a8418-eb6b-4fde-9bdd-b24d23cd6a5f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal tackat nej' = SUM(Feriejobb[AntalTackatNej])
+		displayFolder: Feriejobb
+		lineageTag: 62d6670d-64f7-44bf-9eed-57beb07e1ce0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal unga' =
+			
+			CALCULATE(
+			    SUM(Feriejobb[AntalFeriejobb]), Personklassificering[Klassificering] = "Ungdom"
+			)
+		displayFolder: Feriejobb
+		lineageTag: f46e3603-ab08-4fa8-aa1e-c6600bba8b3b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal vuxna' =
+			
+			CALCULATE(
+			    SUM(Feriejobb[AntalFeriejobb]), Personklassificering[Klassificering] = "Vuxen"
+			)
+		displayFolder: Feriejobb
+		lineageTag: d6634d5c-9c70-43bd-9544-7212a3c7d522
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Totalt påbörjat läxhjälp' =
+			
+			SUM(Feriejobb[TotaltPåbörjatLäxhjälp])
+		displayFolder: Feriejobb
+		lineageTag: ce753c1d-e79c-4bfb-af6d-45ec3e315406
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Totalt unga och vuxna' = [Antal unga] + [Antal vuxna] + [Antal saknas unga/vuxna]
+		displayFolder: Feriejobb
+		lineageTag: 49b548ff-82aa-4d92-9820-37d538093c58
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal gårdsvärdar' = SUM ( 'Gårdsvärdar'[Antal] )
+		formatString: 0
+		displayFolder: Gårdsvärdar
+		lineageTag: eab3d503-0f49-456a-afb3-c7a65371a4c8
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Antal pågående anställningar' = SUM( 'Gårdsvärdar'[Pågående anställning ] )
+		formatString: 0
+		displayFolder: Gårdsvärdar
+		lineageTag: 2ad33a0a-5d09-4551-a94e-47030a07ab95
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Ej jobb eller utbildning' =
+			
+			[Antal gårdsvärdar] - [Har fått jobb] - [Antal pågående anställningar] - [Har gått vidare till utbildning]
+		formatString: 0
+		displayFolder: Gårdsvärdar
+		lineageTag: a64dc56c-8ba2-4f58-a8b1-74332fa0246f
+
+	measure 'Har fått jobb' = SUM ( 'Gårdsvärdar'[Jobb] )
+		formatString: 0
+		displayFolder: Gårdsvärdar
+		lineageTag: c38b9ad4-2a95-478b-a00b-53c6f84d2459
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Har gått vidare till utbildning' = SUM( 'Gårdsvärdar'[Utbildning] )
+		formatString: 0
+		displayFolder: Gårdsvärdar
+		lineageTag: b3bb2016-b4e5-4b91-a6f2-733bbf378353
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	partition Mått-69fec661-27f9-4d27-9216-b845dab9b72b = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlSKjQUA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

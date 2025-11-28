@@ -1,0 +1,53 @@
+table 'Tillbud och incidenter'
+	lineageTag: a6b89cec-2cc6-44c5-b951-799afff23ca4
+
+	column Datum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fad852ed-98d8-4a70-8559-13e9206c6f78
+		summarizeBy: none
+		sourceColumn: Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Tillbud
+		dataType: int64
+		formatString: 0
+		lineageTag: 2afa026e-c1ca-4d54-b841-410ecb2f3696
+		summarizeBy: sum
+		sourceColumn: Tillbud
+
+		annotation SummarizationSetBy = Automatic
+
+	column Olycksfall
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d9baf49-2a8d-4407-9ef2-b047828691d8
+		summarizeBy: sum
+		sourceColumn: Olycksfall
+
+		annotation SummarizationSetBy = Automatic
+
+	column Färdolycksfall
+		dataType: int64
+		formatString: 0
+		lineageTag: 4612cf78-6abe-4b7c-a555-75ff2993d468
+		summarizeBy: sum
+		sourceColumn: Färdolycksfall
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tillbud och incidenter-c078f799-f4ce-4be1-974a-3028720634ca' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactHälsobokslutetTillbudOchIncidenter = MKBBIDW{[Schema="dbo",Item="ViewFactHälsobokslutetTillbudOchIncidenter"]}[Data]
+				in
+				    dbo_ViewFactHälsobokslutetTillbudOchIncidenter
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "ReportSection8943178deda246e0c842",
+  "displayName": "Timanställda",
+  "displayOption": "FitToPage",
+  "height": 900,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#E6E6E6'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "1D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "04f4ee272a65ebb01955",
+      "target": "fd70efb236df075f7bdd",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cd0700e71123fa763ac9",
+      "target": "2395b58807720663dc00",
+      "type": "NoFilter"
+    },
+    {
+      "source": "cd0700e71123fa763ac9",
+      "target": "04f4ee272a65ebb01955",
+      "type": "NoFilter"
+    },
+    {
+      "source": "04f4ee272a65ebb01955",
+      "target": "cd0700e71123fa763ac9",
+      "type": "NoFilter"
+    }
+  ]
+}

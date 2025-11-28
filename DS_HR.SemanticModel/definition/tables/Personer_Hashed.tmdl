@@ -1,0 +1,58 @@
+table Personer_Hashed
+	lineageTag: 0b0519dd-2a9b-45fb-816e-92b48dff948f
+
+	column Företagsnummer
+		dataType: string
+		lineageTag: 2f260b00-acf9-4541-8283-67d4c97fdb38
+		summarizeBy: none
+		sourceColumn: Företagsnummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnställningsnummerHashed
+		dataType: string
+		lineageTag: 6a631ae3-bd69-4869-979b-63f5acc2183e
+		summarizeBy: none
+		sourceColumn: AnställningsnummerHashed
+
+		annotation SummarizationSetBy = Automatic
+
+	column Namn
+		dataType: string
+		lineageTag: 5d75fd09-5a96-4b6d-a418-e264a9d5c73f
+		summarizeBy: none
+		sourceColumn: Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kön
+		dataType: string
+		lineageTag: 15560f07-e4a6-46f2-b2fe-0ebde3016478
+		summarizeBy: none
+		sourceColumn: Kön
+
+		annotation SummarizationSetBy = Automatic
+
+	column FODELSEDATUM
+		dataType: string
+		lineageTag: d9617c15-4474-46bb-a5f9-38f539823e69
+		summarizeBy: none
+		sourceColumn: FODELSEDATUM
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Personer_Hashed-7fcb1310-81ed-4266-9ee6-d61edcdcdbe4 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_viewDimPersoner_Hashed = MKBBIDW{[Schema="dbo",Item="viewDimPersoner_Hashed"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_viewDimPersoner_Hashed,{{"AnställningsnummerHashed", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigering
+

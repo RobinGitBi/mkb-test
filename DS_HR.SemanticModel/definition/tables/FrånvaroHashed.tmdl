@@ -1,0 +1,136 @@
+table FrånvaroHashed
+	lineageTag: a2988257-5396-42fd-b56e-924421d4e60c
+
+	column AnställningsnummerHashed
+		dataType: string
+		lineageTag: 193aaa94-24ca-409d-a57f-101c8d5b027a
+		summarizeBy: none
+		sourceColumn: AnställningsnummerHashed
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fomdatum
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 5e236f26-3e9a-49ca-b9ad-ddef69ca239a
+		summarizeBy: none
+		sourceColumn: Fomdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Tomdatum
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 0f946bfb-4994-4d2b-9641-2e09f39e82e9
+		summarizeBy: none
+		sourceColumn: Tomdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Kortkod
+		dataType: string
+		lineageTag: 4498efad-2f40-47da-8c69-efd31c509403
+		summarizeBy: none
+		sourceColumn: Kortkod
+
+		annotation SummarizationSetBy = Automatic
+
+	column Orsak
+		dataType: string
+		lineageTag: 94a08b44-e590-49e7-99e4-70d6201ccaf6
+		summarizeBy: none
+		sourceColumn: Orsak
+
+		annotation SummarizationSetBy = Automatic
+
+	column Arbetsdagar
+		dataType: int64
+		formatString: 0
+		lineageTag: f0308a9f-8570-40ea-b371-78136e723461
+		summarizeBy: sum
+		sourceColumn: Arbetsdagar
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kalenderdagar
+		dataType: int64
+		formatString: 0
+		lineageTag: e7f7c055-6046-460e-808b-e1535e60ce75
+		summarizeBy: sum
+		sourceColumn: Kalenderdagar
+
+		annotation SummarizationSetBy = Automatic
+
+	column SjukTyp
+		dataType: int64
+		formatString: 0
+		lineageTag: 41756049-8792-49ad-a2e7-764da91a69d4
+		summarizeBy: sum
+		sourceColumn: SjukTyp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sjukskrivningstyp
+		dataType: string
+		lineageTag: e2218ab0-3520-4829-999b-b307ba674e1b
+		summarizeBy: none
+		sourceColumn: Sjukskrivningstyp
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeSK
+		dataType: string
+		lineageTag: 6c508d2e-bf60-4842-a944-f8d7d0682304
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Datum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 28c8706e-74c0-4bf1-8366-8533581818d2
+		summarizeBy: none
+		sourceColumn: Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Procent
+		dataType: double
+		lineageTag: d5c689d1-5c9a-43fb-9dc4-3e13d21fe298
+		summarizeBy: sum
+		sourceColumn: Procent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column KON
+		dataType: string
+		lineageTag: 467a856f-1c37-4664-abe8-caf72d83b8f5
+		summarizeBy: none
+		sourceColumn: KON
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FrånvaroHashed-997940a8-a0cd-4309-9618-2a1bc57a9fd6 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_viewFactFrånvaroHashed = MKBBIDW{[Schema="dbo",Item="viewFactFrånvaroHashed"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_viewFactFrånvaroHashed,{{"AnställningsnummerHashed", type text}, {"Fomdatum", type date}, {"Tomdatum", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigering
+
