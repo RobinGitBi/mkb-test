@@ -663,7 +663,7 @@ table Mått
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'VAB Antal Dagar' = SUM(Vab[AntalDagarFrånvaro])
+	measure 'VAB Antal Dagar' = CALCULATE(SUM(Vab[AntalDagarFrånvaro]), KEEPFILTERS(Vab[FrånVaroKod] = "VB"))
 		formatString: #,##.0
 		displayFolder: Frånvaro
 		lineageTag: f9504382-8c52-42b0-921b-848d5aa6d5fc

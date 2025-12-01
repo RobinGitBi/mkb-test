@@ -87,6 +87,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mått"
+                  }
+                },
+                "Property": "VAB Antal Dagar"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
