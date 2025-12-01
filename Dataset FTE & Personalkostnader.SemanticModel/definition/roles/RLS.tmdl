@@ -1,0 +1,7 @@
+role RLS
+	modelPermission: read
+
+	tablePermission 'RLS Kostnadsställe' = 'RLS Kostnadsställe'[Email Adress] = USERPRINCIPALNAME()
+
+	annotation PBI_Id = 66979f297f5d4f69b7bfab1f62a63e51
+

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmarksMetadata/1.0.0/schema.json",
+  "items": [
+    {
+      "name": "Bookmark6df3b6a7e61875b60689",
+      "displayName": "Översikt 1",
+      "children": [
+        "Bookmarkc6c79ea4b0e71d410a4a",
+        "Bookmarkc7f0bd99c2ec2056e733",
+        "Bookmark3cc95ec4d2b40ee59de8",
+        "Bookmark33d79c6e0601ed79d423",
+        "Bookmark7fdc4be3003cb4e1a500"
+      ]
+    },
+    {
+      "name": "Bookmark09d417e85e0c02702565"
+    },
+    {
+      "name": "Bookmark6d31af6883a3bdd1ac99"
+    },
+    {
+      "name": "Bookmark4da638901ee29b4a8de5"
+    },
+    {
+      "name": "Bookmark92951b7e45acd7e285b3"
+    },
+    {
+      "name": "Bookmarka251f73028400173443a"
+    }
+  ]
+}

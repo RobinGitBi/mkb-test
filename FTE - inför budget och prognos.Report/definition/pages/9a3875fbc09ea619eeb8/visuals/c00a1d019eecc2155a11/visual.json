@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "c00a1d019eecc2155a11",
+  "position": {
+    "x": 0,
+    "y": 10,
+    "z": 1000,
+    "height": 111,
+    "width": 1280,
+    "tabOrder": 6000
+  },
+  "visualGroup": {
+    "displayName": "Huvud",
+    "groupMode": "ScaleMode"
+  }
+}

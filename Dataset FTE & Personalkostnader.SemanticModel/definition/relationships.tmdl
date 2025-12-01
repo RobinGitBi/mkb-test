@@ -1,0 +1,50 @@
+relationship 2ea97486-14c3-568a-4190-cb75516cd91c
+	fromColumn: 'FTE Utfall'.Datum
+	toColumn: Kalender.Datum
+
+relationship 9017c7b7-8227-5672-a58e-debed39e21c6
+	fromColumn: 'FTE Utfall'.Kostnadsställe
+	toColumn: Kostnadsställe.KostnadsställeNr
+
+relationship 1565e3aa-fda4-a96a-f241-1815c5ebb3e2
+	fromColumn: 'FTE Utfall'.'Anställd SK'
+	toColumn: 'Anställd SCD2'.'Anställd SK'
+
+relationship acec03f0-2a5c-311c-f6c2-b779513d8d0c
+	fromColumn: 'FTE Frånvaro Justering'.Datum
+	toColumn: Kalender.Datum
+
+relationship 41da6dcb-ce28-3be3-ce7f-29d99b24b0a5
+	fromColumn: 'FTE Frånvaro Justering'.'Anställd SK'
+	toColumn: 'Anställd SCD2'.'Anställd SK'
+
+relationship d79cb88a-cfd0-43b2-2986-feac97f7da59
+	fromColumn: 'FTE Frånvaro Justering'.Kostnadsställe
+	toColumn: Kostnadsställe.KostnadsställeNr
+
+relationship 5bb8d11e-0bef-71cd-3183-85bf1389c8b2
+	fromColumn: 'FTE Prognos'.Datum
+	toColumn: Kalender.Datum
+
+relationship bb1f7676-9676-7c82-aac9-9430dc2c66d7
+	fromColumn: 'FTE Prognos'.AnställdSk
+	toColumn: 'Anställd SCD2'.'Anställd SK'
+
+relationship 2baf85d3-c51e-a63e-0915-0c330604077b
+	fromColumn: 'FTE Prognos'.Kostnadsställe
+	toColumn: Kostnadsställe.KostnadsställeNr
+
+relationship 773cd86d-de8c-cd35-0dd5-49482fcb9832
+	fromColumn: 'FTE Prognos'.LöneKategori
+	toColumn: Lönekategori.Lönekategori
+
+relationship 7e139d63-3571-e9d1-0053-77c5f1cd852a
+	fromColumn: 'FTE Utfall'.Lönekategori
+	toColumn: Lönekategori.Lönekategori
+
+relationship 23cb9132-688e-1bd1-c26a-5022e366c506
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Kostnadsställe.KostnadsställeSK
+	toColumn: 'RLS Kostnadsställe'.'Kostnadsställe SK'
+

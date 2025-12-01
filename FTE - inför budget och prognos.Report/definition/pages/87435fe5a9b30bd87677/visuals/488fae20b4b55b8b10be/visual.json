@@ -1,0 +1,1263 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "488fae20b4b55b8b10be",
+  "position": {
+    "x": 11.69411233927363,
+    "y": 291.05346266636593,
+    "z": 4000,
+    "height": 587.30430859463115,
+    "width": 1256.4674035641779,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Slag"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Slag",
+              "nativeQueryRef": "Slag"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimLöneKategori"
+                    }
+                  },
+                  "Property": "Lönekategori"
+                }
+              },
+              "queryRef": "ViewDimLöneKategori.Lönekategori",
+              "nativeQueryRef": "Lönekategori"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Anställningsnummer"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Anställningsnummer",
+              "nativeQueryRef": "Anställningsnummer"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Namn"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Namn",
+              "nativeQueryRef": "Namn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Anställningsform"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Anställningsform",
+              "nativeQueryRef": "Anställningsform"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Befattning"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Befattning",
+              "nativeQueryRef": "Roll",
+              "displayName": "Roll"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Kostnadsställe"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Kostnadsställe",
+              "nativeQueryRef": "Kostnadsställe"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnställdSCD2"
+                    }
+                  },
+                  "Property": "Födelsedatum"
+                }
+              },
+              "queryRef": "ViewDimAnställdSCD2.Födelsedatum",
+              "nativeQueryRef": "Födelsedatum"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewFactFteJusteradPrognos"
+                    }
+                  },
+                  "Property": "SCD2Anställningsdatum"
+                }
+              },
+              "queryRef": "ViewFactFteJusteradPrognos.SCD2Anställningsdatum",
+              "nativeQueryRef": "Tillträde",
+              "displayName": "Tillträde"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewFactFteJusteradPrognos"
+                    }
+                  },
+                  "Property": "SCD2_AnställningsdatumTom"
+                }
+              },
+              "queryRef": "ViewFactFteJusteradPrognos.SCD2_AnställningsdatumTom",
+              "nativeQueryRef": "Tillträde t.o.m.",
+              "displayName": "Tillträde t.o.m."
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Ålder"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Ålder",
+              "nativeQueryRef": "Ålder",
+              "displayName": "Ålder"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Månadslön"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Månadslön",
+              "nativeQueryRef": "Månadslön",
+              "displayName": "Månadslön"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Lönetillägg Antal Månader"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Lönetillägg Antal Månader",
+              "nativeQueryRef": "Lönetillägg Antal Månader",
+              "displayName": "Lönetillägg Antal Månader"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Lönetillägg"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Lönetillägg",
+              "nativeQueryRef": "Lönetillägg",
+              "displayName": "Lönetillägg"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Rapporterade Timmar"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Rapporterade Timmar",
+              "nativeQueryRef": "Rapporterade Timmar",
+              "displayName": "Rapporterade Timmar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Timlön"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Timlön",
+              "nativeQueryRef": "Timlön",
+              "displayName": "Timlön"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Sysselsättningsgrad"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Sysselsättningsgrad",
+              "nativeQueryRef": "Sysselsättningsgrad",
+              "displayName": "Sysselsättningsgrad"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Antal Månader Enligt Kontrakt"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Antal Månader Enligt Kontrakt",
+              "nativeQueryRef": "Antal Månader Enligt Kontrakt",
+              "displayName": "Antal Månader Enligt Kontrakt"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Antal Månader Efter Frånvaro Justering"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Antal Månader Efter Frånvaro Justering",
+              "nativeQueryRef": "Antal Månader Efter Frånvaro Justering",
+              "displayName": "Antal Månader Efter Frånvaro Justering"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos FTE Före Justering"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos FTE Före Justering",
+              "nativeQueryRef": "Prognos FTE Före Justering"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos FTE Justerad Frånvaro"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos FTE Justerad Frånvaro",
+              "nativeQueryRef": "Prognos FTE Justerad Frånvaro"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos FTE"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos FTE",
+              "nativeQueryRef": "Prognos FTE1"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Bruttolönekostnad"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Bruttolönekostnad",
+              "nativeQueryRef": "Prognos Bruttolönekostnad exkl. soc, pension.",
+              "displayName": "Prognos Bruttolönekostnad exkl. soc, pension."
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos Notering"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos Notering",
+              "nativeQueryRef": "Prognos Notering"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "Controllernamn"
+                }
+              },
+              "queryRef": "Kostnadsställe.Controllernamn",
+              "nativeQueryRef": "Controller",
+              "displayName": "Controller"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "FunktionsId"
+                }
+              },
+              "queryRef": "Kostnadsställe.FunktionsId",
+              "nativeQueryRef": "Funktion",
+              "displayName": "Funktion"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mätvärde"
+                  }
+                },
+                "Property": "Prognos Rapporterade Timmar"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "229.5879086090098D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Konto.Konto2"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "88.59869147784573D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ViewDimLöneKategori.Lönekategori"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "63.98922838138286D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Lönetillägg Antal Månader"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80.26618438395927D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Bruttolönekostnad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "90.02616867109215D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ViewDimAnställdSCD2.Anställningsform"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "71.61832117403375D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ViewDimAnställdSCD2.Anställningsnummer"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "97.3189658172968D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ViewDimAnställdSCD2.Namn"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "117.82878052068776D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ViewDimAnställdSCD2.Befattning"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "59.21045865150141D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ViewDimAnställdSCD2.Kostnadsställe"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "63.00636210794599D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Månadslön"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "61.70065381650495D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Lönetillägg"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "77.31898290030095D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Rapporterade Timmar"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "60.522896269355336D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Sysselsättningsgrad"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "67.24316617717159D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Antal Månader Enligt Kontrakt"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "75.86148845329902D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Antal Månader Efter Frånvaro Justering"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "57.94381978225367D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos FTE Före Justering"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "73.34514648699773D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos FTE Justerad Frånvaro"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "54.509815494872655D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos FTE"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "57.61834973688857D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Notering"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Månadslön"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Lönetillägg Antal Månader"
+          }
+        },
+        {
+          "properties": {
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Lönetillägg"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Rapporterade Timmar"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Timlön"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Sysselsättningsgrad"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Antal Månader Enligt Kontrakt"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Antal Månader Efter Frånvaro Justering"
+          }
+        },
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos FTE Före Justering"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Översikt Prognos Personalkostnader & FTE'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Canvas'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ReportSection42fec21b3c573030583e'"
+                }
+              }
+            },
+            "titleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
+                }
+              }
+            },
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "foreground": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0067A5'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

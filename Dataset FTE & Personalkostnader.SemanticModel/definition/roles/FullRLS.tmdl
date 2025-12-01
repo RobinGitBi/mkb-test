@@ -1,0 +1,7 @@
+role FullRLS
+	modelPermission: read
+
+	tablePermission 'RLS Kostnadsställe'
+
+	annotation PBI_Id = c6ca3f551ef7447ba596ca6375b42a89
+

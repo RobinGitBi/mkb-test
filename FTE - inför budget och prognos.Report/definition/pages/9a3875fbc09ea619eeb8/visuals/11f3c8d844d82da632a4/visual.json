@@ -1,0 +1,303 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "11f3c8d844d82da632a4",
+  "position": {
+    "x": 640.17527043680673,
+    "y": 122.25112967273724,
+    "z": 4000,
+    "height": 474.54470765438862,
+    "width": 608.62659181158426,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Definitioner",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Calibri",
+                      "fontSize": "16pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "F",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt",
+                      "color": "#070f25"
+                    }
+                  },
+                  {
+                    "value": "TE (Ej Timanställd)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "color": "#070f25"
+                    }
+                  },
+                  {
+                    "value": " = (Dagar arbetade enligt anställningskontrakt * Sysselsättningsgrad) - Frånvarojustering (sjukskriven >14 dagar, tjänstledig och föräldraledig)",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#070f25"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "FTE (Timanställd)",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "10.5pt",
+                      "color": "#070f25"
+                    }
+                  },
+                  {
+                    "value": " = Timmar arbetade / Normalarbetstid (165H enligt samma definition som Malmö Stad)",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#070f25"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Medarbetare som byter KST återfinns med en rad per KST, för vald period.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#070f25"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "1 FTE = En medarbetare med 100% sysselsättningsgrad, som är anställd 1 januari – 31 december, utan långtidsfrånvaro. ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#070f25"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Personer som arbetar kortare tid, eller har en lägre sysselsätttninggrad, räknas med sin andel av en heltidstjänst.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#070f25"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Långtidsfrånvaro räknas bort från FTE-kalkylen. Detta gäller för sjukskrivna > 14 dagar; föräldralediga och tjänstlediga. ",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#070f25"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "De dagar som frånvaro rapporteras, dras från uträkningen av heltidstjänsten.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#070f25"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Utfallet för timanställda baseras på faktiskt arbetade timmar varje månad.",
+                    "textStyle": {
+                      "fontSize": "10.5pt",
+                      "color": "#070f25"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Inledningstext'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

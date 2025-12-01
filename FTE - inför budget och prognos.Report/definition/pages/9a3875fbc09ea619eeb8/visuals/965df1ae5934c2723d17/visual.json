@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "965df1ae5934c2723d17",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 26,
+    "width": 125,
+    "tabOrder": 0
+  },
+  "visualGroup": {
+    "displayName": "Startsida ej vald",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

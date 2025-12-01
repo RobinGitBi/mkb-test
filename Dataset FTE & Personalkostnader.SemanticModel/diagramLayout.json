@@ -1,0 +1,387 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 953.41782305571678,
+        "y": 363.899932464014
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1455.8729160592191,
+            "y": 939.6373948220081
+          },
+          "nodeIndex": "Kalender",
+          "nodeLineageTag": "d0c6c246-4859-4e8f-a893-9cacf3032394",
+          "size": {
+            "height": 601.24053835073335,
+            "width": 237.51642651771317
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1907.9866911624872,
+            "y": 2347.1179891768247
+          },
+          "nodeIndex": "Mätvärde",
+          "nodeLineageTag": "f49a15d8-6e2e-442b-ada2-0595cc77505a",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 2,
+          "expandedHeight": 104
+        },
+        {
+          "location": {
+            "x": 1033.1988550115034,
+            "y": 877.25037849309376
+          },
+          "nodeIndex": "Kostnadsställe",
+          "nodeLineageTag": "1d6a4c41-4bc4-4ba1-a114-944ff373fbf7",
+          "size": {
+            "height": 1000,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 3268.8908671176655,
+            "y": 114.6284787261644
+          },
+          "nodeIndex": "FTE Prognos",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 3552.8908671176655,
+            "y": 0
+          },
+          "nodeIndex": "Lönekategori",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2705.1172097182716,
+            "y": 59.0743633681691
+          },
+          "nodeIndex": "Anställd SCD2",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1073.2428651984271,
+            "y": 392.1248199595276
+          },
+          "nodeIndex": "FTE Utfall",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2810.0938065156765,
+            "y": 464.108270268933
+          },
+          "nodeIndex": "FTE Frånvaro Justering",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3459.6478630943407,
+            "y": 580.42039228010231
+          },
+          "nodeIndex": "RLS Kostnadsställe",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 54.960164088455265,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 835.9,
+            "y": 636.3
+          },
+          "nodeIndex": "Kalender",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 865.4,
+            "y": 0
+          },
+          "nodeIndex": "Kostnadsställe",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Yta",
+      "zoomValue": 70.955543900968792,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 378.11851846872145,
+            "y": 1235.56561816673
+          },
+          "nodeIndex": "Kalender",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 978.38378032615765,
+            "y": 533.98350366282159
+          },
+          "nodeIndex": "Kostnadsställe",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        }
+      ],
+      "name": "Huvudbok",
+      "zoomValue": 67,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 3,
+      "scrollPosition": {
+        "x": 41.062679205907664,
+        "y": 0
+      },
+      "nodes": [],
+      "name": "Standard",
+      "zoomValue": 79.553182037699784,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 4,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 119,
+            "y": 269
+          },
+          "nodeIndex": "Kalender",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Beställarlistan",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 5,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [],
+      "name": "Fastighets / förvaltare",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 6,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 922.22091033696893,
+            "y": 887.18887365926821
+          },
+          "nodeIndex": "Kalender",
+          "nodeLineageTag": "d0c6c246-4859-4e8f-a893-9cacf3032394",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 987,
+            "y": 0
+          },
+          "nodeIndex": "Kostnadsställe",
+          "nodeLineageTag": "1d6a4c41-4bc4-4ba1-a114-944ff373fbf7",
+          "size": {
+            "height": 544,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "FTE",
+      "zoomValue": 63.287087723233995,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 7,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 636.62861535148477,
+            "y": 105.58141476212495
+          },
+          "nodeIndex": "Kalender",
+          "nodeLineageTag": "d0c6c246-4859-4e8f-a893-9cacf3032394",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50.000000000000014,
+            "y": 361.69398339529766
+          },
+          "nodeIndex": "Kostnadsställe",
+          "nodeLineageTag": "1d6a4c41-4bc4-4ba1-a114-944ff373fbf7",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 5
+          },
+          "nodeIndex": "Lönekategori",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 418.72706141477164,
+            "y": 521.36765927638
+          },
+          "nodeIndex": "Anställd SCD2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 335.98401473058459,
+            "y": 105.64522407731715
+          },
+          "nodeIndex": "FTE Prognos",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Layout 1",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
