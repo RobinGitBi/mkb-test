@@ -1,0 +1,328 @@
+table 'FTE Utfall'
+	lineageTag: fd6709f1-19fc-4e1c-aed4-922bb80576ad
+
+	column 'Anställd SK'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e2b3332-d2f8-4f22-8c9e-8c2b0a4b7d2f
+		summarizeBy: none
+		sourceColumn: Anställd SK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsnummer
+		dataType: int64
+		formatString: 0
+		lineageTag: 966359bf-1280-4ba4-ad77-33981f15aedd
+		summarizeBy: sum
+		sourceColumn: Anställningsnummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: int64
+		formatString: 0
+		lineageTag: c89fc079-f0ba-4e9f-a12e-88c444cd0dcc
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsform
+		dataType: string
+		lineageTag: f79e929a-09b1-40d2-91fc-55a5f2f10a50
+		summarizeBy: none
+		sourceColumn: Anställningsform
+
+		annotation SummarizationSetBy = Automatic
+
+	column Datum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c541e679-8a95-4db1-a8de-9c718dc9d2dd
+		summarizeBy: none
+		sourceColumn: Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'FTE Beräkning'
+		dataType: string
+		lineageTag: 7236531d-89f5-4ba6-b32b-a2d03a85befd
+		summarizeBy: none
+		sourceColumn: FTE Beräkning
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Kontrakt Start Månad'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0433db80-927c-42d6-9fd8-d788b59bff17
+		summarizeBy: none
+		sourceColumn: Kontrakt Start Månad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Kontrakt Slut Månad'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 09551f2c-d002-44be-a5fd-c0d425e33cae
+		summarizeBy: none
+		sourceColumn: Kontrakt Slut Månad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Sysselsättningsgrad
+		dataType: double
+		lineageTag: eba97ad7-eaa4-4937-aed3-4961b8a06f3d
+		summarizeBy: sum
+		sourceColumn: Sysselsättningsgrad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Rapporterade Timmar'
+		dataType: double
+		lineageTag: a697412a-f349-489f-a3c4-5421bc5d58e8
+		summarizeBy: sum
+		sourceColumn: Rapporterade Timmar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Normal arbetstid'
+		dataType: int64
+		formatString: 0
+		lineageTag: 66890cc0-22e7-4d51-927e-6f34b1128286
+		summarizeBy: sum
+		sourceColumn: Normal arbetstid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FTE före justering'
+		dataType: double
+		lineageTag: 26c0aafe-1115-4a76-9874-4a2ffe85685a
+		summarizeBy: sum
+		sourceColumn: FTE före justering
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Frånvaro justering'
+		dataType: double
+		lineageTag: eff42b29-6b35-4712-b196-cbe0bbb7ea91
+		summarizeBy: sum
+		sourceColumn: Frånvaro justering
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FTE
+		dataType: double
+		lineageTag: bcdd392d-057a-4a3e-84f2-4a7e10bb273c
+		summarizeBy: sum
+		sourceColumn: FTE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Dagar frånvaro justering'
+		dataType: double
+		lineageTag: 2099a864-4d32-469b-a064-96da28a87932
+		summarizeBy: sum
+		sourceColumn: Dagar frånvaro justering
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Dagar totalt'
+		dataType: int64
+		formatString: 0
+		lineageTag: 810b5793-ead3-4c59-868e-cb81f944396f
+		summarizeBy: sum
+		sourceColumn: Dagar totalt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SCD2 ändring datum'
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 50b21abd-d10c-4c37-9913-b96e14517653
+		summarizeBy: none
+		sourceColumn: SCD2 ändring datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'SCD2 ändring tom datum'
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 392a8178-97d0-4bc6-8713-1451dbaa87c2
+		summarizeBy: none
+		sourceColumn: SCD2 ändring tom datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Månadslön
+		dataType: double
+		lineageTag: 228a0899-6f5d-496c-a3d5-1180ba83df30
+		summarizeBy: sum
+		sourceColumn: Månadslön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Lönetillägg
+		dataType: double
+		lineageTag: 5b382bd3-d9c2-4388-888a-2cd137fccff3
+		summarizeBy: sum
+		sourceColumn: Lönetillägg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MånadsLönPlusTillägg
+		dataType: double
+		lineageTag: 9e4c6802-329e-4b65-b0fc-b2e8b5940b9c
+		summarizeBy: sum
+		sourceColumn: MånadsLönPlusTillägg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Lönetillägg Slutdatum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cdd67e83-f96a-47f8-8398-7f16668bbe3a
+		summarizeBy: none
+		sourceColumn: Lönetillägg Slutdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Timlön
+		dataType: double
+		lineageTag: 10572a28-b2ec-4338-80d6-5c1c30fd0622
+		summarizeBy: sum
+		sourceColumn: Timlön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Timmar*Timlön
+		dataType: double
+		lineageTag: 84cc5443-b1f7-4249-bd63-9fb1125a8dd6
+		summarizeBy: sum
+		sourceColumn: Timmar*Timlön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Lönekategori
+		dataType: string
+		lineageTag: 0e85a63a-8bba-488a-9f45-093558eaa2b5
+		summarizeBy: none
+		sourceColumn: Lönekategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Lönetillägg Startdatum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dd35b8b5-34e4-44a3-bcb0-a21e31a5ddcc
+		summarizeBy: none
+		sourceColumn: Lönetillägg Startdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Snittlön Timanställd'
+		dataType: double
+		lineageTag: 13094b72-6f7b-4eb2-b754-b07fc7123079
+		summarizeBy: sum
+		sourceColumn: Snittlön Timanställd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'SCD2 Justerad Ändring Datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 01f4a559-5fd9-4cb9-bb40-b79f043cab0a
+		summarizeBy: none
+		sourceColumn: SCD2 Justerad Ändring Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'SCD2 Justerad Ändring t.o.m. Datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4e5d0714-a995-4700-9f81-c8f891ec344e
+		summarizeBy: none
+		sourceColumn: SCD2 Justerad Ändring t.o.m. Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column AktualitetId
+		dataType: int64
+		formatString: 0
+		lineageTag: a8c31728-4593-436a-918b-6dd9078e2ea8
+		summarizeBy: count
+		sourceColumn: AktualitetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aktualitet
+		dataType: string
+		lineageTag: e9253ba0-d6b6-4ec5-b05e-8cfb637b3dcc
+		summarizeBy: none
+		sourceColumn: Aktualitet
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'FTE Utfall' = m
+		mode: import
+		queryGroup: Faktatabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactFte = MKBBIDW{[Schema="dbo",Item="ViewFactFte"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_ViewFactFte,{{"Kostnadsställe", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

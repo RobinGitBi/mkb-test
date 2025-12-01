@@ -1,0 +1,299 @@
+table 'FTE Justerad Prognos'
+	lineageTag: b7cb1e08-2fda-42fd-b5b6-48f25cb2f4ba
+
+	column AnställdSk
+		dataType: int64
+		formatString: 0
+		lineageTag: f6a8d73f-66f1-4de3-b9d1-bdff4e00fb9d
+		summarizeBy: none
+		sourceColumn: AnställdSk
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsnummer
+		dataType: int64
+		formatString: 0
+		lineageTag: fdcf4fab-40da-41d1-adcb-9659aedd4389
+		summarizeBy: sum
+		sourceColumn: Anställningsnummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column År
+		dataType: int64
+		formatString: 0
+		lineageTag: f4ff198d-9fcf-40e4-8139-b6f739a8ebe9
+		summarizeBy: sum
+		sourceColumn: År
+
+		annotation SummarizationSetBy = Automatic
+
+	column Datum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c529f4ae-c909-4ef0-9e65-577b6283a5d7
+		summarizeBy: none
+		sourceColumn: Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column MedelFTEFöreJustering
+		dataType: double
+		lineageTag: 55682949-b6a4-45f5-965d-cbaf1fd79103
+		summarizeBy: sum
+		sourceColumn: MedelFTEFöreJustering
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MedelFTEFrånvaroJustering
+		dataType: double
+		lineageTag: 7114edb9-9d42-4b09-91f2-a4d233818dfd
+		summarizeBy: sum
+		sourceColumn: MedelFTEFrånvaroJustering
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MedelFTE
+		dataType: double
+		lineageTag: 1fa5fe57-7342-47ab-8ade-e3ffdec85dac
+		summarizeBy: sum
+		sourceColumn: MedelFTE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AntalMånaderEnligtKontrakt
+		dataType: double
+		lineageTag: cff0f4b8-3567-49fa-9541-fc20111f0ac8
+		summarizeBy: sum
+		sourceColumn: AntalMånaderEnligtKontrakt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AntalMånaderEfterFrånvaroJustering
+		dataType: double
+		lineageTag: 725d005e-4a5e-46fc-9f61-6609f5544144
+		summarizeBy: sum
+		sourceColumn: AntalMånaderEfterFrånvaroJustering
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SCD2Anställningsdatum
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 75faea36-0a43-436f-b1f1-75541e8b1d28
+		summarizeBy: none
+		sourceColumn: SCD2Anställningsdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column SCD2_AnställningsdatumTom
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: eaeb0242-bc3b-48a2-83cc-566bcc936b05
+		summarizeBy: none
+		sourceColumn: SCD2_AnställningsdatumTom
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column ManådslönÅrsslut
+		dataType: double
+		lineageTag: c0c8acb7-4081-4490-a4c6-acc2128c71b7
+		summarizeBy: sum
+		sourceColumn: ManådslönÅrsslut
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LönetilläggÅrsslut
+		dataType: double
+		lineageTag: 74171662-ff80-44da-a418-944c454ddd16
+		summarizeBy: sum
+		sourceColumn: LönetilläggÅrsslut
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TimlönÅrsslut
+		dataType: double
+		lineageTag: d295cc0f-ecd9-46be-820f-92ecd2ee1f68
+		summarizeBy: sum
+		sourceColumn: TimlönÅrsslut
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LöneKategori
+		dataType: string
+		lineageTag: b044f706-0ec9-4bb0-a2a5-e849fb5b3132
+		summarizeBy: none
+		sourceColumn: LöneKategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column SysselsättningsgradÅrsslut
+		dataType: double
+		lineageTag: cdca98f0-d67b-4996-ad6f-3e931de3b20e
+		summarizeBy: sum
+		sourceColumn: SysselsättningsgradÅrsslut
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RapporteradeTimmar
+		dataType: double
+		lineageTag: aee26ae4-6e06-4c5a-a5c8-9bf4213bc089
+		summarizeBy: sum
+		sourceColumn: RapporteradeTimmar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LöneTilläggAntalMånader
+		dataType: int64
+		formatString: 0
+		lineageTag: 532f38ce-a491-4152-8f86-e848f35cb9e6
+		summarizeBy: sum
+		sourceColumn: LöneTilläggAntalMånader
+
+		annotation SummarizationSetBy = Automatic
+
+	column SysselSättningsGradEff
+		dataType: double
+		lineageTag: ba919292-cdbe-45da-8289-d7aa1d3041f6
+		summarizeBy: sum
+		sourceColumn: SysselSättningsGradEff
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsHourlyYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b52aff3-ab3e-4d93-97a1-800c4bfe54d8
+		summarizeBy: sum
+		sourceColumn: IsHourlyYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrognosBruttolön
+		dataType: double
+		lineageTag: 78274b66-3d1a-44a8-a6a0-16d613e67f90
+		summarizeBy: sum
+		sourceColumn: PrognosBruttolön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AktualitetId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9cfa82e8-e47d-46da-94c5-4daf0991d911
+		summarizeBy: count
+		sourceColumn: AktualitetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: string
+		lineageTag: 7e99bd44-e86f-438a-8f50-d4d0673bc0b2
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		annotation SummarizationSetBy = Automatic
+
+	column MånadslönEffektiv
+		dataType: double
+		lineageTag: 4567b8a7-d48b-4251-8ff7-3a71d391391d
+		summarizeBy: sum
+		sourceColumn: MånadslönEffektiv
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TimlönEffektiv
+		dataType: double
+		lineageTag: 0e42f435-84b0-46fc-bb02-371f8ff568d3
+		summarizeBy: sum
+		sourceColumn: TimlönEffektiv
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LönetilläggEffektiv
+		dataType: double
+		lineageTag: 4703b498-86a1-4d9b-a036-6f93c4bde435
+		summarizeBy: sum
+		sourceColumn: LönetilläggEffektiv
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MånadslönKälla
+		dataType: string
+		lineageTag: a19df206-454d-4eb1-b8b5-d95fa9de48fd
+		summarizeBy: none
+		sourceColumn: MånadslönKälla
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimlönKälla
+		dataType: string
+		lineageTag: d62c0494-a630-44b2-ab4c-19321563ad16
+		summarizeBy: none
+		sourceColumn: TimlönKälla
+
+		annotation SummarizationSetBy = Automatic
+
+	column LönetilläggKälla
+		dataType: string
+		lineageTag: 99e4bc9f-defd-484b-a911-2de8f26e80cf
+		summarizeBy: none
+		sourceColumn: LönetilläggKälla
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'FTE Justerad Prognos' = m
+		mode: import
+		queryGroup: Faktatabeller
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactFteJusteradPrognos = MKBBIDW{[Schema="dbo",Item="ViewFactFteJusteradPrognos"]}[Data]
+				in
+				    dbo_ViewFactFteJusteradPrognos
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
