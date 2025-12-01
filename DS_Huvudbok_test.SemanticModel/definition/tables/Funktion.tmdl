@@ -7,7 +7,7 @@ table Funktion
 		isHidden
 		formatString: 0
 		lineageTag: 32f14ba7-84c3-40b6-81ec-81f050eb15f9
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: FunktionSK
 
 		changedProperty = IsHidden

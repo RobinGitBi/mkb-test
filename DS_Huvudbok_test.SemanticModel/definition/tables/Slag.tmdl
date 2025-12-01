@@ -7,7 +7,7 @@ table Slag
 		isHidden
 		formatString: 0
 		lineageTag: 0fac5f06-530f-4eb3-8b74-223c9f339ab0
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: SlagSK
 
 		changedProperty = IsHidden

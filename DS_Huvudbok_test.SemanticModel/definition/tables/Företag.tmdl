@@ -5,7 +5,7 @@ table Företag
 		dataType: int64
 		formatString: 0
 		lineageTag: dc1c9d6b-56fd-42a7-88b5-c5b34a1e6034
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: FöretagSK
 
 		changedProperty = IsHidden

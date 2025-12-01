@@ -55,7 +55,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: 963fccfa-faf9-4c6f-b451-2493d83e1e7f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasNorr
 
 		changedProperty = IsHidden
@@ -67,7 +67,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: 5d75f77f-84bf-4558-9443-944f9a5c4be8
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasVäst
 
 		changedProperty = IsHidden
@@ -79,7 +79,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: 2efef95c-b868-4869-8969-8d559951d04c
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasÖst
 
 		changedProperty = IsHidden
@@ -91,7 +91,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: ec339483-cacb-4375-9a26-05004867178a
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasLokal
 
 		changedProperty = IsHidden
@@ -103,7 +103,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: aac10fda-a085-4677-8b94-4a3650e03d15
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasStudent
 
 		changedProperty = IsHidden
@@ -115,7 +115,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: 9088d9a7-c692-475d-940e-339c0c71601d
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Bas2998
 
 		changedProperty = IsHidden
@@ -127,7 +127,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: d06e9335-1f7b-4003-98b4-22c5fc409712
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasFörvaltn
 
 		changedProperty = IsHidden
@@ -139,7 +139,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: 1e41c416-1b12-4db6-94c0-0081667a364f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasFörvaltnExt
 
 		changedProperty = IsHidden
@@ -151,7 +151,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: 901ebde7-7f3f-4829-b1d1-6ee5112838e9
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasAUNy
 
 		changedProperty = IsHidden
@@ -163,7 +163,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: 68332e17-1590-4c46-bfe1-d2254d0ac2c2
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasDrift
 
 		changedProperty = IsHidden
@@ -175,7 +175,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: 19d0435d-2b7b-42d7-8b51-80aa22fce45f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasLth
 
 		changedProperty = IsHidden
@@ -187,7 +187,7 @@ table Segment
 		isHidden
 		formatString: 0
 		lineageTag: c6684c66-74f3-48db-8f94-ed1b380435db
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: BasAdm
 
 		changedProperty = IsHidden

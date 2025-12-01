@@ -12,7 +12,7 @@ table Kund
 		dataType: int64
 		formatString: 0
 		lineageTag: 8618224a-4ac3-4dcc-91de-6c644dc241b2
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: KundSK
 
 		changedProperty = IsHidden

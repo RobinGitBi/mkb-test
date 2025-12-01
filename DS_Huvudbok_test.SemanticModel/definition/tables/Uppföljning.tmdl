@@ -7,7 +7,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: 5b098ba7-d2e9-459c-959d-02e6e7c1e785
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: UppföljningSK
 
 		changedProperty = IsHidden
@@ -85,7 +85,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: 8267d2a0-3b62-409b-93cb-be69efa6be98
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasNorr
 
 		changedProperty = IsHidden
@@ -97,7 +97,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: 7c33fd11-e3aa-487f-8b1c-feb243d72283
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasVäst
 
 		changedProperty = IsHidden
@@ -109,7 +109,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: 007e2a86-0b24-4927-8463-ee18f7fd38f1
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasÖst
 
 		changedProperty = IsHidden
@@ -121,7 +121,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: cf06c9b0-cf8b-44f6-85b6-ee45fd2ac4bf
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasLokal
 
 		changedProperty = IsHidden
@@ -133,7 +133,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: e8d608ab-94ac-469a-9aba-e5bfcf029f63
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasStudent
 
 		changedProperty = IsHidden
@@ -145,7 +145,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: 10c8f5da-492f-431d-b38a-543a335dcb1f
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Bas2998
 
 		changedProperty = IsHidden
@@ -157,7 +157,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: 56750d81-b7e5-4946-a949-20dbb0ba5515
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasFörvaltn
 
 		changedProperty = IsHidden
@@ -169,7 +169,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: ec4358d0-8959-4031-8c30-97b2ccf6c78a
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasFörvaltnExt
 
 		changedProperty = IsHidden
@@ -181,7 +181,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: 4515fcc8-83b4-4e17-962d-7b49de4a8001
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasAUNy
 
 		changedProperty = IsHidden
@@ -193,7 +193,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: 528767cb-9d29-4375-a6bd-34d51afb17f2
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasDrift
 
 		changedProperty = IsHidden
@@ -205,7 +205,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: a5a501f3-1943-4e7a-9b93-1936267ada15
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasLth
 
 		changedProperty = IsHidden
@@ -217,7 +217,7 @@ table Uppföljning
 		isHidden
 		formatString: 0
 		lineageTag: c4985598-8ff6-49c8-a919-e3d8460f71f3
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasAdm
 
 		changedProperty = IsHidden

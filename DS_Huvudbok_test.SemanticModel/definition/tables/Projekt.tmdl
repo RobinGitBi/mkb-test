@@ -12,7 +12,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 7b565fee-c4a7-4469-af74-abcb6600dfd5
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: ProjektSK
 
 		changedProperty = IsHidden
@@ -113,7 +113,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: ff5f4594-ce52-4b28-89a0-c80b22275794
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasNorr
 
 		changedProperty = IsHidden
@@ -124,7 +124,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: a86ab9d6-e1f9-4fa0-87a8-29f5f1aef74d
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasVäst
 
 		changedProperty = IsHidden
@@ -135,7 +135,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 47280e99-f734-4f07-b669-6e2c37fc5412
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasÖst
 
 		changedProperty = IsHidden
@@ -146,7 +146,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 13cca7b9-4ad3-4ffa-ac98-c51d84bb8674
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasLokal
 
 		changedProperty = IsHidden
@@ -157,7 +157,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 44960de9-32ff-43ba-93cf-f8db0dfd2fe3
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasStudent
 
 		changedProperty = IsHidden
@@ -168,7 +168,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 1be023c9-9820-4941-92ff-a298dcc20438
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Bas2998
 
 		changedProperty = IsHidden
@@ -179,7 +179,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: e445e584-bbe7-49db-b5cb-b35a09ab27ef
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasFörvaltn
 
 		changedProperty = IsHidden
@@ -190,7 +190,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 639b0823-0551-4695-9483-ffa582fbce52
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasFörvaltnExt
 
 		changedProperty = IsHidden
@@ -201,7 +201,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 979b026a-5480-4450-b4bb-66c70e6dfb0b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasAUNy
 
 		changedProperty = IsHidden
@@ -212,7 +212,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 0c0268e2-df23-4574-9f44-14ab25040f08
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasDrift
 
 		changedProperty = IsHidden
@@ -223,7 +223,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: d9de90b0-7c7f-47db-a515-a7bcbb72ee3f
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasLth
 
 		changedProperty = IsHidden
@@ -234,7 +234,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 8631cd2c-922d-44d7-9312-0c885a2126e3
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BasAdm
 
 		changedProperty = IsHidden
@@ -265,7 +265,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 9c3cff99-183c-4917-9a6c-ca76c99a1da5
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: StartPeriod
 
 		changedProperty = IsHidden
@@ -276,7 +276,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 28a93c5f-07ad-45ca-8300-8e2f549ab76b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: SlutPeriod
 
 		changedProperty = IsHidden
@@ -557,7 +557,7 @@ table Projekt
 	column BeslutatBelopp
 		dataType: double
 		lineageTag: c29ddd66-c469-44ca-af91-b634c9a82972
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: BeslutatBelopp
 
 		changedProperty = IsHidden
@@ -645,7 +645,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: f42e5a0d-8d33-4932-8e1f-f4a5838450d2
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: EntrpenadStartÅr
 
 		changedProperty = IsHidden
@@ -656,7 +656,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 5eb1d251-fe04-420b-bcbf-9626f330e9f0
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: ProjektFastStatusSortId
 
 		changedProperty = IsHidden
@@ -707,7 +707,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 867551ba-aa9d-41df-9458-508a5370f285
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: GarantiÅr
 
 		changedProperty = IsHidden
@@ -728,7 +728,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: d7f5c77c-03a9-4071-85bc-df19280eba5d
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: GarantiMånadNr
 
 		changedProperty = IsHidden
@@ -739,7 +739,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: a03fafb0-17cc-4f2a-9b64-1697448894ce
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: VisaGaranti
 
 		changedProperty = IsHidden
@@ -750,7 +750,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: c2153972-93a0-4142-8af6-1c6d1cd5456b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: GiltigaGarantier
 
 		changedProperty = IsHidden
@@ -781,7 +781,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: 76862e23-bc1c-42db-bf6a-23bf9dad532b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: 5årsGarantier
 
 		changedProperty = IsHidden
@@ -802,7 +802,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: f7164107-a1f5-463a-8787-73696c041f66
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: 2årsGarantier
 
 		changedProperty = IsHidden
@@ -823,7 +823,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: d49a9376-772a-418a-91bc-72521280b71d
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Försenad
 
 		annotation SummarizationSetBy = Automatic
@@ -832,7 +832,7 @@ table Projekt
 		dataType: int64
 		formatString: 0
 		lineageTag: d8bfdb4a-01fd-4a2f-8dc4-9908e669a48c
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Sortering Gantt
 
 		annotation SummarizationSetBy = Automatic

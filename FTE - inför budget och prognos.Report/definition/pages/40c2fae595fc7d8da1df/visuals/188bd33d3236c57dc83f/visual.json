@@ -492,6 +492,104 @@
           "selector": {
             "metadata": "Mätvärde.Prognos Bruttolönekostnad"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.05889534282919D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Antal Månader Efter Frånvaro Justering"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "65.73989562264886D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos FTE Före Justering"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.14122070551967D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos FTE Justerad Frånvaro"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "49.31243296017203D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos FTE"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "71.91111528732057D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Notering"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "76.0196206821556D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Prognos Rapporterade Timmar"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "115.79607403413563D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ViewDimAnställdSCD2.Anställningsnummer"
+          }
         }
       ],
       "values": [
@@ -1049,373 +1147,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4ae75d36cd3b1057ade8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewDimAnställdSCD2"
-              }
-            },
-            "Property": "Slag"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a335605868b57ac17a14",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewDimLöneKategori"
-              }
-            },
-            "Property": "Lönekategori"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "55b6be120ed7724e5a5d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewDimAnställdSCD2"
-              }
-            },
-            "Property": "Anställningsnummer"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "662e689a154a4d082856",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewDimAnställdSCD2"
-              }
-            },
-            "Property": "Namn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f7f8967ad6d481946041",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewDimAnställdSCD2"
-              }
-            },
-            "Property": "Anställningsform"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9c5fe1ba979909ed753b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewDimAnställdSCD2"
-              }
-            },
-            "Property": "Befattning"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "795bd5fb620026431471",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewDimAnställdSCD2"
-              }
-            },
-            "Property": "Kostnadsställe"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5fb54fe55d70eebbc4dd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewDimAnställdSCD2"
-              }
-            },
-            "Property": "Födelsedatum"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "445746b54d205a03ae9c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewFactFteJusteradPrognos"
-              }
-            },
-            "Property": "SCD2Anställningsdatum"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a2fd91fab270677484d7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewFactFteJusteradPrognos"
-              }
-            },
-            "Property": "SCD2_AnställningsdatumTom"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "aafa89656dca72b39deb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Ålder"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "18e18c6be0add24b896c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Månadslön"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4d9066bebb1b6505aa02",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Lönetillägg Antal Månader"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e044b37810003e238cb9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Lönetillägg"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d7d0bfb2e3c8970ca06b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Rapporterade Timmar"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d54161c9c970d3d04b42",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Timlön"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4db6486340ea72edd540",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Sysselsättningsgrad"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ad1e57a49bd614c804d6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Antal Månader Enligt Kontrakt"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "01a4f44e4e259bb0a664",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Antal Månader Efter Frånvaro Justering"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "924277ef6c0bb0910821",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos FTE Före Justering"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a5f44ed6e19c9774a508",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos FTE Justerad Frånvaro"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7e98b856966e06c3ae79",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos FTE"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2a200e6a68d79b101843",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Bruttolönekostnad"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ab9532f092005c433269",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Prognos Notering"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "aa4d4a46b29c9049c53b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kostnadsställe"
-              }
-            },
-            "Property": "Controllernamn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "90dc908431dec0215eb8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kostnadsställe"
-              }
-            },
-            "Property": "FunktionsId"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

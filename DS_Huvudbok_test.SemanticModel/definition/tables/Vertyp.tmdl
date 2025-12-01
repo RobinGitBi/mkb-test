@@ -7,7 +7,7 @@ table Vertyp
 		isHidden
 		formatString: 0
 		lineageTag: 4894921c-1709-4bf6-8b67-45a72e7c1c9c
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: VertypSK
 
 		changedProperty = IsHidden

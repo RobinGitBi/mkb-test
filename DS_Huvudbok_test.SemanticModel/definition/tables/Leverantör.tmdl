@@ -7,7 +7,7 @@ table Leverantör
 		isHidden
 		formatString: 0
 		lineageTag: 838d8c72-5d74-4e6c-9910-d98cf1193cf7
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: LeverantörSK
 
 		changedProperty = IsHidden

@@ -12,7 +12,7 @@ table Konto
 		dataType: int64
 		formatString: 0
 		lineageTag: 426b3612-659d-4054-a86c-344681b493a1
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: KontoSK
 
 		changedProperty = IsHidden
