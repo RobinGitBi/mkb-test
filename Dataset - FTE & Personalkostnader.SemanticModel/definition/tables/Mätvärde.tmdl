@@ -1,0 +1,4853 @@
+table Mätvärde
+	lineageTag: f49a15d8-6e2e-442b-ada2-0595cc77505a
+
+	measure 'T0 ÅTD' = CALCULATE( [T0], DATESYTD(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: T0
+		lineageTag: dafbbee1-3e4b-4a71-b29c-24dc8039e002
+
+		changedProperty = DisplayFolder
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T0 fg år-1' = CALCULATE([T0], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: T0
+		lineageTag: 9656f177-59e6-4bdf-9c79-253fe318d6f0
+
+		changedProperty = DisplayFolder
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T0 fg år-1 ÅTD' = CALCULATE( [T0 fg år-1], DATESYTD( Kalender[Datum]))
+		formatString: #,0
+		displayFolder: T0
+		lineageTag: 96f961f9-f43c-4df8-87a7-767ac0404157
+
+		changedProperty = DisplayFolder
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T1 ÅTD' = CALCULATE( [T1], DATESYTD(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: T1
+		lineageTag: e668320b-821b-4ab1-babe-00365ed51196
+
+		changedProperty = DisplayFolder
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T1 fg år-1' = CALCULATE( [T1], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: T1
+		lineageTag: 0d5c4645-a0a2-4cf3-9a22-2ef20565a56b
+
+		changedProperty = DisplayFolder
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T1 fg år-1 ÅTD' = CALCULATE( [T1 fg år-1], DATESYTD( Kalender[Datum]))
+		formatString: #,0
+		displayFolder: T1
+		lineageTag: d6da8b19-0cfb-45ac-9b27-9af23afaa38e
+
+		changedProperty = DisplayFolder
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T2 ÅTD' = CALCULATE( [T2], DATESYTD( Kalender[Datum]))
+		formatString: #,0
+		displayFolder: T2
+		lineageTag: 1222650f-427f-402d-b653-c205af3b1579
+
+		changedProperty = DisplayFolder
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T2 fg år-1 ÅTD' = CALCULATE( [T2 fg år-1], DATESYTD( Kalender[Datum]))
+		formatString: #,0
+		displayFolder: T2
+		lineageTag: 9b9ae531-6a1b-4fa8-a0b4-199ac09e9fe5
+
+		changedProperty = DisplayFolder
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall - Utfall fg år-1' = [Utfall]-[Utfall fg år-1]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 46fe830e-d7df-40b8-b69c-6dbee726e3dc
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		changedProperty = IsHidden
+
+	measure 'Utfall / Utfall fg år-1' =
+			
+			
+			DIVIDE( [Utfall] - [Utfall fg år-1], [Utfall fg år-1], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: 22de3ac1-7887-472a-b7e1-fa3237b4e5ae
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		changedProperty = IsHidden
+
+	measure 'Utfall - T0' = [Utfall]-[T0]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 9d98473a-8ad6-4b66-a6c8-53f38d0fa158
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		changedProperty = IsHidden
+
+	measure 'Utfall / T0' = DIVIDE([Utfall] - [T0], [T0], BLANK())
+		formatString: #,0.0\ %;-#,0.0\ %;#,0.0\ %
+		displayFolder: Differenser
+		lineageTag: c541cf2b-151d-4f33-86f2-27f13f6008da
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		changedProperty = IsHidden
+
+	measure 'Utfall - T1' = [Utfall]-[T1]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 159a120d-a8b3-400c-9c5c-a02a028d75ad
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		changedProperty = IsHidden
+
+	measure 'Utfall / T1' = DIVIDE([Utfall] - [T1], [T1], BLANK())
+		formatString: #,0.0\ %;-#,0.0\ %;#,0.0\ %
+		displayFolder: Differenser
+		lineageTag: 2989d02d-0b58-434f-95b8-486f978e9aee
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		changedProperty = IsHidden
+
+	measure 'Utfall - T2' = [Utfall]-[T2]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 171f4186-bda9-4e81-8395-c4198f8aa0a9
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		changedProperty = IsHidden
+
+	measure 'Utfall / T2' = DIVIDE([Utfall]-[T2], [Utfall]-[T2], BLANK())
+		formatString: #,0.0\ %;-#,0.0\ %;#,0.0\ %
+		displayFolder: Differenser
+		lineageTag: e0b6173a-3228-4dd8-a8f8-3ada37e0cefe
+
+		changedProperty = FormatString
+
+		changedProperty = DisplayFolder
+
+		changedProperty = IsHidden
+
+	measure 'T1 - T0' = [T1] - [T0]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 129d6d8c-00ac-49b2-89c3-cca98230d176
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T2 - T1' = [T2]-[T1]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 97978c10-f9dc-4c21-8376-a1dbb2b3965c
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T1 / T0' = DIVIDE([T1] - [T0],[T0],0)
+		formatString: #,0.0\ %;-#,0.0\ %;#,0.0\ %
+		displayFolder: Differenser
+		lineageTag: f3796f76-b187-42ac-9ac4-cb4b45f0cad9
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T2 / T1' = DIVIDE([T2] - [T1],[T1],0)
+		formatString: #,0.0\ %;-#,0.0\ %;#,0.0\ %
+		displayFolder: Differenser
+		lineageTag: f564b99e-af0b-4a6c-86e0-cb45ff2efae1
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T0 kr/kvm' = DIVIDE( [T0], [Yta justerad], BLANK())
+		formatString: 0
+		displayFolder: T0 kr/kvm
+		lineageTag: 5159333e-d029-4316-911b-e12427266b5f
+
+		changedProperty = IsHidden
+
+		changedProperty = FormatString
+
+	measure 'T0 helår' = CALCULATE([T0], ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear]))
+		formatString: #,0
+		displayFolder: T0
+		lineageTag: d066d8b4-47da-46e3-a562-3bf885fe3314
+
+		changedProperty = IsHidden
+
+		changedProperty = FormatString
+
+	measure IB = - CALCULATE( SUM('Huvudbok'[IngBalans]))//, 'Fact Huvudbok'[Typ] = "Ingående balans")
+		formatString: #,0
+		displayFolder: Balansräkning
+		lineageTag: 3333ddca-c43c-4015-b593-eb25b7290c21
+
+		changedProperty = IsHidden
+
+		changedProperty = FormatString
+
+	measure 'IB helår' = CALCULATE( [IB], ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear]))
+		formatString: #,0
+		displayFolder: Balansräkning
+		lineageTag: 2b8e4de6-e13e-4ceb-ae33-4121840662f8
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure UB = [IB helår] - [Utfall]
+		formatString: #,0
+		displayFolder: Balansräkning
+		lineageTag: 933ebb0e-91d5-4c9e-965f-e78600b3fe2e
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'IB Period' = [UB]- [Utfall]
+		formatString: #,0
+		displayFolder: Balansräkning
+		lineageTag: de294f37-0c44-4ed0-8d99-4dc75aaa83b7
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Antal verifikationer' = DISTINCTCOUNT('Huvudbok'[Vernr])
+		formatString: #,0
+		displayFolder: Antal
+		lineageTag: 71e19d1e-085b-47c4-a058-ad6cb449c2a3
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Antal leverantörer' = DISTINCTCOUNT('Huvudbok'[LeverantörSK])
+		formatString: #,0
+		displayFolder: Antal
+		lineageTag: b2d61e8a-f6a8-4d36-bd81-03a0cc663331
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T0 - T2 fg år-1' = [T0]-[T2 fg år-1]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 3fa26302-1d66-4d06-b730-0e16a235c8d4
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T0 / T2 fg år-1' = DIVIDE([T0], [T2 fg år-1], BLANK())
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 5166fd9c-ae56-4386-ab87-4b9fcc2e0bde
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall fg år-1 ÅTD' = CALCULATE([Utfall ÅTD], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: c72df17f-6061-46f8-b093-eb5b8afa5c17
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'IB fg år-1' =
+			
+			VAR SelectedYear = SELECTEDVALUE(Kalender[År])
+			VAR Result = CALCULATE( [IB], Kalender[Datum] = DATE(SelectedYear - 1, 1, 1))
+			RETURN Result
+		formatString: #,0
+		displayFolder: Balansräkning
+		lineageTag: aa3dbf85-b8e7-4fd3-b385-83009c49be54
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'UB fg år-1' = [IB fg år-1] + [Utfall fg år-1 ÅTD]
+		formatString: #,0
+		displayFolder: Balansräkning
+		lineageTag: 40be8fbf-d2c4-4ebb-bbd5-9361b305e4af
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Yta total' = ```
+			
+			    
+			VAR MaxDate = MAX(Kalender[Datum])
+			VAR Result = CALCULATE(SUM('Yta per segment och kostnadsställe'[TotalYta]), 'Yta per segment och kostnadsställe'[TimeSK] = MaxDate)
+			
+			RETURN Result
+			```
+		displayFolder: Områden\Yta
+		lineageTag: 6e9652f5-21aa-4473-aa70-9152866691e3
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall kr/kvm' = DIVIDE([Utfall], [Yta justerad], BLANK())
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: b8557a2c-b170-4118-909f-8d5d7a3d1b1d
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T1 kr/kvm' = DIVIDE([T1], [Yta justerad], BLANK())
+		formatString: #,0
+		displayFolder: T1 kr/kvm
+		lineageTag: db9253f4-825e-44ac-a9bf-a8f01bd76d2a
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T2 kr/kvm' = DIVIDE([T2], [Yta justerad], BLANK())
+		formatString: #,0
+		displayFolder: T2 kr/kvm
+		lineageTag: 568008bc-20cb-433b-a717-12d7e50dba3b
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall fg år-1 kr/kvm' = DIVIDE([Utfall fg år-1], [Yta justerad fg år-1], BLANK())
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: 506d8e17-ee21-46ac-8858-f70df96ecc5c
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Yta justerad fg år-1' = CALCULATE([Yta justerad], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Områden\Yta
+		lineageTag: 84b4631c-23de-4ee5-ab8a-1784d623dc2b
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Yta prognos total' =
+			// hette "Yta fryst" tidigare
+			
+			VAR MaxSelectedPeriod = MAX(Kalender[Datum])
+			
+			RETURN CALCULATE( SUM('Yta per segment och kostnadsställe'[PrognosTotalYta]), Kalender[Datum] = MaxSelectedPeriod)
+		formatString: #,0
+		displayFolder: Områden\Yta
+		lineageTag: 59c31468-b012-44c3-98bf-5ae8ff725458
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Yta justerad' = ```
+			// Visa värdet för senaste vald period 
+			VAR MaxDate = MAX(Kalender[Datum])
+			
+			VAR Result = CALCULATE( SUM( 'Yta per segment och kostnadsställe'[JusteradTotalYta]), Kalender[Datum] = MaxDate)
+			
+			RETURN Result
+			```
+		formatString: #,0
+		displayFolder: Områden\Yta
+		lineageTag: aae3019b-3336-4e05-b8d5-f712e91ac503
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Yta justerad nästa år' = CALCULATE([Yta justerad], DATEADD(Kalender[Datum], 1, YEAR))
+		formatString: #,0
+		displayFolder: Områden\Yta
+		lineageTag: 8a2aeda6-f655-4f76-97ec-42077da18854
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T0 kr/kvm prognos total' = DIVIDE([T0], [Yta prognos total], BLANK())
+		displayFolder: T0 kr/kvm
+		lineageTag: 2288a947-40a0-467a-94e9-bca04abf2a47
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'T1 kr/kvm prognos total' = DIVIDE([T1], [Yta prognos total], 0)
+		formatString: #,0
+		displayFolder: T1 kr/kvm
+		lineageTag: bebccf60-0daa-4c77-a5df-8e9402af7340
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'T2 kr/kvm prognos total' = DIVIDE([T2], [Yta prognos total], 0)
+		formatString: #,0
+		displayFolder: T2 kr/kvm
+		lineageTag: 0c3e53b2-1f95-4da3-b5c7-7b6fe365ee66
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Yta prognos total fg år-1' = CALCULATE([Yta prognos total], DATEADD(Kalender[Datum], -1, YEAR))
+		formatString: #,0
+		displayFolder: Områden\Yta
+		lineageTag: a98c667b-08ec-4747-bfc3-cc7ecb8f1eef
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Yta prognos total nästa år' = CALCULATE([Yta prognos total], DATEADD(Kalender[Datum], 1, YEAR))
+		formatString: #,0
+		displayFolder: Områden\Yta
+		lineageTag: c1d2dc72-4717-4399-9eea-3c7065ef5f49
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall fg år-1 kr/kvm prognos total' = DIVIDE([Utfall fg år-1], [Yta prognos total fg år-1], BLANK())
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: d4d26be7-c5a5-4889-afa8-157caf11bdaf
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall kr/kvm prognos total' = DIVIDE([Utfall], [Yta prognos total], BLANK())
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: 95529c9b-3c36-4944-9a9b-673cdc77a54e
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall fg helår-1' = ```
+			CALCULATE([Utfall fg år-1], 
+			    ALLEXCEPT( Kalender, 
+			    Kalender[År], 
+			    Kalender[År med senast stängda månad 11:e], 
+			    Kalender[DefaultYear],
+			    Kalender[NuvarandeÅr]
+			    )
+			    )
+			```
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: 7fc41e4d-d05a-4d2f-8e89-0d0d551e69d2
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall fg helår-1 kr/kvm prognos total' = DIVIDE([Utfall fg helår-1], [Yta prognos total fg år-1], 0)
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: 0ab2b5fb-cc75-47bd-93d2-4275f58adee4
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall fg år-2' = CALCULATE([Utfall], DATEADD(Kalender[Datum], -2, YEAR))
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: cc93bdcd-5a7b-4eec-be31-3ede0e7e6d0d
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall fg helår-2' = ```
+			CALCULATE([Utfall fg år-2], 
+			    ALLEXCEPT( Kalender, 
+			    Kalender[År], 
+			    Kalender[År med senast stängda månad 11:e], 
+			    Kalender[DefaultYear],
+			    Kalender[NuvarandeÅr]
+			    ))
+			```
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: 04035d08-b75c-4dd3-ac57-fa9bbe3336a5
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall fg helår-2 kr/kvm prognos total' = DIVIDE([Utfall fg helår-2], [Yta prognos total fg år-2], BLANK())
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: 50188c8a-6618-439c-921f-cc2d87274cf8
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Yta prognos total fg år-2' = CALCULATE([Yta prognos total], DATEADD(Kalender[Datum], -2, YEAR))
+		formatString: #,0
+		displayFolder: Områden\Yta
+		lineageTag: f666a830-2408-4198-9625-d0f3b554dc75
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Yta justerad fg år-2' = CALCULATE([Yta justerad], DATEADD(Kalender[Datum], -2, YEAR))
+		formatString: #,0
+		displayFolder: Områden\Yta
+		lineageTag: d9801303-da74-4001-a122-607da0c448d4
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall fg helår-2 kr/kvm' = DIVIDE([Utfall fg helår-2], [Yta justerad fg år-2], 0)
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: bb397bef-e41c-4d73-a121-fb7b4159336a
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Utfall fg helår-1 kr/kvm' = DIVIDE([Utfall fg helår-1], [Yta justerad fg år-1], 0)
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: c527a497-4d78-4345-ade0-a7e1ca907344
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Osäkra hyresfordringar' =
+			// Johan Falk 2022-09
+			
+			VAR Result =
+			SUMX('Konto',
+			        IF('Konto'[KontoNr] = 1516 || 'Konto'[KontoNr] = 1518,
+			              [IB helår] + [Utfall ÅTD],
+			             - [IB helår] - [Utfall ÅTD])
+			        )
+			
+			RETURN Result
+		formatString: #,0
+		displayFolder: Kundreskontra
+		lineageTag: d13f490b-4d68-4454-bfe2-0561a0c82928
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Valt datumintervall' = FORMAT(MIN(Kalender[Datum]), "YYYY-MM-DD") & " - " & FORMAT(MAX(Kalender[Datum]), "YYYY-MM-DD")
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 441b7868-b872-4231-bfde-910458ed205e
+
+		changedProperty = IsHidden
+
+	measure 'Genomsnittligt utfall per område' =
+			
+			AVERAGEX( VALUES('Kostnadsställe'[OmrådeNamn]), [Utfall])
+		formatString: #,0
+		displayFolder: Utfall\Genomsnitt
+		lineageTag: 0dc9b71a-89e2-490c-901d-eb6c6004e839
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Genomsnittligt utfall per område alla områden' =
+			
+			CALCULATE([Genomsnittligt utfall per område], ALL('Kostnadsställe'[OmrådeNamn]))
+		formatString: #,0
+		displayFolder: Utfall\Genomsnitt
+		lineageTag: 4bf0da8f-d4dd-4c95-8bbc-480fb15462bd
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Genomsnittligt utfall kr/kvm per område alla områden' =
+			
+			CALCULATE( [Utfall kr/kvm], ALL('Kostnadsställe'[OmrådeNamn]), 'Kostnadsställe'[Aktuell yta] > 0)
+		formatString: #,0
+		displayFolder: Utfall kr/kvm\Genomsnitt
+		lineageTag: b4097d96-fa86-4e99-94e1-cdc26e145041
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Genomsnittligt utfall kr/kvm per område' =
+			
+			CALCULATE( [Utfall kr/kvm],  'Kostnadsställe'[Aktuell yta] > 0)
+		formatString: #,0
+		displayFolder: Utfall kr/kvm\Genomsnitt
+		lineageTag: e513afc9-81d6-48d2-87f8-91a8c852d472
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Diff utfall per område mot utfall per område alla områden' =
+			
+			IF( ISFILTERED( 'Kostnadsställe'[OmrådeNamn]),
+			    [Genomsnittligt utfall per område] - [Genomsnittligt utfall per område alla områden],
+			     BLANK())
+		formatString: #,0
+		displayFolder: Utfall\Genomsnitt
+		lineageTag: cbaae319-a83b-4d99-a949-7092f691b421
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Diff utfall per område mot utfall per område alla områden %' = - DIVIDE( [Diff utfall per område mot utfall per område alla områden], [Genomsnittligt utfall per område alla områden], BLANK())
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Utfall\Genomsnitt
+		lineageTag: 36aa3652-4c0b-4b30-afd8-85162cb4f5d7
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Diff utfall kr/kvm per område mot utfall per område alla områden' =
+			
+			IF( ISFILTERED( 'Kostnadsställe'[OmrådeNamn]),
+			    [Genomsnittligt utfall kr/kvm per område] - [Genomsnittligt utfall kr/kvm per område alla områden] ,
+			    BLANK())
+		formatString: #,0
+		displayFolder: Utfall kr/kvm\Genomsnitt
+		lineageTag: bacc75fa-ab13-4e08-ab89-74f9dc8657bd
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Diff utfall kr/kvm per område mot utfall per område alla områden %' = - DIVIDE( [Diff utfall kr/kvm per område mot utfall per område alla områden], [Genomsnittligt utfall kr/kvm per område alla områden], BLANK())
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Utfall kr/kvm\Genomsnitt
+		lineageTag: f9e09cf7-5afb-4d8a-908f-42f99c3e3760
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Valt område' = ```
+			
+			IF( HASONEVALUE( 'Kostnadsställe'[OmrådeNamn]), 
+			    MAX('Kostnadsställe'[OmrådeNamn]), 
+			    IF( ISFILTERED( 'Kostnadsställe'[OmrådeNamn]), 
+			        "Flera områden valda",
+			        "Alla områden valda"))
+			```
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 16f90444-5eae-4eb3-9d4f-869c5eb2c85a
+
+		changedProperty = IsHidden
+
+	measure 'Vald kostnadspost level 1' =
+			
+			
+			VAR ValdKostnadspost =
+			IF( HASONEVALUE('Konto'[RRLev1Namn]),
+			    MAX('Konto'[RRLev1Namn]),
+			    IF( ISFILTERED('Konto'[RRLev1Namn]),
+			        "Flera kostnadsposter valda",
+			        "Alla kostnadsposter valda"))
+			
+			RETURN ValdKostnadspost
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: bce1684c-fe53-4755-881b-23ded0969a38
+
+		changedProperty = IsHidden
+
+	measure 'Vald kostnadspost level 2' =
+			
+			
+			VAR ValdKostnadspost =
+			IF( HASONEVALUE('Konto'[RRLev2Namn]),
+			    MAX('Konto'[RRLev2Namn]),
+			    IF( ISFILTERED('Konto'[RRLev2Namn]),
+			        "Flera kostnadsposter valda",
+			        "Alla kostnadsposter valda"))
+			
+			RETURN ValdKostnadspost
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 166f92bb-bc43-411f-a844-e38cdf332d78
+
+		changedProperty = IsHidden
+
+	measure 'Vald kostnadspost level 3' =
+			
+			
+			VAR ValdKostnadspost =
+			IF( HASONEVALUE('Konto'[RRLev3Namn]),
+			    MAX('Konto'[RRLev3Namn]),
+			    IF( ISFILTERED('Konto'[RRLev3Namn]),
+			        "Flera kostnadsposter valda",
+			        "Alla kostnadsposter valda"))
+			
+			RETURN ValdKostnadspost
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 10b69315-ebb9-405e-9070-83e62d6a9897
+
+		changedProperty = IsHidden
+
+	measure 'Conditional formatting calculation group' = ```
+			
+			
+			IF( 
+			    MAX('Välj Finansmätvärde'[Välj Finansmätvärde]) = "Utfall" && SELECTEDVALUE('Calculation Group genomsnitt per område'[Name]) = "Diff valda mot alla områden %",
+			    [Utfall],
+			    IF(
+			        MAX('Välj Finansmätvärde'[Välj Finansmätvärde]) = "Utfall kr/kvm" && SELECTEDVALUE('Calculation Group genomsnitt per område'[Name]) = "Diff valda mot alla områden %",
+			        [Utfall kr/kvm]))
+			
+			
+			```
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: 0a9fdcf4-c57c-4006-bab5-b0432e9075b2
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal områden op kst' = ```
+			CALCULATE( COUNTROWS( VALUES( 'Kostnadsställe'[OmrådeNamn] ) ), FILTER( 'Kostnadsställe', [KostnadsställeTypNamn] = "Op Kst (Fastighet)" ) ) 
+			```
+		displayFolder: Områden
+		lineageTag: a06b363f-ac2a-470c-a1a5-f6cc12168aea
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Faktor FastKat' = DIVIDE([Yta justerad], [Yta prognos total], BLANK())
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Områden
+		lineageTag: cda04038-c961-4515-b750-e3a3d071fa66
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'Genomsnittligt utfall kr/kvm per område alla kostnadsställen' =
+			
+			CALCULATE( [Utfall kr/kvm], ALL('Kostnadsställe'[KostnadsställeNamn]), 'Kostnadsställe'[Aktuell yta] > 0)
+		formatString: #,0
+		displayFolder: Utfall kr/kvm\Genomsnitt
+		lineageTag: c3d4b342-1933-4244-80c4-17355cf9e675
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure Utfall = ```
+			- CALCULATE( 
+			    SUM('Huvudbok'[Utfall]),
+			    'Huvudbok'[Typ] = "Utfall"
+			    )
+			```
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: c6485bc6-b5f9-43bf-bda9-7952aa4b6038
+
+		changedProperty = IsHidden
+
+		changedProperty = FormatString
+
+	measure T0 = -CALCULATE( SUM('Huvudbok'[BudgetT0]), 'Huvudbok'[Typ] = "Budget")
+		formatString: #,0
+		displayFolder: T0
+		lineageTag: b50a994a-17f7-4298-a890-86594dc2cdfa
+
+		changedProperty = IsHidden
+
+		changedProperty = FormatString
+
+	measure T1 = -CALCULATE( SUM('Huvudbok'[BudgetT1]), 'Huvudbok'[Typ] = "Budget")
+		formatString: #,0
+		displayFolder: T1
+		lineageTag: 19541a69-9a6e-4fad-aa21-cbc9b209f4d3
+
+		changedProperty = IsHidden
+
+		changedProperty = FormatString
+
+	measure T2 = -CALCULATE( SUM('Huvudbok'[BudgetT2]), 'Huvudbok'[Typ] = "Budget")
+		formatString: #,0
+		displayFolder: T2
+		lineageTag: eb483e1b-cd61-4b89-a6b4-c0c88ab0d560
+
+		changedProperty = IsHidden
+
+		changedProperty = FormatString
+
+	measure 'Utfall ÅTD' = CALCULATE( [Utfall], DATESYTD(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: e71cd399-fe91-4bdf-a7ac-1e0b79167360
+
+		changedProperty = FormatString
+
+	measure 'T2 fg år-1' = CALCULATE( [T2], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		displayFolder: T2
+		lineageTag: d4c5bd67-58ff-43ee-8f8e-166c2e078b9d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall fg år-1' = CALCULATE([Utfall], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: c0d58823-5dd9-49ff-b894-cb83372a58c4
+
+		changedProperty = FormatString
+
+	measure 'T0 nästa år helår' =
+			
+			
+			VAR SelectedYear = MAX(Kalender[År])
+			VAR Result = CALCULATE( [T0 helår], Kalender[År] = SelectedYear + 1)
+			
+			RETURN Result
+			
+			//CALCULATE( [T0 helår], DATEADD(Kalender[Datum], 1, YEAR)) // går inte, vi kan inte ta alla år och samtidigt flytta fram ett år...
+		formatString: #,0
+		displayFolder: T0
+		lineageTag: 06da5e4a-a25c-42b3-9f9b-17247ea72d87
+
+		changedProperty = FormatString
+
+	measure 'T0 nästa år helår kr/kvm' = DIVIDE( [T0 nästa år helår], [Yta justerad], BLANK())
+		formatString: #,0
+		displayFolder: T0 kr/kvm
+		lineageTag: aeae090e-5901-484a-a960-6a8c6a6ac28f
+
+		changedProperty = FormatString
+
+	measure 'T0 nästa år' = ```
+			
+			
+			CALCULATE( [T0], DATEADD(Kalender[Datum], 1, YEAR))
+			
+			
+			```
+		formatString: #,0
+		displayFolder: T0
+		lineageTag: e47a63ea-fd5a-48a7-9200-e7357dcc41ae
+
+		changedProperty = FormatString
+
+	measure 'T0 nästa år kr/kvm' = DIVIDE( [T0 nästa år], [Yta justerad], BLANK())
+		formatString: #,0
+		displayFolder: T0 kr/kvm
+		lineageTag: 5a973a8b-637e-4c45-b7fc-a2039cb4c4af
+
+		changedProperty = FormatString
+
+	measure 'Utfall helår' = ```
+			CALCULATE(
+			    [Utfall], 
+			    ALLEXCEPT( Kalender, 
+			    Kalender[År], 
+			    Kalender[År med senast stängda månad 11:e], 
+			    Kalender[DefaultYear],
+			    Kalender[NuvarandeÅr]
+			    ))
+			```
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: caa73df0-a456-4df7-9661-d4c6ba490ce5
+
+		changedProperty = FormatString
+
+	measure 'T0 helår kr/kvm' = CALCULATE([T0 kr/kvm], ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear]))
+		formatString: #,0
+		displayFolder: T0 kr/kvm
+		lineageTag: 5d97e4cd-7330-411d-8ccd-9936d789fdc3
+
+		changedProperty = FormatString
+
+	measure 'T1 helår kr/kvm' = CALCULATE([T1 kr/kvm], ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear]))
+		formatString: #,0
+		displayFolder: T1 kr/kvm
+		lineageTag: b5fabc05-080d-4491-944e-dd8eb1f582dd
+
+		changedProperty = FormatString
+
+	measure 'T2 helår kr/kvm' = CALCULATE([T2 kr/kvm], ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear]))
+		formatString: #,0
+		displayFolder: T2 kr/kvm
+		lineageTag: 4478decf-5f4d-488f-a330-7f520b40ca07
+
+		changedProperty = FormatString
+
+	measure 'T1 helår' = CALCULATE([T1], ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear]))
+		formatString: #,0
+		displayFolder: T1
+		lineageTag: b839a96f-4cd4-48c6-94a7-7c221e33a3b4
+
+		changedProperty = FormatString
+
+	measure 'T2 helår' = CALCULATE([T2], ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear]))
+		formatString: #,0
+		displayFolder: T2
+		lineageTag: dc891df4-850a-4b19-8752-237c0239d70b
+
+		changedProperty = FormatString
+
+	measure 'Utfall helår kr/kvm' = DIVIDE([Utfall helår], [Yta justerad], BLANK())
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: f356a1e5-7e8e-4cf3-a766-4431f159140a
+
+		changedProperty = FormatString
+
+	measure 'Osäkra hyresfordringar fg år' =
+			
+			VAR MaxDate = MAX( Kalender[Datum])
+			
+			VAR Utfall = CALCULATE( [Utfall ÅTD], DATEADD(Kalender[Datum], -1, YEAR))
+			
+			VAR IB = [IB fg år-1]
+			
+			VAR Result =
+			SUMX('Konto',
+			        IF('Konto'[KontoNr] = 1516,
+			              IB + Utfall,
+			             - IB - Utfall
+			        ))
+			
+			RETURN Result
+		displayFolder: Kundreskontra
+		lineageTag: 0cda0a6d-b0da-4909-b5a9-bd8add300dd2
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Osäkra hyresfordringar mot fg år' = [Osäkra hyresfordringar] - [Osäkra hyresfordringar fg år]
+		formatString: #,0
+		displayFolder: Kundreskontra
+		lineageTag: e557e83e-7a88-41df-92b9-8c676e866398
+
+		changedProperty = FormatString
+
+	measure 'Osäkra hyresfordringar mot fg år %' = DIVIDE( [Osäkra hyresfordringar mot fg år], [Osäkra hyresfordringar fg år], BLANK())
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Kundreskontra
+		lineageTag: c1067787-53ac-4e82-82b8-f851fc2c2575
+
+		changedProperty = FormatString
+
+	measure 'Conditional formatting investeringar' = 1
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: 7f0f0fca-9f58-44f3-8b6d-8e3058e49c2b
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall - Utfall fg år-1 ÅTD' = [Utfall ÅTD]-[Utfall fg år-1 ÅTD]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 975ee305-0120-4926-a47c-76c5bff1b309
+
+		changedProperty = FormatString
+
+	measure 'Utfall / Utfall fg år-1 ÅTD' =
+			
+			
+			DIVIDE( [Utfall ÅTD] - [Utfall fg år-1 ÅTD], [Utfall fg år-1 ÅTD], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: b8b1d6d7-39b2-4f82-ab0b-18e822808828
+
+		changedProperty = FormatString
+
+	measure 'T0 - T2' = [T0] - [T2]
+		displayFolder: Differenser
+		lineageTag: cf60c5b3-8a5f-47ac-88c7-5e75288513c3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'T0 / T2' = DIVIDE( [T0] - [T2], [T2], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: 0355866d-d0b5-492f-b756-3bc9a9b159b5
+
+		changedProperty = FormatString
+
+	measure 'T0 nästa år ÅTD' =
+			
+			
+			CALCULATE( [T0 nästa år], DATESYTD( Kalender[Datum]))
+		formatString: #,0
+		displayFolder: T0
+		lineageTag: 58996258-7f0f-481b-88a2-b6a4dd02a9c3
+
+		changedProperty = FormatString
+
+	measure 'Utfall - T0 ÅTD' =
+			
+			
+			VAR Diff = [Utfall ÅTD] - [T0 ÅTD]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Result
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 5027b8b8-3f42-4fe9-a3dd-18b05f19c587
+
+		changedProperty = FormatString
+
+	measure 'Utfall - T1 ÅTD' =
+			
+			
+			
+			
+			VAR Diff = [Utfall ÅTD] - [T1 ÅTD]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Result
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: b7280f97-87ae-4b85-9c15-7dcb0e237b64
+
+		changedProperty = FormatString
+
+	measure 'Utfall - T2 ÅTD' = ```
+			
+			
+			
+			VAR Diff = [Utfall ÅTD] - [T2 ÅTD]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Result
+			
+			
+			```
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 1fd14d9a-6e37-4ab2-a7f2-80a6ad8dc8c5
+
+		changedProperty = FormatString
+
+	measure 'Utfall / T0 ÅTD' = DIVIDE( [Utfall ÅTD] - [T0 ÅTD], [T0 ÅTD], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: fb8ec55d-595f-44fc-a60a-53efb59b6433
+
+		changedProperty = FormatString
+
+	measure 'Utfall / T1 ÅTD' = DIVIDE( [Utfall ÅTD] - [T1 ÅTD], [T1 ÅTD], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: aee93223-b079-4c30-b881-67e7f23e8610
+
+		changedProperty = FormatString
+
+	measure 'Utfall / T2 ÅTD' = DIVIDE( [Utfall ÅTD] - [T2 ÅTD], [T2 ÅTD], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: 75441c03-0ba2-4081-a944-3b8d9947b209
+
+		changedProperty = FormatString
+
+	measure 'T0 nästa år - T2 ÅTD' = [T0 nästa år ÅTD] - [T2 ÅTD]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 44c42605-516c-49d3-8245-45f7f4ff9815
+
+		changedProperty = FormatString
+
+	measure 'T0 nästa år / T2 ÅTD' = DIVIDE( [T0 nästa år ÅTD] - [T2 ÅTD], [T2 ÅTD], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: 8b2983a4-e3b3-4213-af61-e281c06a5483
+
+		changedProperty = FormatString
+
+	measure 'T2 - T1 ÅTD' = [T2 ÅTD] - [T1 ÅTD]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 423f4d9c-b048-43f8-8e8a-f3e71425ca11
+
+		changedProperty = FormatString
+
+	measure 'T2 / T1 ÅTD' = DIVIDE( [T2 ÅTD] - [T1 ÅTD], [T1 ÅTD], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: 98552c87-2b83-4bc6-86d2-6ee702c01f28
+
+		changedProperty = FormatString
+
+	measure 'T1 - T0 ÅTD' = [T1 ÅTD] - [T0 ÅTD]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 4775c243-334e-4c9d-99d3-ae4205764f4c
+
+		changedProperty = FormatString
+
+	measure 'T1 / T0 ÅTD' = DIVIDE( [T1 ÅTD] - [T0 ÅTD], [T0 ÅTD], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: 380df6da-87da-4604-8c2d-0a678677c824
+
+		changedProperty = FormatString
+
+	measure 'Utfall ÅTD - T0 helår' = [Utfall ÅTD] - [T0 helår]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 63f87e02-d665-4bed-9598-f76499c24df2
+
+		changedProperty = FormatString
+
+	measure 'Utfall ÅTD / T0 helår' = DIVIDE( [Utfall ÅTD] - [T0 nästa år helår], [T0 helår], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: be1a515a-6822-4be3-90cd-e8fccbb97573
+
+		changedProperty = FormatString
+
+	measure 'Utfall ÅTD - T1 helår' = [Utfall ÅTD] - [T1 helår]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: b599d223-8bfa-4371-852a-911378e279e1
+
+		changedProperty = FormatString
+
+	measure 'Utfall ÅTD - T2 helår' = [Utfall ÅTD] - [T2 helår]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 35f6e610-11af-421b-bb53-942167f915de
+
+		changedProperty = FormatString
+
+	measure 'Utfall ÅTD / T1 helår' = DIVIDE( [Utfall ÅTD] - [T1 helår], [T1 helår], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: b3768c70-8a3b-4e24-81d2-1c3e46df4b34
+
+		changedProperty = FormatString
+
+	measure 'Utfall ÅTD / T2 helår' = DIVIDE( [Utfall ÅTD] - [T2 helår], [T2 helår], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: e5bd60bf-eda2-4595-be0d-b3ca190cf80a
+
+		changedProperty = FormatString
+
+	measure 'T1 - T0 helår' = [T1 helår] - [T0 helår]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 41beca64-b750-4828-8972-24572a0f6f07
+
+		changedProperty = FormatString
+
+	measure 'T1 / T0 helår' = DIVIDE( [T1 helår] - [T0 helår], [T0 helår], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: bac14c42-65d5-44be-99aa-9abc3c8fb14a
+
+		changedProperty = FormatString
+
+	measure 'T2 - T1 helår' = [T2 helår] - [T1 helår]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: e8914607-52ef-4e96-baee-fa9c7692e273
+
+		changedProperty = FormatString
+
+	measure 'T2 / T1 helår' = DIVIDE( [T2 helår] - [T1 helår], [T1 helår], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: 92a1b7bc-b5eb-4209-a4e0-6b47e5109fb4
+
+		changedProperty = FormatString
+
+	measure 'T0 nästa år - T2 helår' = [T0 nästa år helår] - [T2 helår]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 67fd0fa8-63b2-4005-b120-3749d1b2c683
+
+		changedProperty = FormatString
+
+	measure 'T0 nästa år / T2 helår' = DIVIDE( [T0 nästa år helår] - [T2 helår], [T2 helår], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: c5c2727c-d28d-4834-b444-a08205704fa7
+
+		changedProperty = FormatString
+
+	measure 'Titel kolumn resultatuppföljning' =
+			
+			IF( COUNTROWS( 'Välj kolumner resultatuppföljning') = 1,
+			    "Utfall per " & MAX( 'Välj kolumner resultatuppföljning'[Välj kolumner resultatuppföljning]),
+			    "Utfall")
+		isHidden
+		displayFolder: Conditional formatting\Resultatuppföljning
+		lineageTag: cbb2283c-ac7c-489e-86e8-8c03a061c048
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Vald post i PnL' = ```
+			
+			
+			VAR Result = // visar fel när det endast är en post under en annan och det blir flera som är rätt..
+			IF( HASONEVALUE( Konto[RRLev5Namn] ), 
+			    MAX( Konto[RRLev5Namn] ),
+			    IF( HASONEVALUE( Konto[RRLev4Namn] ), 
+			        MAX( Konto[RRLev4Namn] ),
+			        IF( HASONEVALUE( Konto[RRLev3Namn] ), 
+			            MAX( Konto[RRLev3Namn] ),
+			            IF( HASONEVALUE( Konto[RRLev2Namn] ), 
+			                MAX( Konto[RRLev2Namn] ),
+			                IF( HASONEVALUE( Konto[RRLev1Namn] ), 
+			                    MAX( Konto[RRLev1Namn] ),
+			                    IF( HASONEVALUE( PNLStructure[PNLDescr] ), 
+			                        MAX( PNLStructure[PNLDescr] ),
+			                        "Flera poster valda"))))))
+			
+			
+			VAR Result2 =
+			IF( HASONEVALUE( PNLStructure[PNLDescr] ), 
+			    IF( HASONEVALUE( Konto[RRLev1Namn] ), 
+			        IF( HASONEVALUE( Konto[RRLev2Namn] ), 
+			        MAX( PNLStructure[PNLDescr] ) & " - " & MAX( Konto[RRLev1Namn] ) & " - " & MAX( Konto[RRLev2Namn] ),
+			        MAX( PNLStructure[PNLDescr] ) & " - " & MAX( Konto[RRLev1Namn] )),
+			        MAX( PNLStructure[PNLDescr] )),
+			    "Flera poster valda")
+			
+			VAR Result3 =
+			IF( HASONEVALUE( PNLStructure[PNLDescr] ), 
+			    IF( HASONEVALUE( Konto[RRLev1Namn] ), 
+			        IF( HASONEVALUE( Konto[RRLev2Namn] ), 
+			            IF( HASONEVALUE( Konto[RRLev3Namn] ), 
+			                IF( HASONEVALUE( Konto[RRLev4Namn] ), 
+			                    IF( HASONEVALUE( Konto[RRLev5Namn] ), 
+			                        MAX( PNLStructure[PNLDescr] ) & " - " & MAX( Konto[RRLev1Namn] ) & " - " & 
+			                            MAX( Konto[RRLev2Namn] )  & " - " & MAX( Konto[RRLev3Namn] ) & " - " & 
+			                            MAX( Konto[RRLev4Namn] ) & " - " & MAX( Konto[RRLev5Namn] ),
+			                        MAX( PNLStructure[PNLDescr] ) & " - " & MAX( Konto[RRLev1Namn] ) & " - " & 
+			                        MAX( Konto[RRLev2Namn] )  & " - " & MAX( Konto[RRLev3Namn] ) & " - " & MAX( Konto[RRLev4Namn] )),
+			                    MAX( PNLStructure[PNLDescr] ) & " - " & MAX( Konto[RRLev1Namn] ) & " - " & 
+			                    MAX( Konto[RRLev2Namn] )  & " - " & MAX( Konto[RRLev3Namn] )),
+			                MAX( PNLStructure[PNLDescr] ) & " - " & MAX( Konto[RRLev1Namn] ) & " - " & MAX( Konto[RRLev2Namn] )),
+			            MAX( PNLStructure[PNLDescr] ) & " - " & MAX( Konto[RRLev1Namn] )),
+			        MAX( PNLStructure[PNLDescr] )),
+			    "Flera poster valda")
+			
+			RETURN Result3
+			```
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 8c88d054-6209-47dc-87a0-2584e9958d85
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Upparbetningsgrad T0 helår' = DIVIDE( [Utfall], [T0 helår], BLANK())
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Upparbetningsgrad
+		lineageTag: af60cfcd-24ab-47a1-bb57-1f056dfe75a7
+
+	measure 'Upparbetningsgrad T1 helår' = DIVIDE( [Utfall], [T1 helår], BLANK())
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Upparbetningsgrad
+		lineageTag: b4c5eed3-227b-4b51-a9de-4fb8337aa028
+
+	measure 'Upparbetningsgrad T2 helår' = DIVIDE( [Utfall], [T2 helår], BLANK())
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Upparbetningsgrad
+		lineageTag: 026bc555-f2c0-46a7-a4a1-4464f542349c
+
+	measure 'Titel resultatuppföljning kostnader' = "Kostnader " & [Valt datumintervall] & " jämfört med " & [Valt datumintervall fg år]
+		isHidden
+		displayFolder: Conditional formatting\Resultatuppföljning
+		lineageTag: a333dbb8-7069-4e84-82a5-1bf90c4e4776
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valt datumintervall fg år' =
+			
+			VAR PYmin = EDATE(MIN(Kalender[Datum]), -12)
+			VAR PYmax = EDATE(MAX(Kalender[Datum]), -12)
+			
+			VAR Result = FORMAT(PYmin, "YYYY-MM-DD") & " - " & FORMAT(PYmax, "YYYY-MM-DD")
+			
+			RETURN Result
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: e0c7f027-c871-435f-a5bb-17889f90823d
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall fg år-3' = CALCULATE([Utfall], DATEADD(Kalender[Datum], -3, YEAR))
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: fc294814-65c1-4df2-a052-7e330308cc12
+
+	measure 'Color formatting diff standardmätvärden' = ```
+			
+			
+			VAR MonthToday = MONTH(TODAY())
+			
+			VAR Diff= [Diff Jämförelsevärde1 mot Jämförelsevärde2]
+			
+			VAR Result = 
+			IF( Diff < 0,
+			    "#FF8F8F", // rött //     "#FFED97",// gult
+			    "#7EFF7E") // grönt
+			
+			VAR ResultOmStandardIsFiltered = IF( [Valda jämförelsevärden är standard 1 annars 0] = 1, Result, "#E6E6E6")
+			
+			RETURN Result
+			```
+		isHidden
+		displayFolder: Conditional formatting\Resultatuppföljning
+		lineageTag: 9481f754-22bc-4944-9b16-c0f3274ebfd9
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Titel med RRLev1namn diff fg år ÅTD' = ```
+			
+			
+			VAR MonthToday = MONTH(TODAY())
+			VAR Diff= [Diff Jämförelsevärde1 mot Jämförelsevärde2 %]
+			
+			VAR CheckIfZero = IF( Diff > -0.005 && Diff < 0.005, 1, 0)
+			
+			VAR DiffFormatted = 
+			    IF( Diff > 0, "+" & FORMAT(Diff*100, "#"), FORMAT(Diff*100, "#") )
+			    & " %"
+			
+			VAR Result = 
+			IF( CheckIfZero = 1,
+			    MAX(Konto[RRLev1Namn]) & " 0 %",
+			    MAX(Konto[RRLev1Namn]) & " " &  DiffFormatted)
+			
+			RETURN Result
+			
+			```
+		isHidden
+		displayFolder: Conditional formatting\Resultatuppföljning
+		lineageTag: b712b7f8-0232-4c77-ab1f-f0cfb0569366
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Titel med PnLDescr diff fg år ÅTD' = ```
+			
+			
+			VAR MonthToday = MONTH(TODAY())
+			
+			VAR Diff=
+			SWITCH( MAX( 'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde]),
+			    "T0", [Utfall / T0 ÅTD],
+			    "T1", [Utfall / T1 ÅTD],
+			    "T2", [Utfall / T2 ÅTD],
+			    "Fg år", [Utfall / Utfall fg år-1 ÅTD])
+			
+			VAR Result = 
+			IF( Diff > 0,
+			    MAX(PNLStructure[PNLDescr]) & " +" &  FORMAT(Diff*100, "#") & " %",
+			    MAX(PNLStructure[PNLDescr]) & " " &  FORMAT(Diff*100, "#") & " %")
+			
+			RETURN Result
+			
+			
+			```
+		isHidden
+		displayFolder: Conditional formatting\Resultatuppföljning
+		lineageTag: de0f6a76-f240-4996-b1b6-ec0207de1b8c
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall stängda månader' = CALCULATE( [Utfall], Kalender[Stängd månad] = "Stängd månad")
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: 7885a2e8-ec9d-4119-a8b0-0c369c974293
+
+	measure 'Utfall ÅTD visa endast stängda månader' =
+			
+			VAR MaxDate = MAX(Kalender[Datum])
+			
+			VAR LastClosedDate = CALCULATE( MAX(Kalender[Datum]), Kalender[Stängd månad] = "Stängd månad")
+			
+			VAR Result = IF( MaxDate <= LastClosedDate, [Utfall ÅTD], BLANK())
+			
+			RETURN Result
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: 6f82f0a2-8ed2-40a9-9a53-38e95aece2e4
+
+	measure 'Color formatting diff standardmätvärden inverterat' = ```
+			// Används för intäkter och driftnetto i Resultatuppföljning
+			
+			VAR MonthToday = MONTH(TODAY())
+			
+			VAR Diff= [Diff Jämförelsevärde1 mot Jämförelsevärde2]
+			
+			VAR Result = 
+			IF( Diff > 0,
+			    "#FF8F8F", // rött //     "#FFED97",// gult
+			    "#7EFF7E") // grönt
+			
+			VAR ResultOmStandardIsFiltered = IF( [Valda jämförelsevärden är standard 1 annars 0] = 1, Result, "#E6E6E6")
+			
+			RETURN Result
+			```
+		isHidden
+		displayFolder: Conditional formatting\Resultatuppföljning
+		lineageTag: cb489ad5-f7bd-442e-a01e-0d3f2c79e538
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valda standardmätvärden' = ```
+			
+			
+			VAR MonthToday = MONTH(TODAY())
+			
+			VAR ChooseMeasures = 
+			IF( (MonthToday >= 11 || MonthToday <= 1),
+			    "Utfall mot T2",
+			    IF( MonthToday >= 2 && MonthToday < 4,
+			        "Utfall mot T0",
+			        IF( MonthToday >= 4 && MonthToday < 8,
+			            "Utfall mot T1",
+			            IF( MonthToday >= 8 && MonthToday < 10,
+			                "Utfall mot T2",
+			                IF( MonthToday = 10,
+			                    "T0 nästa år mot T2")))))
+			
+			RETURN ChooseMeasures
+			```
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: f0990319-38ba-4e11-8eb6-909f36fd4739
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall mot valt jämförelsemätvärde' =
+			
+			VAR ComparisonValue = IF( HASONEVALUE( 'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde]), MAX( 'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde]), "Välj ett jämförelsemätvärde")
+			VAR Result = "Utfall mot " & ComparisonValue
+			//MAX( 'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde])
+			RETURN Result
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: c337ae9f-515b-4541-91b6-2f62ce4e1d9e
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valt konto' =
+			// anpassat för att funka i Resultatuppföljning
+			IF( HASONEVALUE( Konto[Konto]), MAX( Konto[Konto]),
+			    IF( HASONEVALUE( Konto[RRLev1Namn]), MAX(Konto[RRLev1Namn]), BLANK()))
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 576d79ec-3656-4f5c-b805-f566fc30668e
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall ÅTD kr/kvm' = CALCULATE( [Utfall kr/kvm], DATESYTD( Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: 572ba1e1-6dfa-4bd9-8840-1e192989a224
+
+	measure 'Utfall fg år-1 ÅTD kr/kvm' = CALCULATE([Utfall ÅTD kr/kvm], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: b83da6bc-f0f7-463a-8db0-f15ccffc0db6
+
+	measure 'Utfall fg år-2 ÅTD' = CALCULATE([Utfall ÅTD], DATEADD( Kalender[Datum], -2, YEAR))
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: bef0d1db-9f82-4319-870f-ff0601aa2afa
+
+	measure 'Utfall fg år-2 ÅTD kr/kvm' = CALCULATE([Utfall ÅTD kr/kvm], DATEADD(Kalender[Datum], -2, YEAR))
+		formatString: #,0
+		displayFolder: Utfall kr/kvm
+		lineageTag: 6710e8e9-7e70-428a-9c11-d547b8b84450
+
+	measure Beställarlistan = ```
+			
+			VAR ResultOLD =
+			- CALCULATE( 
+			    SUM(Huvudbok[Utfall]), 
+			        Huvudbok[Typ] = "Beställarlistan", 
+			        ALL( Konto), 
+			        ALL(PNLStructure)
+			    )
+			
+			VAR ResultNEW =
+			- CALCULATE( SUM(Huvudbok[Utfall]), Huvudbok[Typ] = "Beställarlistan")
+			
+			RETURN ResultNEW
+			```
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: 4273e428-c2d0-4097-b867-fc179e5d0292
+
+	measure 'Beställarlistan ÅTD' =
+			// R12 nu...
+			
+			VAR MaxDate = MAX(Kalender[Datum])
+			VAR MaxDateMinusTwelveMonths = DATE(YEAR(MaxDate), MONTH(MaxDate) - 11, 1)  //EDATE(MaxDate, -12)
+			
+			//VAR Result = CALCULATE( [Beställarlistan], ALL(Kalender), Kalender[Datum] >= DATE(2023,1,1) && Kalender[Datum] <= MaxDate)
+			
+			VAR Result = CALCULATE( [Beställarlistan], ALL(Kalender), Kalender[Datum] >= MaxDateMinusTwelveMonths && Kalender[Datum] <= MaxDate)
+			
+			
+			Return Result
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: 68e40422-3057-4f09-9d4a-f582d805af80
+
+	measure 'Valt maxdatum' = FORMAT(MAX(Kalender[Datum]), "YYYY-MM-DD")
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: f314ab32-478b-4337-9a14-c5ad11e160a9
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff utfall plus beställarlistan mot T0 ÅTD' = ```
+			
+			
+			VAR Diff = [Utfall plus beställarlistan ÅTD] - [T0 ÅTD]
+			
+			VAR Result = IF ( [Utfall plus beställarlistan ÅTD] <> 0, Diff, BLANK())
+			
+			RETURN Result
+			
+			
+			
+			```
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: 14e0445b-2eaa-44c3-ab01-68007e62adfc
+
+	measure 'Diff utfall plus beställarlistan mot T1 ÅTD' =
+			
+			
+			VAR Diff = [Utfall plus beställarlistan ÅTD] - [T1 ÅTD]
+			
+			VAR Result = IF ( [Utfall plus beställarlistan ÅTD] <> 0, Diff, BLANK())
+			
+			RETURN Result
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: 2d288f65-2263-4030-a119-c5b4650b0994
+
+	measure 'Diff utfall plus beställarlistan mot T2 ÅTD' =
+			
+			
+			VAR Diff = [Utfall plus beställarlistan ÅTD] - [T2 ÅTD]
+			
+			VAR Result = IF ( [Utfall plus beställarlistan ÅTD] <> 0, Diff, BLANK())
+			
+			RETURN Result
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: 0332791d-4db8-4bb0-98fc-b2e4e7a8b14a
+
+	measure 'Diff utfall plus beställarlistan mot fg år ÅTD' = ```
+			
+			
+			VAR Diff = [Utfall plus beställarlistan ÅTD] - [Utfall fg år-1 ÅTD]
+			
+			VAR Result = IF ( [Utfall plus beställarlistan ÅTD] <> 0, Diff, BLANK())
+			
+			RETURN Result
+			
+			
+			```
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: 3585680d-c2ca-4f5b-b4aa-ab2680c23ce3
+
+	measure 'Utfall plus beställarlistan' = ```
+			
+			// Kallas Estimat av vissa
+			// Visa endast när man filtrerat på Kostnader i PnL för undvika att siffror visas när man kollar driftnetto
+			
+			VAR Result = 
+			IF ( ISFILTERED( Konto[RRLev1Namn]), //  MAX( PNLStructure[PNLDescr]) = "Kostnader för varor, material och vissa köpta tjänster",
+			    [Utfall] + [Beställarlistan],
+			    BLANK())
+			
+			RETURN [Utfall] + [Beställarlistan]
+			```
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: ed38cf3f-ef0e-4cd8-aa10-1d5161283e19
+
+	measure 'Utfall plus beställarlistan ÅTD' = ```
+			
+			
+			// Om filtrerad månad är i samma månad som "Max frysdatum" eller tidigare ska endast Utfall visas, annars ska Utfall plus beställarlistan visas (framtida månader) - NEJ, tillfälligt ändrat till att beställarlistan visas för innevarande månad (sett till dagens datum) och framtida månader)
+			
+			VAR FirstDayCurrentMonth =  DATE( YEAR(TODAY()), MONTH( TODAY()), 1) 
+			//VAR MaxFrystDatumDenSiste = DATE( YEAR(MaxFrystDatum), MONTH( MaxFrystDatum) +1, 1) - 1 // sista dagen månaden med fryst datum
+			//VAR MaxFrystDatumDenSiste = DATE( YEAR(TODAY()), MONTH( TODAY()), 1) - 1 // sista dagen föregående månad
+			
+			VAR MaxDate = MAX(Kalender[Datum])
+			
+			//VAR UtfallPlusBest = CALCULATE( [Utfall plus beställarlistan], DATESYTD( Kalender[Datum]))
+			VAR UtfallPlusBest = [Utfall ÅTD] + [Beställarlistan ÅTD] 
+			
+			VAR Result =
+			IF( MaxDate >= FirstDayCurrentMonth,
+			    UtfallPlusBest,
+			    [Utfall ÅTD])
+			
+			RETURN Result
+			```
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: 1cbe7908-ab3a-4ccf-8b34-29c41267c8df
+
+	measure 'Värde jämförelsemätvärde ÅTD' =
+			
+			IF( HASONEVALUE('Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde]),
+			     SWITCH(MAX('Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde]),
+			        "T0", [T0 ÅTD],
+			        "T1", [T1 ÅTD],
+			        "T2", [T2 ÅTD],
+			        "Fg år", [Utfall fg år-1 ÅTD]
+			        ))
+		formatString: #,0
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: 0ef13c2d-a50f-4057-aa42-b4769dbe0a95
+
+		changedProperty = IsHidden
+
+	measure 'Valt datumintervall ÅTD' = FORMAT(MIN(Kalender[Datum]), "YYYY-01-01") & " - " & FORMAT(MAX(Kalender[Datum]), "YYYY-MM-DD")
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: a3391b19-276e-4be4-9dd6-94da3dbbed16
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'UB fg helår-1' = CALCULATE( [UB fg år-1], ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear]))
+		formatString: #,0
+		displayFolder: Balansräkning
+		lineageTag: ec438d47-cbaf-4a75-ada5-1f74c0338cc5
+
+	measure Kundförluster = CALCULATE(TOTALYTD([Utfall negativt tecken],Kalender[Datum]), Konto[KontoNr] IN {4962,4963})
+		formatString: #,0
+		displayFolder: Kundreskontra
+		lineageTag: 2a9634ac-a182-4e1c-8749-a17c552e14e3
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Utfall negativt tecken' = - [Utfall]
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: 0732f7c9-714f-4c92-9550-f058b29bae44
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '4962 Kundförluster, befarade' = CALCULATE([Utfall negativt tecken ÅTD],Konto[KontoNr] = 4962)
+		formatString: #,0
+		displayFolder: Kundreskontra
+		lineageTag: aa8c83d3-55b1-40df-889c-3c8f672498bb
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '4963 Kundförluster, konstaterade' = CALCULATE([Utfall negativt tecken ÅTD],Konto[KontoNr] = 4963)
+		formatString: #,0
+		displayFolder: Kundreskontra
+		lineageTag: 0611d35a-e7a9-48ec-872c-6cac88be971a
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Utfall negativt tecken ÅTD' = - [Utfall ÅTD]
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: 6b6c30cb-22a8-4dab-ac72-2ef197e1a4d0
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Inforuta 1' =
+			
+			
+			VAR Jmf1 = [Valt jämförelsevärde1]
+			VAR Jmf2 = [Valt jämförelsevärde2]
+			VAR Diff = [Diff Jämförelsevärde1 mot Jämförelsevärde2]
+			
+			/*
+			VAR ResultUnder = "Per " & [Valt maxdatum] & " ligger " & Jmf1 & " " & FORMAT(ABS(Diff), "### ### ##0") & " kr under " & Jmf2
+			VAR ResultAbove = "Per " & [Valt maxdatum] & " ligger " & Jmf1 & " " & FORMAT(ABS(Diff), "### ### ##0") & " kr över " & Jmf2
+			*/
+			
+			VAR ResultUnder = "Per " & [Valt maxdatum] & " ligger du " & FORMAT(ABS(Diff), "### ### ###") & " kr under prognos"
+			VAR ResultAbove = "Per " & [Valt maxdatum] & " ligger du " & FORMAT(ABS(Diff), "### ### ###") & " kr över prognos"
+			
+			VAR Result = IF( Diff > 0, ResultUnder, ResultAbove)
+			
+			VAR ResultOmStandardIsFiltered = IF( [Valda jämförelsevärden är standard 1 annars 0] = 1, Result, " ")
+			
+			RETURN Result
+			
+			-- ResultOmStandardIsFiltered /*Den här är borttagen eftersom Standard inte används längre*/
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: 9ea64287-c491-43a2-9620-45880716ac0a
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Inforuta 2' =
+			
+			
+			VAR Jmf1 = [Jämförelsevärde1]
+			VAR Jmf2 = CALCULATE( [Jämförelsevärde2], ALLEXCEPT( Kalender, Kalender[År med senast stängda månad 11:e]))
+			VAR Diff = Jmf1 - Jmf2
+			
+			VAR ResultUnder = "Du har " & FORMAT(ABS(Diff), "### ### ###") & " kr i beställningsutrymme kvar detta år"
+			VAR ResultAbove = "Du har överskridit ditt beställningsutrymme detta år"
+			
+			VAR Result = IF( Diff > 0, ResultUnder, ResultAbove)
+			
+			VAR ResultOmStandardIsFiltered = IF( [Valda jämförelsevärden är standard 1 annars 0] = 1, Result, " ")
+			
+			RETURN Result
+			
+			-- ResultOmStandardIsFiltered /*Den här är borttagen eftersom Standard inte används längre*/
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: 8534a87b-4692-41c1-8057-66594911a4fa
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos mot valt jämförelsemätvärde' =
+			
+			VAR ComparisonValue = IF( HASONEVALUE( 'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde]), MAX( 'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde]), "Välj ett jämförelsemätvärde")
+			VAR Result = "Prognos: " & ComparisonValue
+			//MAX( 'Välj jämförelsemätvärde Finans'[Välj jämförelsemätvärde])
+			RETURN Result
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: d883ebfe-c7f3-462f-ae95-6ef1c4c5e164
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Inforuta 1 detaljer' =
+			
+			
+			VAR Jmf1 = [Valt jämförelsevärde1]
+			VAR Jmf2 = [Valt jämförelsevärde2]
+			VAR Diff = [Diff Jämförelsevärde1 mot Jämförelsevärde2]
+			
+			VAR LastClosedDate = CALCULATE( MAX( Kalender[Datum]), Kalender[Stängd månad] = "Stängd månad", ALL(Kalender))
+			
+			//VAR Result = "Detta visar skillnaden mellan " & Jmf1 & " och " & Jmf2 & " per " & FORMAT(LastClosedDate, "YYYY-MM-DD") & ", d.v.s. " & FORMAT([Jämförelsevärde1], "### ### ###") & " - (" & FORMAT([Jämförelsevärde2], "### ### ### ") & ") = " & FORMAT(Diff, "### ### ###") & " kr"
+			
+			VAR Result = "Detta visar skillnaden mellan faktiskt utfall plus kända kostnader i beställarlistan och aktuell prognos " & Jmf2 & " per " & FORMAT(LastClosedDate, "YYYY-MM-DD") & ", d.v.s. " & FORMAT([Utfall plus beställarlistan ÅTD], "### ### ###") & " - (" & FORMAT([Jämförelsevärde2], "### ### ### ") & ") = " & FORMAT(Diff, "### ### ###") & " kr"
+			
+			VAR ResultOmStandardIsFiltered = IF( [Valda jämförelsevärden är standard 1 annars 0] = 1, Result, " ")
+			
+			RETURN Result
+			
+			-- ResultOmStandardIsFiltered
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: 863a218d-d9a2-454e-ad44-ac05f601c3dc
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Inforuta 2 detaljer' =
+			
+			
+			VAR Jmf1 = [Jämförelsevärde1]
+			VAR Jmf2 = CALCULATE( [Jämförelsevärde2], ALLEXCEPT( Kalender, Kalender[År med senast stängda månad 11:e]))
+			VAR Diff = Jmf1 - Jmf2
+			
+			//VAR LastClosedDate = CALCULATE( MAX( Kalender[Datum]), Kalender[Stängd månad] = "Stängd månad", ALL(Kalender))
+			//VAR YearEndDate = DATE(YEAR(LastClosedDate), 12, 31)
+			
+			VAR Result = "Detta visar skillnaden mellan faktiskt utfall plus kända kostnader i beställarlistan och aktuell prognos " & [Valt jämförelsevärde2] & " den siste detta år, d.v.s. " & FORMAT(Jmf1, "### ### ###") & " - (" & FORMAT(Jmf2, "### ### ### ") & ") = " & FORMAT(Diff, "### ### ###") & " kr"
+			
+			RETURN Result
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: 0a9987ca-9728-461a-b400-3a39ba28f7ab
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'T0 ÅTD visa endast senast stängda och framtida månader' = ```
+			
+			
+			VAR MaxDate = MAX(Kalender[Datum])
+			VAR LastClosedDate = CALCULATE( MAX( Kalender[Datum]), Kalender[Stängd månad] = "Stängd månad", ALL(Kalender))
+			
+			VAR Result = 
+			IF( MaxDate >= LastClosedDate,
+			    [T0 ÅTD],
+			    BLANK())
+			
+			RETURN Result
+			```
+		formatString: #,0
+		displayFolder: T0
+		lineageTag: 12b81b75-12c1-4d42-a799-e05920c0f529
+
+	measure 'T1 ÅTD visa endast senast stängda och framtida månader' = ```
+			
+			
+			VAR MaxDate = MAX(Kalender[Datum])
+			VAR LastClosedDate = CALCULATE( MAX( Kalender[Datum]), Kalender[Stängd månad] = "Stängd månad", ALL(Kalender))
+			
+			VAR Result = 
+			IF( MaxDate >= LastClosedDate,
+			    [T1 ÅTD],
+			    BLANK())
+			
+			RETURN Result
+			```
+		formatString: #,0
+		displayFolder: T1
+		lineageTag: 09a17ff2-c5dd-4e90-8c55-67168e5cab67
+
+	measure 'T2 ÅTD visa endast senast stängda och framtida månader' = ```
+			
+			
+			VAR MaxDate = MAX(Kalender[Datum])
+			VAR LastClosedDate = CALCULATE( MAX( Kalender[Datum]), Kalender[Stängd månad] = "Stängd månad", ALL(Kalender))
+			
+			VAR Result = 
+			IF( MaxDate >= LastClosedDate,
+			    [T2 ÅTD],
+			    BLANK())
+			
+			RETURN Result
+			```
+		formatString: #,0
+		displayFolder: T2
+		lineageTag: cf1f1f84-5a4f-4057-ad2c-24512f300985
+
+	measure 'Utfall fg år-1 ÅTD visa endast senast stängda och framtida månader' = ```
+			
+			
+			VAR MaxDate = MAX(Kalender[Datum])
+			VAR LastClosedDate = CALCULATE( MAX( Kalender[Datum]), Kalender[Stängd månad] = "Stängd månad", ALL(Kalender))
+			
+			VAR Result = 
+			IF( MaxDate >= LastClosedDate,
+			    [Utfall fg år-1 ÅTD],
+			    BLANK())
+			
+			RETURN Result
+			```
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: 8b100418-20db-4f16-9824-5d05201636d8
+
+	measure '4964 Kundförluster kundfakturor, befarade' = CALCULATE([Utfall negativt tecken ÅTD],Konto[KontoNr] = 4964)
+		formatString: #,0
+		displayFolder: Kundreskontra
+		lineageTag: 1881b586-f6b4-4bb6-a6cb-b6bb8c35e0a9
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '4965 Kundförluster kundfakturor, konstaterade' = CALCULATE([Utfall negativt tecken ÅTD],Konto[KontoNr] = 4965)
+		formatString: #,0
+		displayFolder: Kundreskontra
+		lineageTag: 4a51709f-1a60-4ba5-9133-6b8fa822c5ca
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Beställarlistan Belopp PM5 hela tabellen' = SUM('Beställarlistan'[Belopp PM5])
+		formatString: #,0
+		displayFolder: Beställarlistan\Hela tabellen
+		lineageTag: b7394b4d-e025-47c2-9ef3-9e7c75e9c085
+
+	measure 'Beställarlistan Belopp PM5 ÅTD hela tabellen' = CALCULATE( [Beställarlistan Belopp PM5 hela tabellen], DATESYTD(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Beställarlistan\Hela tabellen
+		lineageTag: 96791f31-7ff6-47a9-bf04-a77d38421fe8
+
+	measure 'Beställarlistan differens Belopp PM5 - Utfall UBW hela tabellen' =
+			
+			
+			VAR Result = [Beställarlistan Belopp PM5 hela tabellen] - [Beställarlistan Utfall UBW hela tabellen]
+			
+			VAR Result2 = SUMX('Beställarlistan', 'Beställarlistan'[Belopp PM5] - 'Beställarlistan'[Utfall UBW])
+			
+			RETURN - Result2
+		formatString: #,0
+		displayFolder: Beställarlistan\Hela tabellen
+		lineageTag: 4684e03d-7029-4784-845c-74ea583a08a6
+
+	measure 'Beställarlistan differens Belopp PM5 - Utfall UBW ÅTD hela tabellen' = ```
+			
+			 VAR Result = [Beställarlistan Belopp PM5 ÅTD hela tabellen] - [Beställarlistan Utfall UBW ÅTD hela tabellen] 
+			 RETURN - Result
+			```
+		formatString: #,0
+		displayFolder: Beställarlistan\Hela tabellen
+		lineageTag: d3035d9d-7114-42aa-91c6-42364bc46e05
+
+	measure 'Beställarlistan Utfall UBW hela tabellen' = SUM('Beställarlistan'[Utfall UBW])
+		formatString: #,0
+		displayFolder: Beställarlistan\Hela tabellen
+		lineageTag: e6bd1c70-c3c8-42e4-bb06-cd360397056f
+
+	measure 'Beställarlistan Utfall UBW ÅTD hela tabellen' = CALCULATE( SUM('Beställarlistan'[Utfall UBW]), DATESYTD( Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Beställarlistan\Hela tabellen
+		lineageTag: 952ee2b1-f4bd-495b-8770-147c937a364a
+
+	measure 'Diff Jämförelsevärde1 mot Jämförelsevärde2' =
+			
+			[Jämförelsevärde1] - [Jämförelsevärde2]
+		formatString: #,0
+		isHidden
+		displayFolder: Dynamiska jämförelsevärden
+		lineageTag: 4f801ad9-d772-4e87-91c3-ef5b3bf989fd
+
+		changedProperty = IsHidden
+
+	measure Jämförelsevärde1 =
+			
+			
+			VAR Jamforelsevarde1 = // Lagt till mellanslag efter föratt de ska få annorlunda namn än Jämförelsevärde2, annars kommer de få samma färger i stapeldiagram! Ex T0 kommer bli grått vare sig det är jämförelsevärde 1 eller 2..
+			SWITCH(
+			    MAX( 'Välj mätvärde Jämförelsemätvärde1'[Jämförelsemätvärde1]),
+			        "Utfall", [Utfall ÅTD],
+			        "Utfall plus best. lista", [Utfall plus beställarlistan ÅTD],
+			        "T0", [T0 ÅTD],
+			        "T1", [T1 ÅTD],
+			        "T2", [T2 ÅTD],
+			        "T0 nästa år", [T0 nästa år ÅTD]
+			)
+			
+			RETURN Jamforelsevarde1
+		formatString: #,0
+		isHidden
+		displayFolder: Dynamiska jämförelsevärden
+		lineageTag: 5fec5584-62c6-4d13-b9aa-404e8e285379
+
+		changedProperty = IsHidden
+
+	measure Jämförelsevärde2 = ```
+			
+			
+			VAR Jamforelsevarde2 = 
+			SWITCH(
+			    MAX( 'Välj mätvärde Jämförelsemätvärde2'[Jämförelsemätvärde2]),
+			        "T0", [T0 ÅTD],
+			        "T1", [T1 ÅTD],
+			        "T2", [T2 ÅTD],
+			        "T0 nästa år", [T0 nästa år ÅTD],
+			        "Utfall fg år-1", [Utfall fg år-1 ÅTD]
+			)
+			
+			RETURN Jamforelsevarde2
+			```
+		formatString: #,0
+		isHidden
+		displayFolder: Dynamiska jämförelsevärden
+		lineageTag: 76b5fe46-3167-4a8a-a773-536f7a23159c
+
+		changedProperty = IsHidden
+
+	measure 'Jämförelsevärde2 helår' =
+			
+			
+			SWITCH(
+			    MAX( 'Välj mätvärde Jämförelsemätvärde2'[Jämförelsemätvärde2]),
+			        "T0", [T0 helår],
+			        "T1", [T1 helår],
+			        "T2", [T2 helår],
+			        "T0 nästa år", [T0 nästa år helår],
+			        "Utfall fg år-1", [Utfall fg helår-1]
+			)
+		formatString: #,0
+		isHidden
+		displayFolder: Dynamiska jämförelsevärden
+		lineageTag: a74a42ad-e19e-4a4a-87bd-08e9beefe8ce
+
+		changedProperty = IsHidden
+
+	measure 'Valt jämförelsevärde1' =
+			
+			IF( COUNTROWS( 'Välj mätvärde Jämförelsemätvärde1') = 1,
+			    MAX('Välj mätvärde Jämförelsemätvärde1'[Jämförelsemätvärde1]),
+			    "Välj mätvärde")
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 4608d9ad-c604-4702-946f-0ff01ccf31fe
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valt jämförelsevärde2' =
+			
+			
+			IF( COUNTROWS( 'Välj mätvärde Jämförelsemätvärde2') = 1,
+			    MAX('Välj mätvärde Jämförelsemätvärde2'[Jämförelsemätvärde2]),
+			    "Välj jämförelsemätvärde")
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 678118c6-2cc5-43ff-9a7b-0a1e74c7ab06
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff Jämförelsevärde1 mot Jämförelsevärde2 %' =
+			
+			
+			DIVIDE( [Diff Jämförelsevärde1 mot Jämförelsevärde2], [Jämförelsevärde2], BLANK())
+		formatString: #,0.0\ %;-#,0.0\ %;#,0.0\ %
+		isHidden
+		displayFolder: Dynamiska jämförelsevärden
+		lineageTag: 9f99ba11-369a-469d-9687-91698d34f822
+
+		changedProperty = IsHidden
+
+	measure 'Valda jämförelsevärden' = ```
+			
+			VAR Jamforelse1 = [Valt jämförelsevärde1]
+			//IF( HASONEVALUE( 'Välj mätvärde Jämförelsemätvärde1'[Jämförelsemätvärde1]), MAX( 'Välj mätvärde Jämförelsemätvärde1'[Jämförelsemätvärde1]), "Välj ett jämförelsemätvärde")
+			VAR Jamforelse2 = [Valt jämförelsevärde2]
+			//IF( HASONEVALUE( 'Välj mätvärde Jämförelsemätvärde2'[Jämförelsemätvärde2]), MAX( 'Välj mätvärde Jämförelsemätvärde2'[Jämförelsemätvärde2]), "Välj ett jämförelsemätvärde")
+			
+			VAR Result = 
+			IF( COUNTROWS( 'Välj mätvärde Jämförelsemätvärde1') = 1 && COUNTROWS( 'Välj mätvärde Jämförelsemätvärde2') = 1,
+			    Jamforelse1 & " mot " & Jamforelse2,
+			    "Välj mätvärden")
+			
+			RETURN Result
+			
+			```
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 51298f86-9e0b-4b78-8c53-a0e482a915fc
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Jämförelsevärde 1 helår' =
+			
+			
+			SWITCH(
+			    MAX( 'Välj mätvärde Jämförelsemätvärde1'[Jämförelsemätvärde1]),
+			        "Utfall", [Utfall ÅTD],
+			        "Utfall plus best. lista", [Utfall plus beställarlistan ÅTD],
+			        "T0", [T0 ÅTD],
+			        "T1", [T1 ÅTD],
+			        "T2", [T2 ÅTD],
+			        "T0 nästa år", [T0 nästa år ÅTD]
+			)
+		isHidden
+		displayFolder: Dynamiska jämförelsevärden
+		lineageTag: 3a8f6d16-df6d-4e9a-8e95-fe52a425f81f
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valda jämförelsevärden color' =
+			
+			IF( [Valda jämförelsevärden] = "Välj mätvärden", "#FF0000", "#0067A5")
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: d0e059b6-33d0-4ec5-a8ef-0d1a6ced155d
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valda jämförelsevärden color slicer titles 1' =
+			
+			
+			IF( COUNTROWS( 'Välj mätvärde Jämförelsemätvärde1') = 1,
+			    "#FFFFFF",
+			    "#FF0000")
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: f4e6159a-7510-4ff8-8d9f-c0fffbf49e74
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valda jämförelsevärden color slicer titles 2' =
+			
+			
+			IF( COUNTROWS( 'Välj mätvärde Jämförelsemätvärde2') = 1,
+			    "#FFFFFF",
+			    "#FF0000")
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: 9d19689e-ca25-4d4d-bc4b-36d85eb77142
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Valt mätvärde Finans' =
+			
+			IF( HASONEVALUE( 'Välj mätvärde Finans Measures'[Grupp] ),
+			    MAX('Välj mätvärde Finans Measures'[Grupp]),
+			    "Välj mätvärde")
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 51590710-baad-42f5-bf82-6ff6f0fb25a1
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index Jämförelsevärde1 mot Jämförelsevärde2 %' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			/*VAR Diff = 1 + DIVIDE([Utfall ÅTD] - [T1 ÅTD], [T1 ÅTD], BLANK())
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0 && [Utfall ÅTD] <> 0, Diff, BLANK())*/
+			VAR Index = 1 +
+			DIVIDE( [Diff Jämförelsevärde1 mot Jämförelsevärde2], [Jämförelsevärde2], BLANK())
+			VAR Result = IF([Jämförelsevärde1] <> 0, Index, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		isHidden
+		displayFolder: Dynamiska jämförelsevärden
+		lineageTag: d0ec56e4-26ac-4ac3-8d61-0adb208a329f
+
+		changedProperty = IsHidden
+
+	measure 'Index Utfall ÅTD mot T1 helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall ÅTD] - [T1 helår], [T1 helår], BLANK())
+			VAR Result = IF( [Utfall ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: 5d9443ae-6a1c-4f37-b669-789a3601e6d8
+
+	measure 'Index Utfall ÅTD mot T0 helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall ÅTD] - [T0 helår], [T0 helår], BLANK())
+			VAR Result = IF( [Utfall ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: 7d57f90b-9dc6-4aa4-94a5-082b2ebe174e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index Utfall ÅTD mot T2 helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall ÅTD] - [T2 helår], [T2 helår], BLANK())
+			VAR Result = IF( [Utfall ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: da97c62b-8674-4c5f-b580-aff0f33e5f2b
+
+	measure 'Index T0 nästa år helår mot T2 helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([T0 nästa år helår] - [T2 helår], [T2 helår], BLANK())
+			VAR Result = IF( [T0 nästa år helår] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: 5a8bea2d-0fd0-49aa-ac7f-add57c24562e
+
+	measure 'Valda jämförelsevärden är standard 1 annars 0' = ```
+			
+			
+			VAR Result =
+			IF( 
+			    HASONEVALUE( 'Välj mätvärde Jämförelsemätvärde standardknapp'[Standard]) 
+			    && 
+			    MAX( 'Välj mätvärde Jämförelsemätvärde standardknapp'[Standard]) = "Standard"
+			    , 1, 0
+			)
+			
+			RETURN Result
+			```
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 75357b78-762b-4368-9814-de56e4b3c942
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Inforuta när mätvärden inte är standard' = ```
+			
+			IF( 
+			    HASONEVALUE( 'Välj mätvärde Jämförelsemätvärde1'[Standard]) && MAX(  'Välj mätvärde Jämförelsemätvärde1'[Standard]) = "Standard" && HASONEVALUE( 'Välj mätvärde Jämförelsemätvärde2'[Standard]) && MAX(  'Välj mätvärde Jämförelsemätvärde2'[Standard]) = "Standard", 
+			    " ",
+			    "För att återgå till standard, rensa slicers med mätvärden innan du trycker på knapp Standard eller återställ alla filter"
+			    )
+			```
+		isHidden
+		displayFolder: Conditional formatting
+		lineageTag: 8d265f49-7cd3-4e2e-a9e6-b930f9d1ea0b
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index T0 nästa år ÅTD mot T2 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([T0 nästa år ÅTD] - [T2 ÅTD], [T2 ÅTD], BLANK())
+			VAR Result = IF( [T0 nästa år ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: 8d40e849-cd3f-4ddb-8e02-2a20e5186ffb
+
+	measure 'Index Utfall ÅTD mot T0 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall ÅTD] - [T0 ÅTD], [T0 ÅTD], BLANK())
+			VAR Result = IF( [Utfall ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: d35f25b5-93e7-4e9f-abcf-89040d62e0b3
+
+	measure 'Index Utfall ÅTD mot T1 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall ÅTD] - [T1 ÅTD], [T1 ÅTD], BLANK())
+			VAR Result = IF( [Utfall ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: 08106e24-62f4-4f8d-a890-c34306d6d330
+
+	measure 'Index Utfall ÅTD mot T2 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall ÅTD] - [T2 ÅTD], [T2 ÅTD], BLANK())
+			VAR Result = IF( [Utfall ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: a9b8a0cd-2bd5-4c64-9fd2-edd61c610357
+
+	measure 'Index T1 ÅTD mot T0 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([T1 ÅTD] - [T0 ÅTD], [T0 ÅTD], BLANK())
+			VAR Result = IF( [T1 ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: 0c079373-497d-4bae-8e4d-87e4336c6661
+
+	measure 'Index T2 ÅTD mot T1 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([T2 ÅTD] - [T1 ÅTD], [T1 ÅTD], BLANK())
+			VAR Result = IF( [T2 ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: 5e9d9da9-380d-4214-b03f-31258b515932
+
+	measure 'Index Utfall ÅTD mot Utfall fg år-1 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall ÅTD] - [Utfall fg år-1 ÅTD], [Utfall fg år-1 ÅTD], BLANK())
+			VAR Result = IF( [Utfall ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: 8e86a96b-82a3-4489-bdb2-2be687f589f1
+
+	measure 'T0 nästa år - T0 ÅTD' = [T0 nästa år ÅTD] - [T0 ÅTD]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 6ac9dd91-4c86-440b-b81c-8438594d5b5b
+
+	measure 'T0 nästa år / T0 ÅTD' = DIVIDE( [T0 nästa år ÅTD] - [T0 ÅTD], [T0 ÅTD], BLANK())
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Differenser
+		lineageTag: 43496048-8e0c-4cb8-a74d-d3ab3a6c3e1c
+
+	measure 'Index T0 nästa år ÅTD mot T0 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([T0 nästa år ÅTD] - [T0 ÅTD], [T0 ÅTD], BLANK())
+			VAR Result = IF( [T0 nästa år ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: 34bc0a6c-84aa-440c-bb6b-381a5aae952f
+
+	measure 'Index Utfall plus best.lista ÅTD mot T0 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall plus beställarlistan ÅTD] - [T0 ÅTD], [T0 ÅTD], BLANK())
+			VAR Result = IF( [Utfall plus beställarlistan ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: ef0517a3-f6e9-4688-9d5b-6cc65736613a
+
+	measure 'Index Utfall plus best.lista ÅTD mot T1 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall plus beställarlistan ÅTD] - [T1 ÅTD], [T1 ÅTD], BLANK())
+			VAR Result = IF( [Utfall plus beställarlistan ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: 6406d690-ce52-4ff6-b0e8-47db2667e890
+
+	measure 'Index Utfall plus best.lista ÅTD mot T2 ÅTD' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall plus beställarlistan ÅTD] - [T2 ÅTD], [T2 ÅTD], BLANK())
+			VAR Result = IF( [Utfall plus beställarlistan ÅTD] <> 0, Diff, BLANK())
+			RETURN Result
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Index
+		lineageTag: c5e8af5c-79be-4a61-a5f2-620462dea3b0
+
+	measure 'Utfall plus best.lista ÅTD - T0 ÅTD' =
+			
+			
+			VAR Diff = [Utfall plus beställarlistan ÅTD] - [T0 ÅTD]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Diff
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: e2cbb2a6-a98e-47fd-bd2c-3692f83cab0d
+
+	measure 'Utfall plus best.lista ÅTD - T1 ÅTD' =
+			
+			
+			VAR Diff = [Utfall plus beställarlistan ÅTD] - [T1 ÅTD]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Diff
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 0dd504b0-be16-44ca-a081-3e0811466e16
+
+	measure 'Utfall plus best.lista ÅTD - T2 ÅTD' =
+			
+			
+			VAR Diff = [Utfall plus beställarlistan ÅTD] - [T2 ÅTD]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Diff
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: f5cc76d8-314a-486c-b8cd-611e0f8984f2
+
+	measure 'Max frysdatum beställarlista' = MAX( 'Beställarlistan max frysdatum'[Max frysdatum])
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: dd56302d-4d51-4c19-a88a-8e3ef37046bf
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Max chart y axis' =
+			
+			
+			VAR Result = MAX( MAX(ABS([Jämförelsevärde1]), ABS([Jämförelsevärde2])), ABS([Beställarlistan ÅTD]))
+			
+			RETURN Result
+		isHidden
+		displayFolder: Dynamiska jämförelsevärden
+		lineageTag: d7d7f1a5-bbc7-4dc7-b9c0-8f09b5f957b2
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Beställarlistan ÅTD visa endast framtida datum' = ```
+			
+			
+			// Om filtrerad månad är i samma månad som "Max frysdatum" eller tidigare ska endast Utfall visas, annars ska Utfall plus beställarlistan visas (framtida månader) - NEJ, tillfälligt ändrat till att beställarlistan visas för innevarande månad (sett till dagens datum) och framtida månader)
+			
+			VAR FirstDayCurrentMonth =  DATE( YEAR(TODAY()), MONTH( TODAY()), 1) 
+			//VAR MaxFrystDatumDenSiste = DATE( YEAR(MaxFrystDatum), MONTH( MaxFrystDatum) +1, 1) - 1 // sista dagen månaden med fryst datum
+			//VAR MaxFrystDatumDenSiste = DATE( YEAR(TODAY()), MONTH( TODAY()), 1) - 1 // sista dagen föregående månad
+			
+			VAR MaxDate = MAX(Kalender[Datum])
+			
+			//VAR UtfallPlusBest = CALCULATE( [Utfall plus beställarlistan], DATESYTD( Kalender[Datum]))
+			VAR Best = [Beställarlistan ÅTD] 
+			
+			VAR Result =
+			IF( MaxDate >= FirstDayCurrentMonth,
+			    Best,
+			    BLANK())
+			
+			RETURN Result
+			```
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: 5fa43f74-b789-43c9-85bc-e7a70c967ff6
+
+	measure 'Utfall fg år-3 ÅTD' = CALCULATE([Utfall ÅTD], DATEADD( Kalender[Datum], -3, YEAR))
+		formatString: #,0
+		displayFolder: Utfall
+		lineageTag: faf604d6-b59a-4d43-96f6-054320b72a4e
+
+	measure 'Vald jämförelsegrupp är standard 1 annars 0' = ```
+			
+			IF( 
+			    HASONEVALUE( 'Välj mätvärde Finans Measures'[Välj mätvärde med standard]) && MAX(  'Välj mätvärde Finans Measures'[Välj mätvärde med standard]) = "Standard", 
+			    1,
+			    0
+			)
+			```
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: 49766bf9-8843-4cfc-8b68-c482bdde1ab5
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall uppföljning vattenskador' = CALCULATE( [Utfall], 'Uppföljning'[Uppföljning grupp] = "VS")
+		formatString: #,0
+		displayFolder: Utfall\Specifika measures
+		lineageTag: 10b2bd58-4c3e-4de3-b853-f7fc1d752e56
+
+	measure 'Utfall uppföljning brandskador' = CALCULATE( [Utfall], 'Uppföljning'[Uppföljning grupp] = "BR")
+		formatString: #,0
+		displayFolder: Utfall\Specifika measures
+		lineageTag: 78e8d2c2-6663-4fa6-b1de-61352efb1363
+
+	measure 'Utfall uppföljning 2222' = CALCULATE( [Utfall], 'Uppföljning'[UppföljningNr] = "2222")
+		formatString: #,0
+		displayFolder: Utfall\Specifika measures
+		lineageTag: 5db2bc01-fc75-4d92-8c55-24f73c72e1b8
+
+	measure 'Beställarlistan 11 mån bak till slutet på året' = ```
+			
+			
+			VAR FirstDayCurrentMonth =  DATE( YEAR(TODAY()), MONTH(TODAY()), 1)
+			VAR LastDayCurrentYear =  DATE( YEAR(FirstDayCurrentMonth), 12, 31) 
+			VAR FirstDay11MonthsBack =  EDATE(FirstDayCurrentMonth, -11)
+			
+			VAR Result = CALCULATE([Beställarlistan], ALL(Kalender), Kalender[Datum] >= FirstDay11MonthsBack && Kalender[Datum] <= LastDayCurrentYear)
+			
+			RETURN Result
+			```
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: d7dcd54f-efa7-418a-8aef-c8454e5af32e
+
+	measure 'Utfall plus beställarlistan ÅTD visa endast framtida datum' =
+			
+			[Utfall] + [Beställarlistan ÅTD visa endast framtida datum]
+		formatString: #,0
+		displayFolder: Beställarlistan
+		lineageTag: db851609-8b76-4023-93a1-9871153a5f91
+
+	measure 'Utfall fg år-1 Helår' = CALCULATE([Utfall helår], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		displayFolder: Utfall
+		lineageTag: 76280ac4-3e8d-4be7-ae8f-9c807add24e2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall fg år-2 Helår' = CALCULATE([Utfall helår], DATEADD( Kalender[Datum], -2, YEAR))
+		displayFolder: Utfall
+		lineageTag: 52e22f8a-94bd-4893-9f98-5f1ee6229d0e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall fg år-3 Helår' = CALCULATE([Utfall helår], DATEADD( Kalender[Datum], -3, YEAR))
+		displayFolder: Utfall
+		lineageTag: c477b50e-78f5-4909-8d13-b436fe03ab3a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall - T0 Helår' =
+			
+			
+			VAR Diff = [Utfall helår] - [T0 helår]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Result
+		displayFolder: Differenser
+		lineageTag: f4fc538d-3830-4bfc-94a3-dae9e4ff530f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall - T1 Helår' =
+			
+			
+			VAR Diff = [Utfall helår] - [T1 helår]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Result
+		displayFolder: Differenser
+		lineageTag: a5b7a563-d6e6-4b4f-8429-b6a6a6ddc780
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall - T2 Helår' =
+			
+			
+			
+			VAR Diff = [Utfall helår] - [T2 helår]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Result
+		displayFolder: Differenser
+		lineageTag: 7e2448d1-8e4b-46cf-b137-ea120423cb1c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'T0 nästa år - T0 Helår' = [T0 nästa år helår] - [T0 helår]
+		displayFolder: Differenser
+		lineageTag: 3ddd39cf-2cf1-4f4b-89ba-962e9aef89e3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index Utfall Helår mot T0 helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall helår] - [T0 helår], [T0 helår], BLANK())
+			VAR Result = IF( [Utfall helår] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: a3f2ba85-8ef1-402c-b6fe-ec0005f489da
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index Utfall Helår mot T1 helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall helår] - [T1 helår], [T1 helår], BLANK())
+			VAR Result = IF( [Utfall helår] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: 42ffd2f0-b87b-4489-9625-6be32da9a3ee
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index Utfall Helår mot T2 helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall helår] - [T2 helår], [T2 helår], BLANK())
+			VAR Result = IF( [Utfall helår] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: a2ab7c49-67f7-48e8-b278-bd8fbcfb67c0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index T0 nästa år Helår mot T0 Helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([T0 nästa år helår] - [T0 helår], [T0 helår], BLANK())
+			VAR Result = IF( [T0 nästa år helår] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: 26447d22-5f32-4626-81de-aee17af46f0a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index T1 Helår mot T0 HElår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([T1 helår] - [T0 helår], [T0 helår], BLANK())
+			VAR Result = IF( [T1 helår] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: 6819820b-3096-4c0b-93fc-5f539d48da76
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index T2 Helår mot T1 Helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([T2 helår] - [T1 helår], [T1 helår], BLANK())
+			VAR Result = IF( [T2 helår] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: ebf1ec8f-757a-4b77-9982-f171609462a2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Beställarlistan Helår visa endast framtida datum' = ```
+			
+			
+			// Om filtrerad månad är i samma månad som "Max frysdatum" eller tidigare ska endast Utfall visas, annars ska Utfall plus beställarlistan visas (framtida månader) - NEJ, tillfälligt ändrat till att beställarlistan visas för innevarande månad (sett till dagens datum) och framtida månader)
+			
+			VAR FirstDayCurrentMonth =  DATE( YEAR(TODAY()), MONTH( TODAY()), 1) 
+			//VAR MaxFrystDatumDenSiste = DATE( YEAR(MaxFrystDatum), MONTH( MaxFrystDatum) +1, 1) - 1 // sista dagen månaden med fryst datum
+			//VAR MaxFrystDatumDenSiste = DATE( YEAR(TODAY()), MONTH( TODAY()), 1) - 1 // sista dagen föregående månad
+			
+			VAR MaxDate = MAX(Kalender[Datum])
+			
+			//VAR UtfallPlusBest = CALCULATE( [Utfall plus beställarlistan], DATESYTD( Kalender[Datum]))
+			VAR Best = [Beställarlistan helår] 
+			
+			VAR Result =
+			IF( MaxDate >= FirstDayCurrentMonth,
+			    Best,
+			    BLANK())
+			
+			RETURN Result
+			```
+		displayFolder: Beställarlistan
+		lineageTag: bc1fed4d-3cb0-44f2-af33-c23e789a7241
+
+	measure 'Beställarlistan Helår' = ```
+			CALCULATE(
+			    [Beställarlistan], 
+			    ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear])
+			    )
+			```
+		displayFolder: Beställarlistan
+		lineageTag: ff043613-6032-446a-aba3-6119ad24337a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall plus beställarlistan Helår visa endast framtida datum' =
+			
+			[Utfall] + [Beställarlistan Helår visa endast framtida datum]
+		displayFolder: Beställarlistan
+		lineageTag: f507242d-026a-4dc7-a97f-887cd2f407db
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall plus beställarlistan Helår' = ```
+			
+			// Kallas Estimat av vissa
+			// Visa endast när man filtrerat på Kostnader i PnL för undvika att siffror visas när man kollar driftnetto
+			
+			VAR Result = 
+			IF ( ISFILTERED( Konto[RRLev1Namn]), //  MAX( PNLStructure[PNLDescr]) = "Kostnader för varor, material och vissa köpta tjänster",
+			    [Utfall] + [Beställarlistan Helår],
+			    BLANK())
+			
+			RETURN [Utfall] + [Beställarlistan Helår]
+			```
+		displayFolder: Beställarlistan
+		lineageTag: db2112b1-e334-40b8-9a7f-f630950652dd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall - Utfall fg år-1 Helår' = [Utfall helår]-[Utfall fg år-1 Helår]
+		displayFolder: Differenser
+		lineageTag: 0b284282-a453-4edb-a876-12b6ce7cc7e3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index Utfall Helår mot Utfall fg år-1 Helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall helår] - [Utfall fg år-1 Helår], [Utfall fg år-1 Helår], BLANK())
+			VAR Result = IF( [Utfall helår] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: 7e1503f7-c939-4d86-9fd7-4d13cd365189
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall plus best.lista Helår - T0 Helår' =
+			
+			
+			VAR Diff = [Utfall plus beställarlistan Helår] - [T0 helår]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Diff
+		displayFolder: Differenser
+		lineageTag: edd9794b-a1a3-4680-85bf-f549b91b4c6a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall plus best.lista Helår - T1 Helår' =
+			
+			
+			VAR Diff = [Utfall plus beställarlistan Helår] - [T1 helår]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Diff
+		displayFolder: Differenser
+		lineageTag: d528d793-950e-4617-8299-fd9fdf46e596
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall plus best.lista Helår - T2 Helår' =
+			
+			
+			VAR Diff = [Utfall plus beställarlistan Helår] - [T2 helår]
+			
+			VAR Result = IF( MAX(Kalender[RelativMånad]) < 0, Diff, BLANK())
+			
+			RETURN Diff
+		displayFolder: Differenser
+		lineageTag: 07962801-3ff3-474c-a264-b05a0944ae62
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index Utfall plus best.lista Helår mot T0 Helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall plus beställarlistan Helår] - [T0 helår], [T0 helår], BLANK())
+			VAR Result = IF( [Utfall plus beställarlistan Helår] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: abf956a5-bbf7-4919-97a2-b4d7d2780bc5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index Utfall plus best.lista Helår mot T1 Helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall plus beställarlistan Helår] - [T1 helår], [T1 helår], BLANK())
+			VAR Result = IF( [Utfall plus beställarlistan Helår] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: 32e425a7-f484-45f4-9a49-10505befac04
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Index Utfall plus best.lista Helår mot T2 Helår' =
+			
+			// Typ procent men visar avvikelsen från 1 (1 är att de är exakt lika)
+			VAR Diff = 1 + DIVIDE([Utfall plus beställarlistan Helår] - [T2 helår], [T2 helår], BLANK())
+			VAR Result = IF( [Utfall plus beställarlistan Helår] <> 0, Diff, BLANK())
+			RETURN Result
+		displayFolder: Index
+		lineageTag: 913727e9-e365-4560-8207-bf56051f4975
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff utfall mot T0 nästa år' = [Utfall] - [T0 nästa år]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 76c58894-a1dd-472e-b8a2-e884f3e75422
+
+	measure 'Diff utfall mot T0%' = DIVIDE([Utfall], [T0], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: c32c7d7d-ffc0-4a14-aa70-65c375624365
+
+	measure 'Diff utfall mot T1%' = DIVIDE([Utfall], [T1], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: be850924-b15a-476d-9402-6c3321df3c06
+
+	measure 'Diff utfall mot T2%' = DIVIDE([Utfall], [T2], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: 8e868ca8-3cc1-4eca-8bb7-77b665f2230d
+
+	measure 'Diff utfall mot T0 nästa år%' = DIVIDE([Utfall], [T0 nästa år], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: 66f1d4d2-3d6c-4a08-bb55-2e864520d1a2
+
+	measure 'Diff T1 mot T0%' = DIVIDE([T1], [T0], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: f46417e3-6c62-4a33-bad8-56845f065d42
+
+	measure 'Diff T2 mot T1%' = DIVIDE([T2], [T1], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: f09ad5d9-55e3-4196-89c8-8e2832a51402
+
+	measure 'Diff T0 nästa år mot T2%' = DIVIDE([T0 nästa år], [T2], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: 95059c52-84bf-412d-bc1e-6d0a96edada7
+
+	measure 'Diff utfall ÅTD mot T0 nästa år' = [Utfall ÅTD]  - [T0 nästa år helår]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 5e706a60-8789-4e30-889a-21c8b07be10d
+
+	measure 'Diff utfall ÅTD mot T0 nästa år%' = DIVIDE([Utfall ÅTD], [T0 nästa år helår], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: 85321820-6c80-49b1-8be9-3cc864478a41
+
+	measure 'Diff utfall ÅTD mot T0%' = DIVIDE([Utfall ÅTD], [T0 helår], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: b0823c83-4e84-4c8f-912c-b68b7d9ed096
+
+	measure 'Diff utfall ÅTD mot T1%' = DIVIDE([Utfall ÅTD], [T1 helår], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: 89f44c14-3167-4782-8f32-f4d69d062ffc
+
+	measure 'Diff utfall ÅTD mot T2%' = DIVIDE([Utfall ÅTD], [T2 helår], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Differenser
+		lineageTag: 26815b8f-f450-4bcd-95d7-82cae77da36e
+
+	measure 'Diff utfall ÅTD mot T0' = [Utfall ÅTD] - [T0 helår]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: c43acdc1-0fa3-44db-b22e-0488b9f34c27
+
+	measure 'Diff utfall ÅTD mot T1' = [Utfall ÅTD] - [T1 helår]
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: 27a98f43-11db-4f79-9ccc-88c5f4b9c22c
+
+	measure 'Diff utfall ÅTD mot T2' = ```
+			[Utfall ÅTD] - [T2 helår] 
+			```
+		formatString: #,0
+		displayFolder: Differenser
+		lineageTag: e64229eb-f4ad-48d9-9a52-807f49c6566f
+
+	measure 'Utfall fg helår-3' = ```
+			CALCULATE(
+			    [Utfall fg år-3], 
+			    ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear]))
+			```
+		isHidden
+		displayFolder: Specifika measures
+		lineageTag: 6cac7189-6f85-47ed-8de8-12a302ad28d7
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Filter Slicers' = [Utfall] + [T0] + [T1] + [T2]
+		isHidden
+		displayFolder: Specifika measures
+		lineageTag: 15eb45c7-68f1-48bf-89af-6ef6cb491ef5
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Aktuell jämförelseperiod' = ```
+			
+			SWITCH(
+			    TRUE(),
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 1, "Ack. Utfall mot T0",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 2, "Ack. Utfall mot T0",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 3, "Ack. Utfall mot T0",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 4, "Ack. Utfall mot T0",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 5, "Ack. Utfall mot T1",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 6, "Ack. Utfall mot T1",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 7, "Ack. Utfall mot T1",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 8, "Ack. Utfall mot T1",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 9, "Ack. Utfall mot T2",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 10, "Ack. Utfall mot T2",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 11, "Ack. Utfall mot T2",
+			    HASONEVALUE(Kalender[Månad]) && SELECTEDVALUE(Kalender[MånadNr]) = 12, "Ack. Utfall mot T2",
+			    "Ingen jämförelseperiod vald"
+			)
+			
+			
+			```
+		isHidden
+		displayFolder: Information om vad som är filtrerat
+		lineageTag: c9797c2d-10ed-4c7c-aa23-95198be2fdbf
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal anställda' = DISTINCTCOUNT(FTE[ANST_NR])
+		displayFolder: FTE
+		lineageTag: 971a4272-c337-4c6d-bcd3-f9a73ac7562d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE Total' = ```
+			-- den här summerar antalet FTE korrekt
+			            VAR fte_next_year = SUM(FTE[Antal månader nästa år])
+			            VAR sysselsattning = AVERAGE(FTE[Tjänstgöringsgrad])
+			            
+			            RETURN 
+			            DIVIDE(SUMX(FTE, fte_next_year * sysselsattning) , 12 , 0)
+			```
+		displayFolder: FTE
+		lineageTag: bf38a671-9629-4514-a196-ed29acfb2fa3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE' =
+			CALCULATE(
+			                DIVIDE(
+			                    SUM(FTE[Tjänstgöringsgrad]) * SUM(FTE[Antal månader nästa år]), 12, 0
+			                    )
+			)
+		displayFolder: FTE
+		lineageTag: d2bbfbcc-168f-43cf-a4f6-e5e2ffcf3619
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Format antal FTE nästa år' =
+			IF(
+			    SELECTEDVALUE(Kalender[MånadNr]) < 9, CONCATENATE("Antal FTE ", SELECTEDVALUE(Kalender[År])) -- Fram till september tittar vi på nuvarande år
+			    , CONCATENATE("Antal FTE ", CONVERT(SELECTEDVALUE(Kalender[År]) + 1, STRING)) -- september och framåt är nästkommande år
+			)
+		displayFolder: FTE
+		lineageTag: ee65b96a-ed43-4794-8074-e9d3d9ae580e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Format lönekostnad nästa år' =
+			IF(
+			    SELECTEDVALUE(Kalender[Månadnr]) < 9, CONCATENATE("Total lönekostnad ", SELECTEDVALUE(Kalender[År])) -- Fram till september tittar vi på nuvarande år
+			      , CONCATENATE("Total lönekostnad ", CONVERT(SELECTEDVALUE(Kalender[År]) + 1, STRING) -- september och framåt är nästkommande år
+			))
+		displayFolder: FTE
+		lineageTag: 97ec581d-769c-41d2-9211-b02c835b57c5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE Netto' =
+			CALCULATE(
+			    SUMX(FTE, [Antal FTE Total] * [Antal anställda])
+			)
+		formatString: 0.0
+		displayFolder: FTE
+		lineageTag: 140940ce-9923-4ca4-8722-bdd23f7e73dd
+
+	measure 'Total lönekostnad' = ```
+			CALCULATE(
+			            SUMX(FTE,
+			                FTE[Månadslön] * FTE[Antal månader nästa år] * FTE[Tjänstgöringsgrad])  -- summerar alla löner 
+			            + 
+			            SUMX(
+			                FTE, FTE[Tillägg 230] * FTE[Tillägg 230 antal månader nästa år] * FTE[Tjänstgöringsgrad]) --summerar alla lönetillägg kod 230 (oftast bara ett 10-tal)
+			)
+			            
+			```
+		formatString: #,0
+		displayFolder: FTE
+		lineageTag: 5a45af65-6a13-489e-a2b9-3de591698852
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Antal anställda Fryst' = ```
+			
+			VAR nuvarande_ar = IF(ISBLANK(SELECTEDVALUE(Kalender[År])), YEAR(TODAY()), SELECTEDVALUE(Kalender[År])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR nuvarande = IF(ISBLANK(SELECTEDVALUE(Kalender[MånadNr])), MONTH(TODAY()), SELECTEDVALUE(Kalender[MånadNr])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR yearmonth = CONVERT(CONCATENATE(nuvarande_ar, 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(
+			                            nuvarande < 10, CONCATENATE("0", nuvarande), nuvarande), "-01")
+			                            )), DATETIME)
+			
+			-- komplicerad logik för att kunna filtrera bort alla från urvalet som har avgångsdatum innan vald månad. Ytterligare komplext eftersom man vill att "icke-val" på månad ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			-- Nexer rekommenderade att istället ha ett separat mått för ackumulerat utfall eftersom det blir mer användarvänligt än att det byter mellan ackumulerat och månadsutfall beroende på om man valt månad eller inte. Pernilla K instisterade på att "verksamheten vill ha det så". 
+			
+			RETURN
+			
+			CALCULATE(
+			    DISTINCTCOUNT('Fryst FTE'[ANST_NR]),
+			    KEEPFILTERS('Fryst FTE'[Avgångsdatum] > yearmonth || ISBLANK('Fryst FTE'[Avgångsdatum]))
+			)
+			
+			-- John Agebrand, Nexer Insight 2025-04-24
+			```
+		displayFolder: FTE
+		lineageTag: 2ac84dd8-95a1-4a0c-ba67-0b25b002f1c5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE Fryst' =
+			CALCULATE(
+			                DIVIDE(
+			                    SUM('Fryst FTE'[Tjänstgöringsgrad]) * SUM('Fryst FTE'[Antal månader]), 12, 0
+			                    )
+			)
+		displayFolder: FTE
+		lineageTag: 7137a64e-636b-4baa-8c8c-c9b9d43bb0ed
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE Netto Fryst' = ```
+			CALCULATE(
+			    SUMX('Fryst FTE', [Antal FTE Total Fryst] * [Antal anställda Fryst])
+			    )
+			
+			```
+		formatString: 0.0
+		displayFolder: FTE
+		lineageTag: ec793e4f-a794-43c5-8c25-0490181547ce
+
+	measure 'Antal FTE Total Fryst' = ```
+			-- den här summerar antalet FTE korrekt
+			            VAR fte_next_year = SUM('Fryst FTE'[Antal månader])
+			            VAR sysselsattning = AVERAGE('Fryst FTE'[Tjänstgöringsgrad])
+			            
+			            RETURN 
+			            DIVIDE(SUMX('Fryst FTE', fte_next_year * sysselsattning) , 12 , 0)
+			```
+		displayFolder: FTE
+		lineageTag: cd2c9b74-3169-4693-8d95-2d13270d655a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total lönekostnad Fryst' = ```
+			CALCULATE(
+			            SUMX('Fryst FTE',
+			                'Fryst FTE'[Månadslön] * 'Fryst FTE'[Antal månader] * 'Fryst FTE'[Tjänstgöringsgrad] )  -- summerar alla löner 
+			            + 
+			            SUMX(
+			                'Fryst FTE', 'Fryst FTE'[Tillägg 230] * 'Fryst FTE'[Tillägg 230 antal månader] * 'Fryst FTE'[Tjänstgöringsgrad]) --summerar alla lönetillägg kod 230 (oftast bara ett 10-tal)
+			)         
+			```
+		displayFolder: FTE
+		lineageTag: f76010b8-3d15-4057-acbb-32a4d7b9a2e5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall helår personal' = ```
+			CALCULATE(
+			    [Utfall], ALLEXCEPT( Kalender, Kalender[År], Kalender[År med senast stängda månad 11:e], Kalender[DefaultYear], Kalender[NuvarandeÅr]),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			)
+			
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Utfall
+		lineageTag: 9616221b-23a2-4259-b104-ebb94dce6676
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T0 helår Personal' = ```
+			CALCULATE(
+			    [T0], 
+			    ALLEXCEPT( Kalender, 
+			    Kalender[År], 
+			    Kalender[År med senast stängda månad 11:e], 
+			    Kalender[DefaultYear], 
+			    Kalender[NuvarandeÅr]),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: f50d426a-2dbc-4216-8d74-cc2ec6eaec3e
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T1 helår Personal' = ```
+			CALCULATE(
+			    [T1], 
+			    ALLEXCEPT( Kalender, 
+			    Kalender[År], 
+			    Kalender[År med senast stängda månad 11:e], 
+			    Kalender[DefaultYear], 
+			    Kalender[NuvarandeÅr]),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")    
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: c6120927-ca27-4b70-a337-5c54338d9d59
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T2 helår Personal' = ```
+			CALCULATE(
+			    [T2], 
+			    ALLEXCEPT( Kalender, 
+			    Kalender[År], 
+			    Kalender[År med senast stängda månad 11:e], 
+			    Kalender[DefaultYear], 
+			    Kalender[NuvarandeÅr]),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: b25a2bf6-177d-4581-b0c9-2924b12961dd
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T0 nästa år helår Personal' = ```
+			
+			
+			VAR SelectedYear = IF(MAX(Kalender[NuvarandeÅr]) = "Nuvarande", MAX(Kalender[År]), SELECTEDVALUE(Kalender[NuvarandeÅr]))
+			    -- IF(MAX(Kalender[År med senast stängda månad 11:e]) = "Senast stängda månad", MAX(Kalender[År]), SELECTEDVALUE(Kalender[År med senast stängda månad 11:e]))
+			VAR Result = CALCULATE(
+			    [T0 helår Personal], 
+			    Kalender[NuvarandeÅr] = CONVERT(SelectedYear + 1, STRING),
+			    -- Kalender[År med senast stängda månad 11:e] = CONVERT(SelectedYear + 1, STRING),
+			
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			                )
+			
+			RETURN Result
+			
+			//CALCULATE( [T0 helår], DATEADD(Kalender[Datum], 1, YEAR)) // går inte, vi kan inte ta alla år och samtidigt flytta fram ett år...
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: d47b1b68-f4d1-4653-8a7b-62c572470823
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Utfall fg år-1 Helår Personal' = ```
+			CALCULATE(
+			    [Utfall fg helår-1], 
+			--    SAMEPERIODLASTYEAR(Kalender[Datum]),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Utfall
+		lineageTag: faa0e58a-e8aa-4213-b8cd-7ba36c9bbc7d
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Utfall fg år-1 ÅTD (Ack) Personal' = ```
+			CALCULATE(
+			    [Utfall fg år-1 ÅTD],
+			    /*
+			    [Utfall ÅTD], 
+			    SAMEPERIODLASTYEAR(Kalender[Datum]),
+			    */
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			    )
+			```
+		formatString: #,0.00
+		displayFolder: Personalkostnader\Utfall
+		lineageTag: 747ad872-edc7-4108-aec8-6bf4b3b4007a
+
+	measure 'Diff utfall ÅTD mot T2 Personal' =
+			CALCULATE(
+			    [Utfall ÅTD] - [T2 helår] ,
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal"
+			    )
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 9e1a9f32-fe2f-4b65-9634-7e2d06c906ce
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff utfall ÅTD mot T2% Personal' =
+			CALCULATE(
+			    DIVIDE([Utfall ÅTD], [T2 helår], 0),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal"
+			    )
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: fc8c83a8-6310-401b-b860-bc94cd5d2e23
+
+	measure 'Utfall ÅTD (Ack) Personal' = ```
+			IF(
+			    YEAR(MAX(Kalender[Datum])) = YEAR(TODAY()) && MAX(Kalender[Datum]) > TODAY(),
+			    BLANK(),
+			    CALCULATE( 
+			        [Utfall],         
+			        DATESYTD(Kalender[Datum]),
+			        KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			        KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			     )
+			
+			)
+			```
+		formatString: #,0.00
+		displayFolder: Personalkostnader\Utfall
+		lineageTag: ced3e534-dbb2-4a39-8733-8f6af65f2e0e
+
+	measure 'Utfall fg år-2 ÅTD (Ack) Personal' =
+			CALCULATE(
+			    [Utfall fg år-2 ÅTD],
+			/*
+			    DATEADD(Kalender[Datum], - 2, YEAR),
+			    */
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			    )
+		formatString: #,0.00
+		displayFolder: Personalkostnader\Utfall
+		lineageTag: f22ffe6f-d143-4fb8-ab1f-e30d8b91d6fa
+
+	measure 'Utfall fg år-3 ÅTD (Ack) Personal' = ```
+			CALCULATE(
+			    [Utfall fg år-3 ÅTD],
+			/*
+			    [Utfall ÅTD], 
+			    DATEADD(Kalender[Datum], - 3, YEAR),
+			    */
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			    )
+			```
+		formatString: #,0.00
+		displayFolder: Personalkostnader\Utfall
+		lineageTag: 541eb427-de0b-4811-881e-9465bcf6d6c4
+
+	measure 'Utfall fg år-2 Helår Personal' = ```
+			CALCULATE(
+			    [Utfall fg helår-2], 
+			    -- DATEADD(Kalender[Datum], -2, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			    )
+			```
+		formatString: #,0.00
+		displayFolder: Personalkostnader\Utfall
+		lineageTag: d6524bb1-f45d-40e9-9bd8-ee25b51fd614
+
+	measure 'Utfall fg år-3 Helår Personal' = ```
+			CALCULATE(
+			    [Utfall fg helår-3], 
+			--    DATEADD(Kalender[Datum], -3, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")
+			    )
+			```
+		formatString: #,0.00
+		displayFolder: Personalkostnader\Utfall
+		lineageTag: 228ae99b-b7c9-4bcc-b12d-ce75aa51fd87
+
+	measure 'Diff Utfall fg år -1 och -2 ÅTD (Ack) Personal' = [Utfall fg år-1 ÅTD (Ack) Personal] - [Utfall fg år-2 ÅTD (Ack) Personal]
+		displayFolder: Personalkostnader\Diff
+		lineageTag: e1970b93-71a9-4acc-ae84-d227c2c2cedd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff Utfall fg år -2 och -3 ÅTD (Ack) Personal' = [Utfall fg år-2 ÅTD (Ack) Personal] - [Utfall fg år-3 ÅTD (Ack) Personal]
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 818d9067-957e-499e-be32-800487a1a0d2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff Utfall - Utfall fg år -1 (Ack) Personal' = [Utfall ÅTD (Ack) Personal] - [Utfall fg år-1 ÅTD (Ack) Personal]
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 47739b16-3613-4210-8bbe-dcf178978614
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Upparbetning Helår' = [Utfall helår personal] - [Utfall ÅTD (Ack) Personal]
+		formatString: #,0
+		displayFolder: Personalkostnader\Upparbetning
+		lineageTag: 15a08c3f-ed8b-4d64-ac6d-881d154d1879
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Upparbetning Helår -1 %' = DIVIDE([Utfall fg år-1 ÅTD (Ack) Personal], [Utfall fg år-1 Helår Personal] , 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Upparbetning
+		lineageTag: 799ba425-69ab-4872-9a50-b7e2375b25ff
+
+	measure 'Upparbetning Helår -2 %' = DIVIDE([Utfall fg år-2 ÅTD (Ack) Personal], [Utfall fg år-2 Helår Personal], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Upparbetning
+		lineageTag: c5fa8eb2-dce6-492d-bf09-f2056f8c9363
+
+	measure 'Upparbetning Helår -3 %' = DIVIDE([Utfall fg år-3 ÅTD (Ack) Personal], [Utfall fg år-3 Helår Personal] , 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Upparbetning
+		lineageTag: 17c3b690-952b-43b5-8fe1-1fff5fb0c27d
+
+	measure 'Upparbetning Helår %' = ```
+			CALCULATE(
+			    Divide([Utfall ÅTD (Ack) Personal], 
+			        SWITCH(
+			            MONTH(TODAY()) < 3, [T0 helår Personal],
+			            MONTH(TODAY()) <= 8 && MONTH(TODAY()) >= 3, [T1 helår Personal],
+			            MONTH(TODAY()) > 8, [T2 helår Personal]
+			), 0),
+			KEEPFILTERS(Kalender[År] = YEAR(MAX(Kalender[Datum]))
+			))
+			```
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Upparbetning
+		lineageTag: 46e0320b-0ecb-4f58-93e7-8c2fac8aafe7
+
+	measure 'Upparbetning Helår -2' = [Utfall fg år-2 Helår Personal] - [Utfall fg år-2 ÅTD (Ack) Personal]
+		displayFolder: Personalkostnader\Upparbetning
+		lineageTag: 29b175a2-d584-453f-a7fc-622692d7476b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Upparbetning Helår -1' = [Utfall fg år-1 Helår Personal] - [Utfall fg år-1 ÅTD (Ack) Personal]
+		displayFolder: Personalkostnader\Upparbetning
+		lineageTag: c2f0470b-4ded-4d47-8808-1edf8f229e0e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Upparbetning Helår -3' = ```
+			[Utfall fg år-3 Helår Personal] - [Utfall fg år-3 ÅTD (Ack) Personal] 
+			```
+		displayFolder: Personalkostnader\Upparbetning
+		lineageTag: 763d0d18-b609-4a0f-9913-20fb82ca030d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff T2 - T1 Personal' = [T2 helår Personal] - [T1 helår Personal]
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 0041ce9e-df5c-4290-9708-897954a7b67f
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff T1 - T0 Personal' = [T1 helår Personal] - [T0 helår Personal]
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 6777c0a4-ff51-4713-8376-63ccb6a6f20d
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'FTE Prognos T0' =
+			
+			VAR selected_year = IF(SELECTEDVALUE(Kalender[NuvarandeÅr]) = "Nuvarande", YEAR(TODAY()), SELECTEDVALUE(Kalender[NuvarandeÅr]))
+			
+			RETURN
+			
+			CALCULATE(
+			    SUM('FTE Prognos'[AntalFTE]),
+			    KEEPFILTERS('FTE Prognos'[PrognosPeriod] = CONCATENATE(CONVERT(selected_year, INTEGER), "T0")
+			))
+		formatString: 0.0
+		displayFolder: Personalkostnader\FTE
+		lineageTag: c55e05ce-8e05-4767-93f9-42cbf60e369a
+
+	measure 'FTE Prognos T1' =
+			
+			VAR selected_year = IF(SELECTEDVALUE(Kalender[NuvarandeÅr]) = "Nuvarande", YEAR(TODAY()), SELECTEDVALUE(Kalender[NuvarandeÅr]))
+			
+			RETURN
+			
+			CALCULATE(
+			    SUM('FTE Prognos'[AntalFTE]),
+			    KEEPFILTERS('FTE Prognos'[PrognosPeriod] = CONCATENATE(CONVERT(selected_year, INTEGER), "T1")
+			))
+		formatString: 0.0
+		displayFolder: Personalkostnader\FTE
+		lineageTag: 4849fafb-61bd-4259-97f8-a232ce76bee4
+
+	measure 'FTE Prognos T2' = ```
+			
+			VAR selected_year = IF(SELECTEDVALUE(Kalender[NuvarandeÅr]) = "Nuvarande", YEAR(TODAY()), SELECTEDVALUE(Kalender[NuvarandeÅr]))
+			
+			RETURN
+			
+			CALCULATE(
+			    SUM('FTE Prognos'[AntalFTE]),
+			    KEEPFILTERS('FTE Prognos'[PrognosPeriod] = CONCATENATE(CONVERT(selected_year, INTEGER), "T2")
+			))
+			
+			```
+		formatString: 0.0
+		displayFolder: Personalkostnader\FTE
+		lineageTag: 155acf36-383a-4b02-b25e-f6edfce7473a
+
+	measure 'FTE Prognos Diff' =
+			SWITCH(
+			    MONTH(TODAY()) IN {1, 2, 3, 4}, [Antal FTE Netto Fryst] - [FTE Prognos T0],
+			    MONTH(TODAY()) IN {5, 6, 7, 8}, [Antal FTE Netto Fryst] - [FTE Prognos T1],
+			    MONTH(TODAY()) IN {9, 10, 11, 12}, [Antal FTE Netto Fryst] - [FTE Prognos T2]
+			)
+		formatString: 0.0
+		displayFolder: Personalkostnader\FTE
+		lineageTag: 20f44e5c-2efb-4415-ba4f-ebb9e828b0f8
+
+	measure 'Diff FTE Prognos T2 - T1' = [FTE Prognos T2] - [FTE Prognos T1]
+		formatString: 0.0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 5afecf4b-938c-4086-a5a4-81abd2bb94f4
+
+	measure 'Diff FTE Prognos T1 - T0' = [FTE Prognos T1] - [FTE Prognos T0]
+		formatString: 0.0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 6ba52844-705d-4349-8678-7f19b0cd4a68
+
+	measure 'Diff T2 - T1 Kst' =
+			CALCULATE(
+			    [T2 helår Personal] - [T1 helår Personal],
+			    ALL(Konto[Konto2])
+			)
+		displayFolder: Personalkostnader\Diff
+		lineageTag: e1b3af64-48bf-4e2f-94a0-cd3e3e6f45f3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Format valt år' = IF(SELECTEDVALUE(Kalender[År med senast stängda månad 11:e]) = "Senast stängda månad", CONVERT(YEAR(TODAY()), INTEGER), SELECTEDVALUE(Kalender[År med senast stängda månad 11:e]))
+		formatString: 0
+		displayFolder: Personalkostnader\Format
+		lineageTag: 0e21e188-e6a4-435f-bd9b-9874a22a77d9
+
+	measure 'T1 helår Personal år -1' = ```
+			CALCULATE(
+			    [T1],
+			    DATEADD(Kalender[Datum], -1, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")    
+			    )
+			
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: 7b99772b-5711-4ae6-9fd3-5d26eac60cda
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T1 helår Personal år -2' = ```
+			CALCULATE(
+			    [T1],
+			    DATEADD(Kalender[Datum], -2, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")    
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: d6cb0f62-db06-48c2-b82c-18964fb216fb
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T1 helår Personal år -3' = ```
+			CALCULATE(
+			    [T1],
+			    DATEADD(Kalender[Datum], -3, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")    
+			    )
+			
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: 1ebf9769-a6df-4853-807a-4afe3be3c686
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T2 helår Personal år -1' = ```
+			CALCULATE(
+			    [T2],
+			    DATEADD(Kalender[Datum], -1, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")    
+			    )
+			
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: eca5ab1c-6880-4c1f-9b82-2f645c536919
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T2 helår Personal år -2' = ```
+			CALCULATE(
+			    [T2],
+			    DATEADD(Kalender[Datum], -2, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")    
+			    )
+			
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: e16c45ea-e787-4dfc-9464-410340075b70
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T2 helår Personal år -3' = ```
+			CALCULATE(
+			    [T2],
+			    DATEADD(Kalender[Datum], -3, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")    
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: d82954e3-be6d-4632-b0b1-e10e391c639d
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T0 helår Personal år -1' = ```
+			CALCULATE(
+			    [T0],
+			    DATEADD(Kalender[Datum], -1, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")    
+			    )
+			
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: a934f3f0-b87f-416c-a777-3ba2c9ae22d9
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T0 helår Personal år -2' = ```
+			CALCULATE(
+			    [T0],
+			    DATEADD(Kalender[Datum], -2, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")    
+			    )
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: b28ee9cc-1965-486a-86b8-4300512c5825
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'T0 helår Personal år -3' = ```
+			CALCULATE(
+			    [T0],
+			    DATEADD(Kalender[Datum], -3, YEAR),
+			    KEEPFILTERS(PNLStructure[RowIndex] = 5), -- "TB2 Omkostnader"
+			    KEEPFILTERS(Konto[RRLev1Id] = 71) -- "Utgifter/kostnader för personal")    
+			    )
+			
+			```
+		formatString: #,0
+		displayFolder: Personalkostnader\Prognos
+		lineageTag: 6352b43d-ac7a-4eec-a050-2a16336392aa
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Prognos Utfall ÅTD (Ack) Personal' =
+			
+			VAR CurrentDate = TODAY()
+			VAR CurrentYear = YEAR(CurrentDate)
+			VAR CurrentMonth = MONTH(CurrentDate)
+			
+			VAR ActualYTD = [Utfall ÅTD (Ack) Personal]
+			VAR MonthsElapsed = MONTH(TODAY())
+			VAR AveragePerMonth = DIVIDE(ActualYTD, MonthsElapsed, 0)
+			VAR RemainingMonths = 12 - MonthsElapsed
+			VAR ForecastSales = AveragePerMonth * RemainingMonths
+			
+			RETURN
+			ForecastSales
+			
+			/*
+			IF(
+			    YEAR(MAX('Kalender'[Datum])) = CurrentYear,
+			    IF(
+			        MONTH(MAX(Kalender[Datum])) <= CurrentMonth, ActualYTD, -- Show actual YTD for past and current months
+			        ActualYTD + ForecastSales -- Show forecasted values for future months
+			    ), CALCULATE([Utfall ÅTD (Ack) Personal]) -- Show full YTD for previous years
+			)
+			
+			*/
+			
+			/*
+			VAR MonthsElapsed = MONTH(TODAY())
+			VAR AveragePerMonth = DIVIDE([Utfall ÅTD (Ack) Personal], MonthsElapsed, 0)
+			VAR RemainingMonths = 12 - MonthsElapsed
+			VAR ProjectedSales = AveragePerMonth * RemainingMonths
+			
+			RETURN
+			    IF(
+			    YEAR(MAX(Kalender[Datum])) = YEAR(TODAY()) && MAX(Kalender[Datum]) < TODAY(),
+			    BLANK(),
+			    [Utfall ÅTD (Ack) Personal] + ProjectedSales
+			    )
+			*/
+		formatString: #,0
+		displayFolder: Personalkostnader\Utfall
+		lineageTag: 04dd52d1-f281-44c8-a19c-7f811dc53c71
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff T2 - T1 Personal %' = DIVIDE([T2 helår Personal], [T1 helår Personal], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 78a306d5-3e52-456f-85be-afe5eacc5dae
+
+	measure 'Diff T1 - T0 Personal %' = DIVIDE([T1 helår Personal], [T0 helår Personal], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 9fb9351d-b355-49fe-a35c-85e12543a6ac
+
+	measure 'Diff T0 nästa år - T2 Personal' = [T0 nästa år helår Personal] - [T2 helår Personal]
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 3bac0cd8-5550-4569-96d4-3da97a84e200
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff T0 nästa år - T2 Personal %' = DIVIDE([T0 nästa år helår Personal], [T2 helår Personal], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 44512ffa-d2be-4725-adce-2dcfe70edaa2
+
+	measure 'Diff T0 nästa år - T0' = [T0 nästa år helår Personal] - [T0 helår Personal]
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 8da2976f-d42f-40a4-9725-4694c3f286f6
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff T0 nästa år - T0 Personal %' = DIVIDE([T0 nästa år helår Personal], [T0 helår Personal], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 5aed910a-97e3-4f42-abc9-1e264f354c76
+
+	measure 'Diff Utfall - T0 Personal' = [Utfall helår personal] - [T0 helår Personal]
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 36769e6c-3a9b-43da-995f-1c3cd6141ece
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff Utfall - T1 Personal' = [Utfall helår personal] - [T1 helår Personal]
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: f30e8cdc-3259-4a21-aef8-f0d56e964c2e
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff Utfall - T2 Personal' = [Utfall helår personal] - [T2 helår Personal]
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 9eba1b61-d418-4fc3-9838-b6cfe6e9ef99
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff Utfall - T0 Personal %' = DIVIDE([Utfall helår personal], [T0 helår Personal], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 6601c20d-abc2-4030-b3a8-6d79eb1b03e9
+
+	measure 'Diff Utfall - T1 Personal %' = DIVIDE([Utfall helår personal], [T1 helår Personal], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: a495e08d-e180-44bb-94d4-61249d530a60
+
+	measure 'Diff Utfall - T2 Personal %' = DIVIDE([Utfall helår personal], [T2 helår Personal], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 8edfe886-93e5-4d4a-a83f-18c2c114a076
+
+	measure 'Diff Utfall - Utfall fg år' = [Utfall helår personal] - [Utfall fg år-1 Helår Personal]
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 38f91837-3238-4155-83cd-c3a9e3fc5905
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff Utfall - Utfall fg år %' = DIVIDE([Utfall helår personal], [Utfall fg år-1 Helår Personal], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: c24c51be-6969-44bd-b3cf-5c5cc6ef858a
+
+	measure 'Diff Belopp' = ```
+			
+			
+			VAR Selection = SELECTEDVALUE('Välj jämförelsemätvärde Personal 1'[Välj jämförelsemätvärde Personal 1])
+			
+			RETURN
+			Selection
+			/*
+			    
+			    SWITCH(
+			        TRUE(),
+			        Selection = "Utfall fg år - T2 fg år", [Diff Utfall fg år - T2 fg år Personal],
+			        Selection = "T0 - Utfall fg år", [Diff T0 - Utfall fg år],
+			        Selection = "T0 - T2 fg år", [Diff T0 - T2 fg år],
+			        Selection = "T1 - T0", [Diff T1 - T0 Personal],
+			        Selection = "T2 - T1", [Diff T2 - T1 Personal],
+			        Selection = "T0 nästa år - T2", [Diff T0 nästa år - T2 Personal],
+			        BLANK()  -- Default if no valid selection
+			    )
+			*/
+			-- [Jämförelsevärde Personal 1] - [Jämförelsevärde Personal 2]
+			```
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 7c88c823-fd8e-4d85-b653-dfeccd0face4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff %' =
+			
+			VAR Selection = SELECTEDVALUE('Välj jämförelsemätvärde Personal 2'[Välj jämförelsemätvärde Personal 2])
+			
+			RETURN
+			Selection
+			
+			-- DIVIDE([Jämförelsevärde Personal Belopp], ROUND([Jämförelsevärde Personal Belopp %], 2), 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 5ebae8d7-4476-4f75-bdbc-34ccef28ab1d
+
+	measure 'Jämförelsevärde Personal Belopp' =
+			
+			
+			VAR Jamforelsevarde_Personal_1 = // Lagt till mellanslag efter föratt de ska få annorlunda namn än Jämförelsevärde2, annars kommer de få samma färger i stapeldiagram! Ex T0 kommer bli grått vare sig det är jämförelsevärde 1 eller 2.. Detta används i Personalkostnader
+			SWITCH(
+			    MAX( 'Välj jämförelsemätvärde Personal 1'[Välj jämförelsemätvärde Personal 1 order]),
+			        0, [Diff Utfall fg år - T2 fg år Personal],
+			        1, [Diff T0 - Utfall fg år],
+			        2, [Diff T0 - T2 fg år],
+			        3, [Diff T1 - T0 Personal],
+			        4, [Diff T2 - T1 Personal],
+			        5, [Diff T0 nästa år - T2 Personal]
+			)
+			
+			
+			/*
+			MAX( 'Välj jämförelsemätvärde Personal 1'[Välj jämförelsemätvärde Personal 1]),
+			        "Utfall fg år - T2 fg år", [Diff Utfall fg år - T2 fg år Personal],
+			        "T0 - Utfall fg år", [Diff T0 - Utfall fg år],
+			        "T0 - T2 fg år", [Diff T0 - T2 fg år],
+			        "T1 - T0", [Diff T1 - T0 Personal],
+			        "T2 - T1", [Diff T2 - T1 Personal],
+			        "T0 nästa år - T2", [Diff T0 nästa år - T2 Personal]
+			)
+			*/
+			RETURN Jamforelsevarde_Personal_1
+		formatString: #,0
+		displayFolder: Dynamiska jämförelsevärden
+		lineageTag: a8e7fc53-9db5-4f36-b724-8d11a3636e69
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Jämförelsevärde Personal Belopp %' =
+			
+			
+			VAR Jamforelsevarde_Personal_2 = // Lagt till mellanslag efter föratt de ska få annorlunda namn än Jämförelsevärde2, annars kommer de få samma färger i stapeldiagram! Ex T0 kommer bli grått vare sig det är jämförelsevärde 1 eller 2.. Detta används i Personalkostnader
+			SWITCH(
+			    MAX( 'Välj jämförelsemätvärde Personal 1'[Välj jämförelsemätvärde Personal 1 order]),
+			        0, [Diff Utfall fg år - T2 fg år Personal %],
+			        1, [Diff T0 - Utfall fg år %],
+			        2, [Diff T0 - T2 fg år %],
+			        3, [Diff T1 - T0 Personal %],
+			        4, [Diff T2 - T1 Personal %],
+			        5, [Diff T0 nästa år - T2 Personal %]
+			)
+			
+			RETURN Jamforelsevarde_Personal_2
+			
+			/*
+			"T2 fg år", [T2 helår Personal år -1],
+			        "Utfall fg år", [Utfall fg år-1 Helår Personal],
+			        "T0", [T0 helår Personal],
+			        "T1", [T1 helår Personal],
+			        "T2", [T2 helår Personal]
+			*/
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Dynamiska jämförelsevärden
+		lineageTag: d7daf7d2-f9ae-4a80-9c91-2715b20653e3
+
+	measure 'Diff Utfall fg år - T2 fg år Personal' = [Utfall fg år-1 Helår Personal] - [T2 helår Personal år -1]
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 7413aa7e-d966-4362-8703-34dfec76edf4
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'FTE Prognos T2 fg år' =
+			
+			
+			VAR selected_year = IF(SELECTEDVALUE(Kalender[NuvarandeÅr]) = "Nuvarande", YEAR(TODAY()), SELECTEDVALUE(Kalender[NuvarandeÅr]))
+			
+			RETURN
+			
+			CALCULATE(
+			    SUM('FTE Prognos'[AntalFTE]),
+			    KEEPFILTERS('FTE Prognos'[PrognosPeriod] = CONCATENATE(CONVERT(selected_year -1, INTEGER) , "T2")),
+			    ALL(Kalender[NuvarandeÅr]) -- för att ignorera årsväljaren
+			)
+		formatString: 0.0
+		displayFolder: Personalkostnader\FTE
+		lineageTag: 61ad5300-3fd6-4da3-8360-6ec9f37b3622
+
+	measure 'Diff Utfall fg år - T2 fg år Personal %' = DIVIDE([Utfall fg år-1 Helår Personal], [T2 helår Personal år -1], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: c28847c9-74b9-469f-9e82-c6282e32e436
+
+	measure 'FTE R12 Avg (fg år)' =
+			BLANK()
+			
+			/*
+			-- används tills vi hittar en bättre definition
+			CALCULATE(
+			    SUM('FTE Prognos'[AntalFTE]),
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]), -12, MONTH),
+			    ALL(Kalender[År med senast stängda månad 11:e])
+			)/12
+			*/
+		formatString: 0.0
+		displayFolder: Personalkostnader\FTE
+		lineageTag: 09ef5e5e-3239-457d-a79f-067cb23fb965
+
+	measure 'Diff FTE Utfall fg år - T2 fg år' = [FTE R12 Avg (fg år)] - [FTE Prognos T2 fg år]
+		formatString: 0.0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 40411f75-cc5b-40bd-95d3-888ea3816dc2
+
+	measure 'Diff T0 - Utfall fg år' = [T0 helår Personal] - [Utfall fg år-1 Helår Personal]
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 95bc41eb-8fd5-4da2-854d-3db11afc4dc0
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff T0 - Utfall fg år %' = DIVIDE([T0 helår Personal], [Utfall fg år-1 Helår Personal], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 2710fa28-8841-4a51-ba6f-23f83fba0ac7
+
+	measure 'Diff FTE Prognos T0 - Utfall fg år' = [FTE Prognos T0] - [FTE R12 Avg (fg år)]
+		formatString: 0.0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 1e8fc7d2-c5ff-4fdc-903d-cf89969dbbe1
+
+	measure 'Diff T0 - T2 fg år' = [T0 helår Personal] - [T2 helår Personal år -1]
+		formatString: #,0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 4bf6f2d5-42f3-476c-8802-d7d1def18e33
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Diff T0 - T2 fg år %' = DIVIDE([T0 helår Personal], [T2 helår Personal år -1], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Personalkostnader\Diff
+		lineageTag: f0caaa73-933d-4ecd-93c1-2c7f8e480f73
+
+	measure 'Diff FTE T0 - T2 fg år' = [FTE Prognos T0] - [FTE Prognos T2 fg år]
+		formatString: 0.0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: 14f869f7-9b69-4305-b992-4e48fc6a8030
+
+	measure 'FTE Prognos T0 nästa år' =
+			
+			VAR selected_year = IF(SELECTEDVALUE(Kalender[NuvarandeÅr]) = "Nuvarande", YEAR(TODAY()), SELECTEDVALUE(Kalender[NuvarandeÅr]))
+			
+			RETURN
+			
+			CALCULATE(
+			    SUM('FTE Prognos'[AntalFTE]),
+			    KEEPFILTERS('FTE Prognos'[PrognosPeriod] = CONCATENATE(CONVERT(selected_year +1, INTEGER) , "T0")),
+			    ALL(Kalender[NuvarandeÅr]) -- för att ignorera årsväljaren
+			)
+		formatString: 0.0
+		displayFolder: Personalkostnader\FTE
+		lineageTag: 7d765398-ed50-44b1-b6f0-d14c65ca7b35
+
+	measure 'Diff FTE Prognos T0 nästa år - T2' = [FTE Prognos T0 nästa år] - [FTE Prognos T2]
+		formatString: 0.0
+		displayFolder: Personalkostnader\Diff
+		lineageTag: ec71974e-ef4f-4980-8a3b-3d3fed92285c
+
+	measure 'Utfall FTE jan-apr' =
+			CALCULATE([Antal FTE månad ack], KEEPFILTERS(Kalender[Tertial] = "T1"))
+			 -- Detta ligger med som placeholder i Personalkostnader i väntan på att data trillar in under 2025
+		formatString: 0.00
+		displayFolder: Personalkostnader\FTE
+		lineageTag: b47d9107-0a4a-43a5-b611-34dd1499a1e5
+
+	measure 'Utfall FTE maj-aug' =
+			CALCULATE([Antal FTE månad ack], KEEPFILTERS(Kalender[Tertial] = "T2"))
+			 -- Detta ligger med som placeholder i Personalkostnader i väntan på att data trillar in under 2025
+		formatString: 0.00
+		displayFolder: Personalkostnader\FTE
+		lineageTag: cd78c68c-7585-4bec-abe4-f0303a13f8d6
+
+	measure 'Utfall FTE sept-dec' =
+			CALCULATE([Antal FTE månad ack], KEEPFILTERS(Kalender[Tertial] = "T3"))
+			 -- Detta ligger med som placeholder i Personalkostnader i väntan på att data trillar in under 2025
+		formatString: 0.00
+		displayFolder: Personalkostnader\FTE
+		lineageTag: dcf0b1a7-65b6-432e-8432-9fc1f5e5c9ee
+
+	measure 'Format Utfall fg år - T2 fg år' = ```
+			IF(
+			    SELECTEDVALUE(Kalender[NuvarandeÅr]) = "Nuvarande", 
+			    "UTF " & CONVERT(YEAR(TODAY()) -1, STRING) & " JFR T2 " & CONVERT(YEAR(TODAY()) -1, STRING),  
+			    "UTF " & CONVERT(VALUE(SELECTEDVALUE(Kalender[NuvarandeÅr])) -1, STRING) & " JFR T2 " & CONVERT(VALUE(SELECTEDVALUE(Kalender[NuvarandeÅr])) -1, STRING)
+			)
+			```
+		displayFolder: Personalkostnader\Format
+		lineageTag: b8de7e86-3354-4bec-97db-7c76a1955087
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE ack jan-apr' = ```
+			
+			VAR month_now = MONTH(TODAY())
+			VAR frysdag = DAY(TODAY()) 
+			RETURN
+			
+			IF(
+			    TODAY() < DATE(YEAR(TODAY()), 4, 22),
+			    BLANK(),
+			    CALCULATE([Antal FTE månad ack],
+			    KEEPFILTERS(Kalender[Tertial] = "T1")
+			    )
+			)
+			/*
+			IF(
+			    month_now <= 4 && frysdag < 22, BLANK(),
+			        CALCULATE(
+			    [Antal FTE månad ack],
+			    KEEPFILTERS(Kalender[Tertial] = "T1")
+			))
+			
+			
+			*/
+			--- räknar ackumulerat FTE-värde begränsat till T1
+			```
+		displayFolder: FTE
+		lineageTag: 3f66aedf-5bf3-4170-83c7-fffdb07e5ea3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE ack jan-aug' = ```
+			
+			
+			var month_now = MONTH(TODAY())
+			VAR frysdag = DAY(TODAY()) 
+			VAR dagensdag = 2025-08-25
+			
+			RETURN
+			IF(
+			    TODAY() < DATE(YEAR(TODAY()), 8, 22),
+			    BLANK(),
+			    CALCULATE([Antal FTE månad ack],
+			    KEEPFILTERS(Kalender[Tertial] IN {"T1", "T2"})
+			    )
+			)
+			--- räknar ackumulerat FTE-värde begränsat till T2
+			```
+		displayFolder: FTE
+		lineageTag: 1c6bc47f-1326-461d-9697-7a047977c90b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE ack jan-dec' = ```
+			
+			
+			var month_now = MONTH(TODAY())
+			VAR frysdag = DAY(TODAY()) 
+			
+			
+			RETURN
+			
+			IF(
+			    TODAY() < DATE(YEAR(TODAY()), 12, 22),
+			    BLANK(),
+			    CALCULATE([Antal FTE månad ack],
+			    KEEPFILTERS(Kalender[Tertial] IN {"T1", "T2", "T3"})
+			    )
+			)
+			--- räknar ackumulerat FTE-värde begränsat till T3
+			
+			/* -- Den här koden funkar bara för 2024
+			CALCULATE(
+			    DIVIDE([Antal FTE ack TEST], 4, 0),
+			    -- DIVIDE(SUM('Fryst FTE Ack'[Antal FTE]), 4, 0),
+			    KEEPFILTERS(Kalender[Tertial] = "T3")
+			)
+			*/
+			```
+		displayFolder: FTE
+		lineageTag: 99d320b3-787a-4412-8fe5-a0d734014381
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE ack' = ```
+			
+			VAR current_month = [Antal FTE Netto Fryst]
+			VAR antal_valda_manader = DISTINCTCOUNT(Kalender[Månad]) -- denna används för att göra månadsvalet dynamiskt
+			
+			RETURN 
+			
+			IF(
+			    NOT ISBLANK([Antal FTE Netto Fryst]),
+			    TOTALYTD([Antal FTE Netto Fryst], Kalender[Datum]),
+			    BLANK()
+			)
+			
+			
+			```
+		formatString: 0.0
+		displayFolder: FTE
+		lineageTag: c574d764-2452-4c8d-bea8-68e9d6318750
+
+	measure 'Format Antal anställda' = ```
+			IF(
+			    SELECTEDVALUE(Kalender[MånadNr]) > 8,
+			    -- MONTH(TODAY()) > 8, 
+			    "Antal anställda " & CONVERT(SELECTEDVALUE(Kalender[År]) +1, STRING), -- i september blickar vi framåt
+			    "Antal anställda " & CONVERT(SELECTEDVALUE(Kalender[År]), STRING) -- januari-augusti tittar vi på nuläge
+			    )
+			```
+		displayFolder: FTE
+		lineageTag: 75fe0bd8-5821-4f3f-be76-cf573d67c401
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE Månad Fryst' = ```
+			-- den här summerar Utfall FTE korrekt per månad. Filtrerar ut alla med anställningsdatum i framtiden och sätter 0 på dem
+			
+			VAR CurrentDate = MAX(Kalender[Datum])
+			VAR CurrentMonthStart = DATE(YEAR(CurrentDate), MONTH(CurrentDate), 1)
+			VAR monthend = EOMONTH(MAX('Fryst FTE'[Frysdatum]), 0)
+			VAR sysselsattning = AVERAGE('Fryst FTE'[Tjänstgöringsgrad])
+			VAR nuvarande_ar = IF(ISBLANK(SELECTEDVALUE(Kalender[År])), YEAR(TODAY()), SELECTEDVALUE(Kalender[År])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR nuvarande = IF(ISBLANK(SELECTEDVALUE(Kalender[MånadNr])), MONTH(TODAY()), SELECTEDVALUE(Kalender[MånadNr])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR yearmonth = CONVERT(CONCATENATE(nuvarande_ar, 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(
+			                            nuvarande < 10, CONCATENATE("0", nuvarande), nuvarande), "-01")
+			                            )), DATETIME)
+			
+			-- komplicerad logik för att kunna filtrera bort alla från urvalet som har avgångsdatum innan vald månad. Ytterligare komplext eftersom man vill att "icke-val" på månad ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			-- Nexer rekommenderade att istället ha ett separat mått för ackumulerat utfall eftersom det blir mer användarvänligt än att det byter mellan ackumulerat och månadsutfall beroende på om man valt månad eller inte. Pernilla K instisterade på att "verksamheten vill ha det så". 
+			
+			RETURN
+			    CALCULATE(
+			        SUMX(
+			            FILTER(
+			                'Fryst FTE',
+			                'Fryst FTE'[Anställningsdatum] <= monthend &&
+			                (ISBLANK('Fryst FTE'[Avgångsdatum]) || 'Fryst FTE'[Avgångsdatum] >= CurrentMonthStart)
+			                ),
+			            'Fryst FTE'[Antal FTE månad] * sysselsattning
+			            )
+			            )
+			```
+		displayFolder: FTE
+		lineageTag: dbb63be1-7d4b-406b-a57f-314cdafaeceb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE månad ack' = ```
+			-- korrigerad 2025-05-21 av John Agebrand, efter samråd med Robin Uppman. Antal FTE Månad Fryst 2 är en SUMMARIZE för att tvinga in alla rader 
+			
+			VAR current_month = [Antal FTE Månad Fryst 2]
+			VAR CurrentDate = MAX(Kalender[Datum])
+			VAR antal_valda_manader = MAX(Kalender[MånadNr]) -- denna används för att göra månadsvalet dynamiskt
+			VAR nuvarande_ar = IF(ISBLANK(SELECTEDVALUE(Kalender[År])), YEAR(TODAY()), SELECTEDVALUE(Kalender[År])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR nuvarande = IF(ISBLANK(SELECTEDVALUE(Kalender[MånadNr])), MONTH(TODAY()), SELECTEDVALUE(Kalender[MånadNr])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR yearmonth = CONVERT(CONCATENATE(nuvarande_ar, 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(
+			                            nuvarande < 10, CONCATENATE("0", nuvarande), nuvarande), "-01")
+			                            )), DATETIME)
+			RETURN
+			
+			IF(nuvarande > MAX('Fryst FTE'[Frysdatum]), BLANK(),
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUMX(
+			            FILTER(
+			                ALL(Kalender),
+			                Kalender[Datum] <= CurrentDate
+			            ),
+			            [Antal FTE Månad Fryst 2]
+			        )
+			    ),
+			    CALCULATE(
+			        COUNTROWS(
+			            FILTER(
+			                ALL(Kalender),
+			                Kalender[Datum] <= CurrentDate &&
+			                NOT(ISBLANK([Antal FTE Månad Fryst 2]))
+			            )
+			        )
+			    )
+			)
+			)
+			/*
+			Antal FTE månad ack = 
+			VAR current_month = [Antal FTE Månad Fryst]
+			VAR antal_valda_manader = MAX(Kalender[MånadNr]) -- denna används för att göra månadsvalet dynamiskt
+			            VAR yearmonth = CONVERT(CONCATENATE(SELECTEDVALUE(Kalender[År]), 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(SELECTEDVALUE(Kalender[MånadNr]) < 10, CONCATENATE("0", SELECTEDVALUE(Kalender[MånadNr])), SELECTEDVALUE(Kalender[MånadNr])), "-01")
+			            )), DATETIME)
+			
+			RETURN 
+			CALCULATE(
+			IF(
+			    NOT ISBLANK([Antal FTE Månad Fryst]),
+			    -- DIVIDE(SUMX('Fryst FTE', [Antal FTE Månad Fryst]), antal_valda_manader, 1), -- Summerar rätt på totalen över flera månader
+			    DIVIDE(TOTALYTD([Antal FTE Månad Fryst], Kalender[Datum]), antal_valda_manader, 1),
+			    BLANK()
+			)
+			--, KEEPFILTERS(CONVERT('Fryst FTE'[Avgångsdatum], DATETIME) < yearmonth || ISBLANK('Fryst FTE'[Avgångsdatum]))
+			)
+			*/
+			```
+		displayFolder: FTE
+		lineageTag: 49bbb4f1-fd09-49f7-a837-874aba1513ac
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal valda månader' = DISTINCTCOUNT(Kalender[Månad])
+		displayFolder: FTE
+		lineageTag: e414498a-f24e-41c9-955f-430bd9738645
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal anställda månad ack' = ```
+			-- ska visa antalet anställda ackumulerat för varje månad. Delar antalet ackumulerade anställda med antalet månader som passerat
+			VAR antal_valda_manader = DISTINCTCOUNT(Kalender[MånadNr]) -- denna används för att göra månadsvalet dynamiskt
+			VAR yearmonth = CONVERT(CONCATENATE(SELECTEDVALUE(Kalender[År]), 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(SELECTEDVALUE(Kalender[MånadNr]) < 10, CONCATENATE("0", SELECTEDVALUE(Kalender[MånadNr])), SELECTEDVALUE(Kalender[MånadNr])), "-01")
+			)), DATETIME)
+			-- komplicerad logik för att kunna filtrera bort alla från urvalet som har avgångsdatum innan vald månad
+			
+			RETURN
+			IF(antal_valda_manader > 1, 
+			DIVIDE(
+			    CALCULATE(
+			    TOTALYTD(DISTINCTCOUNT('Fryst FTE'[ANST_NR]), Kalender[Datum]),
+			    KEEPFILTERS(CONVERT('Fryst FTE'[Avgångsdatum], DATETIME) > MIN(Kalender[Datum]) || ISBLANK('Fryst FTE'[Avgångsdatum]))
+			), antal_valda_manader, 0)
+			,
+			CALCULATE(
+			    TOTALYTD(DISTINCTCOUNT('Fryst FTE'[ANST_NR]), Kalender[Datum]),
+			    KEEPFILTERS(CONVERT('Fryst FTE'[Avgångsdatum], DATETIME) > yearmonth || ISBLANK('Fryst FTE'[Avgångsdatum]))
+			)
+			)
+			
+			/*
+			IF(
+			    NOT ISBLANK([Antal FTE Månad Fryst]),
+			    DIVIDE(TOTALYTD([Antal FTE Månad Fryst], Kalender[Datum]), antal_valda_manader, 1),
+			    BLANK()
+			)
+			*/
+			```
+		formatString: 0
+		displayFolder: FTE
+		lineageTag: 2a67a7a2-93e3-4e99-846e-9cbc7006a2f4
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Dynamisk diff för Resultatuppföljning Dashboard' = ```
+			
+			    SWITCH(TRUE(),
+			    MAX(Kalender[Tertial]) = "T1", [Utfall ÅTD] - [T0 helår],
+			    MAX(Kalender[Tertial]) = "T2", [Utfall ÅTD] - [T1 helår],
+			    MAX(Kalender[Tertial]) = "T3", [Utfall ÅTD] - [T2 helår]
+			    )
+			```
+		displayFolder: Differenser
+		lineageTag: d890e71f-0acf-4736-ac36-6de3659172e5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Dynamisk diff för Resultatuppföljning Dashboard%' = ```
+			
+			    SWITCH(TRUE(),
+			    MAX(Kalender[Tertial]) = "T1", DIVIDE([Utfall], [T0], 0),
+			    MAX(Kalender[Tertial]) = "T2", DIVIDE([Utfall], [T1], 0),
+			    MAX(Kalender[Tertial]) = "T3", DIVIDE([Utfall], [T2], 0)
+			    )
+			```
+		displayFolder: Differenser
+		lineageTag: 07f24329-badd-4f3b-acd4-96b9ea8dc194
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal anställda totalt' = ```
+			-- räknar totala antalet som varit anställda nån gång under innevarande år. Räknar till dagens datum, så oberoende av vald månad.
+			        CALCULATE(
+			                            DISTINCTCOUNT('Fryst FTE'[ANST_NR]), 
+			                            ALL(Kalender[Månad])
+			)
+			```
+		displayFolder: FTE
+		lineageTag: 806447c9-c6a8-433c-be9a-f064dffaf544
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Format antal anställda Personal' = "Antal anställda " + SELECTEDVALUE(Kalender[Månad]) + " " + SELECTEDVALUE(Kalender[År])
+		displayFolder: FTE
+		lineageTag: 0b58ca61-4f8b-49f0-acf3-a52f0d8b8c3b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall FTE Månad ack TEST' = ```
+			
+			VAR current_month = [Antal FTE Månad Fryst]
+			VAR antal_valda_manader = MAX(Kalender[MånadNr]) -- denna används för att göra månadsvalet dynamiskt
+			VAR start_of_month = CONVERT(CONCATENATE(SELECTEDVALUE(Kalender[År]), 
+			            CONCATENATE("-", 
+			            CONCATENATE(IF(SELECTEDVALUE(Kalender[MånadNr]) < 10, CONCATENATE("0", SELECTEDVALUE(Kalender[MånadNr])), SELECTEDVALUE(Kalender[MånadNr])), "-01")
+			            )), DATETIME)
+			VAR no_of_months = MAX(Kalender[MånadNr])
+			VAR SelectedYear = MAX(Kalender[År])
+			VAR SelectedMonth = MAX(Kalender[MånadNr])
+			
+			RETURN 
+			
+			CALCULATE(
+			    TOTALYTD(
+			        SUMX(
+			            'Fryst FTE',
+			            VAR StartMonth = MONTH('Fryst FTE'[Anställningsdatum])
+			            VAR StartYear = YEAR('Fryst FTE'[Anställningsdatum])
+			            VAR EndMonth = MONTH('Fryst FTE'[Avgångsdatum])
+			            VAR EndYear = YEAR('Fryst FTE'[Avgångsdatum])
+			            
+			
+			            RETURN 
+			            
+			            IF(
+			                -- Employee is still active in the selected period
+			                (ISBLANK('Fryst FTE'[Avgångsdatum]) || CONVERT('Fryst FTE'[Avgångsdatum], DATETIME)  < CONVERT('Fryst FTE'[Frysdatum], DATETIME))
+			                && CONVERT('Fryst FTE'[Anställningsdatum], DATETIME) < start_of_month , 
+			                current_month * AVERAGE('Fryst FTE'[Tjänstgöringsgrad]),                
+			                -- [Antal FTE Månad Fryst], 
+			                0
+			            )
+			          
+			            
+			        ),
+			        Kalender[Datum]
+			    ) / no_of_months
+			    -- , KEEPFILTERS(Kalender[År] = SelectedYear)
+			)
+			```
+		formatString: 0.0
+		displayFolder: FTE
+		lineageTag: fab54331-bcdc-4443-b1d4-2b8ccc8edd8d
+
+	measure 'FTE YTD' = ```
+			-- Filtrerar ut alla med anställningsdatum i framtiden och sätter 0 på dem
+			VAR startdate = CONVERT(CONCATENATE(SELECTEDVALUE(Kalender[År]), "-01-01"), DATETIME)    
+			VAR monthno = SELECTEDVALUE(Kalender[MånadNr])
+			
+			RETURN
+			
+			DIVIDE(
+			    CALCULATE(
+			    SUMX('Fryst FTE',
+			        IF(ISBLANK('Fryst FTE'[Avgångsdatum]) ||  
+			        -- CONVERT(MAX('Fryst FTE'[Avgångsdatum]), DATETIME) > STARTOFMONTH(Kalender[Datum])
+			        CONVERT('Fryst FTE'[Avgångsdatum], DATETIME) > STARTOFMONTH(Kalender[Datum])
+			            , [Antal FTE Månad Fryst], 0)
+			    )
+			    , DATESYTD(Kalender[Datum])
+			    , KEEPFILTERS('Fryst FTE'[Frysdatum] > startdate)
+			    )
+			    
+			, monthno, 0)
+			```
+		formatString: 0.00
+		displayFolder: FTE
+		lineageTag: 8f90fac7-6712-4453-8a1b-57e0cb49f26d
+
+	measure 'FTE månad' = ```
+			-- den här summerar Utfall FTE korrekt per månad. Filtrerar ut alla med anställningsdatum i framtiden och sätter 0 på dem
+			            
+			            VAR monthstart = DATE(SELECTEDVALUE(Kalender[År]), SELECTEDVALUE(Kalender[MånadNr]), 1)
+			            
+			RETURN 
+			
+			SUMX(
+			    'Fryst FTE', 
+			    VAR fte_manad = 'Fryst FTE'[Antal FTE månad]
+			    VAR sysselsattning = 'Fryst FTE'[Tjänstgöringsgrad]
+			    VAR monthend = EOMONTH(MAX('Fryst FTE'[Frysdatum]), 0)
+			    VAR excludeEmployee = IF('Fryst FTE'[Anställningsdatum] > monthend, 1, 0)
+			    
+			    VAR monthFTE = IF(
+			        excludeEmployee = 1, 
+			        0, 
+			        IF(
+			            NOT(ISBLANK('Fryst FTE'[Avgångsdatum])) && 'Fryst FTE'[Avgångsdatum] < monthstart, 
+			            0, 
+			            fte_manad * sysselsattning
+			        )
+			    )
+			
+			    RETURN 
+			    monthFTE
+			)
+			
+			/*
+			        IF(
+			            NOT(ISBLANK(MAX('Fryst FTE'[Avgångsdatum]))) && MAX('Fryst FTE'[Avgångsdatum]) < monthstart, 0, 
+			            CALCULATE(fte_manad * sysselsattning
+			        ))
+			*/
+			```
+		formatString: 0.00
+		displayFolder: FTE
+		lineageTag: 1301bdf6-2af1-4687-9355-41c29657718f
+
+	measure 'Antal FTE Månad Fryst Alternativ' = ```
+			-- den här summerar Utfall FTE korrekt per månad. Filtrerar ut alla med anställningsdatum i framtiden och sätter 0 på dem
+			
+			VAR CurrentDate = MAX('Fryst FTE'[Frysdatum])
+			VAR CurrentMonthStart = DATE(YEAR(CurrentDate), MONTH(CurrentDate), 1)
+			VAR monthend = EOMONTH(MAX('Fryst FTE'[Frysdatum]), 0)
+			VAR fte_manad = SUM('Fryst FTE'[Antal FTE månad])
+			VAR sysselsattning = AVERAGE('Fryst FTE'[Tjänstgöringsgrad])
+			VAR nuvarande_ar = IF(ISBLANK(SELECTEDVALUE(Kalender[År])), YEAR(TODAY()), SELECTEDVALUE(Kalender[År])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR nuvarande = IF(ISBLANK(SELECTEDVALUE(Kalender[MånadNr])), MONTH(TODAY()), SELECTEDVALUE(Kalender[MånadNr])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR yearmonth = CONVERT(CONCATENATE(nuvarande_ar, 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(
+			                            nuvarande < 10, CONCATENATE("0", nuvarande), nuvarande), "-01")
+			                            )), DATETIME)
+			
+			-- komplicerad logik för att kunna filtrera bort alla från urvalet som har avgångsdatum innan vald månad. Ytterligare komplext eftersom man vill att "icke-val" på månad ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			-- Nexer rekommenderade att istället ha ett separat mått för ackumulerat utfall eftersom det blir mer användarvänligt än att det byter mellan ackumulerat och månadsutfall beroende på om man valt månad eller inte. Pernilla K instisterade på att "verksamheten vill ha det så". 
+			
+			RETURN
+			
+			    CALCULATE(
+			        SUMX(
+			            FILTER(
+			                'Fryst FTE',
+			                'Fryst FTE'[Anställningsdatum] <= monthend &&
+			                (ISBLANK('Fryst FTE'[Avgångsdatum]) || 'Fryst FTE'[Avgångsdatum] >= CurrentMonthStart)
+			                ),
+			            -- fte_manad * sysselsattning
+			            'Fryst FTE'[Antal FTE månad] * 'Fryst FTE'[Tjänstgöringsgrad]
+			            )
+			            )
+			
+			```
+		displayFolder: FTE
+		lineageTag: 8459ae75-d1d5-4ce6-84ad-39f04ed503d0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gammal FTE' = ```
+			-- den här summerar antalet FTE korrekt per månad
+			            VAR fte_manad = SUM('Fryst FTE'[Antal FTE månad])
+			            VAR sysselsattning = AVERAGE('Fryst FTE'[Tjänstgöringsgrad])
+			            
+			            RETURN 
+			            fte_manad * sysselsattning
+			            
+			            
+			            -- SUMX('Fryst FTE', fte_manad * sysselsattning)
+			```
+		displayFolder: FTE
+		lineageTag: 36b78e70-7303-4367-b4d0-97e6bced825a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE Månad Fryst 2' = ```
+			-- korrigerad 2025-05-21 av John Agebrand, efter samråd med Robin Uppman. Antal FTE Månad Fryst 2 är en SUMMARIZE för att tvinga in alla rader 
+			SUMX(
+			    SUMMARIZE('Fryst FTE', 'Fryst FTE'[ANST_NR], 'Fryst FTE'[Namn]), [Antal FTE Månad Fryst])
+			```
+		displayFolder: FTE
+		lineageTag: 51809a1d-fb4f-4956-b39e-4f5a7a1616f3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall FTE FrånvaroDagar' =
+			
+			
+			VAR Result = SUM('ViewFactFteFrånvaroJustering'[Antal Obetalda Dagar])
+			
+			RETURN IF(AND(Result <> 0, [Utfall FTE Före Justering] <> 0), Result)
+		formatString: #,##0.0
+		displayFolder: Utfall FTE
+		lineageTag: 23ec1d71-4442-4e59-b2d7-2a80988a7ddd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'UTfall FTE' =
+			
+			
+			VAR Result = CALCULATE(sum(ViewFactFte[FTE]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
+			
+			RETURN IF( Result <> 0, Result)
+		formatString: 0.00
+		displayFolder: Utfall FTE
+		lineageTag: 88cf9678-e9b2-4415-8c87-b0d8816a77e7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall FTE Justering' =
+			
+			
+			VAR Result = CALCULATE(SUM(ViewFactFte[Frånvaro justering]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
+			
+			RETURN IF(AND(Result <> 0, [Utfall FTE Före Justering] <> 0), Result)
+		displayFolder: Utfall FTE
+		lineageTag: 6168f197-d65b-4815-a2be-464e837972eb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall FTE Före Justering' =
+			
+			
+			VAR Result = CALCULATE(max(ViewFactFte[FTE före justering]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0.00
+		displayFolder: Utfall FTE
+		lineageTag: 332414b7-d875-4f07-a965-f0b0369dfb1f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall Kalenderdagar Totalt' =
+			
+			
+			VAR Result = CALCULATE(max(ViewFactFte[Dagar totalt]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
+			
+			RETURN IF([Utfall Rapporterade Timmar] <> 0, Result)
+		displayFolder: Utfall FTE
+		lineageTag: f76c9593-9376-4395-93ed-fd496b0b7cca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall Rapporterade Timmar' =
+			
+			
+			
+			VAR Result = CALCULATE(SUM(ViewFactFte[Rapporterade Timmar]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: #,##.0
+		displayFolder: Utfall FTE
+		lineageTag: 65dc50b5-6d0a-4a26-86a4-88cbd7625065
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall Normal Arbetstid' =
+			
+			
+			VAR Result = CALCULATE(SUM(ViewFactFte[Normal arbetstid]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1 ))
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: #,##0
+		displayFolder: Utfall FTE
+		lineageTag: b52983f9-83f2-4c8b-a82c-5b965f2f1e8a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall Medel FTE' = ```
+			
+			AVERAGEX (
+			    VALUES ( 'Kalender'[ÅrMånad] ),
+			    [UTfall FTE]
+			)
+			
+			```
+		formatString: 0.00
+		displayFolder: Utfall FTE
+		lineageTag: 9b82b577-20c4-4bfd-b1db-26f0302dea45
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Frånvaro'
+		displayFolder: FTE
+		lineageTag: 46e9c775-b13a-424c-83fc-33d99c2329b3
+
+	measure 'Utfall Sysselsättningsgrad' =
+			
+			
+			VAR Result = CALCULATE(MAX(ViewFactFte[Sysselsättningsgrad])/100, KEEPFILTERS(ViewFactFte[AktualitetId] = 1))
+			
+			RETURN IF([Utfall FTE Före Justering] <> 0, Result)
+		formatString: 0%
+		displayFolder: Utfall FTE
+		lineageTag: 89de35e7-e635-41a0-a620-771d2b65d276
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Utfall Frånvaro Procent' = ```
+			
+			 
+			 
+			 VAR Result = max('ViewFactFteFrånvaroJustering'[Frånvaro Procent]) /100
+			
+			 RETURN IF(AND(Result <> 0, [Utfall FTE FrånvaroDagar] <> 0), Result)
+			```
+		formatString: 0%
+		displayFolder: Utfall FTE
+		lineageTag: bf15417c-099c-4713-9e5a-1dd62619f30c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos FTE Före Justering' =
+			
+			
+			VAR Result = sum(ViewFactFteJusteradPrognos[MedelFTEFöreJustering])
+			
+			RETURN IF(Result <> 0, Result)
+		displayFolder: Prognos FTE
+		lineageTag: f0c0970b-5636-4b15-8dc7-e9fcde105583
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos FTE Justerad Frånvaro' =
+			
+			
+			VAR Result = SUM(ViewFactFteJusteradPrognos[MedelFTEFrånvaroJustering])
+			
+			RETURN IF(Result <> 0, Result)
+		displayFolder: Prognos FTE
+		lineageTag: cfde1891-8c46-4178-9a17-e7678073b23d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos FTE' =
+			
+			
+			VAR Result = SUM(ViewFactFteJusteradPrognos[MedelFTE])
+			
+			RETURN IF(Result <> 0, Result)
+		formatString: 0.00
+		displayFolder: Prognos FTE
+		lineageTag: 8bfbba6c-f324-454c-b2c0-de0920c218eb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Lönetillägg' =
+			
+			
+			
+			VAR Result = max(ViewFactFteJusteradPrognos[LönetilläggÅrsslut])
+			
+			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
+		formatString: #,##0
+		displayFolder: Prognos FTE
+		lineageTag: 1399877f-ec24-4d71-b7b4-7b5b1c5a1d73
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Lönetillägg Antal Månader' =
+			
+			
+			VAR Result = max(ViewFactFteJusteradPrognos[LöneTilläggAntalMånader])
+			
+			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
+		formatString: 0.0
+		displayFolder: Prognos FTE
+		lineageTag: a43521ae-d74d-4e98-994d-56de2e3f9525
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Bruttolönekostnad' =
+			
+			
+			
+			VAR Result = SUM(ViewFactFteJusteradPrognos[PrognosBruttolön])
+			
+			RETURN IF(and(Result <> 0,  [Prognos FTE Före Justering] <> 0), Result)
+		formatString: #,##0
+		displayFolder: Prognos FTE
+		lineageTag: 02b03397-6bdb-4e3c-8d65-178433b8f33a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Månadslön' =
+			
+			
+			VAR Result = max(ViewFactFteJusteradPrognos[MånadslönEffektiv])
+			
+			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
+		formatString: #,##0
+		displayFolder: Prognos FTE
+		lineageTag: 7993c5ad-8e27-4b13-990e-52e4ac1300aa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Sysselsättningsgrad' =
+			
+			
+			VAR Result = max(ViewFactFteJusteradPrognos[SysselSättningsGradEff])
+			
+			RETURN IF(AND(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
+		formatString: 0%
+		displayFolder: Prognos FTE
+		lineageTag: 4ab24709-6976-4fdf-a4a2-7ac5e7c04807
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Rapporterade Timmar' =
+			
+			
+			VAR Result = SUM(ViewFactFteJusteradPrognos[RapporteradeTimmar])
+			
+			RETURN if(Result <> 0,Result)
+		formatString: #,##0.0
+		displayFolder: Prognos FTE
+		lineageTag: bd36416e-4163-4436-aeed-1e8b6751ed2c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Ålder' = ```
+			
+			
+			// Improved Performance
+			VAR Birth = SELECTEDVALUE ( 'ViewDimAnställdSCD2'[Födelsedatum] )
+			RETURN
+			IF (
+			    ISBLANK ( Birth ),
+			    BLANK (),
+			    VAR HasFact = NOT ISBLANK ( [Prognos FTE Före Justering] )
+			    RETURN
+			    IF (
+			        NOT HasFact,
+			        BLANK (),
+			        VAR AsOf = COALESCE ( MAX ( 'Kalender'[Datum] ), TODAY() )
+			        VAR BirthdayThisYear =
+			            DATE ( YEAR ( AsOf ), MONTH ( Birth ), DAY ( Birth ) )
+			        VAR Years = YEAR ( AsOf ) - YEAR ( Birth )
+			        RETURN Years - INT ( AsOf < BirthdayThisYear )
+			    )
+			)
+			//
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			// VAR AsOf =
+			//     COALESCE ( MAX ( 'Kalender'[Datum] ), TODAY() )
+			// VAR Birth =
+			//     SELECTEDVALUE ( 'ViewDimAnställdSCD2'[Födelsedatum] )
+			// -- Gate: visa bara ålder där det finns fakta i nuvarande filterkontekst
+			// VAR HasFact =
+			//     NOT ISBLANK ( [Prognos FTE Före Justering] )    -- ex: [New_FTE]
+			// RETURN
+			// IF (
+			//     NOT HasFact || ISBLANK ( Birth ),
+			//     BLANK(),
+			//     VAR Years  = YEAR ( AsOf ) - YEAR ( Birth )
+			//     VAR AsMD   = 100 * MONTH ( AsOf )  + DAY ( AsOf )
+			//     VAR BrMD   = 100 * MONTH ( Birth ) + DAY ( Birth )
+			//     RETURN Years - INT ( AsMD < BrMD )
+			// )
+			
+			```
+		formatString: 0
+		displayFolder: Prognos FTE
+		lineageTag: b122c090-b757-43d9-b9d5-8eb058ecbfb7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Antal Månader Enligt Kontrakt' = ```
+			
+			
+			
+			VAR Result = 
+			max(ViewFactFteJusteradPrognos[AntalMånaderEnligtKontrakt])
+			
+			RETURN IF(and(Result <>0 , [Prognos FTE Före Justering] <> 0), Result)
+			```
+		formatString: 0.00
+		displayFolder: Prognos FTE
+		lineageTag: ed9e1400-f313-4b45-a02f-7eafdfdce725
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Antal Månader Efter Frånvaro Justering' =
+			
+			
+			VAR Result =
+			max(ViewFactFteJusteradPrognos[AntalMånaderEfterFrånvaroJustering])
+			
+			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
+		formatString: 0.00
+		displayFolder: Prognos FTE
+		lineageTag: b642ecbe-cb65-45e5-8bba-8906fcd8e0a9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Timlön' =
+			
+			
+			
+			VAR Result = max(ViewFactFteJusteradPrognos[TimlönEffektiv])
+			
+			RETURN IF(and(Result <> 0, [Prognos FTE Före Justering] <> 0), Result)
+		displayFolder: Prognos FTE
+		lineageTag: f0610771-12d6-48a0-bcb5-8bc3eb07c61f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Prognos Notering' =
+			
+			
+			IF([Prognos FTE Före Justering] <>0 && ISBLANK([Prognos Månadslön]) && ISBLANK([Prognos Timlön]), "Saknas Löneuppgifter i AGDA")
+		displayFolder: Prognos FTE
+		lineageTag: 7a74e5a2-bc80-4807-b6b8-ed65dd5ead4c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Mätvärde-dafc6aed-5a2f-4494-9ed3-cf1871eb8c79 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigering
+

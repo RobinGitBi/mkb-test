@@ -1,0 +1,681 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1816.133849198593,
+            "y": 1006.9588823278508
+          },
+          "nodeIndex": "Kalender",
+          "nodeLineageTag": "d0c6c246-4859-4e8f-a893-9cacf3032394",
+          "size": {
+            "height": 601.24053835073335,
+            "width": 237.51642651771317
+          },
+          "zIndex": 60
+        },
+        {
+          "location": {
+            "x": 1907.9866911624872,
+            "y": 2347.1179891768247
+          },
+          "nodeIndex": "Mätvärde",
+          "nodeLineageTag": "f49a15d8-6e2e-442b-ada2-0595cc77505a",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 49,
+          "expandedHeight": 104
+        },
+        {
+          "location": {
+            "x": 360.098540902232,
+            "y": 416.7020586659155
+          },
+          "nodeIndex": "Företag",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 19,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 454.90742133804315,
+            "y": 981.07826339159624
+          },
+          "nodeIndex": "Konto",
+          "nodeLineageTag": "a5c62670-6d13-4001-b581-0e83fd5a9971",
+          "size": {
+            "height": 424.24707029252033,
+            "width": 234
+          },
+          "zIndex": 54
+        },
+        {
+          "location": {
+            "x": 645.64542693732835,
+            "y": 176.7430084998667
+          },
+          "nodeIndex": "Kostnadsställe",
+          "nodeLineageTag": "1d6a4c41-4bc4-4ba1-a114-944ff373fbf7",
+          "size": {
+            "height": 1000,
+            "width": 234
+          },
+          "zIndex": 65
+        },
+        {
+          "location": {
+            "x": 1314.3210025851788,
+            "y": 1530.3126005074314
+          },
+          "nodeIndex": "Segment",
+          "nodeLineageTag": "81c9f039-7271-4fb8-a10d-64bcb062da8e",
+          "size": {
+            "height": 104,
+            "width": 246.89356389828026
+          },
+          "zIndex": 20,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 848.6918006052689,
+            "y": 26.753004166840128
+          },
+          "nodeIndex": "Slag",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 21,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 366.5484585381401,
+            "y": 603.53710334775951
+          },
+          "nodeIndex": "Projekt",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 23,
+          "expandedHeight": 228.84570867799971
+        },
+        {
+          "location": {
+            "x": 198.9099483438502,
+            "y": 847.16363496499889
+          },
+          "nodeIndex": "PNLStructure",
+          "size": {
+            "height": 235.98420041184795,
+            "width": 234
+          },
+          "zIndex": 53
+        },
+        {
+          "location": {
+            "x": 1480.9313632749024,
+            "y": 462.18251059272592
+          },
+          "nodeIndex": "Vertyp",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 26,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1481.4559922456795,
+            "y": 928.618232391198
+          },
+          "nodeIndex": "Leverantör",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 27,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1501.3512700709505,
+            "y": 610.05496442262086
+          },
+          "nodeIndex": "Kund",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 28,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 246.68679710954825,
+            "y": 1358.2132602184224
+          },
+          "nodeIndex": "Uppföljning",
+          "nodeLineageTag": "2229c9c4-3504-45c3-aa24-a9729fd0007d",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 30,
+          "expandedHeight": 216.8955223880597
+        },
+        {
+          "location": {
+            "x": 1481.9104287397111,
+            "y": 280.28104252427875
+          },
+          "nodeIndex": "Funktion",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 31,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1922.1076209731832,
+            "y": 2453.2032949602117
+          },
+          "nodeIndex": "KoddelLG",
+          "nodeLineageTag": "7f913346-3ee3-481c-9415-6adb154cf687",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 34
+        },
+        {
+          "location": {
+            "x": 625.229430446181,
+            "y": 1483.5481311422516
+          },
+          "nodeIndex": "Yta per segment och kostnadsställe",
+          "nodeLineageTag": "0f99d7ce-c965-40df-a59c-a9221a4944bb",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 35,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 497.93372439262748,
+            "y": 0
+          },
+          "nodeIndex": "Fastighet",
+          "nodeLineageTag": "fb36a4eb-d8bc-43d8-be30-5a7c16c80a95",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 14,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 322.6283517123627,
+            "y": 2400.57575592718
+          },
+          "nodeIndex": "Mätvärden Personal",
+          "nodeLineageTag": "a025b3dc-a967-44e0-89fe-ba7a54b0e2f2",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 57
+        },
+        {
+          "location": {
+            "x": 2331.762093959484,
+            "y": 538.83856252237149
+          },
+          "nodeIndex": "FTE Prognos",
+          "nodeLineageTag": "3519b3a3-34d6-4b8c-95fa-028f16321ee7",
+          "size": {
+            "height": 310.67990074441695,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 2323.2391332123152,
+            "y": 57.336882092634724
+          },
+          "nodeIndex": "ViewFactFte",
+          "nodeLineageTag": "fd6709f1-19fc-4e1c-aed4-922bb80576ad",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 64
+        },
+        {
+          "location": {
+            "x": 2705.1172097182716,
+            "y": 59.0743633681691
+          },
+          "nodeIndex": "ViewDimAnställdSCD2",
+          "nodeLineageTag": "2d196271-cf75-4c65-8c63-81570bb03174",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 62
+        },
+        {
+          "location": {
+            "x": 2795.5378092171159,
+            "y": 374.95278681524957
+          },
+          "nodeIndex": "ViewFactFteFrånvaroJustering",
+          "nodeLineageTag": "7beeda44-95ee-405b-b31c-2a7fe353ea14",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 61
+        },
+        {
+          "location": {
+            "x": 3268.8908671176655,
+            "y": 114.6284787261644
+          },
+          "nodeIndex": "ViewFactFteJusteradPrognos",
+          "nodeLineageTag": "b7cb1e08-2fda-42fd-b5b6-48f25cb2f4ba",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 66
+        },
+        {
+          "location": {
+            "x": 3552.8908671176655,
+            "y": 0
+          },
+          "nodeIndex": "ViewDimLöneKategori",
+          "nodeLineageTag": "f9ec2f58-9ccb-40d1-b01b-b9da167fb6d7",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 63
+        },
+        {
+          "location": {
+            "x": 3598.5364113537366,
+            "y": 547.669398358341
+          },
+          "nodeIndex": "ViewRLSKostnadsställe",
+          "nodeLineageTag": "689f6d3c-f965-45cc-b164-4f1dedcf9273",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 21.947870898714179,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 835.9,
+            "y": 636.3
+          },
+          "nodeIndex": "Kalender",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 865.4,
+            "y": 0
+          },
+          "nodeIndex": "Kostnadsställe",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 64.9
+          },
+          "nodeIndex": "Segment",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 432.7,
+            "y": 137.5
+          },
+          "nodeIndex": "Yta per segment och kostnadsställe",
+          "size": {
+            "height": 478,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Yta",
+      "zoomValue": 70.955543900968792,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 378.11851846872145,
+            "y": 1235.56561816673
+          },
+          "nodeIndex": "Kalender",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 294.46993725393327,
+            "y": 951.92259248509708
+          },
+          "nodeIndex": "Företag",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1289.71270381044,
+            "y": 1259.8574810269004
+          },
+          "nodeIndex": "Konto",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 978.38378032615765,
+            "y": 533.98350366282159
+          },
+          "nodeIndex": "Kostnadsställe",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 591.98141664588707,
+            "y": 539.766732411429
+          },
+          "nodeIndex": "Segment",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1291.6700257244684,
+            "y": 853.61413005720453
+          },
+          "nodeIndex": "Slag",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 224
+        },
+        {
+          "location": {
+            "x": 1301.0177075348033,
+            "y": 995.43173212179909
+          },
+          "nodeIndex": "Projekt",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 750.78486930835948,
+            "y": 1449.4748537248979
+          },
+          "nodeIndex": "Vertyp",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1101.3454273915486,
+            "y": 1410.8903352589111
+          },
+          "nodeIndex": "Leverantör",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 224
+        },
+        {
+          "location": {
+            "x": 1265.7089842991466,
+            "y": 718.04863207862263
+          },
+          "nodeIndex": "Kund",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 248
+        },
+        {
+          "location": {
+            "x": 328.97503058467612,
+            "y": 1097.9321571409437
+          },
+          "nodeIndex": "Uppföljning",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 324.05481894209623,
+            "y": 806.30699428014611
+          },
+          "nodeIndex": "Funktion",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 152
+        }
+      ],
+      "name": "Huvudbok",
+      "zoomValue": 67,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 3,
+      "scrollPosition": {
+        "x": 41.062679205907664,
+        "y": 0
+      },
+      "nodes": [],
+      "name": "Standard",
+      "zoomValue": 79.553182037699784,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 4,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 119,
+            "y": 269
+          },
+          "nodeIndex": "Kalender",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Beställarlistan",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 5,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [],
+      "name": "Fastighets / förvaltare",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 6,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 922.22091033696893,
+            "y": 887.18887365926821
+          },
+          "nodeIndex": "Kalender",
+          "nodeLineageTag": "d0c6c246-4859-4e8f-a893-9cacf3032394",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 987,
+            "y": 0
+          },
+          "nodeIndex": "Kostnadsställe",
+          "nodeLineageTag": "1d6a4c41-4bc4-4ba1-a114-944ff373fbf7",
+          "size": {
+            "height": 544,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "FTE",
+      "zoomValue": 63.287087723233995,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
