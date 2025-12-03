@@ -1,0 +1,61 @@
+table DashboardWinningTemp
+	lineageTag: e7e6280e-70cd-428a-ac7a-c5d0c510769c
+
+	column TimeSK
+		dataType: string
+		lineageTag: 9b813664-c274-4177-a7cb-0fd2faabcabd
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column eNPS
+		dataType: double
+		lineageTag: 1e592fb5-cdec-420a-ab29-206b9df4499c
+		summarizeBy: sum
+		sourceColumn: eNPS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PersonligUtveckling
+		dataType: double
+		lineageTag: 38ceffde-e5eb-4764-a3e4-121ea0488f32
+		summarizeBy: sum
+		sourceColumn: PersonligUtveckling
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Totalt
+		dataType: double
+		lineageTag: ff338f22-0a80-42bd-a27e-14916e6e284d
+		summarizeBy: sum
+		sourceColumn: Totalt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PersonligUtvecklingMål
+		dataType: string
+		lineageTag: ef293b78-5072-4d60-9ae8-3bf6ca7b34c1
+		summarizeBy: none
+		sourceColumn: PersonligUtvecklingMål
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DashboardWinningTemp-50c4d1af-3cd3-4d07-acdb-d0147de758d1 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactLedningDashboardWinningTemp = MKBBIDW{[Schema="dbo",Item="ViewFactLedningDashboardWinningTemp"]}[Data]
+				in
+				    dbo_ViewFactLedningDashboardWinningTemp
+
+	annotation PBI_ResultType = Table
+

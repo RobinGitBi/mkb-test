@@ -1,0 +1,390 @@
+table Dashboard
+	lineageTag: d4d3d216-225e-4082-abb6-39e2bb64492a
+
+	column TimeSK
+		dataType: string
+		lineageTag: 7535c072-25b7-491f-aaf0-6d73de66fbd4
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetSK
+		dataType: int64
+		formatString: 0
+		lineageTag: a6fa9894-bc9b-470f-ac16-ac0f67c9af7b
+		summarizeBy: none
+		sourceColumn: FastighetSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column AntalLägenheter
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b39eca3-9b3f-4aa6-b67b-c8b2e29f04a2
+		summarizeBy: sum
+		sourceColumn: AntalLägenheter
+
+		annotation SummarizationSetBy = Automatic
+
+	column AntalLokaler
+		dataType: int64
+		formatString: 0
+		lineageTag: 5311ee69-618f-4a6f-98fa-882263f7bb29
+		summarizeBy: sum
+		sourceColumn: AntalLokaler
+
+		annotation SummarizationSetBy = Automatic
+
+	column AntalBilplatser
+		dataType: int64
+		formatString: 0
+		lineageTag: e4df0ecd-ca7c-4c58-b658-52ead358625d
+		summarizeBy: sum
+		sourceColumn: AntalBilplatser
+
+		annotation SummarizationSetBy = Automatic
+
+	column VakantaLägenheter
+		dataType: int64
+		formatString: 0
+		lineageTag: b8cf1925-9ae2-4e0e-9ab5-9a6de900b2ac
+		summarizeBy: sum
+		sourceColumn: VakantaLägenheter
+
+		annotation SummarizationSetBy = Automatic
+
+	column VakantaLokaler
+		dataType: int64
+		formatString: 0
+		lineageTag: dc95d17c-c946-45e3-98d0-473c5f9db655
+		summarizeBy: sum
+		sourceColumn: VakantaLokaler
+
+		annotation SummarizationSetBy = Automatic
+
+	column VakantaBilplatser
+		dataType: int64
+		formatString: 0
+		lineageTag: a552ecb4-9331-488c-a508-336bd7007c01
+		summarizeBy: sum
+		sourceColumn: VakantaBilplatser
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjekthyraLägenheter
+		dataType: double
+		lineageTag: 5826301d-b8ed-4bcb-93ef-57ae7d512738
+		summarizeBy: sum
+		sourceColumn: ObjekthyraLägenheter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YtaBeståndLägenheter
+		dataType: double
+		lineageTag: 38d3b398-18b0-40c1-ac14-f557b0366e04
+		summarizeBy: sum
+		sourceColumn: YtaBeståndLägenheter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ObjekthyraLokaler
+		dataType: double
+		lineageTag: 31c45eb4-154a-4ba6-b799-49e5a0661b53
+		summarizeBy: sum
+		sourceColumn: ObjekthyraLokaler
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YtaBeståndLokaler
+		dataType: double
+		lineageTag: 1c6d5e1c-18c4-4717-bc63-e5fc824b9432
+		summarizeBy: sum
+		sourceColumn: YtaBeståndLokaler
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ObjekthyraBilplatser
+		dataType: double
+		lineageTag: 719e0171-97ab-4eb0-9c91-df179cb72760
+		summarizeBy: sum
+		sourceColumn: ObjekthyraBilplatser
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YtaBeståndBilplatser
+		dataType: double
+		lineageTag: 504fdcf9-814e-42a7-a83e-be77b5e84154
+		summarizeBy: sum
+		sourceColumn: YtaBeståndBilplatser
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column InflyttLgh
+		dataType: int64
+		formatString: 0
+		lineageTag: e3552e35-ec61-49fb-abed-16eab031dd86
+		summarizeBy: sum
+		sourceColumn: InflyttLgh
+
+		annotation SummarizationSetBy = Automatic
+
+	column InflyttLokal
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f93c6ad-0d8e-4958-a0a6-351b3b8294da
+		summarizeBy: sum
+		sourceColumn: InflyttLokal
+
+		annotation SummarizationSetBy = Automatic
+
+	column InflyttBilPl
+		dataType: int64
+		formatString: 0
+		lineageTag: bfbd5022-b22b-4b24-9dc8-21a1153f9637
+		summarizeBy: sum
+		sourceColumn: InflyttBilPl
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjekthyraVakantaLokaler
+		dataType: double
+		lineageTag: 7719bbf1-9d3e-441d-adee-be83b16cc169
+		summarizeBy: sum
+		sourceColumn: ObjekthyraVakantaLokaler
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AvflyttLgh
+		dataType: int64
+		formatString: 0
+		lineageTag: fd7d925a-5dac-4e9c-9d98-efce78ea81a4
+		summarizeBy: sum
+		sourceColumn: AvflyttLgh
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvflyttLokal
+		dataType: int64
+		formatString: 0
+		lineageTag: a4dfe4ea-1629-4897-baff-f3373f59fe2e
+		summarizeBy: sum
+		sourceColumn: AvflyttLokal
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvflyttBilPl
+		dataType: int64
+		formatString: 0
+		lineageTag: 32038e12-f7b7-4836-bb66-57a411fa3241
+		summarizeBy: sum
+		sourceColumn: AvflyttBilPl
+
+		annotation SummarizationSetBy = Automatic
+
+	column UndertecknatLgh
+		dataType: int64
+		formatString: 0
+		lineageTag: 199fc5f5-bcbe-4955-ab0b-1183e1903a5a
+		summarizeBy: sum
+		sourceColumn: UndertecknatLgh
+
+		annotation SummarizationSetBy = Automatic
+
+	column UndertecknatLokal
+		dataType: int64
+		formatString: 0
+		lineageTag: 766d6a4f-dfe6-4340-aedf-21b8c5c979db
+		summarizeBy: sum
+		sourceColumn: UndertecknatLokal
+
+		annotation SummarizationSetBy = Automatic
+
+	column UndertecknatBilPl
+		dataType: int64
+		formatString: 0
+		lineageTag: 061d2513-0a84-4d2c-9d40-73a562d0172e
+		summarizeBy: sum
+		sourceColumn: UndertecknatBilPl
+
+		annotation SummarizationSetBy = Automatic
+
+	column UppsagdLgh
+		dataType: int64
+		formatString: 0
+		lineageTag: bd0f4756-ea4d-40ba-835a-f10e92c9c42f
+		summarizeBy: sum
+		sourceColumn: UppsagdLgh
+
+		annotation SummarizationSetBy = Automatic
+
+	column UppsagdLokal
+		dataType: int64
+		formatString: 0
+		lineageTag: f99a0c6f-d62d-4f20-89d8-550ada4036d6
+		summarizeBy: sum
+		sourceColumn: UppsagdLokal
+
+		annotation SummarizationSetBy = Automatic
+
+	column UppsagdBilPl
+		dataType: int64
+		formatString: 0
+		lineageTag: 0716cdb1-e84c-4d8a-92b5-29c3b67da682
+		summarizeBy: sum
+		sourceColumn: UppsagdBilPl
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjekthyraVakantaLägenheter
+		dataType: double
+		lineageTag: 79016214-1251-4e88-89e7-beabf0430fe7
+		summarizeBy: sum
+		sourceColumn: ObjekthyraVakantaLägenheter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AntalLghDyrtSegment
+		dataType: int64
+		formatString: 0
+		lineageTag: a0b32273-0d84-4890-9ac9-66b3b1e776ab
+		summarizeBy: sum
+		sourceColumn: AntalLghDyrtSegment
+
+		annotation SummarizationSetBy = Automatic
+
+	column VakantaLghDyrtSegment
+		dataType: int64
+		formatString: 0
+		lineageTag: 8bc92c3e-abbc-4953-87c6-72cab882435e
+		summarizeBy: sum
+		sourceColumn: VakantaLghDyrtSegment
+
+		annotation SummarizationSetBy = Automatic
+
+	column ObjekthyraLghDyrtSegment
+		dataType: double
+		lineageTag: 8e143fcc-314b-4b64-9201-6d79a8056e3e
+		summarizeBy: sum
+		sourceColumn: ObjekthyraLghDyrtSegment
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ObjekthyraVakantLghDyrtSegment
+		dataType: double
+		lineageTag: f1b68102-caed-42be-b314-3dbbc494290e
+		summarizeBy: sum
+		sourceColumn: ObjekthyraVakantLghDyrtSegment
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YtaLghDyrtSegment
+		dataType: double
+		lineageTag: ae47378a-b803-43ff-b6b9-b29917884369
+		summarizeBy: sum
+		sourceColumn: YtaLghDyrtSegment
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column YtaVakantLghDyrtSegment
+		dataType: double
+		lineageTag: 429f9a92-ce91-4af5-bb26-3a83580f62b8
+		summarizeBy: sum
+		sourceColumn: YtaVakantLghDyrtSegment
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column KundTypGruppLokal
+		dataType: string
+		lineageTag: 7ce66dfd-51f4-42c6-8f38-2f43a91157a8
+		summarizeBy: none
+		sourceColumn: KundTypGruppLokal
+
+		annotation SummarizationSetBy = Automatic
+
+	column YtaVakantaLokaler
+		dataType: double
+		lineageTag: c60c25c1-f288-4ee4-8552-536594b4b701
+		summarizeBy: sum
+		sourceColumn: YtaVakantaLokaler
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AvtalHyraLokal
+		dataType: double
+		lineageTag: 6b492bdd-0250-4b77-8879-1faa52adccbc
+		summarizeBy: sum
+		sourceColumn: AvtalHyraLokal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BortfallLokal
+		dataType: double
+		lineageTag: ed23addd-2bb1-4bc0-ba1a-afd1aa824495
+		summarizeBy: sum
+		sourceColumn: BortfallLokal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LOA
+		dataType: double
+		lineageTag: e6bbc89c-0e42-4648-913f-4729ab99daf9
+		summarizeBy: sum
+		sourceColumn: LOA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VakantLOA
+		dataType: double
+		lineageTag: f0e9e5fa-47e2-4c00-8249-1589020b631a
+		summarizeBy: sum
+		sourceColumn: VakantLOA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Dashboard-f3ed6d0e-1fe8-4c36-924d-44fe16df6b73 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactLedningDashboard = MKBBIDW{[Schema="dbo",Item="ViewFactLedningDashboard"]}[Data]
+				in
+				    dbo_ViewFactLedningDashboard
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,309 @@
+table DashboardFinans
+	lineageTag: cfabcb00-f60d-41e1-9990-b05358946bf6
+
+	column TimeSK
+		dataType: string
+		lineageTag: 56da955c-e0d4-4f6a-aa0b-5a8829e9c095
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column IntäktDriftNetto
+		dataType: double
+		lineageTag: 96c61f75-d842-47b4-b51f-fd89f44b881b
+		summarizeBy: sum
+		sourceColumn: IntäktDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column KostnadDriftNetto
+		dataType: double
+		lineageTag: 06ec2820-e6a2-4a8e-97b0-d5c74fcaa5bc
+		summarizeBy: sum
+		sourceColumn: KostnadDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T0IntäktDriftNetto
+		dataType: double
+		lineageTag: ba3c45c3-5114-49e0-8c46-051e542c3439
+		summarizeBy: sum
+		sourceColumn: T0IntäktDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T1IntäktDriftNetto
+		dataType: double
+		lineageTag: a8f306af-a189-4f06-96b9-c04810391cdf
+		summarizeBy: sum
+		sourceColumn: T1IntäktDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T2IntäktDriftNetto
+		dataType: double
+		lineageTag: 86641440-aecc-444c-b732-9b6d51698093
+		summarizeBy: sum
+		sourceColumn: T2IntäktDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T0KostnadDriftNetto
+		dataType: double
+		lineageTag: 4d715d99-67dd-4479-9f89-47b259a33994
+		summarizeBy: sum
+		sourceColumn: T0KostnadDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T1KostnadDriftNetto
+		dataType: double
+		lineageTag: 1d75b07f-14d2-475a-940d-3cac5a25f7f9
+		summarizeBy: sum
+		sourceColumn: T1KostnadDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T2KostnadDriftNetto
+		dataType: double
+		lineageTag: f05b2f5e-0f36-4379-b6c1-7f519869e3f7
+		summarizeBy: sum
+		sourceColumn: T2KostnadDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DriftNetto
+		dataType: double
+		lineageTag: fcfc3447-da18-4484-84dd-a7b4ffc9df58
+		summarizeBy: sum
+		sourceColumn: DriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T0DriftNetto
+		dataType: double
+		lineageTag: 85ba46b4-98ad-4815-84dd-7a2faf53e520
+		summarizeBy: sum
+		sourceColumn: T0DriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T1DriftNetto
+		dataType: double
+		lineageTag: f33f76b2-6d52-4142-8c78-05a15fdc588a
+		summarizeBy: sum
+		sourceColumn: T1DriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T2DriftNetto
+		dataType: double
+		lineageTag: c62e337a-13ee-4d62-b5e1-5ec52ab22ef5
+		summarizeBy: sum
+		sourceColumn: T2DriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T0IntäktDriftNettoHelår
+		dataType: double
+		lineageTag: 45f0d0f8-870f-42b1-a455-58616c7c61dd
+		summarizeBy: sum
+		sourceColumn: T0IntäktDriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T0KostnadDriftNettoHelår
+		dataType: double
+		lineageTag: 2fb46120-5cd4-4390-afbf-676c24885b2f
+		summarizeBy: sum
+		sourceColumn: T0KostnadDriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T0DriftNettoHelår
+		dataType: double
+		lineageTag: 3ad7e57a-e9f8-499d-a006-e65f4dcd6c52
+		summarizeBy: sum
+		sourceColumn: T0DriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T1IntäktDriftNettoHelår
+		dataType: double
+		lineageTag: ec264068-317d-40d8-9a11-d145dbeb118b
+		summarizeBy: sum
+		sourceColumn: T1IntäktDriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T1KostnadDriftNettoHelår
+		dataType: double
+		lineageTag: db3d5ef4-4874-4d03-bddd-f557b42354e5
+		summarizeBy: sum
+		sourceColumn: T1KostnadDriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T1DriftNettoHelår
+		dataType: double
+		lineageTag: 48d3ff89-5602-400e-8fd8-a5e3398d4900
+		summarizeBy: sum
+		sourceColumn: T1DriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T2IntäktDriftNettoHelår
+		dataType: double
+		lineageTag: 59f44315-ec97-4024-baf4-ede58c2e6c6d
+		summarizeBy: sum
+		sourceColumn: T2IntäktDriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T2KostnadDriftNettoHelår
+		dataType: double
+		lineageTag: cfae6115-aa0d-405e-8b41-9e9a9729022e
+		summarizeBy: sum
+		sourceColumn: T2KostnadDriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column T2DriftNettoHelår
+		dataType: double
+		lineageTag: 08fe8575-302d-4091-912b-8efafa33797a
+		summarizeBy: sum
+		sourceColumn: T2DriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrognosIntäktDriftNetto
+		dataType: double
+		lineageTag: e0760abc-38ad-4c03-8ce8-80bb0900490c
+		summarizeBy: sum
+		sourceColumn: PrognosIntäktDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrognosKostnadDriftNetto
+		dataType: double
+		lineageTag: fee3b413-dfdb-48b4-ac11-777b076fb754
+		summarizeBy: sum
+		sourceColumn: PrognosKostnadDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrognosDriftNetto
+		dataType: double
+		lineageTag: f3a63499-0f57-4f8a-969d-45bc7ea317ad
+		summarizeBy: sum
+		sourceColumn: PrognosDriftNetto
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrognosIntäktDriftNettoHelår
+		dataType: double
+		lineageTag: 9194a64f-1257-4a8b-8bad-6b0633ce225d
+		summarizeBy: sum
+		sourceColumn: PrognosIntäktDriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrognosKostnadDriftNettoHelår
+		dataType: double
+		lineageTag: ff601fbf-a3df-4bb9-81dc-32ecbaccecbf
+		summarizeBy: sum
+		sourceColumn: PrognosKostnadDriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrognosDriftNettoHelår
+		dataType: double
+		lineageTag: 73edac41-4edc-4359-9620-ffe9ff89a858
+		summarizeBy: sum
+		sourceColumn: PrognosDriftNettoHelår
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Year
+		dataType: string
+		lineageTag: a118118c-fce3-4249-b92b-d3ad2c963389
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthDay
+		dataType: string
+		lineageTag: ccb8e123-1c20-4634-b211-67ed86443c50
+		summarizeBy: none
+		sourceColumn: MonthDay
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DashboardFinans-d6ee28c4-07c3-4e79-b383-ce7f07053bfd = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactLedningDashboardFinance = MKBBIDW{[Schema="dbo",Item="ViewFactLedningDashboardFinance"]}[Data]
+				in
+				    dbo_ViewFactLedningDashboardFinance
+
+	annotation PBI_ResultType = Table
+

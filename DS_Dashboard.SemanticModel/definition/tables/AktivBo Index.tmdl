@@ -1,0 +1,105 @@
+table 'AktivBo Index'
+	lineageTag: 316a4e40-2798-4cd0-8e41-750cf57e3bf0
+
+	column IndexName
+		dataType: string
+		lineageTag: 6096284e-f04b-4ca9-b1c2-d19569487d0a
+		summarizeBy: none
+		sourceColumn: IndexName
+
+		annotation SummarizationSetBy = Automatic
+
+	column RespondentId
+		dataType: int64
+		formatString: 0
+		lineageTag: e17010de-4877-485f-884a-04437bf2f861
+		summarizeBy: count
+		sourceColumn: RespondentId
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectID
+		dataType: int64
+		formatString: 0
+		lineageTag: a878aae1-ac1e-46b2-8a0d-cf5f05b5f27b
+		summarizeBy: none
+		sourceColumn: ProjectID
+
+		annotation SummarizationSetBy = Automatic
+
+	column År
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f1378b0-cec2-4155-8b7a-946e3e540240
+		summarizeBy: sum
+		sourceColumn: År
+
+		annotation SummarizationSetBy = Automatic
+
+	column Månad
+		dataType: int64
+		formatString: 0
+		lineageTag: a3bb266d-8a5a-4725-abf5-9a24c1856fde
+		summarizeBy: sum
+		sourceColumn: Månad
+
+		annotation SummarizationSetBy = Automatic
+
+	column OmradeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 179fab30-10ad-4065-a292-a12600075bfa
+		summarizeBy: count
+		sourceColumn: OmradeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetSK
+		dataType: int64
+		formatString: 0
+		lineageTag: f0fe3108-79a1-4c23-8fe3-5ffacf48e2dc
+		summarizeBy: sum
+		sourceColumn: FastighetSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeSK
+		dataType: string
+		lineageTag: 3b81fa8e-ea61-4d35-9256-a7098dd1ae41
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column PositiveIndexValue
+		dataType: double
+		lineageTag: 5ed41ba5-a277-4264-9c12-ceba83d82da5
+		summarizeBy: sum
+		sourceColumn: PositiveIndexValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NegativeIndexValue
+		dataType: double
+		lineageTag: 11fcb355-c159-43e3-9209-788691e75dcd
+		summarizeBy: sum
+		sourceColumn: NegativeIndexValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'AktivBo Index' = m
+		mode: import
+		source =
+				let
+				    Källa = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Källa{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactAktivBoIndex = MKBBIDW{[Schema="dbo",Item="ViewFactAktivBoIndex"]}[Data]
+				in
+				    dbo_ViewFactAktivBoIndex
+
+	annotation PBI_ResultType = Exception
+

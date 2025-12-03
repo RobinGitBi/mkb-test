@@ -1,0 +1,65 @@
+table AktivBoFrågor
+	lineageTag: 1cd18dfb-abf0-4cb9-a5a6-0f0603b41c28
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6e739ee6-a34c-451f-b9d4-d0f1bdc02c68
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrågeNamn
+		dataType: string
+		lineageTag: c8db1325-fdd8-4ff9-aeda-589e1990ce3e
+		summarizeBy: none
+		sourceColumn: FrågeNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Projektgrupp
+		dataType: string
+		lineageTag: 95b7f838-0e82-46da-b3ed-045b62f39922
+		summarizeBy: none
+		sourceColumn: Projektgrupp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: string
+		lineageTag: af950cef-3bf8-4db6-b034-817869e66558
+		summarizeBy: none
+		sourceColumn: Index
+
+		annotation SummarizationSetBy = Automatic
+
+	column Delindex
+		dataType: string
+		lineageTag: 08ab36a9-e3e9-405b-88a1-701271ac022b
+		summarizeBy: none
+		sourceColumn: Delindex
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrågetypId
+		dataType: int64
+		formatString: 0
+		lineageTag: 2eaf37f1-d350-408d-ae2e-ef9335d9d41c
+		summarizeBy: none
+		sourceColumn: FrågetypId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AktivBoFrågor-5df9b801-d109-4632-a3fd-ff35f71adb96 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimAktivBoFrågor = MKBBIDW{[Schema="dbo",Item="ViewDimAktivBoFrågor"]}[Data]
+				in
+				    dbo_ViewDimAktivBoFrågor
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,2174 @@
+table Mätvärde
+	lineageTag: 2ecf33ec-589c-41b5-b62b-b86f091fb255
+
+	measure 'Antal Lgh' = SUM(Dashboard[AntalLägenheter])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 2b5b89eb-be08-488f-87fb-aa70bed5f20e
+
+		changedProperty = FormatString
+
+	measure 'Antal Lokaler' = SUM(Dashboard[AntalLokaler])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Lokal
+		lineageTag: 45bdadd3-d2bd-435c-9119-005e758d74d7
+
+		changedProperty = FormatString
+
+	measure 'Antal Bilplatser' = SUM(Dashboard[AntalBilplatser])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bilplatser
+		lineageTag: 844abd68-a6f9-43bc-8d2c-e83489723654
+
+		changedProperty = FormatString
+
+	measure 'Vakant Lgh' = SUM(Dashboard[VakantaLägenheter])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Bostad
+		lineageTag: 801ac328-c5ea-4aea-9d66-9f3dbd3a8d9d
+
+		changedProperty = FormatString
+
+	measure 'Vakant Lokaler' = SUM(Dashboard[VakantaLokaler])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: 901fe201-2e82-4935-8964-17a2dabf592f
+
+		changedProperty = FormatString
+
+	measure 'Vakant Bilplatser' = SUM(Dashboard[VakantaBilplatser])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Bilplats
+		lineageTag: 6c70376e-d918-47df-9a0e-2b979f7b6429
+
+		changedProperty = FormatString
+
+	measure 'Vakansgrad antal Lgh' = DIVIDE([Vakant Lgh], [Antal Lgh], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Bostad
+		lineageTag: 429bc385-6791-4dac-a8ff-4de93e54e34d
+
+		changedProperty = FormatString
+
+	measure 'Vakansgrad antal Lokaler' = DIVIDE([Vakant Lokaler], [Antal Lokaler], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: 4b7e8285-02b8-4e21-9df9-6a184dc542de
+
+		changedProperty = FormatString
+
+	measure 'Vakansgrad antal Bilplatser' = DIVIDE([Vakant Bilplatser], [Antal Bilplatser], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Bilplats
+		lineageTag: 3c4483af-7b9a-4eeb-9514-109499472461
+
+		changedProperty = FormatString
+
+	measure 'Antal Lgh fg period' = CALCULATE([Antal Lgh], DATEADD(Kalender[Datum], -1, MONTH))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 7be19062-f71c-4492-b8d0-dd465c3afe69
+
+		changedProperty = FormatString
+
+	measure 'Antal Lgh fg år' = CALCULATE([Antal Lgh], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: e8d5113b-8f4f-4a04-8b12-db22102a442a
+
+		changedProperty = FormatString
+
+	measure 'Diff antal lgh fg period' = [Antal Lgh]-[Antal Lgh fg period]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 8b8ecaa1-41fe-43d6-a007-a52050e7beb0
+
+		changedProperty = FormatString
+
+	measure 'Diff antal lgh fg år' = [Antal Lgh]-[Antal Lgh fg år]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 982d3af0-0048-4249-b1b0-bc4cea5c87cd
+
+		changedProperty = FormatString
+
+	measure 'Diff antal lgh % fg år' = DIVIDE([Diff antal lgh fg år],[Antal Lgh fg år], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: d5130bd6-2ae3-4532-9261-12c2de198b6d
+
+		changedProperty = FormatString
+
+	measure 'Hyra Lgh' = SUM(Dashboard[ObjekthyraLägenheter])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 741a0c67-2ccf-4463-b490-52b64326f13e
+
+		changedProperty = FormatString
+
+	measure 'Hyra Lokaler' = SUM(Dashboard[ObjekthyraLokaler])
+		formatString: 0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Lokal
+		lineageTag: 03fa144b-d50c-4e30-83ea-66082d50efe5
+
+		changedProperty = FormatString
+
+	measure 'Hyra Bilplatser' = SUM(Dashboard[ObjekthyraBilplatser])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bilplatser
+		lineageTag: be8555cc-b0fe-4a34-be02-a36f2dd5a4c6
+
+		changedProperty = FormatString
+
+	measure 'Yta Lgh' = SUM(Dashboard[YtaBeståndLägenheter])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 1408b864-7211-4ed1-ba8c-3a55aba65821
+
+		changedProperty = FormatString
+
+	measure 'Yta Lokaler' = SUM(Dashboard[YtaBeståndLokaler])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Lokal
+		lineageTag: 7bc9619b-0561-4f5a-82bf-ff91f89b2c2c
+
+		changedProperty = FormatString
+
+	measure 'Yta Bilplatser' = SUM(Dashboard[YtaBeståndBilplatser])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bilplatser
+		lineageTag: 8b89103f-df7a-48a0-bc10-58586dd181a1
+
+		changedProperty = FormatString
+
+	measure 'Årshyra per kvm Lgh' = DIVIDE([Hyra Lgh], [Yta Lgh], 0)*12
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 92a677a8-7ebf-42f7-b39f-4b91ffe1f2e4
+
+		changedProperty = FormatString
+
+	measure 'Årshyra per kvm Lokaler' = DIVIDE([Hyra Lokaler], [Yta Lokaler], 0)*12
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Lokal
+		lineageTag: ef910591-ea0f-4d51-94c2-070227b2d7fe
+
+		changedProperty = FormatString
+
+	measure 'Uthyrda Lgh' = [Antal Lgh]-[Vakant Lgh]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: ceb9a203-a9c4-4484-b92c-13653172348c
+
+		changedProperty = FormatString
+
+	measure 'Antal Lokaler fg år' = CALCULATE([Antal Lokaler], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Lokal
+		lineageTag: c4850744-6e7e-4b08-b788-78d48bbab53f
+
+		changedProperty = FormatString
+
+	measure 'Antal Lokaler fg period' = CALCULATE([Antal Lokaler], DATEADD(Kalender[Datum], 1, YEAR))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Lokal
+		lineageTag: eda63dac-c873-4c24-9eed-5f404b641010
+
+		changedProperty = FormatString
+
+	measure 'Uthyrda lokaler' = [Antal Lokaler]-[Vakant Lokaler]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Lokal
+		lineageTag: cf9a665b-32bd-4cf9-8fc3-81bd6d28593a
+
+		changedProperty = FormatString
+
+	measure 'Diff antal Lokaler fg år' = [Antal Lokaler]-[Antal Lokaler fg år]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Lokal
+		lineageTag: 99623b45-8f74-4a38-b71d-7d0d15916109
+
+		changedProperty = FormatString
+
+	measure 'Diff antal Lokaler fg period' = [Antal Lokaler]-[Antal Lokaler fg period]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Lokal
+		lineageTag: 9687584c-ad72-4f30-856b-a656838183f6
+
+		changedProperty = FormatString
+
+	measure 'Diff antal Lokaler % fg år' = DIVIDE([Diff antal Lokaler fg år],[Antal Lokaler fg år], 0)
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Lokal
+		lineageTag: dd088c1d-ccd4-4e89-88be-79d0782b5e36
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Uthyrda Lokaler fg år' = CALCULATE([Uthyrda lokaler], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Lokal
+		lineageTag: 604b8545-6712-47eb-ad2d-743694f48fc3
+
+		changedProperty = FormatString
+
+	measure 'Vakanta Lokaler fg år' = CALCULATE([Vakant Lokaler], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: 0
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: 9bd11c1c-1f74-4497-8391-e74724d88ccf
+
+	measure 'Ek Vakansgrad Lokaler' = DIVIDE([Hyra vakanta Lokaler], [Hyra Lokaler], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: e4a3f0f8-c552-401f-93c1-37e0b725f622
+
+		changedProperty = FormatString
+
+	measure 'Hyra vakanta Lokaler' = SUM(Dashboard[ObjekthyraVakantaLokaler])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: 01bc4be7-b425-499b-90d8-f46eb49b6ac6
+
+		changedProperty = FormatString
+
+	measure 'Uthyrda Lgh fg år' = CALCULATE([Uthyrda Lgh], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: acb1fb39-38bd-42c9-97b9-aa8e67fb90b6
+
+		changedProperty = FormatString
+
+	measure 'Vakanta Lgh fg år' = CALCULATE([Vakant Lgh], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Bostad
+		lineageTag: cb1ecaa4-1f47-4276-9cc9-ea6d723f549c
+
+		changedProperty = FormatString
+
+	measure 'Inflytt Lgh' = SUM(Dashboard[InflyttLgh])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 7c293dec-b4f0-45b1-8835-5814404ca4d0
+
+		changedProperty = FormatString
+
+	measure 'Avflytt Lgh' = SUM(Dashboard[AvflyttLgh])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 25c6f011-0ef5-41b9-bb05-bbc3c01a23f5
+
+		changedProperty = FormatString
+
+	measure 'Avflytt Lokal' = SUM(Dashboard[AvflyttLokal])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Lokal
+		lineageTag: c8c9702e-ba71-4093-a076-f435950a340c
+
+		changedProperty = FormatString
+
+	measure 'Avflytt Bilplatser' = SUM(Dashboard[AvflyttBilPl])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bilplatser
+		lineageTag: f5ef024b-a5b2-4b8f-8cba-09dab5167e45
+
+		changedProperty = FormatString
+
+	measure 'Inflytt Lokal' = SUM(Dashboard[InflyttLokal])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Lokal
+		lineageTag: 6fad7ef1-b984-4fda-b209-e8d2c9fc58b7
+
+		changedProperty = FormatString
+
+	measure 'Inflytt Bilplatser' = SUM(Dashboard[InflyttBilPl])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bilplatser
+		lineageTag: 23757b38-2dd5-4461-bd3f-75cb03fddb2f
+
+		changedProperty = FormatString
+
+	measure 'Undertecknat Lgh' = SUM(Dashboard[UndertecknatLgh])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 4348f40d-0c7a-4bec-8880-b49763e6d748
+
+		changedProperty = FormatString
+
+	measure 'Undertecknat Lokal' = SUM(Dashboard[UndertecknatLokal])
+		formatString: 0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Lokal
+		lineageTag: 4585cc32-a05d-4362-b317-926243ae21de
+
+	measure 'Undertecknat Bilplatser' = SUM(Dashboard[UndertecknatBilPl])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bilplatser
+		lineageTag: 53bf5446-7337-483e-8c30-f72cd0a582ed
+
+		changedProperty = FormatString
+
+	measure 'Uppsagd Lgh' = SUM(Dashboard[UppsagdLgh])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 688ba392-14b1-43e0-8de0-a9e8d2121828
+
+		changedProperty = FormatString
+
+	measure 'Uppsagd Lokal' = SUM(Dashboard[UppsagdLokal])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Lokal
+		lineageTag: 1c6fd427-537e-47dc-a1b8-83c645b8b488
+
+		changedProperty = FormatString
+
+	measure 'Uppsagd Bilplatser' = SUM(Dashboard[UppsagdBilPl])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bilplatser
+		lineageTag: f11cd90c-8277-44c9-924c-e2b35760e08b
+
+		changedProperty = FormatString
+
+	measure 'Hyra vakanta Lgh' = SUM(Dashboard[ObjekthyraVakantaLägenheter])
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: c0e86570-095c-4800-ba72-c22ca00522b8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal Bilplatser fg år' = CALCULATE([Antal Bilplatser], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bilplatser
+		lineageTag: 8da2b0b5-0211-4ff4-b0f6-825b9eee2ad2
+
+		changedProperty = FormatString
+
+	measure 'Diff Antal bilplatser fg år' = [Antal Bilplatser]-[Antal Bilplatser fg år]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bilplatser
+		lineageTag: a28c7aa8-6f5f-4012-8ff8-0461e1609eb7
+
+		changedProperty = FormatString
+
+	measure 'Diff Antal Bilplatser % fg år' = DIVIDE('Mätvärde'[Diff Antal bilplatser fg år], [Antal Bilplatser fg år], 0)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bilplatser
+		lineageTag: 006ebdb8-4c52-4927-8ee6-da447c3e594b
+
+		changedProperty = FormatString
+
+	measure 'Intäkt DriftNetto' = SUM(DashboardFinans[IntäktDriftNetto])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 5e601006-c87e-4bc8-bdb7-df01d56ade73
+
+		changedProperty = FormatString
+
+	measure 'Kostnad DriftNetto' = SUM(DashboardFinans[KostnadDriftNetto])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 3896c1bb-9e63-4a04-9f3f-0a41257eea0e
+
+		changedProperty = FormatString
+
+	measure 'T0 Intäkt DriftNetto' = SUM(DashboardFinans[T0IntäktDriftNetto])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 77d6421e-5536-4e03-8e50-105ad6575c3b
+
+		changedProperty = FormatString
+
+	measure 'T1 Intäkt DriftNetto' = SUM(DashboardFinans[T1IntäktDriftNetto])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: dd612989-c214-4d57-96b6-eb525a7b3998
+
+		changedProperty = FormatString
+
+	measure 'T2 Intäkt DriftNetto' = SUM(DashboardFinans[T2IntäktDriftNetto])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 71bb6d8d-3c64-4b0b-ae3d-8f8841e64c0c
+
+		changedProperty = FormatString
+
+	measure 'T0 Kostnad DriftNetto' = SUM(DashboardFinans[T0KostnadDriftNetto])
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 727e6010-d518-4da7-b1bd-12644dfcb470
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'T1 Kostnad DriftNetto' = SUM(DashboardFinans[T1KostnadDriftNetto])
+		formatString: 0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: ae454793-f9b8-4715-a515-9723b5c8c469
+
+		changedProperty = FormatString
+
+	measure 'T2 Kostnad DriftNetto' = SUM(DashboardFinans[T2KostnadDriftNetto])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 361d39b5-72bd-45d0-94b6-9a9dd5bb5539
+
+		changedProperty = FormatString
+
+	measure 'Intäkt DriftNetto åtd' = TOTALYTD([Intäkt DriftNetto], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 3c69f427-211d-4bc9-95c2-1ab871c1eb49
+
+		changedProperty = FormatString
+
+	measure 'Kostnad DriftNetto åtd' = TOTALYTD([Kostnad DriftNetto], Kalender[Datum])
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 0deaae29-c883-4ee1-a47c-7ca1d1815790
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'T0 Intäkt DriftNetto åtd' = TOTALYTD('Mätvärde'[T0 Intäkt DriftNetto], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 25ec4fae-dc6c-463a-9e00-d50f4f0a0bfa
+
+		changedProperty = FormatString
+
+	measure 'T1 Intäkt DriftNetto åtd' = TOTALYTD('Mätvärde'[T1 Intäkt DriftNetto], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 585a3bce-e6cb-405f-9c1f-988aa625d547
+
+		changedProperty = FormatString
+
+	measure 'T2 Intäkt DriftNetto åtd' = TOTALYTD('Mätvärde'[T2 Intäkt DriftNetto], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 7c75382e-fbf0-4722-8a6f-9ba67f8570bf
+
+		changedProperty = FormatString
+
+	measure 'T2 Kostnad DriftNetto åtd' = TOTALYTD('Mätvärde'[T2 Kostnad DriftNetto], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 3daefa57-f925-4511-815f-271c3eb6a563
+
+		changedProperty = FormatString
+
+	measure 'T1 Kostnad DriftNetto åtd' = TOTALYTD('Mätvärde'[T1 Kostnad DriftNetto], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: d48248be-8185-4a3d-bcf3-33b2f0c2423e
+
+		changedProperty = FormatString
+
+	measure 'T0 Kostnad DriftNetto åtd' = TOTALYTD('Mätvärde'[T0 Kostnad DriftNetto], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 34a8fbb6-59d4-4fd3-a3af-7cf62f92342f
+
+		changedProperty = FormatString
+
+	measure 'Intäkt DriftNetto fg år' = CALCULATE([Intäkt DriftNetto], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 6a035add-3c9a-4d29-b83b-dd98c6bb7458
+
+		changedProperty = FormatString
+
+	measure 'Kostnad DriftNetto åtd fg år' = CALCULATE([Kostnad DriftNetto åtd], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: f9e2b379-a72e-4dc5-9435-ed9f704662d7
+
+		changedProperty = FormatString
+
+	measure 'Kostnad DriftNetto fg år' = CALCULATE([Kostnad DriftNetto], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: ca84415e-9068-47f2-9ff3-a5a6528d0c24
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Intäkt DriftNetto åtd fg år' = CALCULATE([Intäkt DriftNetto åtd], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 329d144e-e187-40d4-b3fc-9f0558684ff5
+
+		changedProperty = FormatString
+
+	measure DriftNetto = SUM(DashboardFinans[DriftNetto])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 69d06dc8-4e18-42f2-850d-bdcac717d8ae
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto åtd' = [Intäkt DriftNetto åtd]+[Kostnad DriftNetto åtd]
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: fa8c660d-efae-421f-a1fb-1cbff268f3de
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto fg år' = [Intäkt DriftNetto fg år]+[Kostnad DriftNetto fg år]
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 6d7d2995-cc35-47a2-ae76-7b1904d64328
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto åtd fg år' = [Intäkt DriftNetto åtd fg år]+[Kostnad DriftNetto åtd fg år]
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 2dbe9db7-b834-4eec-a31b-a56786bd8cb3
+
+		changedProperty = FormatString
+
+	measure 'Antal Lgh (dyrt segment)' = SUM(Dashboard[AntalLghDyrtSegment])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 422c1e8e-9c98-4f58-af88-3d8033ecdbff
+
+		changedProperty = FormatString
+
+	measure 'Vakant Lgh (dyrt segment)' = SUM(Dashboard[VakantaLghDyrtSegment])
+		formatString: 0
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Bostad
+		lineageTag: c04f3c98-2d72-48bc-99e0-fc6a5656b688
+
+	measure 'Vakansgrad Lgh (dyrt segment)' = DIVIDE('Mätvärde'[Vakant Lgh (dyrt segment)], 'Mätvärde'[Antal Lgh (dyrt segment)], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Bostad
+		lineageTag: 8cc115e4-f827-47cb-baba-938e59897533
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff fg år åtd' = 'Mätvärde'[DriftNetto åtd]-'Mätvärde'[DriftNetto åtd fg år]
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 286839ab-1f4e-433c-b3c6-4bf41377ac6c
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff % fg år åtd' = DIVIDE('Mätvärde'[DriftNetto Diff fg år åtd], 'Mätvärde'[DriftNetto åtd fg år], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: ac90cebb-49ee-4ac7-95a1-5c194ea534cf
+
+		changedProperty = FormatString
+
+	measure 'T2 DriftNetto' = SUM(DashboardFinans[T2DriftNetto])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 22d157bb-7ba4-4f4d-aa5e-30a36060c2a8
+
+		changedProperty = FormatString
+
+	measure 'T2 DriftNetto åtd' = 'Mätvärde'[T2 Intäkt DriftNetto åtd]+'Mätvärde'[T2 Kostnad DriftNetto åtd]
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 4d9d9b29-f99b-4398-8534-c34fb232dcae
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff T2 åtd' = 'Mätvärde'[DriftNetto åtd]-'Mätvärde'[T2 DriftNetto åtd]
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 72eab995-187f-452f-b239-a7177766e62c
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff % T2 åtd' = DIVIDE('Mätvärde'[DriftNetto Diff T2 åtd], 'Mätvärde'[T2 DriftNetto åtd], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: a2c9ef51-2588-40c1-86a0-4ea6de0888b2
+
+		changedProperty = FormatString
+
+	measure Överskottsgrad = ABS(DIVIDE([DriftNetto], [Intäkt DriftNetto], 0))
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 055a7b50-d050-4485-b7c2-f2c153bd30c2
+
+		changedProperty = FormatString
+
+	measure 'Överskottsgrad åtd' = ABS(DIVIDE([DriftNetto åtd], [Intäkt DriftNetto åtd], 0))
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 6f088183-1b0a-4f20-8768-8a040c84f273
+
+		changedProperty = FormatString
+
+	measure 'Överskottsgrad fg år' = ABS(DIVIDE([Kostnad DriftNetto fg år], [Intäkt DriftNetto fg år], 0))
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: d4056796-be8a-4677-b5d6-92e2a625b1ee
+
+		changedProperty = FormatString
+
+	measure 'Överskottsgrad åtd fg år' = ABS(DIVIDE([DriftNetto åtd fg år], [Intäkt DriftNetto åtd fg år], 0))
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 60e95c6c-8b4e-4e0e-a66b-e05658c300ca
+
+		changedProperty = FormatString
+
+	measure 'Överskottsgrad diff fg år åtd' = 'Mätvärde'[Överskottsgrad åtd]-'Mätvärde'[Överskottsgrad åtd fg år]
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: e3ba06ee-4d94-45b3-9311-25b878a2e916
+
+		changedProperty = FormatString
+
+	measure 'Antal Inkasso' = SUM(DashboardKredit[AntalInkasso])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: cef42d07-7764-4921-92fc-da55f0fddae3
+
+		changedProperty = FormatString
+
+	measure 'Antal Anstånd' = SUM(DashboardKredit[AntalAnstånd])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 65398e1b-ad5f-41ca-9083-0399f6298d84
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Belopp Inkasso' = SUM(DashboardKredit[InkassoBelopp])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: c83849f2-d33a-40f0-9c98-3ad610ef76d0
+
+		changedProperty = FormatString
+
+	measure 'Belopp Anstånd' = SUM(DashboardKredit[AnståndBelopp])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 8cbe055d-222f-4306-add7-7039f6ac0765
+
+		changedProperty = FormatString
+
+	measure 'Antal Anstånd åtd' = TOTALYTD([Antal Anstånd], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 36390a32-2ea9-4432-a1d0-f9cf805bfe74
+
+		changedProperty = FormatString
+
+	measure 'Belopp Anstånd åtd' = TOTALYTD([Belopp Anstånd], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: d3bf1c5f-0d2f-4d8d-957b-2f70ab2b6533
+
+		changedProperty = FormatString
+
+	measure 'Antal Inkasso åtd' = TOTALYTD([Antal Inkasso], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: e70869d6-1cc0-43fa-93e9-cf2b1953f0ae
+
+		changedProperty = FormatString
+
+	measure 'Belopp Inkasso åtd' = TOTALYTD([Belopp Inkasso], Kalender[Datum])
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: fe3c84ec-9c13-480d-8524-440b4493d907
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal Anstånd fg år' = CALCULATE([Antal Anstånd], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: df52584e-4409-415f-abfd-3ea6fa1bae79
+
+		changedProperty = FormatString
+
+	measure 'Antal Inkasso fg år' = CALCULATE([Antal Inkasso], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 34d73168-c8c3-4309-bf08-07bb098337ea
+
+		changedProperty = FormatString
+
+	measure 'Belopp Anstånd fg år' = CALCULATE([Belopp Anstånd], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: cb6313a1-32b1-46aa-a6eb-1a2aebced0c0
+
+		changedProperty = FormatString
+
+	measure 'Belopp Inkasso fg år' = CALCULATE([Belopp Inkasso], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 787a61fb-d134-437c-a2e8-6185bc0a65ba
+
+		changedProperty = FormatString
+
+	measure 'Antal Anstånd fg år åtd' = TOTALYTD([Antal Anstånd fg år], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 3ef36b24-cb26-4502-a868-87ad8a752950
+
+		changedProperty = FormatString
+
+	measure 'Antal Inkasso fg år åtd' = TOTALYTD([Antal Inkasso fg år], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 40bd4485-525d-4ada-8e48-383862072e46
+
+		changedProperty = FormatString
+
+	measure 'Belopp Inkasso fg år åtd' = TOTALYTD([Belopp Inkasso fg år], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: fbbe0f9d-4e25-4c7f-aba9-9263e0e30cfc
+
+		changedProperty = FormatString
+
+	measure 'Belopp Anstånd fg år åtd' = TOTALYTD([Belopp Anstånd fg år], Kalender[Datum])
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: cfd67818-1672-4516-bb8d-52cf5e319da0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff Antal Anstånd fg år' = [Antal Anstånd] - [Antal Anstånd fg år]
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 71f9c601-6dea-404b-b5b2-7c63aafa8c57
+
+		changedProperty = FormatString
+
+	measure 'Diff % Antal Anstånd fg år' = ```
+			
+			    var Diff = ROUND(DIVIDE('Mätvärde'[Diff Antal Anstånd fg år], [Antal Anstånd fg år], 0)*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff), ".", ",")
+			```
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: cd35948b-5676-436b-914f-a2678d3b8a32
+
+		changedProperty = FormatString
+
+	measure 'Diff Antal Inkasso fg år' = [Antal Inkasso]-[Antal Inkasso fg år]
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: b2e1cc3a-4540-4e3a-b69b-8ca760ccace4
+
+		changedProperty = FormatString
+
+	measure 'Diff % Antal Inkasso fg år' =
+			
+			var Diff = ROUND(DIVIDE('Mätvärde'[Diff Antal Inkasso fg år], [Antal Inkasso fg år])*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff), ".", ",")
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 4598968e-c27a-4680-8553-1e9376e1d119
+
+		changedProperty = FormatString
+
+	measure FTE = SUM(DashboardHR[FTE])
+		formatString: #,0
+		displayFolder: Attraktiv Arbetsgivare\Personal
+		lineageTag: ca4d4ead-6392-4eee-a2bc-7dbcce2e3cf0
+
+		changedProperty = FormatString
+
+	measure 'FTE åtd' = DIVIDE(TOTALYTD([FTE], Kalender[Datum]), 'Mätvärde'[MaxMånad], 0)
+		formatString: #,0
+		displayFolder: Attraktiv Arbetsgivare\Personal
+		lineageTag: 86d29a8e-0c91-4370-8e75-a182de396b9b
+
+		changedProperty = FormatString
+
+	measure MaxMånad = MAX(DashboardHR[MånadsNr])
+		formatString: 0
+		isHidden
+		displayFolder: Attraktiv Arbetsgivare\Personal
+		lineageTag: 4c24b416-70b3-4ed7-b5f5-dc23601972e7
+
+		changedProperty = IsHidden
+
+	measure 'FTE R12 Avg' =
+			
+			CALCULATE(
+			    SUM(DashboardHR[FTE]),
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]),
+			    -12,
+			    MONTH)
+			)/12
+		formatString: #,0
+		displayFolder: Attraktiv Arbetsgivare\Personal
+		lineageTag: c8544f02-1adf-45b2-b6a9-477e9df9c9f1
+
+		changedProperty = FormatString
+
+	measure 'Diff FTE R12 Avg' = [FTE]-[FTE R12 Avg]
+		displayFolder: Attraktiv Arbetsgivare\Personal
+		lineageTag: 19b71364-eef3-45e8-9ada-10c364ba8ad9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff % FTE R12 Avg' = DIVIDE('Mätvärde'[Diff FTE R12 Avg], [FTE R12 Avg], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Attraktiv Arbetsgivare\Personal
+		lineageTag: 16424d41-4d99-4f0a-b972-56f45ec455e4
+
+		changedProperty = FormatString
+
+	measure 'Uppsagd lgh fg år' = CALCULATE([Uppsagd Lgh], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 143725e8-8451-41ac-a725-9008e9161afe
+
+		changedProperty = FormatString
+
+	measure 'Diff Uppsagd Lgh fg år' = [Uppsagd Lgh]-[Uppsagd lgh fg år]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 587bb025-7d29-4f62-9d29-f252804bb845
+
+		changedProperty = FormatString
+
+	measure 'Diff % Uppsagd Lgh fg år' = ```
+			
+			    var Diff = ROUND(DIVIDE('Mätvärde'[Diff Uppsagd Lgh fg år], [Uppsagd lgh fg år], 0)*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff &"%"), ".", ",")
+			```
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 7c8590bc-fc5b-4e7c-82a3-c3ddd3d49396
+
+		changedProperty = FormatString
+
+	measure 'Undertecknat Lgh fg år' = CALCULATE([Undertecknat Lgh], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: b8d41d10-58e6-46c3-a11f-fa7717856744
+
+		changedProperty = FormatString
+
+	measure 'Diff Undertecknat Lgh fg år' = [Undertecknat Lgh]-[Undertecknat Lgh fg år]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: e3550fda-67bf-42ae-8a15-e9d571074b30
+
+		changedProperty = FormatString
+
+	measure 'Diff % Undertecknat Lgh fg år' =
+			
+			var Diff = ROUND(DIVIDE('Mätvärde'[Diff Undertecknat Lgh fg år], [Undertecknat Lgh fg år], 0)*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff &"%"), ".", ",")
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 7721ef6b-25f4-420a-bd21-aad98ca46fec
+
+		changedProperty = FormatString
+
+	measure 'Uppsagda Avtal Lgh åtd' = TOTALYTD([Uppsagd Lgh], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: e06f0678-5d3c-4d08-a7fd-834584ecba10
+
+		changedProperty = FormatString
+
+	measure 'Undertecknade Avtal Lgh åtd' = TOTALYTD([Undertecknat Lgh], Kalender[Datum])
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 3ede21bf-4c17-4827-9e3c-44ea8f186d49
+
+		changedProperty = FormatString
+
+	measure 'Skuldsaldo Hyra' = SUM(DashboardKredit[SkuldsaldoHyra])
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: a3a63902-9ffe-4913-b4cf-741041041b3c
+
+		changedProperty = FormatString
+
+	measure 'Skuldsaldo Hyra R12 Avg' =
+			
+			CALCULATE(
+			    SUM(DashboardKredit[SkuldsaldoHyra]),
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]),
+			    -12,
+			    MONTH)
+			)/12
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 97d2a96f-2344-434a-8ce8-79d453dde54c
+
+		changedProperty = FormatString
+
+	measure 'Skuldsaldo Hyra fg år' = CALCULATE([Skuldsaldo Hyra], SAMEPERIODLASTYEAR(Kalender[Datum]))
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 306e5259-6b1b-464c-b512-2e253c1d8ee8
+
+		changedProperty = FormatString
+
+	measure 'Diff Skuldsaldo Hyra fg år' = [Skuldsaldo Hyra]-[Skuldsaldo Hyra fg år]
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 4bc78c72-8940-4570-9369-7014f9c0b173
+
+		changedProperty = FormatString
+
+	measure 'Diff % Skuldsaldo Hyra fg år' = ```
+			
+			    var Diff = ROUND(DIVIDE([Diff Skuldsaldo Hyra fg år], [Skuldsaldo Hyra fg år], 0)*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff &"%"), ".", ",")
+			```
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 92c07713-9922-4297-b3da-0e41556f3570
+
+		changedProperty = FormatString
+
+	measure 'Diff Skuldsaldo Hyra R12' = [Skuldsaldo Hyra]-[Skuldsaldo Hyra R12 Avg]
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: ffa9cc3b-9945-4ce2-9df0-e5813d59ce90
+
+		changedProperty = FormatString
+
+	measure 'Diff % Skuldsaldo Hyra R12' = DIVIDE([Diff Skuldsaldo Hyra R12], [Skuldsaldo Hyra R12 Avg], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: cecd25d0-57e0-45ef-8d9c-945a2b795c64
+
+		changedProperty = FormatString
+
+	measure 'Antal Inkasso R12 Avg' =
+			
+			CALCULATE(
+			    SUM(DashboardKredit[AntalInkasso]),
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]),
+			    -12,
+			    MONTH)
+			)/12
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: b9ed892d-de45-4edd-a32d-26e3bb7a67ae
+
+		changedProperty = FormatString
+
+	measure 'Belopp Inkasso R12 Avg' =
+			
+			CALCULATE(
+			    SUM(DashboardKredit[InkassoBelopp]),
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]),
+			    -12,
+			    MONTH)
+			)/12
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 70238e64-0df6-42d5-90e6-889e8746e505
+
+		changedProperty = FormatString
+
+	measure 'Antal Anstånd R12 Avg' =
+			
+			CALCULATE(
+			    SUM(DashboardKredit[AntalAnstånd]),
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]),
+			    -12,
+			    MONTH)
+			)/12
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 3ca928e4-e7e7-4b44-a2b5-bf6173547544
+
+		changedProperty = FormatString
+
+	measure 'Belopp Anstånd R12 Avg' =
+			
+			CALCULATE(
+			    SUM(DashboardKredit[AnståndBelopp]),
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]),
+			    -12,
+			    MONTH)
+			)/12
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 17640ee4-3a08-4aef-b374-168037c33eb7
+
+		changedProperty = FormatString
+
+	measure 'Diff Antal Anstånd R12' = [Antal Anstånd]-[Antal Anstånd R12 Avg]
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 8dcab37e-7398-4444-98bd-5dbcff304132
+
+		changedProperty = FormatString
+
+	measure 'Diff Belopp Anstånd R12' = [Belopp Anstånd]-[Belopp Anstånd R12 Avg]
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 889c34b7-04f1-460f-bf3a-19afe5210957
+
+		changedProperty = FormatString
+
+	measure 'Diff Antal Inkasso R12' = [Antal Inkasso]-[Antal Inkasso R12 Avg]
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 65cd9e6a-ec4f-471f-a2af-89a985909ef1
+
+		changedProperty = FormatString
+
+	measure 'Diff Belopp Inkasso R12' = [Belopp Inkasso]-[Belopp Inkasso R12 Avg]
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 48e5cb26-1308-47de-928e-9c571c20fbb2
+
+		changedProperty = FormatString
+
+	measure 'Diff % Antal Anstånd R12' = ```
+			
+			    var Diff = ROUND(DIVIDE('Mätvärde'[Diff Antal Anstånd R12], [Antal Anstånd R12 Avg], 0)*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff &"%"), ".", ",")
+			```
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 41d7c76e-d568-4422-9e86-a5616cdd566e
+
+		changedProperty = FormatString
+
+	measure 'Diff % Belopp Antånd R12' = ```
+			
+			    var Diff = ROUND(DIVIDE([Diff Belopp Anstånd R12], [Belopp Anstånd R12 Avg], 0)*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff &"%"), ".", ",")
+			```
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: fe757c34-87b1-4ddb-8d16-0bd04678232c
+
+		changedProperty = FormatString
+
+	measure 'Diff % Belopp Inkasso R12' = ```
+			
+			    var Diff = ROUND(DIVIDE([Diff Belopp Inkasso R12], [Belopp Inkasso R12 Avg], 0)*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff &"%"), ".", ",")
+			```
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 9f8d4ffa-090b-4883-aedf-bb38685ca50a
+
+		changedProperty = FormatString
+
+	measure 'Diff % Antal Inkasso R12' =
+			
+			var Diff = ROUND(DIVIDE('Mätvärde'[Diff Antal Inkasso R12], [Antal Inkasso R12 Avg])*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff), ".", ",")
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 772d3917-9fbc-4565-9062-888bc1166047
+
+		changedProperty = FormatString
+
+	measure 'T2 DriftNetto helår' = MAX(DashboardFinans[T2DriftNettoHelår])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 48437606-6c0e-4310-ba55-824ce27f5bc4
+
+		changedProperty = FormatString
+
+	measure 'T0 DriftNetto' = SUM(DashboardFinans[T0DriftNetto])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: d76e0d63-50fd-4be3-a4e4-4f5c6ffe2fc0
+
+		changedProperty = FormatString
+
+	measure 'T1 DriftNetto' = SUM(DashboardFinans[T1DriftNetto])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 261a9402-8923-4316-b2e2-3cf17a93d82f
+
+		changedProperty = FormatString
+
+	measure 'T1 DriftNetto helår' = MAX(DashboardFinans[T1DriftNettoHelår])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: fd86ab66-5f99-49a2-9558-9b039167a97f
+
+		changedProperty = FormatString
+
+	measure 'T0 DriftNetto helår' = MAX(DashboardFinans[T0DriftNettoHelår])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: afb20397-325a-4a31-ac3b-7ab033e69c4d
+
+		changedProperty = FormatString
+
+	measure 'Uppsagd Lgh R12 Avg' =
+			
+			CALCULATE(
+			    SUM(Dashboard[UppsagdLgh]),
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]),
+			    -12,
+			    MONTH)
+			)/12
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: d6324d81-8f59-4c22-a862-cc3b6d23bd97
+
+		changedProperty = FormatString
+
+	measure 'Undertecknat Lgh R12 Avg' =
+			
+			CALCULATE(
+			    SUM(Dashboard[UndertecknatLgh]),
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]),
+			    -12,
+			    MONTH)
+			)/12
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 6bccb692-8681-412d-8af6-a429ba84232c
+
+		changedProperty = FormatString
+
+	measure 'Diff Uppsagd Lgh R12' = [Uppsagd Lgh]-[Uppsagd Lgh R12 Avg]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: cf20e65f-71a5-4a4c-a97a-c4ed2aefa5eb
+
+		changedProperty = FormatString
+
+	measure 'Diff Undertecknat Lgh R12' = [Undertecknat Lgh]-[Undertecknat Lgh R12 Avg]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: a1e220ee-e78e-4b84-96e5-4633a2dc44db
+
+		changedProperty = FormatString
+
+	measure 'Diff % Undertecknat Lgh R12' = DIVIDE([Diff Undertecknat Lgh R12], [Undertecknat Lgh R12 Avg], 0)
+		formatString: #,0\ %;-#,0\ %;#,0\ %
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: 60a30174-ca9e-4442-a3b8-10dddb431b89
+
+		changedProperty = FormatString
+
+	measure 'Diff % Uppsagd Lgh R12' = DIVIDE([Diff Uppsagd Lgh R12], [Uppsagd Lgh R12 Avg], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\Avtal\Bostad
+		lineageTag: f8d6e82d-ddf6-4d78-bc61-7f19b922803c
+
+		changedProperty = FormatString
+
+	measure 'WT eNPS' = SUM(DashboardWinningTemp[eNPS])
+		formatString: #,0
+		displayFolder: Attraktiv Arbetsgivare\Medarbetsnöjdhet
+		lineageTag: dfb7f715-d886-4670-8b8b-f226d10b351e
+
+		changedProperty = FormatString
+
+	measure 'WT PersUtv' = MAX(DashboardWinningTemp[PersonligUtveckling])
+		formatString: #,0.0
+		displayFolder: Attraktiv Arbetsgivare\Medarbetsnöjdhet
+		lineageTag: 2176d409-53e2-457d-9cf6-fefab4717034
+
+		changedProperty = FormatString
+
+	measure 'WT Totalt' = SUM(DashboardWinningTemp[Totalt])
+		formatString: #,0.0
+		displayFolder: Attraktiv Arbetsgivare\Medarbetsnöjdhet
+		lineageTag: cb676563-1823-4fcb-85c0-113be6055682
+
+		changedProperty = FormatString
+
+	measure 'Överskottsgrad T0 helår' = ABS(DIVIDE(SUM(DashboardFinans[T0KostnadDriftNettoHelår]), SUM(DashboardFinans[T0IntäktDriftNettoHelår]), 0))
+		formatString: #,0.0\ %;-#,0.0\ %;#,0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 13cb0243-33f9-4549-b2c9-434bb663a537
+
+		changedProperty = FormatString
+
+	measure 'Överskottsgrad T1 helår' = ABS(DIVIDE(SUM(DashboardFinans[T1KostnadDriftNettoHelår]), SUM(DashboardFinans[T1IntäktDriftNettoHelår]), 0))
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: a7030ed1-e827-4f32-b117-52c6f46e980f
+
+		changedProperty = FormatString
+
+	measure 'Överskottsgrad T2 helår' = ABS(DIVIDE(SUM(DashboardFinans[T2KostnadDriftNettoHelår]), SUM(DashboardFinans[T2IntäktDriftNettoHelår]), 0))
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 92d066f0-e652-4af9-980f-3f7bbef02e80
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff T2 helår' = [DriftNetto åtd]-[T2 DriftNetto helår]
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: d2bc7348-ab72-4041-af15-8e7284d9a35b
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff T0 helår' = [DriftNetto åtd]-[T0 DriftNetto helår]
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: dc57ccfc-7ab4-4e20-833f-33fe234a8132
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff T1 helår' = [DriftNetto åtd]-[T1 DriftNetto helår]
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 0ae88dcc-1e48-473a-a52d-03468287379d
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff % T2 helår' = DIVIDE([DriftNetto Diff T2 helår], [T2 DriftNetto helår], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: ebc1259b-28e2-4c93-9f87-65234dfbc755
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff % T1 helår' = DIVIDE([DriftNetto Diff T1 helår], [T1 DriftNetto helår], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: f13fd892-1059-4524-b608-962ec50bc70d
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff % T0 helår' = DIVIDE([DriftNetto Diff T0 helår], [T0 DriftNetto helår], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: b948d8df-8663-4865-99ae-5ab4463eb10f
+
+		changedProperty = FormatString
+
+	measure 'Överskottsgrad Diff T2 helår' = [Överskottsgrad åtd]-[Överskottsgrad T2 helår]
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: eee7d73b-94b2-4e73-b4ad-28268d8d022b
+
+		changedProperty = FormatString
+
+	measure 'Uppf grad T2 helår' = ```
+			
+			    var Index = ROUND(DIVIDE([DriftNetto åtd], [T2 DriftNetto helår], 0)*100, 1)
+			return SUBSTITUTE("Index " &Index, ".", ",")
+			```
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 4be4857f-7dc7-40f5-9e51-567d47b4042e
+
+		changedProperty = FormatString
+
+	measure 'Uppf grad T1 helår' = 1+DIVIDE([DriftNetto Diff T1 helår], [T1 DriftNetto], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 3d0f52c2-c17d-4f40-bf98-5df82967c42a
+
+		changedProperty = FormatString
+
+	measure 'Uppf grad T0 helår' = 1+DIVIDE([DriftNetto Diff T0 helår], [T0 DriftNetto helår], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 36ed60f5-9955-461d-9928-ceb32db9998a
+
+		changedProperty = FormatString
+
+	measure 'Uppf överskottsgrad T2 helår' = ```
+			
+			    var Index = ROUND(DIVIDE([Överskottsgrad åtd], [Överskottsgrad T2 helår], 0)*100, 1)
+			return SUBSTITUTE("Index " &Index, ".", ",")
+			```
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: b7549e2a-94ec-4c42-bbbd-b68526a99c92
+
+		changedProperty = FormatString
+
+	measure TrygghetsIndex = CALCULATE([Bra Housing], ('AktivboFrågor'[Delindex] = "Trygghet"))
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Social\AktivBo
+		lineageTag: 3a15e2a7-23dc-4425-9647-15fd565e5bea
+
+		changedProperty = FormatString
+
+	measure 'TrygghetsIndex Mål' = CALCULATE(MAX('DashboardAktivBoMålTotal'[Mål]), 'DashboardAktivBoMålTotal'[KPI] = "Trygghet")
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Social\AktivBo
+		lineageTag: 7ad570e1-04ad-4bf4-87ee-1aeacd2dcc47
+
+		changedProperty = FormatString
+
+	measure 'Trygghetsindex diff mål' =
+			
+			var Diff = ROUND(([TrygghetsIndex]-[TrygghetsIndex Mål])*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &" procentenheter", Diff &" procentenheter"), ".", ",")
+		displayFolder: Hållbarhet\Social\AktivBo
+		lineageTag: 5ee03b41-f684-4cd4-ad0c-f7c7fa5f3af0
+
+		changedProperty = FormatString
+
+	measure 'Antal Lgh IB året X' = ```
+			
+			var SelectedYear = SELECTEDVALUE(Kalender[DefaultYear])
+			var YearX = CALCULATE(MAX(Kalender[År]), Kalender[DefaultYear] = SelectedYear)
+			var PeriodX = 1
+			RETURN CALCULATE([Antal Lgh], Kalender[År] = YearX, Kalender[MånadNr] = PeriodX)
+			
+			```
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 77f07227-83ab-4da6-aad0-65be2bffb6f0
+
+		changedProperty = FormatString
+
+	measure 'Antal Lgh nästa period' = CALCULATE([Antal Lgh], DATEADD(Kalender[Datum], 1, MONTH))
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 4fe08b90-4713-4b1a-b682-7196631e283e
+
+		changedProperty = FormatString
+
+	measure 'Diff Antal Lgh IB' = [Antal Lgh nästa period]-[Antal Lgh IB året X]
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Bestånd\Bostad
+		lineageTag: 1bcc7a90-cc7c-457e-bf22-99bbc403daf2
+
+		changedProperty = FormatString
+
+	measure NKI_old = CALCULATE(AVERAGE(DashboardAktivBoTotal[TotalIndex]), DashboardAktivBoTotal[Delindex] = "NKI")
+		formatString: 0.0
+		isHidden
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 9a42dad1-692c-418e-8111-fed7924dd453
+
+		changedProperty = FormatString
+
+		changedProperty = IsHidden
+
+	measure 'NKI Antal svar' = CALCULATE(SUM(DashboardAktivBoTotal[Antal]), DashboardAktivBoTotal[KPI] = "NKI")
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 4fa3acc1-9b35-4623-b93f-2b53b3a05cd6
+
+		changedProperty = FormatString
+
+	measure ServiceIndex = CALCULATE(AVERAGE(DashboardAktivBoTotal[TotalIndex]), DashboardAktivBoTotal[Delindex] = "Serviceindex")
+		formatString: #,0.0\ %;-#,0.0\ %;#,0.0\ %
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: d9283ac3-b7f4-4935-aa8a-bfacf0045cb6
+
+		changedProperty = FormatString
+
+	measure 'NKI Totalbetyg' = CALCULATE(SUM(DashboardAktivBoTotal[TotalBetyg]), DashboardAktivBoTotal[KPI] = "NKI")
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 94a799bf-7fba-421c-b528-b4d6d4673b3b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'ServiceIndex Antal svar' = CALCULATE(SUM(DashboardAktivBoTotal[Antal]), DashboardAktivBoTotal[KPI] = "Service", DashboardAktivBoTotal[Fråga] = "SERVICEINDEX")
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 1f74ea43-d947-4722-bccb-e75680948018
+
+		changedProperty = FormatString
+
+	measure 'ServiceIndex Antal bra' = CALCULATE(SUM(DashboardAktivBoTotal[AntalBra]), DashboardAktivBoTotal[KPI] = "Service", DashboardAktivBoTotal[Fråga] = "SERVICEINDEX")
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 662b2825-c17b-483e-917b-968853ad7f00
+
+		changedProperty = FormatString
+
+	measure 'TrygghetsIndex Antal bra' = CALCULATE(SUM(DashboardAktivBoTotal[AntalBra]), DashboardAktivBoTotal[Fråga] = "Trygghet")
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\AktivBo
+		lineageTag: c231c764-10ec-4154-a161-0b7513a6abaa
+
+		changedProperty = FormatString
+
+	measure 'TrygghetsIndex Antal svar' = CALCULATE(SUM(DashboardAktivBoTotal[Antal]), DashboardAktivBoTotal[Fråga] = "Trygghet")
+		formatString: #,0
+		displayFolder: Hållbarhet\Social\AktivBo
+		lineageTag: daf75dd7-9606-4260-9dd6-8aba86ed4a5e
+
+		changedProperty = FormatString
+
+	measure 'WT PersUtv Mål' = MAX(DashboardWinningTemp[PersonligUtvecklingMål])
+		formatString: 0
+		displayFolder: Attraktiv Arbetsgivare\Medarbetsnöjdhet
+		lineageTag: d3bbba7b-03e9-483c-9b06-777e327c396e
+
+	measure 'ServiceIndex Mål' = CALCULATE(MAX('DashboardAktivBoMålTotal'[Mål]), 'DashboardAktivBoMålTotal'[KPI] = "Service")
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: a3f0393f-dc43-4e74-90b7-cf5c31be9555
+
+		changedProperty = FormatString
+
+	measure 'NKI Mål' = CALCULATE(MAX('DashboardAktivBoMålTotal'[Mål]), 'DashboardAktivBoMålTotal'[KPI] = "NKI")
+		formatString: #,0.0
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 7eb6bade-8118-44d0-b610-431e3d769d59
+
+		changedProperty = FormatString
+
+	measure 'Serviceindex diff Mål' =
+			
+			var Diff = ROUND(([ServiceIndex i År]-[ServiceIndex Mål])*100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &" procentenheter", Diff &" procentenheter"), ".", ",")
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: a0f2cded-8c91-4061-8861-5d7baa49b2e3
+
+		changedProperty = FormatString
+
+	measure 'NKI diff mål' = [NKI]-[NKI Mål]
+		formatString: 0.0
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 744ff4a2-02a1-4f18-9674-f49626aad227
+
+		changedProperty = FormatString
+
+	measure 'WT PersUtv diff mål' = [WT PersUtv]-[WT PersUtv Mål]
+		formatString: #,0.0
+		displayFolder: Attraktiv Arbetsgivare\Medarbetsnöjdhet
+		lineageTag: 6362d39f-d787-4af7-a8aa-c0245aed2097
+
+		changedProperty = FormatString
+
+	measure 'El R12' = SUM(DashboardEnergi[Energiförbrukning])
+		formatString: 0.0
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: a649a932-62b6-41f9-b1c3-34cd9c67fb43
+
+		changedProperty = FormatString
+
+	measure 'Vatten R12' = SUM(DashboardEnergi[Vattenförbrukning])
+		formatString: 0.00
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 76819523-ac96-4c8b-9af4-afe8fc309d10
+
+		changedProperty = FormatString
+
+	measure 'El R12 fg år' = CALCULATE([El R12], DATEADD(Kalender[Datum], -12, MONTH))
+		formatString: 0.0
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: ebbb5f5f-afde-44ba-a7ca-0fe60dbb3dda
+
+		changedProperty = FormatString
+
+	measure 'Diff El R12 fg år' = [El R12]-[El R12 fg år]
+		formatString: 0.0
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 29a61416-96a6-4dba-aa34-15858f517347
+
+		changedProperty = FormatString
+
+	measure 'Diff El R12 % fg år' =
+			
+			var Diff = ROUND(DIVIDE([Diff El R12 fg år], [El R12 fg år], 0)*100, 1)
+			return SUBSTITUTE(IF(Diff>0, "+" &Diff &"%", Diff &"%"), ".", ",")
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 61c817bf-9c8f-471f-8bcc-f933a13bc49f
+
+		changedProperty = FormatString
+
+	measure 'El R12 fg period' = CALCULATE([El R12], DATEADD(Kalender[Datum], -1, MONTH))
+		formatString: 0.0
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 7f4ed04b-a931-4d33-a7b3-56a8d9aa2f2b
+
+		changedProperty = FormatString
+
+	measure 'Vatten R12 fg period' = CALCULATE([Vatten R12] , DATEADD(Kalender[Datum], -1, MONTH))
+		formatString: 0.00
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 7732dd8d-96a8-46d9-ab74-849747f8ccd1
+
+		changedProperty = FormatString
+
+	measure 'Diff Vatten R12 fg år' = [Vatten R12]-[Vatten R12 fg år]
+		formatString: 0.00
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 27af3d09-a65d-4423-9785-042631a290c9
+
+		changedProperty = FormatString
+
+	measure 'Diff Vatten R12 % fg år' =
+			
+			var Diff = ROUND(DIVIDE([Diff Vatten R12 fg år], [Vatten R12 fg år], 0)*100, 1)
+			return SUBSTITUTE(IF(Diff>0, "+" &Diff &"%", Diff &"%"), ".", ",")
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 23f96637-dd8c-439a-8d0e-e72ab19f72a7
+
+	measure 'Vatten R12 fg år' = CALCULATE([Vatten R12] , DATEADD(Kalender[Datum], -12, MONTH))
+		formatString: 0.00
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: c84bfc91-afce-4bbf-9599-c8d66e4da9ce
+
+		changedProperty = FormatString
+
+	measure 'RentSnyggt Antal bra' = CALCULATE(SUM(DashboardAktivBoTotal[AntalBra]), DashboardAktivBoTotal[KPI] = "Service", DashboardAktivBoTotal[Fråga] = "Rent och snyggt")
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 522850cb-0689-40e1-b031-af621a76e2cf
+
+		changedProperty = FormatString
+
+	measure 'RentSnyggt Antal svar' = CALCULATE(SUM(DashboardAktivBoTotal[Antal]), DashboardAktivBoTotal[KPI] = "Service", DashboardAktivBoTotal[Fråga] = "Rent och snyggt")
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 1df4b6eb-fe6c-472f-8e70-05148c2f8dac
+
+		changedProperty = FormatString
+
+	measure 'RentSnyggt index' = CALCULATE(AVERAGE(DashboardAktivBoTotal[TotalIndex]), DashboardAktivBoTotal[Delindex] = "Rent och snyggt")
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 6e495a29-58c9-4464-ba71-871a092e436b
+
+		changedProperty = FormatString
+
+	measure 'Diff el R12 % fg år fg period' = ```
+			
+			    var elfg = CALCULATE([El R12], DATEADD(Kalender[Datum], -13, MONTH))
+			    var el = CALCULATE([El R12], DATEADD(Kalender[Datum], -1, MONTH))
+			    var Diff = ROUND((DIVIDE(el, elfg, 0)-1) *100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff &"%"), ".", ",")
+			```
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: c63995ad-0471-4a2a-80a7-1c5fd7d69578
+
+	measure 'Diff vatten R12 % fg år fg period' = ```
+			
+			    var vattenfg = CALCULATE([Vatten R12], DATEADD(Kalender[Datum], -13, MONTH))
+			    var vatten = CALCULATE([Vatten R12], DATEADD(Kalender[Datum], -1, MONTH))
+			    var Diff = ROUND((DIVIDE(vatten, vattenfg, 0)-1) *100, 1)
+			return SUBSTITUTE(IF(Diff > 0, "+" &Diff &"%", Diff &"%"), ".", ",")
+			```
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 7ee50afe-30ab-4e1c-b74d-a6ad98817014
+
+	measure 'El R12 Mål' = TOTALYTD(SUM(DashboardEnergi[EnergiförbrukningMål]), Kalender[Datum])
+		formatString: #,0.0
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 2db9bc03-2d8a-4890-925c-352acd0bff23
+
+		changedProperty = FormatString
+
+	measure 'Diff El R12 % mål' = DIVIDE(([El R12]-[El R12 Mål]), [El R12 Mål], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: cae9a0f5-507e-4130-8c35-5da21d6412c9
+
+		changedProperty = FormatString
+
+	measure 'Diff El R12 fg period % mål' = DIVIDE(([El R12 fg period]-[El R12 Mål]), [El R12 Mål], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 34a5248b-a513-4b02-94d1-11c6e0d90a71
+
+		changedProperty = FormatString
+
+	measure 'Prognos DriftNetto helår' = MAX(DashboardFinans[PrognosDriftNettoHelår])
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: a5d329f8-b167-479a-9cff-3c81805a50cf
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff Prognos helår' = [DriftNetto åtd]-[Prognos DriftNetto helår]
+		formatString: #,0
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 8fa3efbc-12b4-443d-b87d-7b831d5ffc19
+
+		changedProperty = FormatString
+
+	measure 'DriftNetto Diff % Prognos helår' = DIVIDE([DriftNetto Diff Prognos helår], [Prognos DriftNetto helår], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 14775df2-e9e6-4c34-91a6-dee64cbe50c5
+
+		changedProperty = FormatString
+
+	measure 'Uppf överskottsgrad Prognos helår' = ```
+			
+			    var Index = ROUND(DIVIDE([Överskottsgrad åtd], [Överskottsgrad Prognos helår], 0)*100, 1)
+			return SUBSTITUTE("Index " &Index, ".", ",")
+			```
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 22986879-dc44-45ec-8a1d-428ff4c55e8b
+
+	measure 'Överskottsgrad Prognos helår' = ABS(DIVIDE(SUM(DashboardFinans[PrognosDriftNettoHelår]), SUM(DashboardFinans[PrognosIntäktDriftNettoHelår]), 0))
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: 9da510d0-f95e-4797-9714-36fec68dd9da
+
+		changedProperty = FormatString
+
+	measure 'Uppf grad Prognos helår' = ```
+			
+			    var Index = ROUND(DIVIDE([DriftNetto åtd], [Prognos DriftNetto helår], 0)*100, 1)
+			return SUBSTITUTE("Index " &Index, ".", ",")
+			```
+		displayFolder: Hållbarhet\Ekonomisk\UBW
+		lineageTag: f6f1228d-44a7-4c57-a71d-dcb24d2b2d49
+
+	measure 'Diff El R12 % mål fg period' = ```
+			
+			    var Targetfg = CALCULATE('Mätvärde'[El R12 Mål], DATEADD(Kalender[Datum], -1, MONTH))
+			return DIVIDE(('Mätvärde'[El R12 fg period]-Targetfg), Targetfg, 0)
+			```
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Hållbarhet\Miljö
+		lineageTag: 0ee3f29b-35c2-40ea-9bd7-1467e15b686f
+
+		changedProperty = FormatString
+
+	measure Tillsvidareanst = SUM(DashboardHR[Tillsvidareanställd])
+		formatString: #,0
+		displayFolder: Attraktiv Arbetsgivare\Personal
+		lineageTag: 661dab1d-7412-4f52-94e1-c4328bf6528e
+
+		changedProperty = FormatString
+
+	measure 'Tillsvidareanst R12 Avg' =
+			
+			CALCULATE(
+			    [Tillsvidareanst],
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]),
+			    -12,
+			    MONTH)
+			)/12
+		formatString: #,0
+		displayFolder: Attraktiv Arbetsgivare\Personal
+		lineageTag: 23e5f87b-aba7-494a-ba74-c4ae715e245a
+
+		changedProperty = FormatString
+
+	measure 'Diff Tillsvidareanst R12 Avg' = [Tillsvidareanst]-[Tillsvidareanst R12 Avg]
+		formatString: #,0
+		displayFolder: Attraktiv Arbetsgivare\Personal
+		lineageTag: 5f7ae472-507c-4d24-89d1-a6fd03a917ef
+
+		changedProperty = FormatString
+
+	measure 'Diff % Tillsvidareanst R12 Avg' = DIVIDE([Diff Tillsvidareanst R12 Avg], [Tillsvidareanst R12 Avg], 0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Attraktiv Arbetsgivare\Personal
+		lineageTag: 112375df-d481-4f74-9a1e-b964a5793667
+
+		changedProperty = FormatString
+
+	measure 'Andel Bra %' =
+			
+			VAR __totalt = CALCULATE(SUM('AktivBoSvar'[AntalSvar]), FILTER(AktivBoSvar,AktivBoSvar[Svarsid] IN {1,2,3,4} && AktivBoSvar[FrågetypId] = 104))
+			VAR __bra = CALCULATE(SUM('AktivBoSvar'[AntalSvar]), FILTER(AktivBoSvar,AktivBoSvar[Svarsid] IN {1,2} && AktivBoSvar[FrågetypId] = 104))
+			RETURN DIVIDE(__bra,__totalt,0)
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		lineageTag: cd518678-0903-47b0-8a10-5e2385818441
+
+		changedProperty = FormatString
+
+	measure 'Diff % Antal Anstånd R12 vs R12 fg år' =
+			
+			VAR __r12PY = CALCULATE([Antal Anstånd R12 Avg], SAMEPERIODLASTYEAR(Kalender[Datum]))
+			VAR __r12 =[Antal Anstånd R12 Avg]
+			RETURN DIVIDE(__r12,__r12PY)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 747218db-a030-497f-be81-650fb229255d
+
+		changedProperty = FormatString
+
+	measure 'Diff % Belopp Anstånd R12 vs R12 fg år' =
+			
+			VAR __r12PY = CALCULATE([Belopp Anstånd R12 Avg], SAMEPERIODLASTYEAR(Kalender[Datum]))
+			VAR __r12 =[Belopp Anstånd R12 Avg]
+			RETURN DIVIDE(__r12,__r12PY)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 882574f2-9d69-40aa-9a9b-5af4600bdb2a
+
+		changedProperty = FormatString
+
+	measure 'Diff % Antal Inkasso R12 vs R12 fg år' =
+			
+			VAR __r12PY = CALCULATE([Antal Inkasso R12 Avg], SAMEPERIODLASTYEAR(Kalender[Datum]))
+			VAR __r12 =[Antal Inkasso R12 Avg]
+			RETURN DIVIDE(__r12,__r12PY)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: 0723804a-7166-48b2-a3ec-52a1b33e96af
+
+		changedProperty = FormatString
+
+	measure 'Diff % Belopp Inkasso R12 vs R12 fg år' =
+			
+			VAR __r12PY = CALCULATE([Belopp Inkasso R12 Avg], SAMEPERIODLASTYEAR(Kalender[Datum]))
+			VAR __r12 =[Belopp Inkasso R12 Avg]
+			RETURN DIVIDE(__r12,__r12PY)
+		formatString: 0\ %;-0\ %;0\ %
+		displayFolder: Hållbarhet\Social\PM5
+		lineageTag: f4587a62-2a16-49fb-b59b-988120b05752
+
+		changedProperty = FormatString
+
+	measure 'Bra Housing' =
+			
+			VAR __AndelBraHousing = CALCULATE([Andel Bra %],'AktivboProjekt'[Projektgrupp] IN {"CSC Housing","CSC: Residential"})
+			//VAR __RentSnyggt = CALCULATE(__AndelBraHousing, FILTER('AktivboFrågor','AktivBoFrågor'[Delindex] = "RentSnyggt"))
+			RETURN __AndelBraHousing
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 7d4b8621-c04e-4a0e-a0c6-5fb8c687b513
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure NKI =
+			
+			VAR __antal = CALCULATE(SUM(AktivBoSvar[AntalSvar]),FILTER(AktivBoSvar,AktivBoSvar[FrågetypId] = 210),FILTER(AktivBoProjekt,AktivBoProjekt[Projektgrupp] IN {"CSC Housing","CSC: Residential"}))
+			VAR __resultat = CALCULATE(SUM(AktivBoSvar[Resultat]),FILTER(AktivBoSvar,AktivBoSvar[FrågetypId] = 210),FILTER(AktivBoProjekt,AktivBoProjekt[Projektgrupp] IN {"CSC Housing","CSC: Residential"}))
+			RETURN DIVIDE(__resultat,__antal,0)
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 78d0c765-e370-4dc7-a498-d3c336966f7b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Rent & Snyggt' = CALCULATE([Bra Housing],Filter('AktivBoFrågor','AktivBoFrågor'[Delindex] = "RentSnyggt"))
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: a888f7cc-49b3-40ef-8a07-9cb3f15813c6
+
+		changedProperty = FormatString
+
+	measure 'Rent & Snyggt Mål' = CALCULATE(MAX('DashboardAktivBoMålTotal'[Mål]), 'DashboardAktivBoMålTotal'[KPI] = "Rent & Snyggt")
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 04bd3df9-a86b-4ea3-92a8-66e837533e33
+
+		changedProperty = FormatString
+
+	measure 'Antal vakanta lokaler externt' =
+			
+			VAR __MKB = CALCULATE([Antal Lokaler],Dashboard[KundTypGruppLokal] = "MKB")
+			RETURN [Vakant Lokaler] + __MKB
+		formatString: 0
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: 38df0a74-e0bb-4f7b-9699-d0fe40bd5972
+
+	measure 'Hyra vakanta lokaler externt' =
+			
+			VAR __MKB = CALCULATE([Avtal Hyra Lokaler],Dashboard[KundTypGruppLokal] = "MKB")
+			RETURN ([Bortfall Lokal] + __MKB)*-1
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: 8c03fced-c002-42b1-9ae6-ce5558898578
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Yta vakanta lokaler externt' =
+			
+			VAR __MKB = CALCULATE(SUM(Dashboard[YtaVakantaLokaler]),Dashboard[KundTypGruppLokal] = "MKB")
+			RETURN SUM(Dashboard[YtaVakantaLokaler]) + __MKB
+		formatString: #,0
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: f7f2ac99-62b1-4504-9b63-cd8200ab4b45
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Vakansgrad externt antal' = DIVIDE([Antal vakanta lokaler externt],[Antal Lokaler])
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: 5759f9cb-a7fe-4f6c-99bf-34a6bef7b9b7
+
+		changedProperty = FormatString
+
+	measure 'Vakansgrad externt hyra' = DIVIDE([Hyra vakanta lokaler externt],[Avtal Hyra Lokaler])*-1
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: f806b182-295f-4804-b89b-5a855c8ca2f9
+
+		changedProperty = FormatString
+
+	measure 'Vakansgrad externt yta' = DIVIDE([Vakans LOA externt],[LOA])
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: b29c7d7a-7f5d-4b22-9385-204cc3aab2cd
+
+		changedProperty = FormatString
+
+	measure 'Hyra vakanta lokaler externt positivt' = [Hyra vakanta lokaler externt] *-1
+		displayFolder: Ledande Fastighetsaktör\Vakanser\Lokal
+		lineageTag: 45e5f445-d6a4-4705-8039-0449cb8f2a3a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avtal Hyra Lokaler' = SUM(Dashboard[AvtalHyraLokal])
+		lineageTag: 2fe36b04-5574-4aed-9fe4-950335921522
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Bortfall Lokal' = SUM(Dashboard[BortfallLokal])
+		lineageTag: 4656cc6e-7fb9-46b5-87b0-c5c01f9d2e00
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Vakans LOA' = CALCULATE(SUM(Dashboard[VakantLOA]))
+		lineageTag: 27be1bf9-84ab-462f-8d9e-b0b7ff66083a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure LOA = SUM(Dashboard[LOA])
+		lineageTag: cc1a5027-909e-44cb-b3c6-bdcb6000054f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Vakans LOA externt' =
+			
+			VAR _MKB_internt_LOA = CALCULATE([LOA],Dashboard[KundTypGruppLokal] = "MKB")
+			RETURN [Vakans LOA] + _MKB_internt_LOA
+		formatString: #,0
+		lineageTag: 503f1172-3ad8-4ad9-9858-77a4b7619bca
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'ServiceIndex i År' = ```
+			
+			var ThisYear = CALCULATE(MAX(DashboardAktivBoTotal[År]),DashboardAktivBoTotal[Delindex] = "Serviceindex") 
+			return CALCULATE(AVERAGE(DashboardAktivBoTotal[TotalIndex]), DashboardAktivBoTotal[Delindex] = "Serviceindex",DashboardAktivBoTotal[År] = ThisYear)
+			```
+		formatString: 0.0\ %;-0.0\ %;0.0\ %
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: dd33d607-e660-4321-a37f-39dcf3c0c2b5
+
+	measure 'ServiceIndex Aktuellt År' = CALCULATE(MAX(DashboardAktivBoTotal[År]),DashboardAktivBoTotal[Delindex] = "Serviceindex")
+		formatString: 0
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: d2cd4c5e-ea92-4635-a0e3-0c9b0f82ca5c
+
+	measure 'Serviceindex fg År' = ```
+			
+			var ThisYear = CALCULATE(MAX(DashboardAktivBoTotal[År]),DashboardAktivBoTotal[Delindex] = "Serviceindex") 
+			return CALCULATE(AVERAGE(DashboardAktivBoTotal[TotalIndex]), DashboardAktivBoTotal[Delindex] = "Serviceindex",DashboardAktivBoTotal[År] = ThisYear -1)
+			```
+		formatString: 0.000\ %;-0.000\ %;0.000\ %
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: bac218fe-f224-4e4b-a783-b67ff8f62a9c
+
+	measure 'Serviceindex diff fg år' = [ServiceIndex i År] - [Serviceindex fg År]
+		formatString: #,0.0\ %;-#,0.0\ %;#,0.0\ %
+		displayFolder: Ledande Fastighetsaktör\AktivBo
+		lineageTag: 649d5d09-01d6-45e9-92e3-18ff7f21acfc
+
+	measure 'Antal anställda Fryst' = ```
+			
+			VAR nuvarande_ar = IF(ISBLANK(SELECTEDVALUE(Kalender[År])), YEAR(TODAY()), SELECTEDVALUE(Kalender[År])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR nuvarande = IF(ISBLANK(SELECTEDVALUE(Kalender[MånadNr])), MONTH(TODAY()), SELECTEDVALUE(Kalender[MånadNr])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR yearmonth = CONVERT(CONCATENATE(nuvarande_ar, 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(
+			                            nuvarande < 10, CONCATENATE("0", nuvarande), nuvarande), "-01")
+			                            )), DATETIME)
+			
+			-- komplicerad logik för att kunna filtrera bort alla från urvalet som har avgångsdatum innan vald månad. Ytterligare komplext eftersom man vill att "icke-val" på månad ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			-- Nexer rekommenderade att istället ha ett separat mått för ackumulerat utfall eftersom det blir mer användarvänligt än att det byter mellan ackumulerat och månadsutfall beroende på om man valt månad eller inte. Pernilla K instisterade på att "verksamheten vill ha det så". 
+			
+			RETURN
+			
+			CALCULATE(
+			    DISTINCTCOUNT('Fryst FTE'[ANST_NR]),
+			    KEEPFILTERS('Fryst FTE'[Avgångsdatum] > yearmonth || ISBLANK('Fryst FTE'[Avgångsdatum]))
+			)
+			
+			-- John Agebrand, Nexer Insight 2025-04-24
+			
+			/*
+			VAR yearmonth = CONVERT(CONCATENATE(SELECTEDVALUE(Kalender[År]), 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(SELECTEDVALUE(Kalender[MånadNr]) < 10, CONCATENATE("0", SELECTEDVALUE(Kalender[MånadNr])), SELECTEDVALUE(Kalender[MånadNr])), "-01")
+			)), DATETIME)
+			
+			-- komplicerad logik för att kunna filtrera bort alla från urvalet som har avgångsdatum innan vald månad
+			
+			RETURN
+			
+			CALCULATE(
+			    DISTINCTCOUNT('Fryst FTE'[ANST_NR]),
+			    KEEPFILTERS(CONVERT('Fryst FTE'[Avgångsdatum], DATETIME) > yearmonth || ISBLANK('Fryst FTE'[Avgångsdatum]))
+			)
+			*/
+			```
+		formatString: 0
+		displayFolder: FTE
+		lineageTag: e8cf3120-83d7-49ca-a9c1-390f1a27b3e8
+
+	measure 'Antal FTE ack' = ```
+			
+			VAR current_month = [Antal FTE Netto Fryst]
+			
+			RETURN 
+			
+			IF(
+			    NOT ISBLANK([Antal FTE Netto Fryst]),
+			    TOTALYTD([Antal FTE Netto Fryst], Kalender[Datum]),
+			    BLANK()
+			)
+			```
+		displayFolder: FTE
+		lineageTag: c915f2c3-60b9-49d9-8b31-7b81aece15d0
+
+	measure 'Antal FTE ack jan-apr' =
+			
+			var month_now = MONTH(TODAY())
+			
+			RETURN
+			
+			IF(
+			    month_now < 5, BLANK(),
+			        CALCULATE(
+			    [Antal FTE månad ack],
+			    KEEPFILTERS(Kalender[Tertial] = "T1")
+			))
+			
+			--- räknar ackumulerat FTE-värde begränsat till T1
+		displayFolder: FTE
+		lineageTag: de23c461-ff15-4fd4-9961-0839f583f818
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE ack jan-aug' =
+			
+			
+			var month_now = MONTH(TODAY())
+			
+			RETURN
+			
+			IF(month_now < 9, BLANK(),
+			CALCULATE(
+			    [Antal FTE månad ack],
+			    KEEPFILTERS(Kalender[Tertial] IN {"T1", "T2"})
+			)
+			)
+			--- räknar ackumulerat FTE-värde begränsat till T2
+		displayFolder: FTE
+		lineageTag: 886e469d-238a-461b-9640-6c05e6d9e9bd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE ack jan-dec' =
+			
+			
+			var month_now = MONTH(TODAY())
+			
+			RETURN
+			
+			IF(month_now < 12, BLANK(),
+			
+			CALCULATE(
+			    [Antal FTE månad ack],
+			    KEEPFILTERS(Kalender[Tertial] IN {"T1", "T2", "T3"})
+			)
+			)
+			--- räknar ackumulerat FTE-värde begränsat till T3
+			
+			/* -- Den här koden funkar bara för 2024
+			CALCULATE(
+			    DIVIDE([Antal FTE ack TEST], 4, 0),
+			    -- DIVIDE(SUM('Fryst FTE Ack'[Antal FTE]), 4, 0),
+			    KEEPFILTERS(Kalender[Tertial] = "T3")
+			)
+			*/
+		displayFolder: FTE
+		lineageTag: 1a78f584-bb0c-4c5f-a925-f61d508b94e4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE månad ack' = ```
+			
+			
+			VAR current_month = [Antal FTE Månad Fryst]
+			VAR CurrentDate = MAX(Kalender[Datum])
+			VAR antal_valda_manader = MAX(Kalender[MånadNr]) -- denna används för att göra månadsvalet dynamiskt
+			VAR nuvarande_ar = IF(ISBLANK(SELECTEDVALUE(Kalender[År])), YEAR(TODAY()), SELECTEDVALUE(Kalender[År])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR nuvarande = IF(ISBLANK(SELECTEDVALUE(Kalender[MånadNr])), MONTH(TODAY()), SELECTEDVALUE(Kalender[MånadNr])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR yearmonth = CONVERT(CONCATENATE(nuvarande_ar, 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(
+			                            nuvarande < 10, CONCATENATE("0", nuvarande), nuvarande), "-01")
+			                            )), DATETIME)
+			RETURN
+			
+			IF(nuvarande > MAX('Fryst FTE'[Frysdatum]), BLANK(),
+			
+			DIVIDE(
+			    CALCULATE(
+			        SUMX(
+			            FILTER(
+			                ALL(Kalender),
+			                Kalender[Datum] <= CurrentDate
+			            ),
+			            [Antal FTE Månad Fryst]
+			        )
+			    ),
+			    CALCULATE(
+			        COUNTROWS(
+			            FILTER(
+			                ALL(Kalender),
+			                Kalender[Datum] <= CurrentDate &&
+			                NOT(ISBLANK([Antal FTE Månad Fryst]))
+			            )
+			        )
+			    )
+			)
+			)
+			/*
+			Antal FTE månad ack = 
+			VAR current_month = [Antal FTE Månad Fryst]
+			VAR antal_valda_manader = MAX(Kalender[MånadNr]) -- denna används för att göra månadsvalet dynamiskt
+			            VAR yearmonth = CONVERT(CONCATENATE(SELECTEDVALUE(Kalender[År]), 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(SELECTEDVALUE(Kalender[MånadNr]) < 10, CONCATENATE("0", SELECTEDVALUE(Kalender[MånadNr])), SELECTEDVALUE(Kalender[MånadNr])), "-01")
+			            )), DATETIME)
+			
+			RETURN 
+			CALCULATE(
+			IF(
+			    NOT ISBLANK([Antal FTE Månad Fryst]),
+			    -- DIVIDE(SUMX('Fryst FTE', [Antal FTE Månad Fryst]), antal_valda_manader, 1), -- Summerar rätt på totalen över flera månader
+			    DIVIDE(TOTALYTD([Antal FTE Månad Fryst], Kalender[Datum]), antal_valda_manader, 1),
+			    BLANK()
+			)
+			--, KEEPFILTERS(CONVERT('Fryst FTE'[Avgångsdatum], DATETIME) < yearmonth || ISBLANK('Fryst FTE'[Avgångsdatum]))
+			)
+			*/
+			```
+		displayFolder: FTE
+		lineageTag: 9c8fe20b-7e5f-4050-971e-4a453ec38c05
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE Månad Fryst' = ```
+			-- den här summerar Utfall FTE korrekt per månad. Filtrerar ut alla med anställningsdatum i framtiden och sätter 0 på dem
+			
+			VAR CurrentDate = MAX(Kalender[Datum])
+			VAR CurrentMonthStart = DATE(YEAR(CurrentDate), MONTH(CurrentDate), 1)
+			VAR monthend = EOMONTH(MAX('Fryst FTE'[Frysdatum]), 0)
+			VAR sysselsattning = AVERAGE('Fryst FTE'[Tjänstgöringsgrad])
+			VAR nuvarande_ar = IF(ISBLANK(SELECTEDVALUE(Kalender[År])), YEAR(TODAY()), SELECTEDVALUE(Kalender[År])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR nuvarande = IF(ISBLANK(SELECTEDVALUE(Kalender[MånadNr])), MONTH(TODAY()), SELECTEDVALUE(Kalender[MånadNr])) -- Denna måste läggas till eftersom man vill att "icke-val" på kalenderdimensionen ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			VAR yearmonth = CONVERT(CONCATENATE(nuvarande_ar, 
+			                    CONCATENATE("-", 
+			                        CONCATENATE(IF(
+			                            nuvarande < 10, CONCATENATE("0", nuvarande), nuvarande), "-01")
+			                            )), DATETIME)
+			
+			-- komplicerad logik för att kunna filtrera bort alla från urvalet som har avgångsdatum innan vald månad. Ytterligare komplext eftersom man vill att "icke-val" på månad ska innebära ackumulerat utfall, men val av månad ska vara utfall på månad.
+			-- Nexer rekommenderade att istället ha ett separat mått för ackumulerat utfall eftersom det blir mer användarvänligt än att det byter mellan ackumulerat och månadsutfall beroende på om man valt månad eller inte. Pernilla K instisterade på att "verksamheten vill ha det så". 
+			
+			RETURN
+			    CALCULATE(
+			        SUMX(
+			            FILTER(
+			                'Fryst FTE',
+			                'Fryst FTE'[Anställningsdatum] <= monthend &&
+			                (ISBLANK('Fryst FTE'[Avgångsdatum]) || 'Fryst FTE'[Avgångsdatum] >= CurrentMonthStart)
+			                ),
+			            'Fryst FTE'[Antal FTE månad] * sysselsattning
+			            )
+			            )
+			```
+		displayFolder: FTE
+		lineageTag: 51d8f25d-d40f-48d9-af40-84b4bb3be445
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Antal FTE Netto Fryst' = ```
+			CALCULATE(
+			    SUMX('Fryst FTE', [Antal FTE Total Fryst] * [Antal anställda Fryst])
+			    )
+			
+			```
+		displayFolder: FTE
+		lineageTag: 08ef7d2e-5534-4d59-95cf-467fd446fd59
+
+	measure 'Antal FTE Total Fryst' = ```
+			-- den här summerar antalet FTE korrekt
+			            VAR fte_next_year = SUM('Fryst FTE'[Antal månader])
+			            VAR sysselsattning = AVERAGE('Fryst FTE'[Tjänstgöringsgrad])
+			            
+			            RETURN 
+			            DIVIDE(SUMX('Fryst FTE', fte_next_year * sysselsattning) , 12 , 0)
+			```
+		displayFolder: FTE
+		lineageTag: a129a4e9-b26e-45d7-8b65-85050ff1ad3a
+
+	measure 'Format Antal anställda' = ```
+			IF(
+			    SELECTEDVALUE(Kalender[MånadNr]) > 8,
+			    -- MONTH(TODAY()) > 8, 
+			    "Antal anställda " & CONVERT(SELECTEDVALUE(Kalender[År]) +1, STRING), -- i september blickar vi framåt
+			    "Antal anställda " & CONVERT(SELECTEDVALUE(Kalender[År]), STRING) -- januari-augusti tittar vi på nuläge
+			    )
+			```
+		displayFolder: FTE
+		lineageTag: 78c416b1-47f2-4a9c-b24a-cdcff5aa1e06
+
+	measure 'Format antal FTE nästa år' =
+			IF(
+			    SELECTEDVALUE(Kalender[MånadNr]) < 9, CONCATENATE("Antal FTE ", SELECTEDVALUE(Kalender[År])) -- Fram till september tittar vi på nuvarande år
+			    , CONCATENATE("Antal FTE ", CONVERT(SELECTEDVALUE(Kalender[År]) + 1, STRING)) -- september och framåt är nästkommande år
+			)
+		displayFolder: FTE
+		lineageTag: 2e6f9eeb-4446-4d98-a888-0220546ea708
+
+	measure 'Format lönekostnad nästa år' =
+			IF(
+			    SELECTEDVALUE(Kalender[Månadnr]) < 9, CONCATENATE("Total lönekostnad ", SELECTEDVALUE(Kalender[År])) -- Fram till september tittar vi på nuvarande år
+			      , CONCATENATE("Total lönekostnad ", CONVERT(SELECTEDVALUE(Kalender[År]) + 1, STRING) -- september och framåt är nästkommande år
+			))
+		displayFolder: FTE
+		lineageTag: 47788dd5-36a9-4beb-a672-240d7a20d1f0
+
+	measure 'Antal FTE fg Månad Fryst' = ```
+			-- försöker få till en beräkning på förra körningen av FTE. Inte helt lätt eftersom data bryts 20:e
+			
+			        VAR fte_manad = SUM('Fryst FTE'[Antal FTE månad])
+			        VAR sysselsattning = AVERAGE('Fryst FTE'[Tjänstgöringsgrad])
+			
+			        RETURN 
+			        
+			        IF(DAY(TODAY()) < 20, 
+			            CALCULATE(
+			            fte_manad * sysselsattning,
+			            KEEPFILTERS('Fryst FTE'[Frysdatum] = 2024-09-20) -- DATEADD(Kalender[Datum], -2, MONTH))
+			            ),       
+			            CALCULATE(
+			            fte_manad * sysselsattning,
+			            DATEADD(Kalender[Datum], -3, MONTH)
+			            )
+			        )
+			        
+			```
+		formatString: 0
+		displayFolder: FTE
+		lineageTag: fce76861-2470-45b7-b99f-3607d49c4788
+
+	partition Mätvärde-15bd5689-a988-4dba-b905-fd13a83cde05 = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WcinNza1Uio0FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Mätvärde = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Mätvärde", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Mätvärde"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

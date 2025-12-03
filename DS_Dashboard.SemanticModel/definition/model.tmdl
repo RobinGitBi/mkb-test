@@ -1,0 +1,34 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-SE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["Dashboard","Fastighet","Mätvärde","Kalender","DashboardFinans","DashboardKredit","DashboardHR","DashboardWinningTemp","DashboardAktivBoTotal","DashboardAktivBoMålTotal","DashboardEnergi","AktivBoFrågor","AktivBoProjekt","AktivBoSvar","AktivBo Index","Fryst FTE","Kostnadsställe"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Dashboard
+ref table Fastighet
+ref table Mätvärde
+ref table Kalender
+ref table DashboardFinans
+ref table DashboardKredit
+ref table DashboardHR
+ref table DashboardWinningTemp
+ref table DashboardAktivBoTotal
+ref table DashboardAktivBoMålTotal
+ref table DashboardEnergi
+ref table AktivBoFrågor
+ref table AktivBoProjekt
+ref table AktivBoSvar
+ref table 'AktivBo Index'
+ref table 'Fryst FTE'
+ref table Kostnadsställe
+
+ref cultureInfo en-US
+

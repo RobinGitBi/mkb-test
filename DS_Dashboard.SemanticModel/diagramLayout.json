@@ -1,0 +1,280 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 561.9
+          },
+          "nodeIndex": "Mätvärde",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 412,
+            "y": 566.5
+          },
+          "nodeIndex": "Dashboard",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1749.2,
+            "y": 867.9
+          },
+          "nodeIndex": "DashboardAktivBoMålTotal",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1337.2,
+            "y": 892.4
+          },
+          "nodeIndex": "DashboardAktivBoTotal",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1504.6,
+            "y": 512
+          },
+          "nodeIndex": "DashboardEnergi",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1090.6,
+            "y": 913.7
+          },
+          "nodeIndex": "DashboardFinans",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 718.76321070234121,
+            "y": 805.20535117056863
+          },
+          "nodeIndex": "DashboardHR",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 824,
+            "y": 478
+          },
+          "nodeIndex": "DashboardKredit",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1082.7,
+            "y": 282
+          },
+          "nodeIndex": "DashboardWinningTemp",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 423.1,
+            "y": 0
+          },
+          "nodeIndex": "Fastighet",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1181.9,
+            "y": 571.8
+          },
+          "nodeIndex": "Kalender",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 2169.7,
+            "y": 24
+          },
+          "nodeIndex": "AktivBoFrågor",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 2590.3,
+            "y": 0
+          },
+          "nodeIndex": "AktivBoProjekt",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 3010.8,
+            "y": 260.2
+          },
+          "nodeIndex": "AktivBoSvar",
+          "nodeLineageTag": "54045519-6012-40ba-9c4c-adbaaae829cc",
+          "size": {
+            "height": 462.85161865474231,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 2382.8715879068309,
+            "y": 487.4516245668849
+          },
+          "nodeIndex": "AktivBo Index",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 295.06354410261611,
+            "y": 1128.5937569446633
+          },
+          "nodeIndex": "Kostnadsställe",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 579.06354410261611,
+            "y": 1128.5937569446633
+          },
+          "nodeIndex": "Fryst FTE",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 64.90570183831521,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1402,
+            "y": 262
+          },
+          "nodeIndex": "Kostnadsställe",
+          "nodeLineageTag": "e9394b39-a2e4-4b97-8a5e-8571c3a9470e",
+          "size": {
+            "height": 836,
+            "width": 582
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 25,
+            "y": 166
+          },
+          "nodeIndex": "Kalender",
+          "nodeLineageTag": "882fed1b-b22b-44cb-9922-cd3a0192c53e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 620,
+            "y": 260
+          },
+          "nodeIndex": "Fryst FTE",
+          "size": {
+            "height": 724,
+            "width": 437
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Layout 1",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Layout 1",
+  "defaultDiagram": "All tables"
+}

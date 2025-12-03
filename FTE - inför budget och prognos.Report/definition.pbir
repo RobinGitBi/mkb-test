@@ -3,7 +3,7 @@
   "version": "4.0",
   "datasetReference": {
     "byConnection": {
-      "connectionString": "Data Source=\"powerbi://api.powerbi.com/v1.0/myorg/Power BI - Dataset\";initial catalog=\"Dataset FTE & Personalkostnader\";access mode=readonly;integrated security=ClaimsToken;semanticmodelid=c7f6f966-dd22-473c-b386-49f7cdf621a3"
+      "connectionString": "Data Source=\"powerbi://api.powerbi.com/v1.0/myorg/Power BI - Dataset\";initial catalog=\"Dataset - FTE & Personalkostnader\";access mode=readonly;integrated security=ClaimsToken;semanticmodelid=4d06d6ce-f73d-4fe9-8ded-ae3abe3e1ee8"
     }
   }
 }

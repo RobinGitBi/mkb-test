@@ -1,0 +1,377 @@
+table Kostnadsställe
+	lineageTag: e9394b39-a2e4-4b97-8a5e-8571c3a9470e
+
+	column KostnadsställeSK
+		dataType: int64
+		formatString: 0
+		lineageTag: 0bd08460-05a1-433d-b351-8291d36ddc9e
+		summarizeBy: none
+		sourceColumn: KostnadsställeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeNr
+		dataType: string
+		lineageTag: 831d4d7b-c97b-46a8-9985-2c60e1f6a62e
+		summarizeBy: none
+		sourceColumn: KostnadsställeNr
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeNamn
+		dataType: string
+		lineageTag: e4de84be-4763-4061-8715-bb4f57ef874a
+		summarizeBy: none
+		sourceColumn: KostnadsställeNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: string
+		lineageTag: a1ebad58-f114-4577-be2f-60dfc87fc001
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		annotation SummarizationSetBy = Automatic
+
+	column OmrådeId
+		dataType: string
+		lineageTag: 0ddfd76c-565a-45e3-931a-f193c6fff877
+		summarizeBy: none
+		sourceColumn: OmrådeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column OmrådeNamn
+		dataType: string
+		lineageTag: 8a5f9955-1307-4410-bc6f-2cf39f3c6500
+		summarizeBy: none
+		sourceColumn: OmrådeNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Område
+		dataType: string
+		lineageTag: a8714bfb-1bf5-47e7-8404-56d297e0181a
+		summarizeBy: none
+		sourceColumn: Område
+
+		annotation SummarizationSetBy = Automatic
+
+	column FcoId
+		dataType: string
+		lineageTag: 800a0b48-09ce-461b-9c37-f6e70f813fb8
+		summarizeBy: none
+		sourceColumn: FcoId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FcoNamn
+		dataType: string
+		lineageTag: 9dc66d0c-c8cb-4835-9c5c-464b0d633cbd
+		summarizeBy: none
+		sourceColumn: FcoNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FC
+		dataType: string
+		lineageTag: c48e5ce4-722c-4194-9c6f-95d45d2979f5
+		summarizeBy: none
+		sourceColumn: FC
+
+		annotation SummarizationSetBy = Automatic
+
+	column LGrpId
+		dataType: string
+		lineageTag: a3d13f5f-8f2c-44cd-83f9-dc4cc6551193
+		summarizeBy: none
+		sourceColumn: LGrpId
+
+		annotation SummarizationSetBy = Automatic
+
+	column LGrpNamn
+		dataType: string
+		lineageTag: be31aa2f-e9ac-423c-8d15-6881b8e23b93
+		summarizeBy: none
+		sourceColumn: LGrpNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column LGrp
+		dataType: string
+		lineageTag: a7b1083d-ff8c-4e81-a414-7cf47a8dc0a1
+		summarizeBy: none
+		sourceColumn: LGrp
+
+		annotation SummarizationSetBy = Automatic
+
+	column VdId
+		dataType: string
+		lineageTag: 19639dfa-c3c9-4f4e-9466-9e8a1622f843
+		summarizeBy: none
+		sourceColumn: VdId
+
+		annotation SummarizationSetBy = Automatic
+
+	column VdNamn
+		dataType: string
+		lineageTag: 2b66223b-240c-4ddb-a732-f13e4b33a2bb
+		summarizeBy: none
+		sourceColumn: VdNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column VD
+		dataType: string
+		lineageTag: 2cb26ed1-39ca-4b6e-93bd-e7ba16a6a71a
+		summarizeBy: none
+		sourceColumn: VD
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeTypId
+		dataType: string
+		lineageTag: d3b304fb-c530-468d-9846-2b1fb431f9e9
+		summarizeBy: none
+		sourceColumn: KostnadsställeTypId
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeTypNamn
+		dataType: string
+		lineageTag: c211a393-a6e7-4abd-951d-68e3e876f3da
+		summarizeBy: none
+		sourceColumn: KostnadsställeTypNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column KostnadsställeTyp
+		dataType: string
+		lineageTag: fbc7a91d-7775-4905-a727-67ece0c9196d
+		summarizeBy: none
+		sourceColumn: KostnadsställeTyp
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOpId
+		dataType: string
+		lineageTag: 45b5380a-9c73-4236-9f24-d078ee3cae73
+		summarizeBy: none
+		sourceColumn: AdmOpId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOpNamn
+		dataType: string
+		lineageTag: 63117662-0ecd-4108-abb9-c7b583d4f741
+		summarizeBy: none
+		sourceColumn: AdmOpNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOp
+		dataType: string
+		lineageTag: a5d209c5-7f9a-4738-a7c8-07ee580812b5
+		summarizeBy: none
+		sourceColumn: AdmOp
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOp2Id
+		dataType: string
+		lineageTag: 636ec63a-20c2-464f-89d0-f8c70bc07ef8
+		summarizeBy: none
+		sourceColumn: AdmOp2Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOp2Namn
+		dataType: string
+		lineageTag: d6e060e6-e52b-403a-a272-6335b39ee8f2
+		summarizeBy: none
+		sourceColumn: AdmOp2Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column AdmOp2
+		dataType: string
+		lineageTag: 8a2e13a3-2f64-4252-aeca-ce73a4e2eb47
+		summarizeBy: none
+		sourceColumn: AdmOp2
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetsKategoriId
+		dataType: string
+		lineageTag: fb5a5e8e-025e-4056-9b92-92cbbfb93965
+		summarizeBy: none
+		sourceColumn: FastighetsKategoriId
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetsKategoriNamn
+		dataType: string
+		lineageTag: 68bb1b7e-a430-478e-8ff8-4da1e5bebdc3
+		summarizeBy: none
+		sourceColumn: FastighetsKategoriNamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetsKategori
+		dataType: string
+		lineageTag: 52d04a4c-1d35-43b9-9b2b-e7dfa39c5283
+		summarizeBy: none
+		sourceColumn: FastighetsKategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasNorr
+		dataType: int64
+		formatString: 0
+		lineageTag: fba5bfbb-bb82-4181-95c1-e29ccaa2d2a6
+		summarizeBy: none
+		sourceColumn: BasNorr
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasVäst
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e5f0e79-fc87-496c-a978-aabd40600939
+		summarizeBy: none
+		sourceColumn: BasVäst
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasÖst
+		dataType: int64
+		formatString: 0
+		lineageTag: 96f96aa7-7f05-406d-bbe3-e29ea3ddeb73
+		summarizeBy: none
+		sourceColumn: BasÖst
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasLokal
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ed1ed86-75f7-4d96-8fc2-247f6fa2c579
+		summarizeBy: none
+		sourceColumn: BasLokal
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasStudent
+		dataType: int64
+		formatString: 0
+		lineageTag: c1553233-201e-4601-aa2c-6985a138cfda
+		summarizeBy: none
+		sourceColumn: BasStudent
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bas2998
+		dataType: int64
+		formatString: 0
+		lineageTag: 43618f90-58fc-48b8-b7aa-737072c88c17
+		summarizeBy: none
+		sourceColumn: Bas2998
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasFörvaltn
+		dataType: int64
+		formatString: 0
+		lineageTag: d5e44795-10fe-41e2-ab57-f626a2d46bf8
+		summarizeBy: none
+		sourceColumn: BasFörvaltn
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasFörvaltnExt
+		dataType: int64
+		formatString: 0
+		lineageTag: a415e95b-18f3-4629-a985-8c1ab7e99777
+		summarizeBy: none
+		sourceColumn: BasFörvaltnExt
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasAUNy
+		dataType: int64
+		formatString: 0
+		lineageTag: 65e1e486-b10a-4048-94ab-b1cdcf331ac4
+		summarizeBy: none
+		sourceColumn: BasAUNy
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasDrift
+		dataType: int64
+		formatString: 0
+		lineageTag: cb20d231-b15e-455b-8909-5ecd4c0c9073
+		summarizeBy: none
+		sourceColumn: BasDrift
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasLth
+		dataType: int64
+		formatString: 0
+		lineageTag: ec0297bd-b57f-4514-87d8-1891e15ba046
+		summarizeBy: none
+		sourceColumn: BasLth
+
+		annotation SummarizationSetBy = Automatic
+
+	column BasAdm
+		dataType: int64
+		formatString: 0
+		lineageTag: 1624da94-091f-4327-9348-bf4a1a7d34c6
+		summarizeBy: none
+		sourceColumn: BasAdm
+
+		annotation SummarizationSetBy = Automatic
+
+	column ControllerID
+		dataType: string
+		lineageTag: 206110d4-4c11-4cfc-b54a-cc39f4ca09b5
+		summarizeBy: none
+		sourceColumn: ControllerID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Controllernamn
+		dataType: string
+		lineageTag: d652de7c-ad82-40b9-8821-0b0fd9ef3482
+		summarizeBy: none
+		sourceColumn: Controllernamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column FunktionsId
+		dataType: string
+		lineageTag: 2b8e99c8-af5d-4b04-aadf-2a6f4c2495cc
+		summarizeBy: none
+		sourceColumn: FunktionsId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stöd/Förvaltning
+		dataType: string
+		lineageTag: 28ef524d-fac3-48ce-a84b-735ef4d48bc2
+		summarizeBy: none
+		sourceColumn: Stöd/Förvaltning
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Kostnadsställe = m
+		mode: import
+		source =
+				let
+				    Källa = Sql.Database("mkbdw1.mkb.se", "MKBBIDW"),
+				    dbo_ViewDimKostnadsställe = Källa{[Schema="dbo",Item="ViewDimKostnadsställe"]}[Data]
+				in
+				    dbo_ViewDimKostnadsställe
+

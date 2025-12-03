@@ -1,0 +1,42 @@
+table DashboardAktivBoMålTotal
+	lineageTag: 8e2b58dc-704a-451a-86e8-9e6fd93bd93b
+
+	column TimeSK
+		dataType: int64
+		formatString: 0
+		lineageTag: f72331a6-df36-4176-bc37-d7b4073b9791
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column KPI
+		dataType: string
+		lineageTag: a4feea81-1472-4cec-863a-6f90f8b651ad
+		summarizeBy: none
+		sourceColumn: KPI
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mål
+		dataType: double
+		lineageTag: 8ca7d066-f58a-4a1e-b836-2de479c3dfba
+		summarizeBy: sum
+		sourceColumn: Mål
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition DashboardAktivBoMålTotal-6881b473-17eb-4804-aeb3-b34ad834d2ea = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactLedningDashboardAktivBoMålTotal = MKBBIDW{[Schema="dbo",Item="ViewFactLedningDashboardAktivBoMålTotal"]}[Data]
+				in
+				    dbo_ViewFactLedningDashboardAktivBoMålTotal
+
+	annotation PBI_ResultType = Table
+

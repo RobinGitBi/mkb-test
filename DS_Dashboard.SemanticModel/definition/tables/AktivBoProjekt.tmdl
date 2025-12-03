@@ -1,0 +1,87 @@
+table AktivBoProjekt
+	lineageTag: ac302cbc-2f43-4849-b6ce-6ae94ca1bf03
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d525929-4de2-42ff-b610-0fc300982a18
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Projektnamn
+		dataType: string
+		lineageTag: 475c94b5-ae81-44dd-8cb9-84526b63e1db
+		summarizeBy: none
+		sourceColumn: Projektnamn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektBeskrivning
+		dataType: string
+		lineageTag: 91947517-7517-436f-b47d-a68b5f83a21d
+		summarizeBy: none
+		sourceColumn: ProjektBeskrivning
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjektgruppID
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b91d87b-4b30-434d-ae51-982339309140
+		summarizeBy: count
+		sourceColumn: ProjektgruppID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Projektgrupp
+		dataType: string
+		lineageTag: 381617ed-a899-4c6b-bc32-9d5706f6cd14
+		summarizeBy: none
+		sourceColumn: Projektgrupp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Projekttyp
+		dataType: string
+		lineageTag: ab2240eb-e1fc-4d92-9b4a-f8dfee382da0
+		summarizeBy: none
+		sourceColumn: Projekttyp
+
+		annotation SummarizationSetBy = Automatic
+
+	column Startdatum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e2ed2bb4-d705-4ba5-aa22-c300a8f1d595
+		summarizeBy: none
+		sourceColumn: Startdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Slutdatum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e7be1930-8fe9-4da2-8edf-a9210d734865
+		summarizeBy: none
+		sourceColumn: Slutdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition AktivBoProjekt-1e12b9ff-6a42-4985-b6b4-82d31ff94d91 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewDimAktivBoProjekt = MKBBIDW{[Schema="dbo",Item="ViewDimAktivBoProjekt"]}[Data]
+				in
+				    dbo_ViewDimAktivBoProjekt
+
+	annotation PBI_ResultType = Table
+

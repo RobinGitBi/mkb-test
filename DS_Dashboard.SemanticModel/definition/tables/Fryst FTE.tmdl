@@ -1,0 +1,210 @@
+table 'Fryst FTE'
+	lineageTag: fc19951d-c088-4295-be88-ff3158bda625
+
+	column Personalkategori
+		dataType: string
+		lineageTag: b2e2ada5-083f-4efa-9d88-8d86dca9f29c
+		summarizeBy: none
+		sourceColumn: Personalkategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column Admin/Skötsel
+		dataType: string
+		lineageTag: 7308515e-3ad1-44a8-aee4-021e57d7c560
+		summarizeBy: none
+		sourceColumn: Admin/Skötsel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bemanning
+		dataType: string
+		lineageTag: 248bfb7e-7d37-452d-ada9-85e23ffec171
+		summarizeBy: none
+		sourceColumn: Bemanning
+
+		annotation SummarizationSetBy = Automatic
+
+	column ANST_NR
+		dataType: string
+		lineageTag: 17b31315-bb48-4414-a460-ec23c77ad325
+		summarizeBy: none
+		sourceColumn: ANST_NR
+
+		annotation SummarizationSetBy = Automatic
+
+	column Namn
+		dataType: string
+		lineageTag: fc7348b9-0b78-4bdb-9f64-834c82a26a67
+		summarizeBy: none
+		sourceColumn: Namn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ålder
+		dataType: int64
+		formatString: 0
+		lineageTag: fd72990b-4a47-4f75-90f2-463995636450
+		summarizeBy: sum
+		sourceColumn: Ålder
+
+		annotation SummarizationSetBy = Automatic
+
+	column Månadslön
+		dataType: double
+		lineageTag: c918788f-df26-4e39-8ffa-224a5acad2bd
+		summarizeBy: sum
+		sourceColumn: Månadslön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tillägg 230'
+		dataType: double
+		lineageTag: 91f6fb2f-9c07-4e6a-b580-ce55cded4f6b
+		summarizeBy: sum
+		sourceColumn: Tillägg 230
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tillägg 230 antal månader'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c26852b-273d-48dc-9b0f-47655b3ce147
+		summarizeBy: sum
+		sourceColumn: Tillägg 230 antal månader
+
+		annotation SummarizationSetBy = Automatic
+
+	column Titel
+		dataType: string
+		lineageTag: a3032e08-82a9-421e-bde7-562793c0e07e
+		summarizeBy: none
+		sourceColumn: Titel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tjänstgöringsgrad
+		dataType: double
+		lineageTag: aaeb8561-0b3b-4daf-8477-b359a9f7d80e
+		summarizeBy: sum
+		sourceColumn: Tjänstgöringsgrad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Kostnadsställe
+		dataType: string
+		lineageTag: abe03747-0a4d-469c-964b-843ea7747712
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Antal månader'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f46e30d-cdd6-40a1-934f-354310b63319
+		summarizeBy: sum
+		sourceColumn: Antal månader
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Antal FTE'
+		dataType: double
+		lineageTag: 53160c99-5507-4801-a89d-0b1343b419d2
+		summarizeBy: sum
+		sourceColumn: Antal FTE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Tidigare lön'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b0a385c-fc7e-4e72-84af-1a079a3fb548
+		summarizeBy: sum
+		sourceColumn: Tidigare lön
+
+		annotation SummarizationSetBy = Automatic
+
+	column Födelsedatum
+		dataType: string
+		lineageTag: 510444a5-a7b5-4204-890b-5db2ab1e6cee
+		summarizeBy: none
+		sourceColumn: Födelsedatum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsdatum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 13d0e492-59b3-4339-aabc-3d67d92b6f38
+		summarizeBy: none
+		sourceColumn: Anställningsdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Avgångsdatum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 13e25f01-a46b-47b8-b61b-22d993cbc7bd
+		summarizeBy: none
+		sourceColumn: Avgångsdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Antal FTE månad'
+		dataType: double
+		lineageTag: 1d692d3e-97b3-4960-a6f1-29dc08125e4d
+		summarizeBy: sum
+		sourceColumn: Antal FTE månad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Frysdatum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: af4b2f03-ef30-4814-bb85-f08c694bd119
+		summarizeBy: none
+		sourceColumn: Frysdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Timlön
+		dataType: double
+		lineageTag: 079b1220-0d81-43f9-adaf-8a8248f74cdc
+		summarizeBy: sum
+		sourceColumn: Timlön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Fryst FTE' = m
+		mode: import
+		source =
+				let
+				    Källa = Sql.Database("mkbdw1.mkb.se", "MKBBIDW"),
+				    dbo_ViewFactFrystFte = Källa{[Schema="dbo",Item="ViewFactFrystFte"]}[Data],
+				    #"Omdöpta kolumner" = Table.RenameColumns(dbo_ViewFactFrystFte,{{"ANSTALLNINGSDATUM", "Anställningsdatum"}, {"FODELSEDATUM", "Födelsedatum"}, {"AVGANGSDATUM", "Avgångsdatum"}, {"Ålder nästa år", "Ålder"}, {"Tillägg 230 antal månader nästa år", "Tillägg 230 antal månader"}, {"Antal månader nästa år", "Antal månader"}})
+				in
+				    #"Omdöpta kolumner"
+
+	annotation PBI_NavigationStepName = Navigering
+
+	annotation PBI_ResultType = Table
+

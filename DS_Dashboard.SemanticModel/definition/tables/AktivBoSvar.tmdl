@@ -1,0 +1,123 @@
+table AktivBoSvar
+	lineageTag: 54045519-6012-40ba-9c4c-adbaaae829cc
+
+	column Id
+		dataType: int64
+		formatString: 0
+		lineageTag: a279a3ee-4909-4da1-855e-d16eb0eca0c0
+		summarizeBy: count
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Projektid
+		dataType: int64
+		formatString: 0
+		lineageTag: e604e2e5-8862-49df-8beb-5a349c2d5478
+		summarizeBy: none
+		sourceColumn: Projektid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Frågeid
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ff9e84d-0f5e-4a95-a57c-7f6fbf761d6e
+		summarizeBy: none
+		sourceColumn: Frågeid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Svarsid
+		dataType: int64
+		formatString: 0
+		lineageTag: 99fee31f-7a55-4d6c-a12e-2d50d1699bbf
+		summarizeBy: sum
+		sourceColumn: Svarsid
+
+		annotation SummarizationSetBy = Automatic
+
+	column År
+		dataType: int64
+		formatString: 0
+		lineageTag: 491fa689-aa93-4af6-8dbc-dd160d9cd8d3
+		summarizeBy: sum
+		sourceColumn: År
+
+		annotation SummarizationSetBy = Automatic
+
+	column Månad
+		dataType: int64
+		formatString: 0
+		lineageTag: 86363fb6-9f54-4c59-bd9b-e07c65a0bb3e
+		summarizeBy: sum
+		sourceColumn: Månad
+
+		annotation SummarizationSetBy = Automatic
+
+	column OmrådeId
+		dataType: int64
+		formatString: 0
+		lineageTag: 33c43f29-4c54-40e4-926f-7a7f1d9a90f2
+		summarizeBy: count
+		sourceColumn: OmrådeId
+
+		annotation SummarizationSetBy = Automatic
+
+	column AntalSvar
+		dataType: int64
+		formatString: 0
+		lineageTag: c0a3b636-30e7-467a-ae3e-b795e4f6bc45
+		summarizeBy: sum
+		sourceColumn: AntalSvar
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrågetypId
+		dataType: int64
+		formatString: 0
+		lineageTag: 9a031bee-cdc8-4ea3-8e63-2d283b387da4
+		summarizeBy: count
+		sourceColumn: FrågetypId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Resultat
+		dataType: double
+		lineageTag: 453b3918-6717-43d0-a58f-18fedbb333bd
+		summarizeBy: sum
+		sourceColumn: Resultat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TimeSK
+		dataType: string
+		lineageTag: a5689746-0156-44b2-b186-b4ac7318e87a
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column FastighetSK
+		dataType: int64
+		formatString: 0
+		lineageTag: d013288a-5076-4bc9-91bb-53d592567adb
+		summarizeBy: sum
+		sourceColumn: FastighetSK
+
+		annotation SummarizationSetBy = Automatic
+
+	partition AktivBoSvar-15c35587-94b8-4571-a759-67ea63f63c7e = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactAktivBoSvar = MKBBIDW{[Schema="dbo",Item="ViewFactAktivBoSvar"]}[Data]
+				in
+				    dbo_ViewFactAktivBoSvar
+
+	annotation PBI_ResultType = Table
+

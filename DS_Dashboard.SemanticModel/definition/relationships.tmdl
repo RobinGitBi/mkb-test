@@ -1,0 +1,68 @@
+relationship da8cd2d3-aff2-4f5b-9268-e4408b18ad50
+	fromColumn: Dashboard.FastighetSK
+	toColumn: Fastighet.FastighetSK
+
+relationship 58ac3de8-931d-44af-8416-901a89f50ef4
+	fromColumn: Dashboard.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship afe6e3e6-4f45-46ef-b1f2-7c69bf3758ee
+	fromColumn: DashboardFinans.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship aeae0c6c-b435-4b6c-a1ae-d1a1fa884db6
+	fromColumn: DashboardKredit.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship b7a38681-6e8e-4605-b095-4fe8e6fe386a
+	fromColumn: DashboardKredit.FastighetSK
+	toColumn: Fastighet.FastighetSK
+
+relationship bdc4fb6a-8aa9-413a-b03b-26bb01c87983
+	fromColumn: DashboardHR.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship 220624c6-b4ca-4d6e-a870-b91bed6b8b29
+	fromColumn: DashboardWinningTemp.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship 9fd21056-1322-4783-9bea-d2e919a406d1
+	fromColumn: DashboardAktivBoMålTotal.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship b6e16897-acf5-4031-af0c-7d75416e126f
+	fromColumn: DashboardEnergi.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship da7046ca-732d-4801-90eb-8635d030fa65
+	fromColumn: DashboardAktivBoTotal.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship d338991c-1302-418a-8717-fc240f40ac5c
+	fromColumn: AktivBoSvar.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship d732998b-4ab4-48cb-b6b4-b2345b71c777
+	fromColumn: AktivBoSvar.Frågeid
+	toColumn: AktivBoFrågor.Id
+
+relationship eaa6028e-1d6e-4745-957f-4ce1e34b157a
+	fromColumn: AktivBoSvar.Projektid
+	toColumn: AktivBoProjekt.Id
+
+relationship e552176c-bf28-45e6-aa77-221a760f63fb
+	fromColumn: 'AktivBo Index'.TimeSK
+	toColumn: Kalender.TimeSK
+
+relationship 3913113c-ed04-4b78-82f5-3d39eb6f4797
+	fromColumn: 'AktivBo Index'.ProjectID
+	toColumn: AktivBoProjekt.Id
+
+relationship c26fb5d3-fe2f-ca0c-685f-f11eb4ebd6be
+	fromColumn: 'Fryst FTE'.Kostnadsställe
+	toColumn: Kostnadsställe.KostnadsställeNr
+
+relationship 8f7ad277-afc2-a139-5287-274315cab16f
+	fromColumn: 'Fryst FTE'.Frysdatum
+	toColumn: Kalender.Datum
+

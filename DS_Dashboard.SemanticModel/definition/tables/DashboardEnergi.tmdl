@@ -1,0 +1,53 @@
+table DashboardEnergi
+	lineageTag: 7063fbbf-d734-40a0-bb79-5d8b25536ad5
+
+	column TimeSK
+		dataType: string
+		lineageTag: 256eb1af-74cc-4007-9933-706f9ed76d03
+		summarizeBy: none
+		sourceColumn: TimeSK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Energiförbrukning
+		dataType: double
+		lineageTag: d1655354-761a-4598-8f82-9fa374d9279f
+		summarizeBy: sum
+		sourceColumn: Energiförbrukning
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Vattenförbrukning
+		dataType: double
+		lineageTag: 519c2e2d-083e-49c5-95ff-3dfa1356a72a
+		summarizeBy: sum
+		sourceColumn: Vattenförbrukning
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EnergiförbrukningMål
+		dataType: double
+		lineageTag: 2b0a811e-8066-431d-9a75-4a9f9c51e52b
+		summarizeBy: sum
+		sourceColumn: EnergiförbrukningMål
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition DashboardEnergi-72565a99-00c5-4315-a2a7-d746ff059e87 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("mkbdw1.mkb.se"),
+				    MKBBIDW = Source{[Name="MKBBIDW"]}[Data],
+				    dbo_ViewFactLedningDashboardEnergi = MKBBIDW{[Schema="dbo",Item="ViewFactLedningDashboardEnergi"]}[Data]
+				in
+				    dbo_ViewFactLedningDashboardEnergi
+
+	annotation PBI_ResultType = Table
+
