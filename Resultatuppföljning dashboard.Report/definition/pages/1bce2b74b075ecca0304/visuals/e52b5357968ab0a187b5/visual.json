@@ -304,20 +304,6 @@
         },
         "type": "Advanced",
         "howCreated": "User"
-      },
-      {
-        "name": "3b252ac6203078040650",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "NuvarandeMånad"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

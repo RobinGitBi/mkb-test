@@ -66,3 +66,7 @@ relationship 8f7ad277-afc2-a139-5287-274315cab16f
 	fromColumn: 'Fryst FTE'.Frysdatum
 	toColumn: Kalender.Datum
 
+relationship e7e73b30-1f68-c6aa-0ffb-5d465a8fcdba
+	fromColumn: ViewFactFte.Datum
+	toColumn: Kalender.Datum
+

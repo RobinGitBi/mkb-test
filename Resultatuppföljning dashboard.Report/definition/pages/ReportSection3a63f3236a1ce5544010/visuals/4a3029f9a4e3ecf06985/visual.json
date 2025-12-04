@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "4a3029f9a4e3ecf06985",
   "position": {
     "x": 0,
     "y": 0,
     "z": 1000,
     "height": 111,
-    "width": 1280
+    "width": 1280,
+    "tabOrder": 0
   },
   "visualGroup": {
     "displayName": "Huvud",

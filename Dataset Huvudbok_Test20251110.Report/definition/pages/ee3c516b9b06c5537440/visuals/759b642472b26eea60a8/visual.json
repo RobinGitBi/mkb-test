@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "759b642472b26eea60a8",
   "position": {
-    "x": 148.04349893789038,
-    "y": 96.098411591262163,
+    "x": 297.43983848383209,
+    "y": 176.0630434074701,
     "z": 0,
-    "height": 390.88678228337722,
-    "width": 588.27811420056435
+    "height": 390.80660392718744,
+    "width": 588.21062229313884
   },
   "visual": {
     "visualType": "tableEx",
@@ -16,17 +16,17 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mätvärde"
+                      "Entity": "Huvudbok"
                     }
                   },
-                  "Property": "Best. Ankomstlista Före Innevarande Månad"
+                  "Property": "TimeSK"
                 }
               },
-              "queryRef": "Mätvärde.Beställningar Ankomstregistrerade Fakturor",
-              "nativeQueryRef": "Best. Ankomstlista Före Innevarande Månad"
+              "queryRef": "Huvudbok.TimeSK",
+              "nativeQueryRef": "TimeSK"
             },
             {
               "field": {
@@ -36,11 +36,39 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+                  "Property": "Beställningar Innevarande Månad - Nuläge"
                 }
               },
-              "queryRef": "Mätvärde.Beställningar Ankomstlista Innevarande till årsslut",
-              "nativeQueryRef": "Best. Ankomstlista Innevarande Månad och Rest. År"
+              "queryRef": "Mätvärde.Beställningar Innevarande Månad - Nuläge",
+              "nativeQueryRef": "Beställningar Innevarande Månad - Nuläge"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Framtida Beställningar Året - Nuläge"
+                }
+              },
+              "queryRef": "Mätvärde.Framtida Beställningar Året - Nuläge",
+              "nativeQueryRef": "Framtida Beställningar Året - Nuläge"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Framtida Beställningar Året"
+                }
+              },
+              "queryRef": "Mätvärde.Framtida Beställningar Året",
+              "nativeQueryRef": "Framtida Beställningar Året"
             }
           ]
         }
@@ -51,7 +79,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "5fcf5f0084409cd63aa6",
+        "name": "f95ddd0b68b48a7613d1",
         "field": {
           "Measure": {
             "Expression": {
@@ -59,13 +87,13 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Best. Ankomstlista Före Innevarande Månad"
+            "Property": "Beställningar Innevarande Månad - Nuläge"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "ae8aefe93ac12c8a536e",
+        "name": "8221561ae464decc030e",
         "field": {
           "Measure": {
             "Expression": {
@@ -73,10 +101,38 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+            "Property": "Framtida Beställningar Året - Nuläge"
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "72ed7f0b6e07d827a109",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Framtida Beställningar Året"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b564e6d3abcb6209c9b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Huvudbok"
+              }
+            },
+            "Property": "TimeSK"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

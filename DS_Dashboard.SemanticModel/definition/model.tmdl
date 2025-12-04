@@ -8,9 +8,11 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Dashboard","Fastighet","Mätvärde","Kalender","DashboardFinans","DashboardKredit","DashboardHR","DashboardWinningTemp","DashboardAktivBoTotal","DashboardAktivBoMålTotal","DashboardEnergi","AktivBoFrågor","AktivBoProjekt","AktivBoSvar","AktivBo Index","Fryst FTE","Kostnadsställe"]
+annotation PBI_QueryOrder = ["Dashboard","Fastighet","Mätvärde","Kalender","DashboardFinans","DashboardKredit","DashboardHR","DashboardWinningTemp","DashboardAktivBoTotal","DashboardAktivBoMålTotal","DashboardEnergi","AktivBoFrågor","AktivBoProjekt","AktivBoSvar","AktivBo Index","Fryst FTE","Kostnadsställe","ViewFactFte"]
 
 annotation PBI_ProTooling = ["DevMode"]
+
+annotation __TEdtr = 1
 
 ref table Dashboard
 ref table Fastighet
@@ -29,6 +31,7 @@ ref table AktivBoSvar
 ref table 'AktivBo Index'
 ref table 'Fryst FTE'
 ref table Kostnadsställe
+ref table ViewFactFte
 
 ref cultureInfo en-US
 

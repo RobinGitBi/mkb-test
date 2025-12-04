@@ -4287,7 +4287,7 @@ table Mätvärde
 			    [Beställarlistan ÅTD visa endast framtida datum],
 			    REMOVEFILTERS(Kalender),
 			    KEEPFILTERS ( Kalender[Datum] >= Startx && Kalender[Datum] <= Slutx ),
-			    KEEPFILTERS('Beställarlistan'[Klar Senast] <= Slutx)
+			    KEEPFILTERS('Beställarlistan'[Klar Senast] >= Startx && 'Beställarlistan'[Klar Senast]  <= Slutx)
 			)
 			
 			```

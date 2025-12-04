@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "a8018b957242c98ce4ab",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "f58f8787a1b97e1275cb",
   "position": {
-    "x": 1060,
-    "y": 55,
-    "z": 5000,
-    "height": 55,
-    "width": 110,
-    "tabOrder": 3000
+    "x": 632,
+    "y": 55.871870065418456,
+    "z": 8000,
+    "height": 55.871870065418456,
+    "width": 129,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Kalender"
+                      "Entity": "Segment"
                     }
                   },
-                  "Property": "År med senast stängda månad 11:e"
+                  "Property": "Segment"
                 }
               },
-              "queryRef": "Kalender.År med senast stängda månad 11:e",
+              "queryRef": "Segment.Segment",
               "active": true
             }
           ]
@@ -50,45 +50,11 @@
       "general": [
         {
           "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "k",
-                    "Entity": "Kalender",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "k"
-                                }
-                              },
-                              "Property": "År med senast stängda månad 11:e"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Senast stängda månad'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
+            "selfFilterEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
               }
             }
           }
@@ -159,13 +125,6 @@
                   }
                 }
               }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'År'"
-                }
-              }
             }
           }
         }
@@ -197,6 +156,19 @@
           }
         }
       ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "visualHeader": [
         {
           "properties": {
@@ -212,7 +184,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "År med senast stängda månad 11:e",
+      "groupName": "Segment",
       "fieldChanges": true,
       "filterChanges": true
     },
@@ -221,15 +193,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0a5fd4cc69cba7acfd3b",
+        "name": "Filter5e262a30e34ce00a9d60",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Kalender"
+                "Entity": "Mätvärde"
               }
             },
-            "Property": "År med senast stängda månad 11:e"
+            "Property": "Filter Slicers"
           }
         },
         "type": "Advanced",
@@ -237,8 +209,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "k",
-              "Entity": "Kalender",
+              "Name": "m",
+              "Entity": "Mätvärde",
               "Type": 0
             }
           ],
@@ -250,18 +222,18 @@
                     "Comparison": {
                       "ComparisonKind": 0,
                       "Left": {
-                        "Column": {
+                        "Measure": {
                           "Expression": {
                             "SourceRef": {
-                              "Source": "k"
+                              "Source": "m"
                             }
                           },
-                          "Property": "År med senast stängda månad 11:e"
+                          "Property": "Filter Slicers"
                         }
                       },
                       "Right": {
                         "Literal": {
-                          "Value": "null"
+                          "Value": "0L"
                         }
                       }
                     }
@@ -270,7 +242,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ]
   }

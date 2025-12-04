@@ -7,7 +7,7 @@
     "z": 14000,
     "height": 449.57365215429735,
     "width": 1248.6713286713286,
-    "tabOrder": 34000
+    "tabOrder": 32000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -133,21 +133,6 @@
               "queryRef": "Mätvärde.Utfall ÅTD",
               "nativeQueryRef": "Utfall (ack tom fg månad)",
               "displayName": "Utfall (ack tom fg månad)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mätvärde"
-                    }
-                  },
-                  "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
-                }
-              },
-              "queryRef": "Mätvärde.Best. Ankomstlista Innevarande Månad och Rest. År",
-              "nativeQueryRef": "Beställningar Ankomstregistrerade (Redan inkluderade i Best Inn. & Best Fram.)",
-              "displayName": "Beställningar Ankomstregistrerade (Redan inkluderade i Best Inn. & Best Fram.)"
             },
             {
               "field": {
@@ -446,20 +431,6 @@
           },
           "selector": {
             "metadata": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "108.57522279967384D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.Best. Ankomstlista Innevarande Månad och Rest. År"
           }
         }
       ],
@@ -1212,20 +1183,6 @@
         },
         "type": "Advanced",
         "howCreated": "User"
-      },
-      {
-        "name": "f5f6041f31de4a939489",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

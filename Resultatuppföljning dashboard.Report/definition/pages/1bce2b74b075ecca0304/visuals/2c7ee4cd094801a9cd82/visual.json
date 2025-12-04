@@ -1242,62 +1242,6 @@
         },
         "type": "Advanced",
         "howCreated": "User"
-      },
-      {
-        "name": "76ac7a89260bcc565211",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Best. Ankomstlista Före Innevarande Månad"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e16a2a23de4a39da50e1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Diff Helår - Nuläge Ankomstlista"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0bbc416154a69ca11c0b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Diff% Helår - Nuläge Ankomstlista"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3838be1f0c38d53096d0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mätvärde"
-              }
-            },
-            "Property": "Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade"
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

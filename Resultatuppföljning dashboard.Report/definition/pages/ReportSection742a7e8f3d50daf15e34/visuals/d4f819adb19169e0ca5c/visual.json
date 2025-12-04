@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "d4f819adb19169e0ca5c",
   "position": {
     "x": 8.8062622309197636,
@@ -7,7 +7,7 @@
     "z": 22000,
     "height": 574.16829745596863,
     "width": 1259.2954990215262,
-    "tabOrder": 10000
+    "tabOrder": 9000
   },
   "visualGroup": {
     "displayName": "Should be selected when update bookmark Översikt 1",

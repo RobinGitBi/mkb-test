@@ -2160,6 +2160,48 @@ table Mätvärde
 		displayFolder: FTE
 		lineageTag: fce76861-2470-45b7-b99f-3607d49c4788
 
+	measure 'Utfall FTE' =
+			
+			
+			VAR Result = CALCULATE(sum('ViewFactFte'[FTE]), KEEPFILTERS('ViewFactFte'[AktualitetId] = 1))
+			
+			RETURN IF( Result <> 0, Result)
+		formatString: #,##
+		displayFolder: FTE\Ny FTE Logik
+		lineageTag: cccab6ba-fd4b-4d55-83f0-eb26942617e0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'FTE Utfall R12 Avg' =
+			
+			CALCULATE(
+			    SUM(ViewFactFte[FTE]), KEEPFILTERS(ViewFactFte[AktualitetId] = 1),
+			DATESINPERIOD(
+			    Kalender[Datum],
+			    LASTDATE(Kalender[Datum]),
+			    -12,
+			    MONTH)
+			)/12
+		formatString: #,##
+		displayFolder: FTE\Ny FTE Logik
+		lineageTag: bcafae4c-4664-43c3-a73c-889479b106e6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff Utfall FTE R12 Avg' = [Utfall FTE]-[FTE Utfall R12 Avg]
+		formatString: #,##
+		displayFolder: FTE\Ny FTE Logik
+		lineageTag: c1f0fb5c-a1e9-4fcd-9a63-68d251d41bdd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diff % Utfall FTE R12 Avg' = DIVIDE('Mätvärde'[Diff Utfall FTE R12 Avg], [FTE Utfall R12 Avg], 0)
+		formatString: 0.0%
+		displayFolder: FTE\Ny FTE Logik
+		lineageTag: 96586de0-a699-4aca-b7c8-c5de743af838
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mätvärde-15bd5689-a988-4dba-b905-fd13a83cde05 = m
 		mode: import
 		source =

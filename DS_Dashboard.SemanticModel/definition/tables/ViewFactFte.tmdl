@@ -1,0 +1,320 @@
+table ViewFactFte
+	lineageTag: 93e50a45-bac0-41e1-9649-6f329b6ee1d8
+
+	column 'Anställd SK'
+		dataType: int64
+		formatString: 0
+		lineageTag: da84ce0b-c1de-49a2-b5f7-0448226c405d
+		summarizeBy: sum
+		sourceColumn: Anställd SK
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsnummer
+		dataType: int64
+		formatString: 0
+		lineageTag: a74683b0-6853-45a3-9cd7-5628603528f2
+		summarizeBy: sum
+		sourceColumn: Anställningsnummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kostnadsställe
+		dataType: string
+		lineageTag: 4a8fa75b-0ae8-4337-9aa7-a6d1c5072ea7
+		summarizeBy: none
+		sourceColumn: Kostnadsställe
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anställningsform
+		dataType: string
+		lineageTag: 8952ff55-e7f1-4c65-b811-046f8922fb15
+		summarizeBy: none
+		sourceColumn: Anställningsform
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lönekategori
+		dataType: string
+		lineageTag: 514e5c98-f172-450f-b1c5-2397c360ba6f
+		summarizeBy: none
+		sourceColumn: Lönekategori
+
+		annotation SummarizationSetBy = Automatic
+
+	column Datum
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: bf9596af-8f4c-41a9-b636-cfed5327c482
+		summarizeBy: none
+		sourceColumn: Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'FTE Beräkning'
+		dataType: string
+		lineageTag: 08fc25e6-a423-4e0a-94ce-03e8c77814f8
+		summarizeBy: none
+		sourceColumn: FTE Beräkning
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Kontrakt Start Månad'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4e3e3a5e-7fa5-4ec8-a05a-dd2b2339866f
+		summarizeBy: none
+		sourceColumn: Kontrakt Start Månad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Kontrakt Slut Månad'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6f074b16-fc4e-4c58-bcd5-b61ec517e32a
+		summarizeBy: none
+		sourceColumn: Kontrakt Slut Månad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Sysselsättningsgrad
+		dataType: double
+		lineageTag: ff19b79b-449b-4942-b6a4-f015fb5a9342
+		summarizeBy: sum
+		sourceColumn: Sysselsättningsgrad
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Rapporterade Timmar'
+		dataType: double
+		lineageTag: 27b02ea7-0f14-44bf-9ee7-ea834daf022f
+		summarizeBy: sum
+		sourceColumn: Rapporterade Timmar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Normal arbetstid'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2d063fe4-8364-4a9a-a3cb-620a96ee140d
+		summarizeBy: sum
+		sourceColumn: Normal arbetstid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FTE före justering'
+		dataType: double
+		lineageTag: ae06b752-0944-410a-9fca-9822c67feaf2
+		summarizeBy: sum
+		sourceColumn: FTE före justering
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Frånvaro justering'
+		dataType: double
+		lineageTag: 1d0c89f6-9792-4468-bb01-31b710a0c6b4
+		summarizeBy: sum
+		sourceColumn: Frånvaro justering
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FTE
+		dataType: double
+		lineageTag: 34740ede-3fc1-4ff7-9f0d-a46287f73281
+		summarizeBy: sum
+		sourceColumn: FTE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Dagar frånvaro justering'
+		dataType: double
+		lineageTag: 84020071-2d43-44fc-b3bf-e9a2e3283070
+		summarizeBy: sum
+		sourceColumn: Dagar frånvaro justering
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Dagar totalt'
+		dataType: int64
+		formatString: 0
+		lineageTag: 727fd589-9e15-4feb-8fd5-3f1ec77e25f2
+		summarizeBy: sum
+		sourceColumn: Dagar totalt
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SCD2 ändring datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 47983368-b4e4-4f29-a51e-1cb165e33a58
+		summarizeBy: none
+		sourceColumn: SCD2 ändring datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'SCD2 ändring tom datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3d731a4f-b985-4ed1-a798-43ea25ff638f
+		summarizeBy: none
+		sourceColumn: SCD2 ändring tom datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'SCD2 Justerad Ändring Datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d2cbd0ae-86cf-451e-bdf6-7bbae7ee8b99
+		summarizeBy: none
+		sourceColumn: SCD2 Justerad Ändring Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'SCD2 Justerad Ändring t.o.m. Datum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ffed272d-1e9b-42df-8a42-6cb1877eceb0
+		summarizeBy: none
+		sourceColumn: SCD2 Justerad Ändring t.o.m. Datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Månadslön
+		dataType: double
+		lineageTag: 85701748-5044-4950-b345-9c4fc2f8cda3
+		summarizeBy: sum
+		sourceColumn: Månadslön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Lönetillägg
+		dataType: double
+		lineageTag: 6bed8849-bd27-4123-b781-5f21c0a752bb
+		summarizeBy: sum
+		sourceColumn: Lönetillägg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MånadsLönPlusTillägg
+		dataType: double
+		lineageTag: 4a095f6a-8baf-4fc7-aec2-7c99cfe8cf12
+		summarizeBy: sum
+		sourceColumn: MånadsLönPlusTillägg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Lönetillägg Startdatum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6eafc9ea-7744-44f2-8b23-bd023b280367
+		summarizeBy: none
+		sourceColumn: Lönetillägg Startdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Lönetillägg Slutdatum'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f900c724-e4ad-4150-b286-398f594d596d
+		summarizeBy: none
+		sourceColumn: Lönetillägg Slutdatum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Timlön
+		dataType: double
+		lineageTag: e68d65b0-237b-4400-aff1-cce4d11656d9
+		summarizeBy: sum
+		sourceColumn: Timlön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Timmar*Timlön
+		dataType: double
+		lineageTag: 7f238ada-7ea2-4e45-a72c-9708a439dccf
+		summarizeBy: sum
+		sourceColumn: Timmar*Timlön
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Snittlön Timanställd'
+		dataType: double
+		lineageTag: 2bf4637d-e0f1-47a7-867b-e2a649e0db4a
+		summarizeBy: sum
+		sourceColumn: Snittlön Timanställd
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AktualitetId
+		dataType: int64
+		formatString: 0
+		lineageTag: b8feaa75-5f3b-45c7-8407-bca94dbc962a
+		summarizeBy: count
+		sourceColumn: AktualitetId
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aktualitet
+		dataType: string
+		lineageTag: 673c5516-1496-4fae-98a4-0c7c8f6270ac
+		summarizeBy: none
+		sourceColumn: Aktualitet
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ViewFactFte = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("mkbdw1.mkb.se", "MKBBIDW"),
+				    dbo_ViewFactFte = Source{[Schema="dbo",Item="ViewFactFte"]}[Data]
+				in
+				    dbo_ViewFactFte
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
