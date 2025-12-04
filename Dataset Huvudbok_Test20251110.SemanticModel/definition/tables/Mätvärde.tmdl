@@ -4196,22 +4196,57 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Framtida Beställningar Året' =
+	measure 'Framtida Beställningar Året' = ```
 			
 			
-			VAR Startx = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
+			// VAR Startx = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
 			
-			VAR Slutx  = EOMONTH(Startx, 0)
-			VAR YearEnd          = DATE ( YEAR ( TODAY() ), 12, 31 )
+			
+			// VAR SelectedStart = DATE(YEAR(max(Kalender[Datum])), MONTH(max(Kalender[Datum])), 01)
+			// VAR Slutx  = EOMONTH(Startx, 0)
+			// VAR YearEnd          = DATE ( YEAR ( TODAY() ), 12, 31 )
+			
+			// RETURN
+			// CALCULATE (
+			//     [Beställarlistan],
+			//     REMOVEFILTERS(Kalender),
+			//     KEEPFILTERS(Kalender[Datum] > SelectedStart && Kalender[Datum] <= Slutx)
+			//     )
+			
+			
+			VAR TodayYM =
+			    YEAR ( TODAY() ) * 100
+			        + MONTH ( TODAY() )
+			
+			VAR SelectedStartDate =
+			    MAX ( Kalender[Datum] )
+			
+			VAR SelectedStartYM =
+			    YEAR ( SelectedStartDate ) * 100
+			        + MONTH ( SelectedStartDate )
 			
 			RETURN
 			CALCULATE (
 			    [Beställarlistan],
-			    REMOVEFILTERS(Kalender),
-			    KEEPFILTERS(Kalender[Datum]>= Startx)
-			    // KEEPFILTERS ( Kalender[Datum] > Startx )
-			,    KEEPFILTERS('Beställarlistan'[Klar Senast] <= YearEnd)
+			    REMOVEFILTERS ( Kalender ),
+			
+			    -- Motsvarar: Kalender[Datum] > SelectedStart && Kalender[Datum] <= Slutx
+			    KEEPFILTERS (
+			        FILTER (
+			            ALL ( Kalender[Datum] ),
+			            VAR CurrYM =
+			                YEAR ( Kalender[Datum] ) * 100
+			                    + MONTH ( Kalender[Datum] )
+			            RETURN
+			                CurrYM > SelectedStartYM
+			                && CurrYM <= TodayYM
+			        )
+			    )
 			)
+			
+			
+			
+			```
 		formatString: #,##
 		displayFolder: Nya Från Dashboard
 		lineageTag: 41a0b655-ec73-4deb-b623-703bcdfeba4f
@@ -4249,18 +4284,43 @@ table Mätvärde
 	measure 'Framtida Beställningar Året - Nuläge' =
 			
 			
-			VAR Startx = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
+			// VAR Startx = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
 			
-			VAR Slutx  = EOMONTH(Startx, 0)
-			VAR YearEnd          = DATE ( YEAR ( TODAY() ), 12, 31 )
+			// VAR Slutx  = EOMONTH(Startx, 0)
+			// VAR YearEnd          = DATE ( YEAR ( TODAY() ), 12, 31 )
+			
+			// RETURN
+			// CALCULATE (
+			//     [Beställarlistan],
+			//     REMOVEFILTERS(Kalender),
+			//     KEEPFILTERS(Kalender[Datum]> Startx && Kalender[Datum] <= YearEnd)
+			//     // KEEPFILTERS ( Kalender[Datum] > Startx )
+			// // ,    KEEPFILTERS('Beställarlistan'[Klar Senast] <= YearEnd)
+			
+			
+			VAR StartYM =
+			    YEAR ( TODAY() ) * 100
+			        + MONTH ( TODAY() )              -- t.ex. 202512
+			
+			VAR YearEndYM =
+			    YEAR ( TODAY() ) * 100
+			        + 12                              -- dec samma år, t.ex. 202512
 			
 			RETURN
 			CALCULATE (
 			    [Beställarlistan],
-			    REMOVEFILTERS(Kalender),
-			    KEEPFILTERS(Kalender[Datum]> Slutx)
-			    // KEEPFILTERS ( Kalender[Datum] > Startx )
-			,    KEEPFILTERS('Beställarlistan'[Klar Senast] <= YearEnd)
+			    REMOVEFILTERS ( Kalender ),
+			    KEEPFILTERS (
+			        FILTER (
+			            ALL ( Kalender[Datum] ),
+			            VAR CurrYM =
+			                YEAR ( Kalender[Datum] ) * 100
+			                    + MONTH ( Kalender[Datum] )
+			            RETURN
+			                CurrYM > StartYM          -- efter "nuvarande månad"
+			                    && CurrYM <= YearEndYM
+			        )
+			    )
 			)
 		formatString: #,##
 		displayFolder: Nya Från Dashboard
@@ -4268,29 +4328,28 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Totalt (Utfall och Beställningar) - Nuläge' = [Utfall ÅTD] + [Beställningar Innevarande Månad - Nuläge]+[Framtida Beställningar Året - Nuläge]
+	measure 'Totalt (Utfall och Beställningar) - Nuläge' = [Utfall ÅTD] + [Beställningar Rullande 12]+[Framtida Beställningar Året - Nuläge]
 		formatString: #,##
 		displayFolder: Nya Från Dashboard
 		lineageTag: c007a419-d1f4-4109-8eb2-5ac3c527788b
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Beställningar Innevarande Månad - Nuläge' = ```
+	measure 'Beställningar Rullande 12' =
 			
 			
-			VAR Startx = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
+			// VAR Startx = DATE(YEAR(TODAY()), MONTH(TODAY()), 1)
 			
-			VAR Slutx  = EOMONTH(Startx, 0)
+			// VAR Slutx  = EOMONTH(Startx, 0)
 			
-			RETURN
-			CALCULATE (
-			    [Beställarlistan ÅTD visa endast framtida datum],
-			    REMOVEFILTERS(Kalender),
-			    KEEPFILTERS ( Kalender[Datum] >= Startx && Kalender[Datum] <= Slutx ),
-			    KEEPFILTERS('Beställarlistan'[Klar Senast] >= Startx && 'Beställarlistan'[Klar Senast]  <= Slutx)
-			)
-			
-			```
+			// RETURN
+			// CALCULATE (
+			    [Beställarlistan ÅTD]
+			    // REMOVEFILTERS(Kalender[År]))
+			    // REMOVEFILTERS(Kalender)
+			    // KEEPFILTERS ( Kalender[Datum] >= Startx  && Kalender[Datum] <= Slutx)
+			    // //    && Kalender[Datum] <= Slutx ),
+			    // KEEPFILTERS('Beställarlistan'[Klar Senast] >= Startx && 'Beställarlistan'[Klar Senast]  <= Slutx)
 		formatString: #,##
 		displayFolder: Nya Från Dashboard
 		lineageTag: bce1643b-bf72-40ae-a013-bc1c486a40a9
@@ -4358,7 +4417,7 @@ table Mätvärde
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade' = [Utfall ÅTD] + [Beställningar Innevarande Månad - Nuläge]+[Framtida Beställningar Året - Nuläge]+[Best. Ankomstlista Före Innevarande Månad]
+	measure 'Totalt (Utfall och Beställningar) - Nuläge Ankomstregistrerade' = [Utfall ÅTD] + [Beställningar Rullande 12]+[Framtida Beställningar Året - Nuläge]+[Best. Ankomstlista Före Innevarande Månad]
 		formatString: #,0
 		displayFolder: Nya Från Dashboard
 		lineageTag: b558b535-4649-4347-9661-31937a5d5a09

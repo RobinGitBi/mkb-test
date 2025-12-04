@@ -719,19 +719,6 @@
         },
         {
           "location": {
-            "x": 13211.6794587193,
-            "y": 0
-          },
-          "nodeIndex": "Beställningar Ankomstregisterade (2)",
-          "nodeLineageTag": "5cf9e163-23bf-4a52-9ded-75d7ecd36aab",
-          "size": {
-            "height": 104,
-            "width": 234
-          },
-          "zIndex": 1
-        },
-        {
-          "location": {
             "x": 1940.9173928529565,
             "y": 128.04726726674585
           },

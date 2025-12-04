@@ -1212,6 +1212,20 @@
         },
         "type": "Advanced",
         "howCreated": "User"
+      },
+      {
+        "name": "e3343a3f538209703778",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Best. Ankomstlista Innevarande Månad och Rest. År"
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

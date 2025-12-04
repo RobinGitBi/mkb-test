@@ -450,6 +450,24 @@ table Kalender
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Relativ Månad (Faktisk)' = ```
+			
+			VAR CurrYM =
+			    YEAR ( TODAY() ) * 12
+			        + MONTH ( TODAY() )
+			VAR RowYM =
+			    YEAR ( 'Kalender'[Datum] ) * 12
+			        + MONTH ( 'Kalender'[Datum] )
+			RETURN
+			RowYM - CurrYM
+			
+			```
+		formatString: 0
+		lineageTag: 1457f527-d197-49b6-aa8d-6b8c5156aea2
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Kalender-c855bc39-99b9-4ff8-aeeb-b04fb8ef1e62 = m
 		mode: import
 		source =

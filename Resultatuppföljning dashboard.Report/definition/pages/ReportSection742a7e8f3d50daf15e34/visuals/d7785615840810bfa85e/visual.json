@@ -592,6 +592,48 @@
         },
         "type": "Advanced",
         "howCreated": "User"
+      },
+      {
+        "name": "8446ea996a3a6d175cd1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Jämförelsevärde2 helår"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "31da018b0040236c5687",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Jämförelsevärde2"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "92678a0947da5be75e59",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Jämförelsevärde1"
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

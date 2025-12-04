@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "759b642472b26eea60a8",
   "position": {
-    "x": 297.43983848383209,
-    "y": 176.0630434074701,
+    "x": 310.87498644692613,
+    "y": 113.98749503053959,
     "z": 0,
-    "height": 390.80660392718744,
-    "width": 588.21062229313884
+    "height": 390.81426867613573,
+    "width": 817.15710723192012
   },
   "visual": {
     "visualType": "tableEx",
@@ -36,11 +36,11 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Beställningar Innevarande Månad - Nuläge"
+                  "Property": "Beställningar Rullande 12"
                 }
               },
               "queryRef": "Mätvärde.Beställningar Innevarande Månad - Nuläge",
-              "nativeQueryRef": "Beställningar Innevarande Månad - Nuläge"
+              "nativeQueryRef": "Beställningar Rullande 12"
             },
             {
               "field": {
@@ -64,22 +64,68 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Framtida Beställningar Året"
+                  "Property": "Beställarlistan ÅTD"
                 }
               },
-              "queryRef": "Mätvärde.Framtida Beställningar Året",
-              "nativeQueryRef": "Framtida Beställningar Året"
+              "queryRef": "Mätvärde.Beställarlistan ÅTD",
+              "nativeQueryRef": "Beställarlistan ÅTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Beställarlistan"
+                }
+              },
+              "queryRef": "Mätvärde.Beställarlistan",
+              "nativeQueryRef": "Beställarlistan"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "130.84286022334865D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Beställarlistan ÅTD"
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "f95ddd0b68b48a7613d1",
+        "name": "b564e6d3abcb6209c9b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Huvudbok"
+              }
+            },
+            "Property": "TimeSK"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fecfacfc710a4898c91c",
         "field": {
           "Measure": {
             "Expression": {
@@ -87,13 +133,13 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Beställningar Innevarande Månad - Nuläge"
+            "Property": "Beställningar Rullande 12"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "8221561ae464decc030e",
+        "name": "f848d796add215bb849a",
         "field": {
           "Measure": {
             "Expression": {
@@ -107,7 +153,7 @@
         "type": "Advanced"
       },
       {
-        "name": "72ed7f0b6e07d827a109",
+        "name": "93a68a27ddb58d1eb39e",
         "field": {
           "Measure": {
             "Expression": {
@@ -115,24 +161,24 @@
                 "Entity": "Mätvärde"
               }
             },
-            "Property": "Framtida Beställningar Året"
+            "Property": "Beställarlistan ÅTD"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "b564e6d3abcb6209c9b9",
+        "name": "2749f820eda3b1a01e60",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Huvudbok"
+                "Entity": "Mätvärde"
               }
             },
-            "Property": "TimeSK"
+            "Property": "Beställarlistan"
           }
         },
-        "type": "Categorical"
+        "type": "Advanced"
       }
     ]
   }

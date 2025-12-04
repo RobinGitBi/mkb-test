@@ -131,8 +131,8 @@
                 }
               },
               "queryRef": "Mätvärde.Utfall ÅTD",
-              "nativeQueryRef": "Utfall (ack tom fg månad)",
-              "displayName": "Utfall (ack tom fg månad)"
+              "nativeQueryRef": "Utfall ÅTD",
+              "displayName": "Utfall ÅTD"
             },
             {
               "field": {
@@ -142,12 +142,11 @@
                       "Entity": "Mätvärde"
                     }
                   },
-                  "Property": "Beställningar Innevarande Månad - Nuläge"
+                  "Property": "Beställningar Rullande 12"
                 }
               },
-              "queryRef": "Mätvärde.Beställningar Innevarande Månad - Nuläge",
-              "nativeQueryRef": "Beställningar Innevarande Månad",
-              "displayName": "Beställningar Innevarande Månad"
+              "queryRef": "Mätvärde.Beställningar Rullande 12",
+              "nativeQueryRef": "Beställningar Rullande 12"
             },
             {
               "field": {
@@ -397,21 +396,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "108.63140953473257D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mätvärde.Beställningar Innevarande Månad - Nuläge"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "95.82223323691542D"
+                  "Value": "88.92449804294753D"
                 }
               }
             }
@@ -432,6 +417,20 @@
           },
           "selector": {
             "metadata": "Mätvärde.Totalt (Utfall och Beställningar) - Nuläge"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "87.56384945029583D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mätvärde.Beställningar Rullande 12"
           }
         }
       ],
@@ -963,6 +962,188 @@
             }
           ]
         }
+      },
+      {
+        "name": "89d6b6bb5130b71816c3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Konto"
+              }
+            },
+            "Property": "RRLev2Namn"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "17413bdb19c59597a570",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kostnadsställe"
+              }
+            },
+            "Property": "OmrådeNamn kort"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5c714ea04a55c949e00e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Konto"
+              }
+            },
+            "Property": "RRLev3Namn"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "371675647260d42cd99e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Konto"
+              }
+            },
+            "Property": "RRLev4Namn"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "01cfd7c1480cc111c845",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Konto"
+              }
+            },
+            "Property": "RRLev5Namn"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "272ded30727a901120b0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Utfall ÅTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "75f830639692c74ebe50",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Framtida Beställningar Året - Nuläge"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b2d8910abc99476203d6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Totalt (Utfall och Beställningar) - Nuläge"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3949399387eade168794",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Utfall fg år-1 ÅTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bc27d87527a761301309",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Aktuell Prognos Helår"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d7350996128410624953",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff Helår - Nuläge"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e791a653030b139d07d4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Diff% Helår - Nuläge"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2c0439f4b05c69b08859",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mätvärde"
+              }
+            },
+            "Property": "Beställningar Rullande 12"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
