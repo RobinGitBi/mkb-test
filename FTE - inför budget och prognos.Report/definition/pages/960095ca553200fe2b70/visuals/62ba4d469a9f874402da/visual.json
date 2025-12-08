@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 587.30430859463115,
     "width": 1256.4674035641779,
-    "tabOrder": 10000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "tableEx",
@@ -160,6 +160,20 @@
               "queryRef": "Mätvärde.Prognos Antal Månader Efter Frånvaro Justering",
               "nativeQueryRef": "Antal Månader Efter Frånvaro Justering",
               "displayName": "Antal Månader Efter Frånvaro Justering"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mätvärde"
+                    }
+                  },
+                  "Property": "Prognos FTE"
+                }
+              },
+              "queryRef": "Mätvärde.Prognos FTE",
+              "nativeQueryRef": "Prognos FTE"
             },
             {
               "field": {

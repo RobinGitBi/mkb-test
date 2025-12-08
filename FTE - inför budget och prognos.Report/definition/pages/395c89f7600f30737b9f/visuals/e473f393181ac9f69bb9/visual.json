@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewFactFte"
+                      "Entity": "ViewFactFteJusteradPrognos"
                     }
                   },
-                  "Property": "Lönekategori"
+                  "Property": "LöneKategori"
                 }
               },
-              "queryRef": "ViewFactFte.Lönekategori",
-              "nativeQueryRef": "Lönekategori",
+              "queryRef": "ViewFactFteJusteradPrognos.LöneKategori",
+              "nativeQueryRef": "LöneKategori",
               "active": true
             }
           ]
