@@ -1,0 +1,31 @@
+table Åldersintervall
+	lineageTag: c063fdcd-8ae3-4b1d-bd3b-67b7e4b4af91
+
+	column Åldersintervall
+		lineageTag: 5b43ab64-4957-47f2-9ad6-d66efbd74494
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Åldersintervall]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Åldersintervall = calculated
+		mode: import
+		source = ```
+				DATATABLE(
+				
+				    "Åldersintervall", STRING,
+				    {
+				        { "0–24" },
+				        { "25–34" },
+				        { "35–44" },
+				        { "45–54" },
+				        { "55–64" },
+				        { ">64" }
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = 6e02b2777cfe49ce8df27cb70d1b0caf
+

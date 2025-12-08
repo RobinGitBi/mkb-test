@@ -4,16 +4,16 @@
   "position": {
     "x": 216.9907511842996,
     "y": 605.49515001127907,
-    "z": 12001,
+    "z": 12000,
     "height": 227.38551770809838,
-    "width": 1062.8648770584255,
-    "tabOrder": 12001
+    "width": 495.050755695917,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Rows": {
+        "Columns": {
           "projections": [
             {
               "field": {
@@ -32,6 +32,25 @@
             }
           ]
         },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Åldersintervall"
+                    }
+                  },
+                  "Property": "Åldersintervall"
+                }
+              },
+              "queryRef": "Åldersintervall.Åldersintervall",
+              "nativeQueryRef": "Åldersintervall",
+              "active": true
+            }
+          ]
+        },
         "Values": {
           "projections": [
             {
@@ -42,99 +61,267 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "VAB 0-24"
+                  "Property": "Vab% Åldersintervall"
                 }
               },
-              "queryRef": "Mått.VAB 0-24",
-              "nativeQueryRef": "VAB 0-24"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mått"
-                    }
-                  },
-                  "Property": "VAB 25-34"
-                }
-              },
-              "queryRef": "Mått.VAB 25-34",
-              "nativeQueryRef": "VAB 25-34"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mått"
-                    }
-                  },
-                  "Property": "VAB 35-44"
-                }
-              },
-              "queryRef": "Mått.VAB 35-44",
-              "nativeQueryRef": "VAB 35-44"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mått"
-                    }
-                  },
-                  "Property": "VAB 45-54"
-                }
-              },
-              "queryRef": "Mått.VAB 45-54",
-              "nativeQueryRef": "VAB 45-54"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mått"
-                    }
-                  },
-                  "Property": "VAB 55-64"
-                }
-              },
-              "queryRef": "Mått.VAB 55-64",
-              "nativeQueryRef": "VAB 55-64"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mått"
-                    }
-                  },
-                  "Property": "VAB >64"
-                }
-              },
-              "queryRef": "Mått.VAB >64",
-              "nativeQueryRef": "VAB >64"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mått"
-                    }
-                  },
-                  "Property": "VAB %"
-                }
-              },
-              "queryRef": "Mått.VAB %",
-              "nativeQueryRef": "VAB %"
+              "queryRef": "Mått.Vab% Åldersintervall",
+              "nativeQueryRef": "Vab% Åldersintervall"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "valuesOnRow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowTotal": [
+        {
+          "properties": {
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnTotal": [
+        {
+          "properties": {
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "perColumnLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "rowSubtotalsPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "perRowLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "levelSubtotalEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Personer.Kön"
+          }
+        },
+        {
+          "properties": {
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Row"
+          }
+        },
+        {
+          "properties": {
+            "levelSubtotalEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "levelSubtotalLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Åldersintervall.Åldersintervall"
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "layout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Compact'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "repeatRowHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'fitToContent'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'VAB per Åldersintervall & kön'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Default'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

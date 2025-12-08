@@ -757,6 +757,30 @@ table Mått
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Vab% Åldersintervall' = ```
+			
+			
+			VAR SelectedAldersIntervall = SELECTEDVALUE('Åldersintervall'[Åldersintervall])
+			
+			RETURN
+			SWITCH(
+			    SelectedAldersIntervall, 
+			    "0–24", [VAB 0-24],
+			    "25–34", [VAB 25-34],
+			    "35–44", [VAB 35-44],
+			    "45–54", [VAB 45-54],
+			    "55–64", [VAB 55-64],
+			    ">64", [VAB >64],
+			
+			[VAB %]
+			)
+			```
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 506649f3-6673-441c-93d5-d6fc0a8db90f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mått-69fec661-27f9-4d27-9216-b845dab9b72b = m
 		mode: import
 		source =
