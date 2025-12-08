@@ -3,7 +3,7 @@
   "version": "4.0",
   "datasetReference": {
     "byConnection": {
-      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/myorg/Dataset_Test;initial catalog=\"Dataset Huvudbok_Test20251110\";access mode=readonly;integrated security=ClaimsToken;semanticmodelid=acf4b1c2-b505-45ca-8a2f-17692a26c87d"
+      "connectionString": "Data Source=\"powerbi://api.powerbi.com/v1.0/myorg/Power BI - Dataset\";initial catalog=\"Dataset Huvudbok\";access mode=readonly;integrated security=ClaimsToken;semanticmodelid=d1216930-ed18-486f-b1a1-c2a72e3874a0"
     }
   }
 }

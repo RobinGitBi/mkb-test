@@ -133,6 +133,21 @@
             },
             {
               "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "KostnadsställeNamn"
+                }
+              },
+              "queryRef": "Kostnadsställe.KostnadsställeNamn",
+              "nativeQueryRef": "Kostnadsställenamn",
+              "displayName": "Kostnadsställenamn"
+            },
+            {
+              "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
@@ -242,6 +257,20 @@
           },
           "selector": {
             "metadata": "Mätvärde.Prognos Antal Månader Efter Frånvaro Justering"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "106.85777890262568D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Kostnadsställe.KostnadsställeNamn"
           }
         }
       ],

@@ -119,6 +119,21 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "Kostnadsställe"
+                    }
+                  },
+                  "Property": "KostnadsställeNamn"
+                }
+              },
+              "queryRef": "Kostnadsställe.KostnadsställeNamn",
+              "nativeQueryRef": "Kostnadsställenamn",
+              "displayName": "Kostnadsställenamn"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "ViewDimAnställdSCD2"
                     }
                   },
@@ -575,6 +590,20 @@
           },
           "selector": {
             "metadata": "Mätvärde.Prognos Rapporterade Timmar"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "153.41437531305647D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Kostnadsställe.KostnadsställeNamn"
           }
         }
       ],

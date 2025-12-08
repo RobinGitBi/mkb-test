@@ -61,7 +61,7 @@
                     }
                   },
                   {
-                    "value": " = (Dagar arbetade enligt anställningskontrakt * Sysselsättningsgrad) - Frånvarojustering (sjukskriven >14 dagar, tjänstledig och föräldraledig)",
+                    "value": " = (Dagar arbetade enligt anställningskontrakt * Sysselsättningsgrad) - Frånvarojustering (sjukskriven >14 dagar, tjänstledig eller föräldraledig)",
                     "textStyle": {
                       "fontSize": "10.5pt",
                       "color": "#070f25"
