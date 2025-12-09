@@ -53,7 +53,6 @@ ref table Personklassificering
 ref table Gårdsvärdar
 ref table Vab
 ref table ViewDimAnställdSCD2
-ref table Åldersintervall
 ref table ViewDimAnstalldAldersIntervall
 
 ref cultureInfo en-US

@@ -252,20 +252,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "4b9c30cf1a2a67b5db36",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB Antal Anställda"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "89f78cbd2520e84a9357",
         "field": {
           "Column": {

@@ -318,20 +318,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "15753bb3ef1d48192b2f",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB Kvinnor"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

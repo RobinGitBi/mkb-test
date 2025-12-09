@@ -1,18 +1,37 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "8057f09aa7703d67b07a",
+  "name": "e62335b85efeb8837f7d",
   "position": {
-    "x": 133.38360813080587,
-    "y": 70.201899016213616,
-    "z": 3002,
-    "height": 619.18074932300408,
-    "width": 867.69547184040027,
-    "tabOrder": 2
+    "x": 181.90841416647868,
+    "y": 41.579066095195131,
+    "z": 14000,
+    "height": 371.61290322580646,
+    "width": 1061.5655312429506,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "pivotTable",
     "query": {
       "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Kön"
+                }
+              },
+              "queryRef": "Personer.Kön",
+              "nativeQueryRef": "Kön",
+              "active": true
+            }
+          ]
+        },
         "Rows": {
           "projections": [
             {
@@ -103,52 +122,28 @@
         "root": {}
       }
     ],
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'% Sjukfrånvaro per Åldersintervall,  Kön & Befattning'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f7b1286469c18cde3ca6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "% Sjukfrånvaro Åldersintervall"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9d6341b7c4451deee5a7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewDimAnstalldAldersIntervall"
-              }
-            },
-            "Property": "Åldersintervall"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "751f8eb717085daafb6b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "SenasteBefattning"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

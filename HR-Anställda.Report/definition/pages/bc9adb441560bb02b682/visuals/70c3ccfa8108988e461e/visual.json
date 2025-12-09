@@ -39,13 +39,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Åldersintervall"
+                      "Entity": "ViewDimAnstalldAldersIntervall"
                     }
                   },
                   "Property": "Åldersintervall"
                 }
               },
-              "queryRef": "Åldersintervall.Åldersintervall",
+              "queryRef": "ViewDimAnstalldAldersIntervall.Åldersintervall",
               "nativeQueryRef": "Åldersintervall",
               "active": true
             }
@@ -185,27 +185,6 @@
           "selector": {
             "id": "Row"
           }
-        },
-        {
-          "properties": {
-            "levelSubtotalEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "levelSubtotalLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Total'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Åldersintervall.Åldersintervall"
-          }
         }
       ],
       "general": [
@@ -324,51 +303,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7059ca330d922ab59f58",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Kön"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d132cc6fa9cfe23fbe6a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Åldersintervall"
-              }
-            },
-            "Property": "Åldersintervall"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "acce4565b061e04c08ab",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "Vab% Åldersintervall"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -14,6 +14,9 @@ table Personer
 		lineageTag: c4b7f724-2a12-4c8f-a75e-4209d4abefb6
 		summarizeBy: none
 		sourceColumn: Anställningsnummer
+		sortByColumn: AnstSortering
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -55,6 +58,23 @@ table Personer
 		lineageTag: 2e27c6a5-a177-4464-8415-b923525ab6b7
 		summarizeBy: sum
 		sourceColumn: Ålder
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnstSortering
+		dataType: int64
+		formatString: 0
+		lineageTag: e1d265f0-2ce0-45ef-a9ef-c3c9363a192f
+		summarizeBy: sum
+		sourceColumn: AnstSortering
+
+		annotation SummarizationSetBy = Automatic
+
+	column SenasteBefattning
+		dataType: string
+		lineageTag: ac53a435-3886-4c2a-a514-a08927cb2464
+		summarizeBy: none
+		sourceColumn: SenasteBefattning
 
 		annotation SummarizationSetBy = Automatic
 

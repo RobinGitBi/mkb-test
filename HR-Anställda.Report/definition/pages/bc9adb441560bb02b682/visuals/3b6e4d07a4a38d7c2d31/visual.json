@@ -304,20 +304,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "bcb11f40f710bfabf008",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB Män"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "51b63b0c7902a092c5ca",
+  "name": "650890ce08c3ca21f764",
   "position": {
-    "x": 812.10605503360193,
-    "y": 539.57805342873382,
+    "x": 241.67832167832168,
+    "y": 0,
     "z": 13000,
-    "height": 347.84981109365071,
-    "width": 436.86649503493931,
+    "height": 375.510940672231,
+    "width": 458.66907286262125,
     "tabOrder": 13000
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Category": {
+        "Columns": {
           "projections": [
             {
               "field": {
@@ -32,7 +32,27 @@
             }
           ]
         },
-        "Y": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "SenasteBefattning"
+                }
+              },
+              "queryRef": "Personer.SenasteBefattning",
+              "nativeQueryRef": "Befattning",
+              "active": true,
+              "displayName": "Befattning"
+            }
+          ]
+        },
+        "Values": {
           "projections": [
             {
               "field": {
@@ -42,11 +62,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "VAB %"
+                  "Property": "% Sjukfrånvaro per Befattning & Kön"
                 }
               },
-              "queryRef": "Mått.VAB %",
-              "nativeQueryRef": "VAB %"
+              "queryRef": "Mått.% Sjukfrånvaro per Befattning & Kön",
+              "nativeQueryRef": "% Sjukfrånvaro per Befattning & Kön"
             }
           ]
         }
@@ -61,23 +81,29 @@
                     "Entity": "Mått"
                   }
                 },
-                "Property": "VAB %"
+                "Property": "% Sjukfrånvaro per Befattning & Kön"
               }
             },
             "direction": "Descending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
-    "objects": {
-      "labels": [
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
-            "labelStyle": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'Category, percent of total'"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'% Sjukfrånvaro per Befattning & Kön'"
                 }
               }
             }

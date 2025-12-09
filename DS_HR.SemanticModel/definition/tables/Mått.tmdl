@@ -787,6 +787,105 @@ table Mått
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure '% Sjukfrånvaro per Befattning & Kön' = DIVIDE([Antal sjukdagar i period],  CALCULATE([Antal anställningsdagar i vald period],  REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[Kön])))
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: e15ecc9c-aa5e-41b9-b7a5-0c0540c743f5
+
+	measure '% Sjukfrånvaro 0-24' = ```
+			
+			
+			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] <=  24)), 
+			CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+			```
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 4ce133cd-d58c-4b0e-950b-029f7081c43a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Sjukfrånvaro 25-34' =
+			
+			
+			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  25 && Personer[Ålder] <= 34)), CALCULATE([Antal anställningsdagar i vald period],REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 122403c4-2acd-4b98-8519-4bea4bda4da1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Sjukfrånvaro 35-44' =
+			
+			
+			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  35 && Personer[Ålder] <= 44)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: c5b1ac24-267e-40f7-b122-15aa417b85c3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Sjukfrånvaro 45-54' =
+			
+			
+			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  45 && Personer[Ålder] <= 54)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 737fff7b-45a9-4dd0-9fc0-de486347afb5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Sjukfrånvaro 55-64' =
+			
+			
+			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  55 && Personer[Ålder] <= 64)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: 8f811d2d-93e2-41ab-ae06-9befa40357c0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Sjukfrånvaro >64' = ```
+			
+			
+			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >  64)), 
+			CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+			```
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: b8788cad-8c13-4044-9c4e-0cc5a1ac0827
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Sjukfrånvaro Åldersintervall' = ```
+			
+			
+			VAR SelectedAldersIntervall = SELECTEDVALUE('ViewDimAnstalldAldersIntervall'[AldersIntervallId])
+			
+			RETURN
+			SWITCH(
+			    SelectedAldersIntervall, 
+			    1, [% Sjukfrånvaro 0-24],
+			    2, [% Sjukfrånvaro 25-34],
+			    3,[% Sjukfrånvaro 35-44],
+			    4,[% Sjukfrånvaro 45-54],
+			    5, [% Sjukfrånvaro 55-64],
+			    6, [% Sjukfrånvaro >64], 
+			
+			[% Sjukfrånvaro per Befattning & Kön]
+			)
+			```
+		formatString: 0.00%
+		displayFolder: Frånvaro
+		lineageTag: a3c5c096-767e-4a5b-8e19-ee6b2d9c47f5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Sjukfrånvaro per Kön' = DIVIDE([Antal sjukdagar i period],  CALCULATE([Antal anställningsdagar i vald period] , REMOVEFILTERS(Personer[Kön])))
+		displayFolder: Frånvaro
+		lineageTag: 89989104-5e5e-42c6-8e69-f055e7270ca8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mått-69fec661-27f9-4d27-9216-b845dab9b72b = m
 		mode: import
 		source =

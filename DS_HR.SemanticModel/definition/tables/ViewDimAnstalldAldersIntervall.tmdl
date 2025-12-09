@@ -15,6 +15,9 @@ table ViewDimAnstalldAldersIntervall
 		lineageTag: fc4065df-3ed6-4af6-90d6-c9b9577ff1f2
 		summarizeBy: none
 		sourceColumn: Åldersintervall
+		sortByColumn: AldersIntervallId
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
