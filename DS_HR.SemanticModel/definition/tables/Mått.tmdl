@@ -760,17 +760,17 @@ table Mått
 	measure 'Vab% Åldersintervall' = ```
 			
 			
-			VAR SelectedAldersIntervall = SELECTEDVALUE('Åldersintervall'[Åldersintervall])
+			VAR SelectedAldersIntervall = SELECTEDVALUE('ViewDimAnstalldAldersIntervall'[AldersIntervallId])
 			
 			RETURN
 			SWITCH(
 			    SelectedAldersIntervall, 
-			    "0–24", [VAB 0-24],
-			    "25–34", [VAB 25-34],
-			    "35–44", [VAB 35-44],
-			    "45–54", [VAB 45-54],
-			    "55–64", [VAB 55-64],
-			    ">64", [VAB >64],
+			    1, [VAB 0-24],
+			    2, [VAB 25-34],
+			    3, [VAB 35-44],
+			    4, [VAB 45-54],
+			    5, [VAB 55-64],
+			    6, [VAB >64],
 			
 			[VAB %]
 			)
@@ -778,6 +778,12 @@ table Mått
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: 506649f3-6673-441c-93d5-d6fc0a8db90f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAB Antal Anställda' = CALCULATE(DISTINCTCOUNT(Vab[AnstNr]), KEEPFILTERS(Vab[FrånVaroKod] = "VB"))
+		displayFolder: Frånvaro
+		lineageTag: 999a77ee-5f46-4dee-bd23-9d136d553187
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

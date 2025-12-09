@@ -23,12 +23,12 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Sjukfrånvaro"
+                  "Property": "VAB Män"
                 }
               },
-              "queryRef": "Mått.Sjukfrånvaro",
-              "nativeQueryRef": "Sjukfrånvaro > 14 dagar",
-              "displayName": "Sjukfrånvaro > 14 dagar"
+              "queryRef": "Mått.VAB Män",
+              "nativeQueryRef": "% VAB Män",
+              "displayName": "% VAB Män"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "Mått"
                   }
                 },
-                "Property": "Sjukfrånvaro"
+                "Property": "VAB Män"
               }
             },
             "direction": "Descending"
@@ -304,6 +304,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "bcb11f40f710bfabf008",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB Män"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

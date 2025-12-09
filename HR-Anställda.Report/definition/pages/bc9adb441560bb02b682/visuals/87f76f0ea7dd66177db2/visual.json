@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Mått.VAB %",
-              "nativeQueryRef": "VAB %"
+              "nativeQueryRef": "% VAB Totalt",
+              "displayName": "% VAB Totalt"
             }
           ]
         }

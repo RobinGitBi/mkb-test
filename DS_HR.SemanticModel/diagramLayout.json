@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
-        "y": 0
+        "x": 3164.3572413002685,
+        "y": 170.59566738313904
       },
       "nodes": [
         {
@@ -430,15 +430,29 @@
         },
         {
           "location": {
-            "x": 4663.8718545454831,
-            "y": 943.38491185245721
+            "x": 4556.1272194237017,
+            "y": 1199.2784202666867
           },
           "nodeIndex": "Åldersintervall",
+          "nodeLineageTag": "c063fdcd-8ae3-4b1d-bd3b-67b7e4b4af91",
           "size": {
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 36
+        },
+        {
+          "location": {
+            "x": 4740.71981020514,
+            "y": 862.02022002337446
+          },
+          "nodeIndex": "ViewDimAnstalldAldersIntervall",
+          "nodeLineageTag": "807c0cfd-f74e-4cf8-a54b-2584cf7decb1",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 35
         }
       ],
       "name": "All tables",

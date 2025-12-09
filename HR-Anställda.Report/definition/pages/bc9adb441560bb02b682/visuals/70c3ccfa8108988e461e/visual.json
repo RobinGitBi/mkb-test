@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "70c3ccfa8108988e461e",
   "position": {
-    "x": 216.9907511842996,
-    "y": 605.49515001127907,
+    "x": 215.00952890434317,
+    "y": 539.57805342873382,
     "z": 12000,
-    "height": 227.38551770809838,
-    "width": 495.050755695917,
+    "height": 347.84981109365071,
+    "width": 532.73061620248086,
     "tabOrder": 12000
   },
   "visual": {
@@ -324,5 +324,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7059ca330d922ab59f58",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d132cc6fa9cfe23fbe6a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Åldersintervall"
+              }
+            },
+            "Property": "Åldersintervall"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "acce4565b061e04c08ab",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Vab% Åldersintervall"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

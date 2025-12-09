@@ -23,11 +23,12 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "VAB Antal Dagar"
+                  "Property": "VAB Kvinnor"
                 }
               },
-              "queryRef": "Mått.VAB Antal Dagar",
-              "nativeQueryRef": "VAB Antal Dagar"
+              "queryRef": "Mått.VAB Kvinnor",
+              "nativeQueryRef": "% VAB Kvinnor",
+              "displayName": "% VAB Kvinnor"
             }
           ]
         }
@@ -42,7 +43,7 @@
                     "Entity": "Mått"
                   }
                 },
-                "Property": "VAB Antal Dagar"
+                "Property": "VAB Kvinnor"
               }
             },
             "direction": "Descending"
@@ -109,7 +110,7 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "2L"
                 }
               }
             },
@@ -317,6 +318,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "15753bb3ef1d48192b2f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB Kvinnor"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

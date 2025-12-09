@@ -23,12 +23,12 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Antal sjuka i period"
+                  "Property": "VAB Antal Anställda"
                 }
               },
-              "queryRef": "Mått.Antal sjuka i period",
-              "nativeQueryRef": "Antal sjuka 1 - 14 dagar",
-              "displayName": "Antal sjuka 1 - 14 dagar"
+              "queryRef": "Mått.VAB Antal Anställda",
+              "nativeQueryRef": "VAB Antal Kvinnor",
+              "displayName": "VAB Antal Kvinnor"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "Mått"
                   }
                 },
-                "Property": "Antal sjuka i period"
+                "Property": "VAB Antal Anställda"
               }
             },
             "direction": "Descending"
@@ -252,15 +252,29 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filter76dcbada85595e78cc6a",
+        "name": "4b9c30cf1a2a67b5db36",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB Antal Anställda"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "89f78cbd2520e84a9357",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Frånvaro"
+                "Entity": "Personer"
               }
             },
-            "Property": "Sjukskrivningstyp"
+            "Property": "Kön"
           }
         },
         "type": "Categorical",
@@ -268,8 +282,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "f",
-              "Entity": "Frånvaro",
+              "Name": "p",
+              "Entity": "Personer",
               "Type": 0
             }
           ],
@@ -282,10 +296,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "f"
+                            "Source": "p"
                           }
                         },
-                        "Property": "Sjukskrivningstyp"
+                        "Property": "Kön"
                       }
                     }
                   ],
@@ -293,7 +307,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'1-14 dagar'"
+                          "Value": "'Kvinna'"
                         }
                       }
                     ]

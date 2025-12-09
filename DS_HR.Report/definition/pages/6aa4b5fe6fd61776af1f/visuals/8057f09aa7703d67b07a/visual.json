@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "8057f09aa7703d67b07a",
   "position": {
-    "x": 281.57175591954513,
-    "y": 285.04795043707037,
+    "x": 272.38336818290884,
+    "y": 47.737291331025261,
     "z": 3002,
-    "height": 214.36532858072363,
-    "width": 939.73125123765874,
+    "height": 619.18074932300408,
+    "width": 867.69547184040027,
     "tabOrder": 2
   },
   "visual": {
@@ -112,6 +112,34 @@
               },
               "queryRef": "Mått.VAB >64",
               "nativeQueryRef": "VAB >64"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "VAB Antal Anställda"
+                }
+              },
+              "queryRef": "Mått.Antal Kvinnor VAB",
+              "nativeQueryRef": "VAB Antal Anställda"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Namn"
+                }
+              },
+              "queryRef": "Personer.Namn",
+              "nativeQueryRef": "Namn"
             }
           ]
         }
@@ -218,6 +246,34 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "0d3f3f42149a7178440f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB Antal Anställda"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fa1fab41ababd33f1742",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Namn"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }
