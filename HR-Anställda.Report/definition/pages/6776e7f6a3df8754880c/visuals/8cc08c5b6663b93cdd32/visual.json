@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "05fed2cd76b46f6571f7",
+  "name": "8cc08c5b6663b93cdd32",
   "position": {
     "x": 0,
     "y": 766.63844199830646,
@@ -92,87 +92,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "And": {
-                              "Left": {
-                                "Comparison": {
-                                  "ComparisonKind": 2,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Mått"
-                                        }
-                                      },
-                                      "Property": "Antal sjuka i period"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "-99999D"
-                                    }
-                                  }
-                                }
-                              },
-                              "Right": {
-                                "Comparison": {
-                                  "ComparisonKind": 3,
-                                  "Left": {
-                                    "Measure": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "Mått"
-                                        }
-                                      },
-                                      "Property": "Antal sjuka i period"
-                                    }
-                                  },
-                                  "Right": {
-                                    "Literal": {
-                                      "Value": "99999999D"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#FFFFFF'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Mått"
-                                    }
-                                  },
-                                  "Property": "Antal sjuka i period"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "null"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#004D7C'"
-                            }
-                          }
-                        }
-                      ]
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }

@@ -1,59 +1,65 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "f6e9963037f1bebedfb8",
+  "name": "30c9c80dae9e47e86a96",
   "position": {
-    "x": 449.7585345545379,
-    "y": 55.420482930890927,
-    "z": 12000,
-    "height": 53.288925895087431,
-    "width": 700.21648626144884,
-    "tabOrder": 12000
+    "x": 531.43243852921273,
+    "y": 0,
+    "z": 15500,
+    "height": 59.769907511843,
+    "width": 174.1123392736296,
+    "tabOrder": 15001
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "slicer",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mått"
+                      "Entity": "Frånvaro"
                     }
                   },
-                  "Property": "Textmått År Månad och Sjukskrivningtyp"
+                  "Property": "Sjukskrivningstyp"
                 }
               },
-              "queryRef": "Mått.Textmått År Månad och Sjukskrivningtyp",
-              "nativeQueryRef": "Textmått År Månad och Sjukskrivningtyp"
+              "queryRef": "Frånvaro.Sjukskrivningstyp",
+              "nativeQueryRef": "Sjukskrivningstyp",
+              "active": true
             }
           ]
         }
       }
     },
     "objects": {
-      "categoryLabels": [
+      "data": [
         {
           "properties": {
-            "show": {
+            "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'Dropdown'"
                 }
               }
             }
           }
         }
       ],
-      "labels": [
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "selection": [
         {
           "properties": {
-            "fontSize": {
+            "selectAllCheckboxEnabled": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "true"
                 }
               }
             }

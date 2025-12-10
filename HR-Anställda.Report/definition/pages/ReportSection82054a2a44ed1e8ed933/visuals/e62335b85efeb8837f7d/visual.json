@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "e62335b85efeb8837f7d",
   "position": {
-    "x": 181.90841416647868,
-    "y": 41.579066095195131,
+    "x": 214.22148209825147,
+    "y": 459.35054121565366,
     "z": 14000,
-    "height": 371.61290322580646,
-    "width": 1061.5655312429506,
+    "height": 424.17985012489595,
+    "width": 464.67943380516238,
     "tabOrder": 14000
   },
   "visual": {
@@ -122,6 +122,98 @@
         "root": {}
       }
     ],
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "187.9905386205001D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ViewDimAnstalldAldersIntervall.Åldersintervall"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "54.13928051793587D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Personer"
+                          }
+                        },
+                        "Property": "Kön"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Kvinna'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "64.32646903867396D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Personer"
+                          }
+                        },
+                        "Property": "Kön"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Man'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {

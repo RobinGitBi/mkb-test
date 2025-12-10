@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "650890ce08c3ca21f764",
+  "name": "4164fda36a3c94996a3a",
   "position": {
-    "x": 692.75603663613663,
-    "y": 459.35054121565366,
-    "z": 13000,
-    "height": 424.17985012489595,
-    "width": 574.45462114904251,
-    "tabOrder": 13000
+    "x": 931.4904246461283,
+    "y": 124.69608659450459,
+    "z": 16000,
+    "height": 320.7993338884263,
+    "width": 335.72023313905083,
+    "tabOrder": 16000
   },
   "visual": {
-    "visualType": "pivotTable",
+    "visualType": "donutChart",
     "query": {
       "queryState": {
-        "Columns": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -32,27 +32,7 @@
             }
           ]
         },
-        "Rows": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Personer"
-                    }
-                  },
-                  "Property": "SenasteBefattning"
-                }
-              },
-              "queryRef": "Personer.SenasteBefattning",
-              "nativeQueryRef": "Befattning",
-              "active": true,
-              "displayName": "Befattning"
-            }
-          ]
-        },
-        "Values": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -62,11 +42,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "% Sjukfrånvaro per Befattning & Kön"
+                  "Property": "Sjukfrånvaro"
                 }
               },
-              "queryRef": "Mått.% Sjukfrånvaro per Befattning & Kön",
-              "nativeQueryRef": "% Sjukfrånvaro per Befattning & Kön"
+              "queryRef": "Mått.Sjukfrånvaro",
+              "nativeQueryRef": "Sjukfrånvaro"
             }
           ]
         }
@@ -81,18 +61,26 @@
                     "Entity": "Mått"
                   }
                 },
-                "Property": "% Sjukfrånvaro per Befattning & Kön"
+                "Property": "Sjukfrånvaro"
               }
             },
             "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
-    "visualContainerObjects": {
-      "title": [
+    "objects": {
+      "labels": [
         {
           "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Both'"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -100,10 +88,45 @@
                 }
               }
             },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'preferInside'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8.5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'% Sjukfrånvaro per Befattning & Kön'"
+                  "Value": "'% Andel Sjukfrånvaro per Kön'"
                 }
               }
             }

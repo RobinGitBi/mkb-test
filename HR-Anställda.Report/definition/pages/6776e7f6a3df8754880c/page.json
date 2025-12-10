@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "ReportSection82054a2a44ed1e8ed933",
-  "displayName": "Sjukfrånvaro",
+  "name": "6776e7f6a3df8754880c",
+  "displayName": "Old_Sjukfrånvaro",
   "displayOption": "FitToPage",
   "height": 900,
   "width": 1280,
@@ -238,48 +238,48 @@
   },
   "visualInteractions": [
     {
-      "source": "e42dba9afa9bca264a63",
-      "target": "2feac29167232c5b7dbe",
+      "source": "57a4253a4a4e5b07ec24",
+      "target": "5b0344e98cff4775a675",
       "type": "DataFilter"
     },
     {
-      "source": "e42dba9afa9bca264a63",
-      "target": "84cc209d020eff0179b3",
+      "source": "57a4253a4a4e5b07ec24",
+      "target": "ad94719008dabc0cadde",
       "type": "DataFilter"
     },
     {
-      "source": "2b3dd993ac2549d5af8a",
-      "target": "2feac29167232c5b7dbe",
+      "source": "7f1a8ce1b86d30603a62",
+      "target": "5b0344e98cff4775a675",
       "type": "DataFilter"
     },
     {
-      "source": "2b3dd993ac2549d5af8a",
-      "target": "84cc209d020eff0179b3",
+      "source": "7f1a8ce1b86d30603a62",
+      "target": "ad94719008dabc0cadde",
       "type": "DataFilter"
     },
     {
-      "source": "389b7a2b24a8aca8b5da",
-      "target": "2feac29167232c5b7dbe",
+      "source": "155b723cbb83a3ad4d51",
+      "target": "5b0344e98cff4775a675",
       "type": "NoFilter"
     },
     {
-      "source": "389b7a2b24a8aca8b5da",
-      "target": "84cc209d020eff0179b3",
+      "source": "155b723cbb83a3ad4d51",
+      "target": "ad94719008dabc0cadde",
       "type": "NoFilter"
     },
     {
-      "source": "389b7a2b24a8aca8b5da",
-      "target": "d5f8663ebde521419527",
+      "source": "155b723cbb83a3ad4d51",
+      "target": "9bf4d31caa61f02809f0",
       "type": "DataFilter"
     },
     {
-      "source": "389b7a2b24a8aca8b5da",
-      "target": "2b3dd993ac2549d5af8a",
+      "source": "155b723cbb83a3ad4d51",
+      "target": "7f1a8ce1b86d30603a62",
       "type": "NoFilter"
     },
     {
-      "source": "2b3dd993ac2549d5af8a",
-      "target": "389b7a2b24a8aca8b5da",
+      "source": "7f1a8ce1b86d30603a62",
+      "target": "155b723cbb83a3ad4d51",
       "type": "NoFilter"
     }
   ]

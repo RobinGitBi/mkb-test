@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "2feac29167232c5b7dbe",
   "position": {
-    "x": 217.18882303132938,
-    "y": 124.97883149872989,
+    "x": 214.22148209825147,
+    "y": 124.69608659450459,
     "z": 6000,
-    "height": 371.88823031329383,
-    "width": 1063.0821337849281,
+    "height": 320.7993338884263,
+    "width": 702.34804329725227,
     "tabOrder": 6000
   },
   "visual": {
@@ -129,14 +129,14 @@
             "end": {
               "expr": {
                 "Literal": {
-                  "Value": "0.06D"
+                  "Value": "0.05D"
                 }
               }
             },
             "secShow": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -153,114 +153,35 @@
                   "Value": "0.06D"
                 }
               }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
+            },
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'% Sjukfrånvaro'"
                 }
               }
             },
-            "labelPosition": {
+            "secTitleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideCenter'"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "showSeries": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "'% Total Sjukfrånvaro'"
                 }
               }
             },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Above'"
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "backgroundColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mått.Sjukfrånvaro"
-          }
-        },
-        {
-          "properties": {
-            "enableBackground": {
+            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'InsideBase'"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "labelDensity": {
-              "expr": {
-                "Literal": {
-                  "Value": "100L"
-                }
-              }
-            },
-            "showSeries": {
+            "secShowAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "Mått.Sjukfrånvaro män"
           }
         }
       ],
@@ -354,6 +275,188 @@
         {
           "properties": {}
         }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.Sjukfrånvaro kvinnor"
+          }
+        },
+        {
+          "properties": {
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.Sjukfrånvaro män"
+          }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#149ED5'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "backgroundTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "50L"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "backgroundColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Auto'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.Sjukfrånvaro"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -363,7 +466,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sjukfrånvaro 1-14 dagar'"
+                  "Value": "'Sjukfrånvaro per Månad'"
                 }
               }
             },
@@ -455,63 +558,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "Filter1c4cb709dc18ea6aaad2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Frånvaro"
-              }
-            },
-            "Property": "Sjukskrivningstyp"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "Frånvaro",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "Sjukskrivningstyp"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'1-14 dagar'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      }
-    ]
   }
 }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "650890ce08c3ca21f764",
+  "name": "ea39249d8129fcf8efc1",
   "position": {
-    "x": 692.75603663613663,
-    "y": 459.35054121565366,
-    "z": 13000,
-    "height": 424.17985012489595,
-    "width": 574.45462114904251,
-    "tabOrder": 13000
+    "x": 217.67707983823971,
+    "y": 512.66003849753656,
+    "z": 14000,
+    "height": 371.27165486428737,
+    "width": 357.0310982393558,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -39,6 +39,21 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
+                      "Entity": "ViewDimAnstalldAldersIntervall"
+                    }
+                  },
+                  "Property": "Åldersintervall"
+                }
+              },
+              "queryRef": "ViewDimAnstalldAldersIntervall.Åldersintervall",
+              "nativeQueryRef": "Åldersintervall",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
                       "Entity": "Personer"
                     }
                   },
@@ -46,9 +61,8 @@
                 }
               },
               "queryRef": "Personer.SenasteBefattning",
-              "nativeQueryRef": "Befattning",
-              "active": true,
-              "displayName": "Befattning"
+              "nativeQueryRef": "SenasteBefattning",
+              "active": false
             }
           ]
         },
@@ -62,33 +76,52 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "% Sjukfrånvaro per Befattning & Kön"
+                  "Property": "% Sjukfrånvaro Åldersintervall"
                 }
               },
-              "queryRef": "Mått.% Sjukfrånvaro per Befattning & Kön",
-              "nativeQueryRef": "% Sjukfrånvaro per Befattning & Kön"
+              "queryRef": "Mått.% Sjukfrånvaro Åldersintervall",
+              "nativeQueryRef": "% Sjukfrånvaro Åldersintervall"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Mått"
-                  }
-                },
-                "Property": "% Sjukfrånvaro per Befattning & Kön"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "ViewDimAnstalldAldersIntervall.Åldersintervall"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ViewDimAnstalldAldersIntervall"
+                    }
+                  },
+                  "Property": "Åldersintervall"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Personer.SenasteBefattning"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "visualContainerObjects": {
       "title": [
         {
@@ -103,7 +136,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'% Sjukfrånvaro per Befattning & Kön'"
+                  "Value": "'% Sjukfrånvaro per Åldersintervall,  Kön & Befattning'"
                 }
               }
             }

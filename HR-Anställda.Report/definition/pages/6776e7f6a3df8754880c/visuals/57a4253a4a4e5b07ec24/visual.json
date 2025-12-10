@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "389b7a2b24a8aca8b5da",
+  "name": "57a4253a4a4e5b07ec24",
   "position": {
-    "x": 984.77935054121565,
+    "x": 988.47457627118649,
     "y": 0,
-    "z": 2000,
-    "height": 56.486261448792675,
-    "width": 144.94587843463782,
-    "tabOrder": 1000
+    "z": 3000,
+    "height": 56.440677966101696,
+    "width": 145.67796610169492,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Kalender"
+                      "Entity": "Personer"
                     }
                   },
-                  "Property": "DefaultMonth"
+                  "Property": "Kön"
                 }
               },
-              "queryRef": "Kalender.DefaultMonth",
-              "nativeQueryRef": "Månad",
-              "active": true,
-              "displayName": "Månad"
+              "queryRef": "Personer.Kön",
+              "active": true
             }
           ]
         }
@@ -51,49 +49,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "k",
-                    "Entity": "Kalender",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "k"
-                                }
-                              },
-                              "Property": "DefaultMonth"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Default'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "selection": [
@@ -202,5 +158,62 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "11fc3ba11b674a296a0c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "År"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "k",
+              "Entity": "Kalender",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "k"
+                            }
+                          },
+                          "Property": "År"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
   }
 }

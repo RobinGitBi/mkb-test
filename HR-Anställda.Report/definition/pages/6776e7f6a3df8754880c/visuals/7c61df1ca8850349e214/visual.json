@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "f6e9963037f1bebedfb8",
+  "name": "7c61df1ca8850349e214",
   "position": {
-    "x": 449.7585345545379,
-    "y": 55.420482930890927,
+    "x": 450,
+    "y": 55,
     "z": 12000,
-    "height": 53.288925895087431,
-    "width": 700.21648626144884,
+    "height": 55,
+    "width": 500,
     "tabOrder": 12000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Textmått År Månad och Sjukskrivningtyp"
+                  "Property": "Vald år och månad Format"
                 }
               },
-              "queryRef": "Mått.Textmått År Månad och Sjukskrivningtyp",
-              "nativeQueryRef": "Textmått År Månad och Sjukskrivningtyp"
+              "queryRef": "Mått.Vald år och månad Format",
+              "nativeQueryRef": "Vald år och månad Format"
             }
           ]
         }
@@ -53,7 +53,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "20D"
                 }
               }
             }

@@ -885,11 +885,11 @@ table Mått
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Textmått År Månad och Sjukskrivningtyp' = ```
-			"Visar nu "
-			    & " Period: "& SELECTEDVALUE(Kalender[Månad])
+			
+			     " Period: "& SELECTEDVALUE(Kalender[Månad])
 			    & " "
 			    & SELECTEDVALUE(Kalender[År])
-			    &", " & SELECTEDVALUE('Frånvaro'[Sjukskrivningstyp], " Sjukskrivningstyp 0-14 Dagar & >14 Dagar ")
+			    &", " & SELECTEDVALUE('Frånvaro'[Sjukskrivningstyp], " Sjukskrivningstyp: 0-14 Dagar & >14 Dagar ")
 			
 			
 			```
