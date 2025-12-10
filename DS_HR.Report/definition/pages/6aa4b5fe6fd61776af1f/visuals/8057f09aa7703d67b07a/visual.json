@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "8057f09aa7703d67b07a",
   "position": {
-    "x": 133.38360813080587,
-    "y": 70.201899016213616,
+    "x": 133.86488905028079,
+    "y": 70.119703788242319,
     "z": 3002,
-    "height": 619.18074932300408,
-    "width": 867.69547184040027,
+    "height": 241.16928424137888,
+    "width": 497.21244504390006,
     "tabOrder": 2
   },
   "visual": {
@@ -108,21 +108,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f7b1286469c18cde3ca6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "% Sjukfrånvaro Åldersintervall"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9d6341b7c4451deee5a7",
+        "name": "7385cae6af582f086518",
         "field": {
           "Column": {
             "Expression": {
@@ -136,7 +122,7 @@
         "type": "Categorical"
       },
       {
-        "name": "751f8eb717085daafb6b",
+        "name": "01727530aad49a82c857",
         "field": {
           "Column": {
             "Expression": {
@@ -148,6 +134,20 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "de26373835d27b259294",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "% Sjukfrånvaro Åldersintervall"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

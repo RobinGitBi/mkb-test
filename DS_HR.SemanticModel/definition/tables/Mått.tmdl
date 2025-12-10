@@ -241,7 +241,7 @@ table Mått
 	measure Sjukfrånvaro =
 			
 			
-			DIVIDE( [Antal sjukdagar i period], [Antal anställningsdagar i vald period] )
+			DIVIDE( [Antal sjukdagar i period], CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön])) )
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Frånvaro
 		lineageTag: 36f103ac-182e-441e-afbc-9b826ad562fd
@@ -344,9 +344,7 @@ table Mått
 			
 			    CALCULATE(
 			        [Sjukfrånvaro],
-			        Personer[Kön] = "Man",
-			        REMOVEFILTERS(Personer[Kön])
-			    )
+			        Personer[Kön] = "Man")
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Frånvaro
@@ -356,8 +354,7 @@ table Mått
 			
 			    CALCULATE(
 			        [Sjukfrånvaro],
-			        Personer[Kön] = "Kvinna",
-			        REMOVEFILTERS(Personer[Kön]))
+			        Personer[Kön] = "Kvinna")
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Frånvaro

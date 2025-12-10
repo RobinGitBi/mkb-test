@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "e3dd9fcde568c6054a56",
+  "position": {
+    "x": 337.84948188880389,
+    "y": 103.05471617362886,
+    "z": 3005,
+    "height": 299.60237073158078,
+    "width": 517.3984203768789,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Sjukfrånvaro kvinnor"
+                }
+              },
+              "queryRef": "Mått.Sjukfrånvaro kvinnor",
+              "nativeQueryRef": "Sjukfrånvaro kvinnor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Sjukfrånvaro män"
+                }
+              },
+              "queryRef": "Mått.Sjukfrånvaro män",
+              "nativeQueryRef": "Sjukfrånvaro män"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Sjukfrånvaro"
+                }
+              },
+              "queryRef": "Mått.Sjukfrånvaro",
+              "nativeQueryRef": "Sjukfrånvaro"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5af80a6abc8560ca48e3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Sjukfrånvaro kvinnor"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0e1814746af5cef5eb71",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Sjukfrånvaro män"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "1a3a1bebda14511660c5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Sjukfrånvaro"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
