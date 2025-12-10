@@ -548,6 +548,90 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "972f42e26b0c1115fa36",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "År"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5fe9d3f1242cd90d2f1e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "Kvartal"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "609e187623475dbc8f1e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "Månad"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a239103a806ed590b757",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB Kvinnor"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "529ab3d4b3033a5bdcda",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB Män"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "02799aec1ce195fa076b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB %"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

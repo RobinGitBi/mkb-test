@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "7b2d008d9cebaffec2a1",
   "position": {
-    "x": 656.57540819899623,
-    "y": 103.05471617362886,
+    "x": 345.51569749207823,
+    "y": 120.48752527928882,
     "z": 3006,
-    "height": 299.60237073158078,
-    "width": 473.83921044781926,
+    "height": 400.4438340164599,
+    "width": 711.40796175933031,
     "tabOrder": 6
   },
   "visual": {
@@ -23,11 +23,25 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Textmått År Månad och Sjukskrivningtyp"
+                  "Property": "VAB Antal Dagar"
                 }
               },
-              "queryRef": "Mått.Textmått År Månad och Sjukskrivningtyp",
-              "nativeQueryRef": "Textmått År Månad och Sjukskrivningtyp"
+              "queryRef": "Mått.VAB Antal Dagar",
+              "nativeQueryRef": "VAB Antal Dagar"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Anställningsnummer"
+                }
+              },
+              "queryRef": "Personer.Anställningsnummer",
+              "nativeQueryRef": "Anställningsnummer"
             }
           ]
         }
@@ -37,20 +51,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "03ce22837288ac01ee32",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "Textmått År Månad och Sjukskrivningtyp"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "94a589829def61efe1bb",
         "field": {
@@ -72,6 +72,34 @@
             }
           ]
         }
+      },
+      {
+        "name": "f1af95272e67569df17e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB Antal Dagar"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b3aac9fb077a98ae3b3b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Anställningsnummer"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

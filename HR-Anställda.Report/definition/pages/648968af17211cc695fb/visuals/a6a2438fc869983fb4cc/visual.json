@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "cb446f6a684506150653",
+  "name": "a6a2438fc869983fb4cc",
   "position": {
-    "x": 215.28726061615322,
-    "y": 510.50791007493757,
-    "z": 12000,
-    "height": 373.022481265612,
-    "width": 1049.7918401332224,
-    "tabOrder": 12000
+    "x": 215.64271460610664,
+    "y": 124.09627916011797,
+    "z": 15002,
+    "height": 372.28883748035389,
+    "width": 1050.7496423967366,
+    "tabOrder": 15001
   },
   "visual": {
     "visualType": "tableEx",
@@ -15,20 +15,6 @@
       "queryState": {
         "Values": {
           "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Vab"
-                    }
-                  },
-                  "Property": "Datum"
-                }
-              },
-              "queryRef": "Vab.Datum",
-              "nativeQueryRef": "Datum"
-            },
             {
               "field": {
                 "Column": {
@@ -79,11 +65,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "VAB Antal Dagar"
+                  "Property": "VAB Antal Anställda"
                 }
               },
-              "queryRef": "Mått.VAB Antal Dagar",
-              "nativeQueryRef": "VAB Antal Dagar"
+              "queryRef": "Mått.VAB Antal Anställda",
+              "nativeQueryRef": "VAB Antal Anställda"
             },
             {
               "field": {
@@ -128,7 +114,7 @@
                     "Entity": "Personer"
                   }
                 },
-                "Property": "Anställningsnummer"
+                "Property": "Namn"
               }
             },
             "direction": "Ascending"
@@ -201,13 +187,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "65.89508742714405D"
+                  "Value": "69.2096165785361D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Mått.VAB Antal Dagar"
+            "metadata": "Mått.VAB Antal Anställda"
           }
         }
       ]
@@ -226,7 +212,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'VAB Antal Dagar per Anställd'"
+                  "Value": "'VAB Antal Anställda'"
                 }
               }
             }
@@ -279,21 +265,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b5ae96288f522f752d71",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Vab"
-              }
-            },
-            "Property": "Datum"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c2c7faeb2a4edb4e313a",
+        "name": "cb23f7d6f170038949b5",
         "field": {
           "Column": {
             "Expression": {
@@ -307,7 +279,7 @@
         "type": "Categorical"
       },
       {
-        "name": "067661fc7ec77241e3f0",
+        "name": "95a5d99140f7fd5ba162",
         "field": {
           "Column": {
             "Expression": {
@@ -321,21 +293,7 @@
         "type": "Categorical"
       },
       {
-        "name": "26fbb4d4b6ca3cd62ce7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB Antal Dagar"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "99acbd53a7e327757409",
+        "name": "43c96b224a7b94530102",
         "field": {
           "Column": {
             "Expression": {
@@ -349,7 +307,7 @@
         "type": "Advanced"
       },
       {
-        "name": "6fa0f7d9bad7202d60dc",
+        "name": "e69a2addd26fc978bbcb",
         "field": {
           "Column": {
             "Expression": {
@@ -363,7 +321,7 @@
         "type": "Categorical"
       },
       {
-        "name": "752fd34c08d3eb490a40",
+        "name": "ae0bfd7e20c7fc09dd13",
         "field": {
           "Column": {
             "Expression": {
@@ -375,6 +333,20 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "57831eb3f83a10950da3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB Antal Anställda"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

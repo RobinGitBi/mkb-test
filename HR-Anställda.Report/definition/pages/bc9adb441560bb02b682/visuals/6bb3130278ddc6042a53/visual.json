@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Frånvaro"
+                      "Entity": "Personer"
                     }
                   },
-                  "Property": "Sjukskrivningstyp"
+                  "Property": "PersonalKategori"
                 }
               },
-              "queryRef": "Frånvaro.Sjukskrivningstyp",
-              "nativeQueryRef": "Sjukskrivningstyp",
+              "queryRef": "Personer.PersonalKategori",
+              "nativeQueryRef": "PersonalKategori",
               "active": true
             }
           ]
@@ -321,6 +321,58 @@
                   "expr": {
                     "Literal": {
                       "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "1286810660c4e183626a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "PersonalKategori"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "Personer",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "p"
+                            }
+                          },
+                          "Property": "PersonalKategori"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "'STY'"
+                        }
+                      }
                     }
                   }
                 }
