@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "f2ab9e7040476854b316",
+  "name": "cf695776af68b90ce751",
   "position": {
     "x": 0,
-    "y": 285.39373412362409,
-    "z": 7000,
+    "y": 766.63844199830646,
+    "z": 8000,
     "height": 133.36155800169348,
     "width": 199.66130397967825,
-    "tabOrder": 7000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",
@@ -23,12 +23,12 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "VAB %"
+                  "Property": "VAB Antal Anställda"
                 }
               },
-              "queryRef": "Mått.VAB %",
-              "nativeQueryRef": "% VAB Kvinnor",
-              "displayName": "% VAB Kvinnor"
+              "queryRef": "Mått.VAB Antal Anställda",
+              "nativeQueryRef": "VAB Antal Män",
+              "displayName": "VAB Antal Män"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "Mått"
                   }
                 },
-                "Property": "VAB %"
+                "Property": "VAB Antal Anställda"
               }
             },
             "direction": "Descending"
@@ -105,7 +105,7 @@
                                       "Entity": "Mått"
                                     }
                                   },
-                                  "Property": "VAB Kvinnor"
+                                  "Property": "VAB Antal Anställda"
                                 }
                               },
                               "Right": {
@@ -134,12 +134,12 @@
                                           "Entity": "Mått"
                                         }
                                       },
-                                      "Property": "VAB Kvinnor"
+                                      "Property": "VAB Antal Anställda"
                                     }
                                   },
                                   "Right": {
                                     "Literal": {
-                                      "Value": "-1D"
+                                      "Value": "-99999999D"
                                     }
                                   }
                                 }
@@ -154,12 +154,12 @@
                                           "Entity": "Mått"
                                         }
                                       },
-                                      "Property": "VAB Kvinnor"
+                                      "Property": "VAB Antal Anställda"
                                     }
                                   },
                                   "Right": {
                                     "Literal": {
-                                      "Value": "1D"
+                                      "Value": "99999999D"
                                     }
                                   }
                                 }
@@ -182,20 +182,6 @@
               "expr": {
                 "Literal": {
                   "Value": "20D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "2L"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
                 }
               }
             }
@@ -344,7 +330,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "fcb87b03c5f9e478b7cd",
+        "name": "d229a9817492fc4f4960",
         "field": {
           "Column": {
             "Expression": {
@@ -385,7 +371,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Kvinna'"
+                          "Value": "'Man'"
                         }
                       }
                     ]

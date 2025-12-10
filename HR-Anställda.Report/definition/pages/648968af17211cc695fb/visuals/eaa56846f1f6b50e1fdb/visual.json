@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "eff1c76ab57ac7723f12",
+  "name": "eaa56846f1f6b50e1fdb",
   "position": {
-    "x": 348.02955665024626,
+    "x": 834,
     "y": 0,
-    "z": 11000,
+    "z": 10000,
     "height": 56.52709359605911,
     "width": 145.19704433497537,
-    "tabOrder": 11000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -138,7 +138,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Befattning'"
+                  "Value": "'Sjukskrivningstyp'"
                 }
               }
             }

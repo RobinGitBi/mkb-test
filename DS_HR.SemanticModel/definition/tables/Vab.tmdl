@@ -63,7 +63,7 @@ table Vab
 
 	column Datum
 		dataType: dateTime
-		formatString: Long Date
+		formatString: yyyy-mm-dd
 		lineageTag: 6cb7fcaa-3135-4fe1-baf1-f53610a8f567
 		summarizeBy: none
 		sourceColumn: Datum
@@ -71,6 +71,8 @@ table Vab
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column SysselSättningsGrad
 		dataType: double

@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Löner"
+                      "Entity": "Frånvaro"
                     }
                   },
-                  "Property": "Förklaring"
+                  "Property": "Sjukskrivningstyp"
                 }
               },
-              "queryRef": "Löner.Förklaring",
-              "nativeQueryRef": "Förklaring1",
+              "queryRef": "Frånvaro.Sjukskrivningstyp",
+              "nativeQueryRef": "Sjukskrivningstyp",
               "active": true
             }
           ]
@@ -312,6 +312,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {

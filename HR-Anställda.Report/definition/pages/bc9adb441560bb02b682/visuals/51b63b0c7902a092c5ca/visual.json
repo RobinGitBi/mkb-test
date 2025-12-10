@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "51b63b0c7902a092c5ca",
   "position": {
-    "x": 812.10605503360193,
-    "y": 539.57805342873382,
+    "x": 787.61032472939223,
+    "y": 510,
     "z": 13000,
-    "height": 347.84981109365071,
-    "width": 436.86649503493931,
+    "height": 373.022481265612,
+    "width": 477.46877601998335,
     "tabOrder": 13000
   },
   "visual": {
@@ -77,7 +77,49 @@
             "labelStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "'Category, percent of total'"
+                  "Value": "'Both'"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'inside'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'% Andel VAB per Kön'"
                 }
               }
             }

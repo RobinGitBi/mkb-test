@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Löner"
+                      "Entity": "Frånvaro"
                     }
                   },
-                  "Property": "Förklaring"
+                  "Property": "Sjukskrivningstyp"
                 }
               },
-              "queryRef": "Löner.Förklaring",
-              "nativeQueryRef": "Förklaring1",
+              "queryRef": "Frånvaro.Sjukskrivningstyp",
+              "nativeQueryRef": "Sjukskrivningstyp",
               "active": true
             }
           ]
@@ -138,7 +138,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Anställningstyp'"
+                  "Value": "'Personalkategori'"
                 }
               }
             }
@@ -325,6 +325,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {

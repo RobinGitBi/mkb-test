@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "f2ab9e7040476854b316",
+  "name": "6c19c6d29a625e3903c5",
   "position": {
     "x": 0,
-    "y": 285.39373412362409,
-    "z": 7000,
+    "y": 445.80863674851827,
+    "z": 5000,
     "height": 133.36155800169348,
     "width": 199.66130397967825,
-    "tabOrder": 7000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "card",
@@ -27,8 +27,8 @@
                 }
               },
               "queryRef": "Mått.VAB %",
-              "nativeQueryRef": "% VAB Kvinnor",
-              "displayName": "% VAB Kvinnor"
+              "nativeQueryRef": "% VAB Män",
+              "displayName": "% VAB Män"
             }
           ]
         }
@@ -96,33 +96,6 @@
                       "Cases": [
                         {
                           "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Measure": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "Mått"
-                                    }
-                                  },
-                                  "Property": "VAB Kvinnor"
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "null"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#004D7C'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
                             "And": {
                               "Left": {
                                 "Comparison": {
@@ -134,7 +107,7 @@
                                           "Entity": "Mått"
                                         }
                                       },
-                                      "Property": "VAB Kvinnor"
+                                      "Property": "VAB Män"
                                     }
                                   },
                                   "Right": {
@@ -154,7 +127,7 @@
                                           "Entity": "Mått"
                                         }
                                       },
-                                      "Property": "VAB Kvinnor"
+                                      "Property": "VAB Män"
                                     }
                                   },
                                   "Right": {
@@ -171,6 +144,33 @@
                               "Value": "'#FFFFFF'"
                             }
                           }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Mått"
+                                    }
+                                  },
+                                  "Property": "VAB Män"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "null"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#004D7C'"
+                            }
+                          }
                         }
                       ]
                     }
@@ -182,20 +182,6 @@
               "expr": {
                 "Literal": {
                   "Value": "20D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "2L"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
                 }
               }
             }
@@ -344,7 +330,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "fcb87b03c5f9e478b7cd",
+        "name": "c03c9c507d4999607bfa",
         "field": {
           "Column": {
             "Expression": {
@@ -385,7 +371,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Kvinna'"
+                          "Value": "'Man'"
                         }
                       }
                     ]

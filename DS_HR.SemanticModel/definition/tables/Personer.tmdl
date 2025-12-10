@@ -78,6 +78,14 @@ table Personer
 
 		annotation SummarizationSetBy = Automatic
 
+	column PersonalKategori
+		dataType: string
+		lineageTag: d3e36412-1e24-4392-8e9e-978b834ce4f7
+		summarizeBy: none
+		sourceColumn: PersonalKategori
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Personer-f70dab28-fef3-4f2f-a12c-f9b229a2d5b5 = m
 		mode: import
 		source =

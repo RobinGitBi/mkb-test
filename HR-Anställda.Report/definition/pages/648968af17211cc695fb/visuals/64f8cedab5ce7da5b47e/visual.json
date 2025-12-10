@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "eff1c76ab57ac7723f12",
+  "name": "64f8cedab5ce7da5b47e",
   "position": {
-    "x": 348.02955665024626,
+    "x": 684,
     "y": 0,
-    "z": 11000,
-    "height": 56.52709359605911,
-    "width": 145.19704433497537,
-    "tabOrder": 11000
+    "z": 3000,
+    "height": 56.486261448792675,
+    "width": 145,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Frånvaro"
+                      "Entity": "Personer"
                     }
                   },
-                  "Property": "Sjukskrivningstyp"
+                  "Property": "Kön"
                 }
               },
-              "queryRef": "Frånvaro.Sjukskrivningstyp",
-              "nativeQueryRef": "Sjukskrivningstyp",
+              "queryRef": "Personer.Kön",
               "active": true
             }
           ]
@@ -50,15 +49,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "selfFilterEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "selection": [
@@ -134,13 +125,6 @@
                   }
                 }
               }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Befattning'"
-                }
-              }
             }
           }
         }
@@ -173,17 +157,12 @@
         }
       ]
     },
-    "syncGroup": {
-      "groupName": "Förklaring",
-      "fieldChanges": true,
-      "filterChanges": true
-    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "9762d554c83b451a3ae6",
+        "name": "11fc3ba11b674a296a0c",
         "field": {
           "Column": {
             "Expression": {
@@ -234,100 +213,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "6a395070c5509102da71",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Löner"
-              }
-            },
-            "Property": "Förklaring"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "l",
-              "Entity": "Löner",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "l"
-                              }
-                            },
-                            "Property": "Förklaring"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Arbetsledare'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Pensionär (ej anställd)'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Styrelse'"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
       }
     ]
   }

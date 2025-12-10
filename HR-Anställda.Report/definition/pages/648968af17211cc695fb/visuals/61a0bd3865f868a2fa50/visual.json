@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "eff1c76ab57ac7723f12",
+  "name": "61a0bd3865f868a2fa50",
   "position": {
-    "x": 348.02955665024626,
+    "x": 1134.2150170648465,
     "y": 0,
-    "z": 11000,
-    "height": 56.52709359605911,
-    "width": 145.19704433497537,
-    "tabOrder": 11000
+    "z": 1000,
+    "height": 56.0580204778157,
+    "width": 145.90443686006827,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "slicer",
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Frånvaro"
+                      "Entity": "Kalender"
                     }
                   },
-                  "Property": "Sjukskrivningstyp"
+                  "Property": "DefaultYear"
                 }
               },
-              "queryRef": "Frånvaro.Sjukskrivningstyp",
-              "nativeQueryRef": "Sjukskrivningstyp",
-              "active": true
+              "queryRef": "Kalender.DefaultYear",
+              "nativeQueryRef": "År",
+              "active": true,
+              "displayName": "År"
             }
           ]
         }
@@ -51,11 +52,45 @@
       "general": [
         {
           "properties": {
-            "selfFilterEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "k",
+                    "Entity": "Kalender",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "k"
+                                }
+                              },
+                              "Property": "DefaultYear"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Default'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -134,13 +169,6 @@
                   }
                 }
               }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Befattning'"
-                }
-              }
             }
           }
         }
@@ -173,17 +201,12 @@
         }
       ]
     },
-    "syncGroup": {
-      "groupName": "Förklaring",
-      "fieldChanges": true,
-      "filterChanges": true
-    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "9762d554c83b451a3ae6",
+        "name": "0d686c90604ccd288292",
         "field": {
           "Column": {
             "Expression": {
@@ -236,75 +259,67 @@
         "howCreated": "User"
       },
       {
-        "name": "6a395070c5509102da71",
+        "name": "Filtera2a0974f065dd7065d7e",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Löner"
+                "Entity": "Kalender"
               }
             },
-            "Property": "Förklaring"
+            "Property": "Datum"
           }
         },
-        "type": "Categorical",
+        "type": "RelativeDate",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "l",
-              "Entity": "Löner",
+              "Name": "k",
+              "Entity": "Kalender",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "Not": {
+                "Between": {
                   "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "l"
-                              }
-                            },
-                            "Property": "Förklaring"
-                          }
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "k"
                         }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
+                      },
+                      "Property": "Datum"
+                    }
+                  },
+                  "LowerBound": {
+                    "DateSpan": {
+                      "Expression": {
+                        "DateAdd": {
+                          "Expression": {
+                            "DateAdd": {
+                              "Expression": {
+                                "Now": {}
+                              },
+                              "Amount": 1,
+                              "TimeUnit": 0
                             }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Arbetsledare'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Pensionär (ej anställd)'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Styrelse'"
-                            }
-                          }
-                        ]
-                      ]
+                          },
+                          "Amount": -3,
+                          "TimeUnit": 3
+                        }
+                      },
+                      "TimeUnit": 0
+                    }
+                  },
+                  "UpperBound": {
+                    "DateSpan": {
+                      "Expression": {
+                        "Now": {}
+                      },
+                      "TimeUnit": 0
                     }
                   }
                 }
@@ -312,22 +327,7 @@
             }
           ]
         },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "howCreated": "User"
       }
     ]
   }
