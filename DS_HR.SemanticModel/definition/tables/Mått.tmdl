@@ -884,6 +884,20 @@ table Mått
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Textmått År Månad och Sjukskrivningtyp' = ```
+			"Visar nu "
+			    & " Period: "& SELECTEDVALUE(Kalender[Månad])
+			    & " "
+			    & SELECTEDVALUE(Kalender[År])
+			    &", " & SELECTEDVALUE('Frånvaro'[Sjukskrivningstyp], " Sjukskrivningstyp 0-14 Dagar & >14 Dagar ")
+			
+			
+			```
+		displayFolder: Frånvaro
+		lineageTag: db07566e-ce3c-404b-9cfc-90f69b2a96f0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Mått-69fec661-27f9-4d27-9216-b845dab9b72b = m
 		mode: import
 		source =
