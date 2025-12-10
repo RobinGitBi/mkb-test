@@ -344,7 +344,8 @@ table Mått
 			
 			    CALCULATE(
 			        [Sjukfrånvaro],
-			        Personer[Kön] = "Man"
+			        Personer[Kön] = "Man",
+			        REMOVEFILTERS(Personer[Kön])
 			    )
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
@@ -355,8 +356,8 @@ table Mått
 			
 			    CALCULATE(
 			        [Sjukfrånvaro],
-			        Personer[Kön] = "Kvinna"
-			    )
+			        Personer[Kön] = "Kvinna",
+			        REMOVEFILTERS(Personer[Kön]))
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Frånvaro
