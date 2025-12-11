@@ -90,10 +90,10 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "VAB %"
+                  "Property": "Vab% Åldersintervall"
                 }
               },
-              "queryRef": "Mått.VAB %",
+              "queryRef": "Mått.Vab% Åldersintervall",
               "nativeQueryRef": "% VAB Total",
               "displayName": "% VAB Total",
               "format": "0.00 %;-0.00 %;0.00 %"
@@ -110,10 +110,10 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "VAB %"
+                  "Property": "Vab% Åldersintervall"
                 }
               },
-              "queryRef": "Mått.VAB %",
+              "queryRef": "Mått.Vab% Åldersintervall",
               "nativeQueryRef": "% VAB Total",
               "displayName": "% VAB Total",
               "format": "0.00 %;-0.00 %;0.00 %"
@@ -330,6 +330,38 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4ABAE7'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.Vab% Åldersintervall"
+          }
         }
       ],
       "dataPoint": [
@@ -434,6 +466,24 @@
           "selector": {
             "metadata": "Mått.VAB %"
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4ABAE7'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.Vab% Åldersintervall"
+          }
         }
       ],
       "lineStyles": [
@@ -475,7 +525,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'VAB per Månad'"
+                  "Value": "'VAB per Månad - Helårsöversikt'"
                 }
               }
             },
@@ -561,6 +611,13 @@
                   }
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -623,76 +680,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "cd3eeee35b02a5658c16",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "År"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "61f3f771d80609869dbf",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "Kvartal"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fabf1ed042aa3163d821",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "Månad"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "210bd534bf872690dcaf",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Kön"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1af2794542f6e86b3ec4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB %"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

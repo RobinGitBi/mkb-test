@@ -82,7 +82,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'2024'"
+                                "Value": "'Default'"
                               }
                             }
                           ]
@@ -102,7 +102,7 @@
             "strictSingleSelect": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -201,12 +201,17 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "DefaultYear",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "6da86eb2355e84a88744",
+        "name": "0d686c90604ccd288292",
         "field": {
           "Column": {
             "Expression": {

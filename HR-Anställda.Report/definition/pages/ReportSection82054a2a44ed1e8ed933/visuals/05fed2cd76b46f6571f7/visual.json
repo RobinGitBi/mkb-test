@@ -306,7 +306,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -382,20 +382,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "979fbfbfbcf850a8a34c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "Ny2 Antal Sjuka > 14 dagar"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

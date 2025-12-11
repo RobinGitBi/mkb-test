@@ -306,7 +306,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -329,20 +329,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "84064fb6507c381c7436",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "Sjukfrånvaro"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "4747719ea5d67f5dc3d6",
         "field": {

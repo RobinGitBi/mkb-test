@@ -90,12 +90,13 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Sjukfrånvaro"
+                  "Property": "% Sjukfrånvaro Åldersintervall"
                 }
               },
-              "queryRef": "Mått.Sjukfrånvaro",
-              "nativeQueryRef": "Sjukfrånvaro total",
-              "displayName": "Sjukfrånvaro total"
+              "queryRef": "Mått.% Sjukfrånvaro Åldersintervall",
+              "nativeQueryRef": "% Sjukfrånvaro Total",
+              "displayName": "% Sjukfrånvaro Total",
+              "format": "0.00 %;-0.00 %;0.00 %"
             }
           ]
         },
@@ -109,12 +110,13 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "% Sjukfrånvaro per Befattning & Kön"
+                  "Property": "% Sjukfrånvaro Åldersintervall"
                 }
               },
-              "queryRef": "Mått.% Sjukfrånvaro per Befattning & Kön",
-              "nativeQueryRef": "Sjukfrånvaro Total",
-              "displayName": "Sjukfrånvaro Total"
+              "queryRef": "Mått.% Sjukfrånvaro Åldersintervall",
+              "nativeQueryRef": "% Sjukfrånvaro Total",
+              "displayName": "% Sjukfrånvaro Total",
+              "format": "0.00 %;-0.00 %;0.00 %"
             }
           ]
         }
@@ -311,7 +313,7 @@
             }
           },
           "selector": {
-            "metadata": "Mått.% Sjukfrånvaro per Befattning & Kön"
+            "metadata": "Mått.% Sjukfrånvaro Åldersintervall"
           }
         }
       ],
@@ -433,38 +435,6 @@
         },
         {
           "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#4ABAE7'"
-                    }
-                  }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mått.% Sjukfrånvaro per Befattning & Kön"
-          }
-        },
-        {
-          "properties": {
             "enableValueDataLabel": {
               "expr": {
                 "Literal": {
@@ -536,6 +506,38 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4ABAE7'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.% Sjukfrånvaro Åldersintervall"
+          }
         }
       ]
     },
@@ -546,7 +548,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sjukfrånvaro per Månad'"
+                  "Value": "'Sjukfrånvaro per Månad - Helårsöversikt'"
                 }
               }
             },
@@ -632,6 +634,13 @@
                   }
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -642,7 +651,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "03cfa6f0f22f0f964dc0",
+        "name": "b5601c951db550eb9fc6",
         "field": {
           "Column": {
             "Expression": {
@@ -656,7 +665,7 @@
         "type": "Advanced"
       },
       {
-        "name": "171d3624c2cbb5b2422a",
+        "name": "6ad8c8c23f323384b708",
         "field": {
           "Column": {
             "Expression": {
@@ -670,7 +679,7 @@
         "type": "Advanced"
       },
       {
-        "name": "c1c4d9d2871ae1f3f8c5",
+        "name": "8194c20cb9fd88eca3f2",
         "field": {
           "Column": {
             "Expression": {
@@ -684,7 +693,7 @@
         "type": "Categorical"
       },
       {
-        "name": "fa62ee89207348ccb38e",
+        "name": "1be48ce2ba1210684129",
         "field": {
           "Column": {
             "Expression": {
@@ -698,7 +707,7 @@
         "type": "Categorical"
       },
       {
-        "name": "b19cea9dbd34b1187199",
+        "name": "8adfa2e88f1834e35069",
         "field": {
           "Measure": {
             "Expression": {
@@ -706,21 +715,7 @@
                 "Entity": "Mått"
               }
             },
-            "Property": "Sjukfrånvaro"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "55a3ac45b66f7564af43",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "% Sjukfrånvaro per Befattning & Kön"
+            "Property": "% Sjukfrånvaro Åldersintervall"
           }
         },
         "type": "Advanced"

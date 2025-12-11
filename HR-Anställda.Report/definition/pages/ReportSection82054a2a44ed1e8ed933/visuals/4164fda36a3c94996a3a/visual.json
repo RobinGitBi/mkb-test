@@ -42,11 +42,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Sjukfrånvaro"
+                  "Property": "% Sjukfrånvaro Åldersintervall"
                 }
               },
-              "queryRef": "Mått.Sjukfrånvaro",
-              "nativeQueryRef": "Sjukfrånvaro"
+              "queryRef": "Mått.% Sjukfrånvaro Åldersintervall",
+              "nativeQueryRef": "% Sjukfrånvaro Åldersintervall"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "Mått"
                   }
                 },
-                "Property": "Sjukfrånvaro"
+                "Property": "% Sjukfrånvaro Åldersintervall"
               }
             },
             "direction": "Descending"
@@ -91,7 +91,7 @@
             "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'preferInside'"
+                  "Value": "'inside'"
                 }
               }
             },
@@ -99,6 +99,34 @@
               "expr": {
                 "Literal": {
                   "Value": "8.5D"
+                }
+              }
+            },
+            "overflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "background": {
+              "expr": {
+                "Literal": {
+                  "Value": "'auto'"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
                 }
               }
             }
@@ -117,6 +145,19 @@
             }
           }
         }
+      ],
+      "slices": [
+        {
+          "properties": {
+            "innerRadiusRatio": {
+              "expr": {
+                "Literal": {
+                  "Value": "60L"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -127,6 +168,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'% Andel Sjukfrånvaro per Kön'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

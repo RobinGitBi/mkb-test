@@ -140,7 +140,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Antal personer'"
+                  "Value": "'Sjukfrånvaro Antal Personer'"
                 }
               }
             }
@@ -224,76 +224,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "d42bdc8a189202f9286f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Anställningsnummer"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "39c1d9dd401b6ba4437f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Namn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "eecdb3893f7c969c53f5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Kön"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ab0e9ead24750f02c133",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "Ny2 Antal Sjuka Total"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f8826df5db08bf8ed244",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "PersonalKategori"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

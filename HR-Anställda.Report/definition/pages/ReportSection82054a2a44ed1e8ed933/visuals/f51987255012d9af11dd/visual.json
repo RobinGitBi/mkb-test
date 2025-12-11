@@ -5,7 +5,7 @@
     "x": 384,
     "y": 0,
     "z": 18000,
-    "height": 57.171215880893307,
+    "height": 56,
     "width": 144.22738551770811,
     "tabOrder": 18000
   },
@@ -166,6 +166,19 @@
                       "Percent": -0.1
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

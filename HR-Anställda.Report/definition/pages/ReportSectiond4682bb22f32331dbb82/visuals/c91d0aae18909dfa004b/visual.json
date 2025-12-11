@@ -157,12 +157,17 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "Kön",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "90d9bac483464bdd0950",
+        "name": "0af222710e995820c955",
         "field": {
           "Column": {
             "Expression": {

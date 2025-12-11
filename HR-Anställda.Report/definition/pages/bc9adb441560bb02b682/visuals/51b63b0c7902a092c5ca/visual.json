@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "Mått.Vab% Åldersintervall",
-              "nativeQueryRef": "Vab% Åldersintervall"
+              "nativeQueryRef": "% VAB",
+              "displayName": "% VAB"
             }
           ]
         }
@@ -125,8 +126,53 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "66f9078f02d99748a986",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "accfa8deff2f8a4b4f48",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Vab% Åldersintervall"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

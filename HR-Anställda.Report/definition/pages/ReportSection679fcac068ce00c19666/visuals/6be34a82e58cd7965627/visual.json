@@ -154,7 +154,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Frånvarorader'"
+                  "Value": "'Sjukfrånvaro Antal Dagar  per Anställd'"
                 }
               }
             }
@@ -214,90 +214,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "c5516362fd12638ebdeb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Anställningsnummer"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2e2854677230e2a81f60",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Namn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6f68afa8b18af01d15c1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Kön"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "eac98d608477837e09ab",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "Ny2Sjukfrånvaro Antal Dagar"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "04a7127ed00ceda0d26f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Vab"
-              }
-            },
-            "Property": "Datum"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ef762cc4b0af77b85189",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "PersonalKategori"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }
