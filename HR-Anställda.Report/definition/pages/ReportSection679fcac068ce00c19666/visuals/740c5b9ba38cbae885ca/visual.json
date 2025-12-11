@@ -204,62 +204,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "fc16a441c19f3450bc74",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Anställningsnummer"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "556c8c37ccdbd22ac754",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Namn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7a53e06fc96384924534",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Kön"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4af2042deef971f32fe8",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "Antal sjuka i period"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

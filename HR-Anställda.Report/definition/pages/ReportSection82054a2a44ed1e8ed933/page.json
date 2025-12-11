@@ -238,16 +238,6 @@
   },
   "visualInteractions": [
     {
-      "source": "e42dba9afa9bca264a63",
-      "target": "2feac29167232c5b7dbe",
-      "type": "DataFilter"
-    },
-    {
-      "source": "e42dba9afa9bca264a63",
-      "target": "84cc209d020eff0179b3",
-      "type": "DataFilter"
-    },
-    {
       "source": "2b3dd993ac2549d5af8a",
       "target": "2feac29167232c5b7dbe",
       "type": "DataFilter"

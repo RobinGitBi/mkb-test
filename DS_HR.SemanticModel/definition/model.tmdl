@@ -11,7 +11,7 @@ queryGroup Fact
 
 	annotation PBI_QueryGroupOrder = 0
 
-annotation PBI_QueryOrder = ["Personer","Timanställningar","Anställningar","Medellöner","Mått","Kalender","AnnualFTE","Anställningsform","Huvudbok","Konto","PNLStructure","Dokument","Totala temperaturer per fråga","Tillbud och incidenter","Massage på jobbet","Friskvårdsbidrag","Frågor","FrånvaroHashed","Personer_Hashed","Anställningar_Hashed","Frånvaro","Löner","Feriejobb","Jobbkanaler","JobbKlassificering","Organisationer","Organisationstyper","Personklassificering","Gårdsvärdar","Vab","ViewDimAnställdSCD2","ViewDimAnstalldAldersIntervall"]
+annotation PBI_QueryOrder = ["Personer","Timanställningar","Anställningar","Medellöner","Mått","Kalender","AnnualFTE","Anställningsform","Huvudbok","Konto","PNLStructure","Dokument","Totala temperaturer per fråga","Tillbud och incidenter","Massage på jobbet","Friskvårdsbidrag","Frågor","FrånvaroHashed","Personer_Hashed","Anställningar_Hashed","Frånvaro","Löner","Feriejobb","Jobbkanaler","JobbKlassificering","Organisationer","Organisationstyper","Personklassificering","Gårdsvärdar","Vab","ViewDimAnställdSCD2","ViewDimAnstalldAldersIntervall","ViewDimSjukskrivningstyp"]
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
@@ -54,6 +54,7 @@ ref table Gårdsvärdar
 ref table Vab
 ref table ViewDimAnställdSCD2
 ref table ViewDimAnstalldAldersIntervall
+ref table ViewDimSjukskrivningstyp
 
 ref cultureInfo en-US
 

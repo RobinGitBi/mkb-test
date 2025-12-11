@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "52d1b2885750d18295e5",
   "position": {
-    "x": 215.28726061615322,
-    "y": 124.69608659450459,
-    "z": 6000,
-    "height": 371.95670274771027,
-    "width": 1050,
-    "tabOrder": 6000
+    "x": 214.68354430379748,
+    "y": 124.21940928270043,
+    "z": 4000,
+    "height": 320,
+    "width": 702,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -62,6 +62,24 @@
             }
           ]
         },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Kön"
+                }
+              },
+              "queryRef": "Personer.Kön",
+              "nativeQueryRef": "Kön"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -72,25 +90,13 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "VAB Kvinnor"
+                  "Property": "VAB %"
                 }
               },
-              "queryRef": "Mått.VAB Kvinnor",
-              "nativeQueryRef": "VAB Kvinnor"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mått"
-                    }
-                  },
-                  "Property": "VAB Män"
-                }
-              },
-              "queryRef": "Mått.VAB Män",
-              "nativeQueryRef": "VAB Män"
+              "queryRef": "Mått.VAB %",
+              "nativeQueryRef": "% VAB Total",
+              "displayName": "% VAB Total",
+              "format": "0.00 %;-0.00 %;0.00 %"
             }
           ]
         },
@@ -108,7 +114,9 @@
                 }
               },
               "queryRef": "Mått.VAB %",
-              "nativeQueryRef": "VAB %"
+              "nativeQueryRef": "% VAB Total",
+              "displayName": "% VAB Total",
+              "format": "0.00 %;-0.00 %;0.00 %"
             }
           ]
         }
@@ -128,7 +136,7 @@
             "secShow": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -156,7 +164,7 @@
             "secShowAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -205,6 +213,24 @@
         },
         {
           "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4ABAE7'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
@@ -212,66 +238,90 @@
                 }
               }
             },
-            "enableValueDataLabel": {
+            "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Auto'"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#4ABAE7'"
-                    }
-                  }
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mått.VAB Kvinnor"
-          }
-        },
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#4ABAE7'"
-                    }
-                  }
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "2L"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Mått.VAB %"
+          }
+        },
+        {
+          "properties": {
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Personer"
+                          }
+                        },
+                        "Property": "Kön"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Man'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Personer"
+                          }
+                        },
+                        "Property": "Kön"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Kvinna'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ],
@@ -358,6 +408,24 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4ABAE7'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.VAB %"
           }
         }
       ],
@@ -548,90 +616,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "8c320cbfba616a7b68ef",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "År"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "91a947f929a768a2c2e1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "Kvartal"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2adcf367bcff6f0ed2e7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "Månad"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b65a74760d522a7953fd",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB Kvinnor"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5f57dab0259d377c7581",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB Män"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e628b644babf697a72c2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB %"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

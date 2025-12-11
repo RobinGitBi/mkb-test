@@ -184,33 +184,13 @@
   },
   "visualInteractions": [
     {
-      "source": "d4230d9a128cc417a5dc",
-      "target": "52d1b2885750d18295e5",
-      "type": "DataFilter"
-    },
-    {
       "source": "a604cb263b57b0dc664c",
       "target": "52d1b2885750d18295e5",
       "type": "DataFilter"
     },
     {
-      "source": "856b6220d1e7b605d485",
+      "source": "4003e86cb99b7051fac4",
       "target": "52d1b2885750d18295e5",
-      "type": "NoFilter"
-    },
-    {
-      "source": "856b6220d1e7b605d485",
-      "target": "87f76f0ea7dd66177db2",
-      "type": "DataFilter"
-    },
-    {
-      "source": "856b6220d1e7b605d485",
-      "target": "a604cb263b57b0dc664c",
-      "type": "NoFilter"
-    },
-    {
-      "source": "a604cb263b57b0dc664c",
-      "target": "856b6220d1e7b605d485",
       "type": "NoFilter"
     }
   ]

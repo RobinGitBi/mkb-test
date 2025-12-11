@@ -91,6 +91,9 @@ table Personer
 		lineageTag: f0a218cb-f102-4ef3-9a15-ac52f8ffc6e7
 		summarizeBy: none
 		sourceColumn: AnställningsNummerOchNamn
+		sortByColumn: AnstSortering
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

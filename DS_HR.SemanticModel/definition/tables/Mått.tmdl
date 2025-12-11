@@ -668,7 +668,7 @@ table Mått
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'VAB %' = DIVIDE([VAB Antal Dagar], CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
+	measure 'VAB %' = DIVIDE([VAB Antal Dagar], CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori]), REMOVEFILTERS(Personer[Anställningsnummer])))
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: 7241cd57-d8ab-401b-ab25-047c8d300b47
@@ -695,7 +695,7 @@ table Mått
 			
 			
 			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] <=  24)), 
-			CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]),REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
+			CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]),REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori]), REMOVEFILTERS(Personer[Anställningsnummer])))
 			```
 		formatString: 0.00%
 		displayFolder: Frånvaro
@@ -706,7 +706,7 @@ table Mått
 	measure 'VAB 25-34' =
 			
 			
-			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  25 && Personer[Ålder] <= 34)), CALCULATE([Antal anställningsdagar i vald period],REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  25 && Personer[Ålder] <= 34)), CALCULATE([Antal anställningsdagar i vald period],REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori]), REMOVEFILTERS(Personer[Anställningsnummer])))
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: 9b36209c-b0c3-4b8e-8d8d-2e8159e5c18c
@@ -716,7 +716,7 @@ table Mått
 	measure 'VAB 35-44' =
 			
 			
-			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  35 && Personer[Ålder] <= 44)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  35 && Personer[Ålder] <= 44)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori]), REMOVEFILTERS(Personer[Anställningsnummer])))
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: b4561491-89af-43a9-a3e6-6846e80c4215
@@ -726,7 +726,7 @@ table Mått
 	measure 'VAB 45-54' =
 			
 			
-			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  45 && Personer[Ålder] <= 54)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  45 && Personer[Ålder] <= 54)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori]), REMOVEFILTERS(Personer[Anställningsnummer])))
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: d3aea65e-3fa1-4889-90da-5af9e811c54d
@@ -736,7 +736,7 @@ table Mått
 	measure 'VAB 55-64' =
 			
 			
-			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  55 && Personer[Ålder] <= 64)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]),REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
+			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >=  55 && Personer[Ålder] <= 64)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]),REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori]), REMOVEFILTERS(Personer[Anställningsnummer])))
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: 43311144-ec5c-4844-81b6-f25697398e54
@@ -747,7 +747,7 @@ table Mått
 			
 			
 			DIVIDE(CALCULATE([VAB Antal Dagar], KEEPFILTERS(Personer[Ålder] >  64)), 
-			CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
+			CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori]), REMOVEFILTERS(Personer[Anställningsnummer])))
 			```
 		formatString: 0.00%
 		displayFolder: Frånvaro
@@ -895,6 +895,12 @@ table Mått
 			```
 		displayFolder: Frånvaro
 		lineageTag: db07566e-ce3c-404b-9cfc-90f69b2a96f0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure NySjukFrånvaroAntalDagar = SUM('Frånvaro'[Antal Dagar Sjukskriven])
+		displayFolder: Frånvaro
+		lineageTag: 957a53ad-229d-4233-b0fa-575227838d6f
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

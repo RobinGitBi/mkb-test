@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "a8971a189c84c732e148",
   "position": {
-    "x": 493.77133105802051,
+    "x": 384,
     "y": 0,
-    "z": 8000,
-    "height": 56.825938566552907,
-    "width": 145.90443686006827,
-    "tabOrder": 8000
+    "z": 7000,
+    "height": 57.171215880893307,
+    "width": 144.22738551770811,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "Personer"
                     }
                   },
-                  "Property": "Anställningsnummer"
+                  "Property": "AnställningsNummerOchNamn"
                 }
               },
-              "queryRef": "Personer.Anställningsnummer",
-              "nativeQueryRef": "Anställningsnummer",
+              "queryRef": "Personer.AnställningsNummerOchNamn",
+              "nativeQueryRef": "AnställningsNummerOchNamn",
               "active": true
             }
           ]
@@ -56,6 +56,44 @@
                 "Literal": {
                   "Value": "true"
                 }
+              }
+            },
+            "selfFilter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "p",
+                    "Entity": "Personer",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Contains": {
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "p"
+                              }
+                            },
+                            "Property": "AnställningsNummerOchNamn"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'therese nil'"
+                          }
+                        }
+                      }
+                    },
+                    "Annotations": {
+                      "PowerBI.MParameterBehavior": 1
+                    }
+                  }
+                ]
               }
             }
           }
@@ -87,7 +125,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "8D"
                 }
               }
             },
@@ -134,6 +172,13 @@
                   }
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Anstnr & Namn'"
+                }
+              }
             }
           }
         }
@@ -165,6 +210,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "AnställningsNummerOchNamn",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   },

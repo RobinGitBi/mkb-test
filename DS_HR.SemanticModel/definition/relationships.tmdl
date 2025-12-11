@@ -124,3 +124,7 @@ relationship b76ad886-70d7-a113-8738-f8eb819a50bc
 	fromColumn: Vab.AnstNr
 	toColumn: Personer.Anställningsnummer
 
+relationship 974e0379-119d-f13c-a898-99c8687222be
+	fromColumn: Frånvaro.Sjuktyp
+	toColumn: ViewDimSjukskrivningstyp.SjukSkrivningTypSortOrder
+

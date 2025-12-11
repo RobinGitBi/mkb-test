@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "131487582a527f50c5ae",
   "position": {
-    "x": 449,
+    "x": 520,
     "y": 55,
-    "z": 11000,
-    "height": 53,
-    "width": 700,
-    "tabOrder": 11000
+    "z": 8000,
+    "height": 52,
+    "width": 280,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Textmått År Månad och Sjukskrivningtyp"
+                  "Property": "Vald år och månad Format"
                 }
               },
-              "queryRef": "Mått.Textmått År Månad och Sjukskrivningtyp",
-              "nativeQueryRef": "Textmått År Månad och Sjukskrivningtyp"
+              "queryRef": "Mått.Vald år och månad Format",
+              "nativeQueryRef": "Vald år och månad Format"
             }
           ]
         }

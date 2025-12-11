@@ -4,10 +4,10 @@
   "position": {
     "x": 214.22148209825147,
     "y": 459.35054121565366,
-    "z": 14000,
+    "z": 12000,
     "height": 424.17985012489595,
     "width": 464.67943380516238,
-    "tabOrder": 14000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -237,65 +237,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cd23f824857fb129c285",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Kön"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "86909c2bd0778a965aa2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "ViewDimAnstalldAldersIntervall"
-              }
-            },
-            "Property": "Åldersintervall"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "32bbe71fd007a6df2398",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "SenasteBefattning"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "28033a9777083be6ee39",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "% Sjukfrånvaro Åldersintervall"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

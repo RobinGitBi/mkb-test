@@ -4,10 +4,10 @@
   "position": {
     "x": 215.28726061615322,
     "y": 510.50791007493757,
-    "z": 12000,
+    "z": 9000,
     "height": 373.022481265612,
     "width": 1049.7918401332224,
-    "tabOrder": 12000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "tableEx",
@@ -73,6 +73,20 @@
             },
             {
               "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Ålder"
+                }
+              },
+              "queryRef": "Personer.Ålder",
+              "nativeQueryRef": "Ålder"
+            },
+            {
+              "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
@@ -113,10 +127,10 @@
                     "Entity": "Personer"
                   }
                 },
-                "Property": "Anställningsnummer"
+                "Property": "Ålder"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }

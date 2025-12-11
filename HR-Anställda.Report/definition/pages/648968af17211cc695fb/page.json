@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "648968af17211cc695fb",
-  "displayName": "Detaljer - VAB",
+  "displayName": "VAB detaljer",
   "displayOption": "FitToPage",
   "height": 900,
   "width": 1280,
@@ -140,41 +140,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "57bf24ffa6f2a84c2c69",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB %"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      }
-    ]
-  },
-  "pageBinding": {
-    "name": "2e87306227eb3b771705",
-    "type": "Drillthrough",
-    "parameters": [
-      {
-        "name": "7d7a07571fd494594131",
-        "boundFilter": "57bf24ffa6f2a84c2c69",
-        "fieldExpr": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB %"
-          }
-        }
       }
     ]
   },
@@ -217,37 +182,11 @@
       }
     ]
   },
-  "visibility": "HiddenInViewMode",
   "visualInteractions": [
     {
-      "source": "64f8cedab5ce7da5b47e",
-      "target": "f57267c47bce38f72623",
-      "type": "DataFilter"
-    },
-    {
       "source": "61a0bd3865f868a2fa50",
       "target": "f57267c47bce38f72623",
       "type": "DataFilter"
-    },
-    {
-      "source": "6317c11f956141a6f9b7",
-      "target": "f57267c47bce38f72623",
-      "type": "NoFilter"
-    },
-    {
-      "source": "6317c11f956141a6f9b7",
-      "target": "945473a6124ef0a016eb",
-      "type": "DataFilter"
-    },
-    {
-      "source": "6317c11f956141a6f9b7",
-      "target": "61a0bd3865f868a2fa50",
-      "type": "NoFilter"
-    },
-    {
-      "source": "61a0bd3865f868a2fa50",
-      "target": "6317c11f956141a6f9b7",
-      "type": "NoFilter"
     }
   ]
 }

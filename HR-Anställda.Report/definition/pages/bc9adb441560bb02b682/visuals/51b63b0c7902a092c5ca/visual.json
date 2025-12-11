@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "51b63b0c7902a092c5ca",
   "position": {
-    "x": 787.61032472939223,
-    "y": 510,
-    "z": 13000,
-    "height": 373.022481265612,
-    "width": 477.46877601998335,
-    "tabOrder": 13000
+    "x": 931,
+    "y": 124,
+    "z": 10000,
+    "height": 320,
+    "width": 335,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "donutChart",
@@ -128,37 +128,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9fcbbc307a24e28f92cd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Kön"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "688643bd0af375ea57ff",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

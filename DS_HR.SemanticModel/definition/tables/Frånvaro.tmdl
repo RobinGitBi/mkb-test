@@ -99,7 +99,7 @@ table Frånvaro
 		dataType: int64
 		formatString: 0
 		lineageTag: fd5987cc-3d59-4f74-9e6b-3fc12032b7c1
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Sjuktyp
 
 		annotation SummarizationSetBy = Automatic
@@ -111,6 +111,16 @@ table Frånvaro
 		sourceColumn: Sjukskrivningstyp
 
 		annotation SummarizationSetBy = Automatic
+
+	column 'Antal Dagar Sjukskriven'
+		dataType: double
+		lineageTag: 635aad0f-43cd-4d3c-a8d0-caed14ef2ea5
+		summarizeBy: sum
+		sourceColumn: Antal Dagar Sjukskriven
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition Frånvaro = m
 		mode: import
