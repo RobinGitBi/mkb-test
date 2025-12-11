@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "6be34a82e58cd7965627",
+  "name": "fd637542b73376352cb3",
   "position": {
-    "x": 207.28196443691786,
-    "y": 512.870448772227,
+    "x": 206.98570728212093,
+    "y": 125.11822604367011,
     "z": 4000,
-    "height": 387.12955122777311,
-    "width": 1071.4648602878917,
-    "tabOrder": 5000
+    "height": 775.42406757928882,
+    "width": 1072.0006033865068,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "tableEx",
@@ -73,6 +73,35 @@
             },
             {
               "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "Ålder"
+                }
+              },
+              "queryRef": "Personer.Ålder",
+              "nativeQueryRef": "Ålder"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
+                  "Property": "SenasteBefattning"
+                }
+              },
+              "queryRef": "Personer.SenasteBefattning",
+              "nativeQueryRef": "Befattning",
+              "displayName": "Befattning"
+            },
+            {
+              "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
@@ -83,23 +112,8 @@
                 }
               },
               "queryRef": "Mått.Ny2Sjukfrånvaro Antal Dagar",
-              "nativeQueryRef": "Antal Dagar Sjukfrånvaro",
-              "displayName": "Antal Dagar Sjukfrånvaro"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Personer"
-                    }
-                  },
-                  "Property": "PersonalKategori"
-                }
-              },
-              "queryRef": "Personer.PersonalKategori",
-              "nativeQueryRef": "Personalkategori",
-              "displayName": "Personalkategori"
+              "nativeQueryRef": "Sjukfrånvaro Antal Dagar",
+              "displayName": "Sjukfrånvaro Antal Dagar"
             }
           ]
         }
@@ -114,7 +128,7 @@
                     "Entity": "Personer"
                   }
                 },
-                "Property": "Namn"
+                "Property": "Anställningsnummer"
               }
             },
             "direction": "Ascending"
@@ -129,7 +143,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "84.75792054125304D"
+                  "Value": "96.11525230920445D"
                 }
               }
             }
@@ -216,7 +230,60 @@
         "howCreated": "User"
       },
       {
-        "name": "c5516362fd12638ebdeb",
+        "name": "ec80d92bde1f14f404e9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "% Sjukfrånvaro Åldersintervall"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Mått",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "m"
+                            }
+                          },
+                          "Property": "% Sjukfrånvaro Åldersintervall"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "0L"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "b09ee39f79fb29548cff",
         "field": {
           "Column": {
             "Expression": {
@@ -230,7 +297,7 @@
         "type": "Categorical"
       },
       {
-        "name": "2e2854677230e2a81f60",
+        "name": "e5a74f2f69f015e30256",
         "field": {
           "Column": {
             "Expression": {
@@ -244,7 +311,7 @@
         "type": "Categorical"
       },
       {
-        "name": "6f68afa8b18af01d15c1",
+        "name": "9fe5f3d524cbba8d9ae5",
         "field": {
           "Column": {
             "Expression": {
@@ -258,7 +325,35 @@
         "type": "Categorical"
       },
       {
-        "name": "eac98d608477837e09ab",
+        "name": "e834cc2b7ac4a4d5897a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Ålder"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d9fa81ad1f568e703952",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "SenasteBefattning"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a44b912c10ab59c047c3",
         "field": {
           "Measure": {
             "Expression": {
@@ -272,7 +367,7 @@
         "type": "Advanced"
       },
       {
-        "name": "04a7127ed00ceda0d26f",
+        "name": "087acc32cdbb4427611e",
         "field": {
           "Column": {
             "Expression": {
@@ -281,20 +376,6 @@
               }
             },
             "Property": "Datum"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ef762cc4b0af77b85189",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "PersonalKategori"
           }
         },
         "type": "Categorical"

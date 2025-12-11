@@ -23,12 +23,12 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Antal sjuka i period"
+                  "Property": "Ny2 Antal Sjuka 1-14 dagar"
                 }
               },
-              "queryRef": "Mått.Antal sjuka i period",
-              "nativeQueryRef": "Antal sjuka 1 - 14 dagar",
-              "displayName": "Antal sjuka 1 - 14 dagar"
+              "queryRef": "Mått.Ny2 Antal Sjuka 1-14 dagar",
+              "nativeQueryRef": "Antal Sjuka 1-14 dagar",
+              "displayName": "Antal Sjuka 1-14 dagar"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "Mått"
                   }
                 },
-                "Property": "Antal sjuka i period"
+                "Property": "Ny2 Antal Sjuka 1-14 dagar"
               }
             },
             "direction": "Descending"
@@ -382,6 +382,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "c4324b54a3ca49625a5a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Ny2 Antal Sjuka 1-14 dagar"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

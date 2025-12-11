@@ -330,52 +330,61 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filtercdbdc1d375a6be538d07",
+        "name": "84064fb6507c381c7436",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Sjukfrånvaro"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4747719ea5d67f5dc3d6",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Frånvaro"
+                "Entity": "ViewDimSjukskrivningstyp"
               }
             },
-            "Property": "Sjukskrivningstyp"
+            "Property": "SjukSkrivningTypSortOrder"
           }
         },
-        "type": "Categorical",
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "f",
-              "Entity": "Frånvaro",
+              "Name": "v",
+              "Entity": "ViewDimSjukskrivningstyp",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "Sjukskrivningstyp"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'1-14 dagar'"
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "v"
                         }
-                      }
-                    ]
-                  ]
+                      },
+                      "Property": "SjukSkrivningTypSortOrder"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
                 }
               }
             }

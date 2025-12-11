@@ -237,5 +237,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a68bd5ffe32c2505ceaa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2a13be9e037f0b9b8f0e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "ViewDimAnstalldAldersIntervall"
+              }
+            },
+            "Property": "Åldersintervall"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0b86ef1e574196e0cc79",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "SenasteBefattning"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "488279e775e399baf0a3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "% Sjukfrånvaro Åldersintervall"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

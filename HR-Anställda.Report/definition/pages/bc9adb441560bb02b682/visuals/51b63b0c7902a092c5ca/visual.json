@@ -42,11 +42,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "VAB %"
+                  "Property": "Vab% Åldersintervall"
                 }
               },
-              "queryRef": "Mått.VAB %",
-              "nativeQueryRef": "VAB %"
+              "queryRef": "Mått.Vab% Åldersintervall",
+              "nativeQueryRef": "Vab% Åldersintervall"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "Mått"
                   }
                 },
-                "Property": "VAB %"
+                "Property": "Vab% Åldersintervall"
               }
             },
             "direction": "Descending"

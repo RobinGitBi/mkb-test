@@ -1,0 +1,490 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 995.75827338456065,
+        "y": 35.75195855831322
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 2833.0387720512981,
+            "y": 982.4186480764547
+          },
+          "nodeIndex": "Mått",
+          "nodeLineageTag": "010b2a2b-e1aa-4b4c-98e0-9201934236ed",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1056.2022254546216,
+            "y": 1499.7116180288419
+          },
+          "nodeIndex": "AnnualFTE",
+          "nodeLineageTag": "53c153d9-c6c0-491d-8352-25f54658ed76",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1641.5071232063979,
+            "y": 1517.7326896244278
+          },
+          "nodeIndex": "Anställningar",
+          "nodeLineageTag": "9274dfe0-bda3-439c-a47c-f2104a84e4b2",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2599.0387720512981,
+            "y": 924.42609268665535
+          },
+          "nodeIndex": "Anställningar_Hashed",
+          "nodeLineageTag": "17a7c98f-8274-4cd3-9d9f-e882c0cce55d",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1348.7169888609733,
+            "y": 1830.0138426792491
+          },
+          "nodeIndex": "Anställningsform",
+          "nodeLineageTag": "1ab8db62-4204-42b0-bd9a-a219b942cdd1",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3117.0387720512981,
+            "y": 1068.4186480764547
+          },
+          "nodeIndex": "Calculation Group beloppsvisning",
+          "nodeLineageTag": "66357056-2506-41cf-a7d4-4c60b5e25662",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3401.0387720512981,
+            "y": 1068.4186480764547
+          },
+          "nodeIndex": "Calculation Group resultaträkning",
+          "nodeLineageTag": "e2774cf1-4a05-4f2e-aa42-b3c7115733b8",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3685.0387720512981,
+            "y": 1068.4186480764547
+          },
+          "nodeIndex": "Calculation Group time intelligence",
+          "nodeLineageTag": "f208aa99-304e-4cef-bed2-c8e74f288c51",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3969.0387720512981,
+            "y": 1068.4186480764547
+          },
+          "nodeIndex": "Dokument",
+          "nodeLineageTag": "32e50535-caa2-42d6-97cd-4d2fa3bc6d99",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1030.4528284312478,
+            "y": 327.59100484646183
+          },
+          "nodeIndex": "Feriejobb",
+          "nodeLineageTag": "3d0a4dbf-0595-4705-8c48-e7f9ffcea7e1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1067.3731201392418,
+            "y": 2014.8372961529094
+          },
+          "nodeIndex": "Frågor",
+          "nodeLineageTag": "a7bc116d-5e3c-476f-a69f-7a6abd392926",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 787.44793741361718,
+            "y": 687.61621624406871
+          },
+          "nodeIndex": "Frånvaro",
+          "nodeLineageTag": "06b0881d-e652-4697-b461-76b33c21e0fc",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2030.6557220366042,
+            "y": 940.411203466254
+          },
+          "nodeIndex": "FrånvaroHashed",
+          "nodeLineageTag": "a2988257-5396-42fd-b56e-924421d4e60c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 384.60683456027959,
+            "y": 1026.7448109976449
+          },
+          "nodeIndex": "Friskvårdsbidrag",
+          "nodeLineageTag": "2302d751-8317-4b20-8b5d-8aa107209f5e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4253.0387720512981,
+            "y": 1020.4186480764547
+          },
+          "nodeIndex": "Gårdsvärdar",
+          "nodeLineageTag": "09ff18e4-16db-4895-836e-2ac33d63cc53",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 384.54033739935312,
+            "y": 418.82695426570172
+          },
+          "nodeIndex": "Huvudbok",
+          "nodeLineageTag": "9d3599ad-f4ad-45af-8048-938af2dfbc7e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 760.65224631359865,
+            "y": 148.83911853798054
+          },
+          "nodeIndex": "Jobbkanaler",
+          "nodeLineageTag": "d6a94a98-601a-4f37-b9ff-131c04e48008",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1316.8402755264344,
+            "y": 148.82537842689635
+          },
+          "nodeIndex": "JobbKlassificering",
+          "nodeLineageTag": "e0297dd3-8c1d-42de-a085-ace14ba0ebe6",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1062.2849781337127,
+            "y": 1041.082805104355
+          },
+          "nodeIndex": "Kalender",
+          "nodeLineageTag": "aeb865cd-e408-42de-8535-3ab6d7778549",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 296.78752929483926
+          },
+          "nodeIndex": "Konto",
+          "nodeLineageTag": "31bb211c-060a-4be1-8714-d95f18500702",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1746.6557220366044,
+            "y": 1157.1833377455878
+          },
+          "nodeIndex": "Löner",
+          "nodeLineageTag": "e17a5edb-da5d-433b-bcbf-7351e622f65d",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1317.1284880387655,
+            "y": 512.21809936683348
+          },
+          "nodeIndex": "Massage på jobbet",
+          "nodeLineageTag": "57080131-e202-4a59-8847-d19211fc0a49",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 770.25824285552108,
+            "y": 1293.6245026204751
+          },
+          "nodeIndex": "Medellöner",
+          "nodeLineageTag": "ee0a0e10-5bcb-4a60-b7a6-d40c668543d2",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1033.366772579212,
+            "y": -34.693408137772622
+          },
+          "nodeIndex": "Organisationer",
+          "nodeLineageTag": "08c61449-a8a1-4271-9878-a6e06326cf2b",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1374.6679112203656,
+            "y": 330.86410727026714
+          },
+          "nodeIndex": "Organisationstyper",
+          "nodeLineageTag": "3133f0a9-c5c5-4c16-9837-ade8791bb45e",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1429.5943979374665,
+            "y": 1130.4862005298264
+          },
+          "nodeIndex": "Personer",
+          "nodeLineageTag": "0b5337f4-47c9-44e1-a9a2-437b8863c7c8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2314.8572832297896,
+            "y": 993.27079064649979
+          },
+          "nodeIndex": "Personer_Hashed",
+          "nodeLineageTag": "0b0519dd-2a9b-45fb-816e-92b48dff948f",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 740.54848835505618,
+            "y": -50
+          },
+          "nodeIndex": "Personklassificering",
+          "nodeLineageTag": "9995eff1-6d5f-4511-be93-5e635cece079",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4537.0387720512981,
+            "y": 1056.4186480764547
+          },
+          "nodeIndex": "PNLStructure",
+          "nodeLineageTag": "5daa1502-9ef1-41a2-8a95-7c0a7de07bf5",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 495.94274232277758,
+            "y": 777.80417725521716
+          },
+          "nodeIndex": "Tillbud och incidenter",
+          "nodeLineageTag": "a6b89cec-2cc6-44c5-b951-799afff23ca4",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1342.8075453188342,
+            "y": 1489.7361986709461
+          },
+          "nodeIndex": "Timanställningar",
+          "nodeLineageTag": "a8c2ca57-f8a9-40fd-b131-485ce6a851c6",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 816.34970248209061,
+            "y": 1733.4527942323709
+          },
+          "nodeIndex": "Totala temperaturer per fråga",
+          "nodeLineageTag": "096e8a16-8dd1-4af5-97e1-35ef85ae9afa",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1354.3809176114655,
+            "y": 769.5660425856363
+          },
+          "nodeIndex": "Vab",
+          "nodeLineageTag": "9d6f0f25-2115-48f0-bd30-e4e72d704ad9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4821.0387720512981,
+            "y": 1068.4186480764547
+          },
+          "nodeIndex": "ViewDimAnstalldAldersIntervall",
+          "nodeLineageTag": "807c0cfd-f74e-4cf8-a54b-2584cf7decb1",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 5105.0387720512981,
+            "y": 982.4186480764547
+          },
+          "nodeIndex": "ViewDimAnställdSCD2",
+          "nodeLineageTag": "e075a025-1509-4268-95a4-bcb375620083",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 203.02895830282785,
+            "y": 774.122715257753
+          },
+          "nodeIndex": "ViewDimSjukskrivningstyp",
+          "nodeLineageTag": "2c8a9df0-73aa-4108-9681-7a773cf14973",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 50.346892102823141,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

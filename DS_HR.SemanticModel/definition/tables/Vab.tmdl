@@ -111,6 +111,13 @@ table Vab
 
 		annotation SummarizationSetBy = Automatic
 
+	column SjukSkrivningsPeriodId = IF([SjukSkrivningsPeriod] = "< 15 Dagars Sjukskrivning", 1, IF([SjukSkrivningsPeriod] = "> 14 Dagars Sjukskrivning", 2))
+		formatString: 0
+		lineageTag: 65e2e738-46f8-4cac-a4a2-7011da9747bd
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Vab = m
 		mode: import
 		queryGroup: Fact

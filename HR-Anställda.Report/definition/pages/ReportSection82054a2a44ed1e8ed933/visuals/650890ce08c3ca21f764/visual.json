@@ -62,11 +62,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "% Sjukfrånvaro per Befattning & Kön"
+                  "Property": "% Sjukfrånvaro Åldersintervall"
                 }
               },
-              "queryRef": "Mått.% Sjukfrånvaro per Befattning & Kön",
-              "nativeQueryRef": "% Sjukfrånvaro per Befattning & Kön"
+              "queryRef": "Mått.% Sjukfrånvaro Åldersintervall",
+              "nativeQueryRef": "% Sjukfrånvaro Åldersintervall"
             }
           ]
         }
@@ -81,7 +81,7 @@
                     "Entity": "Mått"
                   }
                 },
-                "Property": "% Sjukfrånvaro per Befattning & Kön"
+                "Property": "% Sjukfrånvaro Åldersintervall"
               }
             },
             "direction": "Descending"
@@ -112,5 +112,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "54f08ac3a50d1e1c71db",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f6d951d3916f4ea43ed9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "SenasteBefattning"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1120cc8b349ea9c6a8c2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "% Sjukfrånvaro Åldersintervall"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

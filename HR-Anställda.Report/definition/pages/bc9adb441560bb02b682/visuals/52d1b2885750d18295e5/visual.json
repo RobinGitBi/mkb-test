@@ -181,6 +181,13 @@
                   "Value": "'% VAB Total'"
                 }
               }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "0.01D"
+                }
+              }
             }
           }
         }
@@ -616,6 +623,76 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "cd3eeee35b02a5658c16",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "År"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "61f3f771d80609869dbf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "Kvartal"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fabf1ed042aa3163d821",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "Månad"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "210bd534bf872690dcaf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1af2794542f6e86b3ec4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB %"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

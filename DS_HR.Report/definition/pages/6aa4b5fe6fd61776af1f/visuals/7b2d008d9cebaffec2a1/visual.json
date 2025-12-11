@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "7b2d008d9cebaffec2a1",
   "position": {
-    "x": 345.51569749207823,
-    "y": 120.48752527928882,
+    "x": 119.90892334381438,
+    "y": 62.174997289385232,
     "z": 3006,
-    "height": 400.4438340164599,
-    "width": 711.40796175933031,
+    "height": 569.937475152698,
+    "width": 1160.5999494018577,
     "tabOrder": 6
   },
   "visual": {
@@ -15,20 +15,6 @@
       "queryState": {
         "Values": {
           "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mått"
-                    }
-                  },
-                  "Property": "VAB Antal Dagar"
-                }
-              },
-              "queryRef": "Mått.VAB Antal Dagar",
-              "nativeQueryRef": "VAB Antal Dagar"
-            },
             {
               "field": {
                 "Column": {
@@ -42,9 +28,138 @@
               },
               "queryRef": "Personer.Anställningsnummer",
               "nativeQueryRef": "Anställningsnummer"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Ny2Sjukfrånvaro Antal Dagar"
+                }
+              },
+              "queryRef": "Mått.Ny2Sjukfrånvaro",
+              "nativeQueryRef": "Ny2Sjukfrånvaro Antal Dagar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "NySjukFrånvaroAntalDagar"
+                }
+              },
+              "queryRef": "Mått.NySjukFrånvaroAntalDagar",
+              "nativeQueryRef": "NySjukFrånvaroAntalDagar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Antal sjukdagar i period"
+                }
+              },
+              "queryRef": "Mått.Antal sjukdagar i period",
+              "nativeQueryRef": "Antal sjukdagar i period"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "% Sjukfrånvaro per Befattning & Kön"
+                }
+              },
+              "queryRef": "Mått.% Sjukfrånvaro per Befattning & Kön",
+              "nativeQueryRef": "% Sjukfrånvaro per Befattning & Kön"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Kön"
+                }
+              },
+              "queryRef": "Mått.Kön",
+              "nativeQueryRef": "Kön"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Sjukfrånvaro"
+                }
+              },
+              "queryRef": "Mått.Sjukfrånvaro",
+              "nativeQueryRef": "Sjukfrånvaro"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Ny2 Antal Sjuka 1-14 dagar"
+                }
+              },
+              "queryRef": "Mått.Ny2 Antal Sjuka 1-14 dagar",
+              "nativeQueryRef": "Ny2 Antal Sjuka 1-14 dagar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Ny2 Antal Sjuka > 14 dagar"
+                }
+              },
+              "queryRef": "Mått.Ny2 Antal Sjuka > 14 dagar",
+              "nativeQueryRef": "Ny2 Antal Sjuka > 14 dagar"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Mått"
+                  }
+                },
+                "Property": "Antal sjukdagar i period"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "drillFilterOtherVisuals": true
@@ -52,7 +167,68 @@
   "filterConfig": {
     "filters": [
       {
+        "name": "b3aac9fb077a98ae3b3b",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Anställningsnummer"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ffd0f943f07ed06cc16d",
+        "ordinal": 1,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Antal sjukdagar i period"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "406971a8667e51a7ce21",
+        "ordinal": 2,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Ny2Sjukfrånvaro Antal Dagar"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c2a52870cd5a45f0e2e7",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "NySjukFrånvaroAntalDagar"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
         "name": "94a589829def61efe1bb",
+        "ordinal": 4,
         "field": {
           "Column": {
             "Expression": {
@@ -74,7 +250,124 @@
         }
       },
       {
-        "name": "f1af95272e67569df17e",
+        "name": "cc2acc080f6f4884c1f3",
+        "ordinal": 5,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Frånvaro"
+              }
+            },
+            "Property": "Orsak"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "Frånvaro",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "f"
+                          }
+                        },
+                        "Property": "Orsak"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Sjukdom'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "8eba608ffa5279999949",
+        "ordinal": 6,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Löner"
+              }
+            },
+            "Property": "Förklaring"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "l",
+              "Entity": "Löner",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "l"
+                          }
+                        },
+                        "Property": "Förklaring"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Kollektivanställda'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Tjänstemän'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "ced666437fa1c9228e4e",
         "field": {
           "Measure": {
             "Expression": {
@@ -82,25 +375,68 @@
                 "Entity": "Mått"
               }
             },
-            "Property": "VAB Antal Dagar"
+            "Property": "% Sjukfrånvaro per Befattning & Kön"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "b3aac9fb077a98ae3b3b",
+        "name": "6e863463908d1d47e08f",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Personer"
+                "Entity": "Mått"
               }
             },
-            "Property": "Anställningsnummer"
+            "Property": "Kön"
           }
         },
-        "type": "Categorical"
+        "type": "Advanced"
+      },
+      {
+        "name": "0e47e3d3c0a41e5cffe8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Sjukfrånvaro"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "466836c049b545a6bb70",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Ny2 Antal Sjuka 1-14 dagar"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "459a9841ce0f0f85de4f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Ny2 Antal Sjuka > 14 dagar"
+          }
+        },
+        "type": "Advanced"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }

@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 74.39510764964129
+        "y": 0
       },
       "nodes": [
         {
@@ -443,8 +443,8 @@
         },
         {
           "location": {
-            "x": 832.29909716299107,
-            "y": 1141.0018645351283
+            "x": 747.6425981387348,
+            "y": 1090.9775696571587
           },
           "nodeIndex": "ViewDimSjukskrivningstyp",
           "nodeLineageTag": "2c8a9df0-73aa-4108-9681-7a773cf14973",

@@ -65,6 +65,21 @@
                       "Entity": "Personer"
                     }
                   },
+                  "Property": "SenasteBefattning"
+                }
+              },
+              "queryRef": "Personer.SenasteBefattning",
+              "nativeQueryRef": "Befattning",
+              "displayName": "Befattning"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Personer"
+                    }
+                  },
                   "Property": "Ålder"
                 }
               },
@@ -260,5 +275,107 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9009d9ac5b300c8b34fe",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Anställningsnummer"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "00ef99e8ae280773e18e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Namn"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a3ec98fede01df8688d6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "46287eb841f72c17ba77",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB Antal Anställda"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e159ae579115357461d5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "PersonalKategori"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "037a2273340195d0584b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Ålder"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "688c8d92b84c3ae15cf3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "SenasteBefattning"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

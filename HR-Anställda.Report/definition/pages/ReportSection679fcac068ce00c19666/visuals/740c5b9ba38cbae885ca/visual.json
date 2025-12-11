@@ -65,26 +65,27 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Antal sjuka i period"
+                  "Property": "Ny2 Antal Sjuka Total"
                 }
               },
-              "queryRef": "Mått.Antal sjuka i period",
-              "nativeQueryRef": "Antal sjuka i period"
+              "queryRef": "Mått.Ny2 Antal Sjuka Total",
+              "nativeQueryRef": "Antal Sjuka",
+              "displayName": "Antal Sjuka"
             },
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Löner"
+                      "Entity": "Personer"
                     }
                   },
-                  "Property": "Förklaring"
+                  "Property": "PersonalKategori"
                 }
               },
-              "queryRef": "Löner.Förklaring",
-              "nativeQueryRef": "Befattning",
-              "displayName": "Befattning"
+              "queryRef": "Personer.PersonalKategori",
+              "nativeQueryRef": "Personalkategori",
+              "displayName": "Personalkategori"
             }
           ]
         }
@@ -106,6 +107,24 @@
           }
         ]
       }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "55.00864486899134D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.Ny2 Antal Sjuka Total"
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -189,6 +208,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -204,6 +224,76 @@
             }
           ]
         }
+      },
+      {
+        "name": "d42bdc8a189202f9286f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Anställningsnummer"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "39c1d9dd401b6ba4437f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Namn"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "eecdb3893f7c969c53f5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ab0e9ead24750f02c133",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Ny2 Antal Sjuka Total"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f8826df5db08bf8ed244",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "PersonalKategori"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }
