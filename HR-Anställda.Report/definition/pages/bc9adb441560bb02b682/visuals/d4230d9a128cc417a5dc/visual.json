@@ -213,6 +213,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "e65e4ba360bb4c226d89",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

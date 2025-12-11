@@ -165,8 +165,6 @@
       {
         "name": "7d7a07571fd494594131",
         "boundFilter": "57bf24ffa6f2a84c2c69",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
         "fieldExpr": {
           "Measure": {
             "Expression": {

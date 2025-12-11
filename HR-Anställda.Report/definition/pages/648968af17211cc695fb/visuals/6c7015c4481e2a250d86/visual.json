@@ -4,10 +4,10 @@
   "position": {
     "x": 384,
     "y": 0,
-    "z": 15000,
+    "z": 14000,
     "height": 56.486261448792675,
     "width": 144.94587843463782,
-    "tabOrder": 15000
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Personer"
+                      "Entity": "Frånvaro"
                     }
                   },
-                  "Property": "PersonalKategori"
+                  "Property": "Sjukskrivningstyp"
                 }
               },
-              "queryRef": "Personer.PersonalKategori",
-              "nativeQueryRef": "PersonalKategori",
+              "queryRef": "Frånvaro.Sjukskrivningstyp",
+              "nativeQueryRef": "Sjukskrivningstyp",
               "active": true
             }
           ]
@@ -392,7 +392,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ]
   }

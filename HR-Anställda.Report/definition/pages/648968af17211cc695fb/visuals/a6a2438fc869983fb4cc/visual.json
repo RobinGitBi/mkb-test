@@ -4,10 +4,10 @@
   "position": {
     "x": 215.64271460610664,
     "y": 124.09627916011797,
-    "z": 15002,
+    "z": 16000,
     "height": 372.28883748035389,
     "width": 1050.7496423967366,
-    "tabOrder": 15001
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "tableEx",
@@ -70,21 +70,6 @@
               },
               "queryRef": "Mått.VAB Antal Anställda",
               "nativeQueryRef": "VAB Antal Anställda"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Vab"
-                    }
-                  },
-                  "Property": "SysselSättningsGrad"
-                }
-              },
-              "queryRef": "Vab.SysselSättningsGrad",
-              "nativeQueryRef": "Sysselsättningsgrad",
-              "displayName": "Sysselsättningsgrad"
             },
             {
               "field": {
@@ -261,93 +246,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cb23f7d6f170038949b5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Anställningsnummer"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "95a5d99140f7fd5ba162",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Namn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "43c96b224a7b94530102",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Vab"
-              }
-            },
-            "Property": "SysselSättningsGrad"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e69a2addd26fc978bbcb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Kön"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ae0bfd7e20c7fc09dd13",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "PersonalKategori"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "57831eb3f83a10950da3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB Antal Anställda"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

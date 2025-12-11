@@ -90,21 +90,6 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Vab"
-                    }
-                  },
-                  "Property": "SysselSättningsGrad"
-                }
-              },
-              "queryRef": "Vab.SysselSättningsGrad",
-              "nativeQueryRef": "Sysselsättningsgrad",
-              "displayName": "Sysselsättningsgrad"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
                       "Entity": "Personer"
                     }
                   },
@@ -275,107 +260,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b5ae96288f522f752d71",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Vab"
-              }
-            },
-            "Property": "Datum"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c2c7faeb2a4edb4e313a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Anställningsnummer"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "067661fc7ec77241e3f0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Namn"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "26fbb4d4b6ca3cd62ce7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "VAB Antal Dagar"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "99acbd53a7e327757409",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Vab"
-              }
-            },
-            "Property": "SysselSättningsGrad"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6fa0f7d9bad7202d60dc",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Kön"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "752fd34c08d3eb490a40",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "PersonalKategori"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

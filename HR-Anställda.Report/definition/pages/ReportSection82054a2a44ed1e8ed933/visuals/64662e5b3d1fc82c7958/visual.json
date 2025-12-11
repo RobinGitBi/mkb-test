@@ -125,6 +125,11 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
       ]
     },
     "visualContainerObjects": {

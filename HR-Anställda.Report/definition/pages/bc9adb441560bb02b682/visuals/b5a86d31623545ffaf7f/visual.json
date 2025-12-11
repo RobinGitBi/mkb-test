@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "7f527a26fcfb89eda608",
+  "name": "b5a86d31623545ffaf7f",
   "position": {
-    "x": 534,
+    "x": 834,
     "y": 0,
-    "z": 14000,
-    "height": 56.486261448792675,
-    "width": 145,
-    "tabOrder": 14000
+    "z": 14001,
+    "height": 56,
+    "width": 144,
+    "tabOrder": 14001
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Personer"
+                      "Entity": "ViewDimAnstalldAldersIntervall"
                     }
                   },
-                  "Property": "SenasteBefattning"
+                  "Property": "Åldersintervall"
                 }
               },
-              "queryRef": "Personer.SenasteBefattning",
-              "nativeQueryRef": "Befattning",
-              "active": true,
-              "displayName": "Befattning"
+              "queryRef": "ViewDimAnstalldAldersIntervall.Åldersintervall",
+              "nativeQueryRef": "Åldersintervall",
+              "active": true
             }
           ]
         }
@@ -120,19 +119,6 @@
                       "Percent": 0
                     }
                   }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "general": [
-        {
-          "properties": {
-            "selfFilterEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
@@ -256,25 +242,20 @@
         }
       ]
     },
-    "syncGroup": {
-      "groupName": "SenasteBefattning",
-      "fieldChanges": true,
-      "filterChanges": true
-    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "34121b2dda57d246471b",
+        "name": "cb771816bcfbd966d6d5",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Personer"
+                "Entity": "ViewDimAnstalldAldersIntervall"
               }
             },
-            "Property": "SenasteBefattning"
+            "Property": "Åldersintervall"
           }
         },
         "type": "Categorical"

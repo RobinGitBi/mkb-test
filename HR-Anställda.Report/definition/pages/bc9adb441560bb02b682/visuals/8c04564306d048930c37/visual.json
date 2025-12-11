@@ -23,11 +23,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Textmått År Månad och Sjukskrivningtyp"
+                  "Property": "Vald år och månad Format"
                 }
               },
-              "queryRef": "Mått.Textmått År Månad och Sjukskrivningtyp",
-              "nativeQueryRef": "Textmått År Månad och Sjukskrivningtyp"
+              "queryRef": "Mått.Vald år och månad Format",
+              "nativeQueryRef": "Vald år och månad Format"
             }
           ]
         }
@@ -62,5 +62,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bc6e83b575d3ad494070",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Vald år och månad Format"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

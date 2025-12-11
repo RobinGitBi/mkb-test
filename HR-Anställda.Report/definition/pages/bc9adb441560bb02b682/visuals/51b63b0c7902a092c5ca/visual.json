@@ -128,5 +128,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9fcbbc307a24e28f92cd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "688643bd0af375ea57ff",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

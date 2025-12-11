@@ -135,37 +135,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f72121d9106d69218cd2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Personer"
-              }
-            },
-            "Property": "Kön"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c03b194beaa1205ac492",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mått"
-              }
-            },
-            "Property": "Sjukfrånvaro"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -202,5 +202,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bd79ca69f131d06df9f8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "DefaultMonth"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
