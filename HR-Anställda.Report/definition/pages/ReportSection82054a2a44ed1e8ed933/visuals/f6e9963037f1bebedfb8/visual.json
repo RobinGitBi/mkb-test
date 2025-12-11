@@ -62,5 +62,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "375f69098ba74d49dc4f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Textmått År Månad och Sjukskrivningtyp"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

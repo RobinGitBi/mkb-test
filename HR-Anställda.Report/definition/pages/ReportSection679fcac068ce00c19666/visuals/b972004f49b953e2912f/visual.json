@@ -6,7 +6,7 @@
     "y": 55,
     "z": 15000,
     "height": 55,
-    "width": 500,
+    "width": 650,
     "tabOrder": 15000
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "Mått"
                     }
                   },
-                  "Property": "Vald år och månad Format"
+                  "Property": "Textmått År Månad och Sjukskrivningtyp"
                 }
               },
-              "queryRef": "Mått.Vald år och månad Format",
-              "nativeQueryRef": "Vald år och månad Format"
+              "queryRef": "Mått.Textmått År Månad och Sjukskrivningtyp",
+              "nativeQueryRef": "Textmått År Månad och Sjukskrivningtyp"
             }
           ]
         }
@@ -53,7 +53,14 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -62,5 +69,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "6d52f85ea9378c7e9bf1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Textmått År Månad och Sjukskrivningtyp"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -86,6 +86,14 @@ table Personer
 
 		annotation SummarizationSetBy = Automatic
 
+	column AnställningsNummerOchNamn
+		dataType: string
+		lineageTag: f0a218cb-f102-4ef3-9a15-ac52f8ffc6e7
+		summarizeBy: none
+		sourceColumn: AnställningsNummerOchNamn
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Personer-f70dab28-fef3-4f2f-a12c-f9b229a2d5b5 = m
 		mode: import
 		source =

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "4161b5078e648d892161",
+  "name": "cbce43627a6885170695",
   "position": {
     "x": 384,
     "y": 0,
-    "z": 11000,
-    "height": 56.486261448792675,
-    "width": 144.94587843463782,
-    "tabOrder": 11000
+    "z": 17001,
+    "height": 56,
+    "width": 144,
+    "tabOrder": 17001
   },
   "visual": {
     "visualType": "slicer",
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Frånvaro"
+                      "Entity": "Personer"
                     }
                   },
-                  "Property": "Sjukskrivningstyp"
+                  "Property": "PersonalKategori"
                 }
               },
-              "queryRef": "Frånvaro.Sjukskrivningstyp",
-              "nativeQueryRef": "Sjukskrivningstyp",
-              "active": true
+              "queryRef": "Personer.PersonalKategori",
+              "nativeQueryRef": "Personalkategori",
+              "active": true,
+              "displayName": "Personalkategori"
             }
           ]
         }
@@ -48,19 +49,6 @@
           }
         }
       ],
-      "general": [
-        {
-          "properties": {
-            "selfFilterEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
       "selection": [
         {
           "properties": {
@@ -68,38 +56,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "items": [
-        {
-          "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Calibri'"
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
                 }
               }
             }
@@ -134,19 +90,82 @@
                   }
                 }
               }
-            },
-            "text": {
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'Personalkategori'"
+                  "Value": "'Calibri'"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
       ]
     },
     "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
       "border": [
         {
           "properties": {
@@ -172,13 +191,56 @@
           }
         }
       ],
-      "title": [
+      "visualTooltip": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+            "titleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
+                }
+              }
+            },
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "foreground": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0067A5'"
+                    }
+                  }
                 }
               }
             }
@@ -186,164 +248,12 @@
         }
       ]
     },
-    "syncGroup": {
-      "groupName": "Förklaring",
-      "fieldChanges": true,
-      "filterChanges": true
-    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "9762d554c83b451a3ae6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Kalender"
-              }
-            },
-            "Property": "År"
-          }
-        },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "k",
-              "Entity": "Kalender",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "Comparison": {
-                      "ComparisonKind": 0,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "k"
-                            }
-                          },
-                          "Property": "År"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "null"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
-        "name": "6a395070c5509102da71",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Löner"
-              }
-            },
-            "Property": "Förklaring"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "l",
-              "Entity": "Löner",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "l"
-                              }
-                            },
-                            "Property": "Förklaring"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Arbetsledare'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Pensionär (ej anställd)'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Styrelse'"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "1286810660c4e183626a",
+        "name": "3f911f90be72b0db620d",
         "field": {
           "Column": {
             "Expression": {
@@ -392,8 +302,7 @@
               }
             }
           ]
-        },
-        "howCreated": "User"
+        }
       }
     ]
   }

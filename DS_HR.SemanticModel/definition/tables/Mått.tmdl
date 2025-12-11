@@ -241,7 +241,7 @@ table Mått
 	measure Sjukfrånvaro =
 			
 			
-			DIVIDE( [Antal sjukdagar i period], CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön])) )
+			DIVIDE( [Antal sjukdagar i period], CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])) )
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Frånvaro
 		lineageTag: 36f103ac-182e-441e-afbc-9b826ad562fd
@@ -785,7 +785,7 @@ table Mått
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '% Sjukfrånvaro per Befattning & Kön' = DIVIDE([Antal sjukdagar i period],  CALCULATE([Antal anställningsdagar i vald period],  REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[Kön])))
+	measure '% Sjukfrånvaro per Befattning & Kön' = DIVIDE([Antal sjukdagar i period],  CALCULATE([Antal anställningsdagar i vald period],  REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[PersonalKategori])))
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: e15ecc9c-aa5e-41b9-b7a5-0c0540c743f5
@@ -794,7 +794,7 @@ table Mått
 			
 			
 			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] <=  24)), 
-			CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+			CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]),REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
 			```
 		formatString: 0.00%
 		displayFolder: Frånvaro
@@ -805,7 +805,7 @@ table Mått
 	measure '% Sjukfrånvaro 25-34' =
 			
 			
-			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  25 && Personer[Ålder] <= 34)), CALCULATE([Antal anställningsdagar i vald period],REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  25 && Personer[Ålder] <= 34)), CALCULATE([Antal anställningsdagar i vald period],REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: 122403c4-2acd-4b98-8519-4bea4bda4da1
@@ -815,7 +815,7 @@ table Mått
 	measure '% Sjukfrånvaro 35-44' =
 			
 			
-			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  35 && Personer[Ålder] <= 44)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  35 && Personer[Ålder] <= 44)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]),  REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: c5b1ac24-267e-40f7-b122-15aa417b85c3
@@ -825,7 +825,7 @@ table Mått
 	measure '% Sjukfrånvaro 45-54' =
 			
 			
-			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  45 && Personer[Ålder] <= 54)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  45 && Personer[Ålder] <= 54)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: 737fff7b-45a9-4dd0-9fc0-de486347afb5
@@ -835,7 +835,7 @@ table Mått
 	measure '% Sjukfrånvaro 55-64' =
 			
 			
-			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  55 && Personer[Ålder] <= 64)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >=  55 && Personer[Ålder] <= 64)), CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]),  REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
 		formatString: 0.00%
 		displayFolder: Frånvaro
 		lineageTag: 8f811d2d-93e2-41ab-ae06-9befa40357c0
@@ -846,7 +846,7 @@ table Mått
 			
 			
 			DIVIDE(CALCULATE([Antal sjukdagar i period], KEEPFILTERS(Personer[Ålder] >  64)), 
-			CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning])))
+			CALCULATE([Antal anställningsdagar i vald period], REMOVEFILTERS(Personer[Kön]), REMOVEFILTERS(Personer[SenasteBefattning]), REMOVEFILTERS(Personer[PersonalKategori])))
 			```
 		formatString: 0.00%
 		displayFolder: Frånvaro

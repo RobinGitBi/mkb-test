@@ -62,39 +62,25 @@
             }
           ]
         },
-        "Y": {
+        "Series": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mått"
+                      "Entity": "Personer"
                     }
                   },
-                  "Property": "Sjukfrånvaro män"
+                  "Property": "Kön"
                 }
               },
-              "queryRef": "Mått.Sjukfrånvaro män",
-              "nativeQueryRef": "Sjukfrånvaro män"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Mått"
-                    }
-                  },
-                  "Property": "Sjukfrånvaro kvinnor"
-                }
-              },
-              "queryRef": "Mått.Sjukfrånvaro kvinnor",
-              "nativeQueryRef": "Sjukfrånvaro kvinnor"
+              "queryRef": "Personer.Kön",
+              "nativeQueryRef": "Kön"
             }
           ]
         },
-        "Y2": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -110,6 +96,25 @@
               "queryRef": "Mått.Sjukfrånvaro",
               "nativeQueryRef": "Sjukfrånvaro total",
               "displayName": "Sjukfrånvaro total"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "% Sjukfrånvaro per Befattning & Kön"
+                }
+              },
+              "queryRef": "Mått.% Sjukfrånvaro per Befattning & Kön",
+              "nativeQueryRef": "Sjukfrånvaro Total",
+              "displayName": "Sjukfrånvaro Total"
             }
           ]
         }
@@ -179,6 +184,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }
@@ -269,6 +281,24 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4ABAE7'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.% Sjukfrånvaro per Befattning & Kön"
+          }
         }
       ],
       "lineStyles": [
@@ -306,76 +336,6 @@
                 }
               }
             }
-          }
-        },
-        {
-          "properties": {
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mått.Sjukfrånvaro kvinnor"
-          }
-        },
-        {
-          "properties": {
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Mått.Sjukfrånvaro män"
           }
         },
         {
@@ -455,6 +415,38 @@
           },
           "selector": {
             "metadata": "Mått.Sjukfrånvaro"
+          }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4ABAE7'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.% Sjukfrånvaro per Befattning & Kön"
           }
         }
       ]
@@ -558,5 +550,93 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a33067d60bf6cf227643",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "År"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d5fee88e85b06f25b42d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "Kvartal"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d6deb0f2d72b1a6d995e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Kalender"
+              }
+            },
+            "Property": "Månad"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "04cd36b2ad576b208b9c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "367068e9fe2dcd743efb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Sjukfrånvaro"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0e7b374b0e354f19879f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "% Sjukfrånvaro per Befattning & Kön"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

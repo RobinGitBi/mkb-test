@@ -214,6 +214,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "d18b755d303aa5c64393",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Frånvaro"
+              }
+            },
+            "Property": "Sjukskrivningstyp"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }
