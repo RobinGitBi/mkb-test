@@ -552,10 +552,28 @@ table Mått
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Vald år och månad Format' = ```
-			CONCATENATE("Vald period: ", 
-			                                CONCATENATE(SELECTEDVALUE(Kalender[Månad]), 
-			                                    CONCATENATE(" ", SELECTEDVALUE('Kalender'[År]))
-			                                ))
+			
+			VAR Perioder =
+			    -- Unika månader i nuvarande filterkontekst
+			    SUMMARIZE(
+			        'Kalender',
+			        'Kalender'[MånadNr],
+			        'Kalender'[MånadKort]
+			    )
+			RETURN
+			"Vald Period: "
+			    & SELECTEDVALUE(Kalender[År]) &" "&CONCATENATEX(
+			        Perioder,
+			        'Kalender'[MånadKort],   -- vad som visas
+			        ", ",                     -- separator
+			        'Kalender'[MånadNr], ASC  -- sortera kronologiskt
+			    )
+			
+			
+			//  CONCATENATE("Vald period: ", 
+			                                // CONCATENATE(SELECTEDVALUE(Kalender[Månad]), 
+			                                //     CONCATENATE(" ", SELECTEDVALUE('Kalender'[År]))
+			                                // ))
 			```
 		displayFolder: Hälsobokslutet
 		lineageTag: fb748336-f273-446b-baf7-320ba53ad2aa
@@ -886,10 +904,40 @@ table Mått
 
 	measure 'Textmått År Månad och Sjukskrivningtyp' = ```
 			
-			     " Period: "& SELECTEDVALUE(Kalender[Månad])
-			    & " "
-			    & SELECTEDVALUE(Kalender[År])
-			    &", " & SELECTEDVALUE('Frånvaro'[Sjukskrivningstyp], " Sjukskrivningstyp: 0-14 Dagar & >14 Dagar ")
+			
+			
+			
+			VAR Perioder =
+			    -- Unika månader i nuvarande filterkontekst
+			    SUMMARIZE(
+			        'Kalender',
+			        'Kalender'[MånadNr],
+			        'Kalender'[MånadKort]
+			    )
+			RETURN
+			"Period: "
+			    & SELECTEDVALUE(Kalender[År]) &" "&CONCATENATEX(
+			        Perioder,
+			        'Kalender'[MånadKort],   -- vad som visas
+			        ", ",                     -- separator
+			        'Kalender'[MånadNr], ASC  -- sortera kronologiskt
+			    )
+			    & ", "
+			    & SELECTEDVALUE(
+			        'Frånvaro'[Sjukskrivningstyp],
+			        "Sjukskrivningstyp: 0–14 Dagar & >14 Dagar"
+			    )
+			
+			
+			
+			
+			
+			
+			
+			    //  " Period: "& SELECTEDVALUE(Kalender[Månad])
+			    // & " "
+			    // & SELECTEDVALUE(Kalender[År])
+			    // &", " & SELECTEDVALUE('Frånvaro'[Sjukskrivningstyp], " Sjukskrivningstyp: 0-14 Dagar & >14 Dagar ")
 			
 			
 			```

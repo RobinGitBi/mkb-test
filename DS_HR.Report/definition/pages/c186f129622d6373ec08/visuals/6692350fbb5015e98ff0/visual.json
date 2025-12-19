@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "6692350fbb5015e98ff0",
+  "position": {
+    "x": 18.539704093467989,
+    "y": 110.07949305496619,
+    "z": 0,
+    "height": 396.28617499787828,
+    "width": 1242.1601742623554
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mått"
+                    }
+                  },
+                  "Property": "Vald år och månad Format"
+                }
+              },
+              "queryRef": "Mått.Vald år och månad Format",
+              "nativeQueryRef": "Vald år och månad Format"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bd1a487307ab9f11ad48",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Vald år och månad Format"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

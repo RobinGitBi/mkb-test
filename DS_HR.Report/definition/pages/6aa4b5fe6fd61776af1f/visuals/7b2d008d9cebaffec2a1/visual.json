@@ -162,6 +162,24 @@
         ]
       }
     },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "174.99571419643354D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Mått.Ny2 Antal Sjuka 1-14 dagar"
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {

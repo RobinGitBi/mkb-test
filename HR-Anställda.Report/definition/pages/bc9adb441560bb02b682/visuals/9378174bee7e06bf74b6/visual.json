@@ -337,5 +337,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2437a9cf34b700fe54c7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "Kön"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cedbf23a0624f94e7bfa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Personer"
+              }
+            },
+            "Property": "SenasteBefattning"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "61a61471c7da1548c5b5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Vab% Åldersintervall"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
