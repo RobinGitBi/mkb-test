@@ -1,4 +1,4 @@
-table ViewDimSjukskrivningstyp
+table Sjukskrivningstyp
 	lineageTag: 2c8a9df0-73aa-4108-9681-7a773cf14973
 
 	column SjukSkrivningTypSortOrder
@@ -21,8 +21,9 @@ table ViewDimSjukskrivningstyp
 
 		annotation SummarizationSetBy = Automatic
 
-	partition ViewDimSjukskrivningstyp = m
+	partition Sjukskrivningstyp = m
 		mode: import
+		queryGroup: Dimensioner
 		source =
 				let
 				    Source = Sql.Databases("mkbdw1.mkb.se"),

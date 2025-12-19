@@ -794,6 +794,22 @@ table Konto
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Lev3Namn Investeringar'
+		dataType: string
+		lineageTag: 94d47809-41f6-4a1e-bce7-352319548d55
+		summarizeBy: none
+		sourceColumn: Lev3Namn Investeringar
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KontoTypNamn Investeringar'
+		dataType: string
+		lineageTag: ed09bf9c-2725-4443-bd69-4aeb0a877ba5
+		summarizeBy: none
+		sourceColumn: KontoTypNamn Investeringar
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Konto-d4a6b32e-5310-4943-bc8b-3ef7527e39f2 = m
 		mode: import
 		source =

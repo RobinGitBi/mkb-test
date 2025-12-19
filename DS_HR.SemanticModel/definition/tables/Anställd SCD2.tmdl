@@ -1,4 +1,4 @@
-table ViewDimAnställdSCD2
+table 'Anställd SCD2'
 	lineageTag: e075a025-1509-4268-95a4-bcb375620083
 
 	column 'Anställd SK'
@@ -144,8 +144,9 @@ table ViewDimAnställdSCD2
 
 		annotation SummarizationSetBy = Automatic
 
-	partition ViewDimAnställdSCD2 = m
+	partition 'Anställd SCD2' = m
 		mode: import
+		queryGroup: Dimensioner
 		source =
 				let
 				    Source = Sql.Databases("mkbdw1.mkb.se"),

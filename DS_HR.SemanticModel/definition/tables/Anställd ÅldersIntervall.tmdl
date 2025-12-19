@@ -1,4 +1,4 @@
-table ViewDimAnstalldAldersIntervall
+table 'Anställd ÅldersIntervall'
 	lineageTag: 807c0cfd-f74e-4cf8-a54b-2584cf7decb1
 
 	column AldersIntervallId
@@ -21,8 +21,9 @@ table ViewDimAnstalldAldersIntervall
 
 		annotation SummarizationSetBy = Automatic
 
-	partition ViewDimAnstalldAldersIntervall = m
+	partition 'Anställd ÅldersIntervall' = m
 		mode: import
+		queryGroup: Dimensioner
 		source =
 				let
 				    Source = Sql.Databases("mkbdw1.mkb.se"),

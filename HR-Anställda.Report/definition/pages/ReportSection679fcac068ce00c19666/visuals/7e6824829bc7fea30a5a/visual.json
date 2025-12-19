@@ -330,58 +330,18 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filter76dcbada85595e78cc6a",
+        "name": "cb14e364342e4ab38e64",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Frånvaro"
+                "Entity": "Mått"
               }
             },
-            "Property": "Sjukskrivningstyp"
+            "Property": "Ny2 Antal Sjuka 1-14 dagar"
           }
         },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "Frånvaro",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "Sjukskrivningstyp"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'1-14 dagar'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
+        "type": "Advanced"
       }
     ]
   }

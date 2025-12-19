@@ -420,39 +420,36 @@
             "x": 720.06152026362463,
             "y": 1675.1278280743547
           },
-          "nodeIndex": "ViewDimAnställdSCD2",
-          "nodeLineageTag": "e075a025-1509-4268-95a4-bcb375620083",
+          "nodeIndex": "Anställd SCD2",
           "size": {
             "height": 341.32653061224482,
             "width": 234
           },
-          "zIndex": 31
+          "zIndex": 0
         },
         {
           "location": {
             "x": 4740.71981020514,
             "y": 862.02022002337446
           },
-          "nodeIndex": "ViewDimAnstalldAldersIntervall",
-          "nodeLineageTag": "807c0cfd-f74e-4cf8-a54b-2584cf7decb1",
+          "nodeIndex": "Anställd ÅldersIntervall",
           "size": {
             "height": 128,
             "width": 234
           },
-          "zIndex": 33
+          "zIndex": 0
         },
         {
           "location": {
             "x": 747.6425981387348,
             "y": 1090.9775696571587
           },
-          "nodeIndex": "ViewDimSjukskrivningstyp",
-          "nodeLineageTag": "2c8a9df0-73aa-4108-9681-7a773cf14973",
+          "nodeIndex": "Sjukskrivningstyp",
           "size": {
             "height": 128,
             "width": 234
           },
-          "zIndex": 35
+          "zIndex": 0
         }
       ],
       "name": "All tables",

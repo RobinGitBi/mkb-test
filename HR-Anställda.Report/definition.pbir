@@ -3,7 +3,7 @@
   "version": "4.0",
   "datasetReference": {
     "byConnection": {
-      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/myorg/Dataset_Test;initial catalog=DS_HR;access mode=readonly;integrated security=ClaimsToken;semanticmodelid=6bc04a30-0aa7-4994-8a00-b51e31f0da43"
+      "connectionString": "Data Source=powerbi://api.powerbi.com/v1.0/myorg/Dataset;initial catalog=DS_HR;access mode=readonly;integrated security=ClaimsToken;semanticmodelid=9729097c-2e8e-46ca-b621-9f89a4a6dedb"
     }
   }
 }

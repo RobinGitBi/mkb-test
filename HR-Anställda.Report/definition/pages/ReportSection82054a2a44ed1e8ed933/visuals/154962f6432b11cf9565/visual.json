@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewDimSjukskrivningstyp"
+                      "Entity": "Sjukskrivningstyp"
                     }
                   },
                   "Property": "Sjukskrivningstyp"
                 }
               },
-              "queryRef": "ViewDimSjukskrivningstyp.Sjukskrivningstyp",
-              "nativeQueryRef": "Sjukskrivningstyp1",
+              "queryRef": "Sjukskrivningstyp.Sjukskrivningstyp",
+              "nativeQueryRef": "Sjukskrivningstyp",
               "active": true
             }
           ]
@@ -241,12 +241,12 @@
         "howCreated": "User"
       },
       {
-        "name": "5ef9735eef13b343666d",
+        "name": "01595dc65e1cb48b08ca",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "ViewDimSjukskrivningstyp"
+                "Entity": "Sjukskrivningstyp"
               }
             },
             "Property": "Sjukskrivningstyp"
@@ -257,8 +257,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "v",
-              "Entity": "ViewDimSjukskrivningstyp",
+              "Name": "s",
+              "Entity": "Sjukskrivningstyp",
               "Type": 0
             }
           ],
@@ -273,7 +273,7 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Source": "v"
+                              "Source": "s"
                             }
                           },
                           "Property": "Sjukskrivningstyp"

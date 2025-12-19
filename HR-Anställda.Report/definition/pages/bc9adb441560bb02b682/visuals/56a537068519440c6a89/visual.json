@@ -382,6 +382,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "9e1a2a345e7599da69cf",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB Antal Anställda"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

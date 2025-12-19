@@ -39,13 +39,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewDimAnstalldAldersIntervall"
+                      "Entity": "Anställd ÅldersIntervall"
                     }
                   },
                   "Property": "Åldersintervall"
                 }
               },
-              "queryRef": "ViewDimAnstalldAldersIntervall.Åldersintervall",
+              "queryRef": "Anställd ÅldersIntervall.Åldersintervall",
               "nativeQueryRef": "Åldersintervall",
               "active": true
             },
@@ -94,21 +94,9 @@
         "levels": [
           {
             "queryRefs": [
-              "ViewDimAnstalldAldersIntervall.Åldersintervall"
+              "Anställd ÅldersIntervall.Åldersintervall"
             ],
             "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "ViewDimAnstalldAldersIntervall"
-                    }
-                  },
-                  "Property": "Åldersintervall"
-                }
-              }
-            ],
             "isPinned": true
           },
           {
@@ -124,20 +112,6 @@
     ],
     "objects": {
       "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "187.9905386205001D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "ViewDimAnstalldAldersIntervall.Åldersintervall"
-          }
-        },
         {
           "properties": {
             "value": {

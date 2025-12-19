@@ -126,9 +126,9 @@ relationship b76ad886-70d7-a113-8738-f8eb819a50bc
 
 relationship 974e0379-119d-f13c-a898-99c8687222be
 	fromColumn: Frånvaro.Sjuktyp
-	toColumn: ViewDimSjukskrivningstyp.SjukSkrivningTypSortOrder
+	toColumn: Sjukskrivningstyp.SjukSkrivningTypSortOrder
 
 relationship 70398722-b911-f083-0774-9ac7ae1bfd6f
 	fromColumn: Vab.SjukSkrivningsPeriodId
-	toColumn: ViewDimSjukskrivningstyp.SjukSkrivningTypSortOrder
+	toColumn: Sjukskrivningstyp.SjukSkrivningTypSortOrder
 

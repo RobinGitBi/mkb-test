@@ -776,7 +776,7 @@ table Mått
 	measure 'Vab% Åldersintervall' = ```
 			
 			
-			VAR SelectedAldersIntervall = SELECTEDVALUE('ViewDimAnstalldAldersIntervall'[AldersIntervallId])
+			VAR SelectedAldersIntervall = SELECTEDVALUE('Anställd ÅldersIntervall'[AldersIntervallId])
 			
 			RETURN
 			SWITCH(
@@ -875,7 +875,7 @@ table Mått
 	measure '% Sjukfrånvaro Åldersintervall' = ```
 			
 			
-			VAR SelectedAldersIntervall = SELECTEDVALUE('ViewDimAnstalldAldersIntervall'[AldersIntervallId])
+			VAR SelectedAldersIntervall = SELECTEDVALUE('Anställd ÅldersIntervall'[AldersIntervallId])
 			
 			RETURN
 			SWITCH(

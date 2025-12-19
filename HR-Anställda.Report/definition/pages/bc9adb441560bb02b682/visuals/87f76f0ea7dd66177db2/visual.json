@@ -326,5 +326,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "66724409dc137677875a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -396,6 +396,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "81f116aeb6dad96f9dc8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "VAB %"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

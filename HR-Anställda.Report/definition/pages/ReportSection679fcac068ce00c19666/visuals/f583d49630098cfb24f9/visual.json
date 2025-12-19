@@ -326,5 +326,38 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "eeeb1092e013725a1e94",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mått"
+              }
+            },
+            "Property": "Sjukfrånvaro"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d005553815a1ddff54ae",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Sjukskrivningstyp"
+              }
+            },
+            "Property": "Sjukskrivningstyp"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      }
+    ]
   }
 }

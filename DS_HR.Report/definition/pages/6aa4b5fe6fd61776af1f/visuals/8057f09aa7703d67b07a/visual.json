@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewDimAnstalldAldersIntervall"
+                      "Entity": "Anställd ÅldersIntervall"
                     }
                   },
                   "Property": "Åldersintervall"
@@ -83,7 +83,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "ViewDimAnstalldAldersIntervall"
+                      "Entity": "Anställd ÅldersIntervall"
                     }
                   },
                   "Property": "Åldersintervall"
@@ -113,7 +113,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "ViewDimAnstalldAldersIntervall"
+                "Entity": "Anställd ÅldersIntervall"
               }
             },
             "Property": "Åldersintervall"
