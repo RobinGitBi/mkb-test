@@ -8,10 +8,4 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE VIEW [dbo].[ViewFactFteAft2025]
-as
-SELECT *
-FROM [MKBBIDW].[fact].[FactFTE]
-GO
-
-
+DROP VIEW [dbo].[ViewFactFteAft2025]
